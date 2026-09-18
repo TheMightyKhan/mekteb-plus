@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MəktəbPlus - Milli Təhsil və İmtahan Portalı</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 for EdTech & Subject Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- KaTeX Math CSS & JS for Lightning-Fast Formula Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+  <!-- Canvas Confetti for Gamified PvP Wins -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Tailwind CSS Play CDN with Dark Mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+              950: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet (Print styles, scrollbars, animations) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Error Boundary Listener -->
+  <script>
+    window.addEventListener('error', function(e) {
+      console.error('System error:', e);
+      const root = document.getElementById('root');
+      if (root && root.innerHTML.includes('animate-spin')) {
+        root.innerHTML = `
+          <div class="min-h-screen flex flex-col items-center justify-center bg-slate-900 text-white p-6 text-center">
+            <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-500 flex items-center justify-center text-2xl mb-4">⚠️</div>
+            <h1 class="text-lg font-bold mb-1">Məlumat Yüklənmə Bildirişi</h1>
+            <p class="text-xs text-slate-400 max-w-md mb-4">${e.message || 'Səhifə yenilənir...'}</p>
+            <button onclick="location.reload()" class="px-4 py-2 bg-indigo-600 rounded-xl text-xs font-bold hover:bg-indigo-700">Yenidən Yüklə</button>
+          </div>
+        `;
+      }
+    });
+  </script>
+
+  <!-- ESM Import Maps for zero-build Native React 18 -->
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0/client"
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+  <div id="root">
+    <!-- Initial Spinner while modules load -->
+    <div class="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-white space-y-4">
+      <div class="relative flex items-center justify-center">
+        <div class="animate-spin rounded-full h-14 w-14 border-4 border-indigo-500/30 border-t-indigo-500"></div>
+        <i class="fas fa-graduation-cap absolute text-xl text-indigo-400"></i>
+      </div>
+      <div class="text-center">
+        <div class="font-black tracking-wider text-sm uppercase bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">MəktəbPlus</div>
+        <p class="text-[10px] text-slate-500 mt-0.5">Təhsil resursları və modullar hazırlanır...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrapping Module -->
+  <script type="module">
+    import React from 'react';
+    import { createRoot } from 'react-dom';
+    import App from './app.js';
+
+    const container = document.getElementById('root');
+    const root = createRoot(container);
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>

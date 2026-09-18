@@ -1,0 +1,229 @@
+// MəktəbPlus - Əsas Tətbiq Komponenti (Root Application)
+
+import React, { useState, useEffect } from 'react';
+import { Navbar } from './components/Navbar.js';
+import { Sidebar } from './components/Sidebar.js';
+import { DashboardView } from './components/DashboardView.js';
+import { LessonsView } from './components/LessonsView.js';
+import { ExamArchiveView } from './components/ExamArchiveView.js';
+import { PvpArenaView } from './components/PvpArenaView.js';
+import { ContentManagerView } from './components/ContentManagerView.js';
+import { StorageService } from './services/storageService.js';
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState('dashboard');
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('mekteb_plus_dark') === 'true';
+  });
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSubjectId, setSelectedSubjectId] = useState(null);
+  const [activeLessonId, setActiveLessonId] = useState(null);
+  const [activeExam, setActiveExam] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Verilənlər Bazasının Cari Vəziyyəti
+  const [lessons, setLessons] = useState(() => StorageService.getLessons());
+  const [exams, setExams] = useState(() => StorageService.getExams());
+  const [pvpQuestions, setPvpQuestions] = useState(() => StorageService.getPvpQuestions());
+  const [userStats, setUserStats] = useState(() => StorageService.getUserStats());
+
+  // Qaranlıq rejim sinifinin tətbiqi
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('mekteb_plus_dark', 'true');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('mekteb_plus_dark', 'false');
+    }
+  }, [darkMode]);
+
+  // Məlumatlar dəyişdikdə yeniləmə funksiyası
+  const refreshData = () => {
+    setLessons(StorageService.getLessons());
+    setExams(StorageService.getExams());
+    setPvpQuestions(StorageService.getPvpQuestions());
+    setUserStats(StorageService.getUserStats());
+  };
+
+  const handleUpdateStats = (updater) => {
+    const updated = StorageService.updateUserStats(updater);
+    setUserStats(updated);
+  };
+
+  const handleStartPvp = (mode) => {
+    setActiveTab('pvp');
+  };
+
+  const handleOpenExam = (exam) => {
+    setActiveExam(exam);
+    setActiveTab('exams');
+  };
+
+  // Qlobal Axtarış Nəticələri (Dərslər və İmtahanlar üzrə)
+  const searchResults = searchQuery.trim() ? {
+    lessons: lessons.filter(l =>
+      l.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      l.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      l.unit.toLowerCase().includes(searchQuery.toLowerCase())
+    ),
+    exams: exams.filter(e =>
+      e.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      e.subjectId.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  } : null;
+
+  return React.createElement(
+    'div',
+    { className: 'min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 flex flex-col' },
+    
+    // Yuxarı Naviqasiya Paneli
+    React.createElement(Navbar, {
+      activeTab,
+      setActiveTab,
+      darkMode,
+      setDarkMode,
+      searchQuery,
+      setSearchQuery,
+      userStats,
+      onOpenMobileMenu: () => setMobileMenuOpen(true)
+    }),
+
+    // Mobil Menyu Yan Paneli
+    React.createElement(Sidebar, {
+      isOpen: mobileMenuOpen,
+      onClose: () => setMobileMenuOpen(false),
+      activeTab,
+      setActiveTab,
+      userStats
+    }),
+
+    // Qlobal Axtarış Dropdown Nəticələri (əgər axtarış sorğusu varsa)
+    searchResults && React.createElement(
+      'div',
+      { className: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-4 z-30' },
+      React.createElement(
+        'div',
+        { className: 'p-5 bg-white dark:bg-slate-900 rounded-3xl border border-indigo-200 dark:border-indigo-900 shadow-2xl space-y-4 animate-fadeIn' },
+        React.createElement(
+          'div',
+          { className: 'flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800' },
+          React.createElement('h3', { className: 'text-xs font-black uppercase text-indigo-600 dark:text-indigo-400' }, `Axtarış Nəticələri: "${searchQuery}"`),
+          React.createElement('button', { onClick: () => setSearchQuery(''), className: 'text-xs text-slate-400 hover:text-slate-600' }, 'Bağla ✕')
+        ),
+        React.createElement(
+          'div',
+          { className: 'grid grid-cols-1 md:grid-cols-2 gap-4 max-h-72 overflow-y-auto' },
+          
+          // Dərslər Nəticələri
+          React.createElement(
+            'div',
+            { className: 'space-y-2' },
+            React.createElement('div', { className: 'text-[11px] font-bold text-slate-400 uppercase' }, `Tapılan Dərslər (${searchResults.lessons.length})`),
+            searchResults.lessons.length === 0 ? React.createElement('p', { className: 'text-xs text-slate-400' }, 'Dərs tapılmadı.') :
+            searchResults.lessons.map(les => {
+              return React.createElement(
+                'div',
+                {
+                  key: les.id,
+                  onClick: () => {
+                    setSelectedSubjectId(les.subjectId);
+                    setActiveLessonId(les.id);
+                    setActiveTab('lessons');
+                    setSearchQuery('');
+                  },
+                  className: 'p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-slate-700/80 cursor-pointer text-xs font-bold'
+                },
+                les.title
+              );
+            })
+          ),
+
+          // İmtahanlar Nəticələri
+          React.createElement(
+            'div',
+            { className: 'space-y-2' },
+            React.createElement('div', { className: 'text-[11px] font-bold text-slate-400 uppercase' }, `Tapılan İmtahanlar (${searchResults.exams.length})`),
+            searchResults.exams.length === 0 ? React.createElement('p', { className: 'text-xs text-slate-400' }, 'İmtahan tapılmadı.') :
+            searchResults.exams.map(ex => {
+              return React.createElement(
+                'div',
+                {
+                  key: ex.id,
+                  onClick: () => {
+                    setActiveExam(ex);
+                    setActiveTab('exams');
+                    setSearchQuery('');
+                  },
+                  className: 'p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-slate-700/80 cursor-pointer text-xs font-bold'
+                },
+                ex.title
+              );
+            })
+          )
+        )
+      )
+    ),
+
+    // Əsas Məzmun Sahəsi
+    React.createElement(
+      'main',
+      { className: 'flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 w-full' },
+      
+      activeTab === 'dashboard' && React.createElement(DashboardView, {
+        setActiveTab,
+        setSelectedSubjectId,
+        lessons,
+        exams,
+        onStartPvp: handleStartPvp,
+        onOpenExam: handleOpenExam
+      }),
+
+      activeTab === 'lessons' && React.createElement(LessonsView, {
+        lessons,
+        selectedSubjectId,
+        setSelectedSubjectId,
+        activeLessonId,
+        setActiveLessonId
+      }),
+
+      activeTab === 'exams' && React.createElement(ExamArchiveView, {
+        exams,
+        activeExam,
+        setActiveExam,
+        onExamFinished: () => {}
+      }),
+
+      activeTab === 'pvp' && React.createElement(PvpArenaView, {
+        pvpQuestions,
+        userStats,
+        onUpdateStats: handleUpdateStats
+      }),
+
+      activeTab === 'admin' && React.createElement(ContentManagerView, {
+        exams,
+        lessons,
+        pvpQuestions,
+        onDataRefresh: refreshData
+      })
+    ),
+
+    // Aşağı Footer (no-print)
+    React.createElement(
+      'footer',
+      { className: 'no-print border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-400 mt-auto' },
+      React.createElement(
+        'div',
+        { className: 'max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2' },
+        React.createElement('div', { className: 'font-semibold' }, '© 2026 MəktəbPlus - Bütün hüquqlar qorunur. Milli EdTech Platforması.'),
+        React.createElement(
+          'div',
+          { className: 'flex items-center space-x-4 text-[11px]' },
+          React.createElement('span', null, 'KaTeX & PhET İnteqrasiyalı'),
+          React.createElement('span', null, 'BSQ/KSQ Çap Standartı'),
+          React.createElement('span', null, '1v1 Canlı PvP')
+        )
+      )
+    )
+  );
+}

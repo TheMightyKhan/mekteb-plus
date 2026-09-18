@@ -1,0 +1,440 @@
+// MəktəbPlus - Dərslər və Nəzəriyyə Kataloqu (Tree View & Interactive Reader)
+
+import React, { useState, useMemo } from 'react';
+import { SUBJECTS, GRADES } from '../data/subjects.js';
+import { KatexRenderer } from './KatexRenderer.js';
+import { PhetEmbed } from './PhetEmbed.js';
+
+export const LessonsView = ({
+  lessons,
+  selectedSubjectId,
+  setSelectedSubjectId,
+  activeLessonId,
+  setActiveLessonId
+}) => {
+  const [selectedGrade, setSelectedGrade] = useState(10);
+  const [expandedUnits, setExpandedUnits] = useState({ 'Riyazi Analizin Başlanğıcı': true, 'Klassik Mexanika və Kinematika': true });
+  const [revealedSolutions, setRevealedSolutions] = useState({});
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const [quizSubmitted, setQuizSubmitted] = useState({});
+
+  // Fənn və sinifə görə dərsləri filtrləyirik
+  const filteredLessons = useMemo(() => {
+    return lessons.filter(l => {
+      const matchSubject = selectedSubjectId ? l.subjectId === selectedSubjectId : true;
+      const matchGrade = selectedGrade ? l.grade === selectedGrade : true;
+      return matchSubject && matchGrade;
+    });
+  }, [lessons, selectedSubjectId, selectedGrade]);
+
+  // Tree View üçün Bölmələrə (Units) qruplaşdırma
+  const unitsTree = useMemo(() => {
+    const tree = {};
+    filteredLessons.forEach(les => {
+      if (!tree[les.unit]) {
+        tree[les.unit] = [];
+      }
+      tree[les.unit].push(les);
+    });
+    return tree;
+  }, [filteredLessons]);
+
+  // Cari aktiv dərs
+  const currentLesson = useMemo(() => {
+    if (activeLessonId) {
+      const found = lessons.find(l => l.id === activeLessonId);
+      if (found) return found;
+    }
+    return filteredLessons[0] || lessons[0];
+  }, [lessons, activeLessonId, filteredLessons]);
+
+  const toggleUnit = (unit) => {
+    setExpandedUnits(prev => ({ ...prev, [unit]: !prev[unit] }));
+  };
+
+  const toggleSolution = (id) => {
+    setRevealedSolutions(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const handleSelectQuizOption = (questionId, key) => {
+    if (quizSubmitted[questionId]) return;
+    setQuizAnswers(prev => ({ ...prev, [questionId]: key }));
+  };
+
+  const handleCheckQuiz = (questionId) => {
+    setQuizSubmitted(prev => ({ ...prev, [questionId]: true }));
+  };
+
+  const currentSubjectMeta = SUBJECTS.find(s => s.id === currentLesson?.subjectId) || SUBJECTS[0];
+
+  return React.createElement(
+    'div',
+    { className: 'space-y-6 animate-fadeIn pb-16' },
+    
+    // Yuxarı Fənn və Sinif Filtrləri
+    React.createElement(
+      'div',
+      { className: 'flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm' },
+      
+      // Fənn Seçimi Scroll Bar
+      React.createElement(
+        'div',
+        { className: 'flex items-center space-x-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-thin' },
+        SUBJECTS.map(sub => {
+          const isSelected = selectedSubjectId === sub.id;
+          return React.createElement(
+            'button',
+            {
+              key: sub.id,
+              onClick: () => {
+                setSelectedSubjectId(sub.id);
+                // Uyğun ilk dərsi seç
+                const firstLes = lessons.find(l => l.subjectId === sub.id && l.grade === selectedGrade) || lessons.find(l => l.subjectId === sub.id);
+                if (firstLes) setActiveLessonId(firstLes.id);
+              },
+              className: `px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center space-x-1.5 ${
+                isSelected
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+              }`
+            },
+            React.createElement('span', null, sub.name)
+          );
+        })
+      ),
+
+      // Sinif Seçimi
+      React.createElement(
+        'div',
+        { className: 'flex items-center space-x-1 self-end sm:self-auto shrink-0' },
+        React.createElement('span', { className: 'text-xs font-bold text-slate-400 mr-1' }, 'Sinif:'),
+        GRADES.map(grade => {
+          const isSelected = selectedGrade === grade;
+          return React.createElement(
+            'button',
+            {
+              key: grade,
+              onClick: () => {
+                setSelectedGrade(grade);
+                const firstLes = lessons.find(l => l.grade === grade && (selectedSubjectId ? l.subjectId === selectedSubjectId : true));
+                if (firstLes) setActiveLessonId(firstLes.id);
+              },
+              className: `w-7 h-7 rounded-lg text-xs font-bold transition ${
+                isSelected
+                  ? 'bg-cyan-500 text-slate-950 font-black shadow-sm'
+                  : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+              }`
+            },
+            grade
+          );
+        })
+      )
+    ),
+
+    // Əsas Məzmun: Sol (Tree View) və Sağ (Oxu və İnteraktiv Məzmun)
+    React.createElement(
+      'div',
+      { className: 'grid grid-cols-1 lg:grid-cols-12 gap-6' },
+      
+      // 1. Sol: Sinif -> Bölmə -> Mövzu Ağac Naviqasiyası (Tree View) (4 sütun)
+      React.createElement(
+        'aside',
+        { className: 'lg:col-span-4 space-y-4' },
+        React.createElement(
+          'div',
+          { className: 'bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm sticky top-24' },
+          
+          React.createElement(
+            'div',
+            { className: 'flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800' },
+            React.createElement(
+              'div',
+              { className: 'flex items-center space-x-2' },
+              React.createElement('i', { className: 'fas fa-folder-tree text-indigo-500' }),
+              React.createElement('h3', { className: 'font-black text-sm text-slate-800 dark:text-slate-200' }, 'Mövzu Ağacı (Kataloq)')
+            ),
+            React.createElement('span', { className: 'text-[11px] font-semibold text-slate-400' }, `${filteredLessons.length} Mövzu`)
+          ),
+
+          Object.keys(unitsTree).length === 0 ? React.createElement(
+            'div',
+            { className: 'py-8 text-center text-xs text-slate-400' },
+            React.createElement('i', { className: 'fas fa-box-open text-2xl mb-2 block' }),
+            'Bu fənn və sinif üçün hələ dərs əlavə edilməyib. İdarəetmə panelindən yeni dərs əlavə edə bilərsiniz.'
+          ) : React.createElement(
+            'div',
+            { className: 'space-y-3 max-h-[calc(100vh-250px)] overflow-y-auto pr-1' },
+            Object.entries(unitsTree).map(([unitName, unitLessons]) => {
+              const isExpanded = expandedUnits[unitName] ?? true;
+              return React.createElement(
+                'div',
+                { key: unitName, className: 'rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden' },
+                // Unit header (Collapsible)
+                React.createElement(
+                  'button',
+                  {
+                    onClick: () => toggleUnit(unitName),
+                    className: 'w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800/60 flex items-center justify-between text-left text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition'
+                  },
+                  React.createElement(
+                    'div',
+                    { className: 'flex items-center space-x-2' },
+                    React.createElement('i', { className: `fas fa-chevron-${isExpanded ? 'down' : 'right'} text-[10px] text-indigo-500` }),
+                    React.createElement('span', null, unitName)
+                  ),
+                  React.createElement('span', { className: 'text-[10px] px-1.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400' }, unitLessons.length)
+                ),
+                // Lessons in unit
+                isExpanded && React.createElement(
+                  'div',
+                  { className: 'p-1.5 space-y-1 bg-white dark:bg-slate-900' },
+                  unitLessons.map(les => {
+                    const isCurrent = currentLesson?.id === les.id;
+                    return React.createElement(
+                      'button',
+                      {
+                        key: les.id,
+                        onClick: () => setActiveLessonId(les.id),
+                        className: `w-full px-3 py-2 rounded-xl text-left text-xs font-semibold flex items-center space-x-2 transition ${
+                          isCurrent
+                            ? 'bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 font-bold'
+                            : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
+                        }`
+                      },
+                      React.createElement('i', { className: `fas fa-file-lines text-[11px] ${isCurrent ? 'text-indigo-600' : 'text-slate-400'}` }),
+                      React.createElement('span', { className: 'line-clamp-1 flex-1' }, les.title)
+                    );
+                  })
+                )
+              );
+            })
+          )
+        )
+      ),
+
+      // 2. Sağ: Təmiz Oxu Pəncərəsi (8 sütun)
+      React.createElement(
+        'main',
+        { className: 'lg:col-span-8 space-y-6' },
+        
+        currentLesson ? React.createElement(
+          'article',
+          { className: 'bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6' },
+          
+          // Dərs Başlığı və Metadata
+          React.createElement(
+            'div',
+            { className: 'pb-5 border-b border-slate-100 dark:border-slate-800' },
+            React.createElement(
+              'div',
+              { className: 'flex flex-wrap items-center gap-2 mb-2' },
+              React.createElement('span', { className: `text-[11px] font-bold px-2.5 py-0.5 rounded-lg ${currentSubjectMeta.badgeBg} ${currentSubjectMeta.badgeText}` }, currentSubjectMeta.name),
+              React.createElement('span', { className: 'text-[11px] font-bold px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400' }, `${currentLesson.grade}-ci sinif`),
+              React.createElement('span', { className: 'text-[11px] font-medium text-slate-400 flex items-center gap-1' },
+                React.createElement('i', { className: 'fas fa-clock text-[10px]' }),
+                React.createElement('span', null, `${currentLesson.readTimeMinutes} dəqiqəlik oxu`)
+              )
+            ),
+            React.createElement('h1', { className: 'text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight' }, currentLesson.title),
+            React.createElement('p', { className: 'text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed' }, currentLesson.summary)
+          ),
+
+          // Nəzəriyyə Mətni (KaTeX Render)
+          React.createElement(
+            'div',
+            { className: 'prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-4' },
+            React.createElement(KatexRenderer, { text: currentLesson.theoryMarkdown })
+          ),
+
+          // Əsas Düsturlar Paneli (Key Formulas)
+          currentLesson.keyFormulas && currentLesson.keyFormulas.length > 0 && React.createElement(
+            'div',
+            { className: 'rounded-2xl p-5 bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/60 space-y-3' },
+            React.createElement(
+              'div',
+              { className: 'flex items-center space-x-2 text-indigo-700 dark:text-indigo-300 font-black text-sm' },
+              React.createElement('i', { className: 'fas fa-square-root-variable text-base' }),
+              React.createElement('span', null, 'Əsas Qaydalar və Düsturlar')
+            ),
+            React.createElement(
+              'div',
+              { className: 'grid grid-cols-1 sm:grid-cols-2 gap-3' },
+              currentLesson.keyFormulas.map(f => {
+                return React.createElement(
+                  'div',
+                  { key: f.id, className: 'p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-100 dark:border-indigo-900 shadow-sm' },
+                  React.createElement('div', { className: 'text-xs font-bold text-slate-700 dark:text-slate-300 mb-1' }, f.name),
+                  React.createElement(KatexRenderer, { text: `$$${f.latex}$$`, block: true }),
+                  React.createElement('div', { className: 'text-[11px] text-slate-500 dark:text-slate-400 mt-1' }, f.description)
+                );
+              })
+            )
+          ),
+
+          // PhET İnteraktiv Simulyasiya Bölməsi (Əgər varsa)
+          currentLesson.interactiveSim?.enabled && React.createElement(
+            'div',
+            null,
+            React.createElement(PhetEmbed, {
+              simUrl: currentLesson.interactiveSim.url,
+              title: currentLesson.interactiveSim.title,
+              description: currentLesson.interactiveSim.description
+            })
+          ),
+
+          // Terminlərin Xülasəsi (Glossary)
+          currentLesson.glossary && currentLesson.glossary.length > 0 && React.createElement(
+            'div',
+            { className: 'space-y-2' },
+            React.createElement('h3', { className: 'font-black text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2' },
+              React.createElement('i', { className: 'fas fa-spell-check text-cyan-500' }),
+              React.createElement('span', null, 'Terminlərin Xülasəsi')
+            ),
+            React.createElement(
+              'div',
+              { className: 'grid grid-cols-1 sm:grid-cols-2 gap-2.5' },
+              currentLesson.glossary.map((g, idx) => {
+                return React.createElement(
+                  'div',
+                  { key: idx, className: 'p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800' },
+                  React.createElement('div', { className: 'text-xs font-black text-indigo-600 dark:text-indigo-400' }, g.term),
+                  React.createElement('div', { className: 'text-xs text-slate-600 dark:text-slate-300 mt-0.5' }, g.definition)
+                );
+              })
+            )
+          ),
+
+          // Həlli Gizlədilmiş Nümunəvi Məsələlər (Accordion)
+          currentLesson.solvedExamples && currentLesson.solvedExamples.length > 0 && React.createElement(
+            'div',
+            { className: 'space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800' },
+            React.createElement('h3', { className: 'font-black text-base text-slate-800 dark:text-slate-200 flex items-center gap-2' },
+              React.createElement('i', { className: 'fas fa-lightbulb text-amber-500' }),
+              React.createElement('span', null, 'Nümunəvi Məsələ və Addım-Addım Həlli')
+            ),
+            currentLesson.solvedExamples.map(ex => {
+              const isRevealed = revealedSolutions[ex.id];
+              return React.createElement(
+                'div',
+                { key: ex.id, className: 'rounded-2xl border border-amber-200/70 dark:border-amber-900/50 bg-amber-50/20 dark:bg-amber-950/20 overflow-hidden' },
+                React.createElement(
+                  'div',
+                  { className: 'p-4 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200' },
+                  React.createElement('span', { className: 'text-amber-600 dark:text-amber-400 font-bold mr-1' }, 'Məsələ:'),
+                  React.createElement(KatexRenderer, { text: ex.question })
+                ),
+                React.createElement(
+                  'div',
+                  { className: 'px-4 pb-3' },
+                  React.createElement(
+                    'button',
+                    {
+                      onClick: () => toggleSolution(ex.id),
+                      className: 'px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-700 dark:text-amber-300 font-bold text-xs flex items-center space-x-1.5 transition'
+                    },
+                    React.createElement('i', { className: `fas fa-${isRevealed ? 'eye-slash' : 'eye'}` }),
+                    React.createElement('span', null, isRevealed ? 'Həlli Gizlət' : 'Həlli Göstər (Addım-addım)')
+                  )
+                ),
+                isRevealed && React.createElement(
+                  'div',
+                  { className: 'p-4 bg-white dark:bg-slate-900 border-t border-amber-200/70 dark:border-amber-900/50 text-xs sm:text-sm space-y-2' },
+                  React.createElement(KatexRenderer, { text: ex.solution })
+                )
+              );
+            })
+          ),
+
+          // Dərsin Sonunda "Özünü Yoxla" Mini-Testi
+          currentLesson.miniQuiz && currentLesson.miniQuiz.length > 0 && React.createElement(
+            'div',
+            { className: 'rounded-2xl p-6 bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-4 pt-6' },
+            React.createElement(
+              'div',
+              { className: 'flex items-center space-x-2' },
+              React.createElement('i', { className: 'fas fa-circle-check text-emerald-500 text-lg' }),
+              React.createElement('h3', { className: 'font-black text-base text-slate-800 dark:text-slate-200' }, 'Dərsi Mənimsəmə Mini-Testi (Özünü Yoxla)')
+            ),
+            currentLesson.miniQuiz.map((q, qIndex) => {
+              const selectedKey = quizAnswers[q.questionId];
+              const isChecked = quizSubmitted[q.questionId];
+              const isCorrect = selectedKey === q.correctKey;
+
+              return React.createElement(
+                'div',
+                { key: q.questionId, className: 'p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3' },
+                React.createElement(
+                  'div',
+                  { className: 'text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200' },
+                  React.createElement('span', { className: 'text-indigo-600 mr-2' }, `${qIndex + 1}.`),
+                  React.createElement(KatexRenderer, { text: q.question })
+                ),
+                // Variantlar
+                React.createElement(
+                  'div',
+                  { className: 'grid grid-cols-1 sm:grid-cols-2 gap-2' },
+                  q.options.map(opt => {
+                    const isOptionSelected = selectedKey === opt.key;
+                    let btnClass = 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700';
+
+                    if (isChecked) {
+                      if (opt.key === q.correctKey) {
+                        btnClass = 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-500 font-bold';
+                      } else if (isOptionSelected && !isCorrect) {
+                        btnClass = 'bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border-rose-500 font-bold';
+                      }
+                    } else if (isOptionSelected) {
+                      btnClass = 'bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border-indigo-500 font-bold';
+                    }
+
+                    return React.createElement(
+                      'button',
+                      {
+                        key: opt.key,
+                        onClick: () => handleSelectQuizOption(q.questionId, opt.key),
+                        className: `p-2.5 rounded-xl border text-left text-xs flex items-center space-x-2 transition ${btnClass}`
+                      },
+                      React.createElement('span', { className: 'w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-[10px]' }, opt.key),
+                      React.createElement(KatexRenderer, { text: opt.text })
+                    );
+                  })
+                ),
+                // Yoxla düyməsi və nəticə
+                React.createElement(
+                  'div',
+                  { className: 'flex items-center justify-between pt-2' },
+                  !isChecked ? React.createElement(
+                    'button',
+                    {
+                      onClick: () => handleCheckQuiz(q.questionId),
+                      disabled: !selectedKey,
+                      className: `px-4 py-1.5 rounded-lg text-xs font-bold transition ${
+                        selectedKey
+                          ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm'
+                          : 'bg-slate-200 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
+                      }`
+                    },
+                    'Cavabı Yoxla'
+                  ) : React.createElement(
+                    'div',
+                    { className: 'w-full' },
+                    React.createElement(
+                      'div',
+                      { className: `p-2.5 rounded-lg text-xs font-semibold ${isCorrect ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300' : 'bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300'}` },
+                      React.createElement('p', { className: 'font-bold' }, isCorrect ? '✓ Əla! Doğru cavab verdiniz.' : `✗ Səhv cavab. Doğru variant: ${q.correctKey}`),
+                      React.createElement('p', { className: 'mt-1 text-[11px] opacity-90' }, q.explanation)
+                    )
+                  )
+                )
+              );
+            })
+          )
+        ) : React.createElement(
+          'div',
+          { className: 'bg-white dark:bg-slate-900 rounded-3xl p-12 text-center text-slate-400 border border-slate-200 dark:border-slate-800' },
+          'Dərs seçilməyib'
+        )
+      )
+    )
+  );
+};
