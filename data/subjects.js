@@ -103,7 +103,7 @@ export const SUBJECTS = [
     borderCol: 'border-rose-200 dark:border-rose-800',
     gradient: 'from-rose-600 to-pink-600',
     description: 'Fonetika, Leksika, Morfologiya, Sintaksis və mətn təhlili qaydaları.',
-    totalLessons: 26,
+    totalLessons: 35,
     totalExams: 12,
   },
   {
