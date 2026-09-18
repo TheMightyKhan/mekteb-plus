@@ -317,18 +317,37 @@ export const LessonsView = ({
           'article',
           { className: 'bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6' },
           
-          // Dərs Başlığı və Metadata
+          // Dərs Başlığı və Metadata (Səsli Oxuma ilə)
           React.createElement(
             'div',
             { className: 'pb-5 border-b border-slate-100 dark:border-slate-800' },
             React.createElement(
               'div',
-              { className: 'flex flex-wrap items-center gap-2 mb-2' },
-              React.createElement('span', { className: `text-[11px] font-bold px-2.5 py-0.5 rounded-lg ${currentSubjectMeta.badgeBg} ${currentSubjectMeta.badgeText}` }, currentSubjectMeta.name),
-              React.createElement('span', { className: 'text-[11px] font-bold px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400' }, `${currentLesson.grade}-ci sinif`),
-              React.createElement('span', { className: 'text-[11px] font-medium text-slate-400 flex items-center gap-1' },
-                React.createElement('i', { className: 'fas fa-clock text-[10px]' }),
-                React.createElement('span', null, `${currentLesson.readTimeMinutes} dəqiqəlik oxu`)
+              { className: 'flex flex-wrap items-center justify-between gap-3 mb-3' },
+              React.createElement(
+                'div',
+                { className: 'flex flex-wrap items-center gap-2' },
+                React.createElement('span', { className: `text-[11px] font-bold px-2.5 py-0.5 rounded-lg ${currentSubjectMeta.badgeBg} ${currentSubjectMeta.badgeText}` }, currentSubjectMeta.name),
+                React.createElement('span', { className: 'text-[11px] font-bold px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400' }, `${currentLesson.grade}-ci sinif`),
+                React.createElement('span', { className: 'text-[11px] font-medium text-slate-400 flex items-center gap-1' },
+                  React.createElement('i', { className: 'fas fa-clock text-[10px]' }),
+                  React.createElement('span', null, `${currentLesson.readTimeMinutes} dəqiqəlik oxu`)
+                )
+              ),
+              // AI Səsli Oxuma Düyməsi
+              React.createElement(
+                'button',
+                {
+                  onClick: handleToggleAudio,
+                  title: isPlayingAudio ? 'Səsləndirməni dayandır' : 'Dərsi səsli oxu (AI Audio)',
+                  className: `px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center space-x-2 transition shadow-sm ${
+                    isPlayingAudio
+                      ? 'bg-rose-500 text-white animate-pulse shadow-rose-500/25'
+                      : 'bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 border border-indigo-200 dark:border-indigo-800'
+                  }`
+                },
+                React.createElement('i', { className: `fas ${isPlayingAudio ? 'fa-pause' : 'fa-volume-high text-indigo-600 dark:text-indigo-400'}` }),
+                React.createElement('span', null, isPlayingAudio ? 'Dayandır' : 'Dərsi Səsləndir')
               )
             ),
             React.createElement('h1', { className: 'text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight' }, currentLesson.title),
