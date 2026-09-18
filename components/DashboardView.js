@@ -89,7 +89,7 @@ export const DashboardView = ({
           React.createElement(
             'button',
             {
-              onClick: () => setActiveTab('tools'),
+              onClick: onOpenTools,
               className: 'px-5 py-2.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-300/40 text-cyan-200 font-bold text-xs sm:text-sm transition flex items-center space-x-2'
             },
             React.createElement('i', { className: 'fas fa-toolbox' }),
