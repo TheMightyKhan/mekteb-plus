@@ -9,7 +9,8 @@ export const DashboardView = ({
   lessons,
   exams,
   onStartPvp,
-  onOpenExam
+  onOpenExam,
+  onOpenTools
 }) => {
   const recentExams = exams.slice(0, 3);
   const recentLessons = lessons.slice(0, 3);
