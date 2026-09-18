@@ -255,5 +255,491 @@ export const MOCK_PVP_QUESTIONS = [
     correctKey: 'B',
     explanation: 'Qüvvətin inteqral qaydası: $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$. Buradan $\\frac{x^3}{3} + C$.',
     difficulty: 2
-  }
+  },
+{
+  "id": "pvp-18",
+  "subjectId": "riyaziyyat",
+  "grade": 7,
+  "text": "Üçbucağın daxili bucaqlarının cəmi neçə dərəcədir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "90°"
+    },
+    {
+      "key": "B",
+      "text": "180°"
+    },
+    {
+      "key": "C",
+      "text": "270°"
+    },
+    {
+      "key": "D",
+      "text": "360°"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "İxtiyari üçbucağın daxili bucaqlarının cəmi həmişə 180 dərəcədir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-19",
+  "subjectId": "riyaziyyat",
+  "grade": 8,
+  "text": "Katetləri 3 və 4 olan düzbucaqlı üçbucağın hipotenuzu neçədir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "5"
+    },
+    {
+      "key": "B",
+      "text": "6"
+    },
+    {
+      "key": "C",
+      "text": "7"
+    },
+    {
+      "key": "D",
+      "text": "25"
+    }
+  ],
+  "correctKey": "A",
+  "explanation": "Pifaqor teoreminə əsasən: c = √(3² + 4²) = √(9 + 16) = √25 = 5.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-20",
+  "subjectId": "fizika",
+  "grade": 7,
+  "text": "Maddənin vahid həcmdəki kütləsini göstərən fiziki kəmiyyət hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Çəki"
+    },
+    {
+      "key": "B",
+      "text": "Sıxlıq"
+    },
+    {
+      "key": "C",
+      "text": "Təzyiq"
+    },
+    {
+      "key": "D",
+      "text": "Qüvvə"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Sıxlıq ρ = m/V düsturu ilə təyin olunur və vahid həcmin kütləsini bildirir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-21",
+  "subjectId": "fizika",
+  "grade": 8,
+  "text": "Elektrik cərəyanı şiddətini ölçən cihaz hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Voltmetr"
+    },
+    {
+      "key": "B",
+      "text": "Manometr"
+    },
+    {
+      "key": "C",
+      "text": "Ampermetr"
+    },
+    {
+      "key": "D",
+      "text": "Dinamometr"
+    }
+  ],
+  "correctKey": "C",
+  "explanation": "Cərəyan şiddəti dövrəyə ardıcıl qoşulan ampermetrlə ölçülür.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-22",
+  "subjectId": "kimya",
+  "grade": 8,
+  "text": "Normal şəraitdə 1 mol qaz neçə litr həcm tutur?",
+  "options": [
+    {
+      "key": "A",
+      "text": "11.2 litr"
+    },
+    {
+      "key": "B",
+      "text": "22.4 litr"
+    },
+    {
+      "key": "C",
+      "text": "44.8 litr"
+    },
+    {
+      "key": "D",
+      "text": "1.0 litr"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Avoqadro qanununa görə n.ş.-də 1 mol istənilən qaz 22.4 litr həcm tutur.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-23",
+  "subjectId": "kimya",
+  "grade": 9,
+  "text": "Xörək duzunun kimyəvi formulu hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "NaCl"
+    },
+    {
+      "key": "B",
+      "text": "KCl"
+    },
+    {
+      "key": "C",
+      "text": "CaCl2"
+    },
+    {
+      "key": "D",
+      "text": "NaOH"
+    }
+  ],
+  "correctKey": "A",
+  "explanation": "Xörək duzu natrium-xloriddir (NaCl).",
+  "difficulty": 1
+},
+{
+  "id": "pvp-24",
+  "subjectId": "biologiya",
+  "grade": 8,
+  "text": "İnsan bədənində ən böyük arteriya damarı hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Yuxu arteriyası"
+    },
+    {
+      "key": "B",
+      "text": "Ağciyər arteriyası"
+    },
+    {
+      "key": "C",
+      "text": "Aorta"
+    },
+    {
+      "key": "D",
+      "text": "Qapı venası"
+    }
+  ],
+  "correctKey": "C",
+  "explanation": "Aorta sol mədəcikdən başlayan ən güclü və böyük damardır.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-25",
+  "subjectId": "biologiya",
+  "grade": 10,
+  "text": "Hüceyrədə energetik stansiya rolunu oynayan orqanoid hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Ribosom"
+    },
+    {
+      "key": "B",
+      "text": "Mitoxondri"
+    },
+    {
+      "key": "C",
+      "text": "Lizosom"
+    },
+    {
+      "key": "D",
+      "text": "Vakuol"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Mitoxondridə ATF sintez olunur və hüceyrə enerji ilə təmin edilir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-26",
+  "subjectId": "cografiya",
+  "grade": 6,
+  "text": "Yerin öz oxu ətrafında bir tam dövrü neçə saata baş verir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "12 saat"
+    },
+    {
+      "key": "B",
+      "text": "24 saat"
+    },
+    {
+      "key": "C",
+      "text": "48 saat"
+    },
+    {
+      "key": "D",
+      "text": "365 gün"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Yer öz oxu ətrafında 24 saata (1 sutka) dövr edir və gecə-gündüz yaranır.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-27",
+  "subjectId": "cografiya",
+  "grade": 8,
+  "text": "Azərbaycan ərazisində ən yüksək dağ zirvəsi hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Şahdağ (4243 m)"
+    },
+    {
+      "key": "B",
+      "text": "Bazardüzü (4466 m)"
+    },
+    {
+      "key": "C",
+      "text": "Qapıcıq (3904 m)"
+    },
+    {
+      "key": "D",
+      "text": "Babadağ (3629 m)"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Azərbaycanın ən uca zirvəsi Böyük Qafqaz silsiləsindəki Bazardüzüdür (4466 m).",
+  "difficulty": 2
+},
+{
+  "id": "pvp-28",
+  "subjectId": "tarix",
+  "grade": 8,
+  "text": "Naxçıvandakı Möminə Xatun türbəsi hansı dahi memarın şah əsəridir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Əcəmi Naxçıvani"
+    },
+    {
+      "key": "B",
+      "text": "Memar Sinan"
+    },
+    {
+      "key": "C",
+      "text": "Ömər İbn Osman"
+    },
+    {
+      "key": "D",
+      "text": "Əbdülməcid Məsud"
+    }
+  ],
+  "correctKey": "A",
+  "explanation": "1186-cı ildə ucaldılan Möminə Xatun türbəsinin memarı Əcəmi Əbubəkr oğlu Naxçıvanidir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-29",
+  "subjectId": "tarix",
+  "grade": 11,
+  "text": "Azərbaycan Xalq Cümhuriyyəti hansı tarixdə elan edilmişdir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "28 may 1918"
+    },
+    {
+      "key": "B",
+      "text": "18 oktyabr 1991"
+    },
+    {
+      "key": "C",
+      "text": "15 iyun 1993"
+    },
+    {
+      "key": "D",
+      "text": "9 noyabr 1918"
+    }
+  ],
+  "correctKey": "A",
+  "explanation": "28 may 1918-ci ildə Tiflisdə İstiqlal Bəyannaməsi ilə AXC elan olundu.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-30",
+  "subjectId": "azerbaycan_dili",
+  "grade": 6,
+  "text": "Azərbaycan əlifbasında neçə sait səs var?",
+  "options": [
+    {
+      "key": "A",
+      "text": "6"
+    },
+    {
+      "key": "B",
+      "text": "8"
+    },
+    {
+      "key": "C",
+      "text": "9"
+    },
+    {
+      "key": "D",
+      "text": "32"
+    }
+  ],
+  "correctKey": "C",
+  "explanation": "Azərbaycan dilində 9 sait səs var (a, e, ə, ı, i, o, ö, u, ü).",
+  "difficulty": 1
+},
+{
+  "id": "pvp-31",
+  "subjectId": "azerbaycan_dili",
+  "grade": 8,
+  "text": "\"Mən dünən maraqlı kitab aldım\" cümləsində \"maraqlı\" sözü hansı cümlə üzvüdür?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Mübtəda"
+    },
+    {
+      "key": "B",
+      "text": "Təyin"
+    },
+    {
+      "key": "C",
+      "text": "Tamamlıq"
+    },
+    {
+      "key": "D",
+      "text": "Zərflik"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "\"Necə kitab?\" sualına cavab verir və ismi izah etdiyi üçün təyindir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-32",
+  "subjectId": "xarici_dil",
+  "grade": 8,
+  "text": "Choose the correct preposition: \"She is interested ____ music.\"",
+  "options": [
+    {
+      "key": "A",
+      "text": "at"
+    },
+    {
+      "key": "B",
+      "text": "in"
+    },
+    {
+      "key": "C",
+      "text": "on"
+    },
+    {
+      "key": "D",
+      "text": "with"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "'To be interested in' sabit sözönü birləşməsidir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-33",
+  "subjectId": "xarici_dil",
+  "grade": 9,
+  "text": "What is the past participle (V3) form of the irregular verb 'write'?",
+  "options": [
+    {
+      "key": "A",
+      "text": "wrote"
+    },
+    {
+      "key": "B",
+      "text": "written"
+    },
+    {
+      "key": "C",
+      "text": "writing"
+    },
+    {
+      "key": "D",
+      "text": "writed"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "Write - wrote - written qaydasız fel formasıdır.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-34",
+  "subjectId": "informatika",
+  "grade": 7,
+  "text": "1 Bayt neçə bitdən ibarətdir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "2 bit"
+    },
+    {
+      "key": "B",
+      "text": "4 bit"
+    },
+    {
+      "key": "C",
+      "text": "8 bit"
+    },
+    {
+      "key": "D",
+      "text": "16 bit"
+    }
+  ],
+  "correctKey": "C",
+  "explanation": "1 Bayt = 8 bit-dir.",
+  "difficulty": 1
+},
+{
+  "id": "pvp-35",
+  "subjectId": "informatika",
+  "grade": 10,
+  "text": "Python-da ekrana məlumat çıxarmaq üçün hansı funksiyadan istifadə edilir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "input()"
+    },
+    {
+      "key": "B",
+      "text": "print()"
+    },
+    {
+      "key": "C",
+      "text": "write()"
+    },
+    {
+      "key": "D",
+      "text": "output()"
+    }
+  ],
+  "correctKey": "B",
+  "explanation": "print() funksiyası standart çıxışa (ekrana) məlumat ötürür.",
+  "difficulty": 1
+}
 ];
