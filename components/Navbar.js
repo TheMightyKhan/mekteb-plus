@@ -11,7 +11,8 @@ export const Navbar = ({
   setSearchQuery,
   userStats,
   onOpenMobileMenu,
-  onOpenTools
+  onOpenTools,
+  onOpenProfile
 }) => {
   return React.createElement(
     'header',
