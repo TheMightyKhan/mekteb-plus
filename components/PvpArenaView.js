@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { PvpEngine } from '../services/pvpEngine.js';
-import { MOCK_LEADERBOARD } from '../data/leaderboard.js';
+import { StorageService } from '../services/storageService.js';
 import { KatexRenderer } from './KatexRenderer.js';
 
 export const PvpArenaView = ({
@@ -35,7 +35,7 @@ export const PvpArenaView = ({
   const [roundEnded, setRoundEnded] = useState(false);
   
   const [battleHistory, setBattleHistory] = useState([]); // Hər raundun nəticəsi
-  const [leaderboard, setLeaderboard] = useState(MOCK_LEADERBOARD);
+  const [leaderboard, setLeaderboard] = useState(() => StorageService.getLeaderboard());
 
   const roundTimerRef = useRef(null);
   const botTimeoutRef = useRef(null);
@@ -222,10 +222,21 @@ export const PvpArenaView = ({
       });
     }
 
+    const pointsGained = isVictory ? 60 : 15;
+
+    // Yalnız real oyunçunun nəticəsini qeyd edirik (olmayan adamlar yazılmır)
+    const updatedLeaderboard = StorageService.recordMatchToLeaderboard(
+      userStats?.name || 'Şagird',
+      userStats?.grade || 10,
+      isVictory,
+      pointsGained
+    );
+    setLeaderboard(updatedLeaderboard);
+
     if (onUpdateStats) {
       onUpdateStats(prev => ({
         ...prev,
-        pvpScore: prev.pvpScore + (isVictory ? 60 : 15),
+        pvpScore: prev.pvpScore + pointsGained,
         pvpWins: prev.pvpWins + (isVictory ? 1 : 0),
         pvpMatches: prev.pvpMatches + 1,
         xp: prev.xp + (isVictory ? 150 : 50)
@@ -657,12 +668,18 @@ export const PvpArenaView = ({
           'div',
           { className: 'flex items-center space-x-2' },
           React.createElement('i', { className: 'fas fa-trophy text-amber-500 text-lg' }),
-          React.createElement('h3', { className: 'font-black text-base text-slate-800 dark:text-slate-100' }, 'Həftəlik Respublika Liderlər Cədvəli')
+          React.createElement('h3', { className: 'font-black text-base text-slate-800 dark:text-slate-100' }, 'Liderlər Cədvəli'),
+          React.createElement('span', { className: 'text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300' }, 'Yalnız Real Oyunçular')
         ),
-        React.createElement('span', { className: 'text-xs font-bold text-indigo-600' }, 'Top 10')
+        React.createElement('span', { className: 'text-xs text-slate-400 font-semibold' }, `${leaderboard.length} İştirakçı`)
       ),
 
-      React.createElement(
+      leaderboard.length === 0 ? React.createElement(
+        'div',
+        { className: 'py-8 text-center text-xs text-slate-400' },
+        React.createElement('i', { className: 'fas fa-users-slash text-2xl mb-2 block' }),
+        'Hələ ki heç bir real oyunçu qeydə alınmayıb. İlk oyunu oynayaraq liderlər cədvəlində yer alın!'
+      ) : React.createElement(
         'div',
         { className: 'overflow-x-auto' },
         React.createElement(
@@ -679,7 +696,7 @@ export const PvpArenaView = ({
               React.createElement('th', { className: 'py-2 px-3' }, 'Sinif'),
               React.createElement('th', { className: 'py-2 px-3' }, 'Qələbə Nisbəti'),
               React.createElement('th', { className: 'py-2 px-3' }, 'Xal (XP)'),
-              React.createElement('th', { className: 'py-2 px-3 text-right' }, 'Titul / Nişan')
+              React.createElement('th', { className: 'py-2 px-3 text-right' }, 'Titul / Status')
             )
           ),
           React.createElement(
@@ -697,14 +714,14 @@ export const PvpArenaView = ({
                 React.createElement(
                   'td',
                   { className: 'py-3 px-3 font-bold text-slate-800 dark:text-slate-200 flex items-center space-x-2' },
-                  React.createElement('span', { className: 'text-base' }, user.avatar),
+                  React.createElement('span', { className: 'text-base' }, user.avatar || '🧑‍🎓'),
                   React.createElement('span', null, user.name)
                 ),
                 React.createElement('td', { className: 'py-3 px-3 text-slate-500' }, `${user.schoolGrade}-ci sinif`),
                 React.createElement('td', { className: 'py-3 px-3 text-emerald-600 font-bold' }, `${user.winRate}% (${user.wins} Q)`),
                 React.createElement('td', { className: 'py-3 px-3 font-black text-indigo-600 dark:text-indigo-400' }, `${user.points} XP`),
                 React.createElement('td', { className: 'py-3 px-3 text-right' },
-                  React.createElement('span', { className: 'text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300' }, user.badge)
+                  React.createElement('span', { className: 'text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300' }, user.badge || '⚡ Real İştirakçı')
                 )
               );
             })

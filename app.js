@@ -8,6 +8,7 @@ import { LessonsView } from './components/LessonsView.js';
 import { ExamArchiveView } from './components/ExamArchiveView.js';
 import { PvpArenaView } from './components/PvpArenaView.js';
 import { ContentManagerView } from './components/ContentManagerView.js';
+import { ToolsView } from './components/ToolsView.js';
 import { StorageService } from './services/storageService.js';
 
 export default function App() {
@@ -186,6 +187,8 @@ export default function App() {
         activeLessonId,
         setActiveLessonId
       }),
+
+      activeTab === 'tools' && React.createElement(ToolsView),
 
       activeTab === 'exams' && React.createElement(ExamArchiveView, {
         exams,

@@ -178,5 +178,58 @@ export const StorageService = {
       localStorage.setItem(STORAGE_KEYS.USER_STATS, JSON.stringify(updated));
     } catch (e) {}
     return updated;
+  },
+
+  // Canlı Liderlər Cədvəli (Yalnız real oynayan istifadəçilər)
+  getLeaderboard() {
+    try {
+      const stored = localStorage.getItem('mekteb_plus_leaderboard_v1');
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {}
+    // Əgər baza boşdursa, yalnız cari real istifadəçini daxil edirik
+    const user = this.getUserStats();
+    return [
+      {
+        id: 'real-user-1',
+        rank: 1,
+        name: user.name || 'Şagird',
+        schoolGrade: user.grade || 10,
+        avatar: '🧑‍🎓',
+        points: user.pvpScore || 1420,
+        wins: user.pvpWins || 0,
+        winRate: user.pvpMatches > 0 ? Math.round(((user.pvpWins || 0) / user.pvpMatches) * 100) : 100,
+        badge: '🎖️ Fəal İştirakçı'
+      }
+    ];
+  },
+
+  recordMatchToLeaderboard(playerName, grade, won, pointsGained) {
+    const list = this.getLeaderboard();
+    const existing = list.find(u => u.name === playerName);
+    if (existing) {
+      existing.points += pointsGained;
+      if (won) existing.wins += 1;
+    } else {
+      list.push({
+        id: `user-${Date.now()}`,
+        rank: list.length + 1,
+        name: playerName,
+        schoolGrade: grade,
+        avatar: '🧑‍🎓',
+        points: pointsGained,
+        wins: won ? 1 : 0,
+        winRate: won ? 100 : 0,
+        badge: '⚡ Yeni Oyunçu'
+      });
+    }
+
+    list.sort((a, b) => b.points - a.points);
+    list.forEach((item, index) => { item.rank = index + 1; });
+    try {
+      localStorage.setItem('mekteb_plus_leaderboard_v1', JSON.stringify(list));
+    } catch (e) {}
+    return list;
   }
 };

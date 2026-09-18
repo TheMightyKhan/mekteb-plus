@@ -88,6 +88,15 @@ export const DashboardView = ({
           React.createElement(
             'button',
             {
+              onClick: () => setActiveTab('tools'),
+              className: 'px-5 py-2.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-300/40 text-cyan-200 font-bold text-xs sm:text-sm transition flex items-center space-x-2'
+            },
+            React.createElement('i', { className: 'fas fa-toolbox' }),
+            React.createElement('span', null, 'Alətlər & Calculus')
+          ),
+          React.createElement(
+            'button',
+            {
               onClick: () => onStartPvp('quick'),
               className: 'px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm shadow-md transition flex items-center space-x-2'
             },

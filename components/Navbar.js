@@ -84,6 +84,7 @@ export const Navbar = ({
           [
             { id: 'dashboard', label: 'Ana Səhifə', icon: 'fa-house' },
             { id: 'lessons', label: 'Dərslər', icon: 'fa-book-open-reader' },
+            { id: 'tools', label: 'Alətlər & Lab', icon: 'fa-toolbox', badge: 'Yeni' },
             { id: 'exams', label: 'BSQ / KSQ Arxiv', icon: 'fa-file-lines' },
             { id: 'pvp', label: '1v1 Viktorina', icon: 'fa-gamepad', badge: 'Canlı' },
             { id: 'admin', label: 'İdarəetmə & Skan', icon: 'fa-database' }
