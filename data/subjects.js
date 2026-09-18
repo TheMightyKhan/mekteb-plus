@@ -13,7 +13,7 @@ export const SUBJECTS = [
     borderCol: 'border-indigo-200 dark:border-indigo-800',
     gradient: 'from-indigo-600 to-blue-600',
     description: 'Cəbr, Həndəsə, Riyazi analiz, Triqonometriya və ehtimal nəzəriyyəsi.',
-    totalLessons: 34,
+    totalLessons: 41,
     totalExams: 18,
   },
   {
