@@ -1,6 +1,6 @@
 // MəktəbPlus - Dərslər və Nəzəriyyə Kataloqu (Tree View & Interactive Reader)
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { SUBJECTS, GRADES } from '../data/subjects.js';
 import { KatexRenderer } from './KatexRenderer.js';
 import { PhetEmbed } from './PhetEmbed.js';
@@ -17,6 +17,7 @@ export const LessonsView = ({
   const [revealedSolutions, setRevealedSolutions] = useState({});
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState({});
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   // Fənn və sinifə görə dərsləri filtrləyirik
   const filteredLessons = useMemo(() => {
