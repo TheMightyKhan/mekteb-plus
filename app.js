@@ -88,7 +88,8 @@ export default function App() {
       searchQuery,
       setSearchQuery,
       userStats,
-      onOpenMobileMenu: () => setMobileMenuOpen(true)
+      onOpenMobileMenu: () => setMobileMenuOpen(true),
+      onOpenTools: () => setIsToolsOpen(true)
     }),
 
     // Mobil Menyu Yan Paneli
@@ -97,7 +98,8 @@ export default function App() {
       onClose: () => setMobileMenuOpen(false),
       activeTab,
       setActiveTab,
-      userStats
+      userStats,
+      onOpenTools: () => setIsToolsOpen(true)
     }),
 
     // Qlobal Axtarış Dropdown Nəticələri (əgər axtarış sorğusu varsa)
@@ -178,7 +180,8 @@ export default function App() {
         lessons,
         exams,
         onStartPvp: handleStartPvp,
-        onOpenExam: handleOpenExam
+        onOpenExam: handleOpenExam,
+        onOpenTools: () => setIsToolsOpen(true)
       }),
 
       activeTab === 'lessons' && React.createElement(LessonsView, {
@@ -188,8 +191,6 @@ export default function App() {
         activeLessonId,
         setActiveLessonId
       }),
-
-      activeTab === 'tools' && React.createElement(ToolsView),
 
       activeTab === 'exams' && React.createElement(ExamArchiveView, {
         exams,
@@ -211,6 +212,24 @@ export default function App() {
         onDataRefresh: refreshData
       })
     ),
+
+    // Sağ Kənarda Sabit Üzən Alətlər Düyməsi (Basanda sağdan sürüşərək açılır)
+    React.createElement(
+      'button',
+      {
+        onClick: () => setIsToolsOpen(true),
+        title: 'İnteraktiv Alətlər və Calculus Hesablayıcısı',
+        className: 'fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-gradient-to-l from-indigo-600 via-indigo-700 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-3.5 px-2.5 rounded-l-2xl shadow-2xl transition-all duration-300 transform hover:-translate-x-1 flex flex-col items-center space-y-1.5 no-print group border-y border-l border-indigo-400/30'
+      },
+      React.createElement('i', { className: 'fas fa-toolbox text-sm group-hover:rotate-12 transition' }),
+      React.createElement('span', { className: 'text-[9px] font-black tracking-widest uppercase [writing-mode:vertical-rl] rotate-180' }, 'Alətlər & Lab')
+    ),
+
+    // Sağdan Sürüşərək Açılan Panel (Drawer)
+    React.createElement(ToolsDrawer, {
+      isOpen: isToolsOpen,
+      onClose: () => setIsToolsOpen(false)
+    }),
 
     // Aşağı Footer (no-print)
     React.createElement(
