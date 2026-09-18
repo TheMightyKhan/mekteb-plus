@@ -83,17 +83,17 @@ export const LessonsView = ({
   const cleanTextForSpeech = (text) => {
     if (!text) return '';
     return text
-      .replace(/###/g, '')
-      .replace(/##/g, '')
-      .replace(/#/g, '')
-      .replace(/\*\*([^*]+)\*\*/g, '$1')
-      .replace(/\*([^*]+)\*/g, '$1')
-      .replace(/`([^`]+)`/g, '$1')
-      .replace(/\$\$([^$]+)\$\$/g, ' düsturu ')
-      .replace(/\$([^$]+)\$/g, ' ifadəsi ')
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-      .replace(/- /g, '')
-      .replace(/>/g, '')
+      .split('###').join('')
+      .split('##').join('')
+      .split('#').join('')
+      .replace(new RegExp('\\*\\*([^\\*]+)\\*\\*', 'g'), '$1')
+      .replace(new RegExp('\\*([^\\*]+)\\*', 'g'), '$1')
+      .replace(new RegExp('`([^`]+)`', 'g'), '$1')
+      .replace(new RegExp('\\$\\$([^\\$]+)\\$\\$', 'g'), ' düsturu ')
+      .replace(new RegExp('\\$([^\\$]+)\\$', 'g'), ' ifadəsi ')
+      .replace(new RegExp('\\[([^\\]]+)\\]\\([^\\)]+\\)', 'g'), '$1')
+      .split('- ').join('')
+      .split('>').join('')
       .trim();
   };
 
