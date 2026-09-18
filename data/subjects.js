@@ -88,7 +88,7 @@ export const SUBJECTS = [
     borderCol: 'border-amber-200 dark:border-amber-800',
     gradient: 'from-amber-600 to-orange-600',
     description: 'Azərbaycan tarixi, Ümumi tarix, qədim sivilizasiyalar və müasir dövr.',
-    totalLessons: 30,
+    totalLessons: 36,
     totalExams: 15,
   },
   {
