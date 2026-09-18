@@ -133,7 +133,7 @@ export const SUBJECTS = [
     borderCol: 'border-teal-200 dark:border-teal-800',
     gradient: 'from-teal-600 to-cyan-700',
     description: 'Alqoritmlər, Python proqramlaşdırma, informasiya modelləri və şəbəkələr.',
-    totalLessons: 18,
+    totalLessons: 24,
     totalExams: 8,
   }
 ];
