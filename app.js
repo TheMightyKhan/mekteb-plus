@@ -91,7 +91,8 @@ export default function App() {
       setSearchQuery,
       userStats,
       onOpenMobileMenu: () => setMobileMenuOpen(true),
-      onOpenTools: () => setIsToolsOpen(true)
+      onOpenTools: () => setIsToolsOpen(true),
+      onOpenProfile: () => setIsProfileOpen(true)
     }),
 
     // Mobil Menyu Yan Paneli
@@ -101,7 +102,8 @@ export default function App() {
       activeTab,
       setActiveTab,
       userStats,
-      onOpenTools: () => setIsToolsOpen(true)
+      onOpenTools: () => setIsToolsOpen(true),
+      onOpenProfile: () => setIsProfileOpen(true)
     }),
 
     // Qlobal Axtarış Dropdown Nəticələri (əgər axtarış sorğusu varsa)
@@ -231,6 +233,16 @@ export default function App() {
     React.createElement(ToolsDrawer, {
       isOpen: isToolsOpen,
       onClose: () => setIsToolsOpen(false)
+    }),
+
+    // Şagird Şəxsi Kabineti & Nailiyyət Modalı (Profile & Analytics)
+    React.createElement(ProfileModal, {
+      isOpen: isProfileOpen,
+      onClose: () => setIsProfileOpen(false),
+      userStats,
+      onUpdateStats: handleUpdateStats,
+      lessonsCount: lessons.length,
+      examsCount: exams.length
     }),
 
     // Aşağı Footer (no-print)
