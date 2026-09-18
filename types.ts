@@ -16,7 +16,7 @@ export type SubjectId =
   | 'xarici_dil'
   | 'informatika';
 
-export type GradeLevel = 5 | 6 | 7 | 8 | 9 | 10 | 11;
+export type GradeLevel = 6 | 7 | 8 | 9 | 10 | 11;
 
 export interface SubjectMeta {
   id: SubjectId;
