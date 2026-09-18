@@ -5,7 +5,7 @@ import { MOCK_EXAMS } from '../data/exams.js';
 import { MOCK_PVP_QUESTIONS } from '../data/pvpQuestions.js';
 
 const STORAGE_KEYS = {
-  LESSONS: 'mekteb_plus_lessons_v4',
+  LESSONS: 'mekteb_plus_lessons_v5',
   EXAMS: 'mekteb_plus_exams_v1',
   PVP_QUESTIONS: 'mekteb_plus_pvp_questions_v1',
   USER_STATS: 'mekteb_plus_user_stats_v1',
