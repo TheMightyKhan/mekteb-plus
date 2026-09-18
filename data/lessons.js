@@ -2506,9 +2506,9 @@ while saygac > 0:
   ]
 },
 {
-  "id": "lesson-math-5-geometry-perimeter",
+  "id": "lesson-math-6-geometry-perimeter",
   "subjectId": "riyaziyyat",
-  "grade": 5,
+  "grade": 6,
   "unit": "Həndəsi Fiqurlar və Ölçmələr",
   "unitOrder": 2,
   "title": "Düzbucaqlı və Kvadrat. Perimetr və Sahə",
@@ -3484,9 +3484,9 @@ while saygac > 0:
   ]
 },
 {
-  "id": "lesson-azeri-5-lexicon",
+  "id": "lesson-azeri-6-lexicon",
   "subjectId": "azerbaycan_dili",
-  "grade": 5,
+  "grade": 6,
   "unit": "Leksika: Dilin Lüğət Tərkibi",
   "unitOrder": 1,
   "title": "Sözün Mənaları: Omonimlər, Sinonimlər və Antonimlər",
