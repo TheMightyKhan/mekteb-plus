@@ -371,5 +371,1300 @@ export const MOCK_EXAMS = [
         }
       }
     ]
-  }
+  },
+{
+  "id": "exam-math-8-ksq-1-a",
+  "title": "8-ci Sinif Riyaziyyat - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "riyaziyyat",
+  "grade": 8,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Təbiət və Dəqiq Elmlər Təmayüllü Lisey",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-m8-1",
+      "text": "$x^2 - 8x + 15 = 0$ kvadrat tənliyinin köklərini tapın.",
+      "subjectId": "riyaziyyat",
+      "grade": 8,
+      "topicTags": [
+        "Kvadrat tənliklər",
+        "Viyet teoremi"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$x_1 = 3; x_2 = 5$"
+        },
+        {
+          "key": "B",
+          "text": "$x_1 = -3; x_2 = -5$"
+        },
+        {
+          "key": "C",
+          "text": "$x_1 = 2; x_2 = 6$"
+        },
+        {
+          "key": "D",
+          "text": "$x_1 = 1; x_2 = 15$"
+        },
+        {
+          "key": "E",
+          "text": "Həqiqi kökü yoxdur"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Gətirilmiş kvadrat tənlik: $x^2 - 8x + 15 = 0$.",
+        "formula": "Viyet teoremi: $x_1 + x_2 = -p = 8$ və $x_1 \\cdot x_2 = q = 15$.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Köklərin hasili və cəmini təyin edək",
+            "content": "$x_1 \\cdot x_2 = 15$, $x_1 + x_2 = 8$."
+          },
+          {
+            "stepNumber": 2,
+            "title": "Ədədləri seçək",
+            "content": "15-in vuruqları 3 və 5-dir. $3 + 5 = 8$ şərti tam ödənir."
+          }
+        ],
+        "conclusion": "Köklər $x_1 = 3, x_2 = 5$-dir. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-m8-2",
+      "text": "Düzbucaqlı üçbucağın katetləri $6 \\text{ sm}$ və $8 \\text{ sm}$-dir. Hipotenuzun uzunluğunu tapın.",
+      "subjectId": "riyaziyyat",
+      "grade": 8,
+      "topicTags": [
+        "Pifaqor teoremi",
+        "Həndəsə"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$14 \\text{ sm}$"
+        },
+        {
+          "key": "B",
+          "text": "$10 \\text{ sm}$"
+        },
+        {
+          "key": "C",
+          "text": "$12 \\text{ sm}$"
+        },
+        {
+          "key": "D",
+          "text": "$9 \\text{ sm}$"
+        },
+        {
+          "key": "E",
+          "text": "$48 \\text{ sm}$"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Katetlər: $a = 6 \\text{ sm}$, $b = 8 \\text{ sm}$.",
+        "formula": "Pifaqor teoremi: $c^2 = a^2 + b^2$.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Katetlərin kvadratlarını toplayaq",
+            "content": "$$c^2 = 6^2 + 8^2 = 36 + 64 = 100$$"
+          },
+          {
+            "stepNumber": 2,
+            "title": "Kvadrat kök alaq",
+            "content": "$$c = \\sqrt{100} = 10 \\text{ sm}$$"
+          }
+        ],
+        "conclusion": "Hipotenuz $10 \\text{ sm}$-dir. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-m8-3",
+      "text": "$\\sqrt{144} - \\sqrt{49} + \\sqrt{0.25}$ ifadəsinin qiymətini hesablayın.",
+      "subjectId": "riyaziyyat",
+      "grade": 8,
+      "topicTags": [
+        "Kvadrat kök"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "5.5"
+        },
+        {
+          "key": "B",
+          "text": "6.5"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "7.5"
+        },
+        {
+          "key": "E",
+          "text": "12"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Hesablanacaq ifadə: $\\sqrt{144} - \\sqrt{49} + \\sqrt{0.25}$.",
+        "formula": "Hesabi kvadrat kökün tərifindən istifadə edirik.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Kökaltı qiymətləri tapaq",
+            "content": "$\\sqrt{144} = 12$, $\\sqrt{49} = 7$, $\\sqrt{0.25} = 0.5$."
+          },
+          {
+            "stepNumber": 2,
+            "title": "Əməlləri icra edək",
+            "content": "$$12 - 7 + 0.5 = 5 + 0.5 = 5.5$$"
+          }
+        ],
+        "conclusion": "İfadənin qiyməti 5.5-dir. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-m8-4",
+      "text": "$3x^2 - 5x + 2 = 0$ kvadrat tənliyinin diskriminantını ($D$) hesablayın.",
+      "subjectId": "riyaziyyat",
+      "grade": 8,
+      "topicTags": [
+        "Diskriminant",
+        "Kvadrat tənlik"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "49"
+        },
+        {
+          "key": "C",
+          "text": "-1"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        },
+        {
+          "key": "E",
+          "text": "16"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "$a = 3, b = -5, c = 2$.",
+        "formula": "$$D = b^2 - 4ac$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Əmsalları yerinə yazaq",
+            "content": "$$D = (-5)^2 - 4 \\cdot 3 \\cdot 2 = 25 - 24 = 1$$"
+          }
+        ],
+        "conclusion": "Diskriminant 1-ə bərabərdir. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-m8-5",
+      "text": "Rombun diaqonalları $12 \\text{ sm}$ və $16 \\text{ sm}$-dir. Rombun tərəfini tapın.",
+      "subjectId": "riyaziyyat",
+      "grade": 8,
+      "topicTags": [
+        "Romb",
+        "Pifaqor"
+      ],
+      "difficulty": 3,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$10 \\text{ sm}$"
+        },
+        {
+          "key": "B",
+          "text": "$14 \\text{ sm}$"
+        },
+        {
+          "key": "C",
+          "text": "$20 \\text{ sm}$"
+        },
+        {
+          "key": "D",
+          "text": "$8 \\text{ sm}$"
+        },
+        {
+          "key": "E",
+          "text": "$15 \\text{ sm}$"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "$d_1 = 12 \\text{ sm}$, $d_2 = 16 \\text{ sm}$.",
+        "formula": "Rombun diaqonalları kəsişmə nöqtəsində yarıya bölünür və perpendikulyardır: $a^2 = (d_1/2)^2 + (d_2/2)^2$.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Yarım diaqonalları tapaq",
+            "content": "$$d_1/2 = 6 \\text{ sm}, \\quad d_2/2 = 8 \\text{ sm}$$"
+          },
+          {
+            "stepNumber": 2,
+            "title": "Pifaqor teoremi ilə tərəfi hesablayaq",
+            "content": "$$a = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10 \\text{ sm}$$"
+          }
+        ],
+        "conclusion": "Rombun tərəfi $10 \\text{ sm}$-dir. Düzgün variant: A."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-geog-7-ksq-1-a",
+  "title": "7-ci Sinif Coğrafiya - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "cografiya",
+  "grade": 7,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Ümumtəhsil Məktəbi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-g7-1",
+      "text": "Xəritənin ədədi miqyası $1 : 1\\,000\\,000$-dur. Xəritədə 5 sm olan məsafə yer səthində neçə km-dir?",
+      "subjectId": "cografiya",
+      "grade": 7,
+      "topicTags": [
+        "Miqyas",
+        "Xəritə"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "5 km"
+        },
+        {
+          "key": "B",
+          "text": "50 km"
+        },
+        {
+          "key": "C",
+          "text": "500 km"
+        },
+        {
+          "key": "D",
+          "text": "5000 km"
+        },
+        {
+          "key": "E",
+          "text": "25 km"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Ədədi miqyas: $1 : 1\\,000\\,000$, xəritədəki uzunluq $L = 5 \\text{ sm}$.",
+        "formula": "1 km = 100,000 sm. İzahlı miqyas = 1 sm-də 10 km.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "İzahlı miqyasa çevirmə",
+            "content": "1,000,000 sm-dən 5 sıfır silinir -> 1 sm-də 10 km."
+          },
+          {
+            "stepNumber": 2,
+            "title": "Həqiqi məsafəni hesablamaq",
+            "content": "$$5 \\text{ sm} \\cdot 10 \\text{ km/sm} = 50 \\text{ km}$$"
+          }
+        ],
+        "conclusion": "Həqiqi məsafə 50 km-dir. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-g7-2",
+      "text": "Ekvator xətti hansı coğrafi xüsusiyyətə malikdir?",
+      "subjectId": "cografiya",
+      "grade": 7,
+      "topicTags": [
+        "Ekvator",
+        "Paralel"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Ən uzun paraleldir (0° enlik)"
+        },
+        {
+          "key": "B",
+          "text": "Başlanğıc meridianıdır"
+        },
+        {
+          "key": "C",
+          "text": "Uzunluğu 10,000 km-dir"
+        },
+        {
+          "key": "D",
+          "text": "90° enlikdə yerləşir"
+        },
+        {
+          "key": "E",
+          "text": "Qütbləri birləşdirir"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Ekvatorun coğrafi koordinatı və parametrləri.",
+        "formula": "Ekvator 0 dərəcəlik ən böyük paralel çevrəsidir (təqribən 40,075 km).",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Xassə",
+            "content": "Ekvator Yeri Şimal və Cənub yarımkürələrinə bölən 0° enlikdəki ən böyük paraleldir."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-g7-3",
+      "text": "Meridian qövsü boyunca hər $1^\\circ$-lik məsafə təqribən neçə kilometrə bərabərdir?",
+      "subjectId": "cografiya",
+      "grade": 7,
+      "topicTags": [
+        "Meridian",
+        "Dərəcə toru"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "100 km"
+        },
+        {
+          "key": "B",
+          "text": "111 km"
+        },
+        {
+          "key": "C",
+          "text": "120 km"
+        },
+        {
+          "key": "D",
+          "text": "80 km"
+        },
+        {
+          "key": "E",
+          "text": "40 km"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Bütün meridianlar bərabər uzunluqludur (təqribən 40,000 km / 360°).",
+        "formula": "$$40\\,000 / 360 \\approx 111.1 \\text{ km}$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Bölgü",
+            "content": "Meridian çevrəsi 360°-dir. Hər 1° qövs orta hesabla 111 km-dir."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-g7-4",
+      "text": "Qrinviç rəsədxanasından keçən başlanğıc meridianı neçə dərəcəlikdir?",
+      "subjectId": "cografiya",
+      "grade": 7,
+      "topicTags": [
+        "Qrinviç",
+        "Meridian"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "0°"
+        },
+        {
+          "key": "B",
+          "text": "90°"
+        },
+        {
+          "key": "C",
+          "text": "180°"
+        },
+        {
+          "key": "D",
+          "text": "360°"
+        },
+        {
+          "key": "E",
+          "text": "45°"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Beynəlxalq razılaşma ilə Qrinviç meridianı.",
+        "formula": "Başlanğıc meridianı 0° uzunluq qəbul edilmişdir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Təyinat",
+            "content": "London yaxınlığındakı Qrinviç meridianı 0°-dir və Qərb/Şərq yarımkürələrini ayırır."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-g7-5",
+      "text": "Hansı miqyas daha böyükdür (daha xırdalıqlı təsvir verir)?",
+      "subjectId": "cografiya",
+      "grade": 7,
+      "topicTags": [
+        "Miqyas növləri"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$1 : 10\\,000$"
+        },
+        {
+          "key": "B",
+          "text": "$1 : 100\\,000$"
+        },
+        {
+          "key": "C",
+          "text": "$1 : 1\\,000\\,000$"
+        },
+        {
+          "key": "D",
+          "text": "$1 : 5\\,000\\,000$"
+        },
+        {
+          "key": "E",
+          "text": "$1 : 10\\,000\\,000$"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Miqyas bir kəsrdir ($1/M$).",
+        "formula": "Məxrəci kiçik olan kəsr daha böyükdür.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Kəsrlərin müqayisəsi",
+            "content": "1/10,000 digər bütün kəsrlərdən böyükdür, yəni ərazi ən az kiçildilmişdir və ən böyük miqyasdır."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-azeri-8-ksq-1-a",
+  "title": "8-ci Sinif Azərbaycan Dili - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "azerbaycan_dili",
+  "grade": 8,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Məktəb Kompleksi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-az8-1",
+      "text": "\"Vətənini sevən gənclər ölkənin gələcəyini qururlar.\" cümləsində mübtəda hansı sözdür?",
+      "subjectId": "azerbaycan_dili",
+      "grade": 8,
+      "topicTags": [
+        "Sintaksis",
+        "Mübtəda"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Vətənini"
+        },
+        {
+          "key": "B",
+          "text": "gənclər"
+        },
+        {
+          "key": "C",
+          "text": "ölkənin"
+        },
+        {
+          "key": "D",
+          "text": "qururlar"
+        },
+        {
+          "key": "E",
+          "text": "gələcəyini"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Cümlə: \"Vətənini sevən gənclər ölkənin gələcəyini qururlar.\"",
+        "formula": "Mübtəda cümlənin baş üzvüdür, 'Kim? Nə? Hara?' sualına cavab verir və adlıq halda olur.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Sual verək",
+            "content": "Qururlar - kim? -> gənclər. \"Vətənini sevən\" isə təyindir."
+          }
+        ],
+        "conclusion": "Mübtəda 'gənclər' sözüdür. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-az8-2",
+      "text": "\"Açar sözləri diqqətlə oxuyun\" cümləsində \"diqqətlə\" sözü hansı cümlə üzvüdür?",
+      "subjectId": "azerbaycan_dili",
+      "grade": 8,
+      "topicTags": [
+        "Zərflik",
+        "Cümlə üzvləri"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Təyin"
+        },
+        {
+          "key": "B",
+          "text": "Tamamlıq"
+        },
+        {
+          "key": "C",
+          "text": "Tərzi-hərəkət zərfliyi"
+        },
+        {
+          "key": "D",
+          "text": "Xəbər"
+        },
+        {
+          "key": "E",
+          "text": "Mübtəda"
+        }
+      ],
+      "correctKey": "C",
+      "explanationCoT": {
+        "given": "\"diqqətlə oxuyun\".",
+        "formula": "Hərəkətin icra tərzini bildirən və 'necə? nə cür?' sualına cavab verən üzv tərzi-hərəkət zərfliyidir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Sual",
+            "content": "Oxuyun - necə? diqqətlə. Feli izah edir."
+          }
+        ],
+        "conclusion": "Tərzi-hərəkət zərfliyidir. Düzgün variant: C."
+      }
+    },
+    {
+      "id": "q-az8-3",
+      "text": "Aşağıdakı cümlələrdən hansında ismi xəbər işlənmişdir?",
+      "subjectId": "azerbaycan_dili",
+      "grade": 8,
+      "topicTags": [
+        "İsmi xəbər",
+        "Xəbər"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Şagirdlər həyətdə qaçırdılar."
+        },
+        {
+          "key": "B",
+          "text": "Bakı küləklər şəhəridir."
+        },
+        {
+          "key": "C",
+          "text": "Müəllim dərsi izah etdi."
+        },
+        {
+          "key": "D",
+          "text": "Zəng çalındı."
+        },
+        {
+          "key": "E",
+          "text": "Biz yarışda qalib gəldik."
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "İsmi xəbər adlarla və ismi birləşmələrlə ifadə olunur.",
+        "formula": "\"şəhəridir\" ismi birləşmə tərkibində isimdir və xəbərlik şəkilçisi (-dir) qəbul etmişdir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Variantların təhlili",
+            "content": "B variantında 'şəhəridir' ismi xəbərdir, digər variantlar isə təsriflənən fellərlə (feli xəbər) ifadə olunub."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-az8-4",
+      "text": "Vasitəsiz tamamlıq hansı halda olan sözlərlə ifadə olunur?",
+      "subjectId": "azerbaycan_dili",
+      "grade": 8,
+      "topicTags": [
+        "Tamamlıq",
+        "İsmin halları"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Yalnız adlıq halda"
+        },
+        {
+          "key": "B",
+          "text": "Müəyyən və qeyri-müəyyən təsirlik halda"
+        },
+        {
+          "key": "C",
+          "text": "Yönlük və yerlik halda"
+        },
+        {
+          "key": "D",
+          "text": "Çıxışlıq halda"
+        },
+        {
+          "key": "E",
+          "text": "Yiyəlik halda"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Tamamlığın növləri: vasitəli və vasitəsiz.",
+        "formula": "Vasitəsiz tamamlıq 'Kimi? Nəyi? Nə?' suallarına cavab verir və yalnız təsirlik halda olur.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Qayda",
+            "content": "Təsirlik halın müəyyən (-ı, -i) və qeyri-müəyyən forması vasitəsiz tamamlıq yaradır."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-az8-5",
+      "text": "\"Məktəbin həyətində böyük çinar ağacı ucalırdı.\" cümləsində cümlə üzvlərinin düzgün ardıcıllığı hansıdır?",
+      "subjectId": "azerbaycan_dili",
+      "grade": 8,
+      "topicTags": [
+        "Sintaktik təhlil"
+      ],
+      "difficulty": 3,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Zərflik, təyin, mübtəda, xəbər"
+        },
+        {
+          "key": "B",
+          "text": "Mübtəda, təyin, zərflik, xəbər"
+        },
+        {
+          "key": "C",
+          "text": "Tamamlıq, təyin, mübtəda, xəbər"
+        },
+        {
+          "key": "D",
+          "text": "Zərflik, mübtəda, tamamlıq, xəbər"
+        },
+        {
+          "key": "E",
+          "text": "Təyin, zərflik, mübtəda, xəbər"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Cümlə: Məktəbin həyətində (harada? - zərflik) böyük (necə? - təyin) çinar ağacı (nə? - mübtəda) ucalırdı (nə edirdi? - xəbər).",
+        "formula": "Sintaktik suallar verilir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Təhlil",
+            "content": "1. Məktəbin həyətində -> yer zərfliyi; 2. böyük -> təyin; 3. çinar ağacı -> mübtəda; 4. ucalırdı -> xəbər."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-hist-9-bsq-1-a",
+  "title": "9-cu Sinif Azərbaycan Tarixi - I Yarımil Böyük Summativ Qiymətləndirmə (BSQ-1)",
+  "subjectId": "tarix",
+  "grade": 9,
+  "examType": "BSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Məktəb-Lisey Şəbəkəsi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-h9-1",
+      "text": "1501-ci il Şərur döyüşündə I İsmayıl hansı hökmdarın qoşunlarını məğlub etmişdir?",
+      "subjectId": "tarix",
+      "grade": 9,
+      "topicTags": [
+        "Səfəvilər",
+        "Şərur döyüşü"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Əlvənd Mirzə"
+        },
+        {
+          "key": "B",
+          "text": "Murad Mirzə"
+        },
+        {
+          "key": "C",
+          "text": "Fərrux Yasar"
+        },
+        {
+          "key": "D",
+          "text": "Sultan Səlim"
+        },
+        {
+          "key": "E",
+          "text": "Uzun Həsən"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "1501-ci il Şərur döyüşü.",
+        "formula": "Ağqoyunlu Əlvənd Mirzə məğlub edilmiş və İsmayıl Təbrizə yol açmışdır.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Tarixi fakt",
+            "content": "1500-cü ildə Cabanı döyüşündə Fərrux Yasar, 1501-ci ildə Şərurda isə Ağqoyunlu Əlvənd Mirzə məğlub edildi."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-h9-2",
+      "text": "Səfəvilər dövlətində ordunun ali baş komandanı necə adlanırdı?",
+      "subjectId": "tarix",
+      "grade": 9,
+      "topicTags": [
+        "Dövlət quruluşu",
+        "Səfəvilər"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Vəkil"
+        },
+        {
+          "key": "B",
+          "text": "Əmir əl-üməra"
+        },
+        {
+          "key": "C",
+          "text": "Sədr"
+        },
+        {
+          "key": "D",
+          "text": "Qorçubaşı"
+        },
+        {
+          "key": "E",
+          "text": "Bəylərbəyi"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Səfəvilər dövlət idarəetmə və ordu sistemi.",
+        "formula": "Əmir əl-üməra hərbi qüvvələrin başçısı (baş sərkərdə) idi.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Vəzifələr",
+            "content": "Vəkil şahın dini və dünyəvi müavini, Sədr ruhani idarə rəhbəri, Əmir əl-üməra isə baş komandan idi."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-h9-3",
+      "text": "23 avqust 1514-cü ildə baş vermiş tarixi Çaldıran döyüşünün nəticəsi nə olmuşdur?",
+      "subjectId": "tarix",
+      "grade": 9,
+      "topicTags": [
+        "Çaldıran",
+        "Osmanlı-Səfəvi"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Səfəvilər qəti qələbə qazandı"
+        },
+        {
+          "key": "B",
+          "text": "Osmanlı ordusu odlu silah və artilleriya üstünlüyü ilə qalib gəldi"
+        },
+        {
+          "key": "C",
+          "text": "Sülh müqaviləsi imzalandı"
+        },
+        {
+          "key": "D",
+          "text": "Səfəvilər dövləti süqut etdi"
+        },
+        {
+          "key": "E",
+          "text": "Heç bir tərəf qalib gəlmədi"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Çaldıran döyüşü (1514).",
+        "formula": "Osmanlı sultanı I Səlim 300 top və tüfənglərdən istifadə edərək say üstünlüyü qazandı.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Nəticə",
+            "content": "I Şah İsmayılın igidliyinə baxmayaraq odlu silah faktoru Osmanlıların qələbəsini təmin etdi."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-h9-4",
+      "text": "Şirvanşahlar dövlətinin müstəqilliyinə neçənci ildə və hansı Səfəvi hökmdarı tərəfindən son qoyulmuşdur?",
+      "subjectId": "tarix",
+      "grade": 9,
+      "topicTags": [
+        "Şirvanşahlar",
+        "I Təhmasib"
+      ],
+      "difficulty": 3,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "1538-ci ildə I Təhmasib"
+        },
+        {
+          "key": "B",
+          "text": "1501-ci ildə I İsmayıl"
+        },
+        {
+          "key": "C",
+          "text": "1551-ci ildə I Şah Abbas"
+        },
+        {
+          "key": "D",
+          "text": "1578-ci ildə Məhəmməd Xudabəndə"
+        },
+        {
+          "key": "E",
+          "text": "1500-cü ildə Cabanı döyüşündə"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Şirvanşahlar dövlətinin Səfəvilər tərəfindən ilhaqı.",
+        "formula": "1538-ci ildə I Şah Təhmasib Şirvanı bəylərbəyiliyə çevirdi.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Tarix",
+            "content": "1538-ci ildə Şah Təhmasibin qardaşı Əlqas Mirzə Şirvana ilk bəylərbəyi təyin edildi və Şirvanşahlar süqut etdi."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-h9-5",
+      "text": "1555-ci ildə Səfəvilər ilə Osmanlı imperiyası arasında imzalanmış ilk rəsmi sülh müqaviləsi hansıdır?",
+      "subjectId": "tarix",
+      "grade": 9,
+      "topicTags": [
+        "Amasya sülhü"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "İstanbul sülhü"
+        },
+        {
+          "key": "B",
+          "text": "Amasya sülh müqaviləsi"
+        },
+        {
+          "key": "C",
+          "text": "Qəsri-Şirin müqaviləsi"
+        },
+        {
+          "key": "D",
+          "text": "Nəsuh paşa sülhü"
+        },
+        {
+          "key": "E",
+          "text": "Gəncə müqaviləsi"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "1555-ci il müqaviləsi.",
+        "formula": "Amasya şəhərində imzalanan ilk rəsmi dövlətlərarası sülh sazişi.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Saziş",
+            "content": "29 may 1555-ci ildə Amasyada imzalanmış müqavilə ilə birinci Osmanlı-Səfəvi müharibəsi başa çatdı."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-inf-8-ksq-1-a",
+  "title": "8-ci Sinif İnformatika - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "informatika",
+  "grade": 8,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "İnformatika Təmayüllü Lisey",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-inf8-1",
+      "text": "1 Kilobayt (KB) neçə bitə bərabərdir?",
+      "subjectId": "informatika",
+      "grade": 8,
+      "topicTags": [
+        "Ölçü vahidləri",
+        "Bit və bayt"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "1024 bit"
+        },
+        {
+          "key": "B",
+          "text": "8192 bit"
+        },
+        {
+          "key": "C",
+          "text": "8000 bit"
+        },
+        {
+          "key": "D",
+          "text": "1000 bit"
+        },
+        {
+          "key": "E",
+          "text": "2048 bit"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "1 KB = 1024 Bayt, 1 Bayt = 8 bit.",
+        "formula": "$$1 \\text{ KB} = 1024 \\times 8 \\text{ bit}$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Vurma əməliyyatı",
+            "content": "$$1024 \\times 8 = 8192 \\text{ bit}$$"
+          }
+        ],
+        "conclusion": "1 KB = 8192 bit-dir. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-inf8-2",
+      "text": "Əlifbada 32 simvol varsa, bir simvolun informasiya tutumu Xartli düsturuna görə neçə bitdir?",
+      "subjectId": "informatika",
+      "grade": 8,
+      "topicTags": [
+        "Xartli düsturu"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "4 bit"
+        },
+        {
+          "key": "B",
+          "text": "5 bit"
+        },
+        {
+          "key": "C",
+          "text": "6 bit"
+        },
+        {
+          "key": "D",
+          "text": "8 bit"
+        },
+        {
+          "key": "E",
+          "text": "32 bit"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "$N = 32$.",
+        "formula": "$$N = 2^i \\implies 32 = 2^i$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "2-nin qüvvəti",
+            "content": "$$2^5 = 32 \\implies i = 5 \\text{ bit}$$"
+          }
+        ],
+        "conclusion": "Hər simvol 5 bitdir. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-inf8-3",
+      "text": "ASCII kodlaşdırma cədvəlində hər bir simvol yaddaşda neçə bayt yer tutur?",
+      "subjectId": "informatika",
+      "grade": 8,
+      "topicTags": [
+        "ASCII",
+        "Kodlaşdırma"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "1 bayt (8 bit)"
+        },
+        {
+          "key": "B",
+          "text": "2 bayt (16 bit)"
+        },
+        {
+          "key": "C",
+          "text": "4 bayt"
+        },
+        {
+          "key": "D",
+          "text": "1 bit"
+        },
+        {
+          "key": "E",
+          "text": "16 bayt"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "ASCII standartı 256 simvoldan ibarətdir ($2^8 = 256$).",
+        "formula": "1 simvol = 8 bit = 1 bayt.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Qayda",
+            "content": "ASCII-də hər simvol üçün 1 bayt ayrılır."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-inf8-4",
+      "text": "Mətn faylında 1024 simvol var. Bu mətn Unicode (hər simvol 2 bayt) ilə kodlaşdırılarsa, faylın həcmi neçə Kilobayt (KB) olar?",
+      "subjectId": "informatika",
+      "grade": 8,
+      "topicTags": [
+        "Fayl həcmi",
+        "Unicode"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "1 KB"
+        },
+        {
+          "key": "B",
+          "text": "2 KB"
+        },
+        {
+          "key": "C",
+          "text": "4 KB"
+        },
+        {
+          "key": "D",
+          "text": "512 KB"
+        },
+        {
+          "key": "E",
+          "text": "8 KB"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "$K = 1024$ simvol, 1 simvol = 2 Bayt.",
+        "formula": "$$I = K \\times i = 1024 \\times 2 = 2048 \\text{ Bayt}$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Kilobayta çevirək",
+            "content": "$$2048 / 1024 = 2 \\text{ KB}$$"
+          }
+        ],
+        "conclusion": "Həcm 2 KB-dır. Düzgün variant: B."
+      }
+    },
+    {
+      "id": "q-inf8-5",
+      "text": "Kompüterin mərkəzi prosessorunun (CPU) əsas vəzifəsi nədir?",
+      "subjectId": "informatika",
+      "grade": 8,
+      "topicTags": [
+        "Prosessor",
+        "Aparat təminatı"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Məlumatları ekranda göstərmək"
+        },
+        {
+          "key": "B",
+          "text": "Hesab-məntiq əməliyyatlarını icra etmək və qurğuları idarə etmək"
+        },
+        {
+          "key": "C",
+          "text": "Məlumatları uzunmüddətli maqnit diskində saxlamaq"
+        },
+        {
+          "key": "D",
+          "text": "Kompüteri elektrik şəbəkəsinə qoşmaq"
+        },
+        {
+          "key": "E",
+          "text": "İnternetə qoşulmanı təmin etmək"
+        }
+      ],
+      "correctKey": "B",
+      "explanationCoT": {
+        "given": "Mərkəzi Prosessor (CPU) kompüterin beynidir.",
+        "formula": "Prosessor hesab-məntiq qurğusu (ALU) və idarəetmə qurğusundan (CU) ibarətdir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Funksiya",
+            "content": "Proqram əmrlərini emal edir, riyazi hesablamaları icra edir və daxili qurğuların işini tənzimləyir."
+          }
+        ],
+        "conclusion": "Düzgün variant: B."
+      }
+    }
+  ]
+}
 ];
