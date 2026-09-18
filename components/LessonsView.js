@@ -28,17 +28,23 @@ export const LessonsView = ({
     });
   }, [lessons, selectedSubjectId, selectedGrade]);
 
-  // Tree View üçün Bölmələrə (Units) qruplaşdırma
+  // Tree View üçün Bölmələrə (Units) qruplaşdırma və nizamlı sıralama
   const unitsTree = useMemo(() => {
+    const sorted = [...filteredLessons].sort((a, b) => {
+      if (a.grade !== b.grade) return a.grade - b.grade;
+      if (a.unitOrder !== b.unitOrder) return (a.unitOrder || 0) - (b.unitOrder || 0);
+      return (a.order || 0) - (b.order || 0);
+    });
     const tree = {};
-    filteredLessons.forEach(les => {
-      if (!tree[les.unit]) {
-        tree[les.unit] = [];
+    sorted.forEach(les => {
+      const key = selectedGrade === null ? `${les.grade}-ci Sinif: ${les.unit}` : les.unit;
+      if (!tree[key]) {
+        tree[key] = [];
       }
-      tree[les.unit].push(les);
+      tree[key].push(les);
     });
     return tree;
-  }, [filteredLessons]);
+  }, [filteredLessons, selectedGrade]);
 
   // Cari aktiv dərs
   const currentLesson = useMemo(() => {
