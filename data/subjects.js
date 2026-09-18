@@ -58,7 +58,7 @@ export const SUBJECTS = [
     borderCol: 'border-lime-200 dark:border-lime-800',
     gradient: 'from-lime-600 to-emerald-600',
     description: 'Botanika, Zoologiya, İnsan anatomiyası, Sitologiya və Genetika.',
-    totalLessons: 22,
+    totalLessons: 33,
     totalExams: 10,
   },
   {
