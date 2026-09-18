@@ -88,9 +88,14 @@ export const LessonsView = ({
               key: sub.id,
               onClick: () => {
                 setSelectedSubjectId(sub.id);
-                // Uyğun ilk dərsi seç
-                const firstLes = lessons.find(l => l.subjectId === sub.id && l.grade === selectedGrade) || lessons.find(l => l.subjectId === sub.id);
-                if (firstLes) setActiveLessonId(firstLes.id);
+                const subjectLessons = lessons.filter(l => l.subjectId === sub.id);
+                if (subjectLessons.length > 0) {
+                  if (selectedGrade !== null && !subjectLessons.some(l => l.grade === selectedGrade)) {
+                    setSelectedGrade(null);
+                  }
+                  const match = (selectedGrade !== null ? subjectLessons.find(l => l.grade === selectedGrade) : null) || subjectLessons[0];
+                  if (match) setActiveLessonId(match.id);
+                }
               },
               className: `px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center space-x-1.5 ${
                 isSelected
@@ -108,6 +113,22 @@ export const LessonsView = ({
         'div',
         { className: 'flex items-center space-x-1 self-end sm:self-auto shrink-0' },
         React.createElement('span', { className: 'text-xs font-bold text-slate-400 mr-1' }, 'Sinif:'),
+        React.createElement(
+          'button',
+          {
+            onClick: () => {
+              setSelectedGrade(null);
+              const firstLes = lessons.find(l => (selectedSubjectId ? l.subjectId === selectedSubjectId : true));
+              if (firstLes) setActiveLessonId(firstLes.id);
+            },
+            className: `px-2 py-1 rounded-lg text-xs font-bold transition ${
+              selectedGrade === null
+                ? 'bg-cyan-500 text-slate-950 font-black shadow-sm'
+                : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+            }`
+          },
+          'Hamısı'
+        ),
         GRADES.map(grade => {
           const isSelected = selectedGrade === grade;
           return React.createElement(
@@ -195,14 +216,23 @@ export const LessonsView = ({
                       {
                         key: les.id,
                         onClick: () => setActiveLessonId(les.id),
-                        className: `w-full px-3 py-2 rounded-xl text-left text-xs font-semibold flex items-center space-x-2 transition ${
+                        className: `w-full px-3 py-2 rounded-xl text-left text-xs font-semibold flex items-center justify-between space-x-2 transition ${
                           isCurrent
                             ? 'bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 font-bold'
                             : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
                         }`
                       },
-                      React.createElement('i', { className: `fas fa-file-lines text-[11px] ${isCurrent ? 'text-indigo-600' : 'text-slate-400'}` }),
-                      React.createElement('span', { className: 'line-clamp-1 flex-1' }, les.title)
+                      React.createElement(
+                        'div',
+                        { className: 'flex items-center space-x-2 min-w-0 flex-1' },
+                        React.createElement('i', { className: `fas fa-file-lines text-[11px] shrink-0 ${isCurrent ? 'text-indigo-600' : 'text-slate-400'}` }),
+                        React.createElement('span', { className: 'line-clamp-1 truncate' }, les.title)
+                      ),
+                      React.createElement(
+                        'span',
+                        { className: `text-[9px] px-1.5 py-0.5 rounded-md font-bold shrink-0 ${isCurrent ? 'bg-indigo-200/60 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200' : 'bg-slate-100 dark:bg-slate-800 text-slate-500'}` },
+                        `${les.grade}-ci sinif`
+                      )
                     );
                   })
                 )
