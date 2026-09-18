@@ -118,7 +118,7 @@ export const SUBJECTS = [
     borderCol: 'border-violet-200 dark:border-violet-800',
     gradient: 'from-violet-600 to-purple-700',
     description: 'English Grammar, Vocabulary, Reading comprehension and listening skills.',
-    totalLessons: 25,
+    totalLessons: 36,
     totalExams: 11,
   },
   {
