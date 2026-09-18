@@ -160,7 +160,7 @@ export const ToolsDrawer = ({ isOpen, onClose }) => {
             { className: 'p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/60' },
             React.createElement('h4', { className: 'text-xs font-bold text-indigo-700 dark:text-indigo-300' }, 'PhET Calculus Grapher (Funksiya və Törəmə)'),
             React.createElement('p', { className: 'text-[11px] text-slate-600 dark:text-slate-400 mt-0.5' },
-              'Ekranda əyri çəkərək onun törəmə mailliyini ($f'(x)$) və inteqral sahəsini real vaxtda vizual öyrənin.'
+              "Ekranda əyri çəkərək onun törəmə mailliyini ($f'(x)$) və inteqral sahəsini real vaxtda vizual öyrənin."
             )
           ),
           React.createElement(PhetEmbed, {
