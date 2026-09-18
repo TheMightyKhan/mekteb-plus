@@ -1228,5 +1228,1281 @@ while saygac > 0:
         explanation: '"Məktəb" sözündə 6 hərf var, len() sətirdəki simvolların sayını qaytarır.'
       }
     ]
-  }
+  },
+{
+  "id": "lesson-math-6-proportion",
+  "subjectId": "riyaziyyat",
+  "grade": 6,
+  "unit": "Nisbət, Tənasüb və Faiz",
+  "unitOrder": 2,
+  "title": "Tənasüb və Onun Əsas Xassəsi",
+  "order": 2,
+  "readTimeMinutes": 8,
+  "difficulty": 1,
+  "summary": "İki nisbətin bərabərliyi, tənasübün kənar və orta hədləri, naməlum həddin tapılması.",
+  "theoryMarkdown": "\n### 1. Nisbət Nədir?\nİki ədədin qismətinə onların **nisbəti** deyilir. Nisbət bir ədədin digərindən neçə dəfə böyük olduğunu və ya bir ədədin digərinin hansı hissəsini təşkil etdiyini göstərir:\n$$\\\\frac{a}{b} \\\\quad (b \\\\neq 0)$$\n\n### 2. Tənasüb və Onun Əsas Xassəsi\nİki nisbətin bərabərliyinə **tənasüb** deyilir:\n$$\\\\frac{a}{b} = \\\\frac{c}{d} \\\\quad \\\\text{və ya} \\\\quad a : b = c : d$$\nBurada $a$ və $d$ kənar hədlər, $b$ və $c$ isə orta hədlərdir.\n\n**Tənasübün əsas xassəsi:** Kənar hədlərin hasili orta hədlərin hasilinə bərabərdir:\n$$a \\\\cdot d = b \\\\cdot c$$\nBuradan naməlum kənar hədd: $x = \\\\frac{b \\\\cdot c}{a}$.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-m6-prop-1",
+      "name": "Tənasübün Əsas Xassəsi",
+      "latex": "a \\\\cdot d = b \\\\cdot c",
+      "description": "Kənar hədlərin hasili orta hədlərin hasilinə bərabərdir."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Kənar hədlər",
+      "definition": "Tənasübdə başlanğıcda və sonda duran hədlər (a və d)."
+    },
+    {
+      "term": "Orta hədlər",
+      "definition": "Tənasübdə ortada yerləşən hədlər (b və c)."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-m6-prop-1",
+      "question": "$\\\\frac{x}{6} = \\\\frac{10}{15}$ tənasübündən $x$-i tapın.",
+      "solution": "Tənasübün əsas xassəsinə görə: $15 \\\\cdot x = 6 \\\\cdot 10 \\\\implies 15x = 60 \\\\implies x = 4$."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-m6-prop-1",
+      "question": "$\\\\frac{3}{4} = \\\\frac{9}{x}$ tənasübündə $x$ nəyə bərabərdir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "12"
+        },
+        {
+          "key": "B",
+          "text": "16"
+        },
+        {
+          "key": "C",
+          "text": "15"
+        },
+        {
+          "key": "D",
+          "text": "27"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "3 * x = 4 * 9 = 36 => x = 36 / 3 = 12."
+    }
+  ]
+},
+{
+  "id": "lesson-math-9-trig",
+  "subjectId": "riyaziyyat",
+  "grade": 9,
+  "unit": "Düzbucaqlı Üçbucaq və Triqonometriya",
+  "unitOrder": 1,
+  "title": "İti Bucağın Triqonometrik Funksiyaları",
+  "order": 1,
+  "readTimeMinutes": 11,
+  "difficulty": 3,
+  "summary": "Sinus, kosinus, tangens və kotangens tərifləri, əsas triqonometrik eynilik və standart bucaqların qiymətləri.",
+  "theoryMarkdown": "\n### 1. Düzbucaqlı Üçbucaqda Nisbətlər\nİti bucağı $\\\\alpha$ olan düzbucaqlı üçbucaqda ($a$ - qarşı katet, $b$ - bitişik katet, $c$ - hipotenuz):\n- **Sinus:** Qarşı katetin hipotenuza nisbəti:\n  $$\\\\sin \\\\alpha = \\\\frac{a}{c}$$\n- **Kosinus:** Bitişik katetin hipotenuza nisbəti:\n  $$\\\\cos \\\\alpha = \\\\frac{b}{c}$$\n- **Tangens:** Qarşı katetin bitişik katetə nisbəti:\n  $$\\\\tan \\\\alpha = \\\\frac{a}{b} = \\\\frac{\\\\sin \\\\alpha}{\\\\cos \\\\alpha}$$\n- **Kotangens:** Bitişik katetin qarşı katetə nisbəti:\n  $$\\\\cot \\\\alpha = \\\\frac{b}{a} = \\\\frac{\\\\cos \\\\alpha}{\\\\sin \\\\alpha}$$\n\n### 2. Əsas Triqonometrik Eynilik\nPifaqor teoreminə ($a^2 + b^2 = c^2$) əsasən:\n$$\\\\sin^2 \\\\alpha + \\\\cos^2 \\\\alpha = 1$$\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-m9-t1",
+      "name": "Əsas Eynilik",
+      "latex": "\\\\sin^2 \\\\alpha + \\\\cos^2 \\\\alpha = 1",
+      "description": "Sinus və kosinusun kvadratları cəmi 1-ə bərabərdir."
+    },
+    {
+      "id": "f-m9-t2",
+      "name": "Tangens və Kotangens Hasili",
+      "latex": "\\\\tan \\\\alpha \\\\cdot \\\\cot \\\\alpha = 1",
+      "description": "Tangens və kotangens qarşılıqlı tərs kəmiyyətlərdir."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Hipotenuz (c)",
+      "definition": "Düz bucaq qarşısında duran ən böyük tərəf."
+    },
+    {
+      "term": "Sinus",
+      "definition": "İti bucağın qarşısındakı katetin hipotenuza nisbəti."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-m9-t1",
+      "question": "Əgər $\\\\sin \\\\alpha = \\\\frac{3}{5}$ olarsa, $\\\\cos \\\\alpha$-nı tapın ($0^\\\\circ < \\\\alpha < 90^\\\\circ$).",
+      "solution": "$$\\\\cos^2 \\\\alpha = 1 - \\\\sin^2 \\\\alpha = 1 - \\\\frac{9}{25} = \\\\frac{16}{25} \\\\implies \\\\cos \\\\alpha = \\\\frac{4}{5}$$$."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-m9-t1",
+      "question": "$\\\\sin 30^\\\\circ$ qiyməti nəyə bərabərdir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$\\\\frac{1}{2}$"
+        },
+        {
+          "key": "B",
+          "text": "$\\\\frac{\\\\sqrt{3}}{2}$"
+        },
+        {
+          "key": "C",
+          "text": "$\\\\frac{\\\\sqrt{2}}{2}$"
+        },
+        {
+          "key": "D",
+          "text": "1"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "30 dərəcəli bucaq qarşısındakı katet hipotenuzun yarısına bərabərdir, yəni sin 30° = 1/2."
+    }
+  ]
+},
+{
+  "id": "lesson-math-11-cylinder-cone",
+  "subjectId": "riyaziyyat",
+  "grade": 11,
+  "unit": "Fəza Həndəsəsi (Stereometriya)",
+  "unitOrder": 2,
+  "title": "Fırlanma Cisimləri: Silindr və Konus",
+  "order": 2,
+  "readTimeMinutes": 12,
+  "difficulty": 4,
+  "summary": "Silindr və konusun ox kəsiyi, yan səth, tam səth sahələri və həcm düsturları.",
+  "theoryMarkdown": "\n### 1. Dairəvi Silindr\nDüzbucaqlının bir tərəfi ətrafında fırlanmasından alınan cismə **düz dairəvi silindr** deyilir ($R$ - oturacağın radiusu, $h$ - hündürlük):\n- Yan səthinin sahəsi: $$S_{\\\\text{yan}} = 2\\\\pi R h$$\n- Tam səthinin sahəsi: $$S_{\\\\text{tam}} = 2\\\\pi R h + 2\\\\pi R^2 = 2\\\\pi R(h + R)$$\n- Həcmi: $$V = S_{\\\\text{ot}} \\\\cdot h = \\\\pi R^2 h$$\n\n### 2. Dairəvi Konus\nDüzbucaqlı üçbucağın kateti ətrafında fırlanmasından alınan cismə **konus** deyilir ($l$ - doğuran, $h$ - hündürlük, $R$ - radius):\n- Pifaqor əlaqəsi: $$l^2 = h^2 + R^2$$\n- Yan səthi: $$S_{\\\\text{yan}} = \\\\pi R l$$\n- Həcmi: $$V = \\\\frac{1}{3} \\\\pi R^2 h$$\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-m11-c1",
+      "name": "Silindrin Həcmi",
+      "latex": "V = \\\\pi R^2 h",
+      "description": "Oturacağın sahəsi vurulsun hündürlük."
+    },
+    {
+      "id": "f-m11-c2",
+      "name": "Konusun Həcmi",
+      "latex": "V = \\\\frac{1}{3} \\\\pi R^2 h",
+      "description": "Eyni oturacaqlı və hündürlüklü silindrin həcminin üçdə biri."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Doğuran (l)",
+      "definition": "Konusun təpəsini oturacaq çevrəsinin ixtiyari nöqtəsi ilə birləşdirən düz xətt parçası."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-m11-c1",
+      "question": "Oturacağının radiusu $R = 3 \\\\text{ sm}$, hündürlüyü $h = 4 \\\\text{ sm}$ olan silindrin həcmini tapın ($\\\\pi$ ilə).",
+      "solution": "$$V = \\\\pi R^2 h = \\\\pi \\\\cdot 3^2 \\\\cdot 4 = 36\\\\pi \\\\text{ sm}^3$$."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-m11-c1",
+      "question": "Konusun hündürlüyü və radiusu dəyişmədən silindrlə müqayisə edildikdə, konusun həcmi silindrin həcmindən neçə dəfə azdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 dəfə"
+        },
+        {
+          "key": "B",
+          "text": "3 dəfə"
+        },
+        {
+          "key": "C",
+          "text": "4 dəfə"
+        },
+        {
+          "key": "D",
+          "text": "Bərabərdir"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "V_konus = (1/3) * V_silindr, yəni tam 3 dəfə azdır."
+    }
+  ]
+},
+{
+  "id": "lesson-phys-7-levers",
+  "subjectId": "fizika",
+  "grade": 7,
+  "unit": "Sadə Mexanizmlər və İş",
+  "unitOrder": 2,
+  "title": "Sadə Mexanizmlər: Lingin Tarazlıq Şərti",
+  "order": 2,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "Tərpənməz dayaq ətrafında fırlana bilən bərk cisim (ling), qüvvə qolu və Arximedin tarazlıq qaydası.",
+  "theoryMarkdown": "\n### 1. Sadə Mexanizmlər Nədir?\nQüvvənin istiqamətini və ya modulunu dəyişmək üçün istifadə olunan qurğulara **sadə mexanizmlər** deyilir (ling, blok, mail müstəvi, bucurqad, paz).\n\n### 2. Lingin Tarazlıq Şərti\nTərpənməz dayaq nöqtəsi ətrafında fırlana bilən bərk cismə **ling** deyilir.\nDayaq nöqtəsindən qüvvənin təsir xəttinə qədər olan ən qısa məsafəyə **qüvvə qolu** ($l$) deyilir.\n\n**Lingin tarazlıq qaydası (Arximed qanunu):**\nLing o zaman tarazlıqda olar ki, ona təsir edən qüvvələrin modulları onların qolları ilə tərs mütənasib olsun:\n$$\\\\frac{F_1}{F_2} = \\\\frac{l_2}{l_1} \\\\implies F_1 \\\\cdot l_1 = F_2 \\\\cdot l_2$$\n\n### 3. Mexanikanın \"Qızıl Qaydası\"\nHeç bir sadə mexanizm işdə qazanc vermir: qüvvədə neçə dəfə qazansaq, məsafədə bir o qədər uduzuruq:\n$$A_1 = A_2 \\\\implies F_1 s_1 = F_2 s_2$$\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-p7-l1",
+      "name": "Lingin Tarazlıq Şərti",
+      "latex": "F_1 l_1 = F_2 l_2",
+      "description": "Qüvvə momentlərinin bərabərliyi."
+    },
+    {
+      "id": "f-p7-l2",
+      "name": "Qüvvə Momenti",
+      "latex": "M = F \\\\cdot l",
+      "description": "Qüvvə ilə onun qolunun hasili."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Qüvvə qolu (l)",
+      "definition": "Fırlanma oxundan qüvvənin təsir xəttinə çəkilmiş perpendikulyarın uzunluğu."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-p7-l1",
+      "question": "Lingin qolları $l_1 = 20 \\\\text{ sm}$ və $l_2 = 80 \\\\text{ sm}$-dir. Qısa qola $F_1 = 400 \\\\text{ N}$ yük qoyularsa, onu tarazlaşdırmaq üçün uzun qola hansı qüvvə tətbiq olunmalıdır?",
+      "solution": "$$F_2 = \\\\frac{F_1 \\\\cdot l_1}{l_2} = \\\\frac{400 \\\\cdot 20}{80} = 100 \\\\text{ N}$$. Qüvvədə 4 dəfə qazanc əldə edilir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-p7-l1",
+      "question": "Sadə mexanizmlərdən istifadə edərək işdə neçə dəfə qazanc əldə etmək olar?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 dəfə"
+        },
+        {
+          "key": "B",
+          "text": "4 dəfə"
+        },
+        {
+          "key": "C",
+          "text": "Heç bir qazanc əldə etmək olmaz"
+        },
+        {
+          "key": "D",
+          "text": "Lingin qolundan asılıdır"
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Mexanikanın qızıl qaydasına görə heç bir sadə mexanizm işdə qazanc vermir."
+    }
+  ]
+},
+{
+  "id": "lesson-phys-8-coulomb",
+  "subjectId": "fizika",
+  "grade": 8,
+  "unit": "Elektrik Hadisələri və Elektrostatika",
+  "unitOrder": 2,
+  "title": "Elektrik Yükləri və Kulon Qanunu",
+  "order": 2,
+  "readTimeMinutes": 10,
+  "difficulty": 2,
+  "summary": "Müsbət və mənfi yüklər, yükün saxlanması qanunu və nöqtəvi yüklərin qarşılıqlı təsir qanunu.",
+  "theoryMarkdown": "\n### 1. Elektrik Yükü və Növləri\nTəbiətdə iki növ elektrik yükü mövcuddur: **müsbət ($+$)** və **mənfi ($-$)**.\nEyni işarəli yüklər bir-birini itələyir, əks işarəli yüklər isə cəzb edir.\nBütün yüklər elementar yükün ($e = 1.6 \\\\cdot 10^{-19} \\\\text{ Kl}$) tam misllərinə bərabərdir:\n$$q = \\\\pm N \\\\cdot e$$\n\n### 2. Kulon Qanunu\nVakuumda iki sükunətdə olan nöqtəvi yükün qarşılıqlı təsir qüvvəsi bu yüklərin modulları hasili ilə düz, aralarındakı məsafənin kvadratı ilə tərs mütənasibdir:\n$$F = k \\\\frac{|q_1 \\\\cdot q_2|}{r^2}$$\nBurada $k = 9 \\\\cdot 10^9 \\\\frac{\\\\text{N} \\\\cdot \\\\text{m}^2}{\\\\text{Kl}^2}$ mütənasiblik əmsalıdır.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-p8-c1",
+      "name": "Kulon Qanunu",
+      "latex": "F = k \\\\frac{|q_1 q_2|}{r^2}",
+      "description": "Nöqtəvi elektrik yükləri arasındakı qarşılıqlı təsir qüvvəsi."
+    },
+    {
+      "id": "f-p8-c2",
+      "name": "Elementar Yük",
+      "latex": "e = 1.6 \\\\cdot 10^{-19} \\\\text{ Kl}",
+      "description": "Təbiətdə ən kiçik bölünməz elektrik yükü (elektron və proton)."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Nöqtəvi yük",
+      "definition": "Ölçüləri qarşılıqlı təsir məsafəsindən dəfələrlə kiçik olan yüklü cisim."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-p8-c1",
+      "question": "İki nöqtəvi yük arasındakı məsafə 2 dəfə azaldılsa, onlar arasındakı Kulon qüvvəsi necə dəyişər?",
+      "solution": "$F \\\\sim 1/r^2$ olduğundan, məsafə 2 dəfə azaldıqda qüvvə $2^2 = 4$ dəfə artar."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-p8-c1",
+      "question": "Elektrik yükünün Beynəlxalq Vahidlər Sistemində (BS) vahidi nədir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amper"
+        },
+        {
+          "key": "B",
+          "text": "Volt"
+        },
+        {
+          "key": "C",
+          "text": "Kulon"
+        },
+        {
+          "key": "D",
+          "text": "Om"
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Elektrik yükünün BS-də vahidi Kulondur (Kl)."
+    }
+  ]
+},
+{
+  "id": "lesson-phys-11-induction",
+  "subjectId": "fizika",
+  "grade": 11,
+  "unit": "Elektromaqnit Sahəsi və Dalğalar",
+  "unitOrder": 1,
+  "title": "Elektromaqnit İnduksiyası və Faradey Qanunu",
+  "order": 1,
+  "readTimeMinutes": 12,
+  "difficulty": 4,
+  "summary": "Maqnit seli, qapalı konturda induksiya cərəyanının yaranması, Faradey qanunu və Lents qaydası.",
+  "theoryMarkdown": "\n### 1. Maqnit Seli ($\\\\Phi$)\nSahəsi $S$ olan müstəvi səthdən keçən bircins maqnit sahəsinin induksiya xətlərinin sıxlığını xarakterizə edən kəmiyyətə **maqnit seli** deyilir:\n$$\\\\Phi = B \\\\cdot S \\\\cdot \\\\cos \\\\alpha$$\nVahidi **Veberdir** ($1 \\\\text{ Vb} = 1 \\\\text{ Tl} \\\\cdot \\\\text{m}^2$).\n\n### 2. Faradeyin Elektromaqnit İnduksiyası Qanunu\nQapalı konturu əhatə edən maqnit selinin hər hansı dəyişməsi zamanı konturda elektrik cərəyanı (induksiya cərəyanı) yaranır.\nYaranan induksiya EHQ-si maqnit selinin dəyişmə yeyinliyi ilə düz mütənasibdir:\n$$\\\\mathcal{E}_i = -\\\\frac{\\\\Delta \\\\Phi}{\\\\Delta t} = -\\\\Phi'(t)$$\n\n### 3. Lents Qaydası\nDüsturdakı mənfi işarəsi **Lents qaydası** ilə izah olunur: İnduksiya cərəyanı həmişə elə istiqamətlənir ki, onun yaratdığı xüsusi maqnit sahəsi onu doğuran maqnit selinin dəyişməsinə mane olsun.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-p11-i1",
+      "name": "Faradey Qanunu",
+      "latex": "\\\\mathcal{E}_i = -\\\\frac{\\\\Delta \\\\Phi}{\\\\Delta t}",
+      "description": "İnduksiya EHQ maqnit selinin zamana görə birinci törəməsinə bərabərdir."
+    },
+    {
+      "id": "f-p11-i2",
+      "name": "Maqnit Seli",
+      "latex": "\\\\Phi = B S \\\\cos \\\\alpha",
+      "description": "İnduksiya vektoru, sahə və bucaq əlaqəsi."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Veber (Vb)",
+      "definition": "Maqnit selinin BS sistemindəki əsas vahidi."
+    },
+    {
+      "term": "Lents qaydası",
+      "definition": "İnduksiya cərəyanının maqnit sahəsinin əks təsir istiqamətini müəyyən edən fundamental prinsip."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-p11-i1",
+      "question": "Konturu kəsən maqnit seli $0.2 \\\\text{ saniyə}$ ərzində $0.8 \\\\text{ Vb}$-dən $0.2 \\\\text{ Vb}$-yə qədər müntəzəm azalmışdır. Konturda yaranan induksiya EHQ-ni tapın.",
+      "solution": "$$|\\\\mathcal{E}_i| = \\\\frac{|0.2 - 0.8|}{0.2} = \\\\frac{0.6}{0.2} = 3 \\\\text{ Volt}$$$."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-p11-i1",
+      "question": "Maqnit selinin vahidi hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tesla"
+        },
+        {
+          "key": "B",
+          "text": "Veber"
+        },
+        {
+          "key": "C",
+          "text": "Henri"
+        },
+        {
+          "key": "D",
+          "text": "Farad"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Maqnit selinin vahidi Veberdir (Vb). Tesla isə maqnit induksiyasının vahididir."
+    }
+  ]
+},
+{
+  "id": "lesson-chem-7-mixtures",
+  "subjectId": "kimya",
+  "grade": 7,
+  "unit": "İlkin Kimyəvi Anlayışlar",
+  "unitOrder": 1,
+  "title": "Saf Maddələr və Qarışıqların Ayrılması Üsulları",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 1,
+  "summary": "Bircinsli və müxtəlifcinsli qarışıqlar, fiziki xassələr və durultma, süzmə, buxarlandırma, distillə üsulları.",
+  "theoryMarkdown": "\n### 1. Saf Maddələr və Qarışıqlar\n- **Saf maddə:** Sabit fiziki xassələrə (sabit qaynama, ərimə temperaturu, sıxlıq) malik olan maddədir (məs: distillə olunmuş su, qlükoza, dəmir).\n- **Qarışıq:** İki və ya daha çox maddənin ixtiyari nisbətdə mexaniki birləşməsidir. Qarışıqlar iki yerə bölünür:\n  - **Bircinsli (Homogen):** Hissəcikləri adi gözlə və mikroskopla görünmür (məs: duzlu su, hava).\n  - **Müxtəlifcinsli (Heterogen):** Hissəcikləri asanlıqla seçilir (məs: su + qum, su + duru yağ).\n\n### 2. Qarışıqların Ayrılma Üsulları\n1. **Süzmə:** Suda həll olmayan bərk maddə ilə mayeni ayırmaq üçün (qum və su).\n2. **Durultma:** Sıxlıqları fərqli olan qarışmayan mayeləri ayırmaq üçün bölücü qıfdan istifadə (su və yağ).\n3. **Buxarlandırma və Kristallaşdırma:** Mayedə həll olmuş bərk maddəni ayırmaq üçün (duzlu su).\n4. **Distillə:** Qaynama temperaturları fərqli olan bircinsli maye qarışıqlarını ayırmaq üçün (su və spirt).\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-c7-1",
+      "name": "Kütlə Payı",
+      "latex": "\\\\omega = \\\\frac{m_{\\\\text{maddə}}}{m_{\\\\text{məhlul}}} \\\\cdot 100\\\\%",
+      "description": "Həll olan maddənin məhluldakı faiz nisbəti."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Distillə",
+      "definition": "Mayenin buxarlandırılması və ardınca buxarın soyudularaq kondensasiya olunması prosesi."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-c7-1",
+      "question": "Su ilə bitki yağı qarışığını hansı üsulla ən səliqəli şəkildə ayırmaq olar?",
+      "solution": "Su və yağ bir-birində həll olmayan müxtəlifcinsli qarışıq əmələ gətirir və sıxlıqları fərqlidir. Onları bölücü qıf vasitəsilə durultma üsulu ilə asanlıqla ayırmaq olar."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-c7-1",
+      "question": "Aşağıdakılardan hansı saf maddədir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dəniz suyu"
+        },
+        {
+          "key": "B",
+          "text": "Hava"
+        },
+        {
+          "key": "C",
+          "text": "Distillə olunmuş su ($H_2O$)"
+        },
+        {
+          "key": "D",
+          "text": "Süd"
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Distillə olunmuş su təmiz kimyəvi birləşmədir və heç bir kənar qarışığı yoxdur."
+    }
+  ]
+},
+{
+  "id": "lesson-chem-10-alkanes",
+  "subjectId": "kimya",
+  "grade": 10,
+  "unit": "Üzvi Kimya: Karbohidrogenlər",
+  "unitOrder": 1,
+  "title": "Doymuş Karbohidrogenlər (Alkanlar)",
+  "order": 1,
+  "readTimeMinutes": 11,
+  "difficulty": 3,
+  "summary": "Alkanların homoloji sırası ($C_n H_{2n+2}$), $sp^3$ hibridləşmə, izomerlik və əvəzetmə reaksiyaları.",
+  "theoryMarkdown": "\n### 1. Alkanların Ümumi Formulu\nMolekullarında karbon atomları bir-biri ilə yalnız təkqat $\\\\sigma$-rabitələrlə birləşmiş karbohidrogenlərə **alkanlar (parafinlər)** deyilir:\n$$C_n H_{2n+2} \\\\quad (n \\\\ge 1)$$\nİlk nümayəndələri: Metan ($CH_4$), Etan ($C_2H_6$), Propan ($C_3H_8$), Butan ($C_4H_{10}$).\n\n### 2. Molekulun Fəza Quruluşu\nAlkanlarda bütün karbon atomları **$sp^3$ hibridləşmə** vəziyyətindədir. Valent bucağı $109^\\\\circ 28'$ təşkil edir və tetraedrik quruluşa malikdir. $C-C$ rabitəsinin uzunluğu $0.154 \\\\text{ nm}$-dir.\n\n### 3. Kimyəvi Xassələri\nDoymuş olduqları üçün birləşmə reaksiyasına daxil olmurlar:\n- **Radikal əvəzetmə (Xlorlaşma):**\n  $$CH_4 + Cl_2 \\\\xrightarrow{h\\\\nu} CH_3Cl + HCl$$\n- **Tam yanma reaksiyası:**\n  $$C_n H_{2n+2} + \\\\frac{3n+1}{2} O_2 \\\\to n CO_2 + (n+1) H_2O$$\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-c10-1",
+      "name": "Alkanların Ümumi Formulu",
+      "latex": "C_n H_{2n+2}",
+      "description": "Açıq zəncirli doymuş karbohidrogenlərin homoloji sırası."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Homoloji fərq",
+      "definition": "Qonşu homoloqların bir-birindən fərqləndiyi $-CH_2-$ (metilen) qrupu."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-c10-1",
+      "question": "Tərkibində 5 karbon atomu olan alkanın ($C_5H_{12}$) nisbi molekul kütləsini tapın ($Ar(C)=12, Ar(H)=1$).",
+      "solution": "$$M_r(C_5H_{12}) = 5 \\\\cdot 12 + 12 \\\\cdot 1 = 60 + 12 = 72$$."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-c10-1",
+      "question": "Metan molekulunda ($CH_4$) karbon atomunun hibridləşmə növü hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$sp$"
+        },
+        {
+          "key": "B",
+          "text": "$sp^2$"
+        },
+        {
+          "key": "C",
+          "text": "$sp^3$"
+        },
+        {
+          "key": "D",
+          "text": "Hibridləşməyib"
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Bütün alkanlarda karbon atomları dörd tək rabitə əmələ gətirdiyinə görə sp3 hibridləşmə vəziyyətindədir."
+    }
+  ]
+},
+{
+  "id": "lesson-bio-7-arthropods",
+  "subjectId": "biologiya",
+  "grade": 7,
+  "unit": "Heyvanlar Aləmi: Onurğasızlar",
+  "unitOrder": 1,
+  "title": "Buğumayaqlılar Tipi və Əsas Sinifləri",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 2,
+  "summary": "Xitin skelet, buğumlu ətraflar, açıq qan dövranı və xərçəngkimilər, hörümçəkkimilər, həşəratlar müqayisəsi.",
+  "theoryMarkdown": "\n### 1. Buğumayaqlıların Ümumi Əlamətləri\nYer kürəsində növ sayına görə ən zəngin heyvan tipidir (1 milyondan çox növ). Əsas xüsusiyyətləri:\n- Bədənləri və ətrafları **buğumludur**.\n- Bədən xaricdən möhkəm **xitin örtüklə** (xarici skeletlə) örtülmüşdür. Xitin elastik olmadığı üçün heyvanlar qabıq dəyişməklə böyüyürlər.\n- Qan-damar sistemi **açıqdır** (qan bədən boşluğuna tökülür).\n\n### 2. Əsas Siniflərin Müqayisəsi\n1. **Xərçəngkimilər:** Baş-döş və qarıncıq. 5 cüt (10 ədəd) yeriş ayağı. Qəlsəmələrlə tənəffüs edir.\n2. **Hörümçəkkimilər:** Baş-döş və buğumsuz qarıncıq. 4 cüt (8 ədəd) yeriş ayağı. Bığcıqları yoxdur. Tor vəziləri var.\n3. **Həşəratlar:** Baş, döş və qarıncıq. 3 cüt (6 ədəd) yeriş ayağı. 1 cüt bığcıq. Traxeyalarla tənəffüs edir, əksəriyyətində qanadlar var.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-b7-1",
+      "name": "Yeriş Ayaqları Sayı",
+      "latex": "\\\\text{Həşərat (6)} < \\\\text{Hörümçək (8)} < \\\\text{Xərçəng (10)}",
+      "description": "Sinifləri fərqləndirən əsas morfoloji xüsusiyyət."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Xitin",
+      "definition": "Buğumayaqlıların xarici skeletini təşkil edən möhkəm polisaxarid qat."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-b7-1",
+      "question": "May böcəyinin döş hissəsində neçə ədəd yeriş ayağı birləşmişdir?",
+      "solution": "May böcəyi həşəratlar sinfinə aiddir, bütün yetkin həşəratlarda 3 cüt, yəni 6 ədəd yeriş ayağı olur."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-b7-1",
+      "question": "Hörümçəkkimilər sinfinə aid olan canlılarda neçə cüt yeriş ayağı olur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 cüt"
+        },
+        {
+          "key": "B",
+          "text": "3 cüt"
+        },
+        {
+          "key": "C",
+          "text": "4 cüt"
+        },
+        {
+          "key": "D",
+          "text": "5 cüt"
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hörümçəkkimilərdə 4 cüt (8 ədəd) yeriş ayağı olur."
+    }
+  ]
+},
+{
+  "id": "lesson-bio-10-cytology",
+  "subjectId": "biologiya",
+  "grade": 10,
+  "unit": "Sitologiya: Hüceyrə Biologiyası",
+  "unitOrder": 1,
+  "title": "Hüceyrənin Quruluşu və Orqanoidləri",
+  "order": 1,
+  "readTimeMinutes": 12,
+  "difficulty": 3,
+  "summary": "Prokariot və eukariot hüceyrələr, plazmatik membran, mitoxondri, ribosom, endoplazmatik şəbəkə və nüvənin funksiyaları.",
+  "theoryMarkdown": "\n### 1. Hüceyrə Nəzəriyyəsinin Əsasları\nHüceyrə - bütün canlıların ən kiçik quruluş, inkişaf və funksional vahididir (Şvan və Şleyden).\nBütün orqanizmlər iki böyük qrupa bölünür:\n- **Prokariotlar:** Formalaşmış nüvəsi olmayanlar (bakteriyalar və göy-yaşıl yosunlar).\n- **Eukariotlar:** Əsl formalaşmış nüvəyə malik olanlar (bitkilər, heyvanlar, göbələklər).\n\n### 2. Əsas Orqanoidlər və Onların Funksiyaları\n- **Mitoxondri:** Hüceyrənin \"enerji stansiyası\". Daxili membranı (kristlər) üzərində ATF (adenozintrifosfat) sintez olunur.\n- **Ribosom:** Zülal sintezini həyata keçirən membransız orqanoid.\n- **Endoplazmatik şəbəkə (EPŞ):** Maddələrin hüceyrədaxili daşınma sistemi (dənəvər EPŞ zülal, hamar EPŞ lipid/karbohidrat sintez edir).\n- **Holci kompleksi:** Sintez olunmuş maddələrin qablaşdırılması və lizosomların yaranması.\n- **Lizosom:** Hüceyrədaxili həzm fermentlərini saxlayır.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-b10-1",
+      "name": "ATF Enerji Parçalanması",
+      "latex": "\\\\text{ATF} + H_2O \\\\to \\\\text{ADF} + H_3PO_4 + 40 \\\\text{ kC/mol}",
+      "description": "Mitoxondridə yaranan makroerqik rabitənin enerji ayrılması."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Kristlər",
+      "definition": "Mitoxondrinin daxili membranının əmələ gətirdiyi qatlar."
+    },
+    {
+      "term": "Xromatin",
+      "definition": "Nüvədə DNT və zülallardan ibarət irsi material sapları."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-b10-1",
+      "question": "Hüceyrədə zülalların biosintezi hansı orqanoiddə baş verir?",
+      "solution": "Zülal molekullarının amin turşularından yığılması bilavasitə ribosomlarda baş verir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-b10-1",
+      "question": "Hüceyrənin energetik stansiyası adlanan və ATF sintez edən iki membranlı orqanoid hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ribosom"
+        },
+        {
+          "key": "B",
+          "text": "Mitoxondri"
+        },
+        {
+          "key": "C",
+          "text": "Lizosom"
+        },
+        {
+          "key": "D",
+          "text": "Holci kompleksi"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Bioloji oksidləşmə və ATF sintezi mitoxondrinin kristlərində baş verir."
+    }
+  ]
+},
+{
+  "id": "lesson-geog-8-lithosphere",
+  "subjectId": "cografiya",
+  "grade": 8,
+  "unit": "Litosfer və Yer Səthinin Relyefi",
+  "unitOrder": 1,
+  "title": "Litosfer Plitələri, Vulkanlar və Zəlzələlər",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 2,
+  "summary": "Yer qabığının hərəkəti, plitələrin toqquşması və aralanması, Sakit okean 'Alov halqası' və seysmik qurşaqlar.",
+  "theoryMarkdown": "\n### 1. Litosfer Plitələri Nəzəriyyəsi\nYer qabığı və yuxarı mantiyanın bərk hissəsi vahid deyil, nəhəng **litosfer plitələrinə** bölünmüşdür (Avrasiya, Şimali Amerika, Cənubi Amerika, Afrika, Hind-Avstraliya, Sakit okean, Antarktida).\nBu plitələr astenosfer qatı üzərində ildə bir neçə santimetr sürətlə hərəkət edirlər:\n- **Konvergent sərhəd (Toqquşma):** Qırışıq dağlar, dərin okean novları və vulkanik adalar qövsləri yaranır (məs: Himalay, Qafqaz dağları).\n- **Divergent sərhəd (Aralanma):** Orta okean sıra dağları və rift dərələri yaranır (məs: Orta Atlantika silsiləsi).\n\n### 2. Zəlzələlər və Seysmik Qurşaqlar\nZəlzələ ocağının yerin dərinliyindəki mərkəzinə **hipomərkəz**, onun bilavasitə yer səthindəki proyeksiyasına **epimərkəz** deyilir.\nDünyada iki nəhəng seysmik qurşaq var:\n1. **Sakit okean 'Alov halqası':** Dünyadakı zəlzələ və fəaliyyətdə olan vulkanların 80%-i buradadır.\n2. **Alp-Himalay seysmik qurşağı:** Azərbaycan ərazisi də bu aktiv zolaqda yerləşir.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-g8-1",
+      "name": "Rixter Şkalası",
+      "latex": "M = \\\\log_{10}(A) - \\\\log_{10}(A_0)",
+      "description": "Zəlzələnin maqnitudasının (enerjisinin) loqarifmik ölçüsü."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Epimərkəz",
+      "definition": "Zəlzələ ocağının yer səthində ən güclü dağıntı törədən mərkəzi nöqtəsi."
+    },
+    {
+      "term": "Qeyzer",
+      "definition": "Vulkanik zonalarda dövri olaraq fontan vuran qaynar su və buxar mənbəyi."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-g8-1",
+      "question": "Azərbaycan hansı nəhəng seysmik qurşağın tərkibinə daxildir?",
+      "solution": "Azərbaycan Avrasiya və Ərəbistan litosfer plitələrinin toqquşma zonasında - Alp-Himalay qırışıqlıq və seysmik qurşağında yerləşir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-g8-1",
+      "question": "Yer səthində fəaliyyətdə olan vulkanların və güclü zəlzələlərin ən çox cəmləşdiyi bölgə hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Qərbi Sibir düzənliyi"
+        },
+        {
+          "key": "B",
+          "text": "Sakit okean 'Alov halqası'"
+        },
+        {
+          "key": "C",
+          "text": "Şərqi Afrika yarığı"
+        },
+        {
+          "key": "D",
+          "text": "Skandinaviya qalxması"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Sakit okeanın kənarları boyunca plitələrin fəal toqquşması nəticəsində 'Alov halqası' yaranmışdır."
+    }
+  ]
+},
+{
+  "id": "lesson-geog-9-azerbaijan-climate",
+  "subjectId": "cografiya",
+  "grade": 9,
+  "unit": "Azərbaycanın Fiziki Coğrafiyası",
+  "unitOrder": 1,
+  "title": "Azərbaycanın İqlim Tipləri və Landşaftları",
+  "order": 1,
+  "readTimeMinutes": 11,
+  "difficulty": 2,
+  "summary": "Dünyadakı 11 iqlim tipindən 9-nun Azərbaycanda rast gəlinməsi səbəbləri, günəş radiasiyası və yağıntıların paylanması.",
+  "theoryMarkdown": "\n### 1. İqliməmələgətirən Amillər\nAzərbaycan subtropik və mülayim iqlim qurşaqlarının qovuşuğunda yerləşir. Ərazidə mütləq hündürlük $-28 \\\\text{ m}$-dən (Xəzər sahili) $+4466 \\\\text{ m}$-ə qədər (Bazardüzü zirvəsi) dəyişdiyi üçün şaquli qurşaqlıq güclü inkişaf etmişdir.\nƏrazidə illik günəş parıltısının müddəti $2200 - 2700$ saatdır.\n\n### 2. Əsas İqlim Tipləri\nDünyada mövcud olan 11 iqlim tipindən 9-u Azərbaycanda müşahidə edilir:\n1. **Quru çöl və yarımsəhra iqlimi:** Kür-Araz ovalığı, Abşeron və Qobustanda (yağıntı az, yay çox isti).\n2. **Qışı mülayim, yayı quraq keçən mülayim-isti:** Lənkəran ovalığı (yağıntı ən çox buradadır - 1400-1700 mm).\n3. **Qışı quraq keçən mülayim-isti:** Qanıx-Əyriçay, Kiçik Qafqazın ətəkləri.\n4. **Soyuq və dağ-tundra iqlimi:** Böyük və Kiçik Qafqazın yüksək dağlıq zirvələrində.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-g9-1",
+      "name": "Rütubətlənmə Əmsalı",
+      "latex": "K = \\\\frac{Q}{E_0}",
+      "description": "İllik yağıntı miqdarının (Q) mümkün buxarlanmaya (E0) nisbəti."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Şaquli qurşaqlıq",
+      "definition": "Dağlarda hündürlüyə qalxdıqca temperaturun azalması ilə təbiət komplekslərinin qanunauyğun dəyişməsi."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-g9-1",
+      "question": "Azərbaycanda ən çox yağıntı alan təbii vilayət hansıdır?",
+      "solution": "Lənkəran təbii vilayətidir (Talış dağlarının ətəkləri), burada illik yağıntı 1400-1700 mm-ə çatır."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-g9-1",
+      "question": "Kür-Araz ovalığı və Abşeron yarımadasında hansı iqlim tipi üstünlük təşkil edir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dağ-tundra"
+        },
+        {
+          "key": "B",
+          "text": "Quru çöl və yarımsəhra"
+        },
+        {
+          "key": "C",
+          "text": "Rütubətli subtropik"
+        },
+        {
+          "key": "D",
+          "text": "Soyuq meşə iqlimi"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Kür-Araz ovalığı və Abşeronda yayı isti və quraq, qışı mülayim keçən yarımsəhra və quru çöl iqlimi hakimdir."
+    }
+  ]
+},
+{
+  "id": "lesson-hist-10-manna",
+  "subjectId": "tarix",
+  "grade": 10,
+  "unit": "Qədim Şərq və Azərbaycan Dövlətləri",
+  "unitOrder": 1,
+  "title": "Qədim Azərbaycan: Manna Dövləti",
+  "order": 1,
+  "readTimeMinutes": 11,
+  "difficulty": 2,
+  "summary": "Urmiya gölü hövzəsi, e.ə. IX əsr, paytaxt İzirtu, İranzu və Ullusunun islahatları, Həsənli və Ziyviyə tapıntıları.",
+  "theoryMarkdown": "\n### 1. Manna Dövlətinin Yaranması\nAzərbaycanın cənubunda (Urmiya gölü ətrafında) e.ə. IX əsrdə yaranmış ilk mərkəzləşdirilmiş dövlət **Mannadır**.\nİlk dəfə e.ə. 843-cü ildə III Salmanasarın mixi yazılı kitabəsində adı çəkilir.\nPaytaxtı **İzirtu** şəhəri olmuşdur.\n\n### 2. İranzunun Dövlətçilik İslahatları\nHökmdar **İranzunun** (e.ə. 740 - 719) dövründə Manna ən qüdrətli çağını yaşadı:\n- Ölkə canişinliklər sisteminə bölündü və mərkəzi hakimiyyət gücləndirildi.\n- Urartunun təcavüzlərinə qarşı Assuriya ilə hərbi-siyasi ittifaq yaradıldı.\n- Sənətkarlıq və metallurgiya yüksək inkişaf etdi (Həsənli qızıl camı və Ziyviyə gümüş qabı).\n\n### 3. Manna Mədəniyyəti və Süqutu\nMannalılar mixi və yerli heroqlif yazılardan istifadə etmişlər. Dövlət e.ə. 590-cı ildə güclənən Midiya imperiyası tərəfindən süquta uğradılmışdır.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-h10-1",
+      "name": "Tarixi Mərhələ",
+      "latex": "\\\\text{e.ə. IX əsr (Yaranma)} \\\\to \\\\text{e.ə. 590 (Midiya tərəfindən süqut)}",
+      "description": "Manna dövlətinin mövcudluq dövrü."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "İzirtu",
+      "definition": "Qədim Manna dövlətinin möhkəm qala divarları ilə əhatələnmiş paytaxt şəhəri."
+    },
+    {
+      "term": "Canişinlik",
+      "definition": "Ölkənin mərkəzə tabe olan əyalət hakimləri vasitəsilə idarə edilmə sistemi."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-h10-1",
+      "question": "Həsənli təpəsindən tapılmış məşhur qızıl cam hansı qədim Azərbaycan dövlətinin mədəniyyətinə aiddir?",
+      "solution": "Manna dövlətinin yüksək zərgərlik və metalişləmə sənətini əks etdirən Həsənli qızıl camı e.ə. I minilliyin əvvəllərinə aiddir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-h10-1",
+      "question": "Manna dövlətinin paytaxtı hansı şəhər olmuşdur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Qəbələ"
+        },
+        {
+          "key": "B",
+          "text": "İzirtu"
+        },
+        {
+          "key": "C",
+          "text": "Təbriz"
+        },
+        {
+          "key": "D",
+          "text": "Bərdə"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Manna dövlətinin paytaxtı Urmiya gölünün cənub-şərqində yerləşən İzirtu şəhəri idi."
+    }
+  ]
+},
+{
+  "id": "lesson-hist-11-axc",
+  "subjectId": "tarix",
+  "grade": 11,
+  "unit": "Yeni Dövr Azərbaycan Tarixi",
+  "unitOrder": 1,
+  "title": "Azərbaycan Xalq Cümhuriyyəti (1918–1920)",
+  "order": 1,
+  "readTimeMinutes": 13,
+  "difficulty": 3,
+  "summary": "28 may 1918 İstiqlal Bəyannaməsi, Şərqdə ilk parlamentli demokratik respublika, milli ordu, Bakı Dövlət Universiteti və diplomatik uğurlar.",
+  "theoryMarkdown": "\n### 1. İstiqlal Bəyannaməsi (28 May 1918)\n28 may 1918-ci ildə Tiflisdə Azərbaycan Milli Şurası Məhəmməd Əmin Rəsulzadənin sədrliyi ilə **İstiqlal Bəyannaməsini** qəbul etdi. Bununla müsəlman Şərqində ilk demokratik və parlamentli respublika yaradıldı.\nBəyannamədə milliyyətindən, dinindən və cinsindən asılı olmayaraq bütün vətəndaşlara bərabər hüquqlar (o cümlədən qadınlara səsvermə hüququ) təsbit edildi.\n\n### 2. Dövlət Quruculuğu və İslahatlar\n- **Paytaxt:** Əvvəlcə Gəncə, 15 sentyabr 1918-ci ildə Qafqaz İslam Ordusunun köməyi ilə Bakı azad edildikdən sonra paytaxt Bakıya köçürüldü.\n- **Dövlət atributları:** Üçrəngli bayraq (9 noyabr 1918), dövlət himni və gerbi qəbul edildi.\n- **Maarif:** 1919-cu ildə ilk milli ali məktəb - Bakı Dövlət Universiteti təsis edildi, yüzlərlə gənc Avropaya təhsil almağa göndərildi.\n\n### 3. Beynəlxalq Tanınma\n11 yanvar 1920-ci ildə Paris Sülh Konfransında Əlimərdan bəy Topçubaşovun rəhbərlik etdiyi nümayəndə heyətinin səyi nəticəsində AXC-nin müstəqilliyi Antanta Ali Şurası tərəfindən **de-fakto** tanındı.\nRespublika 23 aylıq fəaliyyətdən sonra 28 aprel 1920-ci ildə XI Qırmızı Ordunun hərbi təcavüzü nəticəsində süqut etdi.\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-h11-1",
+      "name": "AXC Xronologiyası",
+      "latex": "1918 \\\\text{ (28 May)} \\\\to 1920 \\\\text{ (28 Aprel - 23 ay)}",
+      "description": "Azərbaycan Xalq Cümhuriyyətinin fəaliyyət müddəti."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Milli Şura",
+      "definition": "1918-ci ildə Azərbaycan xalqı adından müstəqilliyi elan edən ilk qanunverici ali orqan."
+    },
+    {
+      "term": "De-fakto",
+      "definition": "Beynəlxalq hüquqda dövlətin faktiki olaraq rəsmən tanınması forması."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-h11-1",
+      "question": "Müsəlman Şərqində qadınlara seçki hüququ verən ilk dövlət hansı olmuşdur?",
+      "solution": "1918-ci ildə Azərbaycan Xalq Cümhuriyyəti bir çox Qərb dövlətlərindən belə əvvəl qadınlara seçmək və seçilmək hüququ vermişdir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-h11-1",
+      "question": "Azərbaycan Xalq Cümhuriyyətinin İstiqlal Bəyannaməsi neçənci ildə qəbul edilmişdir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "28 may 1918"
+        },
+        {
+          "key": "B",
+          "text": "15 sentyabr 1918"
+        },
+        {
+          "key": "C",
+          "text": "28 aprel 1920"
+        },
+        {
+          "key": "D",
+          "text": "9 noyabr 1919"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "28 may 1918-ci ildə Tiflisdə İstiqlal Bəyannaməsi qəbul edilmiş və Respublika elan olunmuşdur."
+    }
+  ]
+},
+{
+  "id": "lesson-azeri-6-phonetics",
+  "subjectId": "azerbaycan_dili",
+  "grade": 6,
+  "unit": "Fonetika və Orfoepiya",
+  "unitOrder": 1,
+  "title": "Ahəng Qanunu və Saitlərin Bölgüsü",
+  "order": 1,
+  "readTimeMinutes": 8,
+  "difficulty": 1,
+  "summary": "Qalın və incə, dodaqlanan və dodaqlanmayan saitlər, ahəng qanununun morfoloji mahiyyəti və şəkilçilərin calanması.",
+  "theoryMarkdown": "\n### 1. Sait Səslərin Təsnifatı\nAzərbaycan əlifbasında 9 sait səs var:\n- **Dilin arxa və ya ön hissəsində deyilməsinə görə:**\n  - Qalın saitlər: **a, ı, o, u**\n  - İncə saitlər: **e, ə, i, ö, ü**\n- **Dodaqların vəziyyətinə görə:**\n  - Dodaqlanan: **o, u, ö, ü**\n  - Dodaqlanmayan: **a, e, ə, ı, i**\n- **Çənənin və dilin şaquli vəziyyətinə görə:**\n  - Açıq saitlər: **a, e, ə, o, ö**\n  - Qapalı saitlər: **ı, i, u, ü**\n\n### 2. Ahəng Qanunu\nSözdə qalın və ya incə saitlərin bir-birini izləməsinə **ahəng qanunu** deyilir.\nAhəng qanunu türk dillərinin \"dəmir qanunudur\". Şəkilçilər sözün son hecasındakı saitin ahənginə uyğun olaraq calanır:\n- Əgər son sait qalındırsa: *-lar, -da, -dan, -a* (məs: *kitab-lar, otaq-da*)\n- Əgər son sait incədirsə: *-lər, -də, -dən, -ə* (məs: *ev-lər, məktəb-də*)\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-az6-1",
+      "name": "Ahəng Qanunu Sxemi",
+      "latex": "\\\\text{Qalın} \\\\to \\\\text{Qalın} \\\\quad (a, ı, o, u), \\\\quad \\\\text{İncə} \\\\to \\\\text{İncə} \\\\quad (e, ə, i, ö, ü)",
+      "description": "Söz kökündə və şəkilçidə saitlərin həmahəngliyi."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Ahəng qanunu",
+      "definition": "Sözdə eynicinsli (yalnız qalın və ya yalnız incə) saitlərin bir-birini izləməsi xüsusiyyəti."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-az6-1",
+      "question": "\"Dənizçilər\" sözündə ahəng qanunu gözlənilibmi?",
+      "solution": "Sözdəki saitlər: ə, i, i, ə. Hamısı incə saitlərdir, buna görə ahəng qanunu tam gözlənilmişdir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-az6-1",
+      "question": "Aşağıdakı sözlərdən hansında ahəng qanunu pozulmuşdur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Qələm"
+        },
+        {
+          "key": "B",
+          "text": "Kitab"
+        },
+        {
+          "key": "C",
+          "text": "Uşaqlar"
+        },
+        {
+          "key": "D",
+          "text": "Dəftərxana"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "\"Kitab\" sözündə həm incə (i), həm də qalın (a) sait işləndiyi üçün ahəng qanunu pozulub."
+    }
+  ]
+},
+{
+  "id": "lesson-azeri-9-compound-sentences",
+  "subjectId": "azerbaycan_dili",
+  "grade": 9,
+  "unit": "Sintaksis: Mürəkkəb Cümlə",
+  "unitOrder": 1,
+  "title": "Tabesiz və Tabeli Mürəkkəb Cümlələr",
+  "order": 1,
+  "readTimeMinutes": 11,
+  "difficulty": 3,
+  "summary": "İki və daha artıq qrammatik əsas, bərabərhüquqlu və tabe komponentlər, bağlayıcılar və intonasiya əlaqəsi.",
+  "theoryMarkdown": "\n### 1. Mürəkkəb Cümlə Nədir?\nİki və ya daha artıq sadə cümlənin məna və qrammatik cəhətdən birləşməsindən yaranan cümlələrə **mürəkkəb cümlə** deyilir. Hər komponentin öz mübtədası və xəbəri (qrammatik əsası) olur.\n\n### 2. Tabesiz Mürəkkəb Cümlələr\nKomponentləri bərabərhüquqlu olur, biri digərindən asılı olmur. Yalnız intonasiya və ya tabesizlik bağlayıcıları (*və, amma, ancaq, lakin, ya... ya da*) ilə bağlanır:\n- *\"Zəng vuruldu və şagirdlər sinfə daxil oldular.\"* $[\\\\quad], \\\\text{ və } [\\\\quad].$\n\n### 3. Tabeli Mürəkkəb Cümlələr\nKomponentlərdən biri digərindən qrammatik asılı olur. Əsas fikir **baş cümlədə**, onu aydınlaşdıran fikir isə **budaq cümlədə** verilir.\nBağlayıcı vasitələr: tabelilik bağlayıcıları (*çünki, ona görə ki, ki, əgər, hərçənd*) və bağlayıcı sözlər (*kim ki, hara ki*).\n- *\"Müəllim bildirdi ki, sabah sınaq imtahanı olacaq.\"* $[\\\\text{Baş}], \\\\text{ ki, } (\\\\text{Budaq}).$\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-az9-1",
+      "name": "Mürəkkəb Cümlə Sxemi",
+      "latex": "[\\\\quad] \\\\leftrightarrow [\\\\quad] \\\\text{ (Tabesiz)}, \\\\quad [\\\\text{Baş}] \\\\to (\\\\text{Budaq}) \\\\text{ (Tabeli)}",
+      "description": "Komponentlərin sintaktik asılılıq modeli."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Baş cümlə",
+      "definition": "Tabeli mürəkkəb cümlədə müstəqil olan və budaq cümlə tərəfindən izah edilən komponent."
+    },
+    {
+      "term": "Budaq cümlə",
+      "definition": "Baş cümlənin buraxılmış üzvünü və ya bütövlükdə məzmununu izah edən asılı komponent."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-az9-1",
+      "question": "\"Yağış yağırdı, külək isə yarpaqları qovurdu\" cümləsinin növünü təyin edin.",
+      "solution": "İki sadə cümlədən ibarətdir, komponentlər bərabərhüquqludur və qarşılaşdırma münasibəti var. Tabesiz mürəkkəb cümlədir."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-az9-1",
+      "question": "\"Hamı bilirdi ki, o, çox istedadlı şagirddir\" cümləsi hansı növ mürəkkəb cümlədir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tabesiz mürəkkəb cümlə"
+        },
+        {
+          "key": "B",
+          "text": "Tabeli mürəkkəb cümlə"
+        },
+        {
+          "key": "C",
+          "text": "Həmcins xəbərli sadə cümlə"
+        },
+        {
+          "key": "D",
+          "text": "Ümumi şəxsli cümlə"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "\"ki\" aydınlaşdırma bağlayıcısı ilə bağlanmış tamamlıq budaq cümləli tabeli mürəkkəb cümlədir."
+    }
+  ]
+},
+{
+  "id": "lesson-eng-9-conditionals",
+  "subjectId": "xarici_dil",
+  "grade": 9,
+  "unit": "Grammar: Complex Sentences",
+  "unitOrder": 1,
+  "title": "Conditionals: Zero, First & Second Conditional",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Real and unreal conditions, scientific facts, future possibilities, hypothetical scenarios and 'If clauses'.",
+  "theoryMarkdown": "\n### 1. Zero Conditional (Faktlar və Təbii Qanunlar)\nHəmişə doğru olan ümumi həqiqətlər və elmi faktlar üçün:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Present Simple}$$\n- *\"If you heat water to 100°C, it boils.\"*\n\n### 2. First Conditional (Gələcəkdə Real Şərt)\nGələcəkdə baş verməsi tamamilə mümkün olan real şərtlər:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Future Simple (will + V1)}$$\n- *\"If it rains tomorrow, we will stay at home.\"*\n*(Qeyd: 'If' olan hissədə heç vaxt 'will' işlənməz!)*\n\n### 3. Second Conditional (Xəyali / Qeyri-real Şərt)\nİndiki və ya gələcək zamanda qeyri-real, xəyali vəziyyətlər üçün:\n$$\\\\text{If} + \\\\text{Past Simple}, \\\\quad \\\\text{would} + V_1$$\n- *\"If I had a million dollars, I would travel around the world.\"*\n*(Bütün şəxslərdə 'to be' feli üçün 'were' işlənir: If I were you...)*\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-e9-1",
+      "name": "First Conditional Formula",
+      "latex": "\\\\text{If} + V_1 \\\\implies \\\\text{will} + V_1",
+      "description": "Real gələcək şərt formulu."
+    },
+    {
+      "id": "f-e9-2",
+      "name": "Second Conditional Formula",
+      "latex": "\\\\text{If} + V_2 \\\\implies \\\\text{would} + V_1",
+      "description": "İndiki zamana aid xəyali vəziyyət."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Hypothetical",
+      "definition": "Hələ baş verməmiş, xəyalda canlandırılan qeyri-real vəziyyət."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-e9-1",
+      "question": "\"If she ____ (study) hard, she will pass the exam.\" Boşluğu düzgün zamanla doldurun.",
+      "solution": "Nəticə hissəsində 'will pass' (First Conditional) olduğu üçün If budaq cümləsində Present Simple tələb olunur: \"studies\"."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-e9-1",
+      "question": "Choose the correct sentence in Second Conditional:",
+      "options": [
+        {
+          "key": "A",
+          "text": "If I study, I will get high marks."
+        },
+        {
+          "key": "B",
+          "text": "If I had wings, I would fly."
+        },
+        {
+          "key": "C",
+          "text": "If you freeze water, it turns into ice."
+        },
+        {
+          "key": "D",
+          "text": "If it will rain, we cancel the match."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "'If I had wings, I would fly' indiki zamana aid qeyri-real xəyali arzudur (Second Conditional)."
+    }
+  ]
+},
+{
+  "id": "lesson-eng-10-passive-voice",
+  "subjectId": "xarici_dil",
+  "grade": 10,
+  "unit": "Grammar: Advanced Voice",
+  "unitOrder": 1,
+  "title": "The Passive Voice (Məchul Növ)",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Məchul növün mahiyyəti, 'to be + V3' ümumi formulu, müxtəlif zamanlarda dəyişməsi və 'by' sözönü ilə icraçı.",
+  "theoryMarkdown": "\n### 1. Passive Voice Nədir?\nCümlədə hərəkəti kimin etdiyi bilinmədikdə və ya hərəkətin obyekti icraçıdan daha vacib olduqda **məchul növ (Passive Voice)** işlədilir.\n- **Məlum (Active):** *\"Alexander Bell invented the telephone in 1876.\"*\n- **Məchul (Passive):** *\"The telephone was invented by Alexander Bell in 1876.\"*\n\n### 2. Ümumi Düzəlmə Qaydası\n$$\\\\text{Obyekt} + \\\\mathbf{to \\\\; be} + \\\\mathbf{V_3 / V_{ed}} + (\\\\text{by} + \\\\text{İcraçı})$$\n\n### 3. Zamanlara Görə Cədvəl\n- **Present Simple:** $$am / is / are + V_3$$ (*English is spoken here.*)\n- **Past Simple:** $$was / were + V_3$$ (*The bridge was built in 1995.*)\n- **Future Simple:** $$will \\\\; be + V_3$$ (*The results will be announced tomorrow.*)\n- **Present Perfect:** $$have / has \\\\; been + V_3$$ (*The room has been cleaned.*)\n- **Modallar:** $$can / must / should + be + V_3$$ (*Rules must be obeyed.*)\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-e10-p1",
+      "name": "Passive Voice Formula",
+      "latex": "S + \\\\text{to be} + V_3",
+      "description": "Bütün məchul cümlələrin əsas nüvə formulu."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Agent (by ...)",
+      "definition": "Məchul cümlədə işi görən şəxsi göstərmək üçün istifadə olunan ifadə."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-e10-p1",
+      "question": "\"They clean the rooms every day.\" cümləsini məchul növə çevirin.",
+      "solution": "\"The rooms are cleaned every day.\" (Present Simple cümləsi 'are + V3' ilə məchula keçir)."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-e10-p1",
+      "question": "Which sentence is correctly written in Passive Voice?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The letter was written yesterday."
+        },
+        {
+          "key": "B",
+          "text": "He has wrote a letter."
+        },
+        {
+          "key": "C",
+          "text": "They were built a house."
+        },
+        {
+          "key": "D",
+          "text": "She was painted the wall."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "'The letter was written yesterday' cümləsində was + V3 düzgün işlənmişdir."
+    }
+  ]
+},
+{
+  "id": "lesson-inf-9-networks-ip",
+  "subjectId": "informatika",
+  "grade": 9,
+  "unit": "Kompüter Şəbəkələri və İnternet",
+  "unitOrder": 1,
+  "title": "Kompüter Şəbəkələri, IP Ünvan və Domen Sistemi (DNS)",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 2,
+  "summary": "Lokal (LAN) və qlobal (WAN) şəbəkələr, IPv4 ünvan strukturu, 4 bayt/32 bitlik quruluş və URL tərkibi.",
+  "theoryMarkdown": "\n### 1. Kompüter Şəbəkələrinin Növləri\nİnformasiya mübadiləsi üçün rabitə xətləri ilə birləşdirilmiş kompüterlər sisteminə **şəbəkə** deyilir:\n- **LAN (Local Area Network):** Bir otaq, məktəb və ya bina daxilindəki lokal şəbəkə.\n- **WAN (Wide Area Network):** Şəhərləri, ölkələri və qitələri birləşdirən qlobal şəbəkə (ən böyüyü İnternetdir).\n\n### 2. IP Ünvan Strukturu (IPv4)\nŞəbəkəyə qoşulmuş hər bir qurğuya unikal 32 bitlik (4 baytlıq) rəqəmsal **IP ünvan** verilir.\nNöqtələrlə ayrılmış 4 onluq ədəddən ibarətdir:\n$$A . B . C . D \\\\quad (0 \\\\le A, B, C, D \\\\le 255)$$\nMəsələn: `192.168.1.1` və ya `8.8.8.8`. Heç bir ədəd 255-dən böyük və ya mənfi ola bilməz.\n\n### 3. Domen Adları Sistemi (DNS)\nİnsanların rəqəmlərdən ibarət IP ünvanları yadda saxlaması çətin olduğundan **DNS** sistemi yaradılmışdır. O, hərfli adları (`google.com`) IP ünvanına çevirir:\n- URL strukturu: `https://` (protokol) `www.mektebplus.az` (domen adı) `/dersler` (fayl yolu).\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-inf9-1",
+      "name": "IPv4 Həcmi",
+      "latex": "4 \\\\text{ Bayt} = 32 \\\\text{ bit} \\\\implies 2^{32} \\\\approx 4.3 \\\\text{ milyard ünvan}",
+      "description": "IPv4 standartında mümkün olan maksimum ünvan sayı."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "DNS (Domain Name System)",
+      "definition": "Domen adlarını avtomatik olaraq IP ünvanlarına çevirən paylanmış qovluq xidməti."
+    },
+    {
+      "term": "Protokol",
+      "definition": "Şəbəkədə məlumatların ötürülmə və qəbul edilmə qaydalarını müəyyən edən standart (məs: HTTP, TCP/IP)."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-inf9-1",
+      "question": "`205.112.280.14` IP ünvanı düzgündürmü?",
+      "solution": "Xeyr, səhvdir. Çünki üçüncü hissədəki 280 ədədi icazə verilən maksimum 255 həddini aşır."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-inf9-1",
+      "question": "IPv4 ünvanı yaddaşda neçə bayt yer tutur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 bayt"
+        },
+        {
+          "key": "B",
+          "text": "4 bayt"
+        },
+        {
+          "key": "C",
+          "text": "8 bayt"
+        },
+        {
+          "key": "D",
+          "text": "16 bayt"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "IPv4 ünvanı 32 bit, yəni 4 baytdan ibarətdir."
+    }
+  ]
+},
+{
+  "id": "lesson-inf-11-databases-sql",
+  "subjectId": "informatika",
+  "grade": 11,
+  "unit": "İnformasiya Sistemləri və Verilənlər Bazası",
+  "unitOrder": 1,
+  "title": "Relyasiyalı Verilənlər Bazası və SQL Əsasları",
+  "order": 1,
+  "readTimeMinutes": 12,
+  "difficulty": 3,
+  "summary": "Cədvəl modeli, sətir (yazı/record), sütun (sahə/field), ilkin açar (primary key) və əsas SQL sorğuları (SELECT, WHERE).",
+  "theoryMarkdown": "\n### 1. Relyasiyalı Verilənlər Bazası Modeli\nVerilənlərin bir-biri ilə əlaqəli ikiölçülü cədvəllər şəklində saxlandığı bazaya **relyasiyalı verilənlər bazası (RDBMS)** deyilir:\n- **Sahə (Field / Sütun):** Eyni növ məlumatın atributunu saxlayır (məs: *Ad*, *Soyad*, *Doğum_Tarixi*).\n- **Yazı (Record / Sətir):** Konkret bir obyektə aid bütün məlumatlar toplusu.\n- **İlkin Açar (Primary Key):** Cədvəldə hər bir sətri unikal şəkildə fərqləndirən təkrarlanmayan sahə (məs: *Şagirdin Şəxsiyyət Vəsiqəsi FİN kodu*).\n\n### 2. SQL (Structured Query Language) Əsasları\nVerilənlər bazasından məlumat axtarmaq və idarə etmək üçün standart dildir:\n- **Bütün cədvəli seçmək:**\n  ```sql\n  SELECT * FROM Sagirdler;\n  ```\n- **Filtrləmə (WHERE şərti):**\n  ```sql\n  SELECT Ad, Soyad, Bal FROM Sagirdler WHERE Bal >= 90 ORDER BY Bal DESC;\n  ```\n- **Yeni məlumat əlavə etmək:**\n  ```sql\n  INSERT INTO Sagirdler (Ad, Sinif) VALUES ('Leyla', 10);\n  ```\n    ",
+  "keyFormulas": [
+    {
+      "id": "f-inf11-1",
+      "name": "SQL Standart Sintaksisi",
+      "latex": "\\\\text{SELECT } [\\\\text{sütunlar}] \\\\text{ FROM } [\\\\text{cədvəl}] \\\\text{ WHERE } [\\\\text{şərt}]",
+      "description": "Relyasiyalı bazalarda filtrasiya sorğusunun əsas strukturu."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Primary Key (İlkin Açar)",
+      "definition": "Cədvəldəki hər bir sətrin təkrarsızlığını təmin edən unikal identifikator."
+    },
+    {
+      "term": "RDBMS",
+      "definition": "Relyasiyalı verilənlər bazasının idarəetmə sistemi (məs: PostgreSQL, MySQL, SQLite)."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-inf11-1",
+      "question": "`SELECT Ad FROM Kitablar WHERE Qiymet < 15;` sorğusu nəyi qaytaracaq?",
+      "solution": "Qiyməti 15 manatdan ucuz olan bütün kitabların yalnız adlarından ibarət siyahını qaytaracaq."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-inf11-1",
+      "question": "Verilənlər bazasında cədvəlin bir sətri nə adlanır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sahə (Field)"
+        },
+        {
+          "key": "B",
+          "text": "Yazı (Record)"
+        },
+        {
+          "key": "C",
+          "text": "İndeks"
+        },
+        {
+          "key": "D",
+          "text": "Açar"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cədvəldə hər bir sətir bir obyektə aid məlumatları əks etdirən Yazı (Record) adlanır."
+    }
+  ]
+}
 ];
