@@ -10,7 +10,8 @@ export const Navbar = ({
   searchQuery,
   setSearchQuery,
   userStats,
-  onOpenMobileMenu
+  onOpenMobileMenu,
+  onOpenTools
 }) => {
   return React.createElement(
     'header',
@@ -77,14 +78,13 @@ export const Navbar = ({
           )
         ),
 
-        // Əsas Menyular (Desktop)
+        // Əsas Menyular (Desktop - Təmiz naviqasiya)
         React.createElement(
           'nav',
           { className: 'hidden lg:flex items-center space-x-1' },
           [
             { id: 'dashboard', label: 'Ana Səhifə', icon: 'fa-house' },
             { id: 'lessons', label: 'Dərslər', icon: 'fa-book-open-reader' },
-            { id: 'tools', label: 'Alətlər & Lab', icon: 'fa-toolbox', badge: 'Yeni' },
             { id: 'exams', label: 'BSQ / KSQ Arxiv', icon: 'fa-file-lines' },
             { id: 'pvp', label: '1v1 Viktorina', icon: 'fa-gamepad', badge: 'Canlı' },
             { id: 'admin', label: 'İdarəetmə & Skan', icon: 'fa-database' }
@@ -117,6 +117,18 @@ export const Navbar = ({
           'div',
           { className: 'flex items-center space-x-2.5' },
           
+          // Alətlər Düyməsi (Sağ tərəfdən sürüşərək açılan laboratoriya)
+          React.createElement(
+            'button',
+            {
+              onClick: onOpenTools,
+              title: 'İnteraktiv Alətlər və Calculus Hesablayıcısı',
+              className: 'px-3 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800/80 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-bold text-xs flex items-center space-x-1.5 transition shadow-sm'
+            },
+            React.createElement('i', { className: 'fas fa-toolbox text-sm text-indigo-500' }),
+            React.createElement('span', { className: 'hidden sm:inline' }, 'Alətlər & Lab')
+          ),
+
           // Qaranlıq / İşıqlı rejim
           React.createElement(
             'button',
