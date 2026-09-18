@@ -86,10 +86,7 @@ export const Sidebar = ({
               'button',
               {
                 key: item.id,
-                onClick: () => {
-                  setActiveTab(item.id);
-                  onClose();
-                },
+                onClick: () => handleItemClick(item.id),
                 className: `w-full px-4 py-3 rounded-2xl flex items-center justify-between text-left transition-all ${
                   isActive
                     ? 'bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800'
