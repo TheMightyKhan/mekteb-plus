@@ -741,5 +741,380 @@ export const MOCK_PVP_QUESTIONS = [
   "correctKey": "B",
   "explanation": "print() funksiyası standart çıxışa (ekrana) məlumat ötürür.",
   "difficulty": 1
+},
+{
+  "id": "pvp-m-8",
+  "subjectId": "riyaziyyat",
+  "question": "i^2 = -1 olarsa, (1 + i)(1 - i) hasilini hesablayın.",
+  "options": [
+    {
+      "key": "A",
+      "text": "2"
+    },
+    {
+      "key": "B",
+      "text": "0"
+    },
+    {
+      "key": "C",
+      "text": "-2"
+    },
+    {
+      "key": "D",
+      "text": "2i"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-m-9",
+  "subjectId": "riyaziyyat",
+  "question": "Radiusu 6 sm olan çevrənin 60 dərəcəlik mərkəzi bucağına uyğun qövsün uzunluğunu tapın.",
+  "options": [
+    {
+      "key": "A",
+      "text": "2π sm"
+    },
+    {
+      "key": "B",
+      "text": "4π sm"
+    },
+    {
+      "key": "C",
+      "text": "6π sm"
+    },
+    {
+      "key": "D",
+      "text": "π sm"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-p-7",
+  "subjectId": "fizika",
+  "question": "İdeal qazın izotermik genişlənməsi zamanı daxili enerjisi necə dəyişir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Dəyişmir (sabit qalır)"
+    },
+    {
+      "key": "B",
+      "text": "Artır"
+    },
+    {
+      "key": "C",
+      "text": "Azalır"
+    },
+    {
+      "key": "D",
+      "text": "Sıfra bərabər olur"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-p-8",
+  "subjectId": "fizika",
+  "question": "Fotoeffekt hadisəsində qopan fotoelektronların maksimal kinetik enerjisi nədən asılıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Düşən işığın tezliyindən"
+    },
+    {
+      "key": "B",
+      "text": "Yalnız işığın intensivliyindən"
+    },
+    {
+      "key": "C",
+      "text": "İşıqlanma müddətindən"
+    },
+    {
+      "key": "D",
+      "text": "Maddənin həcmindən"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-c-7",
+  "subjectId": "kimya",
+  "question": "Metanın (CH4) tam yanması zamanı hansı maddələr əmələ gəlir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "CO2 və H2O"
+    },
+    {
+      "key": "B",
+      "text": "CO və H2"
+    },
+    {
+      "key": "C",
+      "text": "C və H2O"
+    },
+    {
+      "key": "D",
+      "text": "C2H2 və O2"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-c-8",
+  "subjectId": "kimya",
+  "question": "Dövri sistemdə ən yüksək elektromənfiliyə malik element hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Flüor (F)"
+    },
+    {
+      "key": "B",
+      "text": "Oksigen (O)"
+    },
+    {
+      "key": "C",
+      "text": "Xlor (Cl)"
+    },
+    {
+      "key": "D",
+      "text": "Fransium (Fr)"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-b-7",
+  "subjectId": "biologiya",
+  "question": "DNT-də adenin ilə timin arasında neçə hidrogen rabitəsi yaranır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "2 rabitə"
+    },
+    {
+      "key": "B",
+      "text": "3 rabitə"
+    },
+    {
+      "key": "C",
+      "text": "1 rabitə"
+    },
+    {
+      "key": "D",
+      "text": "4 rabitə"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-b-8",
+  "subjectId": "biologiya",
+  "question": "Mitoz bölünmə nəticəsində bir ana hüceyrədən neçə qız hüceyrə yaranır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "2 eyni hüceyrə"
+    },
+    {
+      "key": "B",
+      "text": "4 müxtəlif hüceyrə"
+    },
+    {
+      "key": "C",
+      "text": "1 iri hüceyrə"
+    },
+    {
+      "key": "D",
+      "text": "8 hüceyrə"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-i-7",
+  "subjectId": "informatika",
+  "question": "Sıralanmış massivdə ikilik axtarışın (Binary Search) zaman mürəkkəbliyi nə qədərdir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "O(log n)"
+    },
+    {
+      "key": "B",
+      "text": "O(n)"
+    },
+    {
+      "key": "C",
+      "text": "O(n^2)"
+    },
+    {
+      "key": "D",
+      "text": "O(1)"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-i-8",
+  "subjectId": "informatika",
+  "question": "Python dilində siyahıya (list) yeni elementi sonuna əlavə edən metod hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "append()"
+    },
+    {
+      "key": "B",
+      "text": "push()"
+    },
+    {
+      "key": "C",
+      "text": "add()"
+    },
+    {
+      "key": "D",
+      "text": "insert_last()"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-g-7",
+  "subjectId": "cografiya",
+  "question": "Azərbaycanın yeni inzibati bölgüsünə görə neçə iqtisadi rayon vardır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "14"
+    },
+    {
+      "key": "B",
+      "text": "10"
+    },
+    {
+      "key": "C",
+      "text": "12"
+    },
+    {
+      "key": "D",
+      "text": "16"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-g-8",
+  "subjectId": "cografiya",
+  "question": "Şərqi Zəngəzur iqtisadi rayonuna daxil olan inzibati rayonlardan biri hansıdır?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Kəlbəcər"
+    },
+    {
+      "key": "B",
+      "text": "Ağdam"
+    },
+    {
+      "key": "C",
+      "text": "Füzuli"
+    },
+    {
+      "key": "D",
+      "text": "Şuşa"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-h-7",
+  "subjectId": "tarix",
+  "question": "1501-ci ildə Şah İsmayıl Səfəvilər dövlətinin paytaxtı elan etdiyi şəhər hansı idi?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Təbriz"
+    },
+    {
+      "key": "B",
+      "text": "Ərdəbil"
+    },
+    {
+      "key": "C",
+      "text": "Qəzvin"
+    },
+    {
+      "key": "D",
+      "text": "İsfahan"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-az-7",
+  "subjectId": "azerbaycan_dili",
+  "question": "'Əsgərlər cəbhədən qələbə ilə qayıtdılar' cümləsində xəbər hansı şəxsdədir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "III şəxsin cəmində"
+    },
+    {
+      "key": "B",
+      "text": "III şəxsin təkində"
+    },
+    {
+      "key": "C",
+      "text": "II şəxsin cəmində"
+    },
+    {
+      "key": "D",
+      "text": "I şəxsin cəmində"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
+},
+{
+  "id": "pvp-en-7",
+  "subjectId": "ingilis_dili",
+  "question": "'If I were a bird, I would fly across the oceans.' cümləsi hansı conditional tipidir?",
+  "options": [
+    {
+      "key": "A",
+      "text": "Second Conditional (Type 2)"
+    },
+    {
+      "key": "B",
+      "text": "First Conditional (Type 1)"
+    },
+    {
+      "key": "C",
+      "text": "Zero Conditional (Type 0)"
+    },
+    {
+      "key": "D",
+      "text": "Third Conditional (Type 3)"
+    }
+  ],
+  "correctKey": "A",
+  "timeSeconds": 15
 }
 ];

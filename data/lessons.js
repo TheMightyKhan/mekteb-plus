@@ -3672,5 +3672,819 @@ while saygac > 0:
       "explanation": "Alqoritmin sona çataraq nəticə verməsi nəticəvilik xassəsidir."
     }
   ]
+},
+{
+  "id": "lesson-math-11-complex-numbers",
+  "subjectId": "riyaziyyat",
+  "grade": 11,
+  "unit": "Kompleks Ədədlər",
+  "unitOrder": 3,
+  "title": "Kompleks Ədədlər və Onların Triqonometrik Şəkli",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Xəyali vahid i, kompleks ədədin cəbri və triqonometrik forması, modul və arqument anlayışları.",
+  "theoryMarkdown": "\n### 1. Xəyali Vahid və Kompleks Ədəd Anlayışı\nMənfi ədədlərin kvadrat kökü həqiqi ədədlər çoxluğunda mövcud deyil. Bu məqsədlə kvadratı $-1$-ə bərabər olan yeni ədəd — **xəyali vahid ($i$)** daxil edilir:\n$$i^2 = -1, \\quad i = \\sqrt{-1}$$\n\n$a, b \\in \\mathbb{R}$ olduqda, $z = a + bi$ şəkilli ədədə **kompleks ədəd** deyilir:\n- $a = \\text{Re}(z)$ — həqiqi hissə\n- $b = \\text{Im}(z)$ — xəyali hissə\n- $\\bar{z} = a - bi$ — $z$ ədədinin **qoşması** adlanır.\n\n### 2. Kompleks Ədədin Modulu və Arqumenti\nKompleks müstəvidə $z = a + bi$ nöqtəsinin koordinat başlanğıcından məsafəsinə **modul** deyilir:\n$$|z| = r = \\sqrt{a^2 + b^2}$$\n\nMüsbət həqiqi ox ilə radius-vektor arasındakı bucağa **arqument** ($\\varphi$) deyilir:\n$$\\cos\\varphi = \\frac{a}{r}, \\quad \\sin\\varphi = \\frac{b}{r} \\implies \\tan\\varphi = \\frac{b}{a}$$\n\n### 3. Triqonometrik Şəkil və Muavr Düsturu\nKompleks ədədin triqonometrik şəkli:\n$$z = r(\\cos\\varphi + i\\sin\\varphi)$$\n\n**Muavr düsturu** (qüvvətə yüksəltmə):\n$$z^n = r^n(\\cos(n\\varphi) + i\\sin(n\\varphi))$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-m11-comp-1",
+      "name": "Kompleks Ədədin Modulu",
+      "latex": "|z| = \\sqrt{a^2 + b^2}",
+      "description": "Həqiqi və xəyali hissələrin kvadratları cəminin kökü."
+    },
+    {
+      "id": "f-m11-comp-2",
+      "name": "Muavr Düsturu",
+      "latex": "z^n = r^n(\\cos n\\varphi + i\\sin n\\varphi)",
+      "description": "Kompleks ədədin n dərəcədən qüvvətə yüksəldilməsi."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-m11-comp-1",
+      "title": "Misal: z = 1 + i ədədini triqonometrik şəkildə yazın",
+      "problem": "$z = 1 + i$ kompleks ədədinin modulunu və arqumentini taparaq triqonometrik şəkildə ifadə edin.",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Modulun hesablanması",
+          "content": "$$r = \\sqrt{1^2 + 1^2} = \\sqrt{2}$$"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Arqumentin tapılması",
+          "content": "$$\\cos\\varphi = \\frac{1}{\\sqrt{2}}, \\sin\\varphi = \\frac{1}{\\sqrt{2}} \\implies \\varphi = \\frac{\\pi}{4} (45^\\circ)$$"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Triqonometrik şəklin qurulması",
+          "content": "$$z = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)$$"
+        }
+      ],
+      "finalAnswer": "$z = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)$"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-m11-comp-1",
+      "question": "$i^{20}$ ifadəsinin qiymətini tapın.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "-1"
+        },
+        {
+          "key": "C",
+          "text": "i"
+        },
+        {
+          "key": "D",
+          "text": "-i"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "$i^4 = 1$ olduğu üçün $i^{20} = (i^4)^5 = 1^5 = 1$."
+    }
+  ]
+},
+{
+  "id": "lesson-math-9-circle-geometry",
+  "subjectId": "riyaziyyat",
+  "grade": 9,
+  "unit": "Həndəsə: Çevrə və Dairə",
+  "unitOrder": 3,
+  "title": "Çevrədə Bucaqlar, Vətərlər və Toxunanlar",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "Mərkəzi və daxilə çəkilmiş bucaqlar, kəsişən vətərlərin xassəsi, toxunan və kəsən teoremi.",
+  "theoryMarkdown": "\n### 1. Mərkəzi və Daxilə Çəkilmiş Bucaqlar\n- **Mərkəzi bucaq**: Təpəsi çevrə mərkəzində olan bucaqdır və söykəndiyi qövsün dərəcə ölçüsünə bərabərdir:\n  $$\\angle AOB = \\cup AB$$\n- **Daxilə çəkilmiş bucaq**: Təpəsi çevrə üzərində olan və tərəfləri çevrəni kəsən bucaqdır. Söykəndiyi qövsün yarısına bərabərdir:\n  $$\\angle ACB = \\frac{1}{2} \\cup AB$$\n- **Nəticə**: Diametrə söykənən daxilə çəkilmiş bucaq həmişə **düz bucaqdır** ($90^\\circ$).\n\n### 2. Kəsişən Vətərlər Teoremi\nBir nöqtədə kəsişən iki vətərin parçalarının hasilləri bərabərdir:\n$$AP \\cdot PB = CP \\cdot PD$$\n\n### 3. Toxunan və Kəsən Teoremi\nÇevrə xaricindəki nöqtədən çəkilən toxunanın kvadratı həmin nöqtədən çəkilən kəsənin xarici hissəsi ilə ümumi uzunluğunun hasilinə bərabərdir:\n$$PT^2 = PA \\cdot PB$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-m9-circ-1",
+      "name": "Daxilə Çəkilmiş Bucaq",
+      "latex": "\\angle ACB = \\frac{1}{2}\\cup AB",
+      "description": "Söykəndiyi qövsün yarısına bərabərdir."
+    },
+    {
+      "id": "f-m9-circ-2",
+      "name": "Kəsişən Vətərlər",
+      "latex": "AP \\cdot PB = CP \\cdot PD",
+      "description": "Kəsişən vətər seqmentlərinin hasili bərabərdir."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-m9-circ-1",
+      "title": "Misal: Diametrə söykənən bucaq",
+      "problem": "Çevrənin $AB$ diametrinə söykənən $\\angle ACB$ bucağının dərəcə ölçüsü neçədir?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Diametrin qövs ölçüsü",
+          "content": "Diametr çevrəni hər biri $180^\\circ$ olan iki bərabər qövsə bölür."
+        },
+        {
+          "stepNumber": 2,
+          "title": "Daxilə çəkilmiş bucaq teoremi",
+          "content": "$$\\angle ACB = \\frac{180^\\circ}{2} = 90^\\circ$$"
+        }
+      ],
+      "finalAnswer": "$90^\\circ$"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-m9-circ-1",
+      "question": "Qövsün ölçüsü 80 dərəcədirsə, bu qövsə söykənən daxilə çəkilmiş bucaq neçə dərəcə olar?",
+      "options": [
+        {
+          "key": "A",
+          "text": "40°"
+        },
+        {
+          "key": "B",
+          "text": "80°"
+        },
+        {
+          "key": "C",
+          "text": "160°"
+        },
+        {
+          "key": "D",
+          "text": "90°"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Daxilə çəkilmiş bucaq söykəndiyi qövsün yarısına bərabərdir: 80 / 2 = 40°."
+    }
+  ]
+},
+{
+  "id": "lesson-phys-11-photoelectric",
+  "subjectId": "fizika",
+  "grade": 11,
+  "unit": "Kvant Fizikası və Optika",
+  "unitOrder": 3,
+  "title": "İşıq Kvantları və Fotoeffekt Hadisəsi",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Plank hipotezi, fotonun enerjisi və impulsu, Eynşteynin fotoeffekt tənliyi, qırmızı sərhəd.",
+  "theoryMarkdown": "\n### 1. Kvant Hipotezi və Foton\n1900-cü ildə Maks Plank göstərdi ki, işıq fasiləsiz dalğa kimi deyil, diskret porsiyalarla — **kvantlarla (fotonlarla)** şüalanır və udulur:\n$$E = h\\nu = \\frac{hc}{\\lambda}$$\nBurada $h \\approx 6.63 \\cdot 10^{-34} \\text{ C}\\cdot\\text{san}$ — Plank sabitidir.\n\nFoton sükunət kütləsinə malik deyil ($m_0 = 0$), lakin enerji və impulsa malikdir:\n$$p = \\frac{h}{\\lambda} = \\frac{E}{c}$$\n\n### 2. Xarici Fotoeffekt və Eynşteyn Tənliyi\nİşığın təsiri ilə maddədən elektronların qopması hadisəsinə **xarici fotoeffekt** deyilir. \nEnerjinin saxlanması qanununa əsaslanan **Eynşteyn tənliyi**:\n$$h\\nu = A_{cix} + \\frac{mv_{max}^2}{2}$$\n\n- $h\\nu$ — düşən fotonun enerjisi\n- $A_{cix}$ — elektrona maddəni tərk etməsi üçün tələb olunan **çıxış işi**\n- $\\frac{mv_{max}^2}{2} = eU_l$ — qopan fotoelektronların maksimal kinetik enerjisi ($U_l$ — ləngidici gərginlik).\n\n### 3. Fotoeffektin Qırmızı Sərhədi\nFotoeffektin baş verməsi üçün minimal tezlik (və maksimal dalğa uzunluğu):\n$$\\nu_{min} = \\frac{A_{cix}}{h}, \\quad \\lambda_{max} = \\frac{hc}{A_{cix}}$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-p11-pe-1",
+      "name": "Eynşteynin Fotoeffekt Tənliyi",
+      "latex": "h\\nu = A_{cix} + E_k",
+      "description": "Foton enerjisi çıxış işi və kinetik enerjiyə sərf olunur."
+    },
+    {
+      "id": "f-p11-pe-2",
+      "name": "Fotonun İmpulsu",
+      "latex": "p = \\frac{h}{\\lambda}",
+      "description": "İmpuls və dalğa uzunluğu arasındakı de Broyl asılılığı."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-p11-pe-1",
+      "title": "Misal: Fotoelektronların maksimal kinetik enerjisi",
+      "problem": "Metal üçün çıxış işi $A_{cix} = 2.5 \\text{ eV}$-dir. Enerjisi $4.0 \\text{ eV}$ olan foton düşdükdə qopan elektronların maksimal kinetik enerjisini tapın.",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Eynşteyn düsturunun tətbiqi",
+          "content": "$$E_k = h\\nu - A_{cix}$$"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Hesablama",
+          "content": "$$E_k = 4.0 \\text{ eV} - 2.5 \\text{ eV} = 1.5 \\text{ eV}$$"
+        }
+      ],
+      "finalAnswer": "$1.5 \\text{ eV}$"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-p11-pe-1",
+      "question": "Fotonun enerjisi hansı kəmiyyətdən xətti asılıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rəqs tezliyindən (nu)"
+        },
+        {
+          "key": "B",
+          "text": "Dalğa uzunluğundan"
+        },
+        {
+          "key": "C",
+          "text": "İşığın intensivliyindən"
+        },
+        {
+          "key": "D",
+          "text": "Sürətin kvadratından"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "E = h * nu düsturuna əsasən foton enerjisi birbaşa tezliklə mütənasibdir."
+    }
+  ]
+},
+{
+  "id": "lesson-phys-10-ideal-gas-laws",
+  "subjectId": "fizika",
+  "grade": 10,
+  "unit": "Molekulyar Fizika və Termodinamika",
+  "unitOrder": 2,
+  "title": "İdeal Qaz Qanunları və İzoproseslər",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "Mendeleyev-Klapeyron tənliyi, Boyl-Mariott, Şarl və Gey-Lüssak qanunları və qrafikləri.",
+  "theoryMarkdown": "\n### 1. İdeal Qaz Hal Tənliyi (Mendeleyev-Klapeyron)\nMolekulları arasındakı qarşılıqlı təsir qüvvələri nəzərə alınmayan və zərbələri mütləq elastik olan qaz **ideal qaz** adlanır:\n$$PV = \\nu RT = \\frac{m}{M} RT$$\nBurada $R \\approx 8.31 \\frac{\\text{C}}{\\text{mol}\\cdot\\text{K}}$ — universal qaz sabitidir, $T$ — Kelvin şkalasında mütləq temperaturdur ($T = t^\\circ \\text{C} + 273$).\n\n### 2. İzoproseslər\nQazın kütləsi sabit qaldıqda ($m = \\text{const}$):\n1. **İzotermik proses** ($T = \\text{const}$, Boyl-Mariott qanunu):\n   $$P \\cdot V = \\text{const} \\implies P_1V_1 = P_2V_2$$\n   Qrafiki $P(V)$ koordinatında **hiperboladır**.\n2. **İzobarik proses** ($P = \\text{const}$, Gey-Lüssak qanunu):\n   $$\\frac{V}{T} = \\text{const} \\implies \\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$\n3. **İzooxorik proses** ($V = \\text{const}$, Şarl qanunu):\n   $$\\frac{P}{T} = \\text{const} \\implies \\frac{P_1}{T_1} = \\frac{P_2}{T_2}$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-p10-gas-1",
+      "name": "Mendeleyev-Klapeyron Tənliyi",
+      "latex": "PV = \\frac{m}{M}RT",
+      "description": "İdeal qazın təzyiqi, həcmi və temperaturu arasındakı əsas əlaqə."
+    },
+    {
+      "id": "f-p10-gas-2",
+      "name": "Boyl-Mariott Qanunu",
+      "latex": "P_1V_1 = P_2V_2 \\quad (T = \\text{const})",
+      "description": "Sabit temperaturda təzyiq həcmlə tərs mütənasibdir."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-p10-gas-1",
+      "title": "Misal: İzotermik sıxılma",
+      "problem": "Sabit temperaturda qazın həcmini 4 litrdən 2 litrə qədər azaltdıqda təzyiq necə dəyişər?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Boyl-Mariott qanununun tətbiqi",
+          "content": "$$P_1 \\cdot V_1 = P_2 \\cdot V_2 \\implies P_2 = P_1 \\cdot \\frac{V_1}{V_2}$$"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Nəticə",
+          "content": "$$P_2 = P_1 \\cdot \\frac{4}{2} = 2P_1$$ Təzyiq 2 dəfə artar."
+        }
+      ],
+      "finalAnswer": "Təzyiq 2 dəfə artar"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-p10-gas-1",
+      "question": "Həcmin sabit qaldığı proses necə adlanır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "İzooxorik"
+        },
+        {
+          "key": "B",
+          "text": "İzobarik"
+        },
+        {
+          "key": "C",
+          "text": "İzotermik"
+        },
+        {
+          "key": "D",
+          "text": "Adiabatik"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "V = const prosesinə izooxorik proses deyilir."
+    }
+  ]
+},
+{
+  "id": "lesson-chem-10-alkanes",
+  "subjectId": "kimya",
+  "grade": 10,
+  "unit": "Üzvi Kimya: Karbohidrogenlər",
+  "unitOrder": 2,
+  "title": "Doymuş Karbohidrogenlər: Alkanlar",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "Ümumi formula CnH2n+2, sp3 hibridləşməsi, IUPAC nomenklaturası və radikal əvəzetmə reaksiyaları.",
+  "theoryMarkdown": "\n### 1. Alkanların Quruluşu və Homoloji Sırası\nMolekulunda karbon atomları arasında yalnız tək (birqat $\\sigma$) rabitələr olan açıq zəncirli karbohidrogenlərə **alkanlar (parafinlər)** deyilir.\n- Ümumi formulu: **$C_nH_{2n+2}$** ($n \\ge 1$)\n- Karbon atomlarının hibridləşmə vəziyyəti: **$sp^3$**\n- Valent bucağı: **$109^\\circ 28'$**\n- Karbon-karbon rabitə uzunluğu: **$0.154 \\text{ nm}$**\n\nIlk 4 nümayəndə:\n- $CH_4$ — Metan\n- $C_2H_6$ — Etan\n- $C_3H_8$ — Propan\n- $C_4H_{10}$ — Butan\n\n### 2. Kimyəvi Xassələri\nAlkanlar kimyəvi cəhətdən passivdir (birləşmə reaksiyasına girmirlər):\n1. **Əvəzetmə (Xlorlaşma)** — sərbəst radikal mexanizmi ilə ($h\\nu$ işıq təsiri ilə):\n   $$CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$$\n2. **Yanma**:\n   $$C_nH_{2n+2} + \\frac{3n+1}{2}O_2 \\to nCO_2 + (n+1)H_2O + Q$$\n3. **Dehidrogenləşmə** (hidrogen ayrılması):\n   $$C_2H_6 \\xrightarrow{t, Ni} C_2H_4 + H_2$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-c10-alk-1",
+      "name": "Alkanların Ümumi Formulu",
+      "latex": "C_nH_{2n+2}",
+      "description": "Doymuş alifatik karbohidrogenlər üçün ümumi tərkib."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-c10-alk-1",
+      "title": "Misal: 5 karbonlu alkanın molyar kütləsi",
+      "problem": "$n = 5$ olan alkanın (pentan) formulunu və molyar kütləsini tapın ($A_r(C)=12, A_r(H)=1$).",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Formulun müəyyən edilməsi",
+          "content": "$$C_5H_{2 \\cdot 5 + 2} = C_5H_{12}$$"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Molyar kütlə",
+          "content": "$$M(C_5H_{12}) = 5 \\cdot 12 + 12 \\cdot 1 = 60 + 12 = 72 \\text{ q/mol}$$"
+        }
+      ],
+      "finalAnswer": "C5H12, M = 72 q/mol"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-c10-alk-1",
+      "question": "Alkanlarda karbon atomları hansı hibrid vəziyyətindədir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "sp3"
+        },
+        {
+          "key": "B",
+          "text": "sp2"
+        },
+        {
+          "key": "C",
+          "text": "sp"
+        },
+        {
+          "key": "D",
+          "text": "sp3d"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Alkanların bütün karbon atomları sp3 hibridləşməsindədir və bucaq 109°28'-dir."
+    }
+  ]
+},
+{
+  "id": "lesson-chem-9-solutions",
+  "subjectId": "kimya",
+  "grade": 9,
+  "unit": "Məhlullar və Həllolma",
+  "unitOrder": 2,
+  "title": "Məhlulların Qatılığı və Kütlə Payı",
+  "order": 1,
+  "readTimeMinutes": 8,
+  "difficulty": 2,
+  "summary": "Həllolma əmsalı, həll olan maddənin kütlə payı (faiz qatılığı) və məhlulların qarışdırılması.",
+  "theoryMarkdown": "\n### 1. Məhlul Anlayışı\nMəhlul — həlledici, həll olan maddə və onların qarşılıqlı təsir məhsullarından ibarət **bircinsli (homogen)** sistemdir.\n\nMəhlulun kütləsi:\n$$m_{meh} = m_{mad} + m_{su}$$\n\n### 2. Həll Olan Maddənin Kütlə Payı (Faiz Qatılığı)\nHəll olan maddə kütləsinin ümumi məhlul kütləsinə nisbətinin faizlə ifadəsinə **kütlə payı ($\\omega$)** deyilir:\n$$\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\% = \\frac{m_{mad}}{m_{mad} + m_{su}} \\cdot 100\\%$$\n\n### 3. Məhlulların Qarışdırılması Qaydası\nİki məhlul qarışdırıldıqda alınan yeni qatılıq:\n$$\\omega_{son} = \\frac{m_1\\omega_1 + m_2\\omega_2}{m_1 + m_2}$$\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-c9-sol-1",
+      "name": "Kütlə Payı Düsturu",
+      "latex": "\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\%",
+      "description": "Maddə kütləsinin məhlul kütləsinə nisbəti."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-c9-sol-1",
+      "title": "Misal: Duzlu suyun faiz qatılığı",
+      "problem": "30 qram xörək duzunu 120 qram suda həll etdikdə alınan məhlulun faiz qatılığını tapın.",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Ümumi məhlul kütləsi",
+          "content": "$$m_{meh} = 30 + 120 = 150 \\text{ q}$$"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Kütlə payı",
+          "content": "$$\\omega = \\frac{30}{150} \\cdot 100\\% = \\frac{1}{5} \\cdot 100\\% = 20\\%$$"
+        }
+      ],
+      "finalAnswer": "20%"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-c9-sol-1",
+      "question": "100 q 10%-li məhlulda neçə qram həll olan maddə var?",
+      "options": [
+        {
+          "key": "A",
+          "text": "10 q"
+        },
+        {
+          "key": "B",
+          "text": "90 q"
+        },
+        {
+          "key": "C",
+          "text": "1 q"
+        },
+        {
+          "key": "D",
+          "text": "20 q"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "m = 100 * 0.10 = 10 qram."
+    }
+  ]
+},
+{
+  "id": "lesson-bio-10-protein-synthesis",
+  "subjectId": "biologiya",
+  "grade": 10,
+  "unit": "Hüceyrənin Molekulyar Biologiyası",
+  "unitOrder": 2,
+  "title": "Zülalların Biosintezi və Genetik Kod",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Transkripsiya, m-RNT, t-RNT, kodon-antikodon qarşılıqlı təsiri və ribosomda translyasiya mərhələsi.",
+  "theoryMarkdown": "\n### 1. Genetik Kodun Xassələri\nGenetik informasiya DNT molekulunda nukleotid ardıcıllığı şəklində yazılmışdır:\n1. **Tripletlik**: Hər bir aminturşunu 3 nukleotid (1 kodon) kodlaşdırır. Məsələn: $AUG$ — Metionin və start kodondur.\n2. **Cırlaşmışlıq (artıqlıq)**: 20 aminturşunu 61 mənalı kodon kodlaşdırır (bəzi aminturşular bir neçə kodonla kodlanır).\n3. **Stop kodonlar**: $UAA, UAG, UGA$ zülal sintezini dayandırır.\n4. **Universallıq**: Genetik kod yerdəki bütün canlılar üçün eynidir.\n\n### 2. Transkripsiya (Nüvədə)\nRNT-polimeraza fermenti vasitəsilə DNT matrisindən məlumat RNT-sinin (m-RNT) sintez olunması prosesidir:\n$$A \\to U, \\quad T \\to A, \\quad G \\to C, \\quad C \\to G$$\n\n### 3. Translyasiya (Sitoplazmada və Ribosomda)\nm-RNT ribosomun kiçik və böyük hissəcikləri arasına daxil olur. Nəqliyyat RNT-ləri (t-RNT) aminturşuları ribosomun funksional mərkəzinə gətirir. Kodon və antikodon komplementar birləşdikdə aminturşular arasında **peptid rabitəsi** yaranır və polipeptid zənciri uzanır.\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-b10-prot-1",
+      "name": "Nukleotid və Aminturşu Əlaqəsi",
+      "latex": "N_{nukleotid} = 3 \\cdot N_{amintursu}",
+      "description": "1 aminturşuya 1 triplet (3 nukleotid) uyğundur."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-b10-prot-1",
+      "title": "Misal: 90 nukleotidlik m-RNT",
+      "problem": "90 nukleotiddən ibarət m-RNT zəncirinin kodlaşdırdığı zülal neçə aminturşudan ibarət olar (stop kodon nəzərə alınmır)?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Triplet qaydası",
+          "content": "$$N_{amintursu} = \\frac{90}{3} = 30$$"
+        }
+      ],
+      "finalAnswer": "30 aminturşu"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-b10-prot-1",
+      "question": "Zülal biosintezinin bilavasitə getdiyi hüceyrə orqanoidi hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ribosom"
+        },
+        {
+          "key": "B",
+          "text": "Lizosom"
+        },
+        {
+          "key": "C",
+          "text": "Qolci kompleksi"
+        },
+        {
+          "key": "D",
+          "text": "Vakuol"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Zülal translyasiyası sitoplazmada yerləşən ribosomlarda baş verir."
+    }
+  ]
+},
+{
+  "id": "lesson-bio-11-evolution",
+  "subjectId": "biologiya",
+  "grade": 11,
+  "unit": "Ümumi Biologiya: Təkamül Təlimi",
+  "unitOrder": 2,
+  "title": "Çarlz Darvinin Təkamül Nəzəriyyəsi və Təbii Seçmə",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "İrsi dəyişkənlik, yaşamaq uğrunda mübarizə, təbii seçmə və adaptasiyaların yaranması.",
+  "theoryMarkdown": "\n### 1. Darvinizmin Hərəkətverici Qüvvələri\n1859-cu ildə Çarlz Darvin 'Növlərin Mənşəyi' əsərində üzvi aləmin təkamülünün əsas amillərini göstərdi:\n1. **İrsi dəyişkənlik (Mutasiyalar və kombinativ)**: Nəsildən-nəslə ötürülən fərdi fərqlər.\n2. **Yaşamaq uğrunda mübarizə**:\n   - *Növdaxili*: Ən kəskin mübarizə formasıdır (eyni qida və yaşayış sahəsi uğrunda).\n   - *Növlərarası*: Yırtıcı-şikar, rəqabət münasibətləri.\n   - *Əlverişsiz mühit şəraitinə qarşı*: Quraqlıq, şaxta və s.\n3. **Təbii seçmə**: Mühit şəraitinə daha yaxşı uyğunlaşan fərdlərin sağ qalaraq nəsil verməsi, uyğunlaşmayanların isə sıradan çıxması prosesidir.\n\n### 2. Uyğunlaşmaların Nisbi Xarakteri\nHər hansı bir adaptasiya yalnız müəyyən konkret mühit şəraitində faydalıdır. Mühit dəyişdikdə həmin əlamət zərərli və ya neytral ola bilər (məsələn, qarın əriməsi zamanı ağ kəkliyin ağ rəngi yırtıcılar üçün onu aşkar edir).\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-b11-evo-1",
+      "name": "Təkamülün Əsas Triadası",
+      "latex": "\\text{İrsi Dəyişkənlik} + \\text{Mübarizə} \\implies \\text{Təbii Seçmə}",
+      "description": "Darvinə görə növlərin təkamül dinamikası."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-b11-evo-1",
+      "title": "Misal: Növdaxili mübarizə",
+      "problem": "Niyə növdaxili mübarizə növlərarası mübarizədən daha kəskin xarakter daşıyır?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Tələbatların eyniliyi",
+          "content": "Eyni növə aid fərdlərin qida mənbəyi, yaşayış ərazisi və çoxalma tərəfdaşı tam eynidir."
+        }
+      ],
+      "finalAnswer": "Fərdlərin eyni həyati ehtiyaclar uğrunda rəqabət aparması səbəbindən"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-b11-evo-1",
+      "question": "Təkamülün ən əsas yönəldici amili hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Təbii seçmə"
+        },
+        {
+          "key": "B",
+          "text": "Modifikasiya dəyişkənliyi"
+        },
+        {
+          "key": "C",
+          "text": "Süni seçmə"
+        },
+        {
+          "key": "D",
+          "text": "Populyasiya dalğaları"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Təkamülü müəyyən istiqamətə yönəldən yeganə amil təbii seçmədir."
+    }
+  ]
+},
+{
+  "id": "lesson-inf-10-algorithms",
+  "subjectId": "informatika",
+  "grade": 10,
+  "unit": "Alqoritmləşdirmə və Proqramlaşdırma",
+  "unitOrder": 2,
+  "title": "Axtarış və Çeşidləmə Alqoritmləri (Python)",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 3,
+  "summary": "Xətti və ikilik (binary) axtarış, Bubble sort çeşidləməsi, asimptotik zaman mürəkkəbliyi O(n) və O(log n).",
+  "theoryMarkdown": "\n### 1. İkilik Axtarış (Binary Search)\nYalnız **çeşidlənmiş (sıralanmış)** massivlərdə işləyən ən sürətli axtarış alqoritmidir. Hər addımda axtarış sahəsini yarıya bölür:\n- Zaman mürəkkəbliyi: **$O(\\log_2 n)$**\n\n```python\ndef binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```\n\n### 2. Qabarcıqlı Çeşidləmə (Bubble Sort)\nQonşu elementləri ardıcıl müqayisə edərək böyüyü sağa doğru 'üzdürən' sadə çeşidləmə üsuludur:\n- Zaman mürəkkəbliyi: **$O(n^2)$**\n\n```python\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n```\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-i10-alg-1",
+      "name": "İkilik Axtarış Addım Sayı",
+      "latex": "k = \\lceil \\log_2 n \\rceil",
+      "description": "n elementli massivdə ən pis halda maksimum müqayisə sayı."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-i10-alg-1",
+      "title": "Misal: 1024 elementli massivdə ikilik axtarış",
+      "problem": "1024 elementdən ibarət sıralanmış siyahıda axtarılan ədədi tapmaq üçün ən çox neçə müqayisə tələb olunar?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Loqarifmik hesablama",
+          "content": "$$\\log_2(1024) = 10$$"
+        }
+      ],
+      "finalAnswer": "Maksimum 10 müqayisə"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-i10-alg-1",
+      "question": "İkilik axtarışın (Binary Search) işləməsi üçün əsas şərt nədir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Siyahının sıralanmış (çeşidlənmiş) olması"
+        },
+        {
+          "key": "B",
+          "text": "Bütün elementlərin cüt ədəd olması"
+        },
+        {
+          "key": "C",
+          "text": "Siyahının ölçüsünün 10-dan kiçik olması"
+        },
+        {
+          "key": "D",
+          "text": "Yalnız mənfi ədədlərdən ibarət olması"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Binary search yalnız əvvəlcədən nizamlanmış massivdə işləyə bilər."
+    }
+  ]
+},
+{
+  "id": "lesson-geo-10-economic-regions",
+  "subjectId": "cografiya",
+  "grade": 10,
+  "unit": "Azərbaycanın İqtisadi Coğrafiyası",
+  "unitOrder": 2,
+  "title": "Azərbaycanın Yeni İqtisadi Rayonları və Təbii Ehtiyatları",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "14 iqtisadi rayon bölgüsü, Qarabağ və Şərqi Zəngəzurun bərpası, faydalı qazıntılar və aqroiqlim potensialı.",
+  "theoryMarkdown": "\n### 1. Yeni İqtisadi Bölgü (7 İyul 2021 Fərmanı)\nAzərbaycan Respublikası Prezidentinin 2021-ci il 7 iyul tarixli fərmanı ilə ölkəmiz **14 iqtisadi rayona** bölünmüşdür:\n1. **Bakı** (neft-qaz sənayesi, xidmət sektoru)\n2. **Abşeron-Xızı** (kimya, maşınqayırma, quşçuluq)\n3. **Qarabağ** (tikinti materialları, turizm, kənd təsərrüfatı — taxılçılıq və üzümçülük)\n4. **Şərqi Zəngəzur** (qızıl, civə, polimetal ehtiyatları, hidroenergetika, yaylaq heyvandarlığı)\n5. **Gəncə-Daşkəsən** (dəmir filizi, alunit, əlvan metallurgiya)\n6. **Qazax-Tovuz** (üzümçülük, bağçılıq, şərabçılıq)\n7. **Şəki-Zaqatala** (fındıqçılıq, tütünçülük, ipəkçilik, meşə ehtiyatları)\n8. **Quba-Xaçmaz** (meyvəçilik, tərəvəzçilik, neft emalı)\n9. **Mərkəzi Aran** (pambıqçılıq, taxılçılıq, meliorasiya qovşağı)\n10. **Mil-Muğan**, 11. **Şirvan-Salyan**\n12. **Lənkəran-Astara** (sitrusçuluq, çayçılıq, çəltikçilik)\n13. **Dağlıq Şirvan** (şərabçılıq, arıçılıq)\n14. **Naxçıvan** (duz mədənləri, mineral sular, sement, günəş enerjisi)\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-g10-reg-1",
+      "name": "İqtisadi İxtisaslaşma Əmsalı",
+      "latex": "K_i = \\frac{E_r / E_o}{Ü_r / Ü_o}",
+      "description": "Rayonun milli iqtisadiyyatda ixtisaslaşma dərəcəsini müəyyən edən indeks."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-g10-reg-1",
+      "title": "Misal: Daşkəsən dəmir filizi",
+      "problem": "Azərbaycanın yeganə sənaye əhəmiyyətli dəmir filizi yatağı hansı iqtisadi rayonda yerləşir?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Coğrafi yerləşmə",
+          "content": "Daşkəsən yatağı Gəncə-Daşkəsən iqtisadi rayonunun ərazisində yerləşir."
+        }
+      ],
+      "finalAnswer": "Gəncə-Daşkəsən iqtisadi rayonu"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-g10-reg-1",
+      "question": "Azərbaycanda çayçılıq və sitrusçuluq üzrə ixtisaslaşmış iqtisadi rayon hansıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lənkəran-Astara"
+        },
+        {
+          "key": "B",
+          "text": "Quba-Xaçmaz"
+        },
+        {
+          "key": "C",
+          "text": "Mərkəzi Aran"
+        },
+        {
+          "key": "D",
+          "text": "Naxçıvan"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Rütubətli subtropik iqlimə malik Lənkəran-Astara rayonunda sitrus meyvələri və çay becərilir."
+    }
+  ]
+},
+{
+  "id": "lesson-hist-10-safavids",
+  "subjectId": "tarix",
+  "grade": 10,
+  "unit": "Azərbaycan Orta Əsrlərdə",
+  "unitOrder": 2,
+  "title": "Səfəvilər Dövlətinin Yaranması və Şah İsmayıl Xətai",
+  "order": 1,
+  "readTimeMinutes": 10,
+  "difficulty": 2,
+  "summary": "1501-ci il Təbriz tacqoyması, Azərbaycan torpaqlarının vahid dövlətdə birləşdirilməsi və Çaldıran döyüşü.",
+  "theoryMarkdown": "\n### 1. Dövlətin Yaranması (1501)\nXV əsrin sonunda Ərdəbil hakimi İsmayıl Səfəvi qızılbaş tayfalarının dəstəyi ilə hərbi yürüşlərə başladı:\n- **1500-cü il**: Cabanı döyüşündə Şirvanşah Fərrux Yasar məğlub edildi.\n- **1501-ci il**: Şərur döyüşündə Ağqoyunlu Əlvənd Mirzə məğlub edildi. İsmayıl Təbrizə daxil olaraq özünü Şah elan etdi. Beləliklə, paytaxtı Təbriz olan vahid **Azərbaycan Səfəvi Dövləti** yarandı.\n- **Dövlət dili**: Azərbaycan türk dili ilk dəfə sarayda, orduda və diplomatik yazışmalarda rəsmi dövlət dili səviyyəsinə yüksəldi.\n\n### 2. Azərbaycan Torpaqlarının Birləşdirilməsi\n- **1503-cü il**: Almaqulağı döyüşündə Ağqoyunlu Murad Mirzə məğlub edildi və ikinci Ağqoyunlu qolu süqut etdi.\n- **1510-cu il**: Mərv döyüşündə Şeybani xanın qoşunları darmadağın edildi, Xorasan Səfəvilərə qatıldı.\n\n### 3. Çaldıran Döyüşü (1514)\n23 avqust 1514-cü ildə Osmanlı sultanı I Səlim ilə Şah İsmayıl arasında Çaldıran düzündə qanlı döyüş baş verdi. Osmanlı ordusunun sayca üstünlüyü və 300 topdan ibarət odlu silah üstünlüyü nəticəsində Səfəvilər məğlub oldu.\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-h10-saf-1",
+      "name": "Əsas Tarixi Xronologiya",
+      "latex": "1500 (\\text{Cabanı}) \\to 1501 (\\text{Təbriz}) \\to 1510 (\\text{Mərv}) \\to 1514 (\\text{Çaldıran})",
+      "description": "Şah İsmayılın əsas döyüşləri və dövlət quruculuğu mərhələləri."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-h10-saf-1",
+      "title": "Misal: Səfəvilər dövlətinin ilk paytaxtı",
+      "problem": "Səfəvilər dövlətinin 1501-1555-ci illərdə paytaxtı hansı şəhər olmuşdur?",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Paytaxt xronologiyası",
+          "content": "İlk paytaxt Təbriz olmuş, 1555-ci ildə Şah Təhmasib paytaxtı Qəzvinə, 1598-ci ildə I Şah Abbas İsfahana köçürmüşdür."
+        }
+      ],
+      "finalAnswer": "Təbriz"
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-h10-saf-1",
+      "question": "Səfəvilər dövlətinin əsası neçənci ildə və harada qoyulmuşdur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1501-ci ildə Təbrizdə"
+        },
+        {
+          "key": "B",
+          "text": "1468-ci ildə Ərdəbildə"
+        },
+        {
+          "key": "C",
+          "text": "1514-cü ildə Çaldıranda"
+        },
+        {
+          "key": "D",
+          "text": "1555-ci ildə Amasiyada"
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "1501-ci ildə Şah İsmayıl Təbrizdə taxta çıxaraq dövlətin əsasını qoymuşdur."
+    }
+  ]
+},
+{
+  "id": "lesson-eng-10-conditionals",
+  "subjectId": "ingilis_dili",
+  "grade": 10,
+  "unit": "Advanced English Grammar",
+  "unitOrder": 2,
+  "title": "Conditionals (Type 0, 1, 2, 3) & Mixed Conditionals",
+  "order": 1,
+  "readTimeMinutes": 9,
+  "difficulty": 2,
+  "summary": "Real və qeyri-real şərt budaq cümlələrinin zaman formaları və cümlədə işlənmə qaydaları.",
+  "theoryMarkdown": "\n### 1. Types of Conditional Sentences\nConditionals consist of an **If-clause** (condition) and a **Main clause** (result):\n\n| Type | Meaning | If-clause | Main clause | Example |\n|---|---|---|---|---|\n| **Zero (0)** | Universal truth, scientific law | Present Simple | Present Simple | *If you heat ice, it melts.* |\n| **First (1)** | Real possibility in the future | Present Simple | will + V1 | *If it rains tomorrow, we will stay at home.* |\n| **Second (2)**| Unreal / hypothetical present | Past Simple (were) | would + V1 | *If I had a million dollars, I would travel the world.* |\n| **Third (3)** | Regret / impossible past | Past Perfect (had + V3) | would have + V3 | *If she had studied harder, she would have passed the exam.* |\n\n### 2. Important Rules\n- Second conditional-da bütün şəxslər üçün 'was' əvəzinə **'were'** işlədilməsi ədəbi dildə qəbul olunur:\n  *If I were you, I would consult a doctor.*\n- **Unless** = *If ... not* (inkarlıq daxilindədir):\n  *Unless you hurry, you will miss the train.*\n        ",
+  "keyFormulas": [
+    {
+      "id": "f-e10-cond-1",
+      "name": "Second Conditional Formula",
+      "latex": "\\text{If} + \\text{Past Simple}, \\quad \\text{would} + V_1",
+      "description": "İndiki zamana aid qeyri-real xəyali vəziyyətlər."
+    },
+    {
+      "id": "f-e10-cond-2",
+      "name": "Third Conditional Formula",
+      "latex": "\\text{If} + \\text{Past Perfect}, \\quad \\text{would have} + V_3",
+      "description": "Keçmişdə baş verməmiş və dəyişdirilməsi qeyri-mümkün olan hallar."
+    }
+  ],
+  "solvedExamples": [
+    {
+      "id": "ex-e10-cond-1",
+      "title": "Example: Third Conditional formation",
+      "problem": "Put the verbs into the correct tense: 'If they (leave) earlier, they (not miss) the high-speed train.'",
+      "solutionSteps": [
+        {
+          "stepNumber": 1,
+          "title": "Identify time reference",
+          "content": "The sentence refers to a completed past regret -> Third Conditional."
+        },
+        {
+          "stepNumber": 2,
+          "title": "Apply formula",
+          "content": "'had left' in If-clause, 'would not have missed' in Main clause."
+        }
+      ],
+      "finalAnswer": "If they had left earlier, they would not have missed the high-speed train."
+    }
+  ],
+  "miniQuiz": [
+    {
+      "questionId": "mq-e10-cond-1",
+      "question": "Which sentence expresses an imaginary situation in the present (Type 2)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "If I knew his phone number, I would call him right now."
+        },
+        {
+          "key": "B",
+          "text": "If it rains, we get wet."
+        },
+        {
+          "key": "C",
+          "text": "If he comes, I will tell him."
+        },
+        {
+          "key": "D",
+          "text": "If I had seen her, I would have said hello."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Past simple (knew) + would + V1 (would call) represents Type 2 conditional."
+    }
+  ]
 }
 ];
