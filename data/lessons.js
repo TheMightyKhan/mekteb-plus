@@ -1,15 +1,15 @@
 // MəktəbPlus - Bütün Fənlər və Siniflər Üzrə Genişləndirilmiş Dərslər Kataloqu
 // 9 Fənn: Riyaziyyat, Fizika, Kimya, Biologiya, Coğrafiya, Tarix, Azərbaycan dili, İngilis dili, İnformatika
-// Bütün Siniflər: 5, 6, 7, 8, 9, 10, 11
+// Bütün Siniflər: 6, 7, 8, 9, 10, 11
 
 export const MOCK_LESSONS = [
   // ==========================================
-  // 1. RİYAZİYYAT - 5-Cİ SİNİF
+  // 1. RİYAZİYYAT - 6-CI SİNİF
   // ==========================================
   {
-    id: 'lesson-math-5-fractions',
+    id: 'lesson-math-6-fractions',
     subjectId: 'riyaziyyat',
-    grade: 5,
+    grade: 6,
     unit: 'Adi Kəsrlər və Onlar Üzərində Əməllər',
     unitOrder: 1,
     title: 'Adi Kəsrlərin Toplanması və Çıxılması',
