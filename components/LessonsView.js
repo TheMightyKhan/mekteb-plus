@@ -66,6 +66,71 @@ export const LessonsView = ({
     setQuizSubmitted(prev => ({ ...prev, [questionId]: true }));
   };
 
+  // Dərs dəyişdikdə və ya pəncərə bağlandıqda səsləndirməni dayandırırıq
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      setIsPlayingAudio(false);
+    }
+    return () => {
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, [currentLesson?.id]);
+
+  // Markdown və KaTeX simvollarını təmizləyən köməkçi funksiya
+  const cleanTextForSpeech = (text) => {
+    if (!text) return '';
+    return text
+      .replace(/###/g, '')
+      .replace(/##/g, '')
+      .replace(/#/g, '')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/\*([^*]+)\*/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\$\$([^$]+)\$\$/g, ' düsturu ')
+      .replace(/\$([^$]+)\$/g, ' ifadəsi ')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/- /g, '')
+      .replace(/>/g, '')
+      .trim();
+  };
+
+  // Səsli oxuma funksiyası (Web Speech API)
+  const handleToggleAudio = () => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      alert('Sizin brauzerinizdə səsli oxuma funksiyası dəstəklənmir.');
+      return;
+    }
+
+    if (isPlayingAudio) {
+      window.speechSynthesis.cancel();
+      setIsPlayingAudio(false);
+    } else {
+      window.speechSynthesis.cancel();
+      if (!currentLesson) return;
+      const rawText = `${currentLesson.title}. ${currentLesson.summary || ''}. ${currentLesson.theoryMarkdown || ''}`;
+      const textToRead = cleanTextForSpeech(rawText);
+
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.rate = 0.95; // Rahat başa düşülən sürət
+
+      const voices = window.speechSynthesis.getVoices();
+      const voice = voices.find(v => v.lang.startsWith('az') || v.lang.startsWith('tr'));
+      if (voice) {
+        utterance.voice = voice;
+      }
+      utterance.lang = voice ? voice.lang : 'az-AZ';
+
+      utterance.onend = () => setIsPlayingAudio(false);
+      utterance.onerror = () => setIsPlayingAudio(false);
+
+      window.speechSynthesis.speak(utterance);
+      setIsPlayingAudio(true);
+    }
+  };
+
   const currentSubjectMeta = SUBJECTS.find(s => s.id === currentLesson?.subjectId) || SUBJECTS[0];
 
   return React.createElement(
