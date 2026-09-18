@@ -28,7 +28,7 @@ export const SUBJECTS = [
     borderCol: 'border-cyan-200 dark:border-cyan-800',
     gradient: 'from-cyan-600 to-teal-600',
     description: 'Mexanika, Elektrodinamika, Optika, Kvant fizikası və termodinamika.',
-    totalLessons: 28,
+    totalLessons: 34,
     totalExams: 14,
   },
   {

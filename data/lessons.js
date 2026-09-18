@@ -8,9468 +8,11654 @@ export const MOCK_LESSONS = [
   // 1. RİYAZİYYAT (AR Elm və Təhsil Nazirliyi e-Dərslik: 6, 7, 8, 9, 10, 11 - 41 Bölmə)
   // =========================================================================
   {
-      id: 'lesson-math-6-u1-fractions',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 1: Adi kəsrlər və onlar üzərində əməllər',
-      unitOrder: 1,
-      title: 'Adi kəsrlərin toplanması, çıxılması və ixtisarı',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Məxrəcləri eyni və müxtəlif olan adi kəsrlərin müqayisəsi, ortaq məxrəcə (ƏKOB) gətirilməsi və hesablanması.',
-      theoryMarkdown: `
-  ### 1. Kəsrin Əsas Xassəsi
-  Vahid bir tamın bərabər hissələrindən birini və ya bir neçəsini göstərən ədədə **adi kəsr** deyilir:
-  $$\frac{a}{b} \quad (b \neq 0)$$
-  Burada $a$ kəsrin surəti, $b$ isə məxrəcidir.
+        id: 'lesson-math-6-u1-fractions',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 1: Adi kəsrlər və onlar üzərində əməllər',
+        unitOrder: 1,
+        title: 'Adi kəsrlərin toplanması, çıxılması və ixtisarı',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Məxrəcləri eyni və müxtəlif olan adi kəsrlərin müqayisəsi, ortaq məxrəcə (ƏKOB) gətirilməsi və hesablanması.',
+        theoryMarkdown: `
+    ### 1. Kəsrin Əsas Xassəsi
+    Vahid bir tamın bərabər hissələrindən birini və ya bir neçəsini göstərən ədədə **adi kəsr** deyilir:
+    $$\frac{a}{b} \quad (b \neq 0)$$
+    Burada $a$ kəsrin surəti, $b$ isə məxrəcidir.
 
-  Kəsrin surət və məxrəcini sıfırdan fərqli eyni bir natural ədədə vursaq və ya bölsək, kəsrin qiyməti dəyişməz:
-  $$\frac{a}{b} = \frac{a \cdot k}{b \cdot k} \quad (k \neq 0)$$
+    Kəsrin surət və məxrəcini sıfırdan fərqli eyni bir natural ədədə vursaq və ya bölsək, kəsrin qiyməti dəyişməz:
+    $$\frac{a}{b} = \frac{a \cdot k}{b \cdot k} \quad (k \neq 0)$$
 
-  ### 2. Məxrəcləri Eyni Olan Kəsrlərin Toplanması və Çıxılması
-  Məxrəcləri eyni olan kəsrləri toplayarkən (və ya çıxarkən) məxrəc olduğu kimi qalır, surətlər toplanır (və ya çıxılır):
-  $$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c}, \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
+    ### 2. Məxrəcləri Eyni Olan Kəsrlərin Toplanması və Çıxılması
+    Məxrəcləri eyni olan kəsrləri toplayarkən (və ya çıxarkən) məxrəc olduğu kimi qalır, surətlər toplanır (və ya çıxılır):
+    $$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c}, \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
 
-  ### 3. Məxrəcləri Müxtəlif Olan Kəsrlər
-  Məxrəcləri müxtəlif olan kəsrləri toplamaq üçün əvvəlcə onların məxrəclərinin ƏKOB-u tapılır və kəsrlər ortaq məxrəcə gətirilir:
-  $$\frac{1}{3} + \frac{1}{6} = \frac{2}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u1-1",
-              "name": "Məxrəcləri Eyni Kəsrlərin Cəmi",
-              "latex": "\\frac{a}{c} + \\frac{b}{c} = \\frac{a+b}{c}",
-              "description": "Məxrəc sabit qalır, surətlər cəmlənir."
-        },
-        {
-              "id": "f-m6-u1-2",
-              "name": "Kəsrin İxtisarı",
-              "latex": "\\frac{a \\cdot k}{b \\cdot k} = \\frac{a}{b}",
-              "description": "Surət və məxrəc eyni ortaq vuruğa bölünür."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Surət (a)",
-              "definition": "Kəsr xəttinin üstündə yazılan və götürülən bərabər hissələrin sayını göstərən ədəd."
-        },
-        {
-              "term": "Məxrəc (b)",
-              "definition": "Tamın neçə bərabər hissəyə bölündüyünü göstərən sıfırdan fərqli ədəd."
-        },
-        {
-              "term": "ƏKOB",
-              "definition": "Ən Kiçik Ortaq Bölünən - kəsrlərin ən kiçik ortaq məxrəcidir."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u1-1",
-              "question": "$\\frac{3}{8} + \\frac{1}{4}$ cəmini hesablayın.",
-              "solution": "Ortaq məxrəc ƏKOB(8, 4) = 8-dir. $\\frac{1}{4} = \\frac{2}{8}$. Buradan: $\\frac{3}{8} + \\frac{2}{8} = \\frac{5}{8}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u1-1",
-              "question": "$\\frac{2}{7} + \\frac{3}{7}$ ifadəsinin qiyməti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "$\\frac{5}{14}$"
-                    },
-                    {
-                          "key": "B",
-                          "text": "$\\frac{5}{7}$"
-                    },
-                    {
-                          "key": "C",
-                          "text": "$\\frac{6}{7}$"
-                    },
-                    {
-                          "key": "D",
-                          "text": "1"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Məxrəclər bərabər olduğu üçün surətlər toplanır: 2 + 3 = 5, yəni 5/7."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-6-u2-ratio',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 2: Nisbət. Tənasüb. Faiz',
-      unitOrder: 2,
-      title: 'Nisbət, tənasüb və faiz anlayışı',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Tənasübün əsas xassəsi, düz və tərs mütənasib kəmiyyətlər, ədədin faizinin tapılması.',
-      theoryMarkdown: `
-  ### 1. Nisbət və Tənasüb
-  İki ədədin qismətinə onların **nisbəti** deyilir: $\frac{a}{b}$ və ya $a : b$.
-
-  İki nisbətin bərabərliyinə **tənasüb** deyilir:
-  $$\frac{a}{b} = \frac{c}{d} \quad \text{və ya} \quad a : b = c : d$$
-  Burada $a$ və $d$ kənar hədlər, $b$ və $c$ isə orta hədlər adlanır.
-
-  ### 2. Tənasübün Əsas Xassəsi
-  Tənasübdə kənar hədlərin hasili orta hədlərin hasilinə bərabərdir:
-  $$a \cdot d = b \cdot c$$
-
-  ### 3. Faiz
-  Ədədin yüzdə bir hissəsinə **faiz** deyilir ($1\% = 0.01$).
-  - **Ədədin faizinin tapılması:** $a$ ədədinin $p\%$-ni tapmaq üçün:
-  $$A = \frac{a \cdot p}{100}$$
-  - **Faizinə görə ədədin tapılması:** $p\%$-i $b$ olan ədədi tapmaq üçün:
-  $$a = \frac{b \cdot 100}{p}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u2-1",
-              "name": "Tənasübün Əsas Xassəsi",
-              "latex": "a \\cdot d = b \\cdot c",
-              "description": "Kənar hədlərin hasili orta hədlərin hasilinə bərabərdir."
-        },
-        {
-              "id": "f-m6-u2-2",
-              "name": "Ədədin Faizi",
-              "latex": "A = \\frac{a \\cdot p}{100}",
-              "description": "a ədədinin p faizinin hesablanması."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Tənasüb",
-              "definition": "İki nisbətin bərabərliyi."
-        },
-        {
-              "term": "Faiz",
-              "definition": "Hər hansı kəmiyyətin yüzdə bir (1/100) hissəsi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u2-1",
-              "question": "$\\frac{x}{6} = \\frac{10}{15}$ tənasübündən $x$-i tapın.",
-              "solution": "Tənasübün əsas xassəsinə görə: $15 \\cdot x = 6 \\cdot 10 \\Rightarrow 15x = 60 \\Rightarrow x = 4$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u2-1",
-              "question": "200 ədədinin $25\\%$-i neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "25"
-                    },
-                    {
-                          "key": "B",
-                          "text": "40"
-                    },
-                    {
-                          "key": "C",
-                          "text": "50"
-                    },
-                    {
-                          "key": "D",
-                          "text": "75"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "200 * 25 / 100 = 50."
-        }
-  ]
-    },
+    ### 3. Məxrəcləri Müxtəlif Olan Kəsrlər
+    Məxrəcləri müxtəlif olan kəsrləri toplamaq üçün əvvəlcə onların məxrəclərinin ƏKOB-u tapılır və kəsrlər ortaq məxrəcə gətirilir:
+    $$\frac{1}{3} + \frac{1}{6} = \frac{2}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u1-1",
+                "name": "Məxrəcləri Eyni Kəsrlərin Cəmi",
+                "latex": "\\frac{a}{c} + \\frac{b}{c} = \\frac{a+b}{c}",
+                "description": "Məxrəc sabit qalır, surətlər cəmlənir."
+          },
+          {
+                "id": "f-m6-u1-2",
+                "name": "Kəsrin İxtisarı",
+                "latex": "\\frac{a \\cdot k}{b \\cdot k} = \\frac{a}{b}",
+                "description": "Surət və məxrəc eyni ortaq vuruğa bölünür."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Surət (a)",
+                "definition": "Kəsr xəttinin üstündə yazılan və götürülən bərabər hissələrin sayını göstərən ədəd."
+          },
+          {
+                "term": "Məxrəc (b)",
+                "definition": "Tamın neçə bərabər hissəyə bölündüyünü göstərən sıfırdan fərqli ədəd."
+          },
+          {
+                "term": "ƏKOB",
+                "definition": "Ən Kiçik Ortaq Bölünən - kəsrlərin ən kiçik ortaq məxrəcidir."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u1-1",
+                "question": "$\\frac{3}{8} + \\frac{1}{4}$ cəmini hesablayın.",
+                "solution": "Ortaq məxrəc ƏKOB(8, 4) = 8-dir. $\\frac{1}{4} = \\frac{2}{8}$. Buradan: $\\frac{3}{8} + \\frac{2}{8} = \\frac{5}{8}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u1-1",
+                "question": "$\\frac{2}{7} + \\frac{3}{7}$ ifadəsinin qiyməti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "$\\frac{5}{14}$"
+                      },
+                      {
+                            "key": "B",
+                            "text": "$\\frac{5}{7}$"
+                      },
+                      {
+                            "key": "C",
+                            "text": "$\\frac{6}{7}$"
+                      },
+                      {
+                            "key": "D",
+                            "text": "1"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Məxrəclər bərabər olduğu üçün surətlər toplanır: 2 + 3 = 5, yəni 5/7."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-6-u3-integers',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 3: Tam ədədlər',
-      unitOrder: 3,
-      title: 'Mənfi və müsbət ədədlər. Ədədin modulu',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 1,
-      summary: 'Tam ədədlər çoxluğu, koordinat oxu, əks ədədlər, ədədin mütləq qiyməti (modul) və tam ədədlərin toplanması.',
-      theoryMarkdown: `
-  ### 1. Tam Ədədlər Çoxluğu
-  Natural ədədlər, onların əksi olan mənfi ədədlər və sıfır birlikdə **tam ədədlər çoxluğunu** təşkil edir:
-  $$\mathbb{Z} = \{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \}$$
+        id: 'lesson-math-6-u2-ratio',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 2: Nisbət. Tənasüb. Faiz',
+        unitOrder: 2,
+        title: 'Nisbət, tənasüb və faiz anlayışı',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Tənasübün əsas xassəsi, düz və tərs mütənasib kəmiyyətlər, ədədin faizinin tapılması.',
+        theoryMarkdown: `
+    ### 1. Nisbət və Tənasüb
+    İki ədədin qismətinə onların **nisbəti** deyilir: $\frac{a}{b}$ və ya $a : b$.
 
-  ### 2. Ədədin Modulu (Mütləq Qiyməti)
-  Koordinat düz xətti üzərində hesablama başlanğıcından ($0$ nöqtəsindən) verilmiş ədədə qədər olan məsafəyə həmin ədədin **modulu** deyilir:
-  $$|a| = \begin{cases} a, & a \ge 0 \\ -a, & a < 0 \end{cases}$$
-  Məsafə mənfi ola bilmədiyi üçün modul həmişə qeyri-mənfidir: $|-7| = 7$, $|+5| = 5$, $|0| = 0$.
+    İki nisbətin bərabərliyinə **tənasüb** deyilir:
+    $$\frac{a}{b} = \frac{c}{d} \quad \text{və ya} \quad a : b = c : d$$
+    Burada $a$ və $d$ kənar hədlər, $b$ və $c$ isə orta hədlər adlanır.
 
-  ### 3. Mənfi Ədədlər Üzərində Əməllər
-  - İki mənfi ədədin cəmi mənfidir: $(-4) + (-6) = -(4+6) = -10$.
-  - Müxtəlif işarəli ədədləri toplayarkən modulu böyük olandan kiçik çıxılır və böyüyün işarəsi yazılır: $(-9) + 4 = -(9-4) = -5$.
-  - İki mənfi ədədin hasili müsbətdir: $(-3) \cdot (-5) = +15$.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u3-1",
-              "name": "Modulun Xassəsi",
-              "latex": "|-a| = |a| \\ge 0",
-              "description": "Əks ədədlərin modulları bərabərdir və qeyri-mənfidir."
-        },
-        {
-              "id": "f-m6-u3-2",
-              "name": "Mənfi Ədədlərin Hasili",
-              "latex": "(-a) \\cdot (-b) = a \\cdot b",
-              "description": "Eyni işarəli ədədlərin hasili həmişə müsbətdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Modul (|a|)",
-              "definition": "Koordinat başlanğıcından ədədə qədər olan məsafə."
-        },
-        {
-              "term": "Əks ədədlər",
-              "definition": "Yalnız işarələri ilə fərqlənən iki ədəd (məsələn, 5 və -5)."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u3-1",
-              "question": "$|-15| - |-8| + |3|$ ifadəsini hesablayın.",
-              "solution": "$|-15| = 15$, $|-8| = 8$, $|3| = 3$. Buradan: $15 - 8 + 3 = 10$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u3-1",
-              "question": "$(-12) \\cdot (-3)$ hasilini tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "-36"
-                    },
-                    {
-                          "key": "B",
-                          "text": "36"
-                    },
-                    {
-                          "key": "C",
-                          "text": "-15"
-                    },
-                    {
-                          "key": "D",
-                          "text": "15"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "İki mənfi ədədin hasili müsbətdir: (-12) * (-3) = +36."
-        }
-  ]
-    },
+    ### 2. Tənasübün Əsas Xassəsi
+    Tənasübdə kənar hədlərin hasili orta hədlərin hasilinə bərabərdir:
+    $$a \cdot d = b \cdot c$$
 
-  {
-      id: 'lesson-math-6-u4-equations',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 4: Riyazi ifadə. Tənlik. Bərabərsizlik',
-      unitOrder: 4,
-      title: 'Sadə xətti tənliklər və onların həlli',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Tənlik anlayışı, oxşar hədlərin islahı, hədlərin tənliyin bir tərəfindən digər tərəfinə işarəsini dəyişərək keçirilməsi.',
-      theoryMarkdown: `
-  ### 1. Tənlik Nədir?
-  Tərkibində dəyişən (məchul hərf) olan bərabərliyə **tənlik** deyilir. Tənliyi doğru bərabərliyə çevirən dəyişənin qiymətinə tənliyin **kökü** deyilir.
-
-  ### 2. Tənliyin Əsas Xassələri
-  - Tənliyin hər iki tərəfinə eyni bir ədədi əlavə etmək və ya çıxmaq olar.
-  - Tənliyin hər iki tərəfini sıfırdan fərqli eyni bir ədədə vurmaq və ya bölmək olar.
-  - Tənliyin istənilən həddini işarəsini əksinə dəyişməklə bərabərliyin bir tərəfindən digər tərəfinə keçirmək olar:
-  $$ax + b = c \implies ax = c - b \implies x = \frac{c - b}{a} \quad (a \neq 0)$$
-
-  ### 3. Mötərizəli Tənliklərin Həlli
-  Əvvəlcə vurmanın paylama xassəsi ilə mötərizələr açılır, oxşar hədlər islah edilir, məchullar sol tərəfə, məlumlar sağ tərəfə yığılır.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u4-1",
-              "name": "Xətti Tənliyin Kökü",
-              "latex": "ax = b \\implies x = \\frac{b}{a} \\quad (a \\neq 0)",
-              "description": "Vuruğu tapmaq üçün hasil məlum vuruğa bölünür."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Tənliyin kökü",
-              "definition": "Dəyişənin tənliyi doğru bərabərliyə çevirən qiyməti."
-        },
-        {
-              "term": "Oxşar hədlər",
-              "definition": "Yalnız əmsalları ilə fərqlənən hərfi ifadələr."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u4-1",
-              "question": "$3x - 7 = 14$ tənliyini həll edin.",
-              "solution": "$3x = 14 + 7 \\implies 3x = 21 \\implies x = \\frac{21}{3} = 7$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u4-1",
-              "question": "$5x + 10 = 35$ tənliyinin kökü neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "5"
-                    },
-                    {
-                          "key": "B",
-                          "text": "7"
-                    },
-                    {
-                          "key": "C",
-                          "text": "9"
-                    },
-                    {
-                          "key": "D",
-                          "text": "25"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "5x = 35 - 10 = 25 -> x = 25 / 5 = 5."
-        }
-  ]
-    },
+    ### 3. Faiz
+    Ədədin yüzdə bir hissəsinə **faiz** deyilir ($1\% = 0.01$).
+    - **Ədədin faizinin tapılması:** $a$ ədədinin $p\%$-ni tapmaq üçün:
+    $$A = \frac{a \cdot p}{100}$$
+    - **Faizinə görə ədədin tapılması:** $p\%$-i $b$ olan ədədi tapmaq üçün:
+    $$a = \frac{b \cdot 100}{p}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u2-1",
+                "name": "Tənasübün Əsas Xassəsi",
+                "latex": "a \\cdot d = b \\cdot c",
+                "description": "Kənar hədlərin hasili orta hədlərin hasilinə bərabərdir."
+          },
+          {
+                "id": "f-m6-u2-2",
+                "name": "Ədədin Faizi",
+                "latex": "A = \\frac{a \\cdot p}{100}",
+                "description": "a ədədinin p faizinin hesablanması."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Tənasüb",
+                "definition": "İki nisbətin bərabərliyi."
+          },
+          {
+                "term": "Faiz",
+                "definition": "Hər hansı kəmiyyətin yüzdə bir (1/100) hissəsi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u2-1",
+                "question": "$\\frac{x}{6} = \\frac{10}{15}$ tənasübündən $x$-i tapın.",
+                "solution": "Tənasübün əsas xassəsinə görə: $15 \\cdot x = 6 \\cdot 10 \\Rightarrow 15x = 60 \\Rightarrow x = 4$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u2-1",
+                "question": "200 ədədinin $25\\%$-i neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "25"
+                      },
+                      {
+                            "key": "B",
+                            "text": "40"
+                      },
+                      {
+                            "key": "C",
+                            "text": "50"
+                      },
+                      {
+                            "key": "D",
+                            "text": "75"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "200 * 25 / 100 = 50."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-6-u5-coordinates',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 5: Düzbucaqlı koordinat sistemi',
-      unitOrder: 5,
-      title: 'Düzbucaqlı koordinat sistemi və nöqtənin koordinatları',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Koordinat başlanğıcı, absis ($Ox$) və ordinat ($Oy$) oxları, koordinat rübləri və müstəvidə nöqtənin qurulması.',
-      theoryMarkdown: `
-  ### 1. Koordinat Müstəvisi
-  Hesablama başlanğıcı eyni olan iki qarşılıqlı perpendikulyar koordinat düz xəttinə **düzbucaqlı koordinat sistemi** deyilir:
-  - Üfüqi ox: **absis oxu** ($Ox$)
-  - Şaquli ox: **ordinat oxu** ($Oy$)
-  - Kəsişmə nöqtəsi: **koordinat başlanğıcı** $O(0; 0)$
+        id: 'lesson-math-6-u3-integers',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 3: Tam ədədlər',
+        unitOrder: 3,
+        title: 'Mənfi və müsbət ədədlər. Ədədin modulu',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 1,
+        summary: 'Tam ədədlər çoxluğu, koordinat oxu, əks ədədlər, ədədin mütləq qiyməti (modul) və tam ədədlərin toplanması.',
+        theoryMarkdown: `
+    ### 1. Tam Ədədlər Çoxluğu
+    Natural ədədlər, onların əksi olan mənfi ədədlər və sıfır birlikdə **tam ədədlər çoxluğunu** təşkil edir:
+    $$\mathbb{Z} = \{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \}$$
 
-  ### 2. Nöqtənin Koordinatları
-  Müstəvidəki hər bir $A$ nöqtəsi nizamlı ədədlər cütü ilə ifadə edilir: $A(x; y)$.
-  - $x$ — nöqtənin absisi (üfüqi mövqeyi)
-  - $y$ — nöqtənin ordinatı (şaquli mövqeyi)
+    ### 2. Ədədin Modulu (Mütləq Qiyməti)
+    Koordinat düz xətti üzərində hesablama başlanğıcından ($0$ nöqtəsindən) verilmiş ədədə qədər olan məsafəyə həmin ədədin **modulu** deyilir:
+    $$|a| = \begin{cases} a, & a \ge 0 \\ -a, & a < 0 \end{cases}$$
+    Məsafə mənfi ola bilmədiyi üçün modul həmişə qeyri-mənfidir: $|-7| = 7$, $|+5| = 5$, $|0| = 0$.
 
-  ### 3. Koordinat Rübləri
-  Oxlar müstəvini 4 rübə bölür:
-  - I rüb: $x > 0, y > 0$
-  - II rüb: $x < 0, y > 0$
-  - III rüb: $x < 0, y < 0$
-  - IV rüb: $x > 0, y < 0$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u5-1",
-              "name": "Nöqtənin Koordinat Cütü",
-              "latex": "M(x; y)",
-              "description": "Birinci yerdə absis (x), ikinci yerdə ordinat (y) yazılır."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Absis oxu",
-              "definition": "Üfüqi Ox oxu."
-        },
-        {
-              "term": "Ordinat oxu",
-              "definition": "Şaquli Oy oxu."
-        },
-        {
-              "term": "Koordinat başlanğıcı",
-              "definition": "Oxların kəsişdiyi O(0; 0) nöqtəsi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u5-1",
-              "question": "$B(-3; 5)$ nöqtəsi neçənci koordinat rübündə yerləşir?",
-              "solution": "Absis $x = -3 < 0$, ordinat $y = 5 > 0$ olduğundan, nöqtə II koordinat rübündə yerləşir."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u5-1",
-              "question": "$C(4; -2)$ nöqtəsi koordinat müstəvisinin hansı rübünə aiddir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "I rüb"
-                    },
-                    {
-                          "key": "B",
-                          "text": "II rüb"
-                    },
-                    {
-                          "key": "C",
-                          "text": "III rüb"
-                    },
-                    {
-                          "key": "D",
-                          "text": "IV rüb"
-                    }
-              ],
-              "correctKey": "D",
-              "explanation": "x müsbət (+4) və y mənfi (-2) olduqda nöqtə IV rübə düşür."
-        }
-  ]
-    },
+    ### 3. Mənfi Ədədlər Üzərində Əməllər
+    - İki mənfi ədədin cəmi mənfidir: $(-4) + (-6) = -(4+6) = -10$.
+    - Müxtəlif işarəli ədədləri toplayarkən modulu böyük olandan kiçik çıxılır və böyüyün işarəsi yazılır: $(-9) + 4 = -(9-4) = -5$.
+    - İki mənfi ədədin hasili müsbətdir: $(-3) \cdot (-5) = +15$.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u3-1",
+                "name": "Modulun Xassəsi",
+                "latex": "|-a| = |a| \\ge 0",
+                "description": "Əks ədədlərin modulları bərabərdir və qeyri-mənfidir."
+          },
+          {
+                "id": "f-m6-u3-2",
+                "name": "Mənfi Ədədlərin Hasili",
+                "latex": "(-a) \\cdot (-b) = a \\cdot b",
+                "description": "Eyni işarəli ədədlərin hasili həmişə müsbətdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Modul (|a|)",
+                "definition": "Koordinat başlanğıcından ədədə qədər olan məsafə."
+          },
+          {
+                "term": "Əks ədədlər",
+                "definition": "Yalnız işarələri ilə fərqlənən iki ədəd (məsələn, 5 və -5)."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u3-1",
+                "question": "$|-15| - |-8| + |3|$ ifadəsini hesablayın.",
+                "solution": "$|-15| = 15$, $|-8| = 8$, $|3| = 3$. Buradan: $15 - 8 + 3 = 10$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u3-1",
+                "question": "$(-12) \\cdot (-3)$ hasilini tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "-36"
+                      },
+                      {
+                            "key": "B",
+                            "text": "36"
+                      },
+                      {
+                            "key": "C",
+                            "text": "-15"
+                      },
+                      {
+                            "key": "D",
+                            "text": "15"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "İki mənfi ədədin hasili müsbətdir: (-12) * (-3) = +36."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-6-u6-angles',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 6: Bucaqlar və Üçbucaqlar',
-      unitOrder: 6,
-      title: 'Qonşu və qarşılıqlı bucaqlar. Üçbucağın bucaqları',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Qonşu bucaqların cəmi (180°), qarşılıqlı bucaqların bərabərliyi və üçbucağın daxili bucaqlarının cəmi teoremi.',
-      theoryMarkdown: `
-  ### 1. Qonşu və Qarşılıqlı Bucaqlar
-  - **Qonşu bucaqlar:** Bir tərəfi ortaq, digər tərəfləri isə bir-birini tamamlayan əks şüalar olan bucaqlardır.
-  $$\alpha + \beta = 180^\circ$$
-  - **Qarşılıqlı bucaqlar:** Birinin tərəfləri digərinin tərəflərinin əks şüaları olan iki bucaqdır. Qarşılıqlı bucaqlar bərabərdir:
-  $$\alpha = \gamma$$
+        id: 'lesson-math-6-u4-equations',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 4: Riyazi ifadə. Tənlik. Bərabərsizlik',
+        unitOrder: 4,
+        title: 'Sadə xətti tənliklər və onların həlli',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Tənlik anlayışı, oxşar hədlərin islahı, hədlərin tənliyin bir tərəfindən digər tərəfinə işarəsini dəyişərək keçirilməsi.',
+        theoryMarkdown: `
+    ### 1. Tənlik Nədir?
+    Tərkibində dəyişən (məchul hərf) olan bərabərliyə **tənlik** deyilir. Tənliyi doğru bərabərliyə çevirən dəyişənin qiymətinə tənliyin **kökü** deyilir.
 
-  ### 2. Üçbucağın Daxili Bucaqlarının Cəmi
-  İxtiyari üçbucağın daxili bucaqlarının cəmi $180^\circ$-yə bərabərdir:
-  $$\angle A + \angle B + \angle C = 180^\circ$$
+    ### 2. Tənliyin Əsas Xassələri
+    - Tənliyin hər iki tərəfinə eyni bir ədədi əlavə etmək və ya çıxmaq olar.
+    - Tənliyin hər iki tərəfini sıfırdan fərqli eyni bir ədədə vurmaq və ya bölmək olar.
+    - Tənliyin istənilən həddini işarəsini əksinə dəyişməklə bərabərliyin bir tərəfindən digər tərəfinə keçirmək olar:
+    $$ax + b = c \implies ax = c - b \implies x = \frac{c - b}{a} \quad (a \neq 0)$$
 
-  ### 3. Üçbucağın Xarici Bucağı
-  Üçbucağın hər hansı təpəsindəki xarici bucaq ona qonşu olmayan iki daxili bucağın cəminə bərabərdir:
-  $$\varphi = \angle A + \angle B$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u6-1",
-              "name": "Qonşu Bucaqların Cəmi",
-              "latex": "\\alpha + \\beta = 180^\\circ",
-              "description": "Qonşu bucaqların cəmi açıq bucağa bərabərdir."
-        },
-        {
-              "id": "f-m6-u6-2",
-              "name": "Üçbucağın Daxili Bucaqlarının Cəmi",
-              "latex": "\\angle A + \\angle B + \\angle C = 180^\\circ",
-              "description": "İxtiyari üçbucaqda daxili bucaqların cəmi 180 dərəcədir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Qonşu bucaqlar",
-              "definition": "Cəmi 180 dərəcə olan və bir tərəfi ortaq olan bucaqlar."
-        },
-        {
-              "term": "Qarşılıqlı bucaqlar",
-              "definition": "Tərəfləri qarşılıqlı əks şüalar olan və bərabər olan bucaqlar."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u6-1",
-              "question": "Üçbucağın iki bucağı $45^\\circ$ və $65^\\circ$-dir. Üçüncü bucağı tapın.",
-              "solution": "$\\angle C = 180^\\circ - (45^\\circ + 65^\\circ) = 180^\\circ - 110^\\circ = 70^\\circ$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u6-1",
-              "question": "Qonşu bucaqlardan biri $70^\\circ$ olarsa, o biri bucaq neçə dərəcədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "70°"
-                    },
-                    {
-                          "key": "B",
-                          "text": "90°"
-                    },
-                    {
-                          "key": "C",
-                          "text": "110°"
-                    },
-                    {
-                          "key": "D",
-                          "text": "120°"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Qonşu bucaqların cəmi 180° olduğundan: 180° - 70° = 110°."
-        }
-  ]
-    },
+    ### 3. Mötərizəli Tənliklərin Həlli
+    Əvvəlcə vurmanın paylama xassəsi ilə mötərizələr açılır, oxşar hədlər islah edilir, məchullar sol tərəfə, məlumlar sağ tərəfə yığılır.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u4-1",
+                "name": "Xətti Tənliyin Kökü",
+                "latex": "ax = b \\implies x = \\frac{b}{a} \\quad (a \\neq 0)",
+                "description": "Vuruğu tapmaq üçün hasil məlum vuruğa bölünür."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Tənliyin kökü",
+                "definition": "Dəyişənin tənliyi doğru bərabərliyə çevirən qiyməti."
+          },
+          {
+                "term": "Oxşar hədlər",
+                "definition": "Yalnız əmsalları ilə fərqlənən hərfi ifadələr."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u4-1",
+                "question": "$3x - 7 = 14$ tənliyini həll edin.",
+                "solution": "$3x = 14 + 7 \\implies 3x = 21 \\implies x = \\frac{21}{3} = 7$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u4-1",
+                "question": "$5x + 10 = 35$ tənliyinin kökü neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "5"
+                      },
+                      {
+                            "key": "B",
+                            "text": "7"
+                      },
+                      {
+                            "key": "C",
+                            "text": "9"
+                      },
+                      {
+                            "key": "D",
+                            "text": "25"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "5x = 35 - 10 = 25 -> x = 25 / 5 = 5."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-6-u7-volume',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 7: Sahə və Həcm ölçmələri',
-      unitOrder: 7,
-      title: 'Düzbucaqlı paralelepiped və kubun səthi və həcmi',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 1,
-      summary: 'Düzbucaqlının və kvadratın sahəsi, kub və düzbucaqlı paralelepipedin tam səthinin sahəsi və həcm hesablamaları.',
-      theoryMarkdown: `
-  ### 1. Düzbucaqlı və Kvadratın Sahəsi
-  - Tərəfləri $a$ və $b$ olan düzbucaqlının sahəsi: $S = a \cdot b$
-  - Tərəfi $a$ olan kvadratın sahəsi: $S = a^2$
+        id: 'lesson-math-6-u5-coordinates',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 5: Düzbucaqlı koordinat sistemi',
+        unitOrder: 5,
+        title: 'Düzbucaqlı koordinat sistemi və nöqtənin koordinatları',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Koordinat başlanğıcı, absis ($Ox$) və ordinat ($Oy$) oxları, koordinat rübləri və müstəvidə nöqtənin qurulması.',
+        theoryMarkdown: `
+    ### 1. Koordinat Müstəvisi
+    Hesablama başlanğıcı eyni olan iki qarşılıqlı perpendikulyar koordinat düz xəttinə **düzbucaqlı koordinat sistemi** deyilir:
+    - Üfüqi ox: **absis oxu** ($Ox$)
+    - Şaquli ox: **ordinat oxu** ($Oy$)
+    - Kəsişmə nöqtəsi: **koordinat başlanğıcı** $O(0; 0)$
 
-  ### 2. Düzbucaqlı Paralelepiped
-  Ölçüləri $a$, $b$, $c$ (uzunluq, en, hündürlük) olan düzbucaqlı paralelepipedin:
-  - **Tam səthinin sahəsi:**
-  $$S = 2(ab + bc + ac)$$
-  - **Həcmi:**
-  $$V = a \cdot b \cdot c$$
+    ### 2. Nöqtənin Koordinatları
+    Müstəvidəki hər bir $A$ nöqtəsi nizamlı ədədlər cütü ilə ifadə edilir: $A(x; y)$.
+    - $x$ — nöqtənin absisi (üfüqi mövqeyi)
+    - $y$ — nöqtənin ordinatı (şaquli mövqeyi)
 
-  ### 3. Kub
-  Bütün tilləri bərabər ($a$) olan paralelepiped kubdur:
-  - Tam səthi: $S = 6a^2$
-  - Həcmi: $V = a^3$
-  - $1 \text{ l} = 1 \text{ dm}^3 = 1000 \text{ sm}^3$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u7-1",
-              "name": "Paralelepipedin Həcmi",
-              "latex": "V = a \\cdot b \\cdot c",
-              "description": "Həcm üç ölçünün (en, uzunluq, hündürlük) hasilinə bərabərdir."
-        },
-        {
-              "id": "f-m6-u7-2",
-              "name": "Kubun Həcmi",
-              "latex": "V = a^3",
-              "description": "Kubun həcmi tilinin kubuna bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Həcm",
-              "definition": "Cismin fəzada tutduğu yerin kəmiyyət ölçüsü."
-        },
-        {
-              "term": "Düzbucaqlı paralelepiped",
-              "definition": "Altı üzünün hamısı düzbucaqlı olan fəza cismi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u7-1",
-              "question": "Ölçüləri 4 sm, 5 sm və 10 sm olan düzbucaqlı paralelepipedin həcmini tapın.",
-              "solution": "$V = a \\cdot b \\cdot c = 4 \\cdot 5 \\cdot 10 = 200 \\text{ sm}^3$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u7-1",
-              "question": "Tili 3 sm olan kubun həcmi neçə $\\text{sm}^3$-dir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "9"
-                    },
-                    {
-                          "key": "B",
-                          "text": "18"
-                    },
-                    {
-                          "key": "C",
-                          "text": "27"
-                    },
-                    {
-                          "key": "D",
-                          "text": "54"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "V = a^3 = 3 * 3 * 3 = 27 sm^3."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-6-u8-stats',
-      subjectId: 'riyaziyyat',
-      grade: 6,
-      unit: 'Bölmə 8: Statistika və Ehtimal',
-      unitOrder: 8,
-      title: 'Ədədi orta, moda, median və ehtimalın əsasları',
-      order: 1,
-      readTimeMinutes: 8,
-      difficulty: 1,
-      summary: 'Verilənlər sırası, ədədi orta, ən çox təkrarlanan ədəd (moda), orta hədd (median) və təsadüfi hadisənin ehtimalı.',
-      theoryMarkdown: `
-  ### 1. Statistik Göstəricilər
-  Verilmiş ədədlər sırası üçün:
-  - **Ədədi orta:** Ədədlərin cəminin onların sayına bölünməsi ilə tapılır:
-  $$\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n}$$
-  - **Moda:** Verilənlər sırasında ən çox təkrarlanan ədəddir.
-  - **Median:** Artan ardıcıllıqla düzülmüş sırada tən ortada duran ədəddir (say cüt olduqda ortadakı iki ədədin ədədi ortasıdır).
-  - **Ən böyük fərq (diapazon):** Ən böyük qiymətlə ən kiçik qiymətin fərqidir.
-
-  ### 2. Hadisənin Ehtimalı
-  Təsadüfi hadisənin baş vermə ehtimalı əlverişli halların sayının ($m$) mümkün bütün halların sayına ($n$) nisbətinə bərabərdir:
-  $$P(A) = \frac{m}{n} \quad (0 \le P(A) \le 1)$$
-  - Yəqin hadisə üçün: $P = 1$
-  - Qeyri-mümkün hadisə üçün: $P = 0$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m6-u8-1",
-              "name": "Ədədi Orta",
-              "latex": "\\bar{x} = \\frac{\\sum x_i}{n}",
-              "description": "Ədədlərin cəminin onların sayına nisbəti."
-        },
-        {
-              "id": "f-m6-u8-2",
-              "name": "Klassik Ehtimal Düsturu",
-              "latex": "P(A) = \\frac{m}{n}",
-              "description": "Əlverişli halların bütün bərabərimkanlı hallara nisbəti."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Moda",
-              "definition": "Verilənlər sırasında ən böyük tezliklə təkrarlanan qiymət."
-        },
-        {
-              "term": "Median",
-              "definition": "Çeşidlənmiş məlumatlar toplusunun tam ortasındakı dəyər."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m6-u8-1",
-              "question": "4, 7, 7, 8, 9 ədədlərinin ədədi ortasını və modasını tapın.",
-              "solution": "Cəm: $4 + 7 + 7 + 8 + 9 = 35$. Say: $5$. Ədədi orta: $35 / 5 = 7$. Ən çox təkrarlanan ədəd 7 olduğundan, Moda = 7."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m6-u8-1",
-              "question": "Bir zər atıldıqda tək ədədin (1, 3, 5) düşmə ehtimalı neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "1/6"
-                    },
-                    {
-                          "key": "B",
-                          "text": "1/3"
-                    },
-                    {
-                          "key": "C",
-                          "text": "1/2"
-                    },
-                    {
-                          "key": "D",
-                          "text": "2/3"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Əlverişli hallar m = 3, ümumi hallar n = 6. P = 3/6 = 1/2."
-        }
-  ]
-    },
+    ### 3. Koordinat Rübləri
+    Oxlar müstəvini 4 rübə bölür:
+    - I rüb: $x > 0, y > 0$
+    - II rüb: $x < 0, y > 0$
+    - III rüb: $x < 0, y < 0$
+    - IV rüb: $x > 0, y < 0$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u5-1",
+                "name": "Nöqtənin Koordinat Cütü",
+                "latex": "M(x; y)",
+                "description": "Birinci yerdə absis (x), ikinci yerdə ordinat (y) yazılır."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Absis oxu",
+                "definition": "Üfüqi Ox oxu."
+          },
+          {
+                "term": "Ordinat oxu",
+                "definition": "Şaquli Oy oxu."
+          },
+          {
+                "term": "Koordinat başlanğıcı",
+                "definition": "Oxların kəsişdiyi O(0; 0) nöqtəsi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u5-1",
+                "question": "$B(-3; 5)$ nöqtəsi neçənci koordinat rübündə yerləşir?",
+                "solution": "Absis $x = -3 < 0$, ordinat $y = 5 > 0$ olduğundan, nöqtə II koordinat rübündə yerləşir."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u5-1",
+                "question": "$C(4; -2)$ nöqtəsi koordinat müstəvisinin hansı rübünə aiddir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "I rüb"
+                      },
+                      {
+                            "key": "B",
+                            "text": "II rüb"
+                      },
+                      {
+                            "key": "C",
+                            "text": "III rüb"
+                      },
+                      {
+                            "key": "D",
+                            "text": "IV rüb"
+                      }
+                ],
+                "correctKey": "D",
+                "explanation": "x müsbət (+4) və y mənfi (-2) olduqda nöqtə IV rübə düşür."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-7-u1-rational',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 1: Rasional ədədlər',
-      unitOrder: 1,
-      title: 'Rasional ədədlər çoxluğu və dövri onluq kəsrlər',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 1,
-      summary: 'Rasional ədədlər çoxluğu $\mathbb{Q}$, dövri onluq kəsrlər və onların adi kəsrə çevrilməsi qaydası.',
-      theoryMarkdown: `
-  ### 1. Rasional Ədədlər Çoxluğu
-  $\frac{m}{n}$ ($m \in \mathbb{Z}, n \in \mathbb{N}$) şəklində göstərilə bilən bütün ədədlərə **rasional ədədlər** deyilir və $\mathbb{Q}$ ilə işarə olunur:
-  $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q}$$
+        id: 'lesson-math-6-u6-angles',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 6: Bucaqlar və Üçbucaqlar',
+        unitOrder: 6,
+        title: 'Qonşu və qarşılıqlı bucaqlar. Üçbucağın bucaqları',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Qonşu bucaqların cəmi (180°), qarşılıqlı bucaqların bərabərliyi və üçbucağın daxili bucaqlarının cəmi teoremi.',
+        theoryMarkdown: `
+    ### 1. Qonşu və Qarşılıqlı Bucaqlar
+    - **Qonşu bucaqlar:** Bir tərəfi ortaq, digər tərəfləri isə bir-birini tamamlayan əks şüalar olan bucaqlardır.
+    $$\alpha + \beta = 180^\circ$$
+    - **Qarşılıqlı bucaqlar:** Birinin tərəfləri digərinin tərəflərinin əks şüaları olan iki bucaqdır. Qarşılıqlı bucaqlar bərabərdir:
+    $$\alpha = \gamma$$
 
-  ### 2. Dövri Onluq Kəsrlər
-  İxtiyari adi kəsri onluq kəsrə çevirdikdə ya sonlu, ya da sonsuz dövri onluq kəsr alınır:
-  - **Saf dövri onluq kəsr:** Dövriyyə vergüldən dərhal sonra başlayır:
-  $$0,(3) = \frac{3}{9} = \frac{1}{3}, \qquad 0,(27) = \frac{27}{99} = \frac{3}{11}$$
-  - **Qarışıq dövri onluq kəsr:** Vergüllə dövr arasında başqa rəqəmlər də olur:
-  $$0,1(6) = \frac{16 - 1}{90} = \frac{15}{90} = \frac{1}{6}$$
+    ### 2. Üçbucağın Daxili Bucaqlarının Cəmi
+    İxtiyari üçbucağın daxili bucaqlarının cəmi $180^\circ$-yə bərabərdir:
+    $$\angle A + \angle B + \angle C = 180^\circ$$
 
-  Məxrəcə dövrdəki rəqəmlərin sayı qədər $9$, vergüllə dövr arasındakı rəqəmlərin sayı qədər $0$ yazılır.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u1-1",
-              "name": "Saf Dövri Kəsrin Adi Kəsrə Çevrilməsi",
-              "latex": "0,(a) = \\frac{a}{9}",
-              "description": "Surətdə dövrdəki ədəd, məxrəcdə həmin sayda 9 yazılır."
-        },
-        {
-              "id": "f-m7-u1-2",
-              "name": "Qarışıq Dövri Kəsr",
-              "latex": "0,a(b) = \\frac{ab - a}{90}",
-              "description": "Surətdə bütün ədəddən dövrə qədərki ədəd çıxılır."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Rasional ədəd",
-              "definition": "İki tam ədədin nisbəti şəklində yazıla bilən hər hansı ədəd."
-        },
-        {
-              "term": "Dövr",
-              "definition": "Sonsuz onluq kəsrdə təkrarlanan rəqəm və ya rəqəmlər qrupu."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u1-1",
-              "question": "$0,(45)$ saf dövri kəsrini adi kəsrə çevirin.",
-              "solution": "$0,(45) = \\frac{45}{99}$. Hər iki tərəfi 9-a ixtisar etsək: $\\frac{5}{11}$ alınır."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u1-1",
-              "question": "$0,(7)$ kəsri hansı adi kəsrə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "7/10"
-                    },
-                    {
-                          "key": "B",
-                          "text": "7/9"
-                    },
-                    {
-                          "key": "C",
-                          "text": "7/99"
-                    },
-                    {
-                          "key": "D",
-                          "text": "1/7"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Saf dövri kəsr olduğundan məxrəcə 9 yazılır: 7/9."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-7-u2-real',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 2: Həqiqi ədədlər və Kvadrat köklər',
-      unitOrder: 2,
-      title: 'İrrasional ədədlər və hesabi kvadrat kök anlayışı',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Sonsuz dövri olmayan onluq kəsrlər (irrasional ədədlər $\mathbb{I}$), həqiqi ədədlər $\mathbb{R}$ və hesabi kvadrat kök anlayışı.',
-      theoryMarkdown: `
-  ### 1. İrrasional Ədədlər
-  Dövri olmayan sonsuz onluq kəsr şəklində göstərilən ədədlərə **irrasional ədədlər** deyilir və $\mathbb{I}$ ilə işarə olunur.
-  Məsələn:
-  $$\sqrt{2} \approx 1.4142\dots, \quad \sqrt{3} \approx 1.7320\dots, \quad \pi \approx 3.14159\dots$$
-
-  ### 2. Həqiqi Ədədlər Çoxluğu
-  Rasional və irrasional ədədlər birlikdə **həqiqi ədədlər çoxluğunu** ($\mathbb{R}$) əmələ gətirir:
-  $$\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$$
-
-  ### 3. Hesabi Kvadrat Kök
-  Kvadratı $a$-ya bərabər olan qeyri-mənfi ədədə $a$ ədədinin **hesabi kvadrat kökü** deyilir:
-  $$\sqrt{a} = b \iff b \ge 0 \quad \text{və} \quad b^2 = a \quad (a \ge 0)$$
-  - Menfi ədədin kvadrat kökü həqiqi ədədlər çoxluğunda mövcud deyil: $\sqrt{-9}$ mənasızdır.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u2-1",
-              "name": "Hesabi Kvadrat Kök",
-              "latex": "(\\sqrt{a})^2 = a \\quad (a \\ge 0)",
-              "description": "Qeyri-mənfi ədədin kvadrat kökünün kvadratı ədədin özünə bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "İrrasional ədəd",
-              "definition": "Adi kəsr şəklində göstərilə bilməyən sonsuz dövri olmayan onluq kəsr."
-        },
-        {
-              "term": "Hesabi kvadrat kök",
-              "definition": "Kvadratı verilmiş ədədə bərabər olan mənfi olmayan ədəd."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u2-1",
-              "question": "$\\sqrt{49} + \\sqrt{100}$ cəmini hesablayın.",
-              "solution": "$\\sqrt{49} = 7$ çünki $7^2 = 49$. $\\sqrt{100} = 10$ çünki $10^2 = 100$. Cəm: $7 + 10 = 17$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u2-1",
-              "question": "Aşağıdakılardan hansı irrasional ədəddir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "0.5"
-                    },
-                    {
-                          "key": "B",
-                          "text": "$\\sqrt{16}$"
-                    },
-                    {
-                          "key": "C",
-                          "text": "$\\sqrt{5}$"
-                    },
-                    {
-                          "key": "D",
-                          "text": "3/4"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Kök 5 dəqiq kökdən çıxmır və dövri olmayan sonsuz onluq kəsrdir, yəni irrasionaldır."
-        }
-  ]
-    },
+    ### 3. Üçbucağın Xarici Bucağı
+    Üçbucağın hər hansı təpəsindəki xarici bucaq ona qonşu olmayan iki daxili bucağın cəminə bərabərdir:
+    $$\varphi = \angle A + \angle B$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u6-1",
+                "name": "Qonşu Bucaqların Cəmi",
+                "latex": "\\alpha + \\beta = 180^\\circ",
+                "description": "Qonşu bucaqların cəmi açıq bucağa bərabərdir."
+          },
+          {
+                "id": "f-m6-u6-2",
+                "name": "Üçbucağın Daxili Bucaqlarının Cəmi",
+                "latex": "\\angle A + \\angle B + \\angle C = 180^\\circ",
+                "description": "İxtiyari üçbucaqda daxili bucaqların cəmi 180 dərəcədir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Qonşu bucaqlar",
+                "definition": "Cəmi 180 dərəcə olan və bir tərəfi ortaq olan bucaqlar."
+          },
+          {
+                "term": "Qarşılıqlı bucaqlar",
+                "definition": "Tərəfləri qarşılıqlı əks şüalar olan və bərabər olan bucaqlar."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u6-1",
+                "question": "Üçbucağın iki bucağı $45^\\circ$ və $65^\\circ$-dir. Üçüncü bucağı tapın.",
+                "solution": "$\\angle C = 180^\\circ - (45^\\circ + 65^\\circ) = 180^\\circ - 110^\\circ = 70^\\circ$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u6-1",
+                "question": "Qonşu bucaqlardan biri $70^\\circ$ olarsa, o biri bucaq neçə dərəcədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "70°"
+                      },
+                      {
+                            "key": "B",
+                            "text": "90°"
+                      },
+                      {
+                            "key": "C",
+                            "text": "110°"
+                      },
+                      {
+                            "key": "D",
+                            "text": "120°"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Qonşu bucaqların cəmi 180° olduğundan: 180° - 70° = 110°."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-7-u3-monomials',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 3: Birhədlilər və Çoxhədlilər',
-      unitOrder: 3,
-      title: 'Natural üstlü qüvvətin xassələri və birhədlilər',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 1,
-      summary: 'Qüvvətlərin vurulması, bölünməsi, qüvvətə yüksəldilməsi, birhədlinin standart şəkli və dərəcəsi.',
-      theoryMarkdown: `
-  ### 1. Natural Üstlü Qüvvətin Xassələri
-  Əsasları eyni olan qüvvətlər üçün:
-  - **Vurma:** $a^m \cdot a^n = a^{m+n}$
-  - **Bölmə:** $a^m : a^n = a^{m-n} \quad (a \neq 0, m \ge n)$
-  - **Qüvvətin qüvvətə yüksəldilməsi:** $(a^m)^n = a^{m \cdot n}$
-  - **Hasilin qüvvəti:** $(a \cdot b)^n = a^n \cdot b^n$
-  - **Nisbətin qüvvəti:** $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \quad (b \neq 0)$
-  - **Sıfırıncı qüvvət:** $a^0 = 1 \quad (a \neq 0)$
+        id: 'lesson-math-6-u7-volume',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 7: Sahə və Həcm ölçmələri',
+        unitOrder: 7,
+        title: 'Düzbucaqlı paralelepiped və kubun səthi və həcmi',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 1,
+        summary: 'Düzbucaqlının və kvadratın sahəsi, kub və düzbucaqlı paralelepipedin tam səthinin sahəsi və həcm hesablamaları.',
+        theoryMarkdown: `
+    ### 1. Düzbucaqlı və Kvadratın Sahəsi
+    - Tərəfləri $a$ və $b$ olan düzbucaqlının sahəsi: $S = a \cdot b$
+    - Tərəfi $a$ olan kvadratın sahəsi: $S = a^2$
 
-  ### 2. Birhədli və Standart Şəkli
-  Ədədi vuruqla dəyişənlərin qüvvətlərinin hasilinə **birhədli** deyilir: məsələn, $5a^2b^3$.
-  - Birinci yerdə yazılan ədədi vuruğa birhədlinin **əmsalı** deyilir.
-  - Dəyişənlərin üstlərinin cəminə birhədlinin **dərəcəsi (qüvvəti)** deyilir. Məsələn, $5a^2b^3$-ün dərəcəsi $2 + 3 = 5$-dir.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u3-1",
-              "name": "Qüvvətlərin Vurulması",
-              "latex": "a^m \\cdot a^n = a^{m+n}",
-              "description": "Əsaslar eyni olduqda üstlər toplanır."
-        },
-        {
-              "id": "f-m7-u3-2",
-              "name": "Qüvvətin Qüvvəti",
-              "latex": "(a^m)^n = a^{m \\cdot n}",
-              "description": "Qüvvəti qüvvətə yüksəldərkən üstlər vurulur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Birhədli",
-              "definition": "Ədəd, dəyişən və onların qüvvətlərinin hasilindən ibarət cəbri ifadə."
-        },
-        {
-              "term": "Əmsal",
-              "definition": "Standart şəkildə yazılmış birhədlinin ədədi vuruğu."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u3-1",
-              "question": "$(2x^2y)^3 \\cdot 3xy^2$ ifadəsini sadələşdirin.",
-              "solution": "$(2x^2y)^3 = 8x^6y^3$. İndi vuraq: $8x^6y^3 \\cdot 3xy^2 = (8 \\cdot 3) \\cdot (x^6 \\cdot x) \\cdot (y^3 \\cdot y^2) = 24x^7y^5$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u3-1",
-              "question": "$a^4 \\cdot a^3 : a^2$ ifadəsinin qiyməti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "$a^5$"
-                    },
-                    {
-                          "key": "B",
-                          "text": "$a^6$"
-                    },
-                    {
-                          "key": "C",
-                          "text": "$a^9$"
-                    },
-                    {
-                          "key": "D",
-                          "text": "$a^7$"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "Üstləri toplayıb çıxırıq: 4 + 3 - 2 = 5, cavab a^5."
-        }
-  ]
-    },
+    ### 2. Düzbucaqlı Paralelepiped
+    Ölçüləri $a$, $b$, $c$ (uzunluq, en, hündürlük) olan düzbucaqlı paralelepipedin:
+    - **Tam səthinin sahəsi:**
+    $$S = 2(ab + bc + ac)$$
+    - **Həcmi:**
+    $$V = a \cdot b \cdot c$$
 
-  {
-      id: 'lesson-math-7-u4-multiplication',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 4: Müxtəsər vurma düsturları',
-      unitOrder: 4,
-      title: 'Müxtəsər vurma düsturları və vuruqlara ayırma',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'İki ifadənin cəminin və fərqinin kvadratı, kvadratlar fərqi, kublar cəmi və fərqi düsturları.',
-      theoryMarkdown: `
-  ### 1. Əsas Müxtəsər Vurma Düsturları
-  - **Kvadratlar Fərqi:**
-  $$a^2 - b^2 = (a - b)(a + b)$$
-  - **İki İfadənin Cəminin Kvadratı:**
-  $$(a + b)^2 = a^2 + 2ab + b^2$$
-  - **İki İfadənin Fərqinin Kvadratı:**
-  $$(a - b)^2 = a^2 - 2ab + b^2$$
-
-  ### 2. Kub Düsturları
-  - **Kublar Fərqi və Cəmi:**
-  $$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$$
-  $$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$$
-  - **Cəmin və Fərqin Kubu:**
-  $$(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$$
-  $$(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$$
-
-  ### 3. Vuruqlara Ayırma Üsulları
-  - Ortaq vuruğun mötərizə xaricinə çıxarılması: $ma + mb = m(a + b)$
-  - Qruplaşdırma üsulu
-  - Müxtəsər vurma düsturlarının tətbiqi
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u4-1",
-              "name": "Kvadratlar Fərqi",
-              "latex": "a^2 - b^2 = (a - b)(a + b)",
-              "description": "İki ədədin kvadratlarının fərqi onların fərqi ilə cəminin hasilinə bərabərdir."
-        },
-        {
-              "id": "f-m7-u4-2",
-              "name": "İkihədlinin Kvadratı",
-              "latex": "(a \\pm b)^2 = a^2 \\pm 2ab + b^2",
-              "description": "Birincinin kvadratı, iki misli hasili və ikincinin kvadratı."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Müxtəsər vurma",
-              "definition": "Çoxhədlilərin xüsusi vurma hallarını asanlıqla hesablamağa imkan verən cəbri eyniliklər."
-        },
-        {
-              "term": "Vuruqlara ayırma",
-              "definition": "Çoxhədlinin iki və ya daha çox çoxhədlinin hasili şəklində göstərilməsi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u4-1",
-              "question": "$49^2 - 39^2$ ifadəsini müxtəsər vurma düsturu ilə hesablayın.",
-              "solution": "Kvadratlar fərqinə görə: $(49 - 39)(49 + 39) = 10 \\cdot 88 = 880$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u4-1",
-              "question": "$(x + 3)^2$ ifadəsinin açılışı hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "$x^2 + 9$"
-                    },
-                    {
-                          "key": "B",
-                          "text": "$x^2 + 3x + 9$"
-                    },
-                    {
-                          "key": "C",
-                          "text": "$x^2 + 6x + 9$"
-                    },
-                    {
-                          "key": "D",
-                          "text": "$x^2 + 6x + 6$"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "(x+3)^2 = x^2 + 2*x*3 + 3^2 = x^2 + 6x + 9."
-        }
-  ]
-    },
+    ### 3. Kub
+    Bütün tilləri bərabər ($a$) olan paralelepiped kubdur:
+    - Tam səthi: $S = 6a^2$
+    - Həcmi: $V = a^3$
+    - $1 \text{ l} = 1 \text{ dm}^3 = 1000 \text{ sm}^3$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u7-1",
+                "name": "Paralelepipedin Həcmi",
+                "latex": "V = a \\cdot b \\cdot c",
+                "description": "Həcm üç ölçünün (en, uzunluq, hündürlük) hasilinə bərabərdir."
+          },
+          {
+                "id": "f-m6-u7-2",
+                "name": "Kubun Həcmi",
+                "latex": "V = a^3",
+                "description": "Kubun həcmi tilinin kubuna bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Həcm",
+                "definition": "Cismin fəzada tutduğu yerin kəmiyyət ölçüsü."
+          },
+          {
+                "term": "Düzbucaqlı paralelepiped",
+                "definition": "Altı üzünün hamısı düzbucaqlı olan fəza cismi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u7-1",
+                "question": "Ölçüləri 4 sm, 5 sm və 10 sm olan düzbucaqlı paralelepipedin həcmini tapın.",
+                "solution": "$V = a \\cdot b \\cdot c = 4 \\cdot 5 \\cdot 10 = 200 \\text{ sm}^3$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u7-1",
+                "question": "Tili 3 sm olan kubun həcmi neçə $\\text{sm}^3$-dir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "9"
+                      },
+                      {
+                            "key": "B",
+                            "text": "18"
+                      },
+                      {
+                            "key": "C",
+                            "text": "27"
+                      },
+                      {
+                            "key": "D",
+                            "text": "54"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "V = a^3 = 3 * 3 * 3 = 27 sm^3."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-7-u5-linear-function',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 5: Xətti funksiya və onun qrafiki',
-      unitOrder: 5,
-      title: 'Xətti funksiya və onun qrafiki',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: '$y = kx + b$ şəkilli funksiya, bucaq əmsalı $k$, sərbəst hədd $b$ və düz xətlərin qarşılıqlı vəziyyəti.',
-      theoryMarkdown: `
-  ### 1. Xətti Funksiyanın Tərifi
-  $y = kx + b$ ($k$ və $b$ həqiqi ədədlərdir) şəklində verilmiş funksiyaya **xətti funksiya** deyilir.
-  - $k$ — **bucaq əmsalı** adlanır ($k = \text{tg} \alpha$, düz xəttin $Ox$ oxunun müsbət istiqaməti ilə əmələ gətirdiyi bucağın tangensidir).
-  - $b$ — qrafikin ordinat oxunu kəsdiyi nöqtənin koordinatıdır: $(0; b)$.
+        id: 'lesson-math-6-u8-stats',
+        subjectId: 'riyaziyyat',
+        grade: 6,
+        unit: 'Bölmə 8: Statistika və Ehtimal',
+        unitOrder: 8,
+        title: 'Ədədi orta, moda, median və ehtimalın əsasları',
+        order: 1,
+        readTimeMinutes: 8,
+        difficulty: 1,
+        summary: 'Verilənlər sırası, ədədi orta, ən çox təkrarlanan ədəd (moda), orta hədd (median) və təsadüfi hadisənin ehtimalı.',
+        theoryMarkdown: `
+    ### 1. Statistik Göstəricilər
+    Verilmiş ədədlər sırası üçün:
+    - **Ədədi orta:** Ədədlərin cəminin onların sayına bölünməsi ilə tapılır:
+    $$\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n}$$
+    - **Moda:** Verilənlər sırasında ən çox təkrarlanan ədəddir.
+    - **Median:** Artan ardıcıllıqla düzülmüş sırada tən ortada duran ədəddir (say cüt olduqda ortadakı iki ədədin ədədi ortasıdır).
+    - **Ən böyük fərq (diapazon):** Ən böyük qiymətlə ən kiçik qiymətin fərqidir.
 
-  ### 2. Funksiyanın Xassələri
-  - Əgər $k > 0$ olarsa, funksiya **artandır** (bucağı itidir).
-  - Əgər $k < 0$ olarsa, funksiya **azalandır** (bucağı kordur).
-  - Əgər $b = 0$ olarsa, $y = kx$ düz mütənasiblik asılılığıdır və qrafik koordinat başlanğıcından $O(0; 0)$ keçir.
-
-  ### 3. İki Düz Xəttin Qarşılıqlı Vəziyyəti
-  İki düz xətt $y = k_1x + b_1$ və $y = k_2x + b_2$:
-  - $k_1 = k_2$ və $b_1 \neq b_2$ olduqda **paraleldir**.
-  - $k_1 \neq k_2$ olduqda tək bir nöqtədə **kəsişir**.
-  - $k_1 \cdot k_2 = -1$ olduqda **perpendikulyardır**.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u5-1",
-              "name": "Xətti Funksiya",
-              "latex": "y = kx + b",
-              "description": "Qrafiki düz xətdir, k bucaq əmsalı, b şaquli sürüşmədir."
-        },
-        {
-              "id": "f-m7-u5-2",
-              "name": "Düz Xətlərin Paralellik Şərti",
-              "latex": "k_1 = k_2 \\quad (b_1 \\neq b_2)",
-              "description": "Bucaq əmsalları bərabər olan düz xətlər paraleldir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Bucaq əmsalı (k)",
-              "definition": "Xətti funksiyanın mailliyini və istiqamətini müəyyən edən əmsal."
-        },
-        {
-              "term": "Artan funksiya",
-              "definition": "Arqumentin böyük qiymətinə funksiyanın daha böyük qiyməti uyğun gələn funksiya."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u5-1",
-              "question": "$y = 2x - 4$ düz xəttinin koordinat oxları ilə kəsişmə nöqtələrini tapın.",
-              "solution": "$Ox$ oxu ilə kəsişmə üçün $y = 0 \\implies 2x - 4 = 0 \\implies x = 2$, nöqtə: $(2; 0)$. $Oy$ oxu ilə kəsişmə üçün $x = 0 \\implies y = -4$, nöqtə: $(0; -4)$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u5-1",
-              "question": "$y = -3x + 5$ funksiyasında bucaq əmsalı $k$ neçəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "5"
-                    },
-                    {
-                          "key": "B",
-                          "text": "-3"
-                    },
-                    {
-                          "key": "C",
-                          "text": "3"
-                    },
-                    {
-                          "key": "D",
-                          "text": "-5"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "y = kx + b formulunda x-in əmsalı k-dır, yəni k = -3."
-        }
-  ]
-    },
+    ### 2. Hadisənin Ehtimalı
+    Təsadüfi hadisənin baş vermə ehtimalı əlverişli halların sayının ($m$) mümkün bütün halların sayına ($n$) nisbətinə bərabərdir:
+    $$P(A) = \frac{m}{n} \quad (0 \le P(A) \le 1)$$
+    - Yəqin hadisə üçün: $P = 1$
+    - Qeyri-mümkün hadisə üçün: $P = 0$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m6-u8-1",
+                "name": "Ədədi Orta",
+                "latex": "\\bar{x} = \\frac{\\sum x_i}{n}",
+                "description": "Ədədlərin cəminin onların sayına nisbəti."
+          },
+          {
+                "id": "f-m6-u8-2",
+                "name": "Klassik Ehtimal Düsturu",
+                "latex": "P(A) = \\frac{m}{n}",
+                "description": "Əlverişli halların bütün bərabərimkanlı hallara nisbəti."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Moda",
+                "definition": "Verilənlər sırasında ən böyük tezliklə təkrarlanan qiymət."
+          },
+          {
+                "term": "Median",
+                "definition": "Çeşidlənmiş məlumatlar toplusunun tam ortasındakı dəyər."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m6-u8-1",
+                "question": "4, 7, 7, 8, 9 ədədlərinin ədədi ortasını və modasını tapın.",
+                "solution": "Cəm: $4 + 7 + 7 + 8 + 9 = 35$. Say: $5$. Ədədi orta: $35 / 5 = 7$. Ən çox təkrarlanan ədəd 7 olduğundan, Moda = 7."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m6-u8-1",
+                "question": "Bir zər atıldıqda tək ədədin (1, 3, 5) düşmə ehtimalı neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "1/6"
+                      },
+                      {
+                            "key": "B",
+                            "text": "1/3"
+                      },
+                      {
+                            "key": "C",
+                            "text": "1/2"
+                      },
+                      {
+                            "key": "D",
+                            "text": "2/3"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Əlverişli hallar m = 3, ümumi hallar n = 6. P = 3/6 = 1/2."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-7-u6-congruence',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 6: Həndəsənin ilkin anlayışları və Üçbucaqlar',
-      unitOrder: 6,
-      title: 'Üçbucaqların konqruyentlik əlamətləri və bərabəryanlı üçbucaq',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Üçbucaqların bərabərlik (konqruyentlik) əlamətləri (TBT, BTT, TTT), median, tənbölən və hündürlük xassələri.',
-      theoryMarkdown: `
-  ### 1. Üçbucaqların Konqruyentlik Əlamətləri
-  İki üçbucağın uyğun tərəfləri və uyğun bucaqları bərabərdirsə, bu üçbucaqlar **konqruyentdir** (bərabərdir): $\Delta ABC \cong \Delta A_1B_1C_1$.
-  - **I Əlamət (TBT — Tərəf-Bucaq-Tərəf):** Bir üçbucağın iki tərəfi və onlar arasındakı bucaq o biri üçbucağın uyğun iki tərəfi və onlar arasındakı bucağa bərabərdirsə.
-  - **II Əlamət (BTT — Bucaq-Tərəf-Bucaq):** Bir üçbucağın bir tərəfi və ona bitişik iki bucağı o birinin uyğun tərəfi və bucaqlarına bərabərdirsə.
-  - **III Əlamət (TTT — Tərəf-Tərəf-Tərəf):** Bir üçbucağın üç tərəfi o biri üçbucağın uyğun üç tərəfinə bərabərdirsə.
+        id: 'lesson-math-7-u1-rational',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 1: Rasional ədədlər',
+        unitOrder: 1,
+        title: 'Rasional ədədlər çoxluğu və dövri onluq kəsrlər',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 1,
+        summary: 'Rasional ədədlər çoxluğu $\mathbb{Q}$, dövri onluq kəsrlər və onların adi kəsrə çevrilməsi qaydası.',
+        theoryMarkdown: `
+    ### 1. Rasional Ədədlər Çoxluğu
+    $\frac{m}{n}$ ($m \in \mathbb{Z}, n \in \mathbb{N}$) şəklində göstərilə bilən bütün ədədlərə **rasional ədədlər** deyilir və $\mathbb{Q}$ ilə işarə olunur:
+    $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q}$$
 
-  ### 2. Bərabəryanlı Üçbucağın Əsas Xassələri
-  - Oturacağına bitişik bucaqları bərabərdir: $\angle A = \angle C$.
-  - Təpədən oturacağa çəkilmiş median həm tənbölən, həm də hündürlükdür:
-  $$m_b = l_b = h_b$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u6-1",
-              "name": "Bərabəryanlı Üçbucaqda Median-Hündürlük",
-              "latex": "h_b = m_b = l_b",
-              "description": "Təpədən oturacağa çəkilmiş hündürlük, median və tənbölən üst-üstə düşür."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Konqruyentlik",
-              "definition": "Həndəsi fiqurların üst-üstə qoyulduqda tam bərabər olması."
-        },
-        {
-              "term": "Median",
-              "definition": "Üçbucağın təpəsini qarşı tərəfin ortası ilə birləşdirən parça."
-        },
-        {
-              "term": "Tənbölən",
-              "definition": "Bucağı iki bərabər hissəyə bölən şüa."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u6-1",
-              "question": "Bərabəryanlı üçbucağın təpə bucağı $50^\\circ$-dir. Oturacağa bitişik bucaqları tapın.",
-              "solution": "Oturacağa bitişik bucaqlar bərabərdir. Daxili bucaqların cəmi $180^\\circ$ olduğundan: $2\\alpha = 180^\\circ - 50^\\circ = 130^\\circ \\implies \\alpha = 65^\\circ$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u6-1",
-              "question": "Bərabəryanlı üçbucağın perimetri 20 sm, yan tərəfi 7 sm olarsa, oturacağı neçə sm-dir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "6 sm"
-                    },
-                    {
-                          "key": "B",
-                          "text": "7 sm"
-                    },
-                    {
-                          "key": "C",
-                          "text": "8 sm"
-                    },
-                    {
-                          "key": "D",
-                          "text": "13 sm"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "Yan tərəflər 7 sm və 7 sm-dir. Cəm = 14 sm. Oturacaq = 20 - 14 = 6 sm."
-        }
-  ]
-    },
+    ### 2. Dövri Onluq Kəsrlər
+    İxtiyari adi kəsri onluq kəsrə çevirdikdə ya sonlu, ya da sonsuz dövri onluq kəsr alınır:
+    - **Saf dövri onluq kəsr:** Dövriyyə vergüldən dərhal sonra başlayır:
+    $$0,(3) = \frac{3}{9} = \frac{1}{3}, \qquad 0,(27) = \frac{27}{99} = \frac{3}{11}$$
+    - **Qarışıq dövri onluq kəsr:** Vergüllə dövr arasında başqa rəqəmlər də olur:
+    $$0,1(6) = \frac{16 - 1}{90} = \frac{15}{90} = \frac{1}{6}$$
 
-  {
-      id: 'lesson-math-7-u7-system-equations',
-      subjectId: 'riyaziyyat',
-      grade: 7,
-      unit: 'Bölmə 7: İkidəyişənli xətti tənliklər sistemi',
-      unitOrder: 7,
-      title: 'İkidəyişənli xətti tənliklər sisteminin həlli üsulları',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Xətti tənliklər sistemi, əvəzetmə üsulu, cəbri toplama üsulu və sistemin həndəsi mənası.',
-      theoryMarkdown: `
-  ### 1. İkidəyişənli Xətti Tənliklər Sistemi
-  Standart şəkli:
-  $$\begin{cases} a_1x + b_1y = c_1 \\ a_2x + b_2y = c_2 \end{cases}$$
-  Sistemin həlli hər iki tənliyi eyni zamanda doğru bərabərliyə çevirən $(x; y)$ ədədlər cütüdür.
-
-  ### 2. Həll Üsulları
-  - **Əvəzetmə üsulu:** Tənliklərin birindən bir dəyişən digəri ilə ifadə olunur və digər tənlikdə yerinə yazılır.
-  - **Cəbri toplama üsulu:** Dəyişənlərdən birinin əmsalları əks ədədlərə gətirilir və tənliklər tərəf-tərəfə toplanaraq birdəyişənli tənlik alınır.
-
-  ### 3. Həllərin Sayı
-  - $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$ olarsa, sistemin **yeganə həlli** var (düz xətlər kəsişir).
-  - $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$ olarsa, sistemin **həlli yoxdur** (düz xətlər paraleldir).
-  - $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$ olarsa, sistemin **sonsuz sayda həlli** var (düz xətlər üst-üstə düşür).
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m7-u7-1",
-              "name": "Sistemin Yeganə Həll Şərti",
-              "latex": "\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}",
-              "description": "Əmsallar qeyri-mütənasib olduqda sistemin yeganə həlli mövcuddur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Tənliklər sistemi",
-              "definition": "Bir neçə naməlum dəyişəni olan və eyni zamanda ödənməli olan bərabərliklər qrupu."
-        },
-        {
-              "term": "Cəbri toplama",
-              "definition": "Tənlikləri tərəf-tərəfə toplayaraq naməlumlardan birini yox etmə metodu."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m7-u7-1",
-              "question": "$\\begin{cases} x + y = 10 \\\\ x - y = 4 \\end{cases}$ sistemini həll edin.",
-              "solution": "Tərəf-tərəfə toplasaq: $(x + x) + (y - y) = 10 + 4 \\implies 2x = 14 \\implies x = 7$. Buradan: $y = 10 - 7 = 3$. Cavab: $(7; 3)$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m7-u7-1",
-              "question": "$\\begin{cases} 2x + y = 7 \\\\ y = 1 \\end{cases}$ sistemindən $x$-i tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "2"
-                    },
-                    {
-                          "key": "B",
-                          "text": "3"
-                    },
-                    {
-                          "key": "C",
-                          "text": "4"
-                    },
-                    {
-                          "key": "D",
-                          "text": "5"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "2x + 1 = 7 -> 2x = 6 -> x = 3."
-        }
-  ]
-    },
+    Məxrəcə dövrdəki rəqəmlərin sayı qədər $9$, vergüllə dövr arasındakı rəqəmlərin sayı qədər $0$ yazılır.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u1-1",
+                "name": "Saf Dövri Kəsrin Adi Kəsrə Çevrilməsi",
+                "latex": "0,(a) = \\frac{a}{9}",
+                "description": "Surətdə dövrdəki ədəd, məxrəcdə həmin sayda 9 yazılır."
+          },
+          {
+                "id": "f-m7-u1-2",
+                "name": "Qarışıq Dövri Kəsr",
+                "latex": "0,a(b) = \\frac{ab - a}{90}",
+                "description": "Surətdə bütün ədəddən dövrə qədərki ədəd çıxılır."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Rasional ədəd",
+                "definition": "İki tam ədədin nisbəti şəklində yazıla bilən hər hansı ədəd."
+          },
+          {
+                "term": "Dövr",
+                "definition": "Sonsuz onluq kəsrdə təkrarlanan rəqəm və ya rəqəmlər qrupu."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u1-1",
+                "question": "$0,(45)$ saf dövri kəsrini adi kəsrə çevirin.",
+                "solution": "$0,(45) = \\frac{45}{99}$. Hər iki tərəfi 9-a ixtisar etsək: $\\frac{5}{11}$ alınır."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u1-1",
+                "question": "$0,(7)$ kəsri hansı adi kəsrə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "7/10"
+                      },
+                      {
+                            "key": "B",
+                            "text": "7/9"
+                      },
+                      {
+                            "key": "C",
+                            "text": "7/99"
+                      },
+                      {
+                            "key": "D",
+                            "text": "1/7"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Saf dövri kəsr olduğundan məxrəcə 9 yazılır: 7/9."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-8-u1-roots',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 1: Kvadrat köklər və Həqiqi ədədlər',
-      unitOrder: 1,
-      title: 'Hesabi kvadrat kökün xassələri və kökaltı ifadələr',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Kvadrat kökün əsas xassələri, vuruğun kök altına salınması və kökdən çıxarılması, məxrəcin irrasionallıqdan azad edilməsi.',
-      theoryMarkdown: `
-  ### 1. Kvadrat Kökün Əsas Xassələri
-  $a \ge 0$ və $b \ge 0$ olduqda:
-  - **Hasilin kökü:** $\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$
-  - **Nisbətin kökü:** $\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}} \quad (b > 0)$
-  - **Dəyişənin kvadratının kökü:** $\sqrt{a^2} = |a|$
+        id: 'lesson-math-7-u2-real',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 2: Həqiqi ədədlər və Kvadrat köklər',
+        unitOrder: 2,
+        title: 'İrrasional ədədlər və hesabi kvadrat kök anlayışı',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Sonsuz dövri olmayan onluq kəsrlər (irrasional ədədlər $\mathbb{I}$), həqiqi ədədlər $\mathbb{R}$ və hesabi kvadrat kök anlayışı.',
+        theoryMarkdown: `
+    ### 1. İrrasional Ədədlər
+    Dövri olmayan sonsuz onluq kəsr şəklində göstərilən ədədlərə **irrasional ədədlər** deyilir və $\mathbb{I}$ ilə işarə olunur.
+    Məsələn:
+    $$\sqrt{2} \approx 1.4142\dots, \quad \sqrt{3} \approx 1.7320\dots, \quad \pi \approx 3.14159\dots$$
 
-  ### 2. Vuruğun Kök İşarəsi Xaricinə Çıxarılması və Daxil Edilməsi
-  - Kökdən çıxarma: $\sqrt{a^2 b} = |a|\sqrt{b} = a\sqrt{b} \quad (a \ge 0)$
-  - Kök altına salma: $a\sqrt{b} = \sqrt{a^2 b} \quad (a \ge 0)$
+    ### 2. Həqiqi Ədədlər Çoxluğu
+    Rasional və irrasional ədədlər birlikdə **həqiqi ədədlər çoxluğunu** ($\mathbb{R}$) əmələ gətirir:
+    $$\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$$
 
-  ### 3. Məxrəcin İrrasionallıqdan Azad Edilməsi
-  Kəsrin məxrəcini qoşma ifadəyə vuraraq kökdən azad edirlər:
-  $$\frac{1}{\sqrt{a} - \sqrt{b}} = \frac{\sqrt{a} + \sqrt{b}}{(\sqrt{a} - \sqrt{b})(\sqrt{a} + \sqrt{b})} = \frac{\sqrt{a} + \sqrt{b}}{a - b}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u1-1",
-              "name": "Hasilin Kvadrat Kökü",
-              "latex": "\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b} \\quad (a, b \\ge 0)",
-              "description": "Vuruqların hasillərinin kökü onların köklərinin hasilinə bərabərdir."
-        },
-        {
-              "id": "f-m8-u1-2",
-              "name": "Kök və Modul Əlaqəsi",
-              "latex": "\\sqrt{a^2} = |a|",
-              "description": "İxtiyari ədədin kvadratının kökü onun moduluna bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Qoşma ifadə",
-              "definition": "(√a - √b) üçün (√a + √b) ifadəsi, hasili rasional ədəd verən ifadə cütü."
-        },
-        {
-              "term": "İrrasionallıq",
-              "definition": "Kökdən tam çıxmayan ifadələrin varlığı."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u1-1",
-              "question": "$\\sqrt{50}$ ifadəsindən vuruğu kök xaricinə çıxarın.",
-              "solution": "$\\sqrt{50} = \\sqrt{25 \\cdot 2} = \\sqrt{25} \\cdot \\sqrt{2} = 5\\sqrt{2}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u1-1",
-              "question": "$\\sqrt{12} \\cdot \\sqrt{3}$ hasilini hesablayın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "6"
-                    },
-                    {
-                          "key": "B",
-                          "text": "12"
-                    },
-                    {
-                          "key": "C",
-                          "text": "36"
-                    },
-                    {
-                          "key": "D",
-                          "text": "$\\sqrt{15}$"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "√12 * √3 = √(12 * 3) = √36 = 6."
-        }
-  ]
-    },
+    ### 3. Hesabi Kvadrat Kök
+    Kvadratı $a$-ya bərabər olan qeyri-mənfi ədədə $a$ ədədinin **hesabi kvadrat kökü** deyilir:
+    $$\sqrt{a} = b \iff b \ge 0 \quad \text{və} \quad b^2 = a \quad (a \ge 0)$$
+    - Menfi ədədin kvadrat kökü həqiqi ədədlər çoxluğunda mövcud deyil: $\sqrt{-9}$ mənasızdır.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u2-1",
+                "name": "Hesabi Kvadrat Kök",
+                "latex": "(\\sqrt{a})^2 = a \\quad (a \\ge 0)",
+                "description": "Qeyri-mənfi ədədin kvadrat kökünün kvadratı ədədin özünə bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "İrrasional ədəd",
+                "definition": "Adi kəsr şəklində göstərilə bilməyən sonsuz dövri olmayan onluq kəsr."
+          },
+          {
+                "term": "Hesabi kvadrat kök",
+                "definition": "Kvadratı verilmiş ədədə bərabər olan mənfi olmayan ədəd."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u2-1",
+                "question": "$\\sqrt{49} + \\sqrt{100}$ cəmini hesablayın.",
+                "solution": "$\\sqrt{49} = 7$ çünki $7^2 = 49$. $\\sqrt{100} = 10$ çünki $10^2 = 100$. Cəm: $7 + 10 = 17$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u2-1",
+                "question": "Aşağıdakılardan hansı irrasional ədəddir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "0.5"
+                      },
+                      {
+                            "key": "B",
+                            "text": "$\\sqrt{16}$"
+                      },
+                      {
+                            "key": "C",
+                            "text": "$\\sqrt{5}$"
+                      },
+                      {
+                            "key": "D",
+                            "text": "3/4"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Kök 5 dəqiq kökdən çıxmır və dövri olmayan sonsuz onluq kəsrdir, yəni irrasionaldır."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-8-u2-quadrilaterals',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 2: Dördbucaqlılar',
-      unitOrder: 2,
-      title: 'Paraleleqram, romb, düzbucaqlı və trapesiya',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Qabarıq dördbucaqlılar, daxili bucaqların cəmi (360°), paraleleqramın xassələri və əlamətləri, trapesiyanın orta xətti.',
-      theoryMarkdown: `
-  ### 1. Paraleleqram və Onun Xassələri
-  Qarşı tərəfləri cüt-cüt paralel olan dördbucaqlıya **paraleleqram** deyilir.
-  - Qarşı tərəfləri və qarşı bucaqları bərabərdir: $AB = CD$, $\angle A = \angle C$.
-  - Bir tərəfə bitişik bucaqların cəmi $180^\circ$-dir: $\angle A + \angle B = 180^\circ$.
-  - Diaqonalları kəsişmə nöqtəsində yarıya bölünür.
-  - Diaqonallarla tərəflər arasında münasibət: $d_1^2 + d_2^2 = 2(a^2 + b^2)$.
+        id: 'lesson-math-7-u3-monomials',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 3: Birhədlilər və Çoxhədlilər',
+        unitOrder: 3,
+        title: 'Natural üstlü qüvvətin xassələri və birhədlilər',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 1,
+        summary: 'Qüvvətlərin vurulması, bölünməsi, qüvvətə yüksəldilməsi, birhədlinin standart şəkli və dərəcəsi.',
+        theoryMarkdown: `
+    ### 1. Natural Üstlü Qüvvətin Xassələri
+    Əsasları eyni olan qüvvətlər üçün:
+    - **Vurma:** $a^m \cdot a^n = a^{m+n}$
+    - **Bölmə:** $a^m : a^n = a^{m-n} \quad (a \neq 0, m \ge n)$
+    - **Qüvvətin qüvvətə yüksəldilməsi:** $(a^m)^n = a^{m \cdot n}$
+    - **Hasilin qüvvəti:** $(a \cdot b)^n = a^n \cdot b^n$
+    - **Nisbətin qüvvəti:** $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \quad (b \neq 0)$
+    - **Sıfırıncı qüvvət:** $a^0 = 1 \quad (a \neq 0)$
 
-  ### 2. Romb və Düzbucaqlı
-  - **Düzbucaqlı:** Bütün bucaqları düz bucaq ($90^\circ$) olan paraleleqramdır. Diaqonalları bərabərdir: $d_1 = d_2$.
-  - **Romb:** Bütün tərəfləri bərabər olan paraleleqramdır. Diaqonalları perpendikulyardır ($d_1 \perp d_2$) və tənböləndir.
-
-  ### 3. Trapesiyanın Orta Xətti
-  Yalnız iki qarşı tərəfi paralel olan dördbucaqlıya **trapesiyanın** deyilir.
-  - Yan tərəflərin ortasını birləşdirən parçaya **orta xətt** deyilir.
-  - Orta xətt oturacaqlara paralel olub, onların cəminin yarısına bərabərdir:
-  $$l = \frac{a + b}{2}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u2-1",
-              "name": "Trapesiyanın Orta Xətti",
-              "latex": "l = \\frac{a + b}{2}",
-              "description": "Orta xətt oturacaqların ədədi ortasına bərabərdir."
-        },
-        {
-              "id": "f-m8-u2-2",
-              "name": "Paraleleqramın Diaqonalları",
-              "latex": "d_1^2 + d_2^2 = 2(a^2 + b^2)",
-              "description": "Diaqonalların kvadratları cəmi tərəflərin kvadratları cəminin iki mislidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Paraleleqram",
-              "definition": "Qarşı tərəfləri paralel olan qabarıq dördbucaqlı."
-        },
-        {
-              "term": "Trapesiyanın orta xətti",
-              "definition": "Yan tərəflərin orta nöqtələrini birləşdirən xətt parçası."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u2-1",
-              "question": "Trapesiyanın oturacaqları 8 sm və 14 sm-dir. Onun orta xəttinin uzunluğunu tapın.",
-              "solution": "$l = \\frac{a + b}{2} = \\frac{8 + 14}{2} = \\frac{22}{2} = 11 \\text{ sm}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u2-1",
-              "question": "Paraleleqramın bucaqlarından biri $60^\\circ$ olarsa, onunla qonşu olan bucağı tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "60°"
-                    },
-                    {
-                          "key": "B",
-                          "text": "90°"
-                    },
-                    {
-                          "key": "C",
-                          "text": "120°"
-                    },
-                    {
-                          "key": "D",
-                          "text": "150°"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Bir tərəfə bitişik bucaqların cəmi 180°-dir: 180° - 60° = 120°."
-        }
-  ]
-    },
+    ### 2. Birhədli və Standart Şəkli
+    Ədədi vuruqla dəyişənlərin qüvvətlərinin hasilinə **birhədli** deyilir: məsələn, $5a^2b^3$.
+    - Birinci yerdə yazılan ədədi vuruğa birhədlinin **əmsalı** deyilir.
+    - Dəyişənlərin üstlərinin cəminə birhədlinin **dərəcəsi (qüvvəti)** deyilir. Məsələn, $5a^2b^3$-ün dərəcəsi $2 + 3 = 5$-dir.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u3-1",
+                "name": "Qüvvətlərin Vurulması",
+                "latex": "a^m \\cdot a^n = a^{m+n}",
+                "description": "Əsaslar eyni olduqda üstlər toplanır."
+          },
+          {
+                "id": "f-m7-u3-2",
+                "name": "Qüvvətin Qüvvəti",
+                "latex": "(a^m)^n = a^{m \\cdot n}",
+                "description": "Qüvvəti qüvvətə yüksəldərkən üstlər vurulur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Birhədli",
+                "definition": "Ədəd, dəyişən və onların qüvvətlərinin hasilindən ibarət cəbri ifadə."
+          },
+          {
+                "term": "Əmsal",
+                "definition": "Standart şəkildə yazılmış birhədlinin ədədi vuruğu."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u3-1",
+                "question": "$(2x^2y)^3 \\cdot 3xy^2$ ifadəsini sadələşdirin.",
+                "solution": "$(2x^2y)^3 = 8x^6y^3$. İndi vuraq: $8x^6y^3 \\cdot 3xy^2 = (8 \\cdot 3) \\cdot (x^6 \\cdot x) \\cdot (y^3 \\cdot y^2) = 24x^7y^5$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u3-1",
+                "question": "$a^4 \\cdot a^3 : a^2$ ifadəsinin qiyməti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "$a^5$"
+                      },
+                      {
+                            "key": "B",
+                            "text": "$a^6$"
+                      },
+                      {
+                            "key": "C",
+                            "text": "$a^9$"
+                      },
+                      {
+                            "key": "D",
+                            "text": "$a^7$"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "Üstləri toplayıb çıxırıq: 4 + 3 - 2 = 5, cavab a^5."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-8-u3-rational-fractions',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 3: Rasional kəsrlər',
-      unitOrder: 3,
-      title: 'Rasional kəsrlər və onlar üzərində əməllər',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Cəbri kəsrlər, kəsrin mənası olan qiymətlər çoxluğu, kəsrlərin ixtisarı, toplanması və vurulması.',
-      theoryMarkdown: `
-  ### 1. Rasional Kəsr Nədir?
-  Surət və məxrəci çoxhədli olan ifadəyə **rasional kəsr** deyilir:
-  $$\frac{P(x)}{Q(x)} \quad (Q(x) \neq 0)$$
-  Məxrəci sıfıra çevirən qiymətlərdə kəsrin mənası yoxdur.
+        id: 'lesson-math-7-u4-multiplication',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 4: Müxtəsər vurma düsturları',
+        unitOrder: 4,
+        title: 'Müxtəsər vurma düsturları və vuruqlara ayırma',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'İki ifadənin cəminin və fərqinin kvadratı, kvadratlar fərqi, kublar cəmi və fərqi düsturları.',
+        theoryMarkdown: `
+    ### 1. Əsas Müxtəsər Vurma Düsturları
+    - **Kvadratlar Fərqi:**
+    $$a^2 - b^2 = (a - b)(a + b)$$
+    - **İki İfadənin Cəminin Kvadratı:**
+    $$(a + b)^2 = a^2 + 2ab + b^2$$
+    - **İki İfadənin Fərqinin Kvadratı:**
+    $$(a - b)^2 = a^2 - 2ab + b^2$$
 
-  ### 2. Kəsrlərin İxtisarı
-  Kəsri ixtisar etmək üçün surət və məxrəc vuruqlara ayrılır və ortaq vuruqlar silinir:
-  $$\frac{x^2 - 4}{x + 2} = \frac{(x - 2)(x + 2)}{x + 2} = x - 2 \quad (x \neq -2)$$
+    ### 2. Kub Düsturları
+    - **Kublar Fərqi və Cəmi:**
+    $$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$$
+    $$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$$
+    - **Cəmin və Fərqin Kubu:**
+    $$(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$$
+    $$(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$$
 
-  ### 3. Kəsrlərin Toplanması və Çıxılması
-  Əvvəlcə məxrəclər vuruqlara ayrılır, ƏKOB tapılaraq ortaq məxrəcə gətirilir:
-  $$\frac{A}{C} \pm \frac{B}{D} = \frac{A \cdot D \pm B \cdot C}{C \cdot D}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u3-1",
-              "name": "Kəsrlərin Vurulması",
-              "latex": "\\frac{A}{B} \\cdot \\frac{C}{D} = \\frac{A \\cdot C}{B \\cdot D}",
-              "description": "Surət surətə, məxrəc məxrəcə vurulur."
-        },
-        {
-              "id": "f-m8-u3-2",
-              "name": "Kəsrlərin Bölünməsi",
-              "latex": "\\frac{A}{B} : \\frac{C}{D} = \\frac{A \\cdot D}{B \\cdot C}",
-              "description": "Bölünən kəsr bölənin tərsinə vurulur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Rasional kəsr",
-              "definition": "Məxrəcində dəyişən olan cəbri kəsr."
-        },
-        {
-              "term": "Mümkün qiymətlər çoxluğu",
-              "definition": "Kəsrin məxrəcini sıfır etməyən dəyişənin qiymətləri."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u3-1",
-              "question": "$\\frac{x^2 - 9}{2x - 6}$ kəsrini ixtisar edin.",
-              "solution": "Surəti müxtəsər vurma ilə açaq: $(x - 3)(x + 3)$. Məxrəcdən 2 çıxaraq: $2(x - 3)$. Ortaq $(x-3)$-ü ixtisar etsək: $\\frac{x + 3}{2}$ qalır."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u3-1",
-              "question": "$\\frac{5}{x - 4}$ kəsrinin hansı qiymətdə mənası yoxdur?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "x = 0"
-                    },
-                    {
-                          "key": "B",
-                          "text": "x = -4"
-                    },
-                    {
-                          "key": "C",
-                          "text": "x = 4"
-                    },
-                    {
-                          "key": "D",
-                          "text": "x = 5"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Məxrəc sıfır ola bilməz: x - 4 = 0 -> x = 4 qiymətində kəsrin mənası yoxdur."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-8-u4-quadratic',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 4: Kvadrat tənliklər',
-      unitOrder: 4,
-      title: 'Kvadrat tənliyin kök düsturu və Viyet teoremi',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Kvadrat tənlik $ax^2 + bx + c = 0$, diskriminant $D$, köklər düsturu və köklərlə əmsallar arasındakı əlaqə (Viyet teoremi).',
-      theoryMarkdown: `
-  ### 1. Kvadrat Tənliyin Tərifi
-  $a \neq 0$ olduqda $ax^2 + bx + c = 0$ şəklində olan tənliyə **kvadrat tənlik** deyilir.
-  - $a$ — birinci əmsal, $b$ — ikinci əmsal, $c$ — sərbəst hədd.
-
-  ### 2. Diskriminant və Köklərin Sayı
-  Tənliyin diskriminantı:
-  $$D = b^2 - 4ac$$
-  - **$D > 0$ olduqda:** Tənliyin iki müxtəlif həqiqi kökü var:
-  $$x_{1, 2} = \frac{-b \pm \sqrt{D}}{2a}$$
-  - **$D = 0$ olduqda:** Tənliyin iki bərabər kökü var (tək kök):
-  $$x_1 = x_2 = -\frac{b}{2a}$$
-  - **$D < 0$ olduqda:** Tənliyin həqiqi kökü yoxdur.
-
-  ### 3. Viyet Teoremi
-  Çevrilmiş kvadrat tənliyin ($x^2 + px + q = 0$) kökləri üçün:
-  $$\begin{cases} x_1 + x_2 = -p \\ x_1 \cdot x_2 = q \end{cases}$$
-  Ümumi tənlikdə ($ax^2 + bx + c = 0$): $x_1 + x_2 = -\frac{b}{a}$, $x_1 \cdot x_2 = \frac{c}{a}$.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u4-1",
-              "name": "Diskriminant Düsturu",
-              "latex": "D = b^2 - 4ac",
-              "description": "Köklərin sayını və xarakterini müəyyən edir."
-        },
-        {
-              "id": "f-m8-u4-2",
-              "name": "Viyet Teoremi",
-              "latex": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 \\cdot x_2 = \\frac{c}{a}",
-              "description": "Kvadrat tənliyin köklərinin cəmi və hasili əmsallarla ifadə olunur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Diskriminant",
-              "definition": "Kvadrat tənliyin köklərinin varlığını və sayını təyin edən b^2 - 4ac ifadəsi."
-        },
-        {
-              "term": "Viyet teoremi",
-              "definition": "Kvadrat tənliyin kökləri ilə əmsalları arasındakı birbaşa asılılıq qaydası."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u4-1",
-              "question": "$x^2 - 5x + 6 = 0$ tənliyini həll edin.",
-              "solution": "Viyet teoreminə görə: $x_1 + x_2 = 5$, $x_1 \\cdot x_2 = 6$. Bu şərti ödəyən ədədlər $2$ və $3$-dür. Köklər: $x_1 = 2, x_2 = 3$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u4-1",
-              "question": "$x^2 - 7x + 12 = 0$ tənliyinin kökləri hasilini tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "7"
-                    },
-                    {
-                          "key": "B",
-                          "text": "-7"
-                    },
-                    {
-                          "key": "C",
-                          "text": "12"
-                    },
-                    {
-                          "key": "D",
-                          "text": "-12"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Viyet teoreminə görə çevrilmiş kvadrat tənlikdə x1 * x2 = q = 12."
-        }
-  ]
-    },
+    ### 3. Vuruqlara Ayırma Üsulları
+    - Ortaq vuruğun mötərizə xaricinə çıxarılması: $ma + mb = m(a + b)$
+    - Qruplaşdırma üsulu
+    - Müxtəsər vurma düsturlarının tətbiqi
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u4-1",
+                "name": "Kvadratlar Fərqi",
+                "latex": "a^2 - b^2 = (a - b)(a + b)",
+                "description": "İki ədədin kvadratlarının fərqi onların fərqi ilə cəminin hasilinə bərabərdir."
+          },
+          {
+                "id": "f-m7-u4-2",
+                "name": "İkihədlinin Kvadratı",
+                "latex": "(a \\pm b)^2 = a^2 \\pm 2ab + b^2",
+                "description": "Birincinin kvadratı, iki misli hasili və ikincinin kvadratı."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Müxtəsər vurma",
+                "definition": "Çoxhədlilərin xüsusi vurma hallarını asanlıqla hesablamağa imkan verən cəbri eyniliklər."
+          },
+          {
+                "term": "Vuruqlara ayırma",
+                "definition": "Çoxhədlinin iki və ya daha çox çoxhədlinin hasili şəklində göstərilməsi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u4-1",
+                "question": "$49^2 - 39^2$ ifadəsini müxtəsər vurma düsturu ilə hesablayın.",
+                "solution": "Kvadratlar fərqinə görə: $(49 - 39)(49 + 39) = 10 \\cdot 88 = 880$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u4-1",
+                "question": "$(x + 3)^2$ ifadəsinin açılışı hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "$x^2 + 9$"
+                      },
+                      {
+                            "key": "B",
+                            "text": "$x^2 + 3x + 9$"
+                      },
+                      {
+                            "key": "C",
+                            "text": "$x^2 + 6x + 9$"
+                      },
+                      {
+                            "key": "D",
+                            "text": "$x^2 + 6x + 6$"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "(x+3)^2 = x^2 + 2*x*3 + 3^2 = x^2 + 6x + 9."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-8-u5-similarity',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 5: Həndəsi çevrilmələr və Oxşarlıq',
-      unitOrder: 5,
-      title: 'Fiqurların oxşarlığı və üçbucaqların oxşarlıq əlamətləri',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Mütənasib parçalar, Fales teoremi, üçbucaqların oxşarlıq əlamətləri (BB, TBT, TTT) və sahələrin nisbəti.',
-      theoryMarkdown: `
-  ### 1. Oxşar Fiqurlar və Fales Teoremi
-  - **Fales teoremi:** Bucağın tərəflərini kəsən paralel düz xətlər onun tərəfləri üzərində mütənasib parçalar ayırır:
-  $$\frac{AB}{BC} = \frac{A_1B_1}{B_1C_1}$$
-  - Uyğun bucaqları bərabər və uyğun tərəfləri mütənasib olan fiqurlar **oxşardır**: $\Delta ABC \sim \Delta A_1B_1C_1$.
-  $$\frac{AB}{A_1B_1} = \frac{BC}{B_1C_1} = \frac{AC}{A_1C_1} = k \quad (k - \text{oxşarlıq əmsalı})$$
+        id: 'lesson-math-7-u5-linear-function',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 5: Xətti funksiya və onun qrafiki',
+        unitOrder: 5,
+        title: 'Xətti funksiya və onun qrafiki',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: '$y = kx + b$ şəkilli funksiya, bucaq əmsalı $k$, sərbəst hədd $b$ və düz xətlərin qarşılıqlı vəziyyəti.',
+        theoryMarkdown: `
+    ### 1. Xətti Funksiyanın Tərifi
+    $y = kx + b$ ($k$ və $b$ həqiqi ədədlərdir) şəklində verilmiş funksiyaya **xətti funksiya** deyilir.
+    - $k$ — **bucaq əmsalı** adlanır ($k = \text{tg} \alpha$, düz xəttin $Ox$ oxunun müsbət istiqaməti ilə əmələ gətirdiyi bucağın tangensidir).
+    - $b$ — qrafikin ordinat oxunu kəsdiyi nöqtənin koordinatıdır: $(0; b)$.
 
-  ### 2. Üçbucaqların Oxşarlıq Əlamətləri
-  - **I Əlamət (BB — İki bucağa görə):** Bir üçbucağın iki bucağı o birinin iki bucağına bərabərdirsə.
-  - **II Əlamət (TBT — İki tərəf və bucaq):** İki tərəf mütənasib və onlar arasındakı bucaqlar bərabərdirsə.
-  - **III Əlamət (TTT — Üç tərəf):** Üç tərəfin üçü də mütənasibdirsə.
+    ### 2. Funksiyanın Xassələri
+    - Əgər $k > 0$ olarsa, funksiya **artandır** (bucağı itidir).
+    - Əgər $k < 0$ olarsa, funksiya **azalandır** (bucağı kordur).
+    - Əgər $b = 0$ olarsa, $y = kx$ düz mütənasiblik asılılığıdır və qrafik koordinat başlanğıcından $O(0; 0)$ keçir.
 
-  ### 3. Perimetrlər və Sahələr Nisbəti
-  - Oxşar fiqurların perimetrlərinin nisbəti: $\frac{P_1}{P_2} = k$
-  - Oxşar fiqurların sahələrinin nisbəti oxşarlıq əmsalının kvadratına bərabərdir:
-  $$\frac{S_1}{S_2} = k^2$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u5-1",
-              "name": "Oxşar Üçbucaqların Sahələr Nisbəti",
-              "latex": "\\frac{S_1}{S_2} = k^2",
-              "description": "Sahələrin nisbəti oxşarlıq əmsalının kvadratına bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Oxşarlıq əmsalı (k)",
-              "definition": "Oxşar fiqurların uyğun xətti ölçülərinin nisbəti."
-        },
-        {
-              "term": "Fales teoremi",
-              "definition": "Bucaq tərəflərini kəsən paralel düz xətlərin mütənasibliyi haqqında həndəsi teorem."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u5-1",
-              "question": "İki oxşar üçbucağın oxşarlıq əmsalı $k = 3$-dür. Birinci üçbucağın sahəsi $45 \\text{ sm}^2$ olarsa, ikinci üçbucağın sahəsini tapın.",
-              "solution": "$\\frac{S_1}{S_2} = k^2 = 3^2 = 9 \\implies S_2 = \\frac{45}{9} = 5 \\text{ sm}^2$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u5-1",
-              "question": "Oxşarlıq əmsalı $k = 2$ olan iki üçbucağın sahələri nisbəti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "2"
-                    },
-                    {
-                          "key": "B",
-                          "text": "4"
-                    },
-                    {
-                          "key": "C",
-                          "text": "8"
-                    },
-                    {
-                          "key": "D",
-                          "text": "16"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Sahələr nisbəti k^2 = 2^2 = 4-dür."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-8-u6-pythagoras',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 6: Pifaqor teoremi və Fiqurların sahəsi',
-      unitOrder: 6,
-      title: 'Pifaqor teoremi və çoxbucaqlıların sahə düsturları',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Pifaqor teoremi $a^2 + b^2 = c^2$, düzbucaqlı üçbucaqda hündürlük və proyeksiyalar, paraleleqram, trapesiya və üçbucağın sahəsi.',
-      theoryMarkdown: `
-  ### 1. Pifaqor Teoremi
-  Düzbucaqlı üçbucaqda hipotenuzun kvadratı katetlərin kvadratları cəminə bərabərdir:
-  $$c^2 = a^2 + b^2 \implies c = \sqrt{a^2 + b^2}$$
-  Burada $a$ və $b$ katetlər, $c$ isə hipotenuzdur.
-  - Məşhur Pifaqor üçlükləri: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$.
-
-  ### 2. Düzbucaqlı Üçbucaqda Metrik Münasibətlər
-  Hipotenuza çəkilmiş $h_c$ hündürlüyü üçün:
-  $$h_c^2 = a_c \cdot b_c, \qquad a^2 = c \cdot a_c, \qquad b^2 = c \cdot b_c$$
-
-  ### 3. Fiqurların Sahə Düsturları
-  - **Üçbucaq:** $S = \frac{1}{2} a \cdot h_a$
-  - **Paraleleqram:** $S = a \cdot h_a = a \cdot b \cdot \sin \alpha$
-  - **Romb:** $S = a \cdot h = \frac{1}{2} d_1 d_2$
-  - **Trapesiyanın sahəsi:** $S = \frac{a + b}{2} \cdot h$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u6-1",
-              "name": "Pifaqor Teoremi",
-              "latex": "a^2 + b^2 = c^2",
-              "description": "Katetlərin kvadratları cəmi hipotenuzun kvadratına bərabərdir."
-        },
-        {
-              "id": "f-m8-u6-2",
-              "name": "Trapesiyanın Sahəsi",
-              "latex": "S = \\frac{a + b}{2} \\cdot h",
-              "description": "Orta xətlə hündürlüyün hasilinə bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Hipotenuz",
-              "definition": "Düzbucaqlı üçbucaqda düz bucağın qarşısındakı ən böyük tərəf."
-        },
-        {
-              "term": "Katet",
-              "definition": "Düz bucağı əmələ gətirən iki tərəfdən biri."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u6-1",
-              "question": "Katetləri 6 sm və 8 sm olan düzbucaqlı üçbucağın hipotenuzunu tapın.",
-              "solution": "$c = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10 \\text{ sm}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u6-1",
-              "question": "Oturacaqları 4 sm və 8 sm, hündürlüyü 5 sm olan trapesiyanın sahəsi neçə $\\text{sm}^2$-dir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "20"
-                    },
-                    {
-                          "key": "B",
-                          "text": "30"
-                    },
-                    {
-                          "key": "C",
-                          "text": "60"
-                    },
-                    {
-                          "key": "D",
-                          "text": "40"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "S = (4 + 8) / 2 * 5 = 12 / 2 * 5 = 6 * 5 = 30 sm^2."
-        }
-  ]
-    },
+    ### 3. İki Düz Xəttin Qarşılıqlı Vəziyyəti
+    İki düz xətt $y = k_1x + b_1$ və $y = k_2x + b_2$:
+    - $k_1 = k_2$ və $b_1 \neq b_2$ olduqda **paraleldir**.
+    - $k_1 \neq k_2$ olduqda tək bir nöqtədə **kəsişir**.
+    - $k_1 \cdot k_2 = -1$ olduqda **perpendikulyardır**.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u5-1",
+                "name": "Xətti Funksiya",
+                "latex": "y = kx + b",
+                "description": "Qrafiki düz xətdir, k bucaq əmsalı, b şaquli sürüşmədir."
+          },
+          {
+                "id": "f-m7-u5-2",
+                "name": "Düz Xətlərin Paralellik Şərti",
+                "latex": "k_1 = k_2 \\quad (b_1 \\neq b_2)",
+                "description": "Bucaq əmsalları bərabər olan düz xətlər paraleldir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Bucaq əmsalı (k)",
+                "definition": "Xətti funksiyanın mailliyini və istiqamətini müəyyən edən əmsal."
+          },
+          {
+                "term": "Artan funksiya",
+                "definition": "Arqumentin böyük qiymətinə funksiyanın daha böyük qiyməti uyğun gələn funksiya."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u5-1",
+                "question": "$y = 2x - 4$ düz xəttinin koordinat oxları ilə kəsişmə nöqtələrini tapın.",
+                "solution": "$Ox$ oxu ilə kəsişmə üçün $y = 0 \\implies 2x - 4 = 0 \\implies x = 2$, nöqtə: $(2; 0)$. $Oy$ oxu ilə kəsişmə üçün $x = 0 \\implies y = -4$, nöqtə: $(0; -4)$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u5-1",
+                "question": "$y = -3x + 5$ funksiyasında bucaq əmsalı $k$ neçəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "5"
+                      },
+                      {
+                            "key": "B",
+                            "text": "-3"
+                      },
+                      {
+                            "key": "C",
+                            "text": "3"
+                      },
+                      {
+                            "key": "D",
+                            "text": "-5"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "y = kx + b formulunda x-in əmsalı k-dır, yəni k = -3."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-8-u7-inequalities',
-      subjectId: 'riyaziyyat',
-      grade: 8,
-      unit: 'Bölmə 7: Bərabərsizliklər',
-      unitOrder: 7,
-      title: 'Birdəyişənli xətti bərabərsizliklər və bərabərsizliklər sistemi',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Ədədi bərabərsizliklərin xassələri, ədədi aralıqlar, mənfi ədədə vurulduqda işarənin dəyişməsi və bərabərsizliklər sistemi.',
-      theoryMarkdown: `
-  ### 1. Bərabərsizliklərin Əsas Xassələri
-  - Əgər $a > b$ və $b > c$ olarsa, onda $a > c$.
-  - Bərabərsizliyin hər iki tərəfinə eyni bir ədədi əlavə etdikdə və ya çıxdıqda bərabərsizliyin işarəsi dəyişməz.
-  - Bərabərsizliyin hər iki tərəfini **müsbət ədədə** vurduqda və ya böldükdə işarə dəyişməz:
-  $$a > b \quad \text{və} \quad c > 0 \implies ac > bc$$
-  - **Ən Vacib Qayda:** Bərabərsizliyin hər iki tərəfini **mənfi ədədə** vurduqda və ya böldükdə bərabərsizliyin işarəsi **əksinə dəyişir**:
-  $$a > b \quad \text{və} \quad c < 0 \implies ac < bc$$
+        id: 'lesson-math-7-u6-congruence',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 6: Həndəsənin ilkin anlayışları və Üçbucaqlar',
+        unitOrder: 6,
+        title: 'Üçbucaqların konqruyentlik əlamətləri və bərabəryanlı üçbucaq',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Üçbucaqların bərabərlik (konqruyentlik) əlamətləri (TBT, BTT, TTT), median, tənbölən və hündürlük xassələri.',
+        theoryMarkdown: `
+    ### 1. Üçbucaqların Konqruyentlik Əlamətləri
+    İki üçbucağın uyğun tərəfləri və uyğun bucaqları bərabərdirsə, bu üçbucaqlar **konqruyentdir** (bərabərdir): $\Delta ABC \cong \Delta A_1B_1C_1$.
+    - **I Əlamət (TBT — Tərəf-Bucaq-Tərəf):** Bir üçbucağın iki tərəfi və onlar arasındakı bucaq o biri üçbucağın uyğun iki tərəfi və onlar arasındakı bucağa bərabərdirsə.
+    - **II Əlamət (BTT — Bucaq-Tərəf-Bucaq):** Bir üçbucağın bir tərəfi və ona bitişik iki bucağı o birinin uyğun tərəfi və bucaqlarına bərabərdirsə.
+    - **III Əlamət (TTT — Tərəf-Tərəf-Tərəf):** Bir üçbucağın üç tərəfi o biri üçbucağın uyğun üç tərəfinə bərabərdirsə.
 
-  ### 2. Xətti Bərabərsizliklər Sistemi
-  Sistemə daxil olan hər iki bərabərsizlik ayrı-ayrılıqda həll olunur və həll çoxluqlarının **kəsişməsi** ($A \cap B$) tapılır.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m8-u7-1",
-              "name": "Mənfiyə Vurma Qaydası",
-              "latex": "-x < a \\implies x > -a",
-              "description": "Mənfi birə böldükdə işarə istiqamətini dəyişir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Ədədi aralıq",
-              "definition": "Koordinat düz xətti üzərində iki nöqtə arasındakı nöqtələr çoxluğu (məsələn: [a; b], (a; b))."
-        },
-        {
-              "term": "Qeyri-ciddi bərabərsizlik",
-              "definition": "Bərabərlik halı da mümkün olan bərabərsizlik (≥ və ya ≤)."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m8-u7-1",
-              "question": "$-3x + 9 \\le 0$ bərabərsizliyini həll edin.",
-              "solution": "$-3x \\le -9$. Hər iki tərəfi $-3$-ə böldüyümüz üçün işarə dəyişir: $x \\ge \\frac{-9}{-3} \\implies x \\ge 3$. Cavab: $[3; +\\infty)$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m8-u7-1",
-              "question": "$-2x > 8$ bərabərsizliyinin həlli hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "$x > -4$"
-                    },
-                    {
-                          "key": "B",
-                          "text": "$x < -4$"
-                    },
-                    {
-                          "key": "C",
-                          "text": "$x > 4$"
-                    },
-                    {
-                          "key": "D",
-                          "text": "$x < 4$"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Mənfi 2-yə böldükdə bərabərsizlik işarəsi dəyişir: x < -4."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-9-u1-quadratic-function',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 1: Funksiyalar və Qrafiklər',
-      unitOrder: 1,
-      title: 'Kvadratik funksiya və onun qrafiki (Parabola)',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Kvadratik funksiya $y = ax^2 + bx + c$, təpə nöqtəsi $(m; n)$, simmetriya oxu, parabolanın qollarının istiqaməti və ən böyük/ən kiçik qiyməti.',
-      theoryMarkdown: `
-  ### 1. Kvadratik Funksiyanın Tərifi
-  $a \neq 0$ olduqda $y = ax^2 + bx + c$ şəkilli funksiyaya **kvadratik funksiya** deyilir. Qrafiki **parabola** adlanır.
-  - $a > 0$ olduqda parabolanın qolları **yuxarı** yönəlir, funksiyanın ən kiçik qiyməti var.
-  - $a < 0$ olduqda parabolanın qolları **aşağı** yönəlir, funksiyanın ən böyük qiyməti var.
-
-  ### 2. Parabolanın Təpə Nöqtəsi
-  Parabolanın təpə nöqtəsi $M(m; n)$:
-  $$m = -\frac{b}{2a}, \qquad n = -\frac{D}{4a} = c - \frac{b^2}{4a} = y(m)$$
-  - Simmetriya oxunun tənliyi: $x = m = -\frac{b}{2a}$
-  - Parabolanın tam kvadrat ayrılmış şəkli: $y = a(x - m)^2 + n$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u1-1",
-              "name": "Parabolanın Təpə Nöqtəsinin Absisi",
-              "latex": "m = -\\frac{b}{2a}",
-              "description": "Simmetriya oxunun tənliyi və təpə nöqtəsinin x koordinatıdır."
-        },
-        {
-              "id": "f-m9-u1-2",
-              "name": "Təpə Nöqtəsinin Ordinatı",
-              "latex": "n = \\frac{4ac - b^2}{4a}",
-              "description": "Funksiyanın minimum (a>0) və ya maksimum (a<0) qiymətidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Parabola",
-              "definition": "İkinci dərəcəli əyri xətt, kvadratik funksiyanın qrafiki."
-        },
-        {
-              "term": "Simmetriya oxu",
-              "definition": "Parabolanı iki simmetrik hissəyə ayıran şaquli x = m düz xətti."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u1-1",
-              "question": "$y = x^2 - 4x + 3$ parabolanın təpə nöqtəsinin koordinatlarını tapın.",
-              "solution": "$a = 1, b = -4, c = 3$. $m = -\\frac{-4}{2 \\cdot 1} = 2$. $n = y(2) = 2^2 - 4(2) + 3 = 4 - 8 + 3 = -1$. Təpə nöqtəsi: $M(2; -1)$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u1-1",
-              "question": "$y = -2x^2 + 8x - 1$ parabolanın qolları hansı istiqamətə yönəlib?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "Yuxarı"
-                    },
-                    {
-                          "key": "B",
-                          "text": "Aşağı"
-                    },
-                    {
-                          "key": "C",
-                          "text": "Sağa"
-                    },
-                    {
-                          "key": "D",
-                          "text": "Sola"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "a = -2 < 0 olduğu üçün parabolanın qolları aşağı yönəlir."
-        }
-  ]
-    },
+    ### 2. Bərabəryanlı Üçbucağın Əsas Xassələri
+    - Oturacağına bitişik bucaqları bərabərdir: $\angle A = \angle C$.
+    - Təpədən oturacağa çəkilmiş median həm tənbölən, həm də hündürlükdür:
+    $$m_b = l_b = h_b$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u6-1",
+                "name": "Bərabəryanlı Üçbucaqda Median-Hündürlük",
+                "latex": "h_b = m_b = l_b",
+                "description": "Təpədən oturacağa çəkilmiş hündürlük, median və tənbölən üst-üstə düşür."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Konqruyentlik",
+                "definition": "Həndəsi fiqurların üst-üstə qoyulduqda tam bərabər olması."
+          },
+          {
+                "term": "Median",
+                "definition": "Üçbucağın təpəsini qarşı tərəfin ortası ilə birləşdirən parça."
+          },
+          {
+                "term": "Tənbölən",
+                "definition": "Bucağı iki bərabər hissəyə bölən şüa."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u6-1",
+                "question": "Bərabəryanlı üçbucağın təpə bucağı $50^\\circ$-dir. Oturacağa bitişik bucaqları tapın.",
+                "solution": "Oturacağa bitişik bucaqlar bərabərdir. Daxili bucaqların cəmi $180^\\circ$ olduğundan: $2\\alpha = 180^\\circ - 50^\\circ = 130^\\circ \\implies \\alpha = 65^\\circ$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u6-1",
+                "question": "Bərabəryanlı üçbucağın perimetri 20 sm, yan tərəfi 7 sm olarsa, oturacağı neçə sm-dir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "6 sm"
+                      },
+                      {
+                            "key": "B",
+                            "text": "7 sm"
+                      },
+                      {
+                            "key": "C",
+                            "text": "8 sm"
+                      },
+                      {
+                            "key": "D",
+                            "text": "13 sm"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "Yan tərəflər 7 sm və 7 sm-dir. Cəm = 14 sm. Oturacaq = 20 - 14 = 6 sm."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-9-u2-circles',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 2: Çevrə və Dairə',
-      unitOrder: 2,
-      title: 'Çevrədə bucaqlar, vətərlər və kəsənlər',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Mərkəzi və daxilə çəkilmiş bucaqlar, çevrəyə toxunan və kəsən xassələri, kəsişən vətərlər teoremi.',
-      theoryMarkdown: `
-  ### 1. Mərkəzi və Daxilə Çəkilmiş Bucaqlar
-  - **Mərkəzi bucaq:** Təpəsi çevrə mərkəzində olan bucaqdır və söykəndiyi qövsün dərəcə ölçüsünə bərabərdir: $\angle AOB = \cup AB$.
-  - **Daxilə çəkilmiş bucaq:** Təpəsi çevrə üzərində olub tərəfləri vətərlər olan bucaqdır və söykəndiyi qövsün yarısına bərabərdir:
-  $$\angle ACB = \frac{1}{2} \cup AB$$
-  - Eyni qövsə söykənən daxilə çəkilmiş bucaqlar bərabərdir.
-  - Diametrə söykənən daxilə çəkilmiş bucaq düz bucaqdır ($90^\circ$).
+        id: 'lesson-math-7-u7-system-equations',
+        subjectId: 'riyaziyyat',
+        grade: 7,
+        unit: 'Bölmə 7: İkidəyişənli xətti tənliklər sistemi',
+        unitOrder: 7,
+        title: 'İkidəyişənli xətti tənliklər sisteminin həlli üsulları',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Xətti tənliklər sistemi, əvəzetmə üsulu, cəbri toplama üsulu və sistemin həndəsi mənası.',
+        theoryMarkdown: `
+    ### 1. İkidəyişənli Xətti Tənliklər Sistemi
+    Standart şəkli:
+    $$\begin{cases} a_1x + b_1y = c_1 \\ a_2x + b_2y = c_2 \end{cases}$$
+    Sistemin həlli hər iki tənliyi eyni zamanda doğru bərabərliyə çevirən $(x; y)$ ədədlər cütüdür.
 
-  ### 2. Kəsişən Vətərlərin Xassəsi
-  Çevrə daxilində kəsişən iki $AB$ və $CD$ vətəri üçün parçaların hasili bərabərdir:
-  $$AP \cdot PB = CP \cdot PD$$
+    ### 2. Həll Üsulları
+    - **Əvəzetmə üsulu:** Tənliklərin birindən bir dəyişən digəri ilə ifadə olunur və digər tənlikdə yerinə yazılır.
+    - **Cəbri toplama üsulu:** Dəyişənlərdən birinin əmsalları əks ədədlərə gətirilir və tənliklər tərəf-tərəfə toplanaraq birdəyişənli tənlik alınır.
 
-  ### 3. Toxunan və Kəsən Teoremi
-  Eyni nöqtədən çəkilmiş $AK$ toxunanı və $AB$ kəsəni üçün:
-  $$AK^2 = AB \cdot AC$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u2-1",
-              "name": "Daxilə Çəkilmiş Bucaq",
-              "latex": "\\angle ACB = \\frac{1}{2} \\cup AB",
-              "description": "Daxilə çəkilmiş bucaq söykəndiyi qövsün yarısına bərabərdir."
-        },
-        {
-              "id": "f-m9-u2-2",
-              "name": "Toxunan və Kəsən Əlaqəsi",
-              "latex": "AK^2 = AB \\cdot AC",
-              "description": "Toxunanın kvadratı kəsənlə onun xarici hissəsinin hasilinə bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Vətər",
-              "definition": "Çevrə üzərindəki iki ixtiyari nöqtəni birləşdirən düz xətt parçası."
-        },
-        {
-              "term": "Toxunan",
-              "definition": "Çevrə ilə yalnız bir ortaq nöqtəsi olan düz xətt."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u2-1",
-              "question": "Çevrədə daxilə çəkilmiş bucaq $35^\\circ$-dir. Onun söykəndiyi qövsün dərəcə ölçüsünü tapın.",
-              "solution": "Daxilə çəkilmiş bucaq qövsün yarısına bərabər olduğundan: $\\cup AB = 2 \\cdot 35^\\circ = 70^\\circ$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u2-1",
-              "question": "Diametrə söykənən daxilə çəkilmiş bucaq neçə dərəcədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "45°"
-                    },
-                    {
-                          "key": "B",
-                          "text": "60°"
-                    },
-                    {
-                          "key": "C",
-                          "text": "90°"
-                    },
-                    {
-                          "key": "D",
-                          "text": "180°"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Diametr çevrəni 180°-lik yarımçevrəyə bölür, onun yarısı 90°-dir."
-        }
-  ]
-    },
+    ### 3. Həllərin Sayı
+    - $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$ olarsa, sistemin **yeganə həlli** var (düz xətlər kəsişir).
+    - $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$ olarsa, sistemin **həlli yoxdur** (düz xətlər paraleldir).
+    - $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$ olarsa, sistemin **sonsuz sayda həlli** var (düz xətlər üst-üstə düşür).
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m7-u7-1",
+                "name": "Sistemin Yeganə Həll Şərti",
+                "latex": "\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}",
+                "description": "Əmsallar qeyri-mütənasib olduqda sistemin yeganə həlli mövcuddur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Tənliklər sistemi",
+                "definition": "Bir neçə naməlum dəyişəni olan və eyni zamanda ödənməli olan bərabərliklər qrupu."
+          },
+          {
+                "term": "Cəbri toplama",
+                "definition": "Tənlikləri tərəf-tərəfə toplayaraq naməlumlardan birini yox etmə metodu."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m7-u7-1",
+                "question": "$\\begin{cases} x + y = 10 \\\\ x - y = 4 \\end{cases}$ sistemini həll edin.",
+                "solution": "Tərəf-tərəfə toplasaq: $(x + x) + (y - y) = 10 + 4 \\implies 2x = 14 \\implies x = 7$. Buradan: $y = 10 - 7 = 3$. Cavab: $(7; 3)$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m7-u7-1",
+                "question": "$\\begin{cases} 2x + y = 7 \\\\ y = 1 \\end{cases}$ sistemindən $x$-i tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "2"
+                      },
+                      {
+                            "key": "B",
+                            "text": "3"
+                      },
+                      {
+                            "key": "C",
+                            "text": "4"
+                      },
+                      {
+                            "key": "D",
+                            "text": "5"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "2x + 1 = 7 -> 2x = 6 -> x = 3."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-9-u3-systems-intervals',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 3: Tənliklər və Bərabərsizliklər sistemi',
-      unitOrder: 3,
-      title: 'İkidərəcəli tənliklər sistemi və intervallar üsulu',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'İkidərəcəli tənliklər sistemi, kvadrat bərabərsizliklər və rasional bərabərsizliklərin intervallar üsulu ilə həlli.',
-      theoryMarkdown: `
-  ### 1. İkidərəcəli Tənliklər Sistemi
-  Biri xətti, digəri ikidərəcəli olan tənliklər sistemində xətti tənlikdən bir dəyişən digəri ilə ifadə olunub ikidərəcəli tənlikdə yerinə yazılır (əvəzetmə üsulu).
+        id: 'lesson-math-8-u1-roots',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 1: Kvadrat köklər və Həqiqi ədədlər',
+        unitOrder: 1,
+        title: 'Hesabi kvadrat kökün xassələri və kökaltı ifadələr',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Kvadrat kökün əsas xassələri, vuruğun kök altına salınması və kökdən çıxarılması, məxrəcin irrasionallıqdan azad edilməsi.',
+        theoryMarkdown: `
+    ### 1. Kvadrat Kökün Əsas Xassələri
+    $a \ge 0$ və $b \ge 0$ olduqda:
+    - **Hasilin kökü:** $\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$
+    - **Nisbətin kökü:** $\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}} \quad (b > 0)$
+    - **Dəyişənin kvadratının kökü:** $\sqrt{a^2} = |a|$
 
-  ### 2. Kvadrat Bərabərsizliklər
-  $ax^2 + bx + c > 0$ və ya $< 0$ şəkilli bərabərsizlikləri həll etmək üçün:
-  1. $ax^2 + bx + c = 0$ tənliyinin $x_1, x_2$ kökləri tapılır.
-  2. Ədəd oxu $x_1$ və $x_2$ nöqtələri ilə intervallara bölünür.
-  3. Hər intervalda funksiyanın işarəsi yoxlanılır.
+    ### 2. Vuruğun Kök İşarəsi Xaricinə Çıxarılması və Daxil Edilməsi
+    - Kökdən çıxarma: $\sqrt{a^2 b} = |a|\sqrt{b} = a\sqrt{b} \quad (a \ge 0)$
+    - Kök altına salma: $a\sqrt{b} = \sqrt{a^2 b} \quad (a \ge 0)$
 
-  ### 3. İntervallar Üsulu
-  $\frac{P(x)}{Q(x)} > 0$ şəklində olan bərabərsizliklərdə surət və məxrəcin sıfırları ədəd oxunda qeyd edilir. Tək dərəcəli sıfırlardan keçdikdə işarə əksinə dəyişir, cüt dərəcəli köklərdə isə işarə sabit qalır.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u3-1",
-              "name": "Kvadrat Üçhədlinin Vuruqlara Ayrılması",
-              "latex": "ax^2 + bx + c = a(x - x_1)(x - x_2)",
-              "description": "Köklər məlum olduqda üçhədli xətti vuruqlara parçalanır."
-        }
-  ],
-      glossary: [
-        {
-              "term": "İntervallar üsulu",
-              "definition": "Bərabərsizlikləri həll etmək üçün ədəd oxunu sıfır nöqtələri ilə hissələrə bölmə metodu."
-        },
-        {
-              "term": "Qeyri-xətti sistem",
-              "definition": "Heç olmasa bir tənliyi ikidərəcəli və ya daha yüksək dərəcəli olan sistem."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u3-1",
-              "question": "$(x - 2)(x - 5) < 0$ bərabərsizliyini həll edin.",
-              "solution": "Sıfırlar: $x_1 = 2, x_2 = 5$. İntervallar: $(-\\infty; 2), (2; 5), (5; +\\infty)$. İşarələr sıra ilə: $+ , - , +$. Mənfi aralıq $(2; 5)$-dir."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u3-1",
-              "question": "$x^2 - 9 \\le 0$ bərabərsizliyinin həlli hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "[-3; 3]"
-                    },
-                    {
-                          "key": "B",
-                          "text": "(-∞; -3] ∪ [3; +∞)"
-                    },
-                    {
-                          "key": "C",
-                          "text": "[0; 3]"
-                    },
-                    {
-                          "key": "D",
-                          "text": "(-3; 3)"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "(x-3)(x+3) <= 0 parabolanın qolları yuxarıdır, sıfırdan kiçik və bərabər hissə [-3; 3] parçasıdır."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-9-u4-progressions',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 4: Ədədi ardıcıllıqlar. Silsilələr',
-      unitOrder: 4,
-      title: 'Ədədi və həndəsi silsilə düsturları',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Ədədi silsilənin fərqi $d$, $n$-ci həddi və cəm düsturu $S_n$; həndəsi silsilənin vuruğu $q$ və sonsuz azalan həndəsi silsilənin cəmi.',
-      theoryMarkdown: `
-  ### 1. Ədədi Silsilə
-  İkincidən başlayaraq hər bir həddi özündən əvvəlki hədlə eyni bir $d$ ədədinin (silsilə fərqi) cəminə bərabər olan ardıcıllığa **ədədi silsilə** deyilir.
-  - **$n$-ci həddin düsturu:**
-  $$a_n = a_1 + (n - 1)d$$
-  - **Əsas xassə:** $a_n = \frac{a_{n-1} + a_{n+1}}{2}$
-  - **İlk $n$ həddin cəmi:**
-  $$S_n = \frac{a_1 + a_n}{2} \cdot n = \frac{2a_1 + (n - 1)d}{2} \cdot n$$
-
-  ### 2. Həndəsi Silsilə
-  Hər bir həddi özündən əvvəlki həddin sıfırdan fərqli eyni bir $q$ ədədinə (silsilə vuruğu) hasilinə bərabər olan ardıcıllıqdır:
-  - **$n$-ci həddin düsturu:**
-  $$b_n = b_1 \cdot q^{n-1}$$
-  - **İlk $n$ həddin cəmi:**
-  $$S_n = \frac{b_1(q^n - 1)}{q - 1} \quad (q \neq 1)$$
-  - **Sonsuz azalan həndəsi silsilənin cəmi ($|q| < 1$):**
-  $$S = \frac{b_1}{1 - q}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u4-1",
-              "name": "Ədədi Silsilənin N-ci Həddi",
-              "latex": "a_n = a_1 + (n - 1)d",
-              "description": "İstənilən hədd birinci hədd və fərq vasitəsilə tapılır."
-        },
-        {
-              "id": "f-m9-u4-2",
-              "name": "Sonsuz Azalan Həndəsi Silsilə Cəmi",
-              "latex": "S = \\frac{b_1}{1 - q} \\quad (|q| < 1)",
-              "description": "Vuruğu birdən kiçik olduqda sonsuz hədlərin limit cəmidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Silsilə fərqi (d)",
-              "definition": "Ədədi silsilənin qonşu hədlərinin sabit fərqi."
-        },
-        {
-              "term": "Silsilə vuruğu (q)",
-              "definition": "Həndəsi silsilənin qonşu hədlərinin nisbəti."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u4-1",
-              "question": "İlk həddi $a_1 = 3$, fərqi $d = 4$ olan ədədi silsilənin 10-cu həddini tapın.",
-              "solution": "$a_{10} = a_1 + 9d = 3 + 9 \\cdot 4 = 3 + 36 = 39$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u4-1",
-              "question": "$b_1 = 6, q = \\frac{1}{2}$ olan sonsuz azalan həndəsi silsilənin cəmini tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "3"
-                    },
-                    {
-                          "key": "B",
-                          "text": "6"
-                    },
-                    {
-                          "key": "C",
-                          "text": "12"
-                    },
-                    {
-                          "key": "D",
-                          "text": "18"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "S = b1 / (1 - q) = 6 / (1 - 0.5) = 6 / 0.5 = 12."
-        }
-  ]
-    },
+    ### 3. Məxrəcin İrrasionallıqdan Azad Edilməsi
+    Kəsrin məxrəcini qoşma ifadəyə vuraraq kökdən azad edirlər:
+    $$\frac{1}{\sqrt{a} - \sqrt{b}} = \frac{\sqrt{a} + \sqrt{b}}{(\sqrt{a} - \sqrt{b})(\sqrt{a} + \sqrt{b})} = \frac{\sqrt{a} + \sqrt{b}}{a - b}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u1-1",
+                "name": "Hasilin Kvadrat Kökü",
+                "latex": "\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b} \\quad (a, b \\ge 0)",
+                "description": "Vuruqların hasillərinin kökü onların köklərinin hasilinə bərabərdir."
+          },
+          {
+                "id": "f-m8-u1-2",
+                "name": "Kök və Modul Əlaqəsi",
+                "latex": "\\sqrt{a^2} = |a|",
+                "description": "İxtiyari ədədin kvadratının kökü onun moduluna bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Qoşma ifadə",
+                "definition": "(√a - √b) üçün (√a + √b) ifadəsi, hasili rasional ədəd verən ifadə cütü."
+          },
+          {
+                "term": "İrrasionallıq",
+                "definition": "Kökdən tam çıxmayan ifadələrin varlığı."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u1-1",
+                "question": "$\\sqrt{50}$ ifadəsindən vuruğu kök xaricinə çıxarın.",
+                "solution": "$\\sqrt{50} = \\sqrt{25 \\cdot 2} = \\sqrt{25} \\cdot \\sqrt{2} = 5\\sqrt{2}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u1-1",
+                "question": "$\\sqrt{12} \\cdot \\sqrt{3}$ hasilini hesablayın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "6"
+                      },
+                      {
+                            "key": "B",
+                            "text": "12"
+                      },
+                      {
+                            "key": "C",
+                            "text": "36"
+                      },
+                      {
+                            "key": "D",
+                            "text": "$\\sqrt{15}$"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "√12 * √3 = √(12 * 3) = √36 = 6."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-9-u5-trigonometry',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 5: Triqonometriyanın əsasları',
-      unitOrder: 5,
-      title: 'İti bucağın triqonometrik funksiyaları və əsas eyniliklər',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Düzbucaqlı üçbucaqda $\sin, \cos, \text{tg}, \text{ctg}$ tərifləri, əsas triqonometrik eynilik və xüsusi bucaqlar ($30^\circ, 45^\circ, 60^\circ$).',
-      theoryMarkdown: `
-  ### 1. Triqonometrik Funksiyaların Tərifi
-  Düzbucaqlı üçbucaqda $\alpha$ iti bucağı üçün:
-  - **Sinus ($\sin \alpha$):** Qarşıdakı katetin hipotenuza nisbəti: $\sin \alpha = \frac{a}{c}$
-  - **Kosinus ($\cos \alpha$):** Bitişik katetin hipotenuza nisbəti: $\cos \alpha = \frac{b}{c}$
-  - **Tangens ($\text{tg} \alpha$):** Qarşıdakı katetin bitişik katetə nisbəti: $\text{tg} \alpha = \frac{a}{b} = \frac{\sin \alpha}{\cos \alpha}$
-  - **Kotangens ($\text{ctg} \alpha$):** Bitişik katetin qarşıdakı katetə nisbəti: $\text{ctg} \alpha = \frac{b}{a} = \frac{\cos \alpha}{\sin \alpha}$
+        id: 'lesson-math-8-u2-quadrilaterals',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 2: Dördbucaqlılar',
+        unitOrder: 2,
+        title: 'Paraleleqram, romb, düzbucaqlı və trapesiya',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Qabarıq dördbucaqlılar, daxili bucaqların cəmi (360°), paraleleqramın xassələri və əlamətləri, trapesiyanın orta xətti.',
+        theoryMarkdown: `
+    ### 1. Paraleleqram və Onun Xassələri
+    Qarşı tərəfləri cüt-cüt paralel olan dördbucaqlıya **paraleleqram** deyilir.
+    - Qarşı tərəfləri və qarşı bucaqları bərabərdir: $AB = CD$, $\angle A = \angle C$.
+    - Bir tərəfə bitişik bucaqların cəmi $180^\circ$-dir: $\angle A + \angle B = 180^\circ$.
+    - Diaqonalları kəsişmə nöqtəsində yarıya bölünür.
+    - Diaqonallarla tərəflər arasında münasibət: $d_1^2 + d_2^2 = 2(a^2 + b^2)$.
 
-  ### 2. Əsas Triqonometrik Eyniliklər
-  - $\sin^2 \alpha + \cos^2 \alpha = 1$
-  - $\text{tg} \alpha \cdot \text{ctg} \alpha = 1$
-  - $1 + \text{tg}^2 \alpha = \frac{1}{\cos^2 \alpha}$
+    ### 2. Romb və Düzbucaqlı
+    - **Düzbucaqlı:** Bütün bucaqları düz bucaq ($90^\circ$) olan paraleleqramdır. Diaqonalları bərabərdir: $d_1 = d_2$.
+    - **Romb:** Bütün tərəfləri bərabər olan paraleleqramdır. Diaqonalları perpendikulyardır ($d_1 \perp d_2$) və tənböləndir.
 
-  ### 3. Xüsusi Bucaqların Qiymətləri
-  - $\sin 30^\circ = \frac{1}{2}, \quad \cos 30^\circ = \frac{\sqrt{3}}{2}, \quad \text{tg} 30^\circ = \frac{\sqrt{3}}{3}$
-  - $\sin 45^\circ = \frac{\sqrt{2}}{2}, \quad \cos 45^\circ = \frac{\sqrt{2}}{2}, \quad \text{tg} 45^\circ = 1$
-  - $\sin 60^\circ = \frac{\sqrt{3}}{2}, \quad \cos 60^\circ = \frac{1}{2}, \quad \text{tg} 60^\circ = \sqrt{3}$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u5-1",
-              "name": "Əsas Triqonometrik Eynilik",
-              "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
-              "description": "Eyni bucağın sinusunun və kosinusunun kvadratları cəmi vahidə bərabərdir."
-        },
-        {
-              "id": "f-m9-u5-2",
-              "name": "Tangens və Kotangens Hasilinin Eyniliyi",
-              "latex": "\\text{tg} \\alpha \\cdot \\text{ctg} \\alpha = 1",
-              "description": "Tangens və kotangens qarşılıqlı tərs kəmiyyətlərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Sinus",
-              "definition": "Qarşıdakı katetin hipotenuza olan nisbəti."
-        },
-        {
-              "term": "Kosinus",
-              "definition": "Bitişik katetin hipotenuza olan nisbəti."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u5-1",
-              "question": "İti bucaq üçün $\\sin \\alpha = \\frac{3}{5}$ olarsa, $\\cos \\alpha$-nı tapın.",
-              "solution": "$\\cos^2 \\alpha = 1 - \\sin^2 \\alpha = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25} \\implies \\cos \\alpha = \\frac{4}{5}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u9-1",
-              "question": "$\\sin^2 40^\\circ + \\cos^2 40^\\circ$ ifadəsinin qiyməti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "0"
-                    },
-                    {
-                          "key": "B",
-                          "text": "1"
-                    },
-                    {
-                          "key": "C",
-                          "text": "2"
-                    },
-                    {
-                          "key": "D",
-                          "text": "0.5"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Əsas triqonometrik eyniliyə görə istənilən bucaq üçün sin^2(x) + cos^2(x) = 1."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-9-u6-vectors',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 6: Vektorlar və Hərəkət',
-      unitOrder: 6,
-      title: 'Vektorlar və onlar üzərində əməllər. Skalyar hasil',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'İstiqamətlənmiş parça (vektor), vektorun modulu, toplanması (üçbucaq və paraleleqram qaydası), skalyar hasil və perpendikulyarlıq şərti.',
-      theoryMarkdown: `
-  ### 1. Vektor Anlayışı
-  Ədədi qiyməti və istiqaməti olan istiqamətlənmiş parçaya **vektor** deyilir: $\vec{a}$ və ya $\vec{AB}$.
-  - Başlanğıcı $A(x_1; y_1)$ və sonu $B(x_2; y_2)$ olan vektorun koordinatları:
-  $$\vec{AB} = (x_2 - x_1; y_2 - y_1)$$
-  - **Vektorun uzunluğu (modulu):**
-  $$|\vec{a}| = \sqrt{x^2 + y^2}$$
-
-  ### 2. Vektorların Toplanması və Çıxılması
-  - $\vec{a}(x_1; y_1) + \vec{b}(x_2; y_2) = (x_1 + x_2; y_1 + y_2)$
-  - Ədədə vurma: $k \cdot \vec{a} = (k x_1; k y_1)$
-
-  ### 3. Skalyar Hasil
-  İki vektorun skalyar hasili onların modulları ilə aralarındakı bucağın kosinusu hasilinə bərabərdir:
-  $$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \cdot \cos \varphi = x_1 x_2 + y_1 y_2$$
-  - **Perpendikulyarlıq şərti:** İki vektor yalnız və yalnız o zaman perpendikulyardır ki, onların skalyar hasili sıfıra bərabər olsun:
-  $$\vec{a} \perp \vec{b} \iff x_1 x_2 + y_1 y_2 = 0$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u6-1",
-              "name": "Vektorun Uzunluğu",
-              "latex": "|\\vec{a}| = \\sqrt{x^2 + y^2}",
-              "description": "Koordinatlarının kvadratları cəminin köküdür."
-        },
-        {
-              "id": "f-m9-u6-2",
-              "name": "Skalyar Hasil",
-              "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
-              "description": "Uyğun koordinatların hasillərinin cəmidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Vektor",
-              "definition": "Həm modulu, həm də fəzada istiqaməti olan yönəlmiş parça."
-        },
-        {
-              "term": "Skalyar hasil",
-              "definition": "İki vektorun hasilindən alınan həqiqi ədəd."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u6-1",
-              "question": "$\\vec{a}(3; 4)$ vektorunun uzunluğunu tapın.",
-              "solution": "$|\\vec{a}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u6-1",
-              "question": "$\\vec{a}(2; -3)$ və $\\vec{b}(3; 2)$ vektorlarının skalyar hasili neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "0"
-                    },
-                    {
-                          "key": "B",
-                          "text": "6"
-                    },
-                    {
-                          "key": "C",
-                          "text": "12"
-                    },
-                    {
-                          "key": "D",
-                          "text": "-12"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "a · b = 2*3 + (-3)*2 = 6 - 6 = 0 (vektorlar perpendikulyardır)."
-        }
-  ]
-    },
+    ### 3. Trapesiyanın Orta Xətti
+    Yalnız iki qarşı tərəfi paralel olan dördbucaqlıya **trapesiyanın** deyilir.
+    - Yan tərəflərin ortasını birləşdirən parçaya **orta xətt** deyilir.
+    - Orta xətt oturacaqlara paralel olub, onların cəminin yarısına bərabərdir:
+    $$l = \frac{a + b}{2}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u2-1",
+                "name": "Trapesiyanın Orta Xətti",
+                "latex": "l = \\frac{a + b}{2}",
+                "description": "Orta xətt oturacaqların ədədi ortasına bərabərdir."
+          },
+          {
+                "id": "f-m8-u2-2",
+                "name": "Paraleleqramın Diaqonalları",
+                "latex": "d_1^2 + d_2^2 = 2(a^2 + b^2)",
+                "description": "Diaqonalların kvadratları cəmi tərəflərin kvadratları cəminin iki mislidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Paraleleqram",
+                "definition": "Qarşı tərəfləri paralel olan qabarıq dördbucaqlı."
+          },
+          {
+                "term": "Trapesiyanın orta xətti",
+                "definition": "Yan tərəflərin orta nöqtələrini birləşdirən xətt parçası."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u2-1",
+                "question": "Trapesiyanın oturacaqları 8 sm və 14 sm-dir. Onun orta xəttinin uzunluğunu tapın.",
+                "solution": "$l = \\frac{a + b}{2} = \\frac{8 + 14}{2} = \\frac{22}{2} = 11 \\text{ sm}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u2-1",
+                "question": "Paraleleqramın bucaqlarından biri $60^\\circ$ olarsa, onunla qonşu olan bucağı tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "60°"
+                      },
+                      {
+                            "key": "B",
+                            "text": "90°"
+                      },
+                      {
+                            "key": "C",
+                            "text": "120°"
+                      },
+                      {
+                            "key": "D",
+                            "text": "150°"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Bir tərəfə bitişik bucaqların cəmi 180°-dir: 180° - 60° = 120°."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-9-u7-combinatorics',
-      subjectId: 'riyaziyyat',
-      grade: 9,
-      unit: 'Bölmə 7: Birləşmələr nəzəriyyəsi və Ehtimal',
-      unitOrder: 7,
-      title: 'Permutasiya, kombinezon və ehtimal nəzəriyyəsi',
-      order: 1,
-      readTimeMinutes: 9,
-      difficulty: 2,
-      summary: 'Faktorial $n!$, vurma və toplama qaydaları, yerdəyişmələr (permutasiya $P_n$), qruplaşdırmalar (kombinezon $C_n^k$) və klassik ehtimal.',
-      theoryMarkdown: `
-  ### 1. Faktorial və Kombinatorika Qaydaları
-  $n$ natural ədədinin faktorialı 1-dən $n$-ə qədər olan natural ədədlərin hasilidir:
-  $$n! = 1 \cdot 2 \cdot 3 \dots n, \qquad 0! = 1$$
-  - **Toplama qaydası:** Əgər $A$ elementi $m$ üsulla, $B$ elementi $k$ üsulla seçilə bilərsə, "$A$ və ya $B$" elementi $m + k$ üsulla seçilə bilər.
-  - **Vurma qaydası:** Əgər $A$ $m$ üsulla, onun ardınca $B$ $k$ üsulla seçilirsə, "$A$ və $B$" cütü $m \cdot k$ üsulla seçilə bilər.
+        id: 'lesson-math-8-u3-rational-fractions',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 3: Rasional kəsrlər',
+        unitOrder: 3,
+        title: 'Rasional kəsrlər və onlar üzərində əməllər',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Cəbri kəsrlər, kəsrin mənası olan qiymətlər çoxluğu, kəsrlərin ixtisarı, toplanması və vurulması.',
+        theoryMarkdown: `
+    ### 1. Rasional Kəsr Nədir?
+    Surət və məxrəci çoxhədli olan ifadəyə **rasional kəsr** deyilir:
+    $$\frac{P(x)}{Q(x)} \quad (Q(x) \neq 0)$$
+    Məxrəci sıfıra çevirən qiymətlərdə kəsrin mənası yoxdur.
 
-  ### 2. Yerdəyişmə və Qrup
-  - **Permutasiya ($P_n$):** $n$ elementli çoxluğun elementlərinin nizamlı düzülüşlərinin sayıdır:
-  $$P_n = n!$$
-  - **Kombinezon ($C_n^k$):** $n$ elementdən sırası nəzərə alınmadan seçilən $k$ elementli alt çoxluqların sayıdır:
-  $$C_n^k = \frac{n!}{k!(n - k)!}$$
+    ### 2. Kəsrlərin İxtisarı
+    Kəsri ixtisar etmək üçün surət və məxrəc vuruqlara ayrılır və ortaq vuruqlar silinir:
+    $$\frac{x^2 - 4}{x + 2} = \frac{(x - 2)(x + 2)}{x + 2} = x - 2 \quad (x \neq -2)$$
 
-  ### 3. Klassik Ehtimal
-  $$P(A) = \frac{m}{n} = \frac{\text{əlverişli hallar}}{\text{bütün mümkün hallar}}$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m9-u7-1",
-              "name": "Kombinezon Düsturu",
-              "latex": "C_n^k = \\frac{n!}{k!(n - k)!}",
-              "description": "n elementdən sırasız k elementi seçmə üsullarının sayı."
-        },
-        {
-              "id": "f-m9-u7-2",
-              "name": "Permutasiya Düsturu",
-              "latex": "P_n = n!",
-              "description": "n müxtəlif elementin yerdəyişmələrinin sayı."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Faktorial",
-              "definition": "1-dən n-ə qədər bütün natural ədədlərin hasili."
-        },
-        {
-              "term": "Kombinezon",
-              "definition": "Elementlərin düzülüş sırası vacib olmayan seçim birləşməsi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m9-u7-1",
-              "question": "5 nəfərdən 2 nəfərlik növbətçi qrupunu neçə müxtəlif üsulla seçmək olar?",
-              "solution": "Sıra vacib olmadığı üçün kombinezon tətbiq olunur: $C_5^2 = \\frac{5!}{2! \\cdot 3!} = \\frac{5 \\cdot 4}{2 \\cdot 1} = 10$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m9-u7-1",
-              "question": "3 kitab rəfə neçə müxtəlif ardıcıllıqla düzülə bilər?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "3"
-                    },
-                    {
-                          "key": "B",
-                          "text": "6"
-                    },
-                    {
-                          "key": "C",
-                          "text": "9"
-                    },
-                    {
-                          "key": "D",
-                          "text": "12"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "P3 = 3! = 1 * 2 * 3 = 6."
-        }
-  ]
-    },
+    ### 3. Kəsrlərin Toplanması və Çıxılması
+    Əvvəlcə məxrəclər vuruqlara ayrılır, ƏKOB tapılaraq ortaq məxrəcə gətirilir:
+    $$\frac{A}{C} \pm \frac{B}{D} = \frac{A \cdot D \pm B \cdot C}{C \cdot D}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u3-1",
+                "name": "Kəsrlərin Vurulması",
+                "latex": "\\frac{A}{B} \\cdot \\frac{C}{D} = \\frac{A \\cdot C}{B \\cdot D}",
+                "description": "Surət surətə, məxrəc məxrəcə vurulur."
+          },
+          {
+                "id": "f-m8-u3-2",
+                "name": "Kəsrlərin Bölünməsi",
+                "latex": "\\frac{A}{B} : \\frac{C}{D} = \\frac{A \\cdot D}{B \\cdot C}",
+                "description": "Bölünən kəsr bölənin tərsinə vurulur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Rasional kəsr",
+                "definition": "Məxrəcində dəyişən olan cəbri kəsr."
+          },
+          {
+                "term": "Mümkün qiymətlər çoxluğu",
+                "definition": "Kəsrin məxrəcini sıfır etməyən dəyişənin qiymətləri."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u3-1",
+                "question": "$\\frac{x^2 - 9}{2x - 6}$ kəsrini ixtisar edin.",
+                "solution": "Surəti müxtəsər vurma ilə açaq: $(x - 3)(x + 3)$. Məxrəcdən 2 çıxaraq: $2(x - 3)$. Ortaq $(x-3)$-ü ixtisar etsək: $\\frac{x + 3}{2}$ qalır."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u3-1",
+                "question": "$\\frac{5}{x - 4}$ kəsrinin hansı qiymətdə mənası yoxdur?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "x = 0"
+                      },
+                      {
+                            "key": "B",
+                            "text": "x = -4"
+                      },
+                      {
+                            "key": "C",
+                            "text": "x = 4"
+                      },
+                      {
+                            "key": "D",
+                            "text": "x = 5"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Məxrəc sıfır ola bilməz: x - 4 = 0 -> x = 4 qiymətində kəsrin mənası yoxdur."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-10-u1-functions',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 1: Funksiyalar və onların xassələri',
-      unitOrder: 1,
-      title: 'Təyin oblastı, qiymətlər çoxluğu, tək və cüt funksiyalar',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Funksiyanın təyin oblastı $D(f)$, qiymətlər çoxluğu $E(f)$, tək və cüt funksiyaların qrafik simmetriyası, mürəkkəb və tərs funksiya.',
-      theoryMarkdown: `
-  ### 1. Təyin Oblastı və Qiymətlər Çoxluğu
-  - **Təyin oblastı $D(f)$:** Arqumentin ($x$) funksiyanın mənası olduğu bütün mümkün qiymətlər çoxluğudur. Kökaltı ($2n$ dərəcə) ifadələr qeyri-mənfi, məxrəclər sıfırdan fərqli olmalıdır.
-  - **Qiymətlər çoxluğu $E(f)$:** Dəyişən $x$ bütün təyin oblastını aşarkən funksiyanın ($y$) aldığı qiymətlər toplusudur.
+        id: 'lesson-math-8-u4-quadratic',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 4: Kvadrat tənliklər',
+        unitOrder: 4,
+        title: 'Kvadrat tənliyin kök düsturu və Viyet teoremi',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Kvadrat tənlik $ax^2 + bx + c = 0$, diskriminant $D$, köklər düsturu və köklərlə əmsallar arasındakı əlaqə (Viyet teoremi).',
+        theoryMarkdown: `
+    ### 1. Kvadrat Tənliyin Tərifi
+    $a \neq 0$ olduqda $ax^2 + bx + c = 0$ şəklində olan tənliyə **kvadrat tənlik** deyilir.
+    - $a$ — birinci əmsal, $b$ — ikinci əmsal, $c$ — sərbəst hədd.
 
-  ### 2. Tək və Cüt Funksiyalar
-  Simmetrik təyin oblastında verilmiş funksiya üçün:
-  - **Cüt funksiya:** $f(-x) = f(x)$. Qrafiki **ordinat oxuna ($Oy$) nəzərən simmetrikdir** (məsələn, $y = x^2, y = \cos x$).
-  - **Tək funksiya:** $f(-x) = -f(x)$. Qrafiki **koordinat başlanğıcına ($O$) nəzərən simmetrikdir** (məsələn, $y = x^3, y = \sin x$).
+    ### 2. Diskriminant və Köklərin Sayı
+    Tənliyin diskriminantı:
+    $$D = b^2 - 4ac$$
+    - **$D > 0$ olduqda:** Tənliyin iki müxtəlif həqiqi kökü var:
+    $$x_{1, 2} = \frac{-b \pm \sqrt{D}}{2a}$$
+    - **$D = 0$ olduqda:** Tənliyin iki bərabər kökü var (tək kök):
+    $$x_1 = x_2 = -\frac{b}{2a}$$
+    - **$D < 0$ olduqda:** Tənliyin həqiqi kökü yoxdur.
 
-  ### 3. Tərs Funksiya
-  Əgər $y = f(x)$ funksiyası öz təyin oblastında ciddi monotondursa (yalnız artan və ya yalnız azalan), onun tərs funksiyası $x = f^{-1}(y)$ mövcuddur. Funksiyanın və onun tərs funksiyasının qrafikləri $y = x$ düz xəttinə nəzərən simmetrikdir.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u1-1",
-              "name": "Cüt Funksiya Şərti",
-              "latex": "f(-x) = f(x)",
-              "description": "Ordinat oxuna nəzərən simmetriya təmin olunur."
-        },
-        {
-              "id": "f-m10-u1-2",
-              "name": "Tək Funksiya Şərti",
-              "latex": "f(-x) = -f(x)",
-              "description": "Koordinat başlanğıcına nəzərən mərkəzi simmetriya təmin olunur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Təyin oblastı (D(f))",
-              "definition": "Funksiyanın təyin olunduğu bütün x arqumentlər çoxluğu."
-        },
-        {
-              "term": "Tərs funksiya",
-              "definition": "Verilmiş funksiyanın asılılığını əksinə çevirən funksiya (y=f(x) -> x=f⁻¹(y))."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u1-1",
-              "question": "$f(x) = x^4 + 3x^2$ funksiyasının tək və ya cüt olduğunu müəyyən edin.",
-              "solution": "$f(-x) = (-x)^4 + 3(-x)^2 = x^4 + 3x^2 = f(x)$. $f(-x) = f(x)$ şərti ödəndiyindən, funksiya cütdür."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u1-1",
-              "question": "$y = \\frac{1}{x - 3}$ funksiyasının təyin oblastı hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "R"
-                    },
-                    {
-                          "key": "B",
-                          "text": "x ≠ 3"
-                    },
-                    {
-                          "key": "C",
-                          "text": "x > 3"
-                    },
-                    {
-                          "key": "D",
-                          "text": "x < 3"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Məxrəc x - 3 ≠ 0 olmalıdır, buna görə də x ≠ 3 (bütün həqiqi ədədlər x=3 istisna olmaqla)."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-10-u2-trig-eq',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 2: Triqonometrik funksiyalar və Triqonometrik tənliklər',
-      unitOrder: 2,
-      title: 'Triqonometrik funksiyaların qrafikləri və tənliklər',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 3,
-      summary: 'Sinusoid və kosinusoid, triqonometrik funksiyaların periodiklik xassəsi ($2\pi, \pi$), $\sin x = a, \cos x = a, \text{tg} x = a$ tənliklərinin həlli.',
-      theoryMarkdown: `
-  ### 1. Triqonometrik Funksiyaların Periodikliyi
-  - $y = \sin x$ və $y = \cos x$ üçün ən kiçik müsbət dövr: $T = 2\pi$.
-  - $y = \text{tg} x$ və $y = \text{ctg} x$ üçün ən kiçik müsbət dövr: $T = \pi$.
-  - Ümumi halda $y = \sin(kx + b)$ üçün $T = \frac{2\pi}{|k|}$.
-
-  ### 2. Sadə Triqonometrik Tənliklərin Ümumi Həlli
-  - **$\sin x = a$ ($|a| \le 1$):**
-  $$x = (-1)^k \arcsin a + \pi k, \quad k \in \mathbb{Z}$$
-  - **$\cos x = a$ ($|a| \le 1$):**
-  $$x = \pm \arccos a + 2\pi k, \quad k \in \mathbb{Z}$$
-  - **$\text{tg} x = a$:**
-  $$x = \text{arctg} a + \pi k, \quad k \in \mathbb{Z}$$
-
-  ### 3. Xüsusi Hallar
-  - $\sin x = 0 \implies x = \pi k$; $\quad \sin x = 1 \implies x = \frac{\pi}{2} + 2\pi k$; $\quad \sin x = -1 \implies x = -\frac{\pi}{2} + 2\pi k$
-  - $\cos x = 0 \implies x = \frac{\pi}{2} + \pi k$; $\quad \cos x = 1 \implies x = 2\pi k$; $\quad \cos x = -1 \implies x = \pi + 2\pi k$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u2-1",
-              "name": "Sinus Tənliyinin Kökü",
-              "latex": "x = (-1)^k \\arcsin a + \\pi k, \\quad k \\in \\mathbb{Z}",
-              "description": "sin x = a üçün ümumi həll çoxluğudur."
-        },
-        {
-              "id": "f-m10-u2-2",
-              "name": "Kosinus Tənliyinin Kökü",
-              "latex": "x = \\pm \\arccos a + 2\\pi k, \\quad k \\in \\mathbb{Z}",
-              "description": "cos x = a üçün ümumi həll çoxluğudur."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Period (Dövr)",
-              "definition": "Funksiyanın qiymətlərinin təkrarlanma aralığı."
-        },
-        {
-              "term": "Arkkosinus",
-              "definition": "[0; π] parçasında kosinusu a-ya bərabər olan bucaq."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u2-1",
-              "question": "$\\cos x = \\frac{1}{2}$ tənliyini həll edin.",
-              "solution": "$\\arccos\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{3}$. Ümumi düstur: $x = \\pm \\frac{\\pi}{3} + 2\\pi k, \\quad k \\in \\mathbb{Z}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u2-1",
-              "question": "$\\sin x = 0$ tənliyinin həllər çoxluğu hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "x = 2πk"
-                    },
-                    {
-                          "key": "B",
-                          "text": "x = π/2 + πk"
-                    },
-                    {
-                          "key": "C",
-                          "text": "x = πk, k ∈ Z"
-                    },
-                    {
-                          "key": "D",
-                          "text": "x = π + 2πk"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Sinus vahid çevrədə 0, π, 2π və s. nöqtələrində sıfıra bərabər olur, yəni x = πk."
-        }
-  ]
-    },
+    ### 3. Viyet Teoremi
+    Çevrilmiş kvadrat tənliyin ($x^2 + px + q = 0$) kökləri üçün:
+    $$\begin{cases} x_1 + x_2 = -p \\ x_1 \cdot x_2 = q \end{cases}$$
+    Ümumi tənlikdə ($ax^2 + bx + c = 0$): $x_1 + x_2 = -\frac{b}{a}$, $x_1 \cdot x_2 = \frac{c}{a}$.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u4-1",
+                "name": "Diskriminant Düsturu",
+                "latex": "D = b^2 - 4ac",
+                "description": "Köklərin sayını və xarakterini müəyyən edir."
+          },
+          {
+                "id": "f-m8-u4-2",
+                "name": "Viyet Teoremi",
+                "latex": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 \\cdot x_2 = \\frac{c}{a}",
+                "description": "Kvadrat tənliyin köklərinin cəmi və hasili əmsallarla ifadə olunur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Diskriminant",
+                "definition": "Kvadrat tənliyin köklərinin varlığını və sayını təyin edən b^2 - 4ac ifadəsi."
+          },
+          {
+                "term": "Viyet teoremi",
+                "definition": "Kvadrat tənliyin kökləri ilə əmsalları arasındakı birbaşa asılılıq qaydası."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u4-1",
+                "question": "$x^2 - 5x + 6 = 0$ tənliyini həll edin.",
+                "solution": "Viyet teoreminə görə: $x_1 + x_2 = 5$, $x_1 \\cdot x_2 = 6$. Bu şərti ödəyən ədədlər $2$ və $3$-dür. Köklər: $x_1 = 2, x_2 = 3$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u4-1",
+                "question": "$x^2 - 7x + 12 = 0$ tənliyinin kökləri hasilini tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "7"
+                      },
+                      {
+                            "key": "B",
+                            "text": "-7"
+                      },
+                      {
+                            "key": "C",
+                            "text": "12"
+                      },
+                      {
+                            "key": "D",
+                            "text": "-12"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Viyet teoreminə görə çevrilmiş kvadrat tənlikdə x1 * x2 = q = 12."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-10-u3-stereometry',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 3: Fəzada düz xətlər və müstəvilər (Stereometriya)',
-      unitOrder: 3,
-      title: 'Stereometriyanın aksiomları və üç perpendikulyar teoremi',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Stereometriyanın əsas aksiomları, düz xətt və müstəvinin paralellik və perpendikulyarlıq əlaməti, üç perpendikulyar teoremi.',
-      theoryMarkdown: `
-  ### 1. Stereometriyanın Əsas Aksiomları
-  - Bir düz xətt üzərində olmayan üç nöqtədən yalnız və yalnız bir müstəvi keçir.
-  - Düz xəttin iki nöqtəsi müstəvi üzərindədirsə, bu düz xəttin bütün nöqtələri həmin müstəvi üzərindədir.
-  - İki müxtəlif müstəvinin ortaq nöqtəsi varsa, onlar həmin nöqtədən keçən düz xətt boyunca kəsişir.
+        id: 'lesson-math-8-u5-similarity',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 5: Həndəsi çevrilmələr və Oxşarlıq',
+        unitOrder: 5,
+        title: 'Fiqurların oxşarlığı və üçbucaqların oxşarlıq əlamətləri',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Mütənasib parçalar, Fales teoremi, üçbucaqların oxşarlıq əlamətləri (BB, TBT, TTT) və sahələrin nisbəti.',
+        theoryMarkdown: `
+    ### 1. Oxşar Fiqurlar və Fales Teoremi
+    - **Fales teoremi:** Bucağın tərəflərini kəsən paralel düz xətlər onun tərəfləri üzərində mütənasib parçalar ayırır:
+    $$\frac{AB}{BC} = \frac{A_1B_1}{B_1C_1}$$
+    - Uyğun bucaqları bərabər və uyğun tərəfləri mütənasib olan fiqurlar **oxşardır**: $\Delta ABC \sim \Delta A_1B_1C_1$.
+    $$\frac{AB}{A_1B_1} = \frac{BC}{B_1C_1} = \frac{AC}{A_1C_1} = k \quad (k - \text{oxşarlıq əmsalı})$$
 
-  ### 2. Düz Xətt və Müstəvinin Qarşılıqlı Vəziyyəti
-  - **Paralellik əlaməti:** Müstəvidən kənardakı düz xətt bu müstəvidə yerləşən hər hansı düz xəttə paraleldirsə, həmin müstəvinin özünə də paraleldir.
-  - **Perpendikulyarlıq əlaməti:** Düz xətt müstəvinin kəsişən iki düz xəttinə perpendikulyardırsa, o, həmin müstəvinin özünə perpendikulyardır.
+    ### 2. Üçbucaqların Oxşarlıq Əlamətləri
+    - **I Əlamət (BB — İki bucağa görə):** Bir üçbucağın iki bucağı o birinin iki bucağına bərabərdirsə.
+    - **II Əlamət (TBT — İki tərəf və bucaq):** İki tərəf mütənasib və onlar arasındakı bucaqlar bərabərdirsə.
+    - **III Əlamət (TTT — Üç tərəf):** Üç tərəfin üçü də mütənasibdirsə.
 
-  ### 3. Üç Perpendikulyar Teoremi
-  Müstəvi üzərindəki düz xətt mailin proyeksiyasına perpendikulyardırsa, mailin özünə də perpendikulyardır (və tərsinə).
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u3-1",
-              "name": "Perpendikulyar və Proyeksiya Əlaqəsi",
-              "latex": "l^2 = h^2 + d^2",
-              "description": "Mailin kvadratı perpendikulyarın kvadratı ilə proyeksiyanın kvadratı cəminə bərabərdir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Mail",
-              "definition": "Verilmiş nöqtədən müstəviyə perpendikulyar olmayan çəkilmiş parça."
-        },
-        {
-              "term": "Proyeksiya",
-              "definition": "Mailin oturacağı ilə perpendikulyarın oturacağını birləşdirən parça."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u3-1",
-              "question": "Nöqtədən müstəviyə uzunluğu 10 sm olan mail çəkilmişdir. Mailin proyeksiyası 6 sm olarsa, perpendikulyarın uzunluğunu tapın.",
-              "solution": "$h = \\sqrt{l^2 - d^2} = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8 \\text{ sm}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u3-1",
-              "question": "Bir düz xətt üzərində olmayan neçə nöqtədən yeganə müstəvi keçirmək olar?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "1"
-                    },
-                    {
-                          "key": "B",
-                          "text": "2"
-                    },
-                    {
-                          "key": "C",
-                          "text": "3"
-                    },
-                    {
-                          "key": "D",
-                          "text": "4"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "Stereometriyanın I aksiomuna görə bir düz xətt üzərində olmayan 3 nöqtədən yeganə müstəvi keçir."
-        }
-  ]
-    },
-
-  {
-      id: 'lesson-math-10-u4-logarithms',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 4: Qüvvət, Üstlü və Loqarifmik funksiyalar',
-      unitOrder: 4,
-      title: 'Üstlü və loqarifmik tənliklər, loqarifmin xassələri',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 2,
-      summary: 'Loqarifmin tərifi $\log_a b$, əsas loqarifmik eynilik, cəmin və hasilin loqarifmi, üstlü tənliklərin həlli.',
-      theoryMarkdown: `
-  ### 1. Loqarifmin Tərifi
-  $b$ ədədini almaq üçün $a$ əsasını yüksəltmək lazım gələn qüvvət üstünə $b$ ədədinin $a$ əsasına görə **loqarifmi** deyilir:
-  $$\log_a b = c \iff a^c = b \quad (a > 0, a \neq 1, b > 0)$$
-  - **Əsas loqarifmik eynilik:**
-  $$a^{\log_a b} = b$$
-
-  ### 2. Loqarifmin Əsas Xassələri
-  - $\log_a (x \cdot y) = \log_a x + \log_a y$
-  - $\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y$
-  - $\log_a (x^p) = p \cdot \log_a x$
-  - $\log_{a^k} x = \frac{1}{k} \log_a x$
-  - **Yeni əsasa keçid düsturu:** $\log_a b = \frac{\log_c b}{\log_c a}$
-  - Natural loqarifm: $\ln x = \log_e x$ ($e \approx 2.71828$)
-  - Onluq loqarifm: $\lg x = \log_{10} x$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u4-1",
-              "name": "Hasilin Loqarifmi",
-              "latex": "\\log_a (x \\cdot y) = \\log_a x + \\log_a y",
-              "description": "Hasilin loqarifmi vuruqların loqarifmləri cəminə bərabərdir."
-        },
-        {
-              "id": "f-m10-u4-2",
-              "name": "Əsas Loqarifmik Eynilik",
-              "latex": "a^{\\log_a b} = b",
-              "description": "Eyni əsaslı dərəcə və loqarifm bir-birini kompensasiya edir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Loqarifm",
-              "definition": "Verilmiş ədədi almaq üçün əsası yüksəltmək lazım olan qüvvət üstü."
-        },
-        {
-              "term": "Əsas eynilik",
-              "definition": "a üstü log_a(b) = b münasibəti."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u4-1",
-              "question": "$\\log_2 16 + \\log_3 27$ cəmini hesablayın.",
-              "solution": "$\\log_2 16 = 4$ (çünki $2^4 = 16$), $\\log_3 27 = 3$ (çünki $3^3 = 27$). Cəm: $4 + 3 = 7$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u4-1",
-              "question": "$\\log_5 25$ ifadəsinin qiyməti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "1"
-                    },
-                    {
-                          "key": "B",
-                          "text": "2"
-                    },
-                    {
-                          "key": "C",
-                          "text": "5"
-                    },
-                    {
-                          "key": "D",
-                          "text": "10"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "5-in 2-ci qüvvəti 25 edir (5^2 = 25), buna görə loqarifm 2-yə bərabərdir."
-        }
-  ]
-    },
+    ### 3. Perimetrlər və Sahələr Nisbəti
+    - Oxşar fiqurların perimetrlərinin nisbəti: $\frac{P_1}{P_2} = k$
+    - Oxşar fiqurların sahələrinin nisbəti oxşarlıq əmsalının kvadratına bərabərdir:
+    $$\frac{S_1}{S_2} = k^2$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u5-1",
+                "name": "Oxşar Üçbucaqların Sahələr Nisbəti",
+                "latex": "\\frac{S_1}{S_2} = k^2",
+                "description": "Sahələrin nisbəti oxşarlıq əmsalının kvadratına bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Oxşarlıq əmsalı (k)",
+                "definition": "Oxşar fiqurların uyğun xətti ölçülərinin nisbəti."
+          },
+          {
+                "term": "Fales teoremi",
+                "definition": "Bucaq tərəflərini kəsən paralel düz xətlərin mütənasibliyi haqqında həndəsi teorem."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u5-1",
+                "question": "İki oxşar üçbucağın oxşarlıq əmsalı $k = 3$-dür. Birinci üçbucağın sahəsi $45 \\text{ sm}^2$ olarsa, ikinci üçbucağın sahəsini tapın.",
+                "solution": "$\\frac{S_1}{S_2} = k^2 = 3^2 = 9 \\implies S_2 = \\frac{45}{9} = 5 \\text{ sm}^2$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u5-1",
+                "question": "Oxşarlıq əmsalı $k = 2$ olan iki üçbucağın sahələri nisbəti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "2"
+                      },
+                      {
+                            "key": "B",
+                            "text": "4"
+                      },
+                      {
+                            "key": "C",
+                            "text": "8"
+                      },
+                      {
+                            "key": "D",
+                            "text": "16"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Sahələr nisbəti k^2 = 2^2 = 4-dür."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-10-u5-polyhedra',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 5: Çoxüzlülər və Fiqurların həcmi',
-      unitOrder: 5,
-      title: 'Prizma və piramidanın səthi və həcmi',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Düzgün prizma və piramida, yan və tam səthin sahəsi, həcm düsturları $V = S_{\text{ot}} \cdot h$ və $V = \frac{1}{3} S_{\text{ot}} \cdot h$.',
-      theoryMarkdown: `
-  ### 1. Prizma
-  İki üzü konqruyent çoxbucaqlı (oturacaqlar), qalan üzləri isə paraleloqramlar olan çoxüzlüyə **prizma** deyilir.
-  - **Yan səthin sahəsi:** $S_{\text{yan}} = P_{\text{ot}} \cdot h$ (düz prizmada)
-  - **Tam səthin sahəsi:** $S_{\text{tam}} = S_{\text{yan}} + 2S_{\text{ot}}$
-  - **Həcmi:**
-  $$V = S_{\text{ot}} \cdot h$$
+        id: 'lesson-math-8-u6-pythagoras',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 6: Pifaqor teoremi və Fiqurların sahəsi',
+        unitOrder: 6,
+        title: 'Pifaqor teoremi və çoxbucaqlıların sahə düsturları',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Pifaqor teoremi $a^2 + b^2 = c^2$, düzbucaqlı üçbucaqda hündürlük və proyeksiyalar, paraleleqram, trapesiya və üçbucağın sahəsi.',
+        theoryMarkdown: `
+    ### 1. Pifaqor Teoremi
+    Düzbucaqlı üçbucaqda hipotenuzun kvadratı katetlərin kvadratları cəminə bərabərdir:
+    $$c^2 = a^2 + b^2 \implies c = \sqrt{a^2 + b^2}$$
+    Burada $a$ və $b$ katetlər, $c$ isə hipotenuzdur.
+    - Məşhur Pifaqor üçlükləri: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$.
 
-  ### 2. Piramida
-  Oturacağı çoxbucaqlı, qalan üzləri ortaq təpəyə malik üçbucaqlar olan çoxüzlüyə **piramida** deyilir.
-  - **Düzgün piramidanın yan səthi:** $S_{\text{yan}} = \frac{1}{2} P_{\text{ot}} \cdot h_a$ ($h_a$ — apofemdir)
-  - **Tam səthin sahəsi:** $S_{\text{tam}} = S_{\text{yan}} + S_{\text{ot}}$
-  - **Həcmi:**
-  $$V = \frac{1}{3} S_{\text{ot}} \cdot h$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u5-1",
-              "name": "Prizmanın Həcmi",
-              "latex": "V = S_{\\text{ot}} \\cdot h",
-              "description": "Oturacağın sahəsi ilə hündürlüyün hasilidir."
-        },
-        {
-              "id": "f-m10-u5-2",
-              "name": "Piramidanın Həcmi",
-              "latex": "V = \\frac{1}{3} S_{\\text{ot}} \\cdot h",
-              "description": "Prizma həcminin üçdə bir hissəsidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Apofem",
-              "definition": "Düzgün piramidanın yan üzünün təpədən çəkilmiş hündürlüyü."
-        },
-        {
-              "term": "Çoxüzlü",
-              "definition": "Səthi sonlu sayda çoxbucaqlılardan ibarət qapalı həndəsi cisim."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u5-1",
-              "question": "Oturacağının sahəsi $24 \\text{ sm}^2$, hündürlüyü 9 sm olan piramidanın həcmini tapın.",
-              "solution": "$V = \\frac{1}{3} S_{\\text{ot}} \\cdot h = \\frac{1}{3} \\cdot 24 \\cdot 9 = 8 \\cdot 9 = 72 \\text{ sm}^3$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u5-1",
-              "question": "Oturacağının sahəsi 15 və hündürlüyü 6 olan düz prizmanın həcmi neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "30"
-                    },
-                    {
-                          "key": "B",
-                          "text": "45"
-                    },
-                    {
-                          "key": "C",
-                          "text": "90"
-                    },
-                    {
-                          "key": "D",
-                          "text": "120"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "V = Sot * h = 15 * 6 = 90."
-        }
-  ]
-    },
+    ### 2. Düzbucaqlı Üçbucaqda Metrik Münasibətlər
+    Hipotenuza çəkilmiş $h_c$ hündürlüyü üçün:
+    $$h_c^2 = a_c \cdot b_c, \qquad a^2 = c \cdot a_c, \qquad b^2 = c \cdot b_c$$
 
-  {
-      id: 'lesson-math-10-u6-derivative',
-      subjectId: 'riyaziyyat',
-      grade: 10,
-      unit: 'Bölmə 6: Törəmə və onun tətbiqləri',
-      unitOrder: 6,
-      title: 'Törəmənin tərifi, cədvəli, həndəsi və fiziki mənası',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 3,
-      summary: 'Arqument və funksiya artımı, törəmənin tərifi limit kimi, cəmin, hasilin və qismətin törəməsi, toxunanın bucaq əmsalı $k = f\'(x_0)$ və ani sürət $v(t) = s\'(t)$.',
-      theoryMarkdown: `
-  ### 1. Törəmənin Tərifi
-  Funksiya artımının arqument artımına nisbətinin arqument artımı sıfıra yaxınlaşarkən limitinə funksiyanın verilmiş nöqtədə **törəməsi** deyilir:
-  $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
-
-  ### 2. Törəmə Cədvəli
-  - $c' = 0$ ($c - \text{sabitdir}$)
-  - $(x^n)' = n \cdot x^{n-1}$
-  - $(\sin x)' = \cos x$
-  - $(\cos x)' = -\sin x$
-  - $(e^x)' = e^x, \qquad (\ln x)' = \frac{1}{x}$
-
-  ### 3. Diferensiallama Qaydaları
-  - $(u \pm v)' = u' \pm v'$
-  - $(u \cdot v)' = u'v + uv'$
-  - $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$
-
-  ### 4. Həndəsi və Fiziki Məna
-  - **Həndəsi məna:** Qrafikə $x_0$ nöqtəsində çəkilmiş toxunanın bucaq əmsalı:
-  $$k = \text{tg} \alpha = f'(x_0)$$
-  Toxunanın tənliyi: $y - f(x_0) = f'(x_0)(x - x_0)$
-  - **Fiziki məna:** Gedilən yolun zamana görə törəməsi ani sürəti verir:
-  $$v(t) = s'(t), \qquad a(t) = v'(t) = s''(t)$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m10-u6-1",
-              "name": "Qüvvət Funksiyasının Törəməsi",
-              "latex": "(x^n)' = n \\cdot x^{n-1}",
-              "description": "Üst qabağa düşür və dərəcə bir vahid azalır."
-        },
-        {
-              "id": "f-m10-u6-2",
-              "name": "Törəmənin Həndəsi Mənası",
-              "latex": "k = f'(x_0) = \\text{tg} \\alpha",
-              "description": "Nöqtədəki törəmə həmin nöqtədə toxunanın bucaq əmsalıdır."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Törəmə",
-              "definition": "Funksiyanın ani dəyişmə sürətini xarakterizə edən riyazi analiz anlayışı."
-        },
-        {
-              "term": "Toxunan",
-              "definition": "Əyriyə verilmiş nöqtədə ən yaxınlaşan düz xətt."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m10-u6-1",
-              "question": "$f(x) = x^3 - 4x + 5$ funksiyasının $x_0 = 2$ nöqtəsində törəməsini hesablayın.",
-              "solution": "Törəməni tapaq: $f'(x) = 3x^2 - 4$. $x = 2$ qiymətini qoysaq: $f'(2) = 3(2^2) - 4 = 12 - 4 = 8$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m10-u6-1",
-              "question": "$f(x) = 5x^2$ funksiyasının törəməsi nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "5x"
-                    },
-                    {
-                          "key": "B",
-                          "text": "10x"
-                    },
-                    {
-                          "key": "C",
-                          "text": "10"
-                    },
-                    {
-                          "key": "D",
-                          "text": "2x"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "(5x^2)' = 5 * 2x = 10x."
-        }
-  ]
-    },
+    ### 3. Fiqurların Sahə Düsturları
+    - **Üçbucaq:** $S = \frac{1}{2} a \cdot h_a$
+    - **Paraleleqram:** $S = a \cdot h_a = a \cdot b \cdot \sin \alpha$
+    - **Romb:** $S = a \cdot h = \frac{1}{2} d_1 d_2$
+    - **Trapesiyanın sahəsi:** $S = \frac{a + b}{2} \cdot h$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u6-1",
+                "name": "Pifaqor Teoremi",
+                "latex": "a^2 + b^2 = c^2",
+                "description": "Katetlərin kvadratları cəmi hipotenuzun kvadratına bərabərdir."
+          },
+          {
+                "id": "f-m8-u6-2",
+                "name": "Trapesiyanın Sahəsi",
+                "latex": "S = \\frac{a + b}{2} \\cdot h",
+                "description": "Orta xətlə hündürlüyün hasilinə bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Hipotenuz",
+                "definition": "Düzbucaqlı üçbucaqda düz bucağın qarşısındakı ən böyük tərəf."
+          },
+          {
+                "term": "Katet",
+                "definition": "Düz bucağı əmələ gətirən iki tərəfdən biri."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u6-1",
+                "question": "Katetləri 6 sm və 8 sm olan düzbucaqlı üçbucağın hipotenuzunu tapın.",
+                "solution": "$c = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10 \\text{ sm}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u6-1",
+                "question": "Oturacaqları 4 sm və 8 sm, hündürlüyü 5 sm olan trapesiyanın sahəsi neçə $\\text{sm}^2$-dir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "20"
+                      },
+                      {
+                            "key": "B",
+                            "text": "30"
+                      },
+                      {
+                            "key": "C",
+                            "text": "60"
+                      },
+                      {
+                            "key": "D",
+                            "text": "40"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "S = (4 + 8) / 2 * 5 = 12 / 2 * 5 = 6 * 5 = 30 sm^2."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u1-investigation',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 1: Törəmənin tətbiqi ilə funksiyaların araşdırılması',
-      unitOrder: 1,
-      title: 'Artma-azalma intervalları, ekstremumlar və ən böyük/kiçik qiymət',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 3,
-      summary: 'Funksiyanın monotonluq əlamətləri ($f\'(x) > 0$ artan, $f\'(x) < 0$ azalan), stasionar və böhran nöqtələri, maksimum və minimum nöqtələri, parçada ən böyük və ən kiçik qiymət.',
-      theoryMarkdown: `
-  ### 1. Funksiyanın Artma və Azalma Şərti
-  - Əgər intervalda $f'(x) > 0$ olarsa, funksiya həmin intervalda **ciddi artandır**.
-  - Əgər intervalda $f'(x) < 0$ olarsa, funksiya həmin intervalda **ciddi azalandır**.
+        id: 'lesson-math-8-u7-inequalities',
+        subjectId: 'riyaziyyat',
+        grade: 8,
+        unit: 'Bölmə 7: Bərabərsizliklər',
+        unitOrder: 7,
+        title: 'Birdəyişənli xətti bərabərsizliklər və bərabərsizliklər sistemi',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Ədədi bərabərsizliklərin xassələri, ədədi aralıqlar, mənfi ədədə vurulduqda işarənin dəyişməsi və bərabərsizliklər sistemi.',
+        theoryMarkdown: `
+    ### 1. Bərabərsizliklərin Əsas Xassələri
+    - Əgər $a > b$ və $b > c$ olarsa, onda $a > c$.
+    - Bərabərsizliyin hər iki tərəfinə eyni bir ədədi əlavə etdikdə və ya çıxdıqda bərabərsizliyin işarəsi dəyişməz.
+    - Bərabərsizliyin hər iki tərəfini **müsbət ədədə** vurduqda və ya böldükdə işarə dəyişməz:
+    $$a > b \quad \text{və} \quad c > 0 \implies ac > bc$$
+    - **Ən Vacib Qayda:** Bərabərsizliyin hər iki tərəfini **mənfi ədədə** vurduqda və ya böldükdə bərabərsizliyin işarəsi **əksinə dəyişir**:
+    $$a > b \quad \text{və} \quad c < 0 \implies ac < bc$$
 
-  ### 2. Ekstremum Nöqtələri (Ferma Teoremi)
-  Törəmənin sıfıra bərabər olduğu nöqtələrə **stasionar nöqtələr** deyilir ($f'(x) = 0$).
-  - **Maksimum nöqtəsi:** Əgər $x_0$ stasionar nöqtəsindən keçərkən törəmə işarəsini **müsbətdən mənfiyə ($+ \to -$)** dəyişərsə, $x_0$ lokal maksimum nöqtəsidir.
-  - **Minimum nöqtəsi:** Əgər törəmə işarəsini **mənfidən müsbətə ($- \to +$)** dəyişərsə, $x_0$ lokal minimum nöqtəsidir.
-
-  ### 3. Parçada Ən Böyük və Ən Kiçik Qiymətlər
-  $[a; b]$ parçasında kəsilməz funksiyanın ən böyük (ƏBQ) və ən kiçik (ƏKQ) qiymətini tapmaq üçün:
-  1. Parçaya daxil olan bütün stasionar nöqtələrdəki qiymətlər hesablanır.
-  2. Parçanın uc nöqtələrindəki qiymətlər ($f(a)$ və $f(b)$) hesablanır.
-  3. Alınan qiymətlərin ən böyüyü və ən kiçiyi seçilir.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u1-1",
-              "name": "Monotonluq Əlaməti",
-              "latex": "f'(x) > 0 \\implies f(x) \\uparrow, \\quad f'(x) < 0 \\implies f(x) \\downarrow",
-              "description": "Müsbət törəmə artmanı, mənfi törəmə azalmanı bildirir."
-        },
-        {
-              "id": "f-m11-u1-2",
-              "name": "Ekstremumun Zəruri Şərti",
-              "latex": "f'(x_0) = 0",
-              "description": "Ekstremum nöqtələrində törəmə sıfıra çevrilir və ya mövcud deyil."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Stasionar nöqtə",
-              "definition": "Funksiyanın törəməsinin sıfıra bərabər olduğu daxili nöqtə."
-        },
-        {
-              "term": "Ekstremum",
-              "definition": "Funksiyanın lokal maksimum və ya minimum qiymətlərinin ümumi adı."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u1-1",
-              "question": "$f(x) = x^2 - 6x + 8$ funksiyasının minimum nöqtəsini tapın.",
-              "solution": "Törəməni sıfıra bərabər edək: $f'(x) = 2x - 6 = 0 \\implies 2x = 6 \\implies x = 3$. $x < 3$ üçün $f' < 0$, $x > 3$ üçün $f' > 0$ olduğundan, $x = 3$ minimum nöqtəsidir."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u1-1",
-              "question": "Nöqtədən keçərkən törəmə '+' işarəsindən '-' işarəsinə dəyişirsə, bu hansı nöqtədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "Minimum nöqtəsi"
-                    },
-                    {
-                          "key": "B",
-                          "text": "Maksimum nöqtəsi"
-                    },
-                    {
-                          "key": "C",
-                          "text": "Əyilmə nöqtəsi"
-                    },
-                    {
-                          "key": "D",
-                          "text": "Kəsilmə nöqtəsi"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Funksiya artmadan azalmaya keçirsə, həmin təpə nöqtəsi lokal maksimumdur."
-        }
-  ]
-    },
+    ### 2. Xətti Bərabərsizliklər Sistemi
+    Sistemə daxil olan hər iki bərabərsizlik ayrı-ayrılıqda həll olunur və həll çoxluqlarının **kəsişməsi** ($A \cap B$) tapılır.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m8-u7-1",
+                "name": "Mənfiyə Vurma Qaydası",
+                "latex": "-x < a \\implies x > -a",
+                "description": "Mənfi birə böldükdə işarə istiqamətini dəyişir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Ədədi aralıq",
+                "definition": "Koordinat düz xətti üzərində iki nöqtə arasındakı nöqtələr çoxluğu (məsələn: [a; b], (a; b))."
+          },
+          {
+                "term": "Qeyri-ciddi bərabərsizlik",
+                "definition": "Bərabərlik halı da mümkün olan bərabərsizlik (≥ və ya ≤)."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m8-u7-1",
+                "question": "$-3x + 9 \\le 0$ bərabərsizliyini həll edin.",
+                "solution": "$-3x \\le -9$. Hər iki tərəfi $-3$-ə böldüyümüz üçün işarə dəyişir: $x \\ge \\frac{-9}{-3} \\implies x \\ge 3$. Cavab: $[3; +\\infty)$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m8-u7-1",
+                "question": "$-2x > 8$ bərabərsizliyinin həlli hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "$x > -4$"
+                      },
+                      {
+                            "key": "B",
+                            "text": "$x < -4$"
+                      },
+                      {
+                            "key": "C",
+                            "text": "$x > 4$"
+                      },
+                      {
+                            "key": "D",
+                            "text": "$x < 4$"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Mənfi 2-yə böldükdə bərabərsizlik işarəsi dəyişir: x < -4."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u2-integral',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 2: İbtidai funksiya və İnteqral',
-      unitOrder: 2,
-      title: 'İbtidai funksiya, müəyyən inteqral və sahə hesablanması',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 3,
-      summary: 'İbtidai funksiyanın tərifi $F\'(x) = f(x)$, qeyri-müəyyən və müəyyən inteqral, Nyuton-Leybnits düsturu, əyrixətli trapesiyanın sahəsi.',
-      theoryMarkdown: `
-  ### 1. İbtidai Funksiya
-  Verilmiş aralıqda $F'(x) = f(x)$ şərti ödənərsə, $F(x)$ funksiyasına $f(x)$ üçün **ibtidai funksiya** deyilir.
-  - İbtidai funksiyaların ümumi şəkli: $F(x) + C$ ($C$ ixtiyari sabitdir).
+        id: 'lesson-math-9-u1-quadratic-function',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 1: Funksiyalar və Qrafiklər',
+        unitOrder: 1,
+        title: 'Kvadratik funksiya və onun qrafiki (Parabola)',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Kvadratik funksiya $y = ax^2 + bx + c$, təpə nöqtəsi $(m; n)$, simmetriya oxu, parabolanın qollarının istiqaməti və ən böyük/ən kiçik qiyməti.',
+        theoryMarkdown: `
+    ### 1. Kvadratik Funksiyanın Tərifi
+    $a \neq 0$ olduqda $y = ax^2 + bx + c$ şəkilli funksiyaya **kvadratik funksiya** deyilir. Qrafiki **parabola** adlanır.
+    - $a > 0$ olduqda parabolanın qolları **yuxarı** yönəlir, funksiyanın ən kiçik qiyməti var.
+    - $a < 0$ olduqda parabolanın qolları **aşağı** yönəlir, funksiyanın ən böyük qiyməti var.
 
-  ### 2. İnteqral Cədvəli
-  - $\int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)$
-  - $\int \frac{1}{x} dx = \ln|x| + C$
-  - $\int e^x dx = e^x + C$
-  - $\int \sin x dx = -\cos x + C$
-  - $\int \cos x dx = \sin x + C$
-
-  ### 3. Müəyyən İnteqral və Nyuton-Leybnits Düsturu
-  $$\int_a^b f(x) dx = F(b) - F(a)$$
-
-  ### 4. Əyrixətli Trapesiyanın Sahəsi
-  Yuxarıdan $y = f(x) \ge 0$ əyrisi ilə, aşağıdan $Ox$ oxu ilə ($y = 0$), soldan $x = a$ və sağdan $x = b$ düz xətləri ilə hüdudlanmış fiqurun sahəsi:
-  $$S = \int_a^b f(x) dx$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u2-1",
-              "name": "Nyuton-Leybnits Düsturu",
-              "latex": "\\int_a^b f(x) dx = F(b) - F(a)",
-              "description": "Müəyyən inteqral ibtidai funksiyanın sərhədlərdəki qiymətlərinin fərqinə bərabərdir."
-        },
-        {
-              "id": "f-m11-u2-2",
-              "name": "Əyrixətli Trapesiyanın Sahəsi",
-              "latex": "S = \\int_a^b [f(x) - g(x)] dx",
-              "description": "İki əyri arasındakı fiqurun sahəsinin inteqral ifadəsidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "İbtidai funksiya",
-              "definition": "Törəməsi verilmiş funksiyanı verən funksiya."
-        },
-        {
-              "term": "Müəyyən inteqral",
-              "definition": "İnteqral cəminin limiti, əyri altındakı həndəsi sahəni bildirir."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u2-1",
-              "question": "$\\int_1^3 2x dx$ müəyyən inteqralını hesablayın.",
-              "solution": "$2x$-in ibtidai funksiyası $x^2$-dir. Nyuton-Leybnits düsturuna görə: $\\int_1^3 2x dx = [x^2]_1^3 = 3^2 - 1^2 = 9 - 1 = 8$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u2-1",
-              "question": "$f(x) = 3x^2$ funksiyasının ibtidai funksiyası hansıdır?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "6x + C"
-                    },
-                    {
-                          "key": "B",
-                          "text": "x^3 + C"
-                    },
-                    {
-                          "key": "C",
-                          "text": "3x^3 + C"
-                    },
-                    {
-                          "key": "D",
-                          "text": "x^2 + C"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "(x^3)' = 3x^2 olduğundan ibtidai funksiya x^3 + C olar."
-        }
-  ]
-    },
+    ### 2. Parabolanın Təpə Nöqtəsi
+    Parabolanın təpə nöqtəsi $M(m; n)$:
+    $$m = -\frac{b}{2a}, \qquad n = -\frac{D}{4a} = c - \frac{b^2}{4a} = y(m)$$
+    - Simmetriya oxunun tənliyi: $x = m = -\frac{b}{2a}$
+    - Parabolanın tam kvadrat ayrılmış şəkli: $y = a(x - m)^2 + n$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u1-1",
+                "name": "Parabolanın Təpə Nöqtəsinin Absisi",
+                "latex": "m = -\\frac{b}{2a}",
+                "description": "Simmetriya oxunun tənliyi və təpə nöqtəsinin x koordinatıdır."
+          },
+          {
+                "id": "f-m9-u1-2",
+                "name": "Təpə Nöqtəsinin Ordinatı",
+                "latex": "n = \\frac{4ac - b^2}{4a}",
+                "description": "Funksiyanın minimum (a>0) və ya maksimum (a<0) qiymətidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Parabola",
+                "definition": "İkinci dərəcəli əyri xətt, kvadratik funksiyanın qrafiki."
+          },
+          {
+                "term": "Simmetriya oxu",
+                "definition": "Parabolanı iki simmetrik hissəyə ayıran şaquli x = m düz xətti."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u1-1",
+                "question": "$y = x^2 - 4x + 3$ parabolanın təpə nöqtəsinin koordinatlarını tapın.",
+                "solution": "$a = 1, b = -4, c = 3$. $m = -\\frac{-4}{2 \\cdot 1} = 2$. $n = y(2) = 2^2 - 4(2) + 3 = 4 - 8 + 3 = -1$. Təpə nöqtəsi: $M(2; -1)$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u1-1",
+                "question": "$y = -2x^2 + 8x - 1$ parabolanın qolları hansı istiqamətə yönəlib?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "Yuxarı"
+                      },
+                      {
+                            "key": "B",
+                            "text": "Aşağı"
+                      },
+                      {
+                            "key": "C",
+                            "text": "Sağa"
+                      },
+                      {
+                            "key": "D",
+                            "text": "Sola"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "a = -2 < 0 olduğu üçün parabolanın qolları aşağı yönəlir."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u3-revolution-solids',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 3: Fırlanma cisimləri',
-      unitOrder: 3,
-      title: 'Silindr, konus və kürənin səthi və həcmi',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 2,
-      summary: 'Fırlanma cisimləri, silindr, konus və kəsik konusun açılışı, yan və tam səthi, kürə və sferanın sahə və həcm düsturları.',
-      theoryMarkdown: `
-  ### 1. Silindr
-  Düzbucaqlının bir tərəfi ətrafında fırlanmasından alınan cisimdir.
-  - **Yan səthinin sahəsi:** $S_{\text{yan}} = 2\pi R h$
-  - **Tam səthinin sahəsi:** $S_{\text{tam}} = 2\pi R(R + h)$
-  - **Həcmi:**
-  $$V = \pi R^2 h$$
+        id: 'lesson-math-9-u2-circles',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 2: Çevrə və Dairə',
+        unitOrder: 2,
+        title: 'Çevrədə bucaqlar, vətərlər və kəsənlər',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Mərkəzi və daxilə çəkilmiş bucaqlar, çevrəyə toxunan və kəsən xassələri, kəsişən vətərlər teoremi.',
+        theoryMarkdown: `
+    ### 1. Mərkəzi və Daxilə Çəkilmiş Bucaqlar
+    - **Mərkəzi bucaq:** Təpəsi çevrə mərkəzində olan bucaqdır və söykəndiyi qövsün dərəcə ölçüsünə bərabərdir: $\angle AOB = \cup AB$.
+    - **Daxilə çəkilmiş bucaq:** Təpəsi çevrə üzərində olub tərəfləri vətərlər olan bucaqdır və söykəndiyi qövsün yarısına bərabərdir:
+    $$\angle ACB = \frac{1}{2} \cup AB$$
+    - Eyni qövsə söykənən daxilə çəkilmiş bucaqlar bərabərdir.
+    - Diametrə söykənən daxilə çəkilmiş bucaq düz bucaqdır ($90^\circ$).
 
-  ### 2. Konus
-  Düzbucaqlı üçbucağın bir kateti ətrafında fırlanmasından alınan cisimdir ($l$ — doğurandır, $l = \sqrt{R^2 + h^2}$).
-  - **Yan səthinin sahəsi:** $S_{\text{yan}} = \pi R l$
-  - **Tam səthinin sahəsi:** $S_{\text{tam}} = \pi R(R + l)$
-  - **Həcmi:**
-  $$V = \frac{1}{3} \pi R^2 h$$
+    ### 2. Kəsişən Vətərlərin Xassəsi
+    Çevrə daxilində kəsişən iki $AB$ və $CD$ vətəri üçün parçaların hasili bərabərdir:
+    $$AP \cdot PB = CP \cdot PD$$
 
-  ### 3. Kürə və Sfera
-  Yarımçevrənin diametri ətrafında fırlanmasından **sfera**, yarım dairənin fırlanmasından **kürə** alınır.
-  - **Sferanın sahəsi:**
-  $$S = 4\pi R^2$$
-  - **Kürənin həcmi:**
-  $$V = \frac{4}{3}\pi R^3$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u3-1",
-              "name": "Silindrin Həcmi",
-              "latex": "V = \\pi R^2 h",
-              "description": "Dairəvi oturacağın sahəsi ilə hündürlüyün hasilidir."
-        },
-        {
-              "id": "f-m11-u3-2",
-              "name": "Kürənin Həcmi",
-              "latex": "V = \\frac{4}{3}\\pi R^3",
-              "description": "Radiusun kubu ilə mütənasib həcm düsturu."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Doğuran (l)",
-              "definition": "Fırlanma cisminin yan səthini əmələ gətirən hərəkət edən parça."
-        },
-        {
-              "term": "Sfera",
-              "definition": "Fəzada verilmiş mərkəzdən eyni məsafədə olan nöqtələr çoxluğu (kürənin səthi)."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u3-1",
-              "question": "Radiusu $R = 3$ sm və hündürlüyü $h = 5$ sm olan silindrin həcmini tapın ($\\pi$ saxlanılsın).",
-              "solution": "$V = \\pi R^2 h = \\pi \\cdot 3^2 \\cdot 5 = \\pi \\cdot 9 \\cdot 5 = 45\\pi \\text{ sm}^3$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u3-1",
-              "question": "Radiusu 3 sm olan sferanın səthinin sahəsi neçə $\\pi \\text{ sm}^2$-dir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "12π"
-                    },
-                    {
-                          "key": "B",
-                          "text": "27π"
-                    },
-                    {
-                          "key": "C",
-                          "text": "36π"
-                    },
-                    {
-                          "key": "D",
-                          "text": "54π"
-                    }
-              ],
-              "correctKey": "C",
-              "explanation": "S = 4 * π * R^2 = 4 * π * 3^2 = 4 * 9 * π = 36π."
-        }
-  ]
-    },
+    ### 3. Toxunan və Kəsən Teoremi
+    Eyni nöqtədən çəkilmiş $AK$ toxunanı və $AB$ kəsəni üçün:
+    $$AK^2 = AB \cdot AC$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u2-1",
+                "name": "Daxilə Çəkilmiş Bucaq",
+                "latex": "\\angle ACB = \\frac{1}{2} \\cup AB",
+                "description": "Daxilə çəkilmiş bucaq söykəndiyi qövsün yarısına bərabərdir."
+          },
+          {
+                "id": "f-m9-u2-2",
+                "name": "Toxunan və Kəsən Əlaqəsi",
+                "latex": "AK^2 = AB \\cdot AC",
+                "description": "Toxunanın kvadratı kəsənlə onun xarici hissəsinin hasilinə bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Vətər",
+                "definition": "Çevrə üzərindəki iki ixtiyari nöqtəni birləşdirən düz xətt parçası."
+          },
+          {
+                "term": "Toxunan",
+                "definition": "Çevrə ilə yalnız bir ortaq nöqtəsi olan düz xətt."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u2-1",
+                "question": "Çevrədə daxilə çəkilmiş bucaq $35^\\circ$-dir. Onun söykəndiyi qövsün dərəcə ölçüsünü tapın.",
+                "solution": "Daxilə çəkilmiş bucaq qövsün yarısına bərabər olduğundan: $\\cup AB = 2 \\cdot 35^\\circ = 70^\\circ$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u2-1",
+                "question": "Diametrə söykənən daxilə çəkilmiş bucaq neçə dərəcədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "45°"
+                      },
+                      {
+                            "key": "B",
+                            "text": "60°"
+                      },
+                      {
+                            "key": "C",
+                            "text": "90°"
+                      },
+                      {
+                            "key": "D",
+                            "text": "180°"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Diametr çevrəni 180°-lik yarımçevrəyə bölür, onun yarısı 90°-dir."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u4-complex-numbers',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 4: Kompleks ədədlər',
-      unitOrder: 4,
-      title: 'Kompleks ədədlərin cəbri və triqonometrik şəkli',
-      order: 1,
-      readTimeMinutes: 11,
-      difficulty: 3,
-      summary: 'Xəyali vahid $i^2 = -1$, kompleks ədədin cəbri şəkli $z = a + bi$, modul $|z|$ və arqument $\varphi$, triqonometrik şəkil və Muavr düsturu.',
-      theoryMarkdown: `
-  ### 1. Kompleks Ədədin Cəbri Şəkli
-  $i^2 = -1$ şərtini ödəyən $i$ simvoluna **xəyali vahid** deyilir.
-  $z = a + bi$ ($a, b \in \mathbb{R}$) şəkilli ifadəyə **kompleks ədəd** deyilir:
-  - $a = \text{Re}(z)$ — həqiqi hissə
-  - $b = \text{Im}(z)$ — xəyali hissə
-  - **Qoşma kompleks ədəd:** $\bar{z} = a - bi$. Hasilləri həqiqi ədəddir: $z \cdot \bar{z} = a^2 + b^2$.
+        id: 'lesson-math-9-u3-systems-intervals',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 3: Tənliklər və Bərabərsizliklər sistemi',
+        unitOrder: 3,
+        title: 'İkidərəcəli tənliklər sistemi və intervallar üsulu',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'İkidərəcəli tənliklər sistemi, kvadrat bərabərsizliklər və rasional bərabərsizliklərin intervallar üsulu ilə həlli.',
+        theoryMarkdown: `
+    ### 1. İkidərəcəli Tənliklər Sistemi
+    Biri xətti, digəri ikidərəcəli olan tənliklər sistemində xətti tənlikdən bir dəyişən digəri ilə ifadə olunub ikidərəcəli tənlikdə yerinə yazılır (əvəzetmə üsulu).
 
-  ### 2. Modul və Arqument
-  Kompleks müstəvidə $z(a; b)$ nöqtəsi üçün:
-  - **Modul:** $|z| = r = \sqrt{a^2 + b^2}$
-  - **Arqument ($\varphi$):** $\cos \varphi = \frac{a}{r}, \quad \sin \varphi = \frac{b}{r}$
+    ### 2. Kvadrat Bərabərsizliklər
+    $ax^2 + bx + c > 0$ və ya $< 0$ şəkilli bərabərsizlikləri həll etmək üçün:
+    1. $ax^2 + bx + c = 0$ tənliyinin $x_1, x_2$ kökləri tapılır.
+    2. Ədəd oxu $x_1$ və $x_2$ nöqtələri ilə intervallara bölünür.
+    3. Hər intervalda funksiyanın işarəsi yoxlanılır.
 
-  ### 3. Triqonometrik Şəkil və Muavr Düsturu
-  - **Triqonometrik şəkil:**
-  $$z = r(\cos \varphi + i \sin \varphi)$$
-  - **Qüvvətə yüksəltmə (Muavr düsturu):**
-  $$z^n = r^n(\cos(n\varphi) + i \sin(n\varphi))$$
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u4-1",
-              "name": "Kompleks Ədədin Modulu",
-              "latex": "|z| = \\sqrt{a^2 + b^2}",
-              "description": "Koordinat başlanğıcından həmin nöqtəyə qədər olan məsafədir."
-        },
-        {
-              "id": "f-m11-u4-2",
-              "name": "Muavr Düsturu",
-              "latex": "z^n = r^n(\\cos(n\\varphi) + i\\sin(n\\varphi))",
-              "description": "Kompleks ədədin n-ci qüvvətə yüksəldilməsi qaydası."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Xəyali vahid (i)",
-              "definition": "Kvadratı -1 olan xəyali riyazi kəmiyyət."
-        },
-        {
-              "term": "Qoşma kompleks ədəd",
-              "definition": "Yalnız xəyali hissəsinin işarəsi ilə fərqlənən ədəd (a + bi və a - bi)."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u4-1",
-              "question": "$z = 3 + 4i$ kompleks ədədinin modulunu tapın.",
-              "solution": "$|z| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u4-1",
-              "question": "$i^4$ ifadəsinin qiyməti nəyə bərabərdir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "1"
-                    },
-                    {
-                          "key": "B",
-                          "text": "-1"
-                    },
-                    {
-                          "key": "C",
-                          "text": "i"
-                    },
-                    {
-                          "key": "D",
-                          "text": "-i"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "i^2 = -1 olduğundan, i^4 = (i^2)^2 = (-1)^2 = 1."
-        }
-  ]
-    },
+    ### 3. İntervallar Üsulu
+    $\frac{P(x)}{Q(x)} > 0$ şəklində olan bərabərsizliklərdə surət və məxrəcin sıfırları ədəd oxunda qeyd edilir. Tək dərəcəli sıfırlardan keçdikdə işarə əksinə dəyişir, cüt dərəcəli köklərdə isə işarə sabit qalır.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u3-1",
+                "name": "Kvadrat Üçhədlinin Vuruqlara Ayrılması",
+                "latex": "ax^2 + bx + c = a(x - x_1)(x - x_2)",
+                "description": "Köklər məlum olduqda üçhədli xətti vuruqlara parçalanır."
+          }
+    ],
+        glossary: [
+          {
+                "term": "İntervallar üsulu",
+                "definition": "Bərabərsizlikləri həll etmək üçün ədəd oxunu sıfır nöqtələri ilə hissələrə bölmə metodu."
+          },
+          {
+                "term": "Qeyri-xətti sistem",
+                "definition": "Heç olmasa bir tənliyi ikidərəcəli və ya daha yüksək dərəcəli olan sistem."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u3-1",
+                "question": "$(x - 2)(x - 5) < 0$ bərabərsizliyini həll edin.",
+                "solution": "Sıfırlar: $x_1 = 2, x_2 = 5$. İntervallar: $(-\\infty; 2), (2; 5), (5; +\\infty)$. İşarələr sıra ilə: $+ , - , +$. Mənfi aralıq $(2; 5)$-dir."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u3-1",
+                "question": "$x^2 - 9 \\le 0$ bərabərsizliyinin həlli hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "[-3; 3]"
+                      },
+                      {
+                            "key": "B",
+                            "text": "(-∞; -3] ∪ [3; +∞)"
+                      },
+                      {
+                            "key": "C",
+                            "text": "[0; 3]"
+                      },
+                      {
+                            "key": "D",
+                            "text": "(-3; 3)"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "(x-3)(x+3) <= 0 parabolanın qolları yuxarıdır, sıfırdan kiçik və bərabər hissə [-3; 3] parçasıdır."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u5-bernoulli',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 5: Birləşmələr nəzəriyyəsi və Ehtimal paylanmaları',
-      unitOrder: 5,
-      title: 'Bernulli sınaqları və təsadüfi kəmiyyətin paylanma qanunu',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 3,
-      summary: 'Müstəqil sınaqlar ardıcıllığı, Bernulli düsturu $P_n(k) = C_n^k p^k q^{n-k}$, diskret təsadüfi kəmiyyət, riyazi gözləmə $M(X)$ və dispersiya $D(X)$.',
-      theoryMarkdown: `
-  ### 1. Bernulli Sınaqları
-  Eyni şəraitdə aparılan və bir-birindən asılı olmayan $n$ sayda sınağın hər birində $A$ hadisəsinin baş vermə ehtimalı sabit $p$-yə bərabərdirsə ($q = 1 - p$ baş verməmə ehtimalı), bu sınaqlara **Bernulli sınaqları** deyilir.
-  - $n$ sınaqda hadisənin dəqiq $k$ dəfə baş verməsi ehtimalı **Bernulli düsturu** ilə hesablanır:
-  $$P_n(k) = C_n^k p^k q^{n-k} = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}$$
+        id: 'lesson-math-9-u4-progressions',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 4: Ədədi ardıcıllıqlar. Silsilələr',
+        unitOrder: 4,
+        title: 'Ədədi və həndəsi silsilə düsturları',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Ədədi silsilənin fərqi $d$, $n$-ci həddi və cəm düsturu $S_n$; həndəsi silsilənin vuruğu $q$ və sonsuz azalan həndəsi silsilənin cəmi.',
+        theoryMarkdown: `
+    ### 1. Ədədi Silsilə
+    İkincidən başlayaraq hər bir həddi özündən əvvəlki hədlə eyni bir $d$ ədədinin (silsilə fərqi) cəminə bərabər olan ardıcıllığa **ədədi silsilə** deyilir.
+    - **$n$-ci həddin düsturu:**
+    $$a_n = a_1 + (n - 1)d$$
+    - **Əsas xassə:** $a_n = \frac{a_{n-1} + a_{n+1}}{2}$
+    - **İlk $n$ həddin cəmi:**
+    $$S_n = \frac{a_1 + a_n}{2} \cdot n = \frac{2a_1 + (n - 1)d}{2} \cdot n$$
 
-  ### 2. Diskret Təsadüfi Kəmiyyətin Xarakteristikaları
-  Təsadüfi kəmiyyətin ala biləcəyi qiymətlər $x_1, x_2, \dots, x_n$ və uyğun ehtimallar $p_1, p_2, \dots, p_n$ olduqda ($\sum p_i = 1$):
-  - **Riyazi gözləmə (orta qiymət):**
-  $$M(X) = \sum_{i=1}^n x_i p_i = x_1 p_1 + x_2 p_2 + \dots + x_n p_n$$
-  Bernulli paylanması üçün: $M(X) = n \cdot p$.
-  - **Dispersiya (səpələnmə ölçüsü):**
-  $$D(X) = M(X^2) - [M(X)]^2$$
-  Bernulli paylanması üçün: $D(X) = n \cdot p \cdot q$.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u5-1",
-              "name": "Bernulli Düsturu",
-              "latex": "P_n(k) = C_n^k p^k q^{n-k}",
-              "description": "n müstəqil sınaqda hadisənin k dəfə baş vermə ehtimalıdır."
-        },
-        {
-              "id": "f-m11-u5-2",
-              "name": "Riyazi Gözləmə",
-              "latex": "M(X) = \\sum x_i p_i",
-              "description": "Təsadüfi kəmiyyətin orta qiymətidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Bernulli sxemi",
-              "definition": "Hər addımda yalnız iki mümkün nəticəsi (uğur və ya uğursuzluq) olan müstəqil sınaqlar ardıcıllığı."
-        },
-        {
-              "term": "Riyazi gözləmə",
-              "definition": "Təsadüfi kəmiyyətin mümkün qiymətlərinin ehtimallara görə çəkili ortası."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u5-1",
-              "question": "Qəpik 4 dəfə atılır. Dəqiq 2 dəfə xəritə (rəqəm) üzünün düşmə ehtimalını tapın.",
-              "solution": "$n = 4, k = 2, p = 0.5, q = 0.5$. $P_4(2) = C_4^2 (0.5)^2 (0.5)^2 = 6 \\cdot \\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{6}{16} = \\frac{3}{8} = 0.375$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u5-1",
-              "question": "Hər atışda hədəfi vurma ehtimalı p=0.8 olarsa, 10 atışda riyazi gözləmə M(X) neçədir?",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "5"
-                    },
-                    {
-                          "key": "B",
-                          "text": "8"
-                    },
-                    {
-                          "key": "C",
-                          "text": "0.8"
-                    },
-                    {
-                          "key": "D",
-                          "text": "1.6"
-                    }
-              ],
-              "correctKey": "B",
-              "explanation": "Bernulli paylanmasında riyazi gözləmə M(X) = n * p = 10 * 0.8 = 8."
-        }
-  ]
-    },
+    ### 2. Həndəsi Silsilə
+    Hər bir həddi özündən əvvəlki həddin sıfırdan fərqli eyni bir $q$ ədədinə (silsilə vuruğu) hasilinə bərabər olan ardıcıllıqdır:
+    - **$n$-ci həddin düsturu:**
+    $$b_n = b_1 \cdot q^{n-1}$$
+    - **İlk $n$ həddin cəmi:**
+    $$S_n = \frac{b_1(q^n - 1)}{q - 1} \quad (q \neq 1)$$
+    - **Sonsuz azalan həndəsi silsilənin cəmi ($|q| < 1$):**
+    $$S = \frac{b_1}{1 - q}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u4-1",
+                "name": "Ədədi Silsilənin N-ci Həddi",
+                "latex": "a_n = a_1 + (n - 1)d",
+                "description": "İstənilən hədd birinci hədd və fərq vasitəsilə tapılır."
+          },
+          {
+                "id": "f-m9-u4-2",
+                "name": "Sonsuz Azalan Həndəsi Silsilə Cəmi",
+                "latex": "S = \\frac{b_1}{1 - q} \\quad (|q| < 1)",
+                "description": "Vuruğu birdən kiçik olduqda sonsuz hədlərin limit cəmidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Silsilə fərqi (d)",
+                "definition": "Ədədi silsilənin qonşu hədlərinin sabit fərqi."
+          },
+          {
+                "term": "Silsilə vuruğu (q)",
+                "definition": "Həndəsi silsilənin qonşu hədlərinin nisbəti."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u4-1",
+                "question": "İlk həddi $a_1 = 3$, fərqi $d = 4$ olan ədədi silsilənin 10-cu həddini tapın.",
+                "solution": "$a_{10} = a_1 + 9d = 3 + 9 \\cdot 4 = 3 + 36 = 39$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u4-1",
+                "question": "$b_1 = 6, q = \\frac{1}{2}$ olan sonsuz azalan həndəsi silsilənin cəmini tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "3"
+                      },
+                      {
+                            "key": "B",
+                            "text": "6"
+                      },
+                      {
+                            "key": "C",
+                            "text": "12"
+                      },
+                      {
+                            "key": "D",
+                            "text": "18"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "S = b1 / (1 - q) = 6 / (1 - 0.5) = 6 / 0.5 = 12."
+          }
+    ]
+      },
 
   {
-      id: 'lesson-math-11-u6-space-vectors',
-      subjectId: 'riyaziyyat',
-      grade: 11,
-      unit: 'Bölmə 6: Fəzada koordinatlar və Vektorlar',
-      unitOrder: 6,
-      title: 'Fəzada düzbucaqlı koordinat sistemi və vektorlar',
-      order: 1,
-      readTimeMinutes: 10,
-      difficulty: 3,
-      summary: 'Fəzada nöqtə $M(x, y, z)$, iki nöqtə arasındakı məsafə, parçanın ortasının koordinatları, fəzada vektorun modulu və skalyar hasili.',
-      theoryMarkdown: `
-  ### 1. Fəzada Koordinat Sistemi
-  Fəzada bir nöqtədə kəsişən üç qarşılıqlı perpendikulyar koordinat oxu:
-  - $Ox$ — absis oxu
-  - $Oy$ — ordinat oxu
-  - $Oz$ — aplikat oxu
-  Fəzadakı istənilən nöqtə üçlüklə təyin olunur: $M(x; y; z)$.
+        id: 'lesson-math-9-u5-trigonometry',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 5: Triqonometriyanın əsasları',
+        unitOrder: 5,
+        title: 'İti bucağın triqonometrik funksiyaları və əsas eyniliklər',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Düzbucaqlı üçbucaqda $\sin, \cos, \text{tg}, \text{ctg}$ tərifləri, əsas triqonometrik eynilik və xüsusi bucaqlar ($30^\circ, 45^\circ, 60^\circ$).',
+        theoryMarkdown: `
+    ### 1. Triqonometrik Funksiyaların Tərifi
+    Düzbucaqlı üçbucaqda $\alpha$ iti bucağı üçün:
+    - **Sinus ($\sin \alpha$):** Qarşıdakı katetin hipotenuza nisbəti: $\sin \alpha = \frac{a}{c}$
+    - **Kosinus ($\cos \alpha$):** Bitişik katetin hipotenuza nisbəti: $\cos \alpha = \frac{b}{c}$
+    - **Tangens ($\text{tg} \alpha$):** Qarşıdakı katetin bitişik katetə nisbəti: $\text{tg} \alpha = \frac{a}{b} = \frac{\sin \alpha}{\cos \alpha}$
+    - **Kotangens ($\text{ctg} \alpha$):** Bitişik katetin qarşıdakı katetə nisbəti: $\text{ctg} \alpha = \frac{b}{a} = \frac{\cos \alpha}{\sin \alpha}$
 
-  ### 2. İki Nöqtə Arasındakı Məsafə
-  $A(x_1; y_1; z_1)$ və $B(x_2; y_2; z_2)$ nöqtələri arasındakı məsafə:
-  $$d = |AB| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$$
-  - Parçanın ortasının koordinatları: $x_0 = \frac{x_1 + x_2}{2}, y_0 = \frac{y_1 + y_2}{2}, z_0 = \frac{z_1 + z_2}{2}$.
+    ### 2. Əsas Triqonometrik Eyniliklər
+    - $\sin^2 \alpha + \cos^2 \alpha = 1$
+    - $\text{tg} \alpha \cdot \text{ctg} \alpha = 1$
+    - $1 + \text{tg}^2 \alpha = \frac{1}{\cos^2 \alpha}$
 
-  ### 3. Fəzada Vektorlar
-  $\vec{a}(x_1; y_1; z_1)$ və $\vec{b}(x_2; y_2; z_2)$ vektorları üçün:
-  - **Uzunluq (modul):** $|\vec{a}| = \sqrt{x_1^2 + y_1^2 + z_1^2}$
-  - **Skalyar hasil:**
-  $$\vec{a} \cdot \vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2 = |\vec{a}| \cdot |\vec{b}| \cdot \cos \varphi$$
-  - **Vektorlar arasındakı bucağın kosinusu:**
-  $$\cos \varphi = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}$$
-  - **Perpendikulyarlıq şərti:** $x_1 x_2 + y_1 y_2 + z_1 z_2 = 0$.
-      `,
-      keyFormulas: [
-        {
-              "id": "f-m11-u6-1",
-              "name": "Fəzada İki Nöqtə Arasındakı Məsafə",
-              "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}",
-              "description": "Pifaqor teoreminin 3 ölçülü fəzaya ümumiləşməsidir."
-        },
-        {
-              "id": "f-m11-u6-2",
-              "name": "Fəzada Skalyar Hasil",
-              "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
-              "description": "Fəza vektorlarının uyğun koordinatlarının hasillərinin cəmidir."
-        }
-  ],
-      glossary: [
-        {
-              "term": "Aplikat oxu",
-              "definition": "Fəzada üçüncü şaquli z oxu."
-        },
-        {
-              "term": "Fəzada skalyar hasil",
-              "definition": "Fəzada iki vektorun koordinatlarının bir-birinə hasillərinin cəmi."
-        }
-  ],
-      solvedExamples: [
-        {
-              "id": "ex-m11-u6-1",
-              "question": "$A(1; 2; 3)$ və $B(3; 2; 5)$ nöqtələri arasındakı məsafəni tapın.",
-              "solution": "$d = \\sqrt{(3-1)^2 + (2-2)^2 + (5-3)^2} = \\sqrt{2^2 + 0^2 + 2^2} = \\sqrt{4 + 0 + 4} = \\sqrt{8} = 2\\sqrt{2}$."
-        }
-  ],
-      miniQuiz: [
-        {
-              "questionId": "mq-m11-u6-1",
-              "question": "$\\vec{a}(1; 2; 2)$ vektorunun uzunluğunu tapın.",
-              "options": [
-                    {
-                          "key": "A",
-                          "text": "3"
-                    },
-                    {
-                          "key": "B",
-                          "text": "5"
-                    },
-                    {
-                          "key": "C",
-                          "text": "9"
-                    },
-                    {
-                          "key": "D",
-                          "text": "√5"
-                    }
-              ],
-              "correctKey": "A",
-              "explanation": "|a| = √(1^2 + 2^2 + 2^2) = √(1 + 4 + 4) = √9 = 3."
-        }
-  ]
-    }
+    ### 3. Xüsusi Bucaqların Qiymətləri
+    - $\sin 30^\circ = \frac{1}{2}, \quad \cos 30^\circ = \frac{\sqrt{3}}{2}, \quad \text{tg} 30^\circ = \frac{\sqrt{3}}{3}$
+    - $\sin 45^\circ = \frac{\sqrt{2}}{2}, \quad \cos 45^\circ = \frac{\sqrt{2}}{2}, \quad \text{tg} 45^\circ = 1$
+    - $\sin 60^\circ = \frac{\sqrt{3}}{2}, \quad \cos 60^\circ = \frac{1}{2}, \quad \text{tg} 60^\circ = \sqrt{3}$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u5-1",
+                "name": "Əsas Triqonometrik Eynilik",
+                "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+                "description": "Eyni bucağın sinusunun və kosinusunun kvadratları cəmi vahidə bərabərdir."
+          },
+          {
+                "id": "f-m9-u5-2",
+                "name": "Tangens və Kotangens Hasilinin Eyniliyi",
+                "latex": "\\text{tg} \\alpha \\cdot \\text{ctg} \\alpha = 1",
+                "description": "Tangens və kotangens qarşılıqlı tərs kəmiyyətlərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Sinus",
+                "definition": "Qarşıdakı katetin hipotenuza olan nisbəti."
+          },
+          {
+                "term": "Kosinus",
+                "definition": "Bitişik katetin hipotenuza olan nisbəti."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u5-1",
+                "question": "İti bucaq üçün $\\sin \\alpha = \\frac{3}{5}$ olarsa, $\\cos \\alpha$-nı tapın.",
+                "solution": "$\\cos^2 \\alpha = 1 - \\sin^2 \\alpha = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25} \\implies \\cos \\alpha = \\frac{4}{5}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u9-1",
+                "question": "$\\sin^2 40^\\circ + \\cos^2 40^\\circ$ ifadəsinin qiyməti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "0"
+                      },
+                      {
+                            "key": "B",
+                            "text": "1"
+                      },
+                      {
+                            "key": "C",
+                            "text": "2"
+                      },
+                      {
+                            "key": "D",
+                            "text": "0.5"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Əsas triqonometrik eyniliyə görə istənilən bucaq üçün sin^2(x) + cos^2(x) = 1."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-9-u6-vectors',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 6: Vektorlar və Hərəkət',
+        unitOrder: 6,
+        title: 'Vektorlar və onlar üzərində əməllər. Skalyar hasil',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'İstiqamətlənmiş parça (vektor), vektorun modulu, toplanması (üçbucaq və paraleleqram qaydası), skalyar hasil və perpendikulyarlıq şərti.',
+        theoryMarkdown: `
+    ### 1. Vektor Anlayışı
+    Ədədi qiyməti və istiqaməti olan istiqamətlənmiş parçaya **vektor** deyilir: $\vec{a}$ və ya $\vec{AB}$.
+    - Başlanğıcı $A(x_1; y_1)$ və sonu $B(x_2; y_2)$ olan vektorun koordinatları:
+    $$\vec{AB} = (x_2 - x_1; y_2 - y_1)$$
+    - **Vektorun uzunluğu (modulu):**
+    $$|\vec{a}| = \sqrt{x^2 + y^2}$$
+
+    ### 2. Vektorların Toplanması və Çıxılması
+    - $\vec{a}(x_1; y_1) + \vec{b}(x_2; y_2) = (x_1 + x_2; y_1 + y_2)$
+    - Ədədə vurma: $k \cdot \vec{a} = (k x_1; k y_1)$
+
+    ### 3. Skalyar Hasil
+    İki vektorun skalyar hasili onların modulları ilə aralarındakı bucağın kosinusu hasilinə bərabərdir:
+    $$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \cdot \cos \varphi = x_1 x_2 + y_1 y_2$$
+    - **Perpendikulyarlıq şərti:** İki vektor yalnız və yalnız o zaman perpendikulyardır ki, onların skalyar hasili sıfıra bərabər olsun:
+    $$\vec{a} \perp \vec{b} \iff x_1 x_2 + y_1 y_2 = 0$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u6-1",
+                "name": "Vektorun Uzunluğu",
+                "latex": "|\\vec{a}| = \\sqrt{x^2 + y^2}",
+                "description": "Koordinatlarının kvadratları cəminin köküdür."
+          },
+          {
+                "id": "f-m9-u6-2",
+                "name": "Skalyar Hasil",
+                "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
+                "description": "Uyğun koordinatların hasillərinin cəmidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Vektor",
+                "definition": "Həm modulu, həm də fəzada istiqaməti olan yönəlmiş parça."
+          },
+          {
+                "term": "Skalyar hasil",
+                "definition": "İki vektorun hasilindən alınan həqiqi ədəd."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u6-1",
+                "question": "$\\vec{a}(3; 4)$ vektorunun uzunluğunu tapın.",
+                "solution": "$|\\vec{a}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u6-1",
+                "question": "$\\vec{a}(2; -3)$ və $\\vec{b}(3; 2)$ vektorlarının skalyar hasili neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "0"
+                      },
+                      {
+                            "key": "B",
+                            "text": "6"
+                      },
+                      {
+                            "key": "C",
+                            "text": "12"
+                      },
+                      {
+                            "key": "D",
+                            "text": "-12"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "a · b = 2*3 + (-3)*2 = 6 - 6 = 0 (vektorlar perpendikulyardır)."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-9-u7-combinatorics',
+        subjectId: 'riyaziyyat',
+        grade: 9,
+        unit: 'Bölmə 7: Birləşmələr nəzəriyyəsi və Ehtimal',
+        unitOrder: 7,
+        title: 'Permutasiya, kombinezon və ehtimal nəzəriyyəsi',
+        order: 1,
+        readTimeMinutes: 9,
+        difficulty: 2,
+        summary: 'Faktorial $n!$, vurma və toplama qaydaları, yerdəyişmələr (permutasiya $P_n$), qruplaşdırmalar (kombinezon $C_n^k$) və klassik ehtimal.',
+        theoryMarkdown: `
+    ### 1. Faktorial və Kombinatorika Qaydaları
+    $n$ natural ədədinin faktorialı 1-dən $n$-ə qədər olan natural ədədlərin hasilidir:
+    $$n! = 1 \cdot 2 \cdot 3 \dots n, \qquad 0! = 1$$
+    - **Toplama qaydası:** Əgər $A$ elementi $m$ üsulla, $B$ elementi $k$ üsulla seçilə bilərsə, "$A$ və ya $B$" elementi $m + k$ üsulla seçilə bilər.
+    - **Vurma qaydası:** Əgər $A$ $m$ üsulla, onun ardınca $B$ $k$ üsulla seçilirsə, "$A$ və $B$" cütü $m \cdot k$ üsulla seçilə bilər.
+
+    ### 2. Yerdəyişmə və Qrup
+    - **Permutasiya ($P_n$):** $n$ elementli çoxluğun elementlərinin nizamlı düzülüşlərinin sayıdır:
+    $$P_n = n!$$
+    - **Kombinezon ($C_n^k$):** $n$ elementdən sırası nəzərə alınmadan seçilən $k$ elementli alt çoxluqların sayıdır:
+    $$C_n^k = \frac{n!}{k!(n - k)!}$$
+
+    ### 3. Klassik Ehtimal
+    $$P(A) = \frac{m}{n} = \frac{\text{əlverişli hallar}}{\text{bütün mümkün hallar}}$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m9-u7-1",
+                "name": "Kombinezon Düsturu",
+                "latex": "C_n^k = \\frac{n!}{k!(n - k)!}",
+                "description": "n elementdən sırasız k elementi seçmə üsullarının sayı."
+          },
+          {
+                "id": "f-m9-u7-2",
+                "name": "Permutasiya Düsturu",
+                "latex": "P_n = n!",
+                "description": "n müxtəlif elementin yerdəyişmələrinin sayı."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Faktorial",
+                "definition": "1-dən n-ə qədər bütün natural ədədlərin hasili."
+          },
+          {
+                "term": "Kombinezon",
+                "definition": "Elementlərin düzülüş sırası vacib olmayan seçim birləşməsi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m9-u7-1",
+                "question": "5 nəfərdən 2 nəfərlik növbətçi qrupunu neçə müxtəlif üsulla seçmək olar?",
+                "solution": "Sıra vacib olmadığı üçün kombinezon tətbiq olunur: $C_5^2 = \\frac{5!}{2! \\cdot 3!} = \\frac{5 \\cdot 4}{2 \\cdot 1} = 10$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m9-u7-1",
+                "question": "3 kitab rəfə neçə müxtəlif ardıcıllıqla düzülə bilər?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "3"
+                      },
+                      {
+                            "key": "B",
+                            "text": "6"
+                      },
+                      {
+                            "key": "C",
+                            "text": "9"
+                      },
+                      {
+                            "key": "D",
+                            "text": "12"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "P3 = 3! = 1 * 2 * 3 = 6."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u1-functions',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 1: Funksiyalar və onların xassələri',
+        unitOrder: 1,
+        title: 'Təyin oblastı, qiymətlər çoxluğu, tək və cüt funksiyalar',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Funksiyanın təyin oblastı $D(f)$, qiymətlər çoxluğu $E(f)$, tək və cüt funksiyaların qrafik simmetriyası, mürəkkəb və tərs funksiya.',
+        theoryMarkdown: `
+    ### 1. Təyin Oblastı və Qiymətlər Çoxluğu
+    - **Təyin oblastı $D(f)$:** Arqumentin ($x$) funksiyanın mənası olduğu bütün mümkün qiymətlər çoxluğudur. Kökaltı ($2n$ dərəcə) ifadələr qeyri-mənfi, məxrəclər sıfırdan fərqli olmalıdır.
+    - **Qiymətlər çoxluğu $E(f)$:** Dəyişən $x$ bütün təyin oblastını aşarkən funksiyanın ($y$) aldığı qiymətlər toplusudur.
+
+    ### 2. Tək və Cüt Funksiyalar
+    Simmetrik təyin oblastında verilmiş funksiya üçün:
+    - **Cüt funksiya:** $f(-x) = f(x)$. Qrafiki **ordinat oxuna ($Oy$) nəzərən simmetrikdir** (məsələn, $y = x^2, y = \cos x$).
+    - **Tək funksiya:** $f(-x) = -f(x)$. Qrafiki **koordinat başlanğıcına ($O$) nəzərən simmetrikdir** (məsələn, $y = x^3, y = \sin x$).
+
+    ### 3. Tərs Funksiya
+    Əgər $y = f(x)$ funksiyası öz təyin oblastında ciddi monotondursa (yalnız artan və ya yalnız azalan), onun tərs funksiyası $x = f^{-1}(y)$ mövcuddur. Funksiyanın və onun tərs funksiyasının qrafikləri $y = x$ düz xəttinə nəzərən simmetrikdir.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u1-1",
+                "name": "Cüt Funksiya Şərti",
+                "latex": "f(-x) = f(x)",
+                "description": "Ordinat oxuna nəzərən simmetriya təmin olunur."
+          },
+          {
+                "id": "f-m10-u1-2",
+                "name": "Tək Funksiya Şərti",
+                "latex": "f(-x) = -f(x)",
+                "description": "Koordinat başlanğıcına nəzərən mərkəzi simmetriya təmin olunur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Təyin oblastı (D(f))",
+                "definition": "Funksiyanın təyin olunduğu bütün x arqumentlər çoxluğu."
+          },
+          {
+                "term": "Tərs funksiya",
+                "definition": "Verilmiş funksiyanın asılılığını əksinə çevirən funksiya (y=f(x) -> x=f⁻¹(y))."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u1-1",
+                "question": "$f(x) = x^4 + 3x^2$ funksiyasının tək və ya cüt olduğunu müəyyən edin.",
+                "solution": "$f(-x) = (-x)^4 + 3(-x)^2 = x^4 + 3x^2 = f(x)$. $f(-x) = f(x)$ şərti ödəndiyindən, funksiya cütdür."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u1-1",
+                "question": "$y = \\frac{1}{x - 3}$ funksiyasının təyin oblastı hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "R"
+                      },
+                      {
+                            "key": "B",
+                            "text": "x ≠ 3"
+                      },
+                      {
+                            "key": "C",
+                            "text": "x > 3"
+                      },
+                      {
+                            "key": "D",
+                            "text": "x < 3"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Məxrəc x - 3 ≠ 0 olmalıdır, buna görə də x ≠ 3 (bütün həqiqi ədədlər x=3 istisna olmaqla)."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u2-trig-eq',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 2: Triqonometrik funksiyalar və Triqonometrik tənliklər',
+        unitOrder: 2,
+        title: 'Triqonometrik funksiyaların qrafikləri və tənliklər',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 3,
+        summary: 'Sinusoid və kosinusoid, triqonometrik funksiyaların periodiklik xassəsi ($2\pi, \pi$), $\sin x = a, \cos x = a, \text{tg} x = a$ tənliklərinin həlli.',
+        theoryMarkdown: `
+    ### 1. Triqonometrik Funksiyaların Periodikliyi
+    - $y = \sin x$ və $y = \cos x$ üçün ən kiçik müsbət dövr: $T = 2\pi$.
+    - $y = \text{tg} x$ və $y = \text{ctg} x$ üçün ən kiçik müsbət dövr: $T = \pi$.
+    - Ümumi halda $y = \sin(kx + b)$ üçün $T = \frac{2\pi}{|k|}$.
+
+    ### 2. Sadə Triqonometrik Tənliklərin Ümumi Həlli
+    - **$\sin x = a$ ($|a| \le 1$):**
+    $$x = (-1)^k \arcsin a + \pi k, \quad k \in \mathbb{Z}$$
+    - **$\cos x = a$ ($|a| \le 1$):**
+    $$x = \pm \arccos a + 2\pi k, \quad k \in \mathbb{Z}$$
+    - **$\text{tg} x = a$:**
+    $$x = \text{arctg} a + \pi k, \quad k \in \mathbb{Z}$$
+
+    ### 3. Xüsusi Hallar
+    - $\sin x = 0 \implies x = \pi k$; $\quad \sin x = 1 \implies x = \frac{\pi}{2} + 2\pi k$; $\quad \sin x = -1 \implies x = -\frac{\pi}{2} + 2\pi k$
+    - $\cos x = 0 \implies x = \frac{\pi}{2} + \pi k$; $\quad \cos x = 1 \implies x = 2\pi k$; $\quad \cos x = -1 \implies x = \pi + 2\pi k$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u2-1",
+                "name": "Sinus Tənliyinin Kökü",
+                "latex": "x = (-1)^k \\arcsin a + \\pi k, \\quad k \\in \\mathbb{Z}",
+                "description": "sin x = a üçün ümumi həll çoxluğudur."
+          },
+          {
+                "id": "f-m10-u2-2",
+                "name": "Kosinus Tənliyinin Kökü",
+                "latex": "x = \\pm \\arccos a + 2\\pi k, \\quad k \\in \\mathbb{Z}",
+                "description": "cos x = a üçün ümumi həll çoxluğudur."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Period (Dövr)",
+                "definition": "Funksiyanın qiymətlərinin təkrarlanma aralığı."
+          },
+          {
+                "term": "Arkkosinus",
+                "definition": "[0; π] parçasında kosinusu a-ya bərabər olan bucaq."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u2-1",
+                "question": "$\\cos x = \\frac{1}{2}$ tənliyini həll edin.",
+                "solution": "$\\arccos\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{3}$. Ümumi düstur: $x = \\pm \\frac{\\pi}{3} + 2\\pi k, \\quad k \\in \\mathbb{Z}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u2-1",
+                "question": "$\\sin x = 0$ tənliyinin həllər çoxluğu hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "x = 2πk"
+                      },
+                      {
+                            "key": "B",
+                            "text": "x = π/2 + πk"
+                      },
+                      {
+                            "key": "C",
+                            "text": "x = πk, k ∈ Z"
+                      },
+                      {
+                            "key": "D",
+                            "text": "x = π + 2πk"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Sinus vahid çevrədə 0, π, 2π və s. nöqtələrində sıfıra bərabər olur, yəni x = πk."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u3-stereometry',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 3: Fəzada düz xətlər və müstəvilər (Stereometriya)',
+        unitOrder: 3,
+        title: 'Stereometriyanın aksiomları və üç perpendikulyar teoremi',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Stereometriyanın əsas aksiomları, düz xətt və müstəvinin paralellik və perpendikulyarlıq əlaməti, üç perpendikulyar teoremi.',
+        theoryMarkdown: `
+    ### 1. Stereometriyanın Əsas Aksiomları
+    - Bir düz xətt üzərində olmayan üç nöqtədən yalnız və yalnız bir müstəvi keçir.
+    - Düz xəttin iki nöqtəsi müstəvi üzərindədirsə, bu düz xəttin bütün nöqtələri həmin müstəvi üzərindədir.
+    - İki müxtəlif müstəvinin ortaq nöqtəsi varsa, onlar həmin nöqtədən keçən düz xətt boyunca kəsişir.
+
+    ### 2. Düz Xətt və Müstəvinin Qarşılıqlı Vəziyyəti
+    - **Paralellik əlaməti:** Müstəvidən kənardakı düz xətt bu müstəvidə yerləşən hər hansı düz xəttə paraleldirsə, həmin müstəvinin özünə də paraleldir.
+    - **Perpendikulyarlıq əlaməti:** Düz xətt müstəvinin kəsişən iki düz xəttinə perpendikulyardırsa, o, həmin müstəvinin özünə perpendikulyardır.
+
+    ### 3. Üç Perpendikulyar Teoremi
+    Müstəvi üzərindəki düz xətt mailin proyeksiyasına perpendikulyardırsa, mailin özünə də perpendikulyardır (və tərsinə).
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u3-1",
+                "name": "Perpendikulyar və Proyeksiya Əlaqəsi",
+                "latex": "l^2 = h^2 + d^2",
+                "description": "Mailin kvadratı perpendikulyarın kvadratı ilə proyeksiyanın kvadratı cəminə bərabərdir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Mail",
+                "definition": "Verilmiş nöqtədən müstəviyə perpendikulyar olmayan çəkilmiş parça."
+          },
+          {
+                "term": "Proyeksiya",
+                "definition": "Mailin oturacağı ilə perpendikulyarın oturacağını birləşdirən parça."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u3-1",
+                "question": "Nöqtədən müstəviyə uzunluğu 10 sm olan mail çəkilmişdir. Mailin proyeksiyası 6 sm olarsa, perpendikulyarın uzunluğunu tapın.",
+                "solution": "$h = \\sqrt{l^2 - d^2} = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8 \\text{ sm}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u3-1",
+                "question": "Bir düz xətt üzərində olmayan neçə nöqtədən yeganə müstəvi keçirmək olar?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "1"
+                      },
+                      {
+                            "key": "B",
+                            "text": "2"
+                      },
+                      {
+                            "key": "C",
+                            "text": "3"
+                      },
+                      {
+                            "key": "D",
+                            "text": "4"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "Stereometriyanın I aksiomuna görə bir düz xətt üzərində olmayan 3 nöqtədən yeganə müstəvi keçir."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u4-logarithms',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 4: Qüvvət, Üstlü və Loqarifmik funksiyalar',
+        unitOrder: 4,
+        title: 'Üstlü və loqarifmik tənliklər, loqarifmin xassələri',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 2,
+        summary: 'Loqarifmin tərifi $\log_a b$, əsas loqarifmik eynilik, cəmin və hasilin loqarifmi, üstlü tənliklərin həlli.',
+        theoryMarkdown: `
+    ### 1. Loqarifmin Tərifi
+    $b$ ədədini almaq üçün $a$ əsasını yüksəltmək lazım gələn qüvvət üstünə $b$ ədədinin $a$ əsasına görə **loqarifmi** deyilir:
+    $$\log_a b = c \iff a^c = b \quad (a > 0, a \neq 1, b > 0)$$
+    - **Əsas loqarifmik eynilik:**
+    $$a^{\log_a b} = b$$
+
+    ### 2. Loqarifmin Əsas Xassələri
+    - $\log_a (x \cdot y) = \log_a x + \log_a y$
+    - $\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y$
+    - $\log_a (x^p) = p \cdot \log_a x$
+    - $\log_{a^k} x = \frac{1}{k} \log_a x$
+    - **Yeni əsasa keçid düsturu:** $\log_a b = \frac{\log_c b}{\log_c a}$
+    - Natural loqarifm: $\ln x = \log_e x$ ($e \approx 2.71828$)
+    - Onluq loqarifm: $\lg x = \log_{10} x$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u4-1",
+                "name": "Hasilin Loqarifmi",
+                "latex": "\\log_a (x \\cdot y) = \\log_a x + \\log_a y",
+                "description": "Hasilin loqarifmi vuruqların loqarifmləri cəminə bərabərdir."
+          },
+          {
+                "id": "f-m10-u4-2",
+                "name": "Əsas Loqarifmik Eynilik",
+                "latex": "a^{\\log_a b} = b",
+                "description": "Eyni əsaslı dərəcə və loqarifm bir-birini kompensasiya edir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Loqarifm",
+                "definition": "Verilmiş ədədi almaq üçün əsası yüksəltmək lazım olan qüvvət üstü."
+          },
+          {
+                "term": "Əsas eynilik",
+                "definition": "a üstü log_a(b) = b münasibəti."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u4-1",
+                "question": "$\\log_2 16 + \\log_3 27$ cəmini hesablayın.",
+                "solution": "$\\log_2 16 = 4$ (çünki $2^4 = 16$), $\\log_3 27 = 3$ (çünki $3^3 = 27$). Cəm: $4 + 3 = 7$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u4-1",
+                "question": "$\\log_5 25$ ifadəsinin qiyməti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "1"
+                      },
+                      {
+                            "key": "B",
+                            "text": "2"
+                      },
+                      {
+                            "key": "C",
+                            "text": "5"
+                      },
+                      {
+                            "key": "D",
+                            "text": "10"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "5-in 2-ci qüvvəti 25 edir (5^2 = 25), buna görə loqarifm 2-yə bərabərdir."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u5-polyhedra',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 5: Çoxüzlülər və Fiqurların həcmi',
+        unitOrder: 5,
+        title: 'Prizma və piramidanın səthi və həcmi',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Düzgün prizma və piramida, yan və tam səthin sahəsi, həcm düsturları $V = S_{\text{ot}} \cdot h$ və $V = \frac{1}{3} S_{\text{ot}} \cdot h$.',
+        theoryMarkdown: `
+    ### 1. Prizma
+    İki üzü konqruyent çoxbucaqlı (oturacaqlar), qalan üzləri isə paraleloqramlar olan çoxüzlüyə **prizma** deyilir.
+    - **Yan səthin sahəsi:** $S_{\text{yan}} = P_{\text{ot}} \cdot h$ (düz prizmada)
+    - **Tam səthin sahəsi:** $S_{\text{tam}} = S_{\text{yan}} + 2S_{\text{ot}}$
+    - **Həcmi:**
+    $$V = S_{\text{ot}} \cdot h$$
+
+    ### 2. Piramida
+    Oturacağı çoxbucaqlı, qalan üzləri ortaq təpəyə malik üçbucaqlar olan çoxüzlüyə **piramida** deyilir.
+    - **Düzgün piramidanın yan səthi:** $S_{\text{yan}} = \frac{1}{2} P_{\text{ot}} \cdot h_a$ ($h_a$ — apofemdir)
+    - **Tam səthin sahəsi:** $S_{\text{tam}} = S_{\text{yan}} + S_{\text{ot}}$
+    - **Həcmi:**
+    $$V = \frac{1}{3} S_{\text{ot}} \cdot h$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u5-1",
+                "name": "Prizmanın Həcmi",
+                "latex": "V = S_{\\text{ot}} \\cdot h",
+                "description": "Oturacağın sahəsi ilə hündürlüyün hasilidir."
+          },
+          {
+                "id": "f-m10-u5-2",
+                "name": "Piramidanın Həcmi",
+                "latex": "V = \\frac{1}{3} S_{\\text{ot}} \\cdot h",
+                "description": "Prizma həcminin üçdə bir hissəsidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Apofem",
+                "definition": "Düzgün piramidanın yan üzünün təpədən çəkilmiş hündürlüyü."
+          },
+          {
+                "term": "Çoxüzlü",
+                "definition": "Səthi sonlu sayda çoxbucaqlılardan ibarət qapalı həndəsi cisim."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u5-1",
+                "question": "Oturacağının sahəsi $24 \\text{ sm}^2$, hündürlüyü 9 sm olan piramidanın həcmini tapın.",
+                "solution": "$V = \\frac{1}{3} S_{\\text{ot}} \\cdot h = \\frac{1}{3} \\cdot 24 \\cdot 9 = 8 \\cdot 9 = 72 \\text{ sm}^3$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u5-1",
+                "question": "Oturacağının sahəsi 15 və hündürlüyü 6 olan düz prizmanın həcmi neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "30"
+                      },
+                      {
+                            "key": "B",
+                            "text": "45"
+                      },
+                      {
+                            "key": "C",
+                            "text": "90"
+                      },
+                      {
+                            "key": "D",
+                            "text": "120"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "V = Sot * h = 15 * 6 = 90."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-10-u6-derivative',
+        subjectId: 'riyaziyyat',
+        grade: 10,
+        unit: 'Bölmə 6: Törəmə və onun tətbiqləri',
+        unitOrder: 6,
+        title: 'Törəmənin tərifi, cədvəli, həndəsi və fiziki mənası',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 3,
+        summary: 'Arqument və funksiya artımı, törəmənin tərifi limit kimi, cəmin, hasilin və qismətin törəməsi, toxunanın bucaq əmsalı $k = f\'(x_0)$ və ani sürət $v(t) = s\'(t)$.',
+        theoryMarkdown: `
+    ### 1. Törəmənin Tərifi
+    Funksiya artımının arqument artımına nisbətinin arqument artımı sıfıra yaxınlaşarkən limitinə funksiyanın verilmiş nöqtədə **törəməsi** deyilir:
+    $$f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$
+
+    ### 2. Törəmə Cədvəli
+    - $c' = 0$ ($c - \text{sabitdir}$)
+    - $(x^n)' = n \cdot x^{n-1}$
+    - $(\sin x)' = \cos x$
+    - $(\cos x)' = -\sin x$
+    - $(e^x)' = e^x, \qquad (\ln x)' = \frac{1}{x}$
+
+    ### 3. Diferensiallama Qaydaları
+    - $(u \pm v)' = u' \pm v'$
+    - $(u \cdot v)' = u'v + uv'$
+    - $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$
+
+    ### 4. Həndəsi və Fiziki Məna
+    - **Həndəsi məna:** Qrafikə $x_0$ nöqtəsində çəkilmiş toxunanın bucaq əmsalı:
+    $$k = \text{tg} \alpha = f'(x_0)$$
+    Toxunanın tənliyi: $y - f(x_0) = f'(x_0)(x - x_0)$
+    - **Fiziki məna:** Gedilən yolun zamana görə törəməsi ani sürəti verir:
+    $$v(t) = s'(t), \qquad a(t) = v'(t) = s''(t)$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m10-u6-1",
+                "name": "Qüvvət Funksiyasının Törəməsi",
+                "latex": "(x^n)' = n \\cdot x^{n-1}",
+                "description": "Üst qabağa düşür və dərəcə bir vahid azalır."
+          },
+          {
+                "id": "f-m10-u6-2",
+                "name": "Törəmənin Həndəsi Mənası",
+                "latex": "k = f'(x_0) = \\text{tg} \\alpha",
+                "description": "Nöqtədəki törəmə həmin nöqtədə toxunanın bucaq əmsalıdır."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Törəmə",
+                "definition": "Funksiyanın ani dəyişmə sürətini xarakterizə edən riyazi analiz anlayışı."
+          },
+          {
+                "term": "Toxunan",
+                "definition": "Əyriyə verilmiş nöqtədə ən yaxınlaşan düz xətt."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m10-u6-1",
+                "question": "$f(x) = x^3 - 4x + 5$ funksiyasının $x_0 = 2$ nöqtəsində törəməsini hesablayın.",
+                "solution": "Törəməni tapaq: $f'(x) = 3x^2 - 4$. $x = 2$ qiymətini qoysaq: $f'(2) = 3(2^2) - 4 = 12 - 4 = 8$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m10-u6-1",
+                "question": "$f(x) = 5x^2$ funksiyasının törəməsi nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "5x"
+                      },
+                      {
+                            "key": "B",
+                            "text": "10x"
+                      },
+                      {
+                            "key": "C",
+                            "text": "10"
+                      },
+                      {
+                            "key": "D",
+                            "text": "2x"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "(5x^2)' = 5 * 2x = 10x."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u1-investigation',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 1: Törəmənin tətbiqi ilə funksiyaların araşdırılması',
+        unitOrder: 1,
+        title: 'Artma-azalma intervalları, ekstremumlar və ən böyük/kiçik qiymət',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 3,
+        summary: 'Funksiyanın monotonluq əlamətləri ($f\'(x) > 0$ artan, $f\'(x) < 0$ azalan), stasionar və böhran nöqtələri, maksimum və minimum nöqtələri, parçada ən böyük və ən kiçik qiymət.',
+        theoryMarkdown: `
+    ### 1. Funksiyanın Artma və Azalma Şərti
+    - Əgər intervalda $f'(x) > 0$ olarsa, funksiya həmin intervalda **ciddi artandır**.
+    - Əgər intervalda $f'(x) < 0$ olarsa, funksiya həmin intervalda **ciddi azalandır**.
+
+    ### 2. Ekstremum Nöqtələri (Ferma Teoremi)
+    Törəmənin sıfıra bərabər olduğu nöqtələrə **stasionar nöqtələr** deyilir ($f'(x) = 0$).
+    - **Maksimum nöqtəsi:** Əgər $x_0$ stasionar nöqtəsindən keçərkən törəmə işarəsini **müsbətdən mənfiyə ($+ \to -$)** dəyişərsə, $x_0$ lokal maksimum nöqtəsidir.
+    - **Minimum nöqtəsi:** Əgər törəmə işarəsini **mənfidən müsbətə ($- \to +$)** dəyişərsə, $x_0$ lokal minimum nöqtəsidir.
+
+    ### 3. Parçada Ən Böyük və Ən Kiçik Qiymətlər
+    $[a; b]$ parçasında kəsilməz funksiyanın ən böyük (ƏBQ) və ən kiçik (ƏKQ) qiymətini tapmaq üçün:
+    1. Parçaya daxil olan bütün stasionar nöqtələrdəki qiymətlər hesablanır.
+    2. Parçanın uc nöqtələrindəki qiymətlər ($f(a)$ və $f(b)$) hesablanır.
+    3. Alınan qiymətlərin ən böyüyü və ən kiçiyi seçilir.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u1-1",
+                "name": "Monotonluq Əlaməti",
+                "latex": "f'(x) > 0 \\implies f(x) \\uparrow, \\quad f'(x) < 0 \\implies f(x) \\downarrow",
+                "description": "Müsbət törəmə artmanı, mənfi törəmə azalmanı bildirir."
+          },
+          {
+                "id": "f-m11-u1-2",
+                "name": "Ekstremumun Zəruri Şərti",
+                "latex": "f'(x_0) = 0",
+                "description": "Ekstremum nöqtələrində törəmə sıfıra çevrilir və ya mövcud deyil."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Stasionar nöqtə",
+                "definition": "Funksiyanın törəməsinin sıfıra bərabər olduğu daxili nöqtə."
+          },
+          {
+                "term": "Ekstremum",
+                "definition": "Funksiyanın lokal maksimum və ya minimum qiymətlərinin ümumi adı."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u1-1",
+                "question": "$f(x) = x^2 - 6x + 8$ funksiyasının minimum nöqtəsini tapın.",
+                "solution": "Törəməni sıfıra bərabər edək: $f'(x) = 2x - 6 = 0 \\implies 2x = 6 \\implies x = 3$. $x < 3$ üçün $f' < 0$, $x > 3$ üçün $f' > 0$ olduğundan, $x = 3$ minimum nöqtəsidir."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u1-1",
+                "question": "Nöqtədən keçərkən törəmə '+' işarəsindən '-' işarəsinə dəyişirsə, bu hansı nöqtədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "Minimum nöqtəsi"
+                      },
+                      {
+                            "key": "B",
+                            "text": "Maksimum nöqtəsi"
+                      },
+                      {
+                            "key": "C",
+                            "text": "Əyilmə nöqtəsi"
+                      },
+                      {
+                            "key": "D",
+                            "text": "Kəsilmə nöqtəsi"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Funksiya artmadan azalmaya keçirsə, həmin təpə nöqtəsi lokal maksimumdur."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u2-integral',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 2: İbtidai funksiya və İnteqral',
+        unitOrder: 2,
+        title: 'İbtidai funksiya, müəyyən inteqral və sahə hesablanması',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 3,
+        summary: 'İbtidai funksiyanın tərifi $F\'(x) = f(x)$, qeyri-müəyyən və müəyyən inteqral, Nyuton-Leybnits düsturu, əyrixətli trapesiyanın sahəsi.',
+        theoryMarkdown: `
+    ### 1. İbtidai Funksiya
+    Verilmiş aralıqda $F'(x) = f(x)$ şərti ödənərsə, $F(x)$ funksiyasına $f(x)$ üçün **ibtidai funksiya** deyilir.
+    - İbtidai funksiyaların ümumi şəkli: $F(x) + C$ ($C$ ixtiyari sabitdir).
+
+    ### 2. İnteqral Cədvəli
+    - $\int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)$
+    - $\int \frac{1}{x} dx = \ln|x| + C$
+    - $\int e^x dx = e^x + C$
+    - $\int \sin x dx = -\cos x + C$
+    - $\int \cos x dx = \sin x + C$
+
+    ### 3. Müəyyən İnteqral və Nyuton-Leybnits Düsturu
+    $$\int_a^b f(x) dx = F(b) - F(a)$$
+
+    ### 4. Əyrixətli Trapesiyanın Sahəsi
+    Yuxarıdan $y = f(x) \ge 0$ əyrisi ilə, aşağıdan $Ox$ oxu ilə ($y = 0$), soldan $x = a$ və sağdan $x = b$ düz xətləri ilə hüdudlanmış fiqurun sahəsi:
+    $$S = \int_a^b f(x) dx$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u2-1",
+                "name": "Nyuton-Leybnits Düsturu",
+                "latex": "\\int_a^b f(x) dx = F(b) - F(a)",
+                "description": "Müəyyən inteqral ibtidai funksiyanın sərhədlərdəki qiymətlərinin fərqinə bərabərdir."
+          },
+          {
+                "id": "f-m11-u2-2",
+                "name": "Əyrixətli Trapesiyanın Sahəsi",
+                "latex": "S = \\int_a^b [f(x) - g(x)] dx",
+                "description": "İki əyri arasındakı fiqurun sahəsinin inteqral ifadəsidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "İbtidai funksiya",
+                "definition": "Törəməsi verilmiş funksiyanı verən funksiya."
+          },
+          {
+                "term": "Müəyyən inteqral",
+                "definition": "İnteqral cəminin limiti, əyri altındakı həndəsi sahəni bildirir."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u2-1",
+                "question": "$\\int_1^3 2x dx$ müəyyən inteqralını hesablayın.",
+                "solution": "$2x$-in ibtidai funksiyası $x^2$-dir. Nyuton-Leybnits düsturuna görə: $\\int_1^3 2x dx = [x^2]_1^3 = 3^2 - 1^2 = 9 - 1 = 8$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u2-1",
+                "question": "$f(x) = 3x^2$ funksiyasının ibtidai funksiyası hansıdır?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "6x + C"
+                      },
+                      {
+                            "key": "B",
+                            "text": "x^3 + C"
+                      },
+                      {
+                            "key": "C",
+                            "text": "3x^3 + C"
+                      },
+                      {
+                            "key": "D",
+                            "text": "x^2 + C"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "(x^3)' = 3x^2 olduğundan ibtidai funksiya x^3 + C olar."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u3-revolution-solids',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 3: Fırlanma cisimləri',
+        unitOrder: 3,
+        title: 'Silindr, konus və kürənin səthi və həcmi',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 2,
+        summary: 'Fırlanma cisimləri, silindr, konus və kəsik konusun açılışı, yan və tam səthi, kürə və sferanın sahə və həcm düsturları.',
+        theoryMarkdown: `
+    ### 1. Silindr
+    Düzbucaqlının bir tərəfi ətrafında fırlanmasından alınan cisimdir.
+    - **Yan səthinin sahəsi:** $S_{\text{yan}} = 2\pi R h$
+    - **Tam səthinin sahəsi:** $S_{\text{tam}} = 2\pi R(R + h)$
+    - **Həcmi:**
+    $$V = \pi R^2 h$$
+
+    ### 2. Konus
+    Düzbucaqlı üçbucağın bir kateti ətrafında fırlanmasından alınan cisimdir ($l$ — doğurandır, $l = \sqrt{R^2 + h^2}$).
+    - **Yan səthinin sahəsi:** $S_{\text{yan}} = \pi R l$
+    - **Tam səthinin sahəsi:** $S_{\text{tam}} = \pi R(R + l)$
+    - **Həcmi:**
+    $$V = \frac{1}{3} \pi R^2 h$$
+
+    ### 3. Kürə və Sfera
+    Yarımçevrənin diametri ətrafında fırlanmasından **sfera**, yarım dairənin fırlanmasından **kürə** alınır.
+    - **Sferanın sahəsi:**
+    $$S = 4\pi R^2$$
+    - **Kürənin həcmi:**
+    $$V = \frac{4}{3}\pi R^3$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u3-1",
+                "name": "Silindrin Həcmi",
+                "latex": "V = \\pi R^2 h",
+                "description": "Dairəvi oturacağın sahəsi ilə hündürlüyün hasilidir."
+          },
+          {
+                "id": "f-m11-u3-2",
+                "name": "Kürənin Həcmi",
+                "latex": "V = \\frac{4}{3}\\pi R^3",
+                "description": "Radiusun kubu ilə mütənasib həcm düsturu."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Doğuran (l)",
+                "definition": "Fırlanma cisminin yan səthini əmələ gətirən hərəkət edən parça."
+          },
+          {
+                "term": "Sfera",
+                "definition": "Fəzada verilmiş mərkəzdən eyni məsafədə olan nöqtələr çoxluğu (kürənin səthi)."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u3-1",
+                "question": "Radiusu $R = 3$ sm və hündürlüyü $h = 5$ sm olan silindrin həcmini tapın ($\\pi$ saxlanılsın).",
+                "solution": "$V = \\pi R^2 h = \\pi \\cdot 3^2 \\cdot 5 = \\pi \\cdot 9 \\cdot 5 = 45\\pi \\text{ sm}^3$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u3-1",
+                "question": "Radiusu 3 sm olan sferanın səthinin sahəsi neçə $\\pi \\text{ sm}^2$-dir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "12π"
+                      },
+                      {
+                            "key": "B",
+                            "text": "27π"
+                      },
+                      {
+                            "key": "C",
+                            "text": "36π"
+                      },
+                      {
+                            "key": "D",
+                            "text": "54π"
+                      }
+                ],
+                "correctKey": "C",
+                "explanation": "S = 4 * π * R^2 = 4 * π * 3^2 = 4 * 9 * π = 36π."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u4-complex-numbers',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 4: Kompleks ədədlər',
+        unitOrder: 4,
+        title: 'Kompleks ədədlərin cəbri və triqonometrik şəkli',
+        order: 1,
+        readTimeMinutes: 11,
+        difficulty: 3,
+        summary: 'Xəyali vahid $i^2 = -1$, kompleks ədədin cəbri şəkli $z = a + bi$, modul $|z|$ və arqument $\varphi$, triqonometrik şəkil və Muavr düsturu.',
+        theoryMarkdown: `
+    ### 1. Kompleks Ədədin Cəbri Şəkli
+    $i^2 = -1$ şərtini ödəyən $i$ simvoluna **xəyali vahid** deyilir.
+    $z = a + bi$ ($a, b \in \mathbb{R}$) şəkilli ifadəyə **kompleks ədəd** deyilir:
+    - $a = \text{Re}(z)$ — həqiqi hissə
+    - $b = \text{Im}(z)$ — xəyali hissə
+    - **Qoşma kompleks ədəd:** $\bar{z} = a - bi$. Hasilləri həqiqi ədəddir: $z \cdot \bar{z} = a^2 + b^2$.
+
+    ### 2. Modul və Arqument
+    Kompleks müstəvidə $z(a; b)$ nöqtəsi üçün:
+    - **Modul:** $|z| = r = \sqrt{a^2 + b^2}$
+    - **Arqument ($\varphi$):** $\cos \varphi = \frac{a}{r}, \quad \sin \varphi = \frac{b}{r}$
+
+    ### 3. Triqonometrik Şəkil və Muavr Düsturu
+    - **Triqonometrik şəkil:**
+    $$z = r(\cos \varphi + i \sin \varphi)$$
+    - **Qüvvətə yüksəltmə (Muavr düsturu):**
+    $$z^n = r^n(\cos(n\varphi) + i \sin(n\varphi))$$
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u4-1",
+                "name": "Kompleks Ədədin Modulu",
+                "latex": "|z| = \\sqrt{a^2 + b^2}",
+                "description": "Koordinat başlanğıcından həmin nöqtəyə qədər olan məsafədir."
+          },
+          {
+                "id": "f-m11-u4-2",
+                "name": "Muavr Düsturu",
+                "latex": "z^n = r^n(\\cos(n\\varphi) + i\\sin(n\\varphi))",
+                "description": "Kompleks ədədin n-ci qüvvətə yüksəldilməsi qaydası."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Xəyali vahid (i)",
+                "definition": "Kvadratı -1 olan xəyali riyazi kəmiyyət."
+          },
+          {
+                "term": "Qoşma kompleks ədəd",
+                "definition": "Yalnız xəyali hissəsinin işarəsi ilə fərqlənən ədəd (a + bi və a - bi)."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u4-1",
+                "question": "$z = 3 + 4i$ kompleks ədədinin modulunu tapın.",
+                "solution": "$|z| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u4-1",
+                "question": "$i^4$ ifadəsinin qiyməti nəyə bərabərdir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "1"
+                      },
+                      {
+                            "key": "B",
+                            "text": "-1"
+                      },
+                      {
+                            "key": "C",
+                            "text": "i"
+                      },
+                      {
+                            "key": "D",
+                            "text": "-i"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "i^2 = -1 olduğundan, i^4 = (i^2)^2 = (-1)^2 = 1."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u5-bernoulli',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 5: Birləşmələr nəzəriyyəsi və Ehtimal paylanmaları',
+        unitOrder: 5,
+        title: 'Bernulli sınaqları və təsadüfi kəmiyyətin paylanma qanunu',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 3,
+        summary: 'Müstəqil sınaqlar ardıcıllığı, Bernulli düsturu $P_n(k) = C_n^k p^k q^{n-k}$, diskret təsadüfi kəmiyyət, riyazi gözləmə $M(X)$ və dispersiya $D(X)$.',
+        theoryMarkdown: `
+    ### 1. Bernulli Sınaqları
+    Eyni şəraitdə aparılan və bir-birindən asılı olmayan $n$ sayda sınağın hər birində $A$ hadisəsinin baş vermə ehtimalı sabit $p$-yə bərabərdirsə ($q = 1 - p$ baş verməmə ehtimalı), bu sınaqlara **Bernulli sınaqları** deyilir.
+    - $n$ sınaqda hadisənin dəqiq $k$ dəfə baş verməsi ehtimalı **Bernulli düsturu** ilə hesablanır:
+    $$P_n(k) = C_n^k p^k q^{n-k} = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}$$
+
+    ### 2. Diskret Təsadüfi Kəmiyyətin Xarakteristikaları
+    Təsadüfi kəmiyyətin ala biləcəyi qiymətlər $x_1, x_2, \dots, x_n$ və uyğun ehtimallar $p_1, p_2, \dots, p_n$ olduqda ($\sum p_i = 1$):
+    - **Riyazi gözləmə (orta qiymət):**
+    $$M(X) = \sum_{i=1}^n x_i p_i = x_1 p_1 + x_2 p_2 + \dots + x_n p_n$$
+    Bernulli paylanması üçün: $M(X) = n \cdot p$.
+    - **Dispersiya (səpələnmə ölçüsü):**
+    $$D(X) = M(X^2) - [M(X)]^2$$
+    Bernulli paylanması üçün: $D(X) = n \cdot p \cdot q$.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u5-1",
+                "name": "Bernulli Düsturu",
+                "latex": "P_n(k) = C_n^k p^k q^{n-k}",
+                "description": "n müstəqil sınaqda hadisənin k dəfə baş vermə ehtimalıdır."
+          },
+          {
+                "id": "f-m11-u5-2",
+                "name": "Riyazi Gözləmə",
+                "latex": "M(X) = \\sum x_i p_i",
+                "description": "Təsadüfi kəmiyyətin orta qiymətidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Bernulli sxemi",
+                "definition": "Hər addımda yalnız iki mümkün nəticəsi (uğur və ya uğursuzluq) olan müstəqil sınaqlar ardıcıllığı."
+          },
+          {
+                "term": "Riyazi gözləmə",
+                "definition": "Təsadüfi kəmiyyətin mümkün qiymətlərinin ehtimallara görə çəkili ortası."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u5-1",
+                "question": "Qəpik 4 dəfə atılır. Dəqiq 2 dəfə xəritə (rəqəm) üzünün düşmə ehtimalını tapın.",
+                "solution": "$n = 4, k = 2, p = 0.5, q = 0.5$. $P_4(2) = C_4^2 (0.5)^2 (0.5)^2 = 6 \\cdot \\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{6}{16} = \\frac{3}{8} = 0.375$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u5-1",
+                "question": "Hər atışda hədəfi vurma ehtimalı p=0.8 olarsa, 10 atışda riyazi gözləmə M(X) neçədir?",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "5"
+                      },
+                      {
+                            "key": "B",
+                            "text": "8"
+                      },
+                      {
+                            "key": "C",
+                            "text": "0.8"
+                      },
+                      {
+                            "key": "D",
+                            "text": "1.6"
+                      }
+                ],
+                "correctKey": "B",
+                "explanation": "Bernulli paylanmasında riyazi gözləmə M(X) = n * p = 10 * 0.8 = 8."
+          }
+    ]
+      },
+
+  {
+        id: 'lesson-math-11-u6-space-vectors',
+        subjectId: 'riyaziyyat',
+        grade: 11,
+        unit: 'Bölmə 6: Fəzada koordinatlar və Vektorlar',
+        unitOrder: 6,
+        title: 'Fəzada düzbucaqlı koordinat sistemi və vektorlar',
+        order: 1,
+        readTimeMinutes: 10,
+        difficulty: 3,
+        summary: 'Fəzada nöqtə $M(x, y, z)$, iki nöqtə arasındakı məsafə, parçanın ortasının koordinatları, fəzada vektorun modulu və skalyar hasili.',
+        theoryMarkdown: `
+    ### 1. Fəzada Koordinat Sistemi
+    Fəzada bir nöqtədə kəsişən üç qarşılıqlı perpendikulyar koordinat oxu:
+    - $Ox$ — absis oxu
+    - $Oy$ — ordinat oxu
+    - $Oz$ — aplikat oxu
+    Fəzadakı istənilən nöqtə üçlüklə təyin olunur: $M(x; y; z)$.
+
+    ### 2. İki Nöqtə Arasındakı Məsafə
+    $A(x_1; y_1; z_1)$ və $B(x_2; y_2; z_2)$ nöqtələri arasındakı məsafə:
+    $$d = |AB| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$$
+    - Parçanın ortasının koordinatları: $x_0 = \frac{x_1 + x_2}{2}, y_0 = \frac{y_1 + y_2}{2}, z_0 = \frac{z_1 + z_2}{2}$.
+
+    ### 3. Fəzada Vektorlar
+    $\vec{a}(x_1; y_1; z_1)$ və $\vec{b}(x_2; y_2; z_2)$ vektorları üçün:
+    - **Uzunluq (modul):** $|\vec{a}| = \sqrt{x_1^2 + y_1^2 + z_1^2}$
+    - **Skalyar hasil:**
+    $$\vec{a} \cdot \vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2 = |\vec{a}| \cdot |\vec{b}| \cdot \cos \varphi$$
+    - **Vektorlar arasındakı bucağın kosinusu:**
+    $$\cos \varphi = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}$$
+    - **Perpendikulyarlıq şərti:** $x_1 x_2 + y_1 y_2 + z_1 z_2 = 0$.
+        `,
+        keyFormulas: [
+          {
+                "id": "f-m11-u6-1",
+                "name": "Fəzada İki Nöqtə Arasındakı Məsafə",
+                "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}",
+                "description": "Pifaqor teoreminin 3 ölçülü fəzaya ümumiləşməsidir."
+          },
+          {
+                "id": "f-m11-u6-2",
+                "name": "Fəzada Skalyar Hasil",
+                "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+                "description": "Fəza vektorlarının uyğun koordinatlarının hasillərinin cəmidir."
+          }
+    ],
+        glossary: [
+          {
+                "term": "Aplikat oxu",
+                "definition": "Fəzada üçüncü şaquli z oxu."
+          },
+          {
+                "term": "Fəzada skalyar hasil",
+                "definition": "Fəzada iki vektorun koordinatlarının bir-birinə hasillərinin cəmi."
+          }
+    ],
+        solvedExamples: [
+          {
+                "id": "ex-m11-u6-1",
+                "question": "$A(1; 2; 3)$ və $B(3; 2; 5)$ nöqtələri arasındakı məsafəni tapın.",
+                "solution": "$d = \\sqrt{(3-1)^2 + (2-2)^2 + (5-3)^2} = \\sqrt{2^2 + 0^2 + 2^2} = \\sqrt{4 + 0 + 4} = \\sqrt{8} = 2\\sqrt{2}$."
+          }
+    ],
+        miniQuiz: [
+          {
+                "questionId": "mq-m11-u6-1",
+                "question": "$\\vec{a}(1; 2; 2)$ vektorunun uzunluğunu tapın.",
+                "options": [
+                      {
+                            "key": "A",
+                            "text": "3"
+                      },
+                      {
+                            "key": "B",
+                            "text": "5"
+                      },
+                      {
+                            "key": "C",
+                            "text": "9"
+                      },
+                      {
+                            "key": "D",
+                            "text": "√5"
+                      }
+                ],
+                "correctKey": "A",
+                "explanation": "|a| = √(1^2 + 2^2 + 2^2) = √(1 + 4 + 4) = √9 = 3."
+          }
+    ]
+      }
 ,
 
   // =========================================================================
   // 2. AZƏRBAYCAN DİLİ (AR Elm və Təhsil Nazirliyi e-Dərslik: 6, 7, 8, 9, 10, 11 - 35 Bölmə)
   // =========================================================================
   {
-    id: 'lesson-azeri-6-u1-lexicon',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 1: Sözün leksik və qrammatik mənası. Omonimlər, sinonimlər, antonimlər',
+      id: 'lesson-azeri-6-u1-lexicon',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 1: Sözün leksik və qrammatik mənası. Omonimlər, sinonimlər, antonimlər',
+      unitOrder: 1,
+      title: 'Sözün mənaları: Təkmənalı və çoxmənalı sözlər, omonimlər, sinonimlər, antonimlər',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 1,
+      summary: 'Sözün leksik və qrammatik mənası, həqiqi və məcazi məna, çoxmənalılıq, omonimlər, sinonimlər və antonimlər.',
+      theoryMarkdown: `
+  ### 1. Sözün Leksik və Qrammatik Mənası
+  - **Leksik məna:** Sözün birbaşa ifadə etdiyi məzmun, ilkin anlayışdır. Sözün leksik mənası izahlı lüğətdə verilir.
+  - **Qrammatik məna:** Sözün hansı nitq hissəsinə aid olması, hansı qrammatik şəkilçiləri qəbul etməsi və cümlədə hansı üzv olmasıdır.
+
+  ### 2. Təkmənalı və Çoxmənalı Sözlər
+  - **Təkmənalı sözlər:** Yalnız bir leksik mənası olan sözlərdir (məsələn: *kompüter, kərgədan, biologiya*).
+  - **Çoxmənalı sözlər:** İlkin həqiqi məna ilə yanaşı, oxşarlıq əsasında yeni məcazi mənalar qazanan sözlərdir (məsələn: *göz:* insanın gözü, bulağın gözü, şkafın gözü). Çoxmənalı sözlərin bütün mənaları eyni nitq hissəsinə aid olur.
+
+  ### 3. Omonimlər, Sinonimlər və Antonimlər
+  - **Omonimlər:** Deyilişi və yazılışı eyni, lakin leksik mənaları tamamilə fərqli olan sözlərdir (məsələn: *bağ* — meyvə bağı / bağlamaq üçün ip; *çay* — axar su / içki). Omonimlər həm eyni, həm də fərqli nitq hissələrinə aid ola bilər.
+  - **Sinonimlər:** Yazılışı və deyilişi fərqli, mənaları yaxın olan sözlərdir (məsələn: *gözəl — qəşəng — göyçək*). Yalnız eyni nitq hissəsinə aid olurlar.
+  - **Antonimlər:** Bir-birinə əks mənalı sözlərdir (məsələn: *ağ — qara, böyük — kiçik, gecə — gündüz*). Yalnız eyni nitq hissəsinə aid olurlar.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u1-1",
+              "name": "Omonimlə Çoxmənalı Sözün Fərqi",
+              "latex": "\\text{Çoxmənalı} \\implies \\text{Məcazilik və əlaqə var}; \\quad \\text{Omonim} \\implies \\text{Tam fərqli mənalar}",
+              "description": "Çoxmənalı sözlər arasında məna bağlılığı qalır, omonimlərdə isə mənalar tamamilə ayrıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Leksika",
+              "definition": "Dildəki bütün sözlərin məcmusu, lüğət tərkibi."
+        },
+        {
+              "term": "Omonim",
+              "definition": "Yazılışı və tələffüzü eyni, leksik mənaları tamamilə müxtəlif olan sözlər."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u1-1",
+              "question": "\"Dəmir qapı\" və \"dəmir iradə\" birləşmələrində \"dəmir\" sözünün mənasını təhlil edin.",
+              "solution": "\"Dəmir qapı\" birləşməsində maddə həqiqətən dəmirdir (həqiqi məna). \"Dəmir iradə\" birləşməsində isə möhkəmlik mənasında məcazi işlənmiş çoxmənalı sözdür."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u1-1",
+              "question": "Aşağıdakı cütlüklərdən hansı antonimdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Hündür — Uca"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Geniş — Dar"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Kök — Şəkilçi"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Ağac — Yarpaq"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Geniş və dar sözləri bir-birinə əks məna bildirən antonimlərdir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-6-u2-morphology-roots',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 2: Sözün tərkibi və söz yaradıcılığı',
+      unitOrder: 2,
+      title: 'Kök və şəkilçi, leksik və qrammatik şəkilçilər, eyniköklü sözlər',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 1,
+      summary: 'Sözün tərkibi (kök və şəkilçi), leksik və qrammatik şəkilçilərin fərqi, şəkilçilərin variantları və eyniköklü sözlərin xüsusiyyətləri.',
+      theoryMarkdown: `
+  ### 1. Kök və Şəkilçi
+  - **Kök:** Sözün mənalı və ayrılmaz əsas hissəsidir (simvolu: $\cap$).
+  - **Şəkilçi:** Sözün kökünə qoşularaq ya yeni söz düzəldən, ya da sözü digər sözlərlə əlaqələndirən hissəcikdir.
+
+  ### 2. Leksik və Qrammatik Şəkilçilər
+  - **Leksik (sözdüzəldici) şəkilçilər:** Sözün kökünə qoşularaq yeni leksik mənalı söz yaradır: *dəniz \to dənizçi, duz \to duzlu*.
+  - **Qrammatik (sözdəyişdirici) şəkilçilər:** Sözün leksik mənasını dəyişmir, yalnız formasını dəyişib cümlədə digər sözlərlə əlaqələndirir: cəm (-lar/-lər), mənsubiyyət, hal və xəbərlik şəkilçiləri.
+
+  ### 3. Şəkilçilərin Variantları və Ahəng Qanunu
+  Ahəng qanununa uyğun olaraq şəkilçilər:
+  - **Birvariantlı:** Adətən alınma şəkilçilərdir (-bi, -na, -keş, -dar, -pərəst, -xana).
+  - **İkivariantlı:** Qalın və incə saitlərə görə: *-lar / -lər, -da / -də*.
+  - **Dördvariantlı:** Qapalı saitlərin ahənginə görə: *-çı / -çi / -çu / -çü, -lı / -li / -lu / -lü*.
+
+  ### 4. Eyniköklü Sözlər
+  Eyni bir kökdən leksik şəkilçilər vasitəsilə yaranmış düzəltmə sözlərə **eyniköklü sözlər** deyilir. Eyniköklü sözlərin kökü mütləq eyni nitq hissəsi və eyni leksik məna olmalıdır (məsələn: *gül-çü, gül-dan, gül-lük* eyniköklüdür; lakin *gülmək* feli ilə *gül* ismi eyniköklü deyil).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u2-1",
+              "name": "Sözün Quruluş Sxemi",
+              "latex": "\\text{Kök} + \\text{Leksik şəkilçi} + \\text{Qrammatik şəkilçi}",
+              "description": "Azərbaycan dilində adi ardıcıllıq kök, leksik və ən sonda qrammatik şəkilçilərdir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Eyniköklü sözlər",
+              "definition": "Kökü eyni nitq hissəsinə aid olan və leksik şəkilçilərlə yaranan düzəltmə sözlər qrupu."
+        },
+        {
+              "term": "Ahəng qanunu",
+              "definition": "Sözdə qalın və ya incə saitlərin bir-birini izləməsi qanunu."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u2-1",
+              "question": "\"Bağbanlarımızdan\" sözünü tərkibinə (kök və şəkilçilərə) görə təhlil edin.",
+              "solution": "bağ (kök) + -ban (leksik şəkilçi) + -lar (cəm qrammatik) + -ımız (mənsubiyyət qrammatik) + -dan (çıxışlıq hal qrammatik)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u2-1",
+              "question": "Aşağıdakı sözlərdən hansı \"yağ\" (yağlamaq) feli ilə eyniköklü deyil?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Yağlı"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Yağsız"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Yağış"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Yağla"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Yağış sözünün kökü 'yağmaq' təbiət hadisəsi felidir, sürtülən yağ ismi deyil."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-6-u3-noun',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 3: İsim. İsimlərin qrammatik xüsusiyyətləri',
+      unitOrder: 3,
+      title: 'İsim: Quruluşca növləri, mənsubiyyət, hal və xəbərlik kateqoriyaları',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 1,
+      summary: 'Konkret və mücərrəd, ümumi və xüsusi isimlər, ismin halları (6 hal), mənsubiyyət və şəxs (xəbərlik) şəkilçiləri.',
+      theoryMarkdown: `
+  ### 1. İsmin Əsas Əlamətləri
+  Əşyanın adını bildirən, *Kim? Nə? Hara?* suallarına cavab verən əsas nitq hissəsinə **isim** deyilir.
+  - **Konkret isimlər:** Gözlə görünən, toxunula bilən (kitab, su, ağac).
+  - **Mücərrəd isimlər:** Duyğular, anlayışlar, toxunulmaz (arzu, xəyal, ağıl, sevgi).
+  - **Ümumi və xüsusi isimlər:** Eynicinsli əşyaların adı ümumi, tək olan varlıqlara verilən fərdi adlar isə xüsusi isimlərdir (böyük hərflə yazılır).
+
+  ### 2. İsmin Quruluşca Növləri
+  - **Sadə:** Yalnız kökdən və ya kök+qrammatik şəkilçidən ibarət olur (*ev, qələmlər*).
+  - **Düzəltmə:** Leksik şəkilçilər vasitəsilə yaranır (*dənizçi, yaxşılıq, meşəlik*).
+  - **Mürəkkəb:** İki və ya daha artıq sözün birləşməsindən yaranır (*dəvədabanı, tozsoran, günəbaxan*).
+
+  ### 3. İsmin Halları (6 Hal)
+  1. **Adlıq hal:** Şəkilçisi yoxdur (*kitab*).
+  2. **Yiyəlik hal:** *-ın⁴, -nın⁴* (*kitabın*). Müəyyən və qeyri-müəyyən olur.
+  3. **Yönlük hal:** *-a², -ya²* (*kitaba*).
+  4. **Təsirlik hal:** *-ı⁴, -nı⁴* (*kitabı*). Müəyyən və qeyri-müəyyən olur.
+  5. **Yerlik hal:** *-da², -də²* (*kitabda*).
+  6. **Çıxışlıq hal:** *-dan², -dən²* (*kitabdan*).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u3-1",
+              "name": "İsmin Hal Şəkilçiləri Cədvəli",
+              "latex": "\\text{Yiyəlik: } -ın^4; \\quad \\text{Yönlük: } -a^2; \\quad \\text{Təsirlik: } -ı^4; \\quad \\text{Yerlik: } -da^2; \\quad \\text{Çıxışlıq: } -dan^2",
+              "description": "Altı halın qrammatik göstəriciləridir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Mənsubiyyət",
+              "definition": "Əşyanın hansı şəxsə aid olduğunu bildirən qrammatik kateqoriya."
+        },
+        {
+              "term": "Təsirlik hal",
+              "definition": "Hərəkətin bilavasitə obyektini bildirən və vasitəsiz tamamlıq vəzifəsində çıxış edən hal."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u3-1",
+              "question": "\"Dünən kənddən gəldim\" cümləsində \"kənddən\" sözünün halını və sintaktik rolunu müəyyən edin.",
+              "solution": "\"Kənd-dən\" — -dən çıxışlıq hal şəkilçisidir. Haradan? sualına cavab verdiyi üçün cümlədə yer zərfliyidir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u3-1",
+              "question": "\"Qapının dəstəyi\" birləşməsində \"qapının\" sözü ismin hansı halındadır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Adlıq hal"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Yiyəlik hal"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Təsirlik hal"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Yerlik hal"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "-nın şəkilçisi müəyyən yiyəlik hal şəkilçisidir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-6-u4-adjective',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 4: Sifət və onun dərəcələri',
+      unitOrder: 4,
+      title: 'Sifət: Əlamət və keyfiyyət, müqayisə dərəcələri, isimləşmə',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 1,
+      summary: 'Əlamət və keyfiyyət bildirən sifətlər, sifətin 3 müqayisə dərəcəsi (adi, azaltma, çoxaltma) və substantivləşmə (isimləşmə).',
+      theoryMarkdown: `
+  ### 1. Sifətin Əsas Əlamətləri
+  Əşyanın əlamətini və ya keyfiyyətini bildirən, *Necə? Nə cür? Hansı?* suallarına cavab verən əsas nitq hissəsinə **sifət** deyilir.
+  - **Əlamət:** Xaricdən gözlə görünən forma, rəng, həcm (qırmızı, girdə, hündür).
+  - **Keyfiyyət:** Daxili xüsusiyyət, mənəvi xasiyyət (ağıllı, çalışqan, tənbəl, xeyirxah).
+
+  ### 2. Sifətin Müqayisə Dərəcələri
+  1. **Adi dərəcə:** Əlamətin normada olduğunu bildirir, xüsusi şəkilçisi yoxdur (*ağ, böyük, şirin*).
+  2. **Azaltma dərəcəsi:** Əlamətin normadan az olduğunu bildirir:
+     - Morfoloji üsul: *-ımtıl, -sov, -şın, -raq* (*sarımtıl, uzunsov, qarayanız*).
+     - Sintaktik üsul: *açıq, kəm, ala, təhər* sözləri ilə (*açıq-qırmızı, kəmşirin, alababt*).
+  3. **Çoxaltma dərəcəsi:** Əlamətin normadan çox olduğunu bildirir:
+     - Morfoloji üsul: *m, p, r, s* samitləri ilə (*qıpqırmızı, tərtəmiz, sap-sarı*), *-ca²* şəkilçisi (*xırdaca*).
+     - Sintaktik üsul: *ən, lap, daha, olduqca, çox, dümdüz* sözləri ilə (*ən gözəl, lap yaxşı*).
+
+  ### 3. Sifətin İsimləşməsi (Substantivləşmə)
+  Sifət cümlədə təyin etdiyi ismi itirdikdə ismin sualına (*Kim? Nə?*) cavab verir, ismin şəkilçilərini qəbul edir və cümlədə mübtəda və ya tamamlıq olur:
+  *Qocalar (kim?) parkda dincəlirdilər.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u4-1",
+              "name": "Çoxaltma Dərəcəsi Qaydası",
+              "latex": "\\text{İlk heca} + [m, p, r, s] + \\text{Söz} \\implies \\text{Qıp-qırmızı, Düm-ağ}",
+              "description": "Sözün ilk hecasına m, p, r, s samitlərindən biri artırılaraq yaranır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Substantivləşmə",
+              "definition": "Sifətin cümlədə ismi əvəz edərək ismin qrammatik xüsusiyyətlərini qazanması."
+        },
+        {
+              "term": "Azaltma dərəcəsi",
+              "definition": "Əlamət və ya keyfiyyətin adi normadan az olduğunu bildirən dərəcə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u4-1",
+              "question": "\"Açıq-sarı\", \"qırmızımtıl\" və \"lap maraqlı\" sözlərinin dərəcələrini təyin edin.",
+              "solution": "\"Açıq-sarı\" — azaltma (sintaktik); \"qırmızımtıl\" — azaltma (morfoloji); \"lap maraqlı\" — çoxaltma (sintaktik)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u4-1",
+              "question": "Aşağıdakı sifətlərdən hansı çoxaltma dərəcəsindədir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Qaraşın"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Açıq-yaşıl"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Tərtəmiz"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Uzunsov"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Tərtəmiz sözü 'r' samiti vasitəsilə çoxaltma dərəcəsində yaranmışdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-6-u5-numeral',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 5: Say. Sayın məna növləri və orfoqrafiyası',
+      unitOrder: 5,
+      title: 'Say: Məna növləri, numerativ sözlər və yazılış qaydaları',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 1,
+      summary: 'Sayın məna növləri (miqdar, sıra), numerativ sözlər, ərəb və roma rəqəmlərinin yazılışı və defis qaydası.',
+      theoryMarkdown: `
+  ### 1. Sayın Məna Növləri
+  Əşyanın miqdarını və ya sırasını bildirən, *Neçə? Nə qədər? Neçənci?* suallarına cavab verən əsas nitq hissəsinə **say** deyilir.
+  1. **Müəyyən miqdar sayları:** Əşyanın dəqiq sayını bildirir (*beş, on iki, yüz*). Özündən sonra gələn isim həmişə tək halda olur (*beş kitab*, beş kitablar deyilməz).
+  2. **Qeyri-müəyyən miqdar sayları:** Təxmini miqdar bildirir (*çox, az, xeyli, bir qədər, 5-6*).
+  3. **Sıra sayları:** Əşyanın sırasını bildirir, *-ıncı⁴* şəkilçisi ilə düzəlir (*birinci, beşinci*).
+  4. **Kəsr sayları:** Hissə bildirir (*üçdə bir, sıfır tam onda beş*).
+
+  ### 2. Numerativ Sözlər
+  Müəyyən miqdar sayları ilə isimlər arasında kəmiyyət fərqini dəqiqləşdirmək üçün işlənən sözlərdir:
+  *nəfər, baş, ədəd, dənə, cüt, dəst, göz, tikə, damcı, ton*.
+
+  ### 3. Sayların Orfoqrafiyası
+  - Sıra sayları ərəb rəqəmləri ilə yazıldıqda şəkilçi defislə yazılır: *5-ci, 10-cu*.
+  - Roma rəqəmlərindən sonra şəkilçi və ya defis yazılmır: *IX sinif, XXI əsr*.
+  - Təxmini saylar defislə yazılır: *üç-dörd, yeddi-səkkiz*.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u5-1",
+              "name": "Sıra Saylarının Rəqəmlə Yazılışı",
+              "latex": "\\text{Ərəb: } 5\\text{-ci}; \\quad \\text{Roma: } V \\text{ (defissiz)}",
+              "description": "Ərəb rəqəmlərindən sonra defis və şəkilçi, Roma rəqəmlərində isə birbaşa yazılır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Numerativ söz",
+              "definition": "Sayla isim arasında işlənərək əşyanın sayılma vahidini bildirən köməkçi söz."
+        },
+        {
+              "term": "Kəsr sayı",
+              "definition": "Tamın hissələrini ifadə edən say növü."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u5-1",
+              "question": "\"O, 3-cü sırada əyləşmişdi\" və \"VI əsr abidəsi\" cümlələrindəki sayların orfoqrafiyasını izah edin.",
+              "solution": "3-cü: Ərəb rəqəmindən sonra defis və -cü yazılması düzgündür. VI: Roma rəqəmindən sonra şəkilçi artırılmır, düzgün yazılışdır."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u5-1",
+              "question": "Aşağıdakılardan hansında sayın yazılışında səhvə yol verilmişdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "7-ci sinif"
+                    },
+                    {
+                          "key": "B",
+                          "text": "IX-cu əsr"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Beş-altı nəfər"
+                    },
+                    {
+                          "key": "D",
+                          "text": "On iki kitab"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Roma rəqəmlərindən sonra şəkilçi və defis işlədilməz, yalnız IX əsr yazılmalıdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-6-u6-pronoun',
+      subjectId: 'azerbaycan_dili',
+      grade: 6,
+      unit: 'Bölmə 6: Əvəzlik və onun məna növləri',
+      unitOrder: 6,
+      title: 'Əvəzlik: Məna növləri, o və bu əvəzliklərindən sonra vergülün işlənməsi',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 1,
+      summary: 'Əsas nitq hissələrini əvəz edən əvəzliklər (şəxs, qeyri-müəyyən, təyini, işarə, sual) və o, bu əvəzliklərindən sonra vergül qoyulması qaydaları.',
+      theoryMarkdown: `
+  ### 1. Əvəzliyin Məna Növləri
+  İsim, sifət, say və digər nitq hissələrinin yerində işlənən əsas nitq hissəsinə **əvəzlik** deyilir.
+  1. **Şəxs əvəzlikləri:** Mən, sən, o, biz, siz, onlar (yalnız ismin yerində işlənir).
+  2. **İşarə əvəzlikləri:** O, bu, elə, belə, həmin (əlamət və əşyaya işarə edir).
+  3. **Qeyri-müəyyən əvəzliklər:** Biri, kimsə, nəsə, hər kəs, hamı, bəzi, heç kim.
+  4. **Təyini əvəzliklər:** Hər, öz, bütün, filan, eyni.
+  5. **Sual əvəzlikləri:** Kim? Nə? Hara? Necə? Neçə? Hansı?
+
+  ### 2. "O" və "Bu" Əvəzliklərindən Sonra Vergül Qaydası
+  "O" və "bu" cümlədə **mübtəda** vəzifəsində çıxış etdikdə (*Kim? Nə?* sualına cavab verdikdə):
+  - Özündən sonra **isim, sifət, say, zərf, feli sifət** və ya **modal söz** gələrsə, **vergül qoyulur**:
+    *O, çalışqan şagirddir (sifət).*
+    *Bu, məktəb binasıdır (isim).*
+  - Özündən sonra **fel (feli xəbər), əvəzlik** və ya **köməkçi nitq hissələri** (qoşma, bağlayıcı, ədat) gələrsə, **vergül qoyulmaz**:
+    *O gəldi (fel).*
+    *O da bilir (ədat).*
+    *Bu mənim qələmimdir (əvəzlik).*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az6-u6-1",
+              "name": "O, Bu Mübtədadan Sonra Vergül",
+              "latex": "\\text{O / Bu (mübtəda)} + [\\text{İsim, Sifət, Say, Zərf}] \\implies \\text{Vergül qoyulur}",
+              "description": "Əsas adlar gəldikdə vergül qoyulur, fel və əvəzlik gəldikdə qoyulmur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Təyini əvəzlik",
+              "definition": "Öz, hər, bütün kimi əşyanı ümumi şəkildə təyin edən əvəzliklər."
+        },
+        {
+              "term": "Mübtəda vəzifəsində əvəzlik",
+              "definition": "Cümlədə kim? nə? sualına cavab verən və hərəkətin icraçısını bildirən əvəzlik."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az6-u6-1",
+              "question": "\"O məktəbə tələsirdi\" və \"O, məktəb direktorudur\" cümlələrində vergülün işlənməsini əsaslandırın.",
+              "solution": "Birinci cümlədə 'o' işarə əvəzliyidir (hansı məktəbə?) və təyindir, vergül qoyulmaz. İkinci cümlədə 'o' mübtədadır (kim?) və ardınca isim ('məktəb') gəldiyi üçün vergül qoyulur."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az6-u6-1",
+              "question": "Aşağıdakı cümlələrin hansında \"o\" əvəzliyindən sonra vergül qoyulmalıdır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "O oxumağı çox sevir."
+                    },
+                    {
+                          "key": "B",
+                          "text": "O gələndə biz evdə idik."
+                    },
+                    {
+                          "key": "C",
+                          "text": "O maraqlı bir kitab aldı."
+                    },
+                    {
+                          "key": "D",
+                          "text": "O da dərslərini hazırladı."
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "C bəndində 'O' mübtədadır və özündən sonra sifət ('maraqlı') gəldiyi üçün vergül qoyulmalıdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u1-verbs-tenses',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 1: Fel. Felin quruluşca növləri və təsriflənməsi',
+      unitOrder: 1,
+      title: 'Felin quruluşca növləri, təsdiq və inkar, felin zamanları',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Hərəkət bildirən fellər, quruluşca növləri, -ma/-mə inkar şəkilçisi və felin üç zamanı (keçmiş, indiki, gələcək).',
+      theoryMarkdown: `
+  ### 1. Felin Əsas Əlamətləri
+  İş, hal, hərəkət bildirən, *Nə etdi? Nə edir? Nə edəcək?* suallarına cavab verən əsas nitq hissəsinə **fel** deyilir.
+  - **Təsdiq və inkar:** Felin inkarı *-ma², -mə²* şəkilçisi ilə düzəlir (*yazdı — yazmadı*). Qeyd: İnkarlıq şəkilçisi vurğu qəbul etmir!
+
+  ### 2. Felin Quruluşca Növləri
+  - **Sadə fellər:** Yalnız bir kökdən ibarət olur (*get, bax, oxu*).
+  - **Düzəltmə fellər:** Adlardan və ya fellərdən leksik şəkilçilərlə yaranır:
+    *-la² (başla), -lan² (həyəcanlan), -laş² (birləş), -t (oxut), -dır⁴ (yazdır)*.
+  - **Mürəkkəb fellər:**
+    - Bitişik yazılanlar: *-etmək, -eləmək, -olmaq* köməkçi felləri ilə (*kömək etmək, qəbul olmaq*).
+    - Defislə yazılanlar: Yaxın və əks mənalı fellərin birləşməsi (*atıb-tutmaq, gedib-gəlmək*).
+
+  ### 3. Felin Zamanları
+  1. **Keçmiş zaman:**
+     - Şühudi (gözlə görülən): *-dı⁴* (*yazdı, gördü*).
+     - Nəqli (eşidilən): *-mış⁴* və ya *-ıb⁴* (*yazmışdır, gəlibdir*).
+  2. **İndiki zaman:** *-ır⁴* (*yazır, oxuyur*).
+  3. **Gələcək zaman:**
+     - Qəti gələcək: *-acaq²* (*yazacaq, gələcək*).
+     - Qeyri-qəti gələcək: *-ar²* (*yazar, gələr*).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u1-1",
+              "name": "Felin Zaman Şəkilçiləri",
+              "latex": "\\text{Keçmiş: } -dı^4, -mış^4; \\quad \\text{İndiki: } -ır^4; \\quad \\text{Gələcək: } -acaq^2, -ar^2",
+              "description": "Felin üç əsas qrammatik zamanının göstəriciləridir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Şühudi keçmiş",
+              "definition": "Danışanın bilavasitə şahidi olduğu hərəkəti bildirən -dı⁴ şəkilçili keçmiş zaman."
+        },
+        {
+              "term": "Təsriflənən fel",
+              "definition": "Şəxsə və kəmiyyətə görə dəyişə bilən feli formalar."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u1-1",
+              "question": "\"Şagirdlər sabah gələcəklər\" cümləsindəki felin zamanını və şəxsini müəyyən edin.",
+              "solution": "\"gəl-əcək-lər\": -əcək qəti gələcək zaman şəkilçisidir, -lər III şəxsin cəmidir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u1-1",
+              "question": "Aşağıdakı fellərdən hansı qeyri-qəti gələcək zamandadır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Oxuyacaq"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Yazır"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Baxar"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Gəlmişdir"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "-ar² şəkilçisi qeyri-qəti gələcək zaman şəkilçisidir (bax-ar)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u2-verb-voices',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 2: Felin qrammatik məna növləri',
+      unitOrder: 2,
+      title: 'Felin qrammatik məna növləri: Məlum, məchul, qayıdış, qarşılıqlı-birgəlik, icbar',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Subyekt və obyekt münasibəti: məlum, məchul (-ıl⁴, -ın⁴), qayıdış (-ın⁴), şəxssiz, qarşılıqlı-birgəlik (-ış⁴) və icbar (-dır⁴, -t) növlər.',
+      theoryMarkdown: `
+  ### 1. Qrammatik Məna Növləri Nədir?
+  Hərəkəti icra edən (subyekt) ilə üzərində iş görülən (obyekt) arasındakı münasibəti ifadə edən kateqoriyadır.
+
+  ### 2. Növlərin Xüsusiyyətləri və Şəkilçiləri
+  1. **Məlum növ:** İşi görən subyekt məlumdur. Xüsusi şəkilçisi yoxdur (*Əli məktubu yazdı*).
+  2. **Məchul növ:** İşi görən qrammatik subyekt məlum deyil, obyekt cümlənin mübtədası olur. Şəkilçiləri: *-ıl⁴, -ın⁴* (*Məktub yazıldı, qapı açıldı*).
+  3. **Qayıdış növ:** Hərəkəti görən subyekt işi öz üzərində icra edir. Şəkilçiləri: *-ın⁴, -ıl⁴* (*Duman çəkildi, hava açıldı, qız bəzəndi*).
+  4. **Şəxssiz növ:** Həm subyekti olmur, həm də mübtəda tələb etmir (*Məsələyə baxıldı, sənədlərə qol çəkildi*).
+  5. **Qarşılıqlı-birgəlik növ:** Hərəkət qarşı-qarşıya və ya müştərək icra edilir. Şəkilçisi: *-ış⁴* (*məktublaşmaq, vuruşmaq, gülüşmək*).
+  6. **İcbar növ:** Hərəkəti danışan və ya icraçı yox, başqası icra edir. Şəkilçisi: *-dır⁴, -t* (*yazdırmaq, təmizlətmək*).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u2-1",
+              "name": "Qayıdış və Məchul Fərqi",
+              "latex": "\\text{Məchul} \\implies \\text{İşi başqası görür}; \\quad \\text{Qayıdış} \\implies \\text{Öz üzərində icra olunur}",
+              "description": "-ın⁴ şəkilçisi hər iki növü düzəldə bilər, məna fərqinə görə ayrılır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Məchul növ",
+              "definition": "İşi icra edənin qrammatik cəhətdən məlum olmadığı feli forma."
+        },
+        {
+              "term": "İcbar növ",
+              "definition": "İşin başqa bir şəxsə gördürülməsini bildirən növ."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u2-1",
+              "question": "\"Paltar yuyuldu\" və \"Uşaq yuyundu\" fellərinin qrammatik məna növlərini müqayisə edin.",
+              "solution": "\"Paltar yuyuldu\" — məchul növdür, çünki paltarı kimsə başqası yuyub. \"Uşaq yuyundu\" — qayıdış növdür, çünki uşaq özü-özünü yuyub."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u2-1",
+              "question": "\"Müəllim mətni şagirdə oxutdurdu\" cümləsindəki fel hansı növdədir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Məlum növ"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Məchul növ"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Qarşılıqlı növ"
+                    },
+                    {
+                          "key": "D",
+                          "text": "İcbar növ"
+                    }
+              ],
+              "correctKey": "D",
+              "explanation": "Hərəkət başqasına gördürülür və -dur şəkilçisi var, yəni icbar növdür."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u3-verb-moods',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 3: Felin şəkilləri',
+      unitOrder: 3,
+      title: 'Felin şəkilləri: Əmr, xəbər, arzu, vacib, lazım, şərt',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Felin 6 qrammatik şəkli, onların şəkilçiləri, idi, imiş, isə hissəcikləri ilə işlənməsi.',
+      theoryMarkdown: `
+  ### 1. Felin Şəkilləri Nədir?
+  Danışanın icra edilən işə, hərəkətə münasibətini bildirən qrammatik kateqoriyadır.
+
+  ### 2. 6 Feli Şəkil
+  1. **Əmr şəkli:** Əmr, xahiş, məsləhət bildirir. Xüsusi şəkilçisi yoxdur, birbaşa şəxs şəkilçiləri ilə düzəlir: *yazım, yaz, yazsın, yazaq, yazın, yazsınlar*.
+  2. **Xəbər şəkli:** Hərəkətin üç zamandan birində icra edildiyini bildirir. Xüsusi şəkilçisi yoxdur, zaman şəkilçiləri ilə formalaşır: *yazır, oxudu, gələcək*.
+  3. **Arzu şəkli:** Arzu, istək bildirir. Şəkilçisi: *-a², -yə²* (*yazam, oxuyasan*). Yanında *kaş, gərək* ədatları işlənir.
+  4. **Vacib şəkli:** İcra edilməsinin zəruriliyini bildirir. Şəkilçisi: *-malı², -məli²* (*oxumalıyam, yazmalısan*).
+  5. **Lazım şəkli:** Hərəkətin lazım olduğunu bildirir. Şəkilçisi: *-ası², -əsi²* (*gedəsiyəm, oxuyasısan*). İnkarı *deyil* sözü ilə düzəlir (*gedəsi deyiləm*).
+  6. **Şərt şəkli:** Hərəkətin icrasını şərtə bağlayır. Şəkilçisi: *-sa², -sə²* (*yazsam, bilsən*).
+
+  ### 3. İdi, İmiş, İsə Hissəcikləri
+  Felin şəkillərinə qoşularaq mürəkkəb zaman və şərt formaları yaradır: *yazırdı (yazır idi), oxumalıymış (oxumalı imiş), gəlsəydi (gəlsə idi)*.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u3-1",
+              "name": "Feli Şəkillərin Şəkilçiləri",
+              "latex": "\\text{Arzu: } -a^2; \\quad \\text{Vacib: } -malı^2; \\quad \\text{Lazım: } -ası^2; \\quad \\text{Şərt: } -sa^2",
+              "description": "Felin dörd şəklinin xüsusi morfoloji şəkilçiləridir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Felin şəkli",
+              "definition": "Danışanın hərəkətin gerçəkləşməsinə münasibətini bildirən qrammatik forma."
+        },
+        {
+              "term": "Hissəcik",
+              "definition": "Fellərə qoşulan idi, imiş, isə qısaldılmış köməkçi sözləri."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u3-1",
+              "question": "\"Gərək bu kitabı oxuyasan\" cümləsindəki fel hansı şəkildədir?",
+              "solution": "\"oxu-ya-san\": -ya arzu şəklinin şəkilçisidir, cümlədə 'gərək' arzu ədatı da var. Arzu şəkli."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u3-1",
+              "question": "\"Vətəni qorumalıyıq\" cümləsində fel hansı şəkildədir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Əmr şəkli"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Vacib şəkli"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Lazım şəkli"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Xəbər şəkli"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "-malı² şəkilçisi vacib şəklinin göstəricisidir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u4-non-finite-verbs',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 4: Felin təsriflənməyən formaları',
+      unitOrder: 4,
+      title: 'Məsdər, feli sifət və feli bağlama',
+      order: 1,
+      readTimeMinutes: 11,
+      difficulty: 2,
+      summary: 'Felin təsriflənməyən (şəxsə və zamana görə dəyişməyən) formaları: məsdər, feli sifət və feli bağlama, onların ikili nitq xüsusiyyətləri.',
+      theoryMarkdown: `
+  ### 1. Təsriflənməyən Formalar Nədir?
+  Şəxsə və zamana görə dəyişməyən, həm felin, həm də başqa bir nitq hissəsinin xüsusiyyətini daşıyan formalardır.
+
+  ### 2. Məsdər (Fel + İsim)
+  Hərəkətin adını bildirir, *-maq², -mək²* şəkilçisi ilə düzəlir (*oxumaq, yazmaq*).
+  - **Feli xüsusiyyətləri:** Təsdiq/inkar olur (*oxumamaq*), növ bildirir (*yazılmaq*), obyekt tələb edir.
+  - **İsmi xüsusiyyətləri:** İsmin sualına (*Nə?*) cavab verir, hallanır (*oxumağın, oxumağa*), mənsubiyyətə görə dəyişir (*oxumağım*).
+
+  ### 3. Feli Sifət (Fel + Sifət)
+  Həm felin, həm də sifətin əlamətlərini daşıyır.
+  - Şəkilçiləri: *-an²* (gələn), *-mış⁴* (yazılmış), *-acaq²* (oxunacaq), *-ası²* (deyiləsi), *-malı²* (görülməli), *-dıq⁴ + mənsubiyyət* (oxuduğum).
+  - **Sifət kimi:** Əşyanın əlamətini bildirir, cümlədə təyin olur (*ağlayan uşaq*), isimləşə bilir.
+
+  ### 4. Feli Bağlama (Fel + Zərf)
+  Həm felin, həm də zərfin xüsusiyyətlərini daşıyaraq əsas hərəkətin tərzini, zamanını və ya səbəbini bildirir. Cümlədə həmişə **zərflik** olur.
+  - Şəkilçiləri: *-ıb⁴* (gəlib), *-araq²* (qaçaraq), *-anda²* (görəndə), *-dıqda⁴* (oxuduqda), *-arkən* (gedərkən), *-armac* (çatar-çatmaz).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u4-1",
+              "name": "Feli Bağlama Şəkilçiləri",
+              "latex": "-ıb^4, \\quad -araq^2, \\quad -anda^2, \\quad -dıqda^4, \\quad -arkən",
+              "description": "Əsas hərəkəti izah edən zərflik vəzifəli feli formalardır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Məsdər",
+              "definition": "Hərəkətin ilkin adını bildirən və isim xüsusiyyəti daşıyan feli forma."
+        },
+        {
+              "term": "Feli bağlama",
+              "definition": "Hərəkətin icra tərzini və ya zamanını zərf kimi bildirən feli forma."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u4-1",
+              "question": "\"Zəng vurulanda şagirdlər sinfə daxil oldular\" cümləsindəki feli təsriflənməyən formanı tapın.",
+              "solution": "\"vur-ul-anda\": -anda feli bağlama şəkilçisidir, cümlədə zaman zərfliyi vəzifəsindədir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u4-1",
+              "question": "Aşağıdakılardan hansı feli sifətdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Yazaraq"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Oxuyan"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Gülmək"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Gələndə"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "-an² şəkilçisi feli sifət şəkilçisidir (oxu-yan)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u5-adverb',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 5: Zərf və onun məna növləri',
+      unitOrder: 5,
+      title: 'Zərfin məna növləri: Tərzi-hərəkət, zaman, yer, kəmiyyət',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 2,
+      summary: 'Hərəkətin icra tərzini, zamanını, yerini və kəmiyyətini bildirən zərflər, zərflə sifətin fərqləndirilməsi.',
+      theoryMarkdown: `
+  ### 1. Zərfin Əsas Əlamətləri
+  Hərəkətin tərzini, zamanını, yerini, kəmiyyətini bildirən əsas nitq hissəsinə **zərf** deyilir. Əsasən fellərə aid olur və cümlədə **zərflik** vəzifəsində çıxış edir.
+
+  ### 2. Zərfin Məna Növləri
+  1. **Tərzi-hərəkət zərfi:** Hərəkətin necə, nə cür icra olunduğunu bildirir (*sürətlə, yaxşı, cəld, qəfildən, yavaş-yavaş*).
+  2. **Zaman zərfi:** Hərəkətin nə vaxt baş verdiyini bildirir (*dünən, bu gün, səhər, axşam, bildir, indicə*).
+  3. **Yer zərfi:** Hərəkətin harada baş verdiyini və ya istiqamətini bildirir (*irəli, geri, yuxarı, aşağı, içəri, sağa-sola*).
+  4. **Kəmiyyət zərfi:** Hərəkətin nə dərəcədə icra olunduğunu bildirir (*çox, az, xeyli, tamamilə, bir qədər*).
+
+  ### 3. Zərflə Sifətin Fərqləndirilməsi
+  Eyni söz həm sifət, həm də zərf kimi işlənə bilər:
+  - İsmə aid olduqda **sifətdir**: *Yaxşı (hansı?) insan*.
+  - Felə aid olduqda **zərfdir**: *Yaxşı (necə?) oxuyur*.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u5-1",
+              "name": "Zərf və Sifət Fərqi",
+              "latex": "\\text{Söz} + \\text{İsim} \\implies \\text{Sifət}; \\qquad \\text{Söz} + \\text{Fel} \\implies \\text{Zərf}",
+              "description": "Əşyaya aid olanda sifət, hərəkətə aid olanda zərf olur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Tərzi-hərəkət zərfi",
+              "definition": "İşin və ya hərəkətin icra olunma qaydasını və keyfiyyətini bildirən zərf."
+        },
+        {
+              "term": "Kəmiyyət zərfi",
+              "definition": "Hərəkətin və ya əlamətin dərəcəsini, miqdarını bildirən zərf."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u5-1",
+              "question": "\"O, sürətlə irəli qaçdı\" cümləsindəki zərfləri və onların məna növünü tapın.",
+              "solution": "\"sürətlə\" — tərzi-hərəkət zərfi (necə qaçdı?); \"irəli\" — yer zərfi (haraya qaçdı?)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u5-1",
+              "question": "\"Dünən xeyli danışdıq\" cümləsində \"dünən\" və \"xeyli\" sözləri zərfin hansı növləridir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Zaman və tərzi-hərəkət"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Zaman və kəmiyyət"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Yer və zaman"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Tərzi-hərəkət və yer"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Dünən nə vaxt? sualına cavab verir (zaman), xeyli isə nə qədər? sualına cavab verir (kəmiyyət)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-7-u6-auxiliary-parts',
+      subjectId: 'azerbaycan_dili',
+      grade: 7,
+      unit: 'Bölmə 6: Köməkçi nitq hissələri',
+      unitOrder: 6,
+      title: 'Köməkçi nitq hissələri: Qoşma, bağlayıcı, ədat, modal sözlər, nida',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Leksik mənası olmayan, suala cavab verməyən köməkçi nitq hissələri, onların orfoqrafiyası və durğu işarələri qaydaları.',
+      theoryMarkdown: `
+  ### 1. Köməkçi Nitq Hissələrinin Ümumi Əlamətləri
+  - Müstəqil leksik mənaya malik deyillər.
+  - Heç bir suala cavab vermirlər.
+  - Ayrılıqda cümlə üzvü ola bilmirlər.
+
+  ### 2. Köməkçi Nitq Hissələrinin Xüsusiyyətləri
+  1. **Qoşma:** İsmin adlıq, yiyəlik, yönlük və çıxışlıq hallarına qoşularaq müxtəlif məna çalarları yaradır:
+     - Şəkilçiləşən qoşmalar: *-can, -tək, -dək* (bitişik yazılır).
+     - Söz kimi: *üçün, kimi, qədər, sarı, ötrü, qarşı, əvvəl, sonra*.
+  2. **Bağlayıcı:** Sözlər və ya cümlələr arasında sintaktik əlaqə yaradır:
+     - Tabesizlik: *və, ilə, amma, ancaq, lakin, ya, ya da, gah, gah da, həm, həm də*.
+     - Tabelilik: *ki, çünki, əgər, hərçənd, madam ki*.
+  3. **Ədat:** Cümlənin və ya sözün təsir gücünü artıran hissəcikdir (*axı, məhz, ancaq, tək, ən, lap, daha, bəs, kaş*).
+  4. **Modal sözlər:** Danışanın fikrə münasibətini (yəqinlik, güman, təəssüf) bildirir (*əlbəttə, şübhəsiz, görünür, təəssüf ki, bəlkə*). Cümlədə hər iki tərəfindən **vergüllə** ayrılır.
+  5. **Nida:** Hiss və həyəcan bildirir (*ah, ox, vay, ura, bəh-bəh, ey, ay*). Nidadan sonra nida işarəsi və ya vergül qoyulur.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az7-u6-1",
+              "name": "Modal Sözlərdə Vergül Qaydası",
+              "latex": "\\text{Əvvəldə: } M, \\dots; \\quad \\text{Ortada: } \\dots, M, \\dots; \\quad \\text{Sonda: } \\dots, M.",
+              "description": "Modal sözlər cümlənin harasında gəlməsindən asılı olaraq vergüllə təcrid olunur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Qoşma",
+              "definition": "İsmin müxtəlif hallarına qoşularaq məsafə, bənzətmə, zaman və s. mənaları bildirən köməkçi söz."
+        },
+        {
+              "term": "Modal söz",
+              "definition": "Danışanın söylədiyi fikrə inamını, şübhəsini və ya təəssüfünü bildirən söz."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az7-u6-1",
+              "question": "\"Əlbəttə biz bu yarışda qalib gələcəyik\" cümləsində durğu işarəsini bərpa edin.",
+              "solution": "\"Əlbəttə\" modal sözdür və cümlənin əvvəlində gəldiyi üçün ondan sonra vergül qoyulmalıdır: \"Əlbəttə, biz bu yarışda qalib gələcəyik.\""
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az7-u6-1",
+              "question": "Aşağıdakılardan hansı tabesizlik bağlayıcısıdır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Çünki"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Əgər"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Lakin"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Ki"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "'Lakin' qarşılaşdırma bildirən tabesizlik bağlayıcısıdır. Çünki, əgər, ki isə tabelilik bağlayıcılarıdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u1-syntactic-relations',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 1: Sintaktik əlaqələr və Söz birləşmələri',
+      unitOrder: 1,
+      title: 'Tabesizlik və tabelilik əlaqələri: Uzlaşma, idarə və yanaşma',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Söz birləşmələri, asılı və əsas tərəf, tabelilik əlaqəsinin 3 növü: uzlaşma, idarə və yanaşma əlaqələri.',
+      theoryMarkdown: `
+  ### 1. Sintaktik Əlaqələr
+  Sözlər və cümlələr arasında iki növ sintaktik əlaqə var:
+  - **Tabesizlik əlaqəsi:** Bərabərhüquqlu komponentlər arasında olur (həmcins üzvlər və tabesiz mürəkkəb cümlə tərəfləri).
+  - **Tabelilik əlaqəsi:** Biri digərinə tabe olan tərəflər arasında olur (asılı tərəf birinci, əsas tərəf ikinci gəlir).
+
+  ### 2. Tabelilik Əlaqəsinin Üç Növü
+  1. **Uzlaşma əlaqəsi:** Asılı tərəfin şəxsə və kəmiyyətə görə əsas tərəflə uyğunlaşmasıdır. Qrammatik göstəricisi **mənsubiyyət və şəxs şəkilçiləridir**:
+     - Mübtəda ilə xəbər arasında: *Biz yazırıq*.
+     - II və III növ təyini söz birləşmələrində: *məktəb direktoru, bizim məktəbimiz*.
+  2. **İdarə əlaqəsi:** Əsas tərəfin tələbi ilə asılı tərəfin müəyyən hal şəkilçisi qəbul etməsidir. Qrammatik göstəricisi **ismin hal şəkilçiləridir** (*kitabı oxumaq, evə getmək, meşədən qayıtmaq*).
+  3. **Yanaşma əlaqəsi:** Heç bir qrammatik şəkilçi olmadan, yalnız məna və söz sırası ilə bağlanan əlaqədir (*maraqlı kitab, cəld qaçmaq, çox oxumaq*).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u1-1",
+              "name": "Tabelilik Əlaqələrinin Qrammatik Göstəriciləri",
+              "latex": "\\text{Uzlaşma} \\implies \\text{Mənsubiyyət / Şəxs}; \\quad \\text{İdarə} \\implies \\text{Hal şəkilçisi}; \\quad \\text{Yanaşma} \\implies \\text{Şəkilçisiz}",
+              "description": "Əlaqə növlərini tapmaq üçün şəkilçilərə diqqət yetirilir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Uzlaşma əlaqəsi",
+              "definition": "Asılı tərəfin əsas tərəflə şəxsdə və kəmiyyətdə bərabərləşməsi əlaqəsi."
+        },
+        {
+              "term": "İdarə əlaqəsi",
+              "definition": "Əsas tərəfin tələbi ilə asılı tərəfin ismin qeyri-adlıq hallarında işlənməsi."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u1-1",
+              "question": "\"Dərsləri yaxşı oxumaq\" birləşməsindəki sintaktik əlaqələri müəyyən edin.",
+              "solution": "\"dərsləri oxumaq\" — idarə əlaqəsidir (-i təsirlik hal şəkilçisi ilə). \"yaxşı oxumaq\" — yanaşma əlaqəsidir (şəkilçisiz, yalnız məna ilə yanaşır)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u1-1",
+              "question": "\"Qələmlə yazmaq\" birləşməsində asılı və əsas tərəf arasında hansı sintaktik əlaqə var?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Uzlaşma"
+                    },
+                    {
+                          "key": "B",
+                          "text": "İdarə"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Yanaşma"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Tabesizlik"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Qələmlə (qələm ilə) qoşmalı sözdür və hal şəkilçisi deyil, felə şəkilçisiz yanaşdığı üçün yanaşma əlaqəsidir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u2-noun-compounds',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 2: İsmi və feli birləşmələr. Təyini söz birləşmələri',
+      unitOrder: 2,
+      title: 'I, II və III növ təyini söz birləşmələri və feli tərkiblər',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Təyini söz birləşmələri (I, II, III növ), onların yaranma qaydaları, tərəflər arasına söz daxil edilməsi və feli tərkiblər.',
+      theoryMarkdown: `
+  ### 1. İsmi Birləşmələr və Təyini Söz Birləşmələri
+  Əsas tərəfi adlarla (isim, sifət, say, əvəzlik) ifadə olunan birləşmələr ismi birləşmələrdir. Ən geniş növü təyini söz birləşmələridir.
+
+  ### 2. Təyini Söz Birləşmələrinin Növləri
+  1. **I növ təyini söz birləşməsi:**
+     - I tərəf: şəkilçisiz; II tərəf: şəkilçisiz (*dəmir qapı, yeni məktəb, beş şagird*).
+     - Əlaqə: Yalnız **yanaşma əlaqəsi**.
+     - Arasına söz daxil etmək olmur. Tərəfləri ayrı-ayrı cümlə üzvü olur.
+  2. **II növ təyini söz birləşməsi:**
+     - I tərəf: qeyri-müəyyən yiyəlik hal (şəkilçisiz); II tərəf: III şəxs mənsubiyyət (*məktəb həyəti, sinif otağı, dərs ili*).
+     - Əlaqə: **Qismən uzlaşma və idarə**.
+     - Arasına müstəqil söz daxil etmək olmur. Cümlənin bütöv bir mürəkkəb üzvü olur.
+  3. **III növ təyini söz birləşməsi:**
+     - I tərəf: müəyyən yiyəlik hal (*-ın⁴*); II tərəf: mənsubiyyət (*məktəbin həyəti, mənim kitabım*).
+     - Əlaqə: **Tam uzlaşma və idarə**.
+     - Arasına istənilən sayda söz daxil etmək olar (*məktəbin böyük və abad həyəti*). Bütövlükdə bir cümlə üzvü olur.
+
+  ### 3. Feli Birləşmələr (Feli Tərkiblər)
+  Əsas tərəfi məsdər, feli sifət və ya feli bağlama ilə ifadə olunan birləşmələrdir:
+  *kitab oxumaq (məsdər tərkibi), dərsi bilən (feli sifət tərkibi), evə çatanda (feli bağlama tərkibi)*.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u2-1",
+              "name": "Təyini Birləşmələrin Sxemi",
+              "latex": "\\text{I növ: } [ - \\; ; \\; - ]; \\quad \\text{II növ: } [ - \\; ; \\; -ı^4 ]; \\quad \\text{III növ: } [ -ın^4 \\; ; \\; -ı^4 ]",
+              "description": "Tərəflərin qəbul etdiyi şəkilçilərə görə təsnifat sxemidir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Təyini söz birləşməsi",
+              "definition": "Asılı tərəfi əsas tərəfi təyin edən ismi birləşmə növü."
+        },
+        {
+              "term": "Feli tərkib",
+              "definition": "Məsdər, feli sifət və feli bağlamanın ətrafına söz toplayaraq əmələ gətirdiyi bütöv sintaktik vahid."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u2-1",
+              "question": "\"Dəniz kənarı\" və \"dənizin kənarı\" birləşmələrinin fərqini izah edin.",
+              "solution": "\"Dəniz kənarı\" II növdür (I tərəf şəkilçisizdir, arasına söz girmir). \"Dənizin kənarı\" III növdür (-in yiyəlik və -ı mənsubiyyət var, arasına söz daxil etmək olar)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u2-1",
+              "question": "Aşağıdakılardan hansı III növ təyini söz birləşməsidir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Daş bina"
+                    },
+                    {
+                          "key": "B",
+                          "text": "İmtahan zalı"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Məktəbin direktoru"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Tez oxumaq"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Məktəb-in (müəyyən yiyəlik) direktor-u (mənsubiyyət) III növ təyini söz birləşməsidir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u3-sentence-types',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 3: Cümlə və onun məqsəd və intonasiyaya görə növləri',
+      unitOrder: 3,
+      title: 'Məqsəd və intonasiyaya görə cümlənin növləri: Nəqli, sual, əmr, nida',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 2,
+      summary: 'Cümlənin 4 növü, sual cümlələrinin yaranma vasitələri, məntiqi vurğu və intonasiya xüsusiyyətləri.',
+      theoryMarkdown: `
+  ### 1. Cümlə Nədir?
+  Bitmiş bir fikri ifadə edən və qrammatik cəhətdən formalaşmış nitq vahidinə **cümlə** deyilir.
+
+  ### 2. Məqsəd və İntonasiyaya Görə Növləri
+  1. **Nəqli cümlə:** Hər hansı bir hadisə, əşya haqqında məlumat vermək məqsədilə işlədilir. Adi intonasiya ilə deyilir, sonunda nöqtə qoyulur:
+     *Bahar gəldi, təbiət oyandı.*
+  2. **Sual cümləsi:** Bir şey haqqında məlumat almaq məqsədilə işlədilir. Üç yolla yaranır:
+     - Sual intonasiyası ilə (*Dərsi öyrəndin?*).
+     - Sual əvəzlikləri ilə (*Kimi axtarırsınız?*).
+     - Sual ədatları ilə (*-mı⁴, bəs, məgər*): *Bunu sən etdinmi?*
+  3. **Əmr cümləsi:** İstək, əmr, xahiş, məsləhət, nəsihət bildirir. Xəbəri felin əmr şəkli ilə ifadə olunur:
+     *Dərslərinizi vaxtında hazırlayın.*
+  4. **Nida cümləsi:** Yüksək hiss-həyəcan, sevinc, qəzəb, kədər bildirir. Sonunda nida işarəsi (!) qoyulur:
+     *Necə də gözəl mənzərədir!*
+
+  ### 3. Məntiqi Vurğu
+  Cümlədə danışanın xüsusi olaraq nəzərə çatdırmaq istədiyi sözün daha qüvvətli səslə tələffüz edilməsidir. Azərbaycan dilində məntiqi vurğulu söz adətən **xəbərin bilavasitə qarşısında** gəlir:
+  *Əli dünən kitabı **kitabxanadan** aldı.* (Vurğu kitabxanadan sözündədir).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u3-1",
+              "name": "Məntiqi Vurğu Qaydası",
+              "latex": "\\dots + [\\text{Məntiqi Vurğulu Söz}] + [\\text{Xəbər}].",
+              "description": "Cümlədə vurğulanan söz xəbərdən bilavasitə əvvəl yerləşir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Məntiqi vurğu",
+              "definition": "Cümlədəki sözlərdən birinin digərlərinə nisbətən daha qabarıq tələffüz olunması."
+        },
+        {
+              "term": "Nəqli cümlə",
+              "definition": "Məlumat vermək məqsədilə söylənilən ən geniş yayılmış cümlə növü."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u3-1",
+              "question": "\"Məgər sən bu hadisəni eşitməmisən\" cümləsinin məqsədə görə növünü və yaranma vasitəsini tapın.",
+              "solution": "Sual cümləsidir. Yaranmasında həm 'məgər' sual ədatı, həm də sual intonasiyası iştirak etmişdir. Sonunda sual işarəsi (?) qoyulmalıdır."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u3-1",
+              "question": "Aşağıdakı cümlələrdən hansı əmr cümləsidir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Hər kəs öz yerini tutsun."
+                    },
+                    {
+                          "key": "B",
+                          "text": "Bu gün hava çox soyuqdur."
+                    },
+                    {
+                          "key": "C",
+                          "text": "Sən niyə gecikdin?"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Yaşasın Azərbaycan!"
+                    }
+              ],
+              "correctKey": "A",
+              "explanation": "A bəndində xəbər felin əmr şəklindədir (tut-sun) və tələb/əmr bildirir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u4-principal-parts',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 4: Cümlənin baş üzvləri (Mübtəda və Xəbər)',
+      unitOrder: 4,
+      title: 'Qrammatik əsas: Mübtəda və Xəbər, uzlaşma qaydaları',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Cümlənin qrammatik əsası, mübtədanın və xəbərin ifadə vasitələri, feli və ismi xəbər, mübtəda ilə xəbər arasında kəmiyyət və şəxs uzlaşması.',
+      theoryMarkdown: `
+  ### 1. Cümlənin Qrammatik Əsası
+  Cümlənin baş üzvləri — **mübtəda** və **xəbər** birlikdə cümlənin qrammatik əsasını təşkil edir.
+
+  ### 2. Mübtəda
+  Cümlədə haqqında danışılan şəxsi və ya əşyanı bildirən baş üzvdür. *Kim? Nə? Hara?* suallarına cavab verir. Adlıq halda olur.
+  - **İfadə vasitələri:** İsim, əvəzlik, məsdər, feli sifət, substantivləşmiş digər nitq hissələri və təyini söz birləşmələri (*Bizim məqsədimiz oxumaqdır*).
+
+  ### 3. Xəbər
+  Mübtədanın işini, hərəkətini, halını və ya kimliyini təsdiq və ya inkar edən baş üzvdür.
+  - **Feli xəbər:** Felin təsriflənən formaları və frazeoloji birləşmələrlə ifadə olunur (*Şagirdlər inşa yazdılar*).
+  - **İsmi xəbər:** Adlarla (isim, sifət, say, əvəzlik, zərf, məsdər, feli sifət) və ismi birləşmələrlə ifadə olunur (*Bakı gözəl şəhərdir*).
+
+  ### 4. Mübtəda ilə Xəbərin Uzlaşması
+  - **Şəxsə görə uzlaşma:** Həmişə tam olur: *Mən oxuyuram, sən oxuyursan, o oxuyur*.
+  - **Kəmiyyətə görə uzlaşma:**
+    - İnsan anlayışı bildirən mübtəda cəmdə olduqda, xəbər də **cəmdə olur**: *Uşaqlar gəldilər*.
+    - Heyvan və quş anlayışı bildirən mübtəda cəmdə olduqda, xəbər **həm təkdə, həm cəmdə** ola bilər: *Quşlar uçdu / uçdular*.
+    - Cansız əşya bildirən mübtəda cəmdə olduqda, xəbər ədəbi dildə adətən **təkdə olur**: *Yarpaqlar töküldü* (töküldülər qeyri-ədəbidir).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u4-1",
+              "name": "Kəmiyyət Uzlaşması Qaydası",
+              "latex": "\\text{Cansız mübtəda (cəm)} \\implies \\text{Xəbər təkdə qalır} \\quad (\\text{Qapılar açıldı})",
+              "description": "Cansız varlıqlarda xəbərin cəmlənməsi qrammatik normanın pozulmasıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Qrammatik əsas",
+              "definition": "Cümlənin sintaktik strukturunu müəyyən edən mübtəda və xəbər cütü."
+        },
+        {
+              "term": "İsmi xəbər",
+              "definition": "Xəbərlik şəkilçisi qəbul etmiş adlarla ifadə olunan xəbər növü."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u4-1",
+              "question": "\"Ağacın budaqları küləkdən qırıldılar\" cümləsindəki qrammatik səhvi tapın və düzəldin.",
+              "solution": "\"Budaqlar\" cansız varlıq olduğu üçün xəbər cəmdə ola bilməz. Düzgün variant: \"Ağacın budaqları küləkdən qırıldı\"."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u4-1",
+              "question": "Aşağıdakı cümlələrdən hansının xəbəri feli xəbərdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Hava çox sərindir."
+                    },
+                    {
+                          "key": "B",
+                          "text": "O, məktəbin ən fəal şagirdidir."
+                    },
+                    {
+                          "key": "C",
+                          "text": "Külək qapını bağladı."
+                    },
+                    {
+                          "key": "D",
+                          "text": "Əsas məqsədimiz qalib gəlməkdir."
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "'Bağladı' təsriflənən feldir və feli xəbərdir. Digər variantlar isə ismi xəbərdir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u5-secondary-parts',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 5: Cümlənin ikinci dərəcəli üzvləri',
+      unitOrder: 5,
+      title: 'İkinci dərəcəli üzvlər: Tamamlıq, Təyin və Zərflik',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Baş üzvləri izah edən üzvlər: vasitəli və vasitəsiz tamamlıq, təyin və zərflik, onların sualları və sintaktik qrafik işarələri.',
+      theoryMarkdown: `
+  ### 1. İkinci Dərəcəli Üzvlər Nədir?
+  Cümlənin baş üzvlərini müxtəlif cəhətdən izah edən, aydınlaşdıran və tamamlayan üzvlərdir.
+
+  ### 2. Tamamlıq (Qırıq-qırıq xətlə işarələnir: _ _ _)
+  Əşya məzmunu bildirir, adlıq və yiyəlikdən başqa digər halların suallarına cavab verir:
+  - **Vasitəsiz tamamlıq:** Təsirlik halda olur, hərəkətin birbaşa obyektidir. *Kimi? Nəyi? Nə?* (*Kitabı oxudum, çörək aldım*).
+  - **Vasitəli tamamlıq:** Yönlük, yerlik, çıxışlıq hallarında və qoşmalı sözlərlə ifadə olunur. *Kimə? Nəyə? Kimdə? Nədə? Kimdən? Nədən? Kim ilə? Nə üçün?* (*Dostuma yazdım, qələmdən danışdıq*).
+
+  ### 3. Təyin (Dalğalı xətlə işarələnir)
+  Əşyanın əlamətini, keyfiyyətini və ya miqdarını bildirir. *Necə? Nə cür? Hansı? Neçənci? Neçə?* suallarına cavab verir. Əsasən sifət, say, feli sifət və işarə əvəzliyi ilə ifadə olunur (*Gözəl bağ, beşinci sinif, oxunan kitab*).
+
+  ### 4. Zərflik (Düz xətt və kəsik xətlə işarələnir)
+  Hərəkətin icra tərzini, zamanını, yerini, kəmiyyətini, səbəbini və məqsədini bildirir. Xəbərə aid olur.
+  - Tərzi-hərəkət zərfliyi (*Necə? Nə tərzdə?*)
+  - Zaman zərfliyi (*Nə vaxt? Nə zaman?*)
+  - Yer zərfliyi (*Haraya? Harada? Haradan?*)
+  - Kəmiyyət zərfliyi (*Nə qədər?*)
+  - Səbəb və məqsəd zərflikləri (*Niyə? Nə məqsədlə?*)
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u5-1",
+              "name": "Standart Cümlə Sırası",
+              "latex": "\\text{Təyin} \\to \\text{Mübtəda} \\to \\text{Zərflik} \\to \\text{Tamamlıq} \\to \\text{Xəbər}",
+              "description": "Azərbaycan dilində cümlə üzvlərinin normal düzülüş qaydasıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Vasitəsiz tamamlıq",
+              "definition": "Təsirlik halda olub hərəkətin birbaşa təsir etdiyi əşyanı bildirən tamamlıq."
+        },
+        {
+              "term": "Təyin",
+              "definition": "İsmi və ya isimləşmiş üzvü izah edən cümlə üzvü."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u5-1",
+              "question": "\"Dünən çalışqan şagirdlər müəllimə maraqlı suallar verdilər\" cümləsini üzvlərinə görə təhlil edin.",
+              "solution": "Verdilər (feli xəbər), şagirdlər (mübtəda), dünən (zaman zərfliyi), çalışqan (təyin), müəllimə (vasitəli tamamlıq), maraqlı (təyin), suallar (vasitəsiz tamamlıq)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u5-1",
+              "question": "\"Əli qələmi çantaya qoydu\" cümləsində \"qələmi\" sözü hansı cümlə üzvüdür?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Mübtəda"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Vasitəsiz tamamlıq"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Vasitəli tamamlıq"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Zərflik"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "'Nəyi qoydu?' sualına cavab verir və müəyyən təsirlik haldadır, deməli vasitəsiz tamamlıqdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u6-homogeneous-parts',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 6: Həmcins üzvlər və cümlədə söz sırası',
+      unitOrder: 6,
+      title: 'Həmcins üzvlər, ümumiləşdirici sözlər və durğu işarələri',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 2,
+      summary: 'Eyni suala cavab verən, eyni üzvə aid olan həmcins üzvlər, tabesizlik əlaqəsi, ümumiləşdirici sözlər və iki nöqtə, tire durğu işarələri.',
+      theoryMarkdown: `
+  ### 1. Həmcins Üzvlər Nədir?
+  Cümlədə eyni bir üzvlə bağlı olan, eyni suala cavab verən və bərabərhüquqlu olan üzvlərə **həmcins üzvlər** deyilir.
+  - Həmcins üzvlər arasında **tabesizlik əlaqəsi** olur.
+  - Aralarında sadalama intonasiyası və ya tabesizlik bağlayıcıları (*və, ilə, amma, lakin, ya, gah*) işlənir:
+    *Bağda almalar, armudlar və heyvalar yetişmişdi.*
+
+  ### 2. Ümumiləşdirici Sözlər və Durğu İşarələri
+  Həmcins üzvlərin hamısına aid olan və onların ümumi adını bildirən sözlərə **ümumiləşdirici sözlər** deyilir:
+  1. **Ümumiləşdirici söz həmcins üzvlərdən əvvəl gəldikdə:** Ondan sonra **iki nöqtə (:)** qoyulur:
+     *Masada hər şey var idi: dəftər, qələm, kitab.*
+  2. **Ümumiləşdirici söz həmcins üzvlərdən sonra gəldikdə:** Ondan əvvəl **tire (—)** qoyulur:
+     *Dəftər, qələm, kitab — hər şey masanın üstündə idi.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u6-1",
+              "name": "Ümumiləşdirici Söz Sxemləri",
+              "latex": "\\text{ÜS}: \\; O, \\; O, \\; O; \\qquad O, \\; O, \\; O \\; — \\; \\text{ÜS}.",
+              "description": "Əvvəl gələndə iki nöqtə, sonra gələndə tire işarəsi qoyulur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Həmcins üzvlər",
+              "definition": "Eyni sintaktik funksiya daşıyan və eyni suala cavab verən cümlə üzvləri qrupu."
+        },
+        {
+              "term": "Ümumiləşdirici söz",
+              "definition": "Həmcins üzvlərin ümumi mənasını ifadə edən söz və ya ifadə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u6-1",
+              "question": "\"Meşədə hər tərəf meşə kənarı dərə təpə qarla örtülmüşdü\" cümləsində durğu işarələrini qoyun.",
+              "solution": "\"Meşədə hər tərəf: meşə kənarı, dərə, təpə qarla örtülmüşdü.\" ('Hər tərəf' ümumiləşdirici sözdür, ardınca həmcins üzvlər gəldiyi üçün iki nöqtə qoyulur)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u6-1",
+              "question": "Ümumiləşdirici söz həmcins üzvlərdən sonra gələrsə, hansı durğu işarəsi qoyulur?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Vergül"
+                    },
+                    {
+                          "key": "B",
+                          "text": "İki nöqtə"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Tire"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Nöqtəli vergül"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Həmcins üzvlərdən sonra ümumiləşdirici söz gəldikdə tire (—) işarəsi qoyulur."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-8-u7-vocatives-parenthesis',
+      subjectId: 'azerbaycan_dili',
+      grade: 8,
+      unit: 'Bölmə 7: Qrammatik cəhətdən cümlə üzvləri ilə əlaqədar olmayan sözlər',
+      unitOrder: 7,
+      title: 'Xitab və Ara sözlər: İntonasiyası və durğu işarələri',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 2,
+      summary: 'Cümlə üzvü olmayan sözlər: xitab (müraciət), ara sözlər (münasibət), onların cümlədə yeri və vergül işarəsi qaydaları.',
+      theoryMarkdown: `
+  ### 1. Cümlə Üzvləri İlə Əlaqədar Olmayan Sözlər
+  Bu sözlər cümlə üzvləri ilə sintaktik əlaqəyə girmir, heç bir cümlə üzvü olmur və suala cavab vermir.
+
+  ### 2. Xitab (Müraciət Bildirən Sözlər)
+  Cümlədə müraciət olunan şəxsi və ya əşyanı bildirir. Əsasən adlıq halda olan isimlərlə və ismi birləşmələrlə ifadə olunur.
+  - **Xitabda durğu işarələri:**
+    - Əvvəldə gəldikdə: *Xitab, ...* (*Uşaqlar, dərsi diqqətlə dinləyin.*)
+    - Ortada gəldikdə: *..., xitab, ...* (*Dərsi, uşaqlar, diqqətlə dinləyin.*)
+    - Sonda gəldikdə: *..., xitab.* (*Dərsi diqqətlə dinləyin, uşaqlar.*)
+
+  ### 3. Ara Sözlər və Ara Cümlələr
+  Danışanın ifadə olunan fikrə münasibətini (yəqinlik, güman, təəssüf, nəticə, ümumiləşdirmə) bildirir. Modal sözlərlə ifadə olunur (*əlbəttə, şübhəsiz, görünür, məncə, sözün düzü*).
+  - Cümlənin harasında gəlməsindən asılı olmayaraq hər iki tərəfdən **vergüllə** ayrılır:
+    *Məncə, bu məsələ tezliklə həll olunacaq.*
+    *Bu məsələ, məncə, tezliklə həll olunacaq.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az8-u7-1",
+              "name": "Xitab və Ara Sözlərdə Vergül Sxemi",
+              "latex": "X, \\dots \\qquad \\dots, X, \\dots \\qquad \\dots, X.",
+              "description": "Əvvəldə sonrasında, ortada hər iki tərəfində, sonda isə önündə vergül qoyulur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Xitab",
+              "definition": "Müraciət olunan şəxsi və ya varlığı bildirən cümləxarici vahid."
+        },
+        {
+              "term": "Ara söz",
+              "definition": "Danışanın fikrə subyektiv münasibətini bildirən və cümlə üzvü olmayan söz."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az8-u7-1",
+              "question": "\"Dostlar gəlin bir-birimizə dəstək olaq\" cümləsində durğu işarəsini bərpa edin.",
+              "solution": "\"Dostlar\" xitabdır və cümlənin əvvəlində gəldiyi üçün vergül qoyulmalıdır: \"Dostlar, gəlin bir-birimizə dəstək olaq.\""
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az8-u7-1",
+              "question": "Aşağıdakı cümlələrdən hansında xitab işlənmişdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Əli dünən bizə gəlmişdi."
+                    },
+                    {
+                          "key": "B",
+                          "text": "Əli, sən bu kitabı oxumusan?"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Məncə, hava yaxşı olacaq."
+                    },
+                    {
+                          "key": "D",
+                          "text": "Uşaqlar həyətdə oynayırlar."
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "B bəndində 'Əli' sözü müraciət bildirən xitabdır və ardınca vergül qoyulmuşdur."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u1-simple-sentence-types',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 1: Sadə cümlənin şəxsə görə növləri',
+      unitOrder: 1,
+      title: 'Müəyyən şəxsli, qeyri-müəyyən şəxsli, ümumi şəxsli, şəxssiz və adlıq cümlələr',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Sadə cümlənin şəxsə görə 5 əsas növü, mübtədanın varlığı və ya təsəvvür olunması, şəxssiz və adlıq cümlələrin xüsusiyyətləri.',
+      theoryMarkdown: `
+  ### 1. Sadə Cümlənin Şəxsə Görə Növləri
+  Mübtədanın olub-olmamasına və xəbərin şəxs şəkilçisinə görə sadə cümlələr 5 növə bölünür:
+
+  1. **Müəyyən şəxsli cümlə:** Mübtədası olan və ya xəbərin şəxs şəkilçisinə görə asanlıqla bərpa edilə bilən cümlələrdir (*Biz sabah imtahan verəcəyik / Sabah imtahan verəcəyik*).
+  2. **Qeyri-müəyyən şəxsli cümlə:** Hərəkəti icra edən qeyri-müəyyən şəxs və ya qrupdur. Xəbəri **III şəxsin cəmində** olur (*Qapını döyürlər. Radioda təzə xəbər dedilər*).
+  3. **Ümumi şəxsli cümlə:** Hərəkət hamıya, bütün cəmiyyətə aid olur. Əsasən atalar sözləri, məsəllər və aforizmlərdir. Xəbəri adətən **II şəxsin təkində** və ya **III şəxsin cəmində** olur:
+     *Yüz ölç, bir biç. Cücəni payızda sayarlar.*
+  4. **Şəxssiz cümlə:** Mübtədası olmur və onu bərpa etmək qeyri-mümkündür. Xəbəri həmişə **III şəxsin təkində** olur:
+     *Gecədir. Hadisəyə baxıldı. Bu gün mənim növbəmdir.*
+  5. **Adlıq cümlə:** Xəbəri olmur, varlığın mövcudluğunu yalnız adlandırmaqla bildirir. Əsasən bədii təsvirlərdə işlənir:
+     *Sakit gecə. Dəniz sahili. Xəzri mehi.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u1-1",
+              "name": "Şəxsə Görə Cümlə Növləri Şifrəsi",
+              "latex": "\\text{Müəyyən} \\implies \\text{Mübtəda var}; \\quad \\text{Qeyri-müəyyən} \\implies \\text{III cəm}; \\quad \\text{Şəxssiz} \\implies \\text{Mübtəda yoxdur (III tək)}",
+              "description": "Xəbərin şəxs göstəricisi cümlə növünü təyin etməyə imkan verir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Qeyri-müəyyən şəxsli cümlə",
+              "definition": "İşi görənin dəqiq bilinmədiyi və xəbəri III şəxsin cəmində olan cümlə."
+        },
+        {
+              "term": "Şəxssiz cümlə",
+              "definition": "Mübtədası olmayan və bərpası qrammatik cəhətdən mümkün olmayan cümlə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u1-1",
+              "question": "\"Kənddə təzə məktəb tikirlər\" cümləsinin şəxsə görə növünü müəyyən edin.",
+              "solution": "Xəbər 'tikirlər' III şəxsin cəmindədir. Mübtəda yoxdur və işi görənlər qeyri-müəyyəndir. Bu, qeyri-müəyyən şəxsli cümlədir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u1-1",
+              "question": "\"İgid basılmaz, vətən bölünməz\" atalar sözü sadə cümlənin hansı növünə aiddir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Qeyri-müəyyən şəxsli"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Müəyyən şəxsli"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Şəxssiz cümlə"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Adlıq cümlə"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Cümlənin mübtədası var: igid basılmaz (nə basılmaz? igid), vətən bölünməz (nə? vətən), yəni müəyyən şəxsli cümlələrdir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u2-complete-incomplete',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 2: Bütöv və natamam cümlələr',
+      unitOrder: 2,
+      title: 'Bütöv və natamam cümlələr, dialoqlarda buraxılmış üzvlər',
+      order: 1,
+      readTimeMinutes: 9,
+      difficulty: 2,
+      summary: 'Fikrin ifadəsi üçün bütün üzvləri olan bütöv cümlələr və təkrara yol verməmək üçün üzvləri buraxılan natamam cümlələr.',
+      theoryMarkdown: `
+  ### 1. Bütöv Cümlələr
+  Cümlədə ifadə olunan fikir üçün zəruri olan bütün baş və ikinci dərəcəli üzvləri iştirak edən cümlələrə **bütöv cümlələr** deyilir:
+  *Mən dünən maraqlı bir filmə baxdım.*
+
+  ### 2. Natamam Cümlələr
+  Nitqdə təkrara yol verməmək və ya fikri yığcam ifadə etmək üçün bu və ya digər cümlə üzvü buraxılan cümlələrə **natamam cümlələr** deyilir.
+  - Buraxılmış üzv əvvəlki cümlədən və ya ümumi situasiyadan asanlıqla bərpa olunur.
+  - Ən çox **dialoqlarda** və cavab replikalarında işlənir:
+    *— Haraya gedirsən?*
+    *— Məktəbə.* ("Gedirəm" xəbəri və "Mən" mübtədası buraxılmışdır).
+
+  ### 3. Natamam Cümlələrdə Durğu İşarələri
+  Əgər natamam cümlədə xəbər buraxılıbsa və yerində fasilə yaranırsa, xəbərin yerinə **tire (—)** qoyulur:
+  *Biz kəndə yollandıq, onlar isə — şəhərə.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u2-1",
+              "name": "Xəbəri Buraxılmış Natamam Cümlədə Tire",
+              "latex": "\\dots \\text{ isə } — \\dots \\implies \\text{Buraxılmış xəbərin yerinə tire qoyulur}",
+              "description": "Fasilə yarandıqda buraxılmış üzv tire ilə əvəzlənir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Natamam cümlə",
+              "definition": "Üzvlərindən biri və ya bir neçəsi buraxılmış, lakin kontekstdən asanlıqla anlaşılan cümlə."
+        },
+        {
+              "term": "Bütöv cümlə",
+              "definition": "Məzmunun anlaşılması üçün bütün sintaktik üzvləri cümlədə mövcud olan cümlə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u2-1",
+              "question": "\"Aydan riyaziyyatı sevir, Leyla isə tarixisun\" cümləsində xəbəri buraxılmış natamam hissəni bərpa edin.",
+              "solution": "\"Leyla isə — tarixi (sevir)\". Burada 'sevir' xəbəri buraxılmış və yerinə tire qoyulmuşdur."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u2-1",
+              "question": "Natamam cümlələr ən çox hansı nitq formasında istifadə olunur?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Elmi məqalələrdə"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Dialoqlarda və canlı danışıqda"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Rəsmi sənədlərdə"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Lüğətlərdə"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Natamam cümlələr yığcamlıq təmin etdiyi üçün ən çox dialoqlarda işlənir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u3-compound-coordinate',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 3: Tabesiz mürəkkəb cümlələr',
+      unitOrder: 3,
+      title: 'Tabesiz mürəkkəb cümlələrdə məna əlaqələri və durğu işarələri',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Tabesiz mürəkkəb cümlələrdə 6 məna əlaqəsi (ardıcıllıq, eynizamanlılıq, qarşılaşdırma, aydınlaşdırma, bölüşdürmə, səbəb-nəticə), bağlayıcılar və intonasiya.',
+      theoryMarkdown: `
+  ### 1. Mürəkkəb Cümlə və Tabesizlik Əlaqəsi
+  İki və ya daha artıq qrammatik əsası (sadə cümləsi) olan vahidə **mürəkkəb cümlə** deyilir.
+  - Tərkib hissələri bərabərhüquqlu olan, biri digərindən asılı olmayan mürəkkəb cümlələrə **tabesiz mürəkkəb cümlələr** deyilir.
+  - Birləşmə vasitələri: Tabesizlik bağlayıcıları və ya yalnız intonasiya.
+
+  ### 2. Tabesiz Mürəkkəb Cümlələrdə Məna Əlaqələri
+  1. **Zaman (Eynizamanlılıq) əlaqəsi:** Hadisələr eyni zamanda baş verir (*Yağış yağır, külək uğuldayırdı*).
+  2. **Ardıcıllıq əlaqəsi:** Hadisələr bir-birinin ardınca baş verir (*Qapı açıldı və qonaqlar içəri daxil oldular*).
+  3. **Səbəb-nəticə əlaqəsi:** Birinci cümlədəki hadisə ikincinin səbəbi olur (*Zəng çalındı, uşaqlar sinfə tələsdilər*).
+  4. **Qarşılaşdırma əlaqəsi:** Hadisələr bir-biri ilə qarşılaşdırılır (*amma, ancaq, lakin* bağlayıcıları ilə):
+     *Hava soyuq idi, lakin biz üşümürdük.*
+  5. **Bölüşdürmə əlaqəsi:** Hadisələrdən yalnız birinin mümkünlüyü bildirilir (*ya... ya da, gah... gah da*):
+     *Gah yağış yağırdı, gah da gün çıxırdı.*
+  6. **Aydınlaşdırma əlaqəsi:** İkinci cümlə birincini aydınlaşdırır, izah edir (*yəni* bağlayıcısı və ya iki nöqtə ilə):
+     *Mənzil çox rahat idi: hər otaqda kondisioner quraşdırılmışdı.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u3-1",
+              "name": "Tabesiz Cümlələrdə Vergül Qaydası",
+              "latex": "[S_1], \\; [S_2]; \\qquad [S_1], \\; \\text{lakin} \\; [S_2]",
+              "description": "Tabesiz mürəkkəb cümlə komponentləri arasında həmişə vergül qoyulur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Tabesiz mürəkkəb cümlə",
+              "definition": "Tərkib hissələri qrammatik cəhətdən bərabərhüquqlu olan mürəkkəb cümlə."
+        },
+        {
+              "term": "Eynizamanlılıq",
+              "definition": "Bir neçə işin eyni vaxt kəsiyində cərəyan etdiyini bildirən sintaktik məna əlaqəsi."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u3-1",
+              "question": "\"Elektrik kəsildi, kompüter söndü\" cümləsindəki məna əlaqəsini müəyyən edin.",
+              "solution": "Birinci hissə səbəbdir (elektrikin kəsilməsi), ikinci hissə isə nəticədir (kompüterin sönməsi). Səbəb-nəticə əlaqəli tabesiz mürəkkəb cümlədir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u3-1",
+              "question": "\"Gah külək əsirdi, gah da leysan yağırdı\" cümləsində hansı məna əlaqəsi var?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Qarşılaşdırma"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Bölüşdürmə"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Səbəb-nəticə"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Aydınlaşdırma"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "'Gah... gah da' bölüşdürmə bağlayıcılarıdır və bölüşdürmə məna əlaqəsi yaradır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u4-compound-subordinate',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 4: Tabeli mürəkkəb cümlələr',
+      unitOrder: 4,
+      title: 'Tabeli mürəkkəb cümlələr: Baş və budaq cümlə, bağlama vasitələri',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Baş və budaq cümlə qarşılıqlı münasibəti, tabelilik bağlayıcıları (ki), bağlayıcı sözlər, intonasiya və cümlə sxemləri.',
+      theoryMarkdown: `
+  ### 1. Tabeli Mürəkkəb Cümlə Nədir?
+  Tərkib hissələrindən biri digərindən qrammatik və məna cəhətdən asılı olan mürəkkəb cümlədir.
+  - **Baş cümlə:** Müstəqil olan, izah edilən tərəfdir (sxemi: $[\;]$).
+  - **Budaq cümlə:** Baş cümlədən asılı olub onu izah edən tərəfdir (sxemi: $(\;)$).
+
+  ### 2. Əsas Bağlayıcı Vasitələr və Sxemlər
+  1. **"Ki" tabelilik bağlayıcısı ilə:** Adətən əvvəl baş cümlə, sonra budaq cümlə gəlir:
+     $$[\text{Baş}], \; \text{ki} \; (\text{Budaq})$$
+     *Mən bilirəm ki, sən qalib gələcəksən.*
+  2. **Şərt şəkilçisi (-sa², -sə²) və ya bağlayıcı sözlərlə:** Adətən əvvəl budaq cümlə, sonra baş cümlə gəlir:
+     $$(\text{Budaq}), \; [\text{Baş}]$$
+     *Kim çox çalışsa, o uğur qazanar.*
+     *Yağış kəssə, yola düşərik.*
+
+  ### 3. Əvəzlik-Qəlib (Baş cümlədə) və Bağlayıcı Söz (Budaq cümlədə)
+  - **Bağlayıcı söz:** Budaq cümlədə işlənən sual əvəzlikləridir (*kim, nə, hara, necə*).
+  - **Əvəzlik-qəlib:** Baş cümlədə işlənən işarə əvəzlikləridir (*o, bu, onu, onda*).
+    *(Kim tez gəlsə), [mükafatı o alacaq].*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u4-1",
+              "name": "Tabeli Cümlənin Əsas Sxemləri",
+              "latex": "[\\text{Baş}] \\to (\\text{Budaq}) \\quad (\\text{ki ilə}); \\qquad (\\text{Budaq}) \\to [\\text{Baş}] \\quad (-\\text{sa, bağlayıcı söz ilə})",
+              "description": "Tabeli mürəkkəb cümlələrdə komponentlərin yerləşmə qaydasıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Baş cümlə",
+              "definition": "Tabeli mürəkkəb cümlədə budaq cümlənin tabe olduğu əsas tərəf."
+        },
+        {
+              "term": "Bağlayıcı söz",
+              "definition": "Budaq cümləni baş cümləyə bağlayan sual əvəzliyi."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u4-1",
+              "question": "\"Hamı inanır ki, sülh bərqərar olacaq\" cümləsinin tərkib hissələrini və sxemini müəyyən edin.",
+              "solution": "Birinci tərəf baş cümlədir: \"Hamı inanır\" [ ], ikinci tərəf budaq cümlədir: \"sülh bərqərar olacaq\" ( ). Sxem: [Baş], ki (Budaq)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u4-1",
+              "question": "\"Kim yaxşı oxusa, yüksək bal toplayacaq\" cümləsində hansı hissə birinci gəlmişdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Baş cümlə"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Budaq cümlə"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Tabesiz cümlə"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Müstəqil cümlə"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "'Kim' bağlayıcı sözü və '-sa' şərt şəkilçisi budaq cümlənin göstəricisidir, yəni budaq cümlə birinci gəlmişdir (Budaq, Baş)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u5-clause-types',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 5: Budaq cümlənin növləri',
+      unitOrder: 5,
+      title: 'Budaq cümlənin növləri: Mübtəda, xəbər, tamamlıq, təyin və zərflik budaq cümlələri',
+      order: 1,
+      readTimeMinutes: 11,
+      difficulty: 3,
+      summary: 'Baş cümlənin buraxılmış üzvünü və ya əvəzlik-qəlibini izah edən budaq cümlə növləri və onların sadə cümləyə çevrilməsi.',
+      theoryMarkdown: `
+  ### 1. Budaq Cümlənin Növləri Nədir?
+  Budaq cümlə baş cümlənin hansı üzvünü əvəz edirsə və ya izah edirsə, həmin üzvün adı ilə adlanır.
+
+  ### 2. Əsas Budaq Cümlə Növləri
+  1. **Mübtəda budaq cümləsi:** Baş cümlənin mübtədasını izah edir. *Kim? Nə?* sualına cavab verir:
+     *[Məlumdur ki], (hava dəyişəcək).* $\to$ Havanın dəyişəcəyi məlumdur.
+  2. **Xəbər budaq cümləsi:** Baş cümlənin ismi xəbərini izah edir:
+     *[Məqsədimiz odur ki], (imtahanı uğurla verək).* $\to$ Məqsədimiz imtahanı uğurla verməkdir.
+  3. **Tamamlıq budaq cümləsi:** Baş cümlənin tamamlığını izah edir. *Kimi? Nəyi? Nəyə?*:
+     *[Gördüm ki], (qapı açıqdır).* $\to$ Qapının açıq olduğunu gördüm.
+  4. **Təyin budaq cümləsi:** Baş cümlədəki isimlə ifadə olunmuş üzvü təyin edir. *Hansı?*:
+     *[Mən elə bir kitab axtarıram ki], (orada qədim xəritələr olsun).*
+  5. **Zərflik budaq cümlələri:**
+     - **Zaman:** *(Qonaqlar gələndə), [biz çay içirdik].*
+     - **Məkan (Yer):** *(Harada birlik var), [orada dirilik olar].*
+     - **Səbəb:** *[Ona görə sevinirdi ki], (əla qiymət almışdı).*
+     - **Şərt:** *(Hava xoş olsa), [gəzməyə gedərik].*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u5-1",
+              "name": "Budaq Cümlənin Sadə Cümləyə Çevrilməsi",
+              "latex": "\\text{Budaq cümlə xəbəri} + [-an^2, -dıq^4, -anda^2] \\implies \\text{Sadə cümlə tərkibi}",
+              "description": "Feli tərkiblərlə mürəkkəb cümlə asanlıqla sadə cümləyə transformasiya edilir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Tamamlıq budaq cümləsi",
+              "definition": "Baş cümlənin feli və ya ismi xəbərinin tələb etdiyi tamamlığı əvəz edən budaq cümlə."
+        },
+        {
+              "term": "Əvəzlik-qəlib",
+              "definition": "Baş cümlədə budaq cümlənin yerini tutan işarə əvəzliyi (o, onu, ona, onda)."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u5-1",
+              "question": "\"Müəllim bildirdi ki, sabah yarış keçiriləcək\" cümləsində budaq cümlənin növünü tapın.",
+              "solution": "\"Müəllim nəyi bildirdi?\" — sualına cavab verir. Baş cümlənin feli xəbərinin tamamlığını izah etdiyi üçün tamamlıq budaq cümləsidir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u5-1",
+              "question": "\"Biz çalışırıq ki, dərslərimizi əla oxuyaq\" cümləsində budaq cümlə hansı növdür?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Mübtəda budaq cümləsi"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Tamamlıq budaq cümləsi"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Təyin budaq cümləsi"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Xəbər budaq cümləsi"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Çalışırıq (nəyə? nəyə nail olmağa?) sualına cavab verdiyi üçün tamamlıq budaq cümləsidir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-9-u6-direct-indirect-speech',
+      subjectId: 'azerbaycan_dili',
+      grade: 9,
+      unit: 'Bölmə 6: Vasitəsiz və vasitəli nitq',
+      unitOrder: 6,
+      title: 'Vasitəsiz və vasitəli nitq: Sxemlər, sitatlar və durğu işarələri',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 2,
+      summary: 'Başqasının nitqinin verilmə üsulları: dəyişdirilmədən verilən vasitəsiz nitq (dırnaqlar, tire), məzmunu saxlanmaqla verilən vasitəli nitq və sitat qaydaları.',
+      theoryMarkdown: `
+  ### 1. Vasitəsiz Nitq
+  Başqasının sözlərinin forma və məzmunca heç bir dəyişiklik edilmədən eynilə verilməsidir.
+  - Müəllifin sözləri ($M, m$) və Vasitəsiz nitq ($V, v$).
+  - **Əsas Durğu İşarələri Sxemləri:**
+    1. $M: "V"$ — *Müəllim dedi: "Dərslərinizə yaxşı hazırlaşın".*
+    2. $M: "V!" / "V?"$ — *Anası soruşdu: "Yeməyini yedinmi?"*
+    3. "$V$", — $m.$ — *"Sabah görüşərik", — deyə Əli bildirdi.*
+    4. "$V$", — $m,$ — "$v$." — *"Gəlin", — dedi o, — "birlikdə gedək".*
+
+  ### 2. Vasitəli Nitq
+  Başqasının nitqinin yalnız məzmununun dəyişdirilərək söylənilməsidir. Vasitəli nitq həmişə **tabeli mürəkkəb cümlə** şəklində qurulur:
+  *Müəllim bildirdi ki, sabah yarış olacaq.*
+
+  ### 3. Sitatlar
+  Fikri təsdiq etmək üçün mötəbər mənbədən, müəllifdən dəqiq götürülmüş cümlələrdir. Sitatlar dırnaq içində və ya müəllifin adı göstərilməklə verilir.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az9-u6-1",
+              "name": "Vasitəsiz Nitq Dörd Əsas Sxemi",
+              "latex": "M: \"V.\" \\qquad \"V\", — m. \\qquad \"V!\" — m. \\qquad \"V\", — m, — \"v.\"",
+              "description": "Vasitəsiz nitqin müəllif sözü ilə qarşılıqlı vəziyyətləridir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Vasitəsiz nitq",
+              "definition": "Özgə nitqinin eynilə, heç bir qrammatik dəyişiklik edilmədən verilməsi."
+        },
+        {
+              "term": "Sitat",
+              "definition": "Hər hansı əsərdən və ya şəxsin nitqindən eynilə gətirilən nümunə cümlə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az9-u6-1",
+              "question": "\"O dedi: Mən mütləq qalib gələcəyəm\" cümləsində buraxılmış durğu işarələrini qoyun.",
+              "solution": "M: \"V.\" sxeminə uyğun olaraq: O dedi: \"Mən mütləq qalib gələcəyəm\"."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az9-u6-1",
+              "question": "\"V\", — m. sxeminə uyğun gələn cümlə hansıdır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Müəllim dedi: \"Kitabları açın\"."
+                    },
+                    {
+                          "key": "B",
+                          "text": "\"Mən sabah gələcəyəm\", — dedi Əli."
+                    },
+                    {
+                          "key": "C",
+                          "text": "O söylədi ki, işlər qaydasındadır."
+                    },
+                    {
+                          "key": "D",
+                          "text": "\"Dayan\", — qışqırdı o, — \"tələsmə\"."
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "B bəndində vasitəsiz nitq əvvəl gəlmiş, sonra vergül, tire və müəllifin sözləri yazılmışdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-10-u1-phonetics-orthoepy',
+      subjectId: 'azerbaycan_dili',
+      grade: 10,
+      unit: 'Bölmə 1: Azərbaycan dilinin fonetik sistemi və orfoepiya normaları',
+      unitOrder: 1,
+      title: 'Fonetik sistem, orfoepiya və orfoqrafiya normaları, vurğu',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Səs və hərf fərqi, saitlərin və samitlərin tələffüz qanunauyğunluqları, orfoepiya lüğəti normaları və vurğunun növləri (heca, məntiqi, həyəcanlı).',
+      theoryMarkdown: `
+  ### 1. Səs və Hərf Fərqi
+  - Səsləri tələffüz edirik və eşidirik (transkripsiyada göstərilir: $[a]$).
+  - Hərfləri yazırıq və görürük.
+  - Azərbaycan əlifbasında **32 hərf**, lakin **34 səs** var ($[k']$, $[x']$ səslərinin xüsusi hərfi yoxdur).
+
+  ### 2. Əsas Orfoepiya (Tələffüz) Normaları
+  1. **Saitlərin tələffüzü:**
+     - İki yanaşı sait gəldikdə: *ailə \to [ayilə], təbiət \to [təbiyət], saat \to [sa:t]*.
+     - $o$ saiti alınma sözlərdə: *kompüter \to [kampüter], motor \to [mator]*.
+  2. **Samitlərin tələffüzü:**
+     - Sonu $b, d, g, c$ ilə bitən sözlərdə təklikdə və samitdən əvvəl karlaşır: *kitab \to [kitap], kənd \to [kənt]*. Saitlə başlayan şəkilçi artırıldıqda cingiltili qalır: *kitaba \to [kitaba]*.
+     - Sonu $q$ ilə bitən çoxhecalı milli sözlərdə: *qonaq \to [qonax]*. Saitlə başladıqda $ğ$-ya keçir: *qonağa*.
+     - Sonu $k$ ilə bitən çoxhecalı sözlərdə: *çiçək \to [çiçəx']*. Saitlə başladıqda $y$-ə keçir: *çiçəyə*.
+
+  ### 3. Vurğu
+  Sözdə hecalardan birinin digərlərinə nisbətən qüvvətli deyilməsinə **heca vurğusu** deyilir. Azərbaycan dilində vurğu əsasən **sonuncu hecaya** düşür.
+  - Vurğu qəbul etməyən şəkilçilər: *-ma²* (inkarlıq), *-ca²* (zərf düzəldən), şəxs (xəbərlik) şəkilçiləri, *-gil, -raq*.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az10-u1-1",
+              "name": "Sonu Q və K ilə Bitən Sözlərin Tələffüz Qaydası",
+              "latex": "\\text{Qonaq} \\to [\\text{qonax}]; \\quad \\text{Qonağa} \\to [\\text{qonağa}]; \\qquad \\text{Çiçək} \\to [\\text{çiçəx'}]; \\quad \\text{Çiçəyə} \\to [\\text{çiçəyə}]",
+              "description": "Söz sonu q və k samitlərinin mövqedən asılı tələffüz qanunudur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Orfoepiya",
+              "definition": "Dildəki sözlərin ədəbi tələffüz qaydalarının məcmusu."
+        },
+        {
+              "term": "Orfoqrafiya",
+              "definition": "Sözlərin düzgün yazılış qaydaları sistemi."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az10-u1-1",
+              "question": "\"Kəpənək\" sözünün tələffüz transkripsiyasını yazın.",
+              "solution": "Sözün sonundakı 'k' samiti kar tələffüz olunur: [kəpənəx']."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az10-u1-1",
+              "question": "Aşağıdakı sözlərdən hansında vurğu birinci hecaya düşür?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Qələm"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Dünən"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Kitabça"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Dənizçi"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "'Dünən' zaman zərfində vurğu birinci hecaya düşür ('dü-nən)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-10-u2-lexicology-idioms',
+      subjectId: 'azerbaycan_dili',
+      grade: 10,
+      unit: 'Bölmə 2: Leksikologiya və Frazeologiya',
+      unitOrder: 2,
+      title: 'Leksik laylar: Terminlər, arxaizmlər, neologizmlər və frazeologizmlər',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Milli və alınma sözlər, köhnəlmiş sözlər (arxaizmlər və tarixi sözlər), neologizmlər (yeni sözlər) və sabit söz birləşmələri (frazeoloji birləşmələr).',
+      theoryMarkdown: `
+  ### 1. Dilin Lüğət Tərkibinin Zənginləşməsi
+  Dilin lüğət tərkibi daxili imkanlar (yeni söz yaratma) və xarici mənbələr (alınma sözlər) hesabına zənginləşir.
+
+  ### 2. Müasir Dildə İşlənmə Dərəcəsinə Görə Sözlər
+  - **Fəal sözlər:** Gündəlik nitqdə müntəzəm istifadə olunan sözlər.
+  - **Qeyri-fəal sözlər:**
+    - **Tarixi sözlər:** Keçmişdə mövcud olmuş, lakin həmin əşya və ya vəzifə aradan qalxdığı üçün köhnəlmiş sözlər (*darğa, yasavul, çarx, arşın*).
+    - **Arxaizmlər:** Əşya yaşayır, lakin onun adı başqa sözlə əvəzlənib (*ayaq — qədəh, əsən — sağ-salamat, tanıq — şahid*).
+    - **Neologizmlər:** Elmin, texnologiyanın inkişafı ilə dilə yeni daxil olmuş sözlər (*çat, dron, smartfon, ekosistem*).
+
+  ### 3. Frazeoloji Birləşmələr (Sabit Söz Birləşmələri)
+  Tərkib hissələrinə parçalanmayan, mənaca bütöv bir sözə bərabər olan sabit ifadələrdir:
+  - Tərkibindəki sözlər öz həqiqi mənasını tam itirir (*gözdən düşmək, burnunun ucu göynəmək, qulaq asmaq*).
+  - Cümlənin **tək bir mürəkkəb üzvü** olur.
+  - Frazeoloji omonimlik, sinonimlik və antonimlik mövcuddur:
+    *Can vermək* (omonim: ölmək / dirilmək).
+    *Dil-dil ötmək = ağzına su almaq* (antonim).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az10-u2-1",
+              "name": "Frazeoloji Birləşmələrin Sintaktik Xassəsi",
+              "latex": "\\text{Frazeologizm} = \\text{Bölünməz vahid} \\implies \\text{Cümlədə tək bir üzv kimi götürülür}",
+              "description": "Cümlə təhlili zamanı frazeoloji birləşmə tərkib hissələrinə ayrılmır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Frazeologizm",
+              "definition": "Məcazi məna daşıyan və bütövlükdə bir anlayışı ifadə edən sabit söz birləşməsi."
+        },
+        {
+              "term": "Arxaizm",
+              "definition": "Müasir dildə başqa sözlə əvəz olunmuş köhnəlmiş söz."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az10-u2-1",
+              "question": "\"Şagird müəllimin izahatına qulaq asırdı\" cümləsindəki frazeologizmi tapın və cümlə üzvünü təyin edin.",
+              "solution": "\"qulaq asırdı\" frazeoloji birləşmədir (dinləyirdi mənasında) və bütövlükdə cümlənin feli xəbəridir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az10-u2-1",
+              "question": "Aşağıdakı cütlüklərdən hansı frazeoloji sinonimdir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Cin atına minmək — Zəhləsi getmək"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Gözünün odunu almaq — Qorxutmaq"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Burnunun ucu göynəmək — Əldən düşmək"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Ağzına su almaq — Dinib-danışmamaq"
+                    }
+              ],
+              "correctKey": "D",
+              "explanation": "'Ağzına su almaq' və 'dinib-danışmamaq' eyni mənanı (susmağı) ifadə edən frazeoloji qarşılıqdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-10-u3-orthography-rules',
+      subjectId: 'azerbaycan_dili',
+      grade: 10,
+      unit: 'Bölmə 3: Morfologiya və orfoqrafiya qaydaları',
+      unitOrder: 3,
+      title: 'Mürəkkəb sözlərin və hissəciklərin yazılış qaydaları (Bitişik, defis və ayrı)',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Mürəkkəb isimlərin, sifətlərin, sayların və zərflərin yazılışı, -mı⁴, da/də, idi/imiş hissəciklərinin və qoşmaların orfoqrafiyası.',
+      theoryMarkdown: `
+  ### 1. Bitişik Yazılan Mürəkkəb Sözlər
+  - Müxtəlif mənalı sözlərin birləşməsindən yarananlar: *dəvədabanı, tozsoran, suiti, günəbaxan*.
+  - İki sadə sözün arasında bitişdirici -a² şəkilçisi olduqda: *qaçaqaç, basabas, vurhavur*.
+  - Birinci tərəfi kontr-, vitse- kimi olmayan mürəkkəb adlar.
+
+  ### 2. Defislə Yazılan Mürəkkəb Sözlər
+  - Eyni sözün təkrarı ilə yarananlar: *tez-tez, asta-asta, səhər-səhər*.
+  - Yaxın və ya əks mənalı sözlərin birləşməsi: *dərə-təpə, gecə-gündüz, qohum-əqrəba*.
+  - Tərəflərindən biri və ya hər ikisi ayrılıqda işlənməyən sözlər: *kağız-kuğuz, əzik-üzük, kələ-kötür*.
+  - İzafət tərkibləri: *tərzi-hərəkət, nöqteyi-nəzər*.
+  - Əks-, qeyri-, vitse-, ober- ön şəkilçili sözlər: *qeyri-maddi, vitse-prezident, əks-inqilab*.
+
+  ### 3. Köməkçi Sözlərin Yazılışı
+  - **Da, də:** Bağlayıcı olduqda **ayrı** (*Əli də gəldi*), yerlik hal və ya ədat olduqda **bitişik** yazılır (*evdə, gəlsənə*).
+  - **Mı, mi, mu, mü:** Sual ədatı həmişə sözdən **ayrı** yazılır: *Gəldin mi? Oxudun mu?*
+  - **İdi, imiş, isə:** Qısaldılmış formaları *-dı⁴, -mış⁴, -sa²* bitişik, tam formaları isə ayrı yazılır (*oxuyurdu / oxuyur idi*).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az10-u3-1",
+              "name": "Qeyri və İzafət Birləşmələrinin Yazılışı",
+              "latex": "\\text{qeyri-} + \\text{Söz} \\implies \\text{Defis}; \\qquad \\text{tərzi-} + \\text{hərəkət} \\implies \\text{Defis}",
+              "description": "Qeyri- hissəciyi və tərzi-, nöqteyi- tipli ərəb tərkibləri defislə yazılır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Orfoqrafiya norması",
+              "definition": "Sözlərin qəbul edilmiş vahid və düzgün yazılış qanunauyğunluğu."
+        },
+        {
+              "term": "İzafət",
+              "definition": "Klassik ərəb-fars mənşəli tərzi-hərəkət tipli defisli sintaktik birləşmə."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az10-u3-1",
+              "question": "\"Qeyri adi\" və \"qaça qaç\" sözlərinin orfoqrafik düzəlişini verin.",
+              "solution": "\"Qeyri-adi\" defislə yazılmalıdır. \"Qaçaqaç\" isə bitişdirici -a saiti ilə düzəldiyi üçün bitişik yazılmalıdır."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az10-u3-1",
+              "question": "Aşağıdakı sözlərdən hansının yazılışı düzgündür?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Qeyri adi"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Dəvə dabanı"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Nöqteyi-nəzər"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Gecə gündüz"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Nöqteyi-nəzər izafət tərkibidir və defislə düzgün yazılmışdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-10-u4-literary-norms',
+      subjectId: 'azerbaycan_dili',
+      grade: 10,
+      unit: 'Bölmə 4: Ədəbi dilin normaları',
+      unitOrder: 4,
+      title: 'Ədəbi dilin normaları: Fonetik, leksik və qrammatik normalar',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Müasir Azərbaycan ədəbi dilinin 3 əsas norması (fonetik, leksik, qrammatik), normanın pozulması halları və redaktə prinsipləri.',
+      theoryMarkdown: `
+  ### 1. Ədəbi Dilin Normaları Nədir?
+  Ədəbi dil ümumxalq dilinin cilalanmış, hamı tərəfindən qəbul edilmiş qayda-qanunlara tabe olan ən yüksək formasıdır. 3 əsas norması var:
+
+  ### 2. Üç Əsas Norma
+  1. **Fonetik norma:**
+     - Sözlərin mövcud orfoepiya və orfoqrafiya qaydalarına uyğun tələffüzü və yazılışıdır.
+     - Ahəng qanununa əməl olunması, səslərin düzgün yazılışı.
+     - *Pozulma halı:* "təxəllüs" əvəzinə "təxəllüz", "getmişik" əvəzinə "getmişux" yazmaq və ya demək.
+  2. **Leksik norma:**
+     - Hər bir sözün öz dəqiq mənasında və yerində işlədilməsidir.
+     - Dialekt, jarqon və loru sözlərin ədəbi dildə işlədilməməsi.
+     - *Pozulma halı:* "Həkim xəstəni müalicə etdi" əvəzinə "Həkim xəstəni təmir etdi" işlətmək.
+  3. **Qrammatik norma:**
+     - Sözlərin morfoloji quruluşunun və cümlədə sintaktik sırasının düzgün qurulmasıdır.
+     - Şəkilçilərin düzgün ardıcıllığı, mübtəda ilə xəbərin uzlaşması, söz sırası.
+     - *Pozulma halı:* "Uşaqlar gəldi" (yerinə gəldilər), "kitablar çoxdur" yerinə "çox kitablar oxudular" (çox sayından sonra isim təkdə olmalıdır).
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az10-u4-1",
+              "name": "Norma Təsnifatı",
+              "latex": "\\text{Fonetik} \\implies \\text{Səs/Yazı}; \\quad \\text{Leksik} \\implies \\text{Sözün mənası}; \\quad \\text{Qrammatik} \\implies \\text{Söz sırası/Şəkilçi}",
+              "description": "Xətanın xarakterinə görə normanın növü təyin olunur."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Ədəbi norma",
+              "definition": "Ümumxalq tərəfindən qəbul olunmuş və dövlət dili səviyyəsində qorunan dil qanunauyğunluğu."
+        },
+        {
+              "term": "Qrammatik norma",
+              "definition": "Sözlərin və cümlələrin morfoloji-sintaktik quruluş qaydaları toplusu."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az10-u4-1",
+              "question": "\"Onlar xeyli kitablar aldılar\" cümləsində hansı ədəbi dil norması pozulmuşdur?",
+              "solution": "'Xeyli' qeyri-müəyyən miqdar sayından sonra gələn isim təkdə olmalıdır (kitab). Cəm şəkilçisi (-lar) artırıldığı üçün qrammatik norma pozulmuşdur."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az10-u4-1",
+              "question": "\"O, həyatın bütün çətinliklərinə dözdü\" əvəzinə \"uddu\" işlədilərsə, hansı norma pozular?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Fonetik norma"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Leksik norma"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Qrammatik norma"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Heç biri"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Söz öz həqiqi və ya düzgün məcazi mənasında işlədilmədiyi üçün leksik norma pozulmuşdur."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-10-u5-functional-styles',
+      subjectId: 'azerbaycan_dili',
+      grade: 10,
+      unit: 'Bölmə 5: Azərbaycan dilinin üslubları və funksional üslublar',
+      unitOrder: 5,
+      title: 'Funksional üslublar: Bədii, elmi, publisistik, məişət və rəsmi-işgüzar',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Azərbaycan dilinin 5 funksional üslubu, onların leksik-qrammatik xüsusiyyətləri, obrazlılıq və standartlıq göstəriciləri.',
+      theoryMarkdown: `
+  ### 1. Funksional Üslub Nədir?
+  Milli ədəbi dilin ictimai həyatın müəyyən bir sahəsində işlənən və tarixi olaraq formalaşmış qollarına **funksional üslublar** deyilir.
+
+  ### 2. Beş Əsas Funksional Üslub
+  1. **Bədii üslub:**
+     - Ən qədim və zəngin üslubdur.
+     - Əsas xüsusiyyəti: **obrazlılıq, emosionallıq, bədii təsvir və ifadə vasitələri** (təşbeh, istiarə, epitet, mübaliğə).
+     - Şeir dili və nəsr dilində təzahür edir.
+  2. **Elmi üslub:**
+     - Elmi əsərlərin, dərsliklərin və monoqrafiyaların dilidir.
+     - Əsas xüsusiyyəti: **məntiqlilik, ardıcıllıq, dəqiqlik, terminlərin zənginliyi**.
+     - Məcaziliyə və emosionallığa yol verilmir.
+  3. **Publisistik üslub:**
+     - Qəzet, televiziya, radio və internet mediasının dilidir.
+     - Əsas xüsusiyyəti: **kütləvilik, aydınlıq, ictimai-siyasi leksika və təsiredicilik**.
+  4. **Məişət üslubu:**
+     - İnsanların gündəlik canlı ünsiyyət dilidir.
+     - Əsas xüsusiyyəti: **sərbəstlik, dialoq forması, jest və mimikalardan istifadə**.
+  5. **Rəsmi-işgüzar üslub:**
+     - Dövlət sənədlərinin, qanunların və rəsmi yazışmaların dilidir.
+     - Əsas xüsusiyyəti: **standart formullar, şablonluq, arxaik sözlər və birmənalılıq**.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az10-u5-1",
+              "name": "Üslubların Əsas Ayırıcı Xassələri",
+              "latex": "\\text{Bədii} \\to \\text{Məcaz}; \\quad \\text{Elmi} \\to \\text{Termin}; \\quad \\text{Publisistik} \\to \\text{Kütləvi}; \\quad \\text{Rəsmi} \\to \\text{Şablon}",
+              "description": "Hər üslubun leksik dominant xüsusiyyətidir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Funksional üslub",
+              "definition": "Dilin ictimai fəaliyyət sferasına görə fərqlənən ədəbi qolu."
+        },
+        {
+              "term": "Publisistika",
+              "definition": "Cəmiyyət üçün aktual olan siyasi və ictimai məsələləri işıqlandıran mətbuat dili."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az10-u5-1",
+              "question": "\"Gülərüz səma ulduzlarla bəzənmişdi\" və \"Fotosintez zamanı qlükoza və oksigen sintez olunur\" cümlələrinin üslubunu təyin edin.",
+              "solution": "Birinci cümlə obrazlı məcazlar ehtiva etdiyi üçün bədii üslubdur. İkinci cümlə isə elmi terminlər və dəqiq fakt ehtiva etdiyi üçün elmi üslubdur."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az10-u5-1",
+              "question": "Aşağıdakılardan hansı rəsmi-işgüzar üslubun xüsusiyyətidir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Geniş məcazilik və bədii suallar"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Standart formalar və şablon ifadələr"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Jest və mimikaların üstünlüyü"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Təşbeh və epitetlərin çoxluğu"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Rəsmi-işgüzar üslub dövlət sənədlərinin dilidir və standart şablon formalarla xarakterizə olunur."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-11-u1-text-syntax',
+      subjectId: 'azerbaycan_dili',
+      grade: 11,
+      unit: 'Bölmə 1: Mürəkkəb sintaktik bütövlər və Mətn sintaksisi',
+      unitOrder: 1,
+      title: 'Mətnin abzas quruluşu, cümlələr arası əlaqələr: Zəncirvari və paralel',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Mətnin strukturu, abzaslar, mikromövzu, açar sözlər və mətndə cümlələrin zəncirvari və paralel əlaqə vasitələri.',
+      theoryMarkdown: `
+  ### 1. Mətn və Mürəkkəb Sintaktik Bütöv
+  Mətn — müəyyən bir mövzu ətrafında birləşən, məna və qrammatik cəhətdən əlaqəli cümlələrin yaratdığı bitkin nitq parçasıdır.
+  - **Abzas:** Mətndə bir mikromövzunu əhatə edən və yeni sətirdən başlayan hissədir.
+  - **Açar sözlər:** Mətnin əsas ideyasını və məzmununu daşıyan ən vacib sözlərdir.
+
+  ### 2. Mətndə Cümlələrarası Əlaqə Növləri
+  1. **Zəncirvari əlaqə:**
+     - Hər sonrakı cümlə özündən əvvəlki cümlə ilə birbaşa əlaqələnir.
+     - Birinci cümlədəki məlumat növbəti cümlənin başlanğıcı (istinad nöqtəsi) olur.
+     - Əlaqələndirici vasitələr: Əvəzliklər, sinonimlər, təkrar olunan sözlər:
+       *Şuşa qədim şəhərdir. Bu şəhər həm də musiqi beşiyimizdir. Orada dahi bəstəkarlar yetişmişdir.*
+  2. **Paralel əlaqə:**
+     - Bütün cümlələr bilavasitə birinci cümləyə (əsas fikrə) bağlanır və onu müxtəlif cəhətdən izah edir.
+     - Cümlələrin sintaktik quruluşu adətən eyni tipli (paralel) olur:
+       *Gözəl bir yaz səhəri idi. Quşlar cəh-cəh vururdu. Çəmənliklər şehlə parıldayırdı. Meh zərifcə əsirdi.*
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az11-u1-1",
+              "name": "Zəncirvari və Paralel Əlaqə Sxemi",
+              "latex": "\\text{Zəncirvari: } C_1 \\to C_2 \\to C_3; \\qquad \\text{Paralel: } C_1 \\begin{cases} \\to C_2 \\\\ \\to C_3 \\\\ \\to C_4 \\end{cases}",
+              "description": "Zəncirvari ardıcıl həlqələrlə, paralel isə mərkəzi cümləyə eyni anda bağlanır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Mətn",
+              "definition": "Mövzu və ideya vəhdəti olan ən böyük sintaktik vahid."
+        },
+        {
+              "term": "Zəncirvari əlaqə",
+              "definition": "Cümlələrin bir-birinə əvəzlik və təkrar sözlərlə ardıcıl bağlanması."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az11-u1-1",
+              "question": "\"Dəniz dalğalanırdı. Sahildə balıqçılar tor çəkirdilər. Qağayılar havada dövrə vururdu\" parçasında əlaqə növünü təyin edin.",
+              "solution": "Cümlələrin hər biri ümumi mənzərəni (dəniz sahilini) paralel təsvir edir. Cümlələr bir-birindən yox, ümumi fikirdən asılıdır. Əlaqə növü: paralel əlaqə."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az11-u1-1",
+              "question": "Mətndə hər sonrakı cümlənin əvvəlki cümlədəki sözü əvəzliklə əvəz etməsi hansı əlaqə növünə aiddir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Paralel əlaqə"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Zəncirvari əlaqə"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Tabesizlik əlaqəsi"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Qarışıq əlaqə"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Əvvəlki cümlənin üzvünə istinad edərək irəliləyən əlaqə zəncirvari əlaqədir."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-11-u2-rhetoric-speech-culture',
+      subjectId: 'azerbaycan_dili',
+      grade: 11,
+      unit: 'Bölmə 2: Nitq mədəniyyəti və Ritorika',
+      unitOrder: 2,
+      title: 'Nitq mədəniyyətinin şərtləri: Düzgünlük, dəqiqlik, aydınlıq, yığcamlıq və zənginlik',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Mədəni nitqin 5 əsas keyfiyyəti, ritorika və natiqlik sənəti, dinləmə və replika mədəniyyəti.',
+      theoryMarkdown: `
+  ### 1. Nitq Mədəniyyəti Nədir?
+  Fikrin ədəbi dilin normalarına tam uyğun, dinləyici üçün anlaşıqlı, məntiqli və estetik şəkildə çatdırılması mədəniyyətidir.
+
+  ### 2. Yaxşı Nitqin Əsas Məziyyətləri
+  1. **Düzgünlük:** Ədəbi dilin fonetik, leksik və qrammatik normalarına ciddi əməl olunmasıdır. Nitq mədəniyyətinin ilkin təməl şərtidir.
+  2. **Dəqiqlik:** Sözlərin ifadə olunan fikrə tam uyğun seçilməsi, çoxmənalılıq və dolaşıqlığa yol verilməməsidir.
+  3. **Aydınlıq:** Dinləyicinin nitqi heç bir əlavə izahat olmadan asanlıqla başa düşməsidir. Həddindən artıq anlaşılmaz əcnəbi sözlərdən çəkinmək tələb olunur.
+  4. **Yığcamlıq:** Fikrin minimum sözlə, lakonik və dolğun çatdırılmasıdır (artıq sözçülükdən — pleonazmdan qaçmaq).
+  5. **Zənginlik:** Natiqin geniş söz ehtiyatına, zəngin sinonimik sıraya, atalar sözlərinə və frazeoloji ifadələrə malik olmasıdır.
+
+  ### 3. Ritorika (Natiqlik Sənəti)
+  Kütlə qarşısında inandırıcı, təsirli və cəlbedici çıxış etmə nəzəriyyəsi və sənətidir.
+  - Natiqin intonasiyası, səs tonu, fasilələri (pauza), jest və mimikaları, göz təması əsas amillərdir.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az11-u2-1",
+              "name": "Nitq Mədəniyyətinin 5 Qızıl Şərti",
+              "latex": "\\text{Nitq} = \\text{Düzgünlük} + \\text{Dəqiqlik} + \\text{Aydınlıq} + \\text{Yığcamlıq} + \\text{Zənginlik}",
+              "description": "Uğurlu ünsiyyətin təməl meyarlarıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Ritorika",
+              "definition": "Gözəl, məntiqli və inandırıcı danışma sənəti haqqında elm."
+        },
+        {
+              "term": "Pleonazm",
+              "definition": "Eyni mənanı verən sözlərin lüzumsuz yerə yanaşı işlədilməsi (məsələn: 'geriyə qayıtmaq')."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az11-u2-1",
+              "question": "\"O, geriyə qayıtdı və öz şəxsi fikrini bildirdi\" cümləsindəki nitq qüsurunu müəyyən edin.",
+              "solution": "\"Qayıtmaq\" zatən geriyə hərəkətdir, \"öz\" və \"şəxsi\" sözləri eyni mənanı təkrar edir. Düzgün yığcam variant: \"O qayıtdı və fikrini bildirdi\"."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az11-u2-1",
+              "question": "Fikrin artıq sözlər işlətmədən, lakonik ifadə olunması nitqin hansı məziyyətidir?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Zənginlik"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Yığcamlıq"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Təmizlik"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Münasiblik"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Artıq sözlərdən qaçaraq lakonik danışmaq nitqin yığcamlığıdır."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-11-u3-punctuation-system',
+      subjectId: 'azerbaycan_dili',
+      grade: 11,
+      unit: 'Bölmə 3: Durğu işarələri sistemi və orfoqrafiya lüğəti qaydaları',
+      unitOrder: 3,
+      title: 'Müasir Azərbaycan dilində durğu işarələri sistemi və orfoqrafik prinsiplər',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: '10 əsas durğu işarəsi (nöqtə, sual, nida, üç nöqtə, vergül, nöqtəli vergül, iki nöqtə, tire, dırnaq, mötərizə), onların məntiqi və sintaktik funksiyaları.',
+      theoryMarkdown: `
+  ### 1. Durğu İşarələrinin Funksiyaları
+  Durğu işarələri yazılı nitqdə fikrin düzgün anlaşılmasına, intonasiyanın və sintaktik əlaqələrin ifadəsinə xidmət edir:
+  1. **Ayırıcı işarələr:** Cümlələri və ya bitmiş fikirləri bir-birindən ayırır (nöqtə, sual işarəsi, nida işarəsi, üç nöqtə).
+  2. **Birləşdirici və fərqləndirici işarələr:** Cümlə daxilində üzvləri, budaq cümlələri, xitab və ara sözləri təcrid edir (vergül, nöqtəli vergül, iki nöqtə, tire).
+  3. **Məhdudlaşdırıcı işarələr:** Başqasının sözünü və ya əlavə məlumatı ayıran qoşa işarələrdir (dırnaqlar, mötərizələr).
+
+  ### 2. Çətin Məqamlar və Xüsusi Qaydalar
+  - **Nöqtəli vergül (;):** Mürəkkəb cümlənin tərkib hissələri daxilində artıq vergül olduqda və ya tərəflər məzmunca bir qədər uzaq olduqda qoyulur.
+  - **İki nöqtə (:):** İzah, aydınlaşdırma, səbəb bildirdikdə və ya vasitəsiz nitqdən əvvəl qoyulur.
+  - **Tire (—):** Xitab sonda olduqda, vasitəsiz nitqdən sonra, buraxılmış xəbərin yerində və dialoqlarda istifadə olunur.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az11-u3-1",
+              "name": "Nöqtəli Vergül Tətbiqi",
+              "latex": "[\\dots, \\dots]; \\qquad [\\dots, \\dots].",
+              "description": "Daxilində vergül olan müstəqil bloklar nöqtəli vergüllə ayrılır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Punktuasiya",
+              "definition": "Durğu işarələrinin işlənmə qaydaları haqqında dilçilik bəhsi."
+        },
+        {
+              "term": "Təcrid",
+              "definition": "Müəyyən söz və ya cümlənin durğu işarələri ilə xüsusi ayrılması."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az11-u3-1",
+              "question": "\"Bağda meyvələr alma armud heyva yetişmişdi lakin onları yığan yox idi\" cümləsində durğu işarələrini təyin edin.",
+              "solution": "\"Bağda meyvələr: alma, armud, heyva yetişmişdi; lakin onları yığan yox idi.\" (Həmcins üzvlər üçün iki nöqtə və vergül, birinci hissə mürəkkəb olduğu üçün qarşılaşdırmadan əvvəl nöqtəli vergül)."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az11-u3-1",
+              "question": "Dialoqlarda hər bir şəxsin nitqinin əvvəlində hansı durğu işarəsi qoyulur?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Dırnaq"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Tire"
+                    },
+                    {
+                          "key": "C",
+                          "text": "İki nöqtə"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Vergül"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Dialoqlarda replikaların qarşısında tire (—) işarəsi qoyulur."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-11-u4-official-documents',
+      subjectId: 'azerbaycan_dili',
+      grade: 11,
+      unit: 'Bölmə 4: Rəsmi və işgüzar sənədlər',
+      unitOrder: 4,
+      title: 'İşgüzar sənədlər: Ərizə, arayış, tərcümeyi-hal, akt, protokol, elan',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Rəsmi-işgüzar sənədlərin standart rekvizitləri, hüquqi əhəmiyyəti, ərizə, tərcümeyi-hal, akt, protokol və elan yazılış qaydaları.',
+      theoryMarkdown: `
+  ### 1. İşgüzar Sənədlər və Rekvizitlər
+  Vətəndaşların təşkilatlarla və ya təşkilatların bir-biri ilə hüquqi münasibətlərini tənzimləyən sənədlərdir. Hər bir sənədin dəqiq **rekvizitləri** (standart forması) olmalıdır.
+
+  ### 2. Əsas İşgüzar Sənəd Növləri
+  1. **Ərizə:** Şəxsin hər hansı təşkilat rəhbərliyinə rəsmi müraciətidir (xahiş, şikayət, təklif).
+     - Başlıq (kimə), kimdən, sözün mərkəzində "Ərizə", mətn, tarix (sağda/solda) və imza.
+  2. **Tərcümeyi-hal (CV / Avtobioqrafiya):** Şəxsin öz həyat yolunu xronoloji ardıcıllıqla qələmə aldığı sənəddir.
+     - Doğum tarixi, yeri, təhsili, əmək fəaliyyəti, ailə vəziyyəti ardıcıl qeyd olunur.
+  3. **Arayış:** Şəxsin kimliyini, təhsil və ya iş yerini, yaşayış ünvanını təsdiq edən rəsmi sənəddir.
+  4. **Akt:** Hər hansı baş vermiş faktı, hadisəni bir neçə nəfərin (komissiyanın) iştirakı ilə təsdiq edən sənəddir.
+  5. **Protokol:** İclas, müşavirə və ya konfransın gedişatını, çıxışları və qəbul olunmuş qərarları dəqiq əks etdirən sənəddir.
+  6. **Elan:** Qarşıda duran hər hansı tədbir, hadisə barədə ictimaiyyətə qabaqcadan verilən qısa xəbərdarlıq sənədidir.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az11-u4-1",
+              "name": "Ərizənin Standart Strukturu",
+              "latex": "\\text{[Ünvanlanan Rəhbər]} \\to \\text{[Ərizəçi]} \\to \\text{\"Ərizə\"} \\to \\text{[Məzmun]} \\to \\text{[Tarix və İmza]}",
+              "description": "Rəsmi ərizənin dəyişməz struktur ardıcıllığıdır."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Rekvizit",
+              "definition": "Rəsmi sənədin hüquqi qüvvəyə malik olması üçün tələb olunan zəruri elementlər (tarix, imza, möhür və s.)."
+        },
+        {
+              "term": "Protokol",
+              "definition": "Toplantının gedişatını və qəbul olunmuş qərarları rəsmiləşdirən sənəd."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az11-u4-1",
+              "question": "Məktəb kitabxanasında kitabların sayını yoxlayan komissiya hansı sənədi tərtib etməlidir?",
+              "solution": "Bir neçə nəfərin iştirakı ilə faktı qeydə almaq və təsdiq etmək üçün 'Akt' tərtib olunmalıdır."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az11-u4-1",
+              "question": "İnsanın öz həyatını doğumundan bu günə qədər xronoloji ardıcıllıqla təsvir etdiyi sənəd hansıdır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Ərizə"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Arayış"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Tərcümeyi-hal"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Protokol"
+                    }
+              ],
+              "correctKey": "C",
+              "explanation": "Şəxsin öz həyat yolunu xronoloji ardıcıllıqla yazdığı sənəd tərcümeyi-haldır (autobioqrafiya)."
+        }
+  ]
+    },
+
+  {
+      id: 'lesson-azeri-11-u5-essay-writing',
+      subjectId: 'azerbaycan_dili',
+      grade: 11,
+      unit: 'Bölmə 5: Mətn üzərində iş və esse/məqalə yazma texnikası',
+      unitOrder: 5,
+      title: 'Esse və məqalə yazma texnikası: Giriş, əsas hissə və nəticə, arqumentasiya',
+      order: 1,
+      readTimeMinutes: 10,
+      difficulty: 3,
+      summary: 'Esse janrının xüsusiyyətləri, struktur bölmələri (tezis, arqument, fakt, nəticə), paraqraf keçidləri və yaradıcı yazı bacarıqları.',
+      theoryMarkdown: `
+  ### 1. Esse Nədir?
+  Esse — müəllifin hər hansı mövzu, fəlsəfi, əxlaqi və ya ictimai problem haqqında sərbəst, fərdi düşüncələrini əks etdirən yaradıcı nəsr janrıdır.
+
+  ### 2. Essenin Kompozisiya Strukturu
+  1. **Giriş hissə:**
+     - Mövzuya maraq oyadan cümlə (qarmaq / hook).
+     - Problemin aktuallığının qısa izahı.
+     - **Tezis cümləsi:** Müəllifin müdafiə edəcəyi əsas fikir (essenin onurğa sütunu).
+  2. **Əsas hissə (2-3 abzas):**
+     - Hər abzasda bir alt-fikir irəli sürülür.
+     - **Arqumentasiya:** Fikri sübut edən faktlar, sitatlar, tarixi nümunələr və ya statistik məlumatlar.
+     - Əks arqumentlərin təkzib edilməsi.
+  3. **Nəticə hissə:**
+     - Tezis başqa sözlərlə yenidən xatırladılır.
+     - Bütün arqumentlər ümumiləşdirilir və son təsirli tövsiyə və ya çağırışla tamamlanır.
+
+  ### 3. Yazı Prosesinin Mərhələləri
+  1. **Planlaşdırma (Brainstorming):** Fikirlərin toplanması və xəritələnməsi.
+  2. **Qaralama (Drafting):** Fikirlərin fasiləsiz yazılması.
+  3. **Redaktə və korreksiya (Editing):** Qrammatik, orfoqrafik və durğu işarələri xətalarının düzəldilməsi.
+      `,
+      keyFormulas: [
+        {
+              "id": "f-az11-u5-1",
+              "name": "Essenin Klassik Triadası",
+              "latex": "\\text{Giriş (Tezis)} \\to \\text{Əsas Hissə (Arqument + Fakt)} \\to \\text{Nəticə (Ümumiləşdirmə)}",
+              "description": "Akademik və yaradıcı essenin standart kompozisiya modelidir."
+        }
+  ],
+      glossary: [
+        {
+              "term": "Tezis",
+              "definition": "Müəllifin doğruluğunu sübut etməyə çalışdığı əsas müddəa, ana fikir."
+        },
+        {
+              "term": "Arqument",
+              "definition": "Tezisi əsaslandırmaq üçün gətirilən məntiqi dəlil və ya sübut."
+        }
+  ],
+      solvedExamples: [
+        {
+              "id": "ex-az11-u5-1",
+              "question": "\"Kitab oxumaq insanın dünyagörüşünü genişləndirir\" tezisi üçün iki inandırıcı arqument gətirin.",
+              "solution": "1. Kitab mütaliəsi insanın lüğət ehtiyatını və nitq mədəniyyətini zənginləşdirir. 2. Tarixi və bədii əsərlər insanı müxtəlif dövrlərin təcrübəsi ilə tanış edərək tənqidi təfəkkürü inkişaf etdirir."
+        }
+  ],
+      miniQuiz: [
+        {
+              "questionId": "mq-az11-u5-1",
+              "question": "Essenin giriş hissəsində müəllifin sübut etmək istədiyi əsas müddəa necə adlanır?",
+              "options": [
+                    {
+                          "key": "A",
+                          "text": "Epiloq"
+                    },
+                    {
+                          "key": "B",
+                          "text": "Tezis"
+                    },
+                    {
+                          "key": "C",
+                          "text": "Məcaz"
+                    },
+                    {
+                          "key": "D",
+                          "text": "Pleonazm"
+                    }
+              ],
+              "correctKey": "B",
+              "explanation": "Müəllifin esse boyu müdafiə etdiyi əsas fikir tezis adlanır."
+        }
+  ]
+    }
+,
+
+  // =========================================================================
+  // 3. FİZİKA (AR Elm və Təhsil Nazirliyi e-Dərslik: 7, 8, 9, 10, 11 - 34 Bölmə)
+  // =========================================================================
+  {
+    id: 'lesson-phys-7-u1-measurement',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 1: Fizika — təbiət haqqında elmdir. Maddə və sahə. Ölçmələr',
     unitOrder: 1,
-    title: 'Sözün mənaları: Təkmənalı və çoxmənalı sözlər, omonimlər, sinonimlər, antonimlər',
+    title: 'Fiziki kəmiyyətlər, ölçmə cihazları və mütləq xəta',
     order: 1,
-    readTimeMinutes: 9,
+    readTimeMinutes: 8,
     difficulty: 1,
-    summary: 'Sözün leksik və qrammatik mənası, həqiqi və məcazi məna, çoxmənalılıq, omonimlər, sinonimlər və antonimlər.',
+    summary: 'Maddə və fiziki sahə, Beynəlxalq Vahidlər Sistemi (BS / SI), cihazın bir bölgüsünün qiyməti və ölçmə xətası.',
     theoryMarkdown: `
-### 1. Sözün Leksik və Qrammatik Mənası
-- **Leksik məna:** Sözün birbaşa ifadə etdiyi məzmun, ilkin anlayışdır. Sözün leksik mənası izahlı lüğətdə verilir.
-- **Qrammatik məna:** Sözün hansı nitq hissəsinə aid olması, hansı qrammatik şəkilçiləri qəbul etməsi və cümlədə hansı üzv olmasıdır.
+### 1. Materiya, Maddə və Sahə
+Ətrafımızda mövcud olan bütün maddi aləm **materiya** adlanır. Materiya iki şəkildə mövcuddur:
+- **Maddə:** Kütləsi və həcmi olan varlıqlardır (su, dəmir, hava, ağac).
+- **Fiziki sahə:** Maddələrin qarşılıqlı təsirini ötürən xüsusi materiya növüdür (qravitasiya, elektrik və maqnit sahələri).
 
-### 2. Təkmənalı və Çoxmənalı Sözlər
-- **Təkmənalı sözlər:** Yalnız bir leksik mənası olan sözlərdir (məsələn: *kompüter, kərgədan, biologiya*).
-- **Çoxmənalı sözlər:** İlkin həqiqi məna ilə yanaşı, oxşarlıq əsasında yeni məcazi mənalar qazanan sözlərdir (məsələn: *göz:* insanın gözü, bulağın gözü, şkafın gözü). Çoxmənalı sözlərin bütün mənaları eyni nitq hissəsinə aid olur.
+### 2. Beynəlxalq Vahidlər Sistemi (BS / SI)
+Əsas fiziki kəmiyyətlər və vahidləri:
+- Uzunluq: metr ($m$)
+- Kütlə: kiloqram ($kq$)
+- Zaman: saniyə ($san$)
+- Cərəyan şiddəti: amper ($A$)
+- Temperatur: kelvin ($K$)
+- İşıq şiddəti: kandela ($kd$)
+- Maddə miqdarı: mol ($mol$)
 
-### 3. Omonimlər, Sinonimlər və Antonimlər
-- **Omonimlər:** Deyilişi və yazılışı eyni, lakin leksik mənaları tamamilə fərqli olan sözlərdir (məsələn: *bağ* — meyvə bağı / bağlamaq üçün ip; *çay* — axar su / içki). Omonimlər həm eyni, həm də fərqli nitq hissələrinə aid ola bilər.
-- **Sinonimlər:** Yazılışı və deyilişi fərqli, mənaları yaxın olan sözlərdir (məsələn: *gözəl — qəşəng — göyçək*). Yalnız eyni nitq hissəsinə aid olurlar.
-- **Antonimlər:** Bir-birinə əks mənalı sözlərdir (məsələn: *ağ — qara, böyük — kiçik, gecə — gündüz*). Yalnız eyni nitq hissəsinə aid olurlar.
+### 3. Ölçmə Cihazının Bölgü Qiyməti və Xəta
+Cihazın şkalasında iki ən yaxın rəqəmli xətt arasındakı fərq tapılır və aradakı bölgülərin sayına bölünür:
+$$C = \frac{a - b}{N}$$
+- **Mütləq xəta:** Cihazın ən kiçik bölgü qiymətinin yarısına bərabərdir:
+$$\Delta x = \frac{C}{2}$$
     `,
     keyFormulas: [
       {
-            "id": "f-az6-u1-1",
-            "name": "Omonimlə Çoxmənalı Sözün Fərqi",
-            "latex": "\\text{Çoxmənalı} \\implies \\text{Məcazilik və əlaqə var}; \\quad \\text{Omonim} \\implies \\text{Tam fərqli mənalar}",
-            "description": "Çoxmənalı sözlər arasında məna bağlılığı qalır, omonimlərdə isə mənalar tamamilə ayrıdır."
+            "id": "f-p7-u1-1",
+            "name": "Bölgü Qiyməti Düsturu",
+            "latex": "C = \\frac{a - b}{N}",
+            "description": "Şkala üzərində iki qonşu rəqəm fərqinin aradakı bölgü sayına nisbətidir."
+      },
+      {
+            "id": "f-p7-u1-2",
+            "name": "Cihazın Mütləq Xətası",
+            "latex": "\\Delta x = \\frac{C}{2}",
+            "description": "Ölçmənin mütləq xətası bölgü qiymətinin yarısı qədər qəbul edilir."
       }
 ],
     glossary: [
       {
-            "term": "Leksika",
-            "definition": "Dildəki bütün sözlərin məcmusu, lüğət tərkibi."
+            "term": "Fiziki kəmiyyət",
+            "definition": "Cismin və ya hadisənin ölçülə bilən xassəsi (uzunluq, kütlə, zaman və s.)."
       },
       {
-            "term": "Omonim",
-            "definition": "Yazılışı və tələffüzü eyni, leksik mənaları tamamilə müxtəlif olan sözlər."
+            "term": "Materiya",
+            "definition": "Şüurumuzdan kənarda və ondan asılı olmayaraq mövcud olan bütün obyektiv aləm."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az6-u1-1",
-            "question": "\"Dəmir qapı\" və \"dəmir iradə\" birləşmələrində \"dəmir\" sözünün mənasını təhlil edin.",
-            "solution": "\"Dəmir qapı\" birləşməsində maddə həqiqətən dəmirdir (həqiqi məna). \"Dəmir iradə\" birləşməsində isə möhkəmlik mənasında məcazi işlənmiş çoxmənalı sözdür."
+            "id": "ex-p7-u1-1",
+            "question": "Xətkeşdə 10 sm və 20 sm bölgüləri arasında 20 xırda bölgü vardır. Xətkeşin bir bölgüsünün qiymətini və xətasını tapın.",
+            "solution": "$C = \\frac{20 - 10}{20} = \\frac{10}{20} = 0.5 \\text{ sm} = 5 \\text{ mm}$. Mütləq xəta: $\\Delta x = \\frac{5}{2} = 2.5 \\text{ mm}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az6-u1-1",
-            "question": "Aşağıdakı cütlüklərdən hansı antonimdir?",
+            "questionId": "mq-p7-u1-1",
+            "question": "Beynəlxalq Sistemdə (BS) zamanın əsas vahidi hansıdır?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Hündür — Uca"
+                        "text": "Dəqiqə"
                   },
                   {
                         "key": "B",
-                        "text": "Geniş — Dar"
+                        "text": "Saat"
                   },
                   {
                         "key": "C",
-                        "text": "Kök — Şəkilçi"
+                        "text": "Saniyə"
                   },
                   {
                         "key": "D",
-                        "text": "Ağac — Yarpaq"
+                        "text": "Sutka"
                   }
             ],
-            "correctKey": "B",
-            "explanation": "Geniş və dar sözləri bir-birinə əks məna bildirən antonimlərdir."
+            "correctKey": "C",
+            "explanation": "BS-də zamanın əsas vahidi saniyədir (san)."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-6-u2-morphology-roots',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 2: Sözün tərkibi və söz yaradıcılığı',
+    id: 'lesson-phys-7-u2-uniform-motion',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 2: Mexaniki hərəkət. Düzxətli bərabərsürətli hərəkət',
     unitOrder: 2,
-    title: 'Kök və şəkilçi, leksik və qrammatik şəkilçilər, eyniköklü sözlər',
+    title: 'Düzxətli bərabərsürətli hərəkət, sürət və yol düsturu',
     order: 1,
     readTimeMinutes: 9,
     difficulty: 1,
-    summary: 'Sözün tərkibi (kök və şəkilçi), leksik və qrammatik şəkilçilərin fərqi, şəkilçilərin variantları və eyniköklü sözlərin xüsusiyyətləri.',
+    summary: 'Maddi nöqtə, trayektoriya, gedilən yol və yerdəyişmə, sürət anlayışı və $s = v \cdot t$ asılılığı.',
     theoryMarkdown: `
-### 1. Kök və Şəkilçi
-- **Kök:** Sözün mənalı və ayrılmaz əsas hissəsidir (simvolu: $\cap$).
-- **Şəkilçi:** Sözün kökünə qoşularaq ya yeni söz düzəldən, ya da sözü digər sözlərlə əlaqələndirən hissəcikdir.
+### 1. Mexaniki Hərəkət və Əsas Anlayışlar
+Zaman keçdikcə cismin fəzada digər cisimlərə nəzərən vəziyyətinin dəyişməsinə **mexaniki hərəkət** deyilir.
+- **Maddi nöqtə:** Verilmiş şəraitdə ölçüləri nəzərə alınmayacaq qədər kiçik olan cisimdir.
+- **Trayektoriya:** Maddi nöqtənin hərəkət zamanı cızdığı xəttdir.
+- **Yol ($l$):** Trayektoriyanın uzunluğudur (skalyar kəmiyyətdir).
+- **Yerdəyişmə ($\vec{s}$):** Hərəkətin başlanğıc və son nöqtələrini birləşdirən istiqamətlənmiş düz xətt parçasıdır (vektorial kəmiyyətdir).
 
-### 2. Leksik və Qrammatik Şəkilçilər
-- **Leksik (sözdüzəldici) şəkilçilər:** Sözün kökünə qoşularaq yeni leksik mənalı söz yaradır: *dəniz \to dənizçi, duz \to duzlu*.
-- **Qrammatik (sözdəyişdirici) şəkilçilər:** Sözün leksik mənasını dəyişmir, yalnız formasını dəyişib cümlədə digər sözlərlə əlaqələndirir: cəm (-lar/-lər), mənsubiyyət, hal və xəbərlik şəkilçiləri.
-
-### 3. Şəkilçilərin Variantları və Ahəng Qanunu
-Ahəng qanununa uyğun olaraq şəkilçilər:
-- **Birvariantlı:** Adətən alınma şəkilçilərdir (-bi, -na, -keş, -dar, -pərəst, -xana).
-- **İkivariantlı:** Qalın və incə saitlərə görə: *-lar / -lər, -da / -də*.
-- **Dördvariantlı:** Qapalı saitlərin ahənginə görə: *-çı / -çi / -çu / -çü, -lı / -li / -lu / -lü*.
-
-### 4. Eyniköklü Sözlər
-Eyni bir kökdən leksik şəkilçilər vasitəsilə yaranmış düzəltmə sözlərə **eyniköklü sözlər** deyilir. Eyniköklü sözlərin kökü mütləq eyni nitq hissəsi və eyni leksik məna olmalıdır (məsələn: *gül-çü, gül-dan, gül-lük* eyniköklüdür; lakin *gülmək* feli ilə *gül* ismi eyniköklü deyil).
+### 2. Düzxətli Bərabərsürətli Hərəkət
+Cismin ixtiyari bərabər zaman fasilələrində bərabər yerdəyişmələr icra etdiyi hərəkətdir.
+- **Sürət:** Yerdəyişmənin bu yerdəyişməyə sərf olunan zamana nisbətinə bərabər olan vektorial kəmiyyətdir:
+$$v = \frac{s}{t}, \qquad [v] = 1 \text{ m/san}$$
+- **Gedilən yol:**
+$$s = v \cdot t$$
+- $1 \text{ m/san} = 3.6 \text{ km/saat}$
     `,
     keyFormulas: [
       {
-            "id": "f-az6-u2-1",
-            "name": "Sözün Quruluş Sxemi",
-            "latex": "\\text{Kök} + \\text{Leksik şəkilçi} + \\text{Qrammatik şəkilçi}",
-            "description": "Azərbaycan dilində adi ardıcıllıq kök, leksik və ən sonda qrammatik şəkilçilərdir."
+            "id": "f-p7-u2-1",
+            "name": "Bərabərsürətli Hərəkətdə Sürət",
+            "latex": "v = \\frac{s}{t}",
+            "description": "Sürət yolun zamana nisbətinə bərabərdir."
+      },
+      {
+            "id": "f-p7-u2-2",
+            "name": "Gedilən Yol",
+            "latex": "s = v \\cdot t",
+            "description": "Gedilən yol sürətlə zamanın hasilidir."
       }
 ],
     glossary: [
       {
-            "term": "Eyniköklü sözlər",
-            "definition": "Kökü eyni nitq hissəsinə aid olan və leksik şəkilçilərlə yaranan düzəltmə sözlər qrupu."
+            "term": "Yerdəyişmə",
+            "definition": "Hərəkətin başlanğıc və son nöqtələrini birləşdirən yönəlmiş xətt parçası."
       },
       {
-            "term": "Ahəng qanunu",
-            "definition": "Sözdə qalın və ya incə saitlərin bir-birini izləməsi qanunu."
+            "term": "Trayektoriya",
+            "definition": "Hərəkət edən cismin fəzada buraxdığı xəyali iz və ya xətt."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az6-u2-1",
-            "question": "\"Bağbanlarımızdan\" sözünü tərkibinə (kök və şəkilçilərə) görə təhlil edin.",
-            "solution": "bağ (kök) + -ban (leksik şəkilçi) + -lar (cəm qrammatik) + -ımız (mənsubiyyət qrammatik) + -dan (çıxışlıq hal qrammatik)."
+            "id": "ex-p7-u2-1",
+            "question": "Avtomobil $72 \\text{ km/saat}$ sürətlə 10 saniyə hərəkət etmişdir. Onun getdiyi yolu metrlə hesablayın.",
+            "solution": "Əvvəlcə sürəti m/san-yə çevirək: $v = 72 : 3.6 = 20 \\text{ m/san}$. Yol: $s = v \\cdot t = 20 \\cdot 10 = 200 \\text{ metr}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az6-u2-1",
-            "question": "Aşağıdakı sözlərdən hansı \"yağ\" (yağlamaq) feli ilə eyniköklü deyil?",
+            "questionId": "mq-p7-u2-1",
+            "question": "$54 \\text{ km/saat}$ neçə $\\text{m/san}$-yə bərabərdir?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Yağlı"
+                        "text": "10 m/san"
                   },
                   {
                         "key": "B",
-                        "text": "Yağsız"
+                        "text": "15 m/san"
                   },
                   {
                         "key": "C",
-                        "text": "Yağış"
+                        "text": "20 m/san"
                   },
                   {
                         "key": "D",
-                        "text": "Yağla"
+                        "text": "25 m/san"
                   }
             ],
-            "correctKey": "C",
-            "explanation": "Yağış sözünün kökü 'yağmaq' təbiət hadisəsi felidir, sürtülən yağ ismi deyil."
+            "correctKey": "B",
+            "explanation": "54 / 3.6 = 15 m/san."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-6-u3-noun',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 3: İsim. İsimlərin qrammatik xüsusiyyətləri',
+    id: 'lesson-phys-7-u3-density',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 3: Maddənin quruluşu və xassələri. Kütlə və sıxlıq',
     unitOrder: 3,
-    title: 'İsim: Quruluşca növləri, mənsubiyyət, hal və xəbərlik kateqoriyaları',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 1,
-    summary: 'Konkret və mücərrəd, ümumi və xüsusi isimlər, ismin halları (6 hal), mənsubiyyət və şəxs (xəbərlik) şəkilçiləri.',
-    theoryMarkdown: `
-### 1. İsmin Əsas Əlamətləri
-Əşyanın adını bildirən, *Kim? Nə? Hara?* suallarına cavab verən əsas nitq hissəsinə **isim** deyilir.
-- **Konkret isimlər:** Gözlə görünən, toxunula bilən (kitab, su, ağac).
-- **Mücərrəd isimlər:** Duyğular, anlayışlar, toxunulmaz (arzu, xəyal, ağıl, sevgi).
-- **Ümumi və xüsusi isimlər:** Eynicinsli əşyaların adı ümumi, tək olan varlıqlara verilən fərdi adlar isə xüsusi isimlərdir (böyük hərflə yazılır).
-
-### 2. İsmin Quruluşca Növləri
-- **Sadə:** Yalnız kökdən və ya kök+qrammatik şəkilçidən ibarət olur (*ev, qələmlər*).
-- **Düzəltmə:** Leksik şəkilçilər vasitəsilə yaranır (*dənizçi, yaxşılıq, meşəlik*).
-- **Mürəkkəb:** İki və ya daha artıq sözün birləşməsindən yaranır (*dəvədabanı, tozsoran, günəbaxan*).
-
-### 3. İsmin Halları (6 Hal)
-1. **Adlıq hal:** Şəkilçisi yoxdur (*kitab*).
-2. **Yiyəlik hal:** *-ın⁴, -nın⁴* (*kitabın*). Müəyyən və qeyri-müəyyən olur.
-3. **Yönlük hal:** *-a², -ya²* (*kitaba*).
-4. **Təsirlik hal:** *-ı⁴, -nı⁴* (*kitabı*). Müəyyən və qeyri-müəyyən olur.
-5. **Yerlik hal:** *-da², -də²* (*kitabda*).
-6. **Çıxışlıq hal:** *-dan², -dən²* (*kitabdan*).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az6-u3-1",
-            "name": "İsmin Hal Şəkilçiləri Cədvəli",
-            "latex": "\\text{Yiyəlik: } -ın^4; \\quad \\text{Yönlük: } -a^2; \\quad \\text{Təsirlik: } -ı^4; \\quad \\text{Yerlik: } -da^2; \\quad \\text{Çıxışlıq: } -dan^2",
-            "description": "Altı halın qrammatik göstəriciləridir."
-      }
-],
-    glossary: [
-      {
-            "term": "Mənsubiyyət",
-            "definition": "Əşyanın hansı şəxsə aid olduğunu bildirən qrammatik kateqoriya."
-      },
-      {
-            "term": "Təsirlik hal",
-            "definition": "Hərəkətin bilavasitə obyektini bildirən və vasitəsiz tamamlıq vəzifəsində çıxış edən hal."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az6-u3-1",
-            "question": "\"Dünən kənddən gəldim\" cümləsində \"kənddən\" sözünün halını və sintaktik rolunu müəyyən edin.",
-            "solution": "\"Kənd-dən\" — -dən çıxışlıq hal şəkilçisidir. Haradan? sualına cavab verdiyi üçün cümlədə yer zərfliyidir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az6-u3-1",
-            "question": "\"Qapının dəstəyi\" birləşməsində \"qapının\" sözü ismin hansı halındadır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Adlıq hal"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Yiyəlik hal"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Təsirlik hal"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Yerlik hal"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "-nın şəkilçisi müəyyən yiyəlik hal şəkilçisidir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-6-u4-adjective',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 4: Sifət və onun dərəcələri',
-    unitOrder: 4,
-    title: 'Sifət: Əlamət və keyfiyyət, müqayisə dərəcələri, isimləşmə',
+    title: 'Maddənin quruluşu, cismin kütləsi və sıxlıq düsturu',
     order: 1,
     readTimeMinutes: 9,
     difficulty: 1,
-    summary: 'Əlamət və keyfiyyət bildirən sifətlər, sifətin 3 müqayisə dərəcəsi (adi, azaltma, çoxaltma) və substantivləşmə (isimləşmə).',
+    summary: 'Molekullar və atomlar, diffuziya, cismin kütləsi ($m$), həcmi ($V$) və maddənin sıxlığı ($\rho = m/V$).',
     theoryMarkdown: `
-### 1. Sifətin Əsas Əlamətləri
-Əşyanın əlamətini və ya keyfiyyətini bildirən, *Necə? Nə cür? Hansı?* suallarına cavab verən əsas nitq hissəsinə **sifət** deyilir.
-- **Əlamət:** Xaricdən gözlə görünən forma, rəng, həcm (qırmızı, girdə, hündür).
-- **Keyfiyyət:** Daxili xüsusiyyət, mənəvi xasiyyət (ağıllı, çalışqan, tənbəl, xeyirxah).
+### 1. Maddənin Quruluşu və Diffuziya
+Bütün maddələr atom və molekul adlanan çox kiçik zərrəciklərdən təşkil olunmuşdur.
+- Molekullar fasiləsiz və xaotik (nizamsız) istilik hərəkətindədir.
+- **Diffuziya:** Bir maddənin molekullarının digər maddənin molekulları arasına öz-özünə daxil olmasıdır. Temperatur artdıqca diffuziya sürətlənir.
 
-### 2. Sifətin Müqayisə Dərəcələri
-1. **Adi dərəcə:** Əlamətin normada olduğunu bildirir, xüsusi şəkilçisi yoxdur (*ağ, böyük, şirin*).
-2. **Azaltma dərəcəsi:** Əlamətin normadan az olduğunu bildirir:
-   - Morfoloji üsul: *-ımtıl, -sov, -şın, -raq* (*sarımtıl, uzunsov, qarayanız*).
-   - Sintaktik üsul: *açıq, kəm, ala, təhər* sözləri ilə (*açıq-qırmızı, kəmşirin, alababt*).
-3. **Çoxaltma dərəcəsi:** Əlamətin normadan çox olduğunu bildirir:
-   - Morfoloji üsul: *m, p, r, s* samitləri ilə (*qıpqırmızı, tərtəmiz, sap-sarı*), *-ca²* şəkilçisi (*xırdaca*).
-   - Sintaktik üsul: *ən, lap, daha, olduqca, çox, dümdüz* sözləri ilə (*ən gözəl, lap yaxşı*).
+### 2. Kütlə
+Cismin ətalətlilik və qravitasiya xassələrini xarakterizə edən skalyar fiziki kəmiyyətdir. İşarəsi $m$, BS-də vahidi kiloqramdır ($1 \text{ kq} = 1000 \text{ q}$).
 
-### 3. Sifətin İsimləşməsi (Substantivləşmə)
-Sifət cümlədə təyin etdiyi ismi itirdikdə ismin sualına (*Kim? Nə?*) cavab verir, ismin şəkilçilərini qəbul edir və cümlədə mübtəda və ya tamamlıq olur:
-*Qocalar (kim?) parkda dincəlirdilər.*
+### 3. Maddənin Sıxlığı
+Vahid həcmdəki maddənin kütləsinə bərabər olan fiziki kəmiyyətə **maddənin sıxlığı** deyilir:
+$$\rho = \frac{m}{V}$$
+- BS-də vahidi: $\text{kq/m}^3$ ($1 \text{ q/sm}^3 = 1000 \text{ kq/m}^3$).
+- Suyun sıxlığı: $\rho_{\text{su}} = 1000 \text{ kq/m}^3 = 1 \text{ q/sm}^3$.
+- Kütlə: $m = \rho \cdot V$; $\quad$ Həcm: $V = \frac{m}{\rho}$.
     `,
     keyFormulas: [
       {
-            "id": "f-az6-u4-1",
-            "name": "Çoxaltma Dərəcəsi Qaydası",
-            "latex": "\\text{İlk heca} + [m, p, r, s] + \\text{Söz} \\implies \\text{Qıp-qırmızı, Düm-ağ}",
-            "description": "Sözün ilk hecasına m, p, r, s samitlərindən biri artırılaraq yaranır."
+            "id": "f-p7-u3-1",
+            "name": "Maddənin Sıxlığı",
+            "latex": "\\rho = \\frac{m}{V}",
+            "description": "Kütlənin həcmə olan nisbətidir."
+      },
+      {
+            "id": "f-p7-u3-2",
+            "name": "Cismin Kütləsi",
+            "latex": "m = \\rho \\cdot V",
+            "description": "Kütlə sıxlıqla həcmin hasilinə bərabərdir."
       }
 ],
     glossary: [
       {
-            "term": "Substantivləşmə",
-            "definition": "Sifətin cümlədə ismi əvəz edərək ismin qrammatik xüsusiyyətlərini qazanması."
+            "term": "Sıxlıq",
+            "definition": "Maddənin vahid həcmdəki kütləsini xarakterizə edən skalyar fiziki kəmiyyət."
       },
       {
-            "term": "Azaltma dərəcəsi",
-            "definition": "Əlamət və ya keyfiyyətin adi normadan az olduğunu bildirən dərəcə."
+            "term": "Diffuziya",
+            "definition": "Molekulların istilik hərəkəti nəticəsində təmasda olan maddələrin bir-birinə qarışması."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az6-u4-1",
-            "question": "\"Açıq-sarı\", \"qırmızımtıl\" və \"lap maraqlı\" sözlərinin dərəcələrini təyin edin.",
-            "solution": "\"Açıq-sarı\" — azaltma (sintaktik); \"qırmızımtıl\" — azaltma (morfoloji); \"lap maraqlı\" — çoxaltma (sintaktik)."
+            "id": "ex-p7-u3-1",
+            "question": "Həcmi $2 \\text{ m}^3$ olan daş parçasının kütləsi 5000 kq-dır. Daşın sıxlığını tapın.",
+            "solution": "$\\rho = \\frac{m}{V} = \\frac{5000}{2} = 2500 \\text{ kq/m}^3$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az6-u4-1",
-            "question": "Aşağıdakı sifətlərdən hansı çoxaltma dərəcəsindədir?",
+            "questionId": "mq-p7-u3-1",
+            "question": "Sıxlığı $800 \\text{ kq/m}^3$ olan kerosinin $0.5 \\text{ m}^3$ həcminin kütləsi nə qədərdir?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Qaraşın"
+                        "text": "400 kq"
                   },
                   {
                         "key": "B",
-                        "text": "Açıq-yaşıl"
+                        "text": "800 kq"
                   },
                   {
                         "key": "C",
-                        "text": "Tərtəmiz"
+                        "text": "1600 kq"
                   },
                   {
                         "key": "D",
-                        "text": "Uzunsov"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "Tərtəmiz sözü 'r' samiti vasitəsilə çoxaltma dərəcəsində yaranmışdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-6-u5-numeral',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 5: Say. Sayın məna növləri və orfoqrafiyası',
-    unitOrder: 5,
-    title: 'Say: Məna növləri, numerativ sözlər və yazılış qaydaları',
-    order: 1,
-    readTimeMinutes: 9,
-    difficulty: 1,
-    summary: 'Sayın məna növləri (miqdar, sıra), numerativ sözlər, ərəb və roma rəqəmlərinin yazılışı və defis qaydası.',
-    theoryMarkdown: `
-### 1. Sayın Məna Növləri
-Əşyanın miqdarını və ya sırasını bildirən, *Neçə? Nə qədər? Neçənci?* suallarına cavab verən əsas nitq hissəsinə **say** deyilir.
-1. **Müəyyən miqdar sayları:** Əşyanın dəqiq sayını bildirir (*beş, on iki, yüz*). Özündən sonra gələn isim həmişə tək halda olur (*beş kitab*, beş kitablar deyilməz).
-2. **Qeyri-müəyyən miqdar sayları:** Təxmini miqdar bildirir (*çox, az, xeyli, bir qədər, 5-6*).
-3. **Sıra sayları:** Əşyanın sırasını bildirir, *-ıncı⁴* şəkilçisi ilə düzəlir (*birinci, beşinci*).
-4. **Kəsr sayları:** Hissə bildirir (*üçdə bir, sıfır tam onda beş*).
-
-### 2. Numerativ Sözlər
-Müəyyən miqdar sayları ilə isimlər arasında kəmiyyət fərqini dəqiqləşdirmək üçün işlənən sözlərdir:
-*nəfər, baş, ədəd, dənə, cüt, dəst, göz, tikə, damcı, ton*.
-
-### 3. Sayların Orfoqrafiyası
-- Sıra sayları ərəb rəqəmləri ilə yazıldıqda şəkilçi defislə yazılır: *5-ci, 10-cu*.
-- Roma rəqəmlərindən sonra şəkilçi və ya defis yazılmır: *IX sinif, XXI əsr*.
-- Təxmini saylar defislə yazılır: *üç-dörd, yeddi-səkkiz*.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az6-u5-1",
-            "name": "Sıra Saylarının Rəqəmlə Yazılışı",
-            "latex": "\\text{Ərəb: } 5\\text{-ci}; \\quad \\text{Roma: } V \\text{ (defissiz)}",
-            "description": "Ərəb rəqəmlərindən sonra defis və şəkilçi, Roma rəqəmlərində isə birbaşa yazılır."
-      }
-],
-    glossary: [
-      {
-            "term": "Numerativ söz",
-            "definition": "Sayla isim arasında işlənərək əşyanın sayılma vahidini bildirən köməkçi söz."
-      },
-      {
-            "term": "Kəsr sayı",
-            "definition": "Tamın hissələrini ifadə edən say növü."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az6-u5-1",
-            "question": "\"O, 3-cü sırada əyləşmişdi\" və \"VI əsr abidəsi\" cümlələrindəki sayların orfoqrafiyasını izah edin.",
-            "solution": "3-cü: Ərəb rəqəmindən sonra defis və -cü yazılması düzgündür. VI: Roma rəqəmindən sonra şəkilçi artırılmır, düzgün yazılışdır."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az6-u5-1",
-            "question": "Aşağıdakılardan hansında sayın yazılışında səhvə yol verilmişdir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "7-ci sinif"
-                  },
-                  {
-                        "key": "B",
-                        "text": "IX-cu əsr"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Beş-altı nəfər"
-                  },
-                  {
-                        "key": "D",
-                        "text": "On iki kitab"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Roma rəqəmlərindən sonra şəkilçi və defis işlədilməz, yalnız IX əsr yazılmalıdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-6-u6-pronoun',
-    subjectId: 'azerbaycan_dili',
-    grade: 6,
-    unit: 'Bölmə 6: Əvəzlik və onun məna növləri',
-    unitOrder: 6,
-    title: 'Əvəzlik: Məna növləri, o və bu əvəzliklərindən sonra vergülün işlənməsi',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 1,
-    summary: 'Əsas nitq hissələrini əvəz edən əvəzliklər (şəxs, qeyri-müəyyən, təyini, işarə, sual) və o, bu əvəzliklərindən sonra vergül qoyulması qaydaları.',
-    theoryMarkdown: `
-### 1. Əvəzliyin Məna Növləri
-İsim, sifət, say və digər nitq hissələrinin yerində işlənən əsas nitq hissəsinə **əvəzlik** deyilir.
-1. **Şəxs əvəzlikləri:** Mən, sən, o, biz, siz, onlar (yalnız ismin yerində işlənir).
-2. **İşarə əvəzlikləri:** O, bu, elə, belə, həmin (əlamət və əşyaya işarə edir).
-3. **Qeyri-müəyyən əvəzliklər:** Biri, kimsə, nəsə, hər kəs, hamı, bəzi, heç kim.
-4. **Təyini əvəzliklər:** Hər, öz, bütün, filan, eyni.
-5. **Sual əvəzlikləri:** Kim? Nə? Hara? Necə? Neçə? Hansı?
-
-### 2. "O" və "Bu" Əvəzliklərindən Sonra Vergül Qaydası
-"O" və "bu" cümlədə **mübtəda** vəzifəsində çıxış etdikdə (*Kim? Nə?* sualına cavab verdikdə):
-- Özündən sonra **isim, sifət, say, zərf, feli sifət** və ya **modal söz** gələrsə, **vergül qoyulur**:
-  *O, çalışqan şagirddir (sifət).*
-  *Bu, məktəb binasıdır (isim).*
-- Özündən sonra **fel (feli xəbər), əvəzlik** və ya **köməkçi nitq hissələri** (qoşma, bağlayıcı, ədat) gələrsə, **vergül qoyulmaz**:
-  *O gəldi (fel).*
-  *O da bilir (ədat).*
-  *Bu mənim qələmimdir (əvəzlik).*
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az6-u6-1",
-            "name": "O, Bu Mübtədadan Sonra Vergül",
-            "latex": "\\text{O / Bu (mübtəda)} + [\\text{İsim, Sifət, Say, Zərf}] \\implies \\text{Vergül qoyulur}",
-            "description": "Əsas adlar gəldikdə vergül qoyulur, fel və əvəzlik gəldikdə qoyulmur."
-      }
-],
-    glossary: [
-      {
-            "term": "Təyini əvəzlik",
-            "definition": "Öz, hər, bütün kimi əşyanı ümumi şəkildə təyin edən əvəzliklər."
-      },
-      {
-            "term": "Mübtəda vəzifəsində əvəzlik",
-            "definition": "Cümlədə kim? nə? sualına cavab verən və hərəkətin icraçısını bildirən əvəzlik."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az6-u6-1",
-            "question": "\"O məktəbə tələsirdi\" və \"O, məktəb direktorudur\" cümlələrində vergülün işlənməsini əsaslandırın.",
-            "solution": "Birinci cümlədə 'o' işarə əvəzliyidir (hansı məktəbə?) və təyindir, vergül qoyulmaz. İkinci cümlədə 'o' mübtədadır (kim?) və ardınca isim ('məktəb') gəldiyi üçün vergül qoyulur."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az6-u6-1",
-            "question": "Aşağıdakı cümlələrin hansında \"o\" əvəzliyindən sonra vergül qoyulmalıdır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "O oxumağı çox sevir."
-                  },
-                  {
-                        "key": "B",
-                        "text": "O gələndə biz evdə idik."
-                  },
-                  {
-                        "key": "C",
-                        "text": "O maraqlı bir kitab aldı."
-                  },
-                  {
-                        "key": "D",
-                        "text": "O da dərslərini hazırladı."
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "C bəndində 'O' mübtədadır və özündən sonra sifət ('maraqlı') gəldiyi üçün vergül qoyulmalıdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u1-verbs-tenses',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 1: Fel. Felin quruluşca növləri və təsriflənməsi',
-    unitOrder: 1,
-    title: 'Felin quruluşca növləri, təsdiq və inkar, felin zamanları',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Hərəkət bildirən fellər, quruluşca növləri, -ma/-mə inkar şəkilçisi və felin üç zamanı (keçmiş, indiki, gələcək).',
-    theoryMarkdown: `
-### 1. Felin Əsas Əlamətləri
-İş, hal, hərəkət bildirən, *Nə etdi? Nə edir? Nə edəcək?* suallarına cavab verən əsas nitq hissəsinə **fel** deyilir.
-- **Təsdiq və inkar:** Felin inkarı *-ma², -mə²* şəkilçisi ilə düzəlir (*yazdı — yazmadı*). Qeyd: İnkarlıq şəkilçisi vurğu qəbul etmir!
-
-### 2. Felin Quruluşca Növləri
-- **Sadə fellər:** Yalnız bir kökdən ibarət olur (*get, bax, oxu*).
-- **Düzəltmə fellər:** Adlardan və ya fellərdən leksik şəkilçilərlə yaranır:
-  *-la² (başla), -lan² (həyəcanlan), -laş² (birləş), -t (oxut), -dır⁴ (yazdır)*.
-- **Mürəkkəb fellər:**
-  - Bitişik yazılanlar: *-etmək, -eləmək, -olmaq* köməkçi felləri ilə (*kömək etmək, qəbul olmaq*).
-  - Defislə yazılanlar: Yaxın və əks mənalı fellərin birləşməsi (*atıb-tutmaq, gedib-gəlmək*).
-
-### 3. Felin Zamanları
-1. **Keçmiş zaman:**
-   - Şühudi (gözlə görülən): *-dı⁴* (*yazdı, gördü*).
-   - Nəqli (eşidilən): *-mış⁴* və ya *-ıb⁴* (*yazmışdır, gəlibdir*).
-2. **İndiki zaman:** *-ır⁴* (*yazır, oxuyur*).
-3. **Gələcək zaman:**
-   - Qəti gələcək: *-acaq²* (*yazacaq, gələcək*).
-   - Qeyri-qəti gələcək: *-ar²* (*yazar, gələr*).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u1-1",
-            "name": "Felin Zaman Şəkilçiləri",
-            "latex": "\\text{Keçmiş: } -dı^4, -mış^4; \\quad \\text{İndiki: } -ır^4; \\quad \\text{Gələcək: } -acaq^2, -ar^2",
-            "description": "Felin üç əsas qrammatik zamanının göstəriciləridir."
-      }
-],
-    glossary: [
-      {
-            "term": "Şühudi keçmiş",
-            "definition": "Danışanın bilavasitə şahidi olduğu hərəkəti bildirən -dı⁴ şəkilçili keçmiş zaman."
-      },
-      {
-            "term": "Təsriflənən fel",
-            "definition": "Şəxsə və kəmiyyətə görə dəyişə bilən feli formalar."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u1-1",
-            "question": "\"Şagirdlər sabah gələcəklər\" cümləsindəki felin zamanını və şəxsini müəyyən edin.",
-            "solution": "\"gəl-əcək-lər\": -əcək qəti gələcək zaman şəkilçisidir, -lər III şəxsin cəmidir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u1-1",
-            "question": "Aşağıdakı fellərdən hansı qeyri-qəti gələcək zamandadır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Oxuyacaq"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Yazır"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Baxar"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Gəlmişdir"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "-ar² şəkilçisi qeyri-qəti gələcək zaman şəkilçisidir (bax-ar)."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u2-verb-voices',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 2: Felin qrammatik məna növləri',
-    unitOrder: 2,
-    title: 'Felin qrammatik məna növləri: Məlum, məchul, qayıdış, qarşılıqlı-birgəlik, icbar',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Subyekt və obyekt münasibəti: məlum, məchul (-ıl⁴, -ın⁴), qayıdış (-ın⁴), şəxssiz, qarşılıqlı-birgəlik (-ış⁴) və icbar (-dır⁴, -t) növlər.',
-    theoryMarkdown: `
-### 1. Qrammatik Məna Növləri Nədir?
-Hərəkəti icra edən (subyekt) ilə üzərində iş görülən (obyekt) arasındakı münasibəti ifadə edən kateqoriyadır.
-
-### 2. Növlərin Xüsusiyyətləri və Şəkilçiləri
-1. **Məlum növ:** İşi görən subyekt məlumdur. Xüsusi şəkilçisi yoxdur (*Əli məktubu yazdı*).
-2. **Məchul növ:** İşi görən qrammatik subyekt məlum deyil, obyekt cümlənin mübtədası olur. Şəkilçiləri: *-ıl⁴, -ın⁴* (*Məktub yazıldı, qapı açıldı*).
-3. **Qayıdış növ:** Hərəkəti görən subyekt işi öz üzərində icra edir. Şəkilçiləri: *-ın⁴, -ıl⁴* (*Duman çəkildi, hava açıldı, qız bəzəndi*).
-4. **Şəxssiz növ:** Həm subyekti olmur, həm də mübtəda tələb etmir (*Məsələyə baxıldı, sənədlərə qol çəkildi*).
-5. **Qarşılıqlı-birgəlik növ:** Hərəkət qarşı-qarşıya və ya müştərək icra edilir. Şəkilçisi: *-ış⁴* (*məktublaşmaq, vuruşmaq, gülüşmək*).
-6. **İcbar növ:** Hərəkəti danışan və ya icraçı yox, başqası icra edir. Şəkilçisi: *-dır⁴, -t* (*yazdırmaq, təmizlətmək*).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u2-1",
-            "name": "Qayıdış və Məchul Fərqi",
-            "latex": "\\text{Məchul} \\implies \\text{İşi başqası görür}; \\quad \\text{Qayıdış} \\implies \\text{Öz üzərində icra olunur}",
-            "description": "-ın⁴ şəkilçisi hər iki növü düzəldə bilər, məna fərqinə görə ayrılır."
-      }
-],
-    glossary: [
-      {
-            "term": "Məchul növ",
-            "definition": "İşi icra edənin qrammatik cəhətdən məlum olmadığı feli forma."
-      },
-      {
-            "term": "İcbar növ",
-            "definition": "İşin başqa bir şəxsə gördürülməsini bildirən növ."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u2-1",
-            "question": "\"Paltar yuyuldu\" və \"Uşaq yuyundu\" fellərinin qrammatik məna növlərini müqayisə edin.",
-            "solution": "\"Paltar yuyuldu\" — məchul növdür, çünki paltarı kimsə başqası yuyub. \"Uşaq yuyundu\" — qayıdış növdür, çünki uşaq özü-özünü yuyub."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u2-1",
-            "question": "\"Müəllim mətni şagirdə oxutdurdu\" cümləsindəki fel hansı növdədir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Məlum növ"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Məchul növ"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Qarşılıqlı növ"
-                  },
-                  {
-                        "key": "D",
-                        "text": "İcbar növ"
-                  }
-            ],
-            "correctKey": "D",
-            "explanation": "Hərəkət başqasına gördürülür və -dur şəkilçisi var, yəni icbar növdür."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u3-verb-moods',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 3: Felin şəkilləri',
-    unitOrder: 3,
-    title: 'Felin şəkilləri: Əmr, xəbər, arzu, vacib, lazım, şərt',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Felin 6 qrammatik şəkli, onların şəkilçiləri, idi, imiş, isə hissəcikləri ilə işlənməsi.',
-    theoryMarkdown: `
-### 1. Felin Şəkilləri Nədir?
-Danışanın icra edilən işə, hərəkətə münasibətini bildirən qrammatik kateqoriyadır.
-
-### 2. 6 Feli Şəkil
-1. **Əmr şəkli:** Əmr, xahiş, məsləhət bildirir. Xüsusi şəkilçisi yoxdur, birbaşa şəxs şəkilçiləri ilə düzəlir: *yazım, yaz, yazsın, yazaq, yazın, yazsınlar*.
-2. **Xəbər şəkli:** Hərəkətin üç zamandan birində icra edildiyini bildirir. Xüsusi şəkilçisi yoxdur, zaman şəkilçiləri ilə formalaşır: *yazır, oxudu, gələcək*.
-3. **Arzu şəkli:** Arzu, istək bildirir. Şəkilçisi: *-a², -yə²* (*yazam, oxuyasan*). Yanında *kaş, gərək* ədatları işlənir.
-4. **Vacib şəkli:** İcra edilməsinin zəruriliyini bildirir. Şəkilçisi: *-malı², -məli²* (*oxumalıyam, yazmalısan*).
-5. **Lazım şəkli:** Hərəkətin lazım olduğunu bildirir. Şəkilçisi: *-ası², -əsi²* (*gedəsiyəm, oxuyasısan*). İnkarı *deyil* sözü ilə düzəlir (*gedəsi deyiləm*).
-6. **Şərt şəkli:** Hərəkətin icrasını şərtə bağlayır. Şəkilçisi: *-sa², -sə²* (*yazsam, bilsən*).
-
-### 3. İdi, İmiş, İsə Hissəcikləri
-Felin şəkillərinə qoşularaq mürəkkəb zaman və şərt formaları yaradır: *yazırdı (yazır idi), oxumalıymış (oxumalı imiş), gəlsəydi (gəlsə idi)*.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u3-1",
-            "name": "Feli Şəkillərin Şəkilçiləri",
-            "latex": "\\text{Arzu: } -a^2; \\quad \\text{Vacib: } -malı^2; \\quad \\text{Lazım: } -ası^2; \\quad \\text{Şərt: } -sa^2",
-            "description": "Felin dörd şəklinin xüsusi morfoloji şəkilçiləridir."
-      }
-],
-    glossary: [
-      {
-            "term": "Felin şəkli",
-            "definition": "Danışanın hərəkətin gerçəkləşməsinə münasibətini bildirən qrammatik forma."
-      },
-      {
-            "term": "Hissəcik",
-            "definition": "Fellərə qoşulan idi, imiş, isə qısaldılmış köməkçi sözləri."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u3-1",
-            "question": "\"Gərək bu kitabı oxuyasan\" cümləsindəki fel hansı şəkildədir?",
-            "solution": "\"oxu-ya-san\": -ya arzu şəklinin şəkilçisidir, cümlədə 'gərək' arzu ədatı da var. Arzu şəkli."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u3-1",
-            "question": "\"Vətəni qorumalıyıq\" cümləsində fel hansı şəkildədir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Əmr şəkli"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Vacib şəkli"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Lazım şəkli"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Xəbər şəkli"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "-malı² şəkilçisi vacib şəklinin göstəricisidir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u4-non-finite-verbs',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 4: Felin təsriflənməyən formaları',
-    unitOrder: 4,
-    title: 'Məsdər, feli sifət və feli bağlama',
-    order: 1,
-    readTimeMinutes: 11,
-    difficulty: 2,
-    summary: 'Felin təsriflənməyən (şəxsə və zamana görə dəyişməyən) formaları: məsdər, feli sifət və feli bağlama, onların ikili nitq xüsusiyyətləri.',
-    theoryMarkdown: `
-### 1. Təsriflənməyən Formalar Nədir?
-Şəxsə və zamana görə dəyişməyən, həm felin, həm də başqa bir nitq hissəsinin xüsusiyyətini daşıyan formalardır.
-
-### 2. Məsdər (Fel + İsim)
-Hərəkətin adını bildirir, *-maq², -mək²* şəkilçisi ilə düzəlir (*oxumaq, yazmaq*).
-- **Feli xüsusiyyətləri:** Təsdiq/inkar olur (*oxumamaq*), növ bildirir (*yazılmaq*), obyekt tələb edir.
-- **İsmi xüsusiyyətləri:** İsmin sualına (*Nə?*) cavab verir, hallanır (*oxumağın, oxumağa*), mənsubiyyətə görə dəyişir (*oxumağım*).
-
-### 3. Feli Sifət (Fel + Sifət)
-Həm felin, həm də sifətin əlamətlərini daşıyır.
-- Şəkilçiləri: *-an²* (gələn), *-mış⁴* (yazılmış), *-acaq²* (oxunacaq), *-ası²* (deyiləsi), *-malı²* (görülməli), *-dıq⁴ + mənsubiyyət* (oxuduğum).
-- **Sifət kimi:** Əşyanın əlamətini bildirir, cümlədə təyin olur (*ağlayan uşaq*), isimləşə bilir.
-
-### 4. Feli Bağlama (Fel + Zərf)
-Həm felin, həm də zərfin xüsusiyyətlərini daşıyaraq əsas hərəkətin tərzini, zamanını və ya səbəbini bildirir. Cümlədə həmişə **zərflik** olur.
-- Şəkilçiləri: *-ıb⁴* (gəlib), *-araq²* (qaçaraq), *-anda²* (görəndə), *-dıqda⁴* (oxuduqda), *-arkən* (gedərkən), *-armac* (çatar-çatmaz).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u4-1",
-            "name": "Feli Bağlama Şəkilçiləri",
-            "latex": "-ıb^4, \\quad -araq^2, \\quad -anda^2, \\quad -dıqda^4, \\quad -arkən",
-            "description": "Əsas hərəkəti izah edən zərflik vəzifəli feli formalardır."
-      }
-],
-    glossary: [
-      {
-            "term": "Məsdər",
-            "definition": "Hərəkətin ilkin adını bildirən və isim xüsusiyyəti daşıyan feli forma."
-      },
-      {
-            "term": "Feli bağlama",
-            "definition": "Hərəkətin icra tərzini və ya zamanını zərf kimi bildirən feli forma."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u4-1",
-            "question": "\"Zəng vurulanda şagirdlər sinfə daxil oldular\" cümləsindəki feli təsriflənməyən formanı tapın.",
-            "solution": "\"vur-ul-anda\": -anda feli bağlama şəkilçisidir, cümlədə zaman zərfliyi vəzifəsindədir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u4-1",
-            "question": "Aşağıdakılardan hansı feli sifətdir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Yazaraq"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Oxuyan"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Gülmək"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Gələndə"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "-an² şəkilçisi feli sifət şəkilçisidir (oxu-yan)."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u5-adverb',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 5: Zərf və onun məna növləri',
-    unitOrder: 5,
-    title: 'Zərfin məna növləri: Tərzi-hərəkət, zaman, yer, kəmiyyət',
-    order: 1,
-    readTimeMinutes: 9,
-    difficulty: 2,
-    summary: 'Hərəkətin icra tərzini, zamanını, yerini və kəmiyyətini bildirən zərflər, zərflə sifətin fərqləndirilməsi.',
-    theoryMarkdown: `
-### 1. Zərfin Əsas Əlamətləri
-Hərəkətin tərzini, zamanını, yerini, kəmiyyətini bildirən əsas nitq hissəsinə **zərf** deyilir. Əsasən fellərə aid olur və cümlədə **zərflik** vəzifəsində çıxış edir.
-
-### 2. Zərfin Məna Növləri
-1. **Tərzi-hərəkət zərfi:** Hərəkətin necə, nə cür icra olunduğunu bildirir (*sürətlə, yaxşı, cəld, qəfildən, yavaş-yavaş*).
-2. **Zaman zərfi:** Hərəkətin nə vaxt baş verdiyini bildirir (*dünən, bu gün, səhər, axşam, bildir, indicə*).
-3. **Yer zərfi:** Hərəkətin harada baş verdiyini və ya istiqamətini bildirir (*irəli, geri, yuxarı, aşağı, içəri, sağa-sola*).
-4. **Kəmiyyət zərfi:** Hərəkətin nə dərəcədə icra olunduğunu bildirir (*çox, az, xeyli, tamamilə, bir qədər*).
-
-### 3. Zərflə Sifətin Fərqləndirilməsi
-Eyni söz həm sifət, həm də zərf kimi işlənə bilər:
-- İsmə aid olduqda **sifətdir**: *Yaxşı (hansı?) insan*.
-- Felə aid olduqda **zərfdir**: *Yaxşı (necə?) oxuyur*.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u5-1",
-            "name": "Zərf və Sifət Fərqi",
-            "latex": "\\text{Söz} + \\text{İsim} \\implies \\text{Sifət}; \\qquad \\text{Söz} + \\text{Fel} \\implies \\text{Zərf}",
-            "description": "Əşyaya aid olanda sifət, hərəkətə aid olanda zərf olur."
-      }
-],
-    glossary: [
-      {
-            "term": "Tərzi-hərəkət zərfi",
-            "definition": "İşin və ya hərəkətin icra olunma qaydasını və keyfiyyətini bildirən zərf."
-      },
-      {
-            "term": "Kəmiyyət zərfi",
-            "definition": "Hərəkətin və ya əlamətin dərəcəsini, miqdarını bildirən zərf."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u5-1",
-            "question": "\"O, sürətlə irəli qaçdı\" cümləsindəki zərfləri və onların məna növünü tapın.",
-            "solution": "\"sürətlə\" — tərzi-hərəkət zərfi (necə qaçdı?); \"irəli\" — yer zərfi (haraya qaçdı?)."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u5-1",
-            "question": "\"Dünən xeyli danışdıq\" cümləsində \"dünən\" və \"xeyli\" sözləri zərfin hansı növləridir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Zaman və tərzi-hərəkət"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Zaman və kəmiyyət"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Yer və zaman"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Tərzi-hərəkət və yer"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Dünən nə vaxt? sualına cavab verir (zaman), xeyli isə nə qədər? sualına cavab verir (kəmiyyət)."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-7-u6-auxiliary-parts',
-    subjectId: 'azerbaycan_dili',
-    grade: 7,
-    unit: 'Bölmə 6: Köməkçi nitq hissələri',
-    unitOrder: 6,
-    title: 'Köməkçi nitq hissələri: Qoşma, bağlayıcı, ədat, modal sözlər, nida',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Leksik mənası olmayan, suala cavab verməyən köməkçi nitq hissələri, onların orfoqrafiyası və durğu işarələri qaydaları.',
-    theoryMarkdown: `
-### 1. Köməkçi Nitq Hissələrinin Ümumi Əlamətləri
-- Müstəqil leksik mənaya malik deyillər.
-- Heç bir suala cavab vermirlər.
-- Ayrılıqda cümlə üzvü ola bilmirlər.
-
-### 2. Köməkçi Nitq Hissələrinin Xüsusiyyətləri
-1. **Qoşma:** İsmin adlıq, yiyəlik, yönlük və çıxışlıq hallarına qoşularaq müxtəlif məna çalarları yaradır:
-   - Şəkilçiləşən qoşmalar: *-can, -tək, -dək* (bitişik yazılır).
-   - Söz kimi: *üçün, kimi, qədər, sarı, ötrü, qarşı, əvvəl, sonra*.
-2. **Bağlayıcı:** Sözlər və ya cümlələr arasında sintaktik əlaqə yaradır:
-   - Tabesizlik: *və, ilə, amma, ancaq, lakin, ya, ya da, gah, gah da, həm, həm də*.
-   - Tabelilik: *ki, çünki, əgər, hərçənd, madam ki*.
-3. **Ədat:** Cümlənin və ya sözün təsir gücünü artıran hissəcikdir (*axı, məhz, ancaq, tək, ən, lap, daha, bəs, kaş*).
-4. **Modal sözlər:** Danışanın fikrə münasibətini (yəqinlik, güman, təəssüf) bildirir (*əlbəttə, şübhəsiz, görünür, təəssüf ki, bəlkə*). Cümlədə hər iki tərəfindən **vergüllə** ayrılır.
-5. **Nida:** Hiss və həyəcan bildirir (*ah, ox, vay, ura, bəh-bəh, ey, ay*). Nidadan sonra nida işarəsi və ya vergül qoyulur.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az7-u6-1",
-            "name": "Modal Sözlərdə Vergül Qaydası",
-            "latex": "\\text{Əvvəldə: } M, \\dots; \\quad \\text{Ortada: } \\dots, M, \\dots; \\quad \\text{Sonda: } \\dots, M.",
-            "description": "Modal sözlər cümlənin harasında gəlməsindən asılı olaraq vergüllə təcrid olunur."
-      }
-],
-    glossary: [
-      {
-            "term": "Qoşma",
-            "definition": "İsmin müxtəlif hallarına qoşularaq məsafə, bənzətmə, zaman və s. mənaları bildirən köməkçi söz."
-      },
-      {
-            "term": "Modal söz",
-            "definition": "Danışanın söylədiyi fikrə inamını, şübhəsini və ya təəssüfünü bildirən söz."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az7-u6-1",
-            "question": "\"Əlbəttə biz bu yarışda qalib gələcəyik\" cümləsində durğu işarəsini bərpa edin.",
-            "solution": "\"Əlbəttə\" modal sözdür və cümlənin əvvəlində gəldiyi üçün ondan sonra vergül qoyulmalıdır: \"Əlbəttə, biz bu yarışda qalib gələcəyik.\""
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az7-u6-1",
-            "question": "Aşağıdakılardan hansı tabesizlik bağlayıcısıdır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Çünki"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Əgər"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Lakin"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Ki"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "'Lakin' qarşılaşdırma bildirən tabesizlik bağlayıcısıdır. Çünki, əgər, ki isə tabelilik bağlayıcılarıdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-8-u1-syntactic-relations',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 1: Sintaktik əlaqələr və Söz birləşmələri',
-    unitOrder: 1,
-    title: 'Tabesizlik və tabelilik əlaqələri: Uzlaşma, idarə və yanaşma',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Söz birləşmələri, asılı və əsas tərəf, tabelilik əlaqəsinin 3 növü: uzlaşma, idarə və yanaşma əlaqələri.',
-    theoryMarkdown: `
-### 1. Sintaktik Əlaqələr
-Sözlər və cümlələr arasında iki növ sintaktik əlaqə var:
-- **Tabesizlik əlaqəsi:** Bərabərhüquqlu komponentlər arasında olur (həmcins üzvlər və tabesiz mürəkkəb cümlə tərəfləri).
-- **Tabelilik əlaqəsi:** Biri digərinə tabe olan tərəflər arasında olur (asılı tərəf birinci, əsas tərəf ikinci gəlir).
-
-### 2. Tabelilik Əlaqəsinin Üç Növü
-1. **Uzlaşma əlaqəsi:** Asılı tərəfin şəxsə və kəmiyyətə görə əsas tərəflə uyğunlaşmasıdır. Qrammatik göstəricisi **mənsubiyyət və şəxs şəkilçiləridir**:
-   - Mübtəda ilə xəbər arasında: *Biz yazırıq*.
-   - II və III növ təyini söz birləşmələrində: *məktəb direktoru, bizim məktəbimiz*.
-2. **İdarə əlaqəsi:** Əsas tərəfin tələbi ilə asılı tərəfin müəyyən hal şəkilçisi qəbul etməsidir. Qrammatik göstəricisi **ismin hal şəkilçiləridir** (*kitabı oxumaq, evə getmək, meşədən qayıtmaq*).
-3. **Yanaşma əlaqəsi:** Heç bir qrammatik şəkilçi olmadan, yalnız məna və söz sırası ilə bağlanan əlaqədir (*maraqlı kitab, cəld qaçmaq, çox oxumaq*).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az8-u1-1",
-            "name": "Tabelilik Əlaqələrinin Qrammatik Göstəriciləri",
-            "latex": "\\text{Uzlaşma} \\implies \\text{Mənsubiyyət / Şəxs}; \\quad \\text{İdarə} \\implies \\text{Hal şəkilçisi}; \\quad \\text{Yanaşma} \\implies \\text{Şəkilçisiz}",
-            "description": "Əlaqə növlərini tapmaq üçün şəkilçilərə diqqət yetirilir."
-      }
-],
-    glossary: [
-      {
-            "term": "Uzlaşma əlaqəsi",
-            "definition": "Asılı tərəfin əsas tərəflə şəxsdə və kəmiyyətdə bərabərləşməsi əlaqəsi."
-      },
-      {
-            "term": "İdarə əlaqəsi",
-            "definition": "Əsas tərəfin tələbi ilə asılı tərəfin ismin qeyri-adlıq hallarında işlənməsi."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az8-u1-1",
-            "question": "\"Dərsləri yaxşı oxumaq\" birləşməsindəki sintaktik əlaqələri müəyyən edin.",
-            "solution": "\"dərsləri oxumaq\" — idarə əlaqəsidir (-i təsirlik hal şəkilçisi ilə). \"yaxşı oxumaq\" — yanaşma əlaqəsidir (şəkilçisiz, yalnız məna ilə yanaşır)."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az8-u1-1",
-            "question": "\"Qələmlə yazmaq\" birləşməsində asılı və əsas tərəf arasında hansı sintaktik əlaqə var?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Uzlaşma"
-                  },
-                  {
-                        "key": "B",
-                        "text": "İdarə"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Yanaşma"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Tabesizlik"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "Qələmlə (qələm ilə) qoşmalı sözdür və hal şəkilçisi deyil, felə şəkilçisiz yanaşdığı üçün yanaşma əlaqəsidir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-8-u2-noun-compounds',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 2: İsmi və feli birləşmələr. Təyini söz birləşmələri',
-    unitOrder: 2,
-    title: 'I, II və III növ təyini söz birləşmələri və feli tərkiblər',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Təyini söz birləşmələri (I, II, III növ), onların yaranma qaydaları, tərəflər arasına söz daxil edilməsi və feli tərkiblər.',
-    theoryMarkdown: `
-### 1. İsmi Birləşmələr və Təyini Söz Birləşmələri
-Əsas tərəfi adlarla (isim, sifət, say, əvəzlik) ifadə olunan birləşmələr ismi birləşmələrdir. Ən geniş növü təyini söz birləşmələridir.
-
-### 2. Təyini Söz Birləşmələrinin Növləri
-1. **I növ təyini söz birləşməsi:**
-   - I tərəf: şəkilçisiz; II tərəf: şəkilçisiz (*dəmir qapı, yeni məktəb, beş şagird*).
-   - Əlaqə: Yalnız **yanaşma əlaqəsi**.
-   - Arasına söz daxil etmək olmur. Tərəfləri ayrı-ayrı cümlə üzvü olur.
-2. **II növ təyini söz birləşməsi:**
-   - I tərəf: qeyri-müəyyən yiyəlik hal (şəkilçisiz); II tərəf: III şəxs mənsubiyyət (*məktəb həyəti, sinif otağı, dərs ili*).
-   - Əlaqə: **Qismən uzlaşma və idarə**.
-   - Arasına müstəqil söz daxil etmək olmur. Cümlənin bütöv bir mürəkkəb üzvü olur.
-3. **III növ təyini söz birləşməsi:**
-   - I tərəf: müəyyən yiyəlik hal (*-ın⁴*); II tərəf: mənsubiyyət (*məktəbin həyəti, mənim kitabım*).
-   - Əlaqə: **Tam uzlaşma və idarə**.
-   - Arasına istənilən sayda söz daxil etmək olar (*məktəbin böyük və abad həyəti*). Bütövlükdə bir cümlə üzvü olur.
-
-### 3. Feli Birləşmələr (Feli Tərkiblər)
-Əsas tərəfi məsdər, feli sifət və ya feli bağlama ilə ifadə olunan birləşmələrdir:
-*kitab oxumaq (məsdər tərkibi), dərsi bilən (feli sifət tərkibi), evə çatanda (feli bağlama tərkibi)*.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az8-u2-1",
-            "name": "Təyini Birləşmələrin Sxemi",
-            "latex": "\\text{I növ: } [ - \\; ; \\; - ]; \\quad \\text{II növ: } [ - \\; ; \\; -ı^4 ]; \\quad \\text{III növ: } [ -ın^4 \\; ; \\; -ı^4 ]",
-            "description": "Tərəflərin qəbul etdiyi şəkilçilərə görə təsnifat sxemidir."
-      }
-],
-    glossary: [
-      {
-            "term": "Təyini söz birləşməsi",
-            "definition": "Asılı tərəfi əsas tərəfi təyin edən ismi birləşmə növü."
-      },
-      {
-            "term": "Feli tərkib",
-            "definition": "Məsdər, feli sifət və feli bağlamanın ətrafına söz toplayaraq əmələ gətirdiyi bütöv sintaktik vahid."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az8-u2-1",
-            "question": "\"Dəniz kənarı\" və \"dənizin kənarı\" birləşmələrinin fərqini izah edin.",
-            "solution": "\"Dəniz kənarı\" II növdür (I tərəf şəkilçisizdir, arasına söz girmir). \"Dənizin kənarı\" III növdür (-in yiyəlik və -ı mənsubiyyət var, arasına söz daxil etmək olar)."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az8-u2-1",
-            "question": "Aşağıdakılardan hansı III növ təyini söz birləşməsidir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Daş bina"
-                  },
-                  {
-                        "key": "B",
-                        "text": "İmtahan zalı"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Məktəbin direktoru"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Tez oxumaq"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "Məktəb-in (müəyyən yiyəlik) direktor-u (mənsubiyyət) III növ təyini söz birləşməsidir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-8-u3-sentence-types',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 3: Cümlə və onun məqsəd və intonasiyaya görə növləri',
-    unitOrder: 3,
-    title: 'Məqsəd və intonasiyaya görə cümlənin növləri: Nəqli, sual, əmr, nida',
-    order: 1,
-    readTimeMinutes: 9,
-    difficulty: 2,
-    summary: 'Cümlənin 4 növü, sual cümlələrinin yaranma vasitələri, məntiqi vurğu və intonasiya xüsusiyyətləri.',
-    theoryMarkdown: `
-### 1. Cümlə Nədir?
-Bitmiş bir fikri ifadə edən və qrammatik cəhətdən formalaşmış nitq vahidinə **cümlə** deyilir.
-
-### 2. Məqsəd və İntonasiyaya Görə Növləri
-1. **Nəqli cümlə:** Hər hansı bir hadisə, əşya haqqında məlumat vermək məqsədilə işlədilir. Adi intonasiya ilə deyilir, sonunda nöqtə qoyulur:
-   *Bahar gəldi, təbiət oyandı.*
-2. **Sual cümləsi:** Bir şey haqqında məlumat almaq məqsədilə işlədilir. Üç yolla yaranır:
-   - Sual intonasiyası ilə (*Dərsi öyrəndin?*).
-   - Sual əvəzlikləri ilə (*Kimi axtarırsınız?*).
-   - Sual ədatları ilə (*-mı⁴, bəs, məgər*): *Bunu sən etdinmi?*
-3. **Əmr cümləsi:** İstək, əmr, xahiş, məsləhət, nəsihət bildirir. Xəbəri felin əmr şəkli ilə ifadə olunur:
-   *Dərslərinizi vaxtında hazırlayın.*
-4. **Nida cümləsi:** Yüksək hiss-həyəcan, sevinc, qəzəb, kədər bildirir. Sonunda nida işarəsi (!) qoyulur:
-   *Necə də gözəl mənzərədir!*
-
-### 3. Məntiqi Vurğu
-Cümlədə danışanın xüsusi olaraq nəzərə çatdırmaq istədiyi sözün daha qüvvətli səslə tələffüz edilməsidir. Azərbaycan dilində məntiqi vurğulu söz adətən **xəbərin bilavasitə qarşısında** gəlir:
-*Əli dünən kitabı **kitabxanadan** aldı.* (Vurğu kitabxanadan sözündədir).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az8-u3-1",
-            "name": "Məntiqi Vurğu Qaydası",
-            "latex": "\\dots + [\\text{Məntiqi Vurğulu Söz}] + [\\text{Xəbər}].",
-            "description": "Cümlədə vurğulanan söz xəbərdən bilavasitə əvvəl yerləşir."
-      }
-],
-    glossary: [
-      {
-            "term": "Məntiqi vurğu",
-            "definition": "Cümlədəki sözlərdən birinin digərlərinə nisbətən daha qabarıq tələffüz olunması."
-      },
-      {
-            "term": "Nəqli cümlə",
-            "definition": "Məlumat vermək məqsədilə söylənilən ən geniş yayılmış cümlə növü."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az8-u3-1",
-            "question": "\"Məgər sən bu hadisəni eşitməmisən\" cümləsinin məqsədə görə növünü və yaranma vasitəsini tapın.",
-            "solution": "Sual cümləsidir. Yaranmasında həm 'məgər' sual ədatı, həm də sual intonasiyası iştirak etmişdir. Sonunda sual işarəsi (?) qoyulmalıdır."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az8-u3-1",
-            "question": "Aşağıdakı cümlələrdən hansı əmr cümləsidir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Hər kəs öz yerini tutsun."
-                  },
-                  {
-                        "key": "B",
-                        "text": "Bu gün hava çox soyuqdur."
-                  },
-                  {
-                        "key": "C",
-                        "text": "Sən niyə gecikdin?"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Yaşasın Azərbaycan!"
+                        "text": "200 kq"
                   }
             ],
             "correctKey": "A",
-            "explanation": "A bəndində xəbər felin əmr şəklindədir (tut-sun) və tələb/əmr bildirir."
+            "explanation": "m = ρ * V = 800 * 0.5 = 400 kq."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-8-u4-principal-parts',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 4: Cümlənin baş üzvləri (Mübtəda və Xəbər)',
+    id: 'lesson-phys-7-u4-forces',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 4: Qüvvə və qarşılıqlı təsir',
     unitOrder: 4,
-    title: 'Qrammatik əsas: Mübtəda və Xəbər, uzlaşma qaydaları',
+    title: 'Ağırlıq qüvvəsi, elastiklik qüvvəsi və sürtünmə qüvvəsi',
     order: 1,
     readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Cümlənin qrammatik əsası, mübtədanın və xəbərin ifadə vasitələri, feli və ismi xəbər, mübtəda ilə xəbər arasında kəmiyyət və şəxs uzlaşması.',
+    difficulty: 1,
+    summary: 'Qüvvə anlayışı, dinamometr, ağırlıq qüvvəsi $F = mg$, Huk qanunu $F_{\text{el}} = k\Delta l$ və sürtünmə növləri.',
     theoryMarkdown: `
-### 1. Cümlənin Qrammatik Əsası
-Cümlənin baş üzvləri — **mübtəda** və **xəbər** birlikdə cümlənin qrammatik əsasını təşkil edir.
+### 1. Qüvvə Nədir?
+Cisimlərin qarşılıqlı təsirinin kəmiyyət ölçüsünə **qüvvə** deyilir (vektorial kəmiyyətdir: $\vec{F}$).
+- BS-də vahidi **nyutondur** ($N$).
+- Qüvvə **dinamometrlə** ölçülür. Tətbiq nöqtəsi, ədədi qiyməti və istiqaməti ilə xarakterizə olunur.
 
-### 2. Mübtəda
-Cümlədə haqqında danışılan şəxsi və ya əşyanı bildirən baş üzvdür. *Kim? Nə? Hara?* suallarına cavab verir. Adlıq halda olur.
-- **İfadə vasitələri:** İsim, əvəzlik, məsdər, feli sifət, substantivləşmiş digər nitq hissələri və təyini söz birləşmələri (*Bizim məqsədimiz oxumaqdır*).
+### 2. Ağırlıq Qüvvəsi
+Yerin cisimləri öz mərkəzinə doğru cəzb etdiyi qüvvəyə **ağırlıq qüvvəsi** deyilir:
+$$F_{\text{ağ}} = m \cdot g$$
+Burada $g \approx 9.8 \text{ N/kq} \approx 10 \text{ N/kq}$ qravitasiya sahəsinin intensivliyidir (sərbəstdüşmə təcili).
 
-### 3. Xəbər
-Mübtədanın işini, hərəkətini, halını və ya kimliyini təsdiq və ya inkar edən baş üzvdür.
-- **Feli xəbər:** Felin təsriflənən formaları və frazeoloji birləşmələrlə ifadə olunur (*Şagirdlər inşa yazdılar*).
-- **İsmi xəbər:** Adlarla (isim, sifət, say, əvəzlik, zərf, məsdər, feli sifət) və ismi birləşmələrlə ifadə olunur (*Bakı gözəl şəhərdir*).
+### 3. Elastiklik Qüvvəsi və Huk Qanunu
+Deformasiya zamanı yaranan və cismi əvvəlki vəziyyətinə qaytarmağa çalışan qüvvədir:
+$$F_{\text{el}} = k \cdot |\Delta l| = k \cdot x$$
+- $k$ — yayın sərtliyidir (N/m), $x = \Delta l$ — mütləq uzanmadır.
 
-### 4. Mübtəda ilə Xəbərin Uzlaşması
-- **Şəxsə görə uzlaşma:** Həmişə tam olur: *Mən oxuyuram, sən oxuyursan, o oxuyur*.
-- **Kəmiyyətə görə uzlaşma:**
-  - İnsan anlayışı bildirən mübtəda cəmdə olduqda, xəbər də **cəmdə olur**: *Uşaqlar gəldilər*.
-  - Heyvan və quş anlayışı bildirən mübtəda cəmdə olduqda, xəbər **həm təkdə, həm cəmdə** ola bilər: *Quşlar uçdu / uçdular*.
-  - Cansız əşya bildirən mübtəda cəmdə olduqda, xəbər ədəbi dildə adətən **təkdə olur**: *Yarpaqlar töküldü* (töküldülər qeyri-ədəbidir).
+### 4. Sürtünmə Qüvvəsi
+Toxunan səthlərin nisbi hərəkəti zamanı hərəkət istiqamətinin əksinə yaranan qüvvədir:
+$$F_{\text{sür}} = \mu \cdot N$$
+- Üç növü var: sükunət sürtünməsi, sürüşmə sürtünməsi və diyirlənmə sürtünməsi (diyirlənmə sürtünməsi sürüşmədən qat-qat kiçikdir).
     `,
     keyFormulas: [
       {
-            "id": "f-az8-u4-1",
-            "name": "Kəmiyyət Uzlaşması Qaydası",
-            "latex": "\\text{Cansız mübtəda (cəm)} \\implies \\text{Xəbər təkdə qalır} \\quad (\\text{Qapılar açıldı})",
-            "description": "Cansız varlıqlarda xəbərin cəmlənməsi qrammatik normanın pozulmasıdır."
+            "id": "f-p7-u4-1",
+            "name": "Ağırlıq Qüvvəsi",
+            "latex": "F_{\\text{ağ}} = m \\cdot g",
+            "description": "Kütlə ilə sərbəstdüşmə təcilinin hasilinə bərabərdir."
+      },
+      {
+            "id": "f-p7-u4-2",
+            "name": "Huk Qanunu",
+            "latex": "F_{\\text{el}} = k \\cdot \\Delta l",
+            "description": "Elastiklik qüvvəsi yayın uzanması ilə düz mütənasibdir."
       }
 ],
     glossary: [
       {
-            "term": "Qrammatik əsas",
-            "definition": "Cümlənin sintaktik strukturunu müəyyən edən mübtəda və xəbər cütü."
+            "term": "Qüvvə (F)",
+            "definition": "Cisimlərin qarşılıqlı təsirini xarakterizə edən vektorial kəmiyyət."
       },
       {
-            "term": "İsmi xəbər",
-            "definition": "Xəbərlik şəkilçisi qəbul etmiş adlarla ifadə olunan xəbər növü."
+            "term": "Dinamometr",
+            "definition": "Qüvvənin qiymətini ölçmək üçün istifadə olunan yaylı cihaz."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az8-u4-1",
-            "question": "\"Ağacın budaqları küləkdən qırıldılar\" cümləsindəki qrammatik səhvi tapın və düzəldin.",
-            "solution": "\"Budaqlar\" cansız varlıq olduğu üçün xəbər cəmdə ola bilməz. Düzgün variant: \"Ağacın budaqları küləkdən qırıldı\"."
+            "id": "ex-p7-u4-1",
+            "question": "Kütləsi 60 kq olan şagirdə Yerin tətbiq etdiyi ağırlıq qüvvəsini tapın ($g = 10 \\text{ N/kq}$).",
+            "solution": "$F_{\\text{ağ}} = m \\cdot g = 60 \\cdot 10 = 600 \\text{ N}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az8-u4-1",
-            "question": "Aşağıdakı cümlələrdən hansının xəbəri feli xəbərdir?",
+            "questionId": "mq-p7-u4-1",
+            "question": "Sərtliyi $k = 200 \\text{ N/m}$ olan yay 0.05 m uzandıqda yaranan elastiklik qüvvəsi neçə N olar?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Hava çox sərindir."
+                        "text": "5 N"
                   },
                   {
                         "key": "B",
-                        "text": "O, məktəbin ən fəal şagirdidir."
+                        "text": "10 N"
                   },
                   {
                         "key": "C",
-                        "text": "Külək qapını bağladı."
+                        "text": "20 N"
                   },
                   {
                         "key": "D",
-                        "text": "Əsas məqsədimiz qalib gəlməkdir."
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "'Bağladı' təsriflənən feldir və feli xəbərdir. Digər variantlar isə ismi xəbərdir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-8-u5-secondary-parts',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 5: Cümlənin ikinci dərəcəli üzvləri',
-    unitOrder: 5,
-    title: 'İkinci dərəcəli üzvlər: Tamamlıq, Təyin və Zərflik',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Baş üzvləri izah edən üzvlər: vasitəli və vasitəsiz tamamlıq, təyin və zərflik, onların sualları və sintaktik qrafik işarələri.',
-    theoryMarkdown: `
-### 1. İkinci Dərəcəli Üzvlər Nədir?
-Cümlənin baş üzvlərini müxtəlif cəhətdən izah edən, aydınlaşdıran və tamamlayan üzvlərdir.
-
-### 2. Tamamlıq (Qırıq-qırıq xətlə işarələnir: _ _ _)
-Əşya məzmunu bildirir, adlıq və yiyəlikdən başqa digər halların suallarına cavab verir:
-- **Vasitəsiz tamamlıq:** Təsirlik halda olur, hərəkətin birbaşa obyektidir. *Kimi? Nəyi? Nə?* (*Kitabı oxudum, çörək aldım*).
-- **Vasitəli tamamlıq:** Yönlük, yerlik, çıxışlıq hallarında və qoşmalı sözlərlə ifadə olunur. *Kimə? Nəyə? Kimdə? Nədə? Kimdən? Nədən? Kim ilə? Nə üçün?* (*Dostuma yazdım, qələmdən danışdıq*).
-
-### 3. Təyin (Dalğalı xətlə işarələnir)
-Əşyanın əlamətini, keyfiyyətini və ya miqdarını bildirir. *Necə? Nə cür? Hansı? Neçənci? Neçə?* suallarına cavab verir. Əsasən sifət, say, feli sifət və işarə əvəzliyi ilə ifadə olunur (*Gözəl bağ, beşinci sinif, oxunan kitab*).
-
-### 4. Zərflik (Düz xətt və kəsik xətlə işarələnir)
-Hərəkətin icra tərzini, zamanını, yerini, kəmiyyətini, səbəbini və məqsədini bildirir. Xəbərə aid olur.
-- Tərzi-hərəkət zərfliyi (*Necə? Nə tərzdə?*)
-- Zaman zərfliyi (*Nə vaxt? Nə zaman?*)
-- Yer zərfliyi (*Haraya? Harada? Haradan?*)
-- Kəmiyyət zərfliyi (*Nə qədər?*)
-- Səbəb və məqsəd zərflikləri (*Niyə? Nə məqsədlə?*)
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az8-u5-1",
-            "name": "Standart Cümlə Sırası",
-            "latex": "\\text{Təyin} \\to \\text{Mübtəda} \\to \\text{Zərflik} \\to \\text{Tamamlıq} \\to \\text{Xəbər}",
-            "description": "Azərbaycan dilində cümlə üzvlərinin normal düzülüş qaydasıdır."
-      }
-],
-    glossary: [
-      {
-            "term": "Vasitəsiz tamamlıq",
-            "definition": "Təsirlik halda olub hərəkətin birbaşa təsir etdiyi əşyanı bildirən tamamlıq."
-      },
-      {
-            "term": "Təyin",
-            "definition": "İsmi və ya isimləşmiş üzvü izah edən cümlə üzvü."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az8-u5-1",
-            "question": "\"Dünən çalışqan şagirdlər müəllimə maraqlı suallar verdilər\" cümləsini üzvlərinə görə təhlil edin.",
-            "solution": "Verdilər (feli xəbər), şagirdlər (mübtəda), dünən (zaman zərfliyi), çalışqan (təyin), müəllimə (vasitəli tamamlıq), maraqlı (təyin), suallar (vasitəsiz tamamlıq)."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az8-u5-1",
-            "question": "\"Əli qələmi çantaya qoydu\" cümləsində \"qələmi\" sözü hansı cümlə üzvüdür?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Mübtəda"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Vasitəsiz tamamlıq"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Vasitəli tamamlıq"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Zərflik"
+                        "text": "40 N"
                   }
             ],
             "correctKey": "B",
-            "explanation": "'Nəyi qoydu?' sualına cavab verir və müəyyən təsirlik haldadır, deməli vasitəsiz tamamlıqdır."
+            "explanation": "Fel = k * x = 200 * 0.05 = 10 N."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-8-u6-homogeneous-parts',
-    subjectId: 'azerbaycan_dili',
-    grade: 8,
-    unit: 'Bölmə 6: Həmcins üzvlər və cümlədə söz sırası',
+    id: 'lesson-phys-7-u5-pressure-archimedes',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 5: Təzyiq. Paskal və Arximed qanunları',
+    unitOrder: 5,
+    title: 'Təzyiq, hidrostatik təzyiq, Paskal və Arximed qanunları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Bərk cisimlərin təzyiqi ($p = F/S$), mayelərin hidrostatik təzyiqi ($p = \rho gh$), Paskal qanunu, Arximed (itələmə) qüvvəsi və cisimlərin üzmə şərti.',
+    theoryMarkdown: `
+### 1. Bərk Cisimlərin Təzyiqi
+Səthə perpendikulyar təsir edən təzyiq qüvvəsinin bu səthin sahəsinə olan nisbətinə **təzyiq** deyilir:
+$$p = \frac{F}{S}$$
+- BS-də vahidi: **paskaldır** ($1 \text{ Pa} = 1 \text{ N/m}^2$).
+
+### 2. Paskal Qanunu və Hidrostatik Təzyiq
+- **Paskal qanunu:** Qaz və ya maye üzərinə düşən xarici təzyiq dəyişmədən bütün istiqamətlərə bərabər ötürülür.
+- **Hidrostatik təzyiq:** Mayenin öz ağırlığı ilə qabın dibinə və divarlarına göstərdiyi təzyiqdir:
+$$p = \rho \cdot g \cdot h$$
+Burada $\rho$ — mayenin sıxlığı, $h$ — maye sütununun hündürlüyüdür.
+
+### 3. Arximed Qanunu və İtələmə Qüvvəsi
+Mayeyə (və ya qaza) batırılmış cismə onun sıxışdırıb çıxardığı mayenin ağırlığına bərabər itələyici qüvvə təsir edir:
+$$F_A = \rho_{\text{maye}} \cdot g \cdot V_{\text{batan}}$$
+
+### 4. Cisimlərin Üzmə Şərti
+- $\rho_{\text{cisim}} < \rho_{\text{maye}} \implies$ cisim üzür (səthə qalxır).
+- $\rho_{\text{cisim}} = \rho_{\text{maye}} \implies$ cisim mayenin daxilində asılı qalır.
+- $\rho_{\text{cisim}} > \rho_{\text{maye}} \implies$ cisim dibə batır.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p7-u5-1",
+            "name": "Hidrostatik Təzyiq",
+            "latex": "p = \\rho \\cdot g \\cdot h",
+            "description": "Təzyiq mayenin sıxlığı və dərinliyi ilə düz mütənasibdir."
+      },
+      {
+            "id": "f-p7-u5-2",
+            "name": "Arximed Qüvvəsi",
+            "latex": "F_A = \\rho_{\\text{maye}} \\cdot g \\cdot V_{\\text{batan}}",
+            "description": "Mayeyə batan cismə şaquli yuxarı təsir edən itələmə qüvvəsidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Paskal (Pa)",
+            "definition": "1 kvadrat metr səthə 1 nyuton qüvvənin göstərdiyi təzyiq vahidi."
+      },
+      {
+            "term": "Arximed qüvvəsi",
+            "definition": "Mayeyə batırılmış cismə təsir edən qaldırıcı hidrostatik qüvvə."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p7-u5-1",
+            "question": "Sıxlığı $1000 \\text{ kq/m}^3$ olan suyun 5 metr dərinlikdə yaratdığı hidrostatik təzyiqi tapın ($g = 10 \\text{ N/kq}$).",
+            "solution": "$p = \\rho \\cdot g \\cdot h = 1000 \\cdot 10 \\cdot 5 = 50\\,000 \\text{ Pa} = 50 \\text{ kPa}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p7-u5-1",
+            "question": "Dəmir parçasının sıxlığı $7800 \\text{ kq/m}^3$, suyun sıxlığı $1000 \\text{ kq/m}^3$-dir. Dəmir suya atıldıqda nə baş verər?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Su üzərində üzər"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Su daxilində asılı qalar"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Dibə batar"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Buxarlanar"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Dəmirin sıxlığı suyun sıxlığından böyük olduğu üçün (7800 > 1000) dibə batar."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-7-u6-work-power-machines',
+    subjectId: 'fizika',
+    grade: 7,
+    unit: 'Bölmə 6: Mexaniki iş və güc. Sadə mexanizmlər',
     unitOrder: 6,
-    title: 'Həmcins üzvlər, ümumiləşdirici sözlər və durğu işarələri',
+    title: 'Mexaniki iş, güc və sadə mexanizmlər (Lingin tarazlıq şərti)',
     order: 1,
-    readTimeMinutes: 9,
-    difficulty: 2,
-    summary: 'Eyni suala cavab verən, eyni üzvə aid olan həmcins üzvlər, tabesizlik əlaqəsi, ümumiləşdirici sözlər və iki nöqtə, tire durğu işarələri.',
+    readTimeMinutes: 10,
+    difficulty: 1,
+    summary: 'Mexaniki iş $A = F \cdot s$, güc $N = A/t$, mexanikanın qızıl qaydası, ling və bloklar, faydalı iş əmsalı (F.İ.Ə.).',
     theoryMarkdown: `
-### 1. Həmcins Üzvlər Nədir?
-Cümlədə eyni bir üzvlə bağlı olan, eyni suala cavab verən və bərabərhüquqlu olan üzvlərə **həmcins üzvlər** deyilir.
-- Həmcins üzvlər arasında **tabesizlik əlaqəsi** olur.
-- Aralarında sadalama intonasiyası və ya tabesizlik bağlayıcıları (*və, ilə, amma, lakin, ya, gah*) işlənir:
-  *Bağda almalar, armudlar və heyvalar yetişmişdi.*
+### 1. Mexaniki İş
+Qüvvənin təsiri altında cisim müəyyən yerdəyişmə icra etdikdə **mexaniki iş** görülür:
+$$A = F \cdot s$$
+- BS-də vahidi **couldur** ($1 \text{ C} = 1 \text{ N} \cdot \text{m}$).
+- Əgər qüvvə yerdəyişməyə perpendikulyardırsa, iş görülmür ($A = 0$).
 
-### 2. Ümumiləşdirici Sözlər və Durğu İşarələri
-Həmcins üzvlərin hamısına aid olan və onların ümumi adını bildirən sözlərə **ümumiləşdirici sözlər** deyilir:
-1. **Ümumiləşdirici söz həmcins üzvlərdən əvvəl gəldikdə:** Ondan sonra **iki nöqtə (:)** qoyulur:
-   *Masada hər şey var idi: dəftər, qələm, kitab.*
-2. **Ümumiləşdirici söz həmcins üzvlərdən sonra gəldikdə:** Ondan əvvəl **tire (—)** qoyulur:
-   *Dəftər, qələm, kitab — hər şey masanın üstündə idi.*
+### 2. Güc
+İşin görülmə yeyinliyini xarakterizə edən kəmiyyətə **güc** deyilir:
+$$N = \frac{A}{t} = F \cdot v$$
+- BS-də vahidi **vatdır** ($1 \text{ Vt} = 1 \text{ C/san}$, $1 \text{ kVt} = 1000 \text{ Vt}$).
+
+### 3. Sadə Mexanizmlər və Mexanikanın "Qızıl Qaydası"
+Qüvvənin istiqamətini və ya qiymətini dəyişmək üçün istifadə olunan qurğulardır (ling, blok, mail müstəvi, vint).
+- **Mexanikanın Qızıl Qaydası:** Heç bir mexanizm işdə qazanc vermir! Qüvvədə neçə dəfə qazanırıqsa, məsafədə bir o qədər dəfə itiririk.
+- **Lingin tarazlıq şərti (Momentlər qaydası):**
+$$F_1 \cdot l_1 = F_2 \cdot l_2 \implies \frac{F_1}{F_2} = \frac{l_2}{l_1}$$
+- **Faydalı İş Əmsalı (F.İ.Ə.):**
+$$\eta = \frac{A_{\text{faydalı}}}{A_{\text{tam}}} \cdot 100\%$$
     `,
     keyFormulas: [
       {
-            "id": "f-az8-u6-1",
-            "name": "Ümumiləşdirici Söz Sxemləri",
-            "latex": "\\text{ÜS}: \\; O, \\; O, \\; O; \\qquad O, \\; O, \\; O \\; — \\; \\text{ÜS}.",
-            "description": "Əvvəl gələndə iki nöqtə, sonra gələndə tire işarəsi qoyulur."
+            "id": "f-p7-u6-1",
+            "name": "Mexaniki Güc",
+            "latex": "N = \\frac{A}{t} = F \\cdot v",
+            "description": "Görülən işin zamana nisbətidir."
+      },
+      {
+            "id": "f-p7-u6-2",
+            "name": "Lingin Tarazlıq Şərti",
+            "latex": "F_1 \\cdot l_1 = F_2 \\cdot l_2",
+            "description": "Qüvvələrin qollarına hasilləri (momentləri) bərabər olmalıdır."
       }
 ],
     glossary: [
       {
-            "term": "Həmcins üzvlər",
-            "definition": "Eyni sintaktik funksiya daşıyan və eyni suala cavab verən cümlə üzvləri qrupu."
+            "term": "Coul (C)",
+            "definition": "1 nyuton qüvvənin cismi öz istiqamətində 1 metr hərəkət etdirdikdə gördüyü iş."
       },
       {
-            "term": "Ümumiləşdirici söz",
-            "definition": "Həmcins üzvlərin ümumi mənasını ifadə edən söz və ya ifadə."
+            "term": "F.İ.Ə. (η)",
+            "definition": "Görülən faydalı işin sərf olunan ümumi tam işə nisbətinin faizlə ifadəsi."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az8-u6-1",
-            "question": "\"Meşədə hər tərəf meşə kənarı dərə təpə qarla örtülmüşdü\" cümləsində durğu işarələrini qoyun.",
-            "solution": "\"Meşədə hər tərəf: meşə kənarı, dərə, təpə qarla örtülmüşdü.\" ('Hər tərəf' ümumiləşdirici sözdür, ardınca həmcins üzvlər gəldiyi üçün iki nöqtə qoyulur)."
+            "id": "ex-p7-u6-1",
+            "question": "Mühərrik 20 saniyədə 4000 Coul iş görür. Mühərrikin gücünü hesablayın.",
+            "solution": "$N = \\frac{A}{t} = \\frac{4000}{20} = 200 \\text{ Vt}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az8-u6-1",
-            "question": "Ümumiləşdirici söz həmcins üzvlərdən sonra gələrsə, hansı durğu işarəsi qoyulur?",
+            "questionId": "mq-p7-u6-1",
+            "question": "Mexanikanın qızıl qaydasına görə sadə mexanizmlər hansı kəmiyyətdə heç vaxt qazanc vermir?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Vergül"
+                        "text": "Qüvvədə"
                   },
                   {
                         "key": "B",
-                        "text": "İki nöqtə"
+                        "text": "İşdə"
                   },
                   {
                         "key": "C",
-                        "text": "Tire"
+                        "text": "Yolda"
                   },
                   {
                         "key": "D",
-                        "text": "Nöqtəli vergül"
+                        "text": "Sürətdə"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Mexanikanın qızıl qaydasına görə heç bir sadə mexanizm işdə qazanc vermir."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-8-u1-thermal-energy',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 1: İstilik hadisələri və Daxili enerji',
+    unitOrder: 1,
+    title: 'Daxili enerji, istilikvermə növləri və istilik miqdarı',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Molekulların hərəkət və qarşılıqlı təsir enerjisi (daxili enerji), istilikkeçirmə, konveksiya, şüalanma, $Q = cm\Delta t$ və yanacağın yanma istiliyi $Q = qm$.',
+    theoryMarkdown: `
+### 1. Daxili Enerji
+Cismin təşkil olunduğu zərrəciklərin xaotik hərəkətinin kinetik və qarşılıqlı təsirinin potensial enerjilərinin cəminə **daxili enerji** deyilir.
+- Daxili enerjini iki üsulla dəyişmək olar: **iş görməklə** və **istilikvermə ilə**.
+
+### 2. İstilikvermənin Üç Növü
+1. **İstilikkeçirmə:** Zərrəciklərin bir-biri ilə təması nəticəsində enerjinin ötürülməsi (metallarda ən böyükdür).
+2. **Konveksiya:** Maye və qaz laylarının axını ilə enerjinin köçürülməsi (vakuumda və bərk cisimlərdə baş vermir).
+3. **Şüalanma:** İstiliyin elektromaqnit dalğaları vasitəsilə yayılması (vakuumda da yayılır, Günəş enerjisi kimi).
+
+### 3. İstilik Miqdarı Düsturları
+- **Qızma və ya soyuma zamanı ayrılan/udulan istilik:**
+$$Q = c \cdot m \cdot (t_2 - t_1) = c \cdot m \cdot \Delta t$$
+$c$ — maddənin xüsusi istilik tutumudur ($\text{C/(kq} \cdot ^\circ\text{C)}$). Suyun: $c = 4200 \text{ C/(kq} \cdot ^\circ\text{C)}$.
+- **Yanacağın yanması zamanı ayrılan istilik:**
+$$Q = q \cdot m$$
+$q$ — yanacağın xüsusi yanma istiliyidir (C/kq).
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p8-u1-1",
+            "name": "Qızdırılma İstiliyi",
+            "latex": "Q = c \\cdot m \\cdot \\Delta t",
+            "description": "İstilik miqdarı kütlə, temperatur dəyişməsi və xüsusi istilik tutumu ilə mütənasibdir."
+      },
+      {
+            "id": "f-p8-u1-2",
+            "name": "Yanma İstiliyi",
+            "latex": "Q = q \\cdot m",
+            "description": "m kütləli yanacaq yandıqda ayrılan tam istilik miqdarıdır."
+      }
+],
+    glossary: [
+      {
+            "term": "Xüsusi istilik tutumu (c)",
+            "definition": "1 kq maddəni 1 dərəcə qızdırmaq üçün tələb olunan istilik miqdarı."
+      },
+      {
+            "term": "Konveksiya",
+            "definition": "Maye və ya qaz axınlarının yerdəyişməsi ilə istiliyin köçürülməsi."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p8-u1-1",
+            "question": "2 kq suyu $20^\\circ\\text{C}$-dən $50^\\circ\\text{C}$-yə qədər qızdırmaq üçün nə qədər istilik lazımdır? ($c = 4200 \\text{ C/(kq} \\cdot ^\\circ\\text{C)}$).",
+            "solution": "$\\Delta t = 50 - 20 = 30^\\circ\\text{C}$. $Q = c \\cdot m \\cdot \\Delta t = 4200 \\cdot 2 \\cdot 30 = 252\\,000 \\text{ C} = 252 \\text{ kC}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p8-u1-1",
+            "question": "İstilikvermənin hansı növü tam vakuumda (havasız mühitdə) baş verə bilir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "İstilikkeçirmə"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Konveksiya"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Şüalanma"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Diffuziya"
                   }
             ],
             "correctKey": "C",
-            "explanation": "Həmcins üzvlərdən sonra ümumiləşdirici söz gəldikdə tire (—) işarəsi qoyulur."
+            "explanation": "Şüalanma elektromaqnit dalğaları ilə yayıldığı üçün vakuumda da ötürülür."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-8-u7-vocatives-parenthesis',
-    subjectId: 'azerbaycan_dili',
+    id: 'lesson-phys-8-u2-phase-transitions',
+    subjectId: 'fizika',
     grade: 8,
-    unit: 'Bölmə 7: Qrammatik cəhətdən cümlə üzvləri ilə əlaqədar olmayan sözlər',
-    unitOrder: 7,
-    title: 'Xitab və Ara sözlər: İntonasiyası və durğu işarələri',
-    order: 1,
-    readTimeMinutes: 9,
-    difficulty: 2,
-    summary: 'Cümlə üzvü olmayan sözlər: xitab (müraciət), ara sözlər (münasibət), onların cümlədə yeri və vergül işarəsi qaydaları.',
-    theoryMarkdown: `
-### 1. Cümlə Üzvləri İlə Əlaqədar Olmayan Sözlər
-Bu sözlər cümlə üzvləri ilə sintaktik əlaqəyə girmir, heç bir cümlə üzvü olmur və suala cavab vermir.
-
-### 2. Xitab (Müraciət Bildirən Sözlər)
-Cümlədə müraciət olunan şəxsi və ya əşyanı bildirir. Əsasən adlıq halda olan isimlərlə və ismi birləşmələrlə ifadə olunur.
-- **Xitabda durğu işarələri:**
-  - Əvvəldə gəldikdə: *Xitab, ...* (*Uşaqlar, dərsi diqqətlə dinləyin.*)
-  - Ortada gəldikdə: *..., xitab, ...* (*Dərsi, uşaqlar, diqqətlə dinləyin.*)
-  - Sonda gəldikdə: *..., xitab.* (*Dərsi diqqətlə dinləyin, uşaqlar.*)
-
-### 3. Ara Sözlər və Ara Cümlələr
-Danışanın ifadə olunan fikrə münasibətini (yəqinlik, güman, təəssüf, nəticə, ümumiləşdirmə) bildirir. Modal sözlərlə ifadə olunur (*əlbəttə, şübhəsiz, görünür, məncə, sözün düzü*).
-- Cümlənin harasında gəlməsindən asılı olmayaraq hər iki tərəfdən **vergüllə** ayrılır:
-  *Məncə, bu məsələ tezliklə həll olunacaq.*
-  *Bu məsələ, məncə, tezliklə həll olunacaq.*
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az8-u7-1",
-            "name": "Xitab və Ara Sözlərdə Vergül Sxemi",
-            "latex": "X, \\dots \\qquad \\dots, X, \\dots \\qquad \\dots, X.",
-            "description": "Əvvəldə sonrasında, ortada hər iki tərəfində, sonda isə önündə vergül qoyulur."
-      }
-],
-    glossary: [
-      {
-            "term": "Xitab",
-            "definition": "Müraciət olunan şəxsi və ya varlığı bildirən cümləxarici vahid."
-      },
-      {
-            "term": "Ara söz",
-            "definition": "Danışanın fikrə subyektiv münasibətini bildirən və cümlə üzvü olmayan söz."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az8-u7-1",
-            "question": "\"Dostlar gəlin bir-birimizə dəstək olaq\" cümləsində durğu işarəsini bərpa edin.",
-            "solution": "\"Dostlar\" xitabdır və cümlənin əvvəlində gəldiyi üçün vergül qoyulmalıdır: \"Dostlar, gəlin bir-birimizə dəstək olaq.\""
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az8-u7-1",
-            "question": "Aşağıdakı cümlələrdən hansında xitab işlənmişdir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Əli dünən bizə gəlmişdi."
-                  },
-                  {
-                        "key": "B",
-                        "text": "Əli, sən bu kitabı oxumusan?"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Məncə, hava yaxşı olacaq."
-                  },
-                  {
-                        "key": "D",
-                        "text": "Uşaqlar həyətdə oynayırlar."
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "B bəndində 'Əli' sözü müraciət bildirən xitabdır və ardınca vergül qoyulmuşdur."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-9-u1-simple-sentence-types',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 1: Sadə cümlənin şəxsə görə növləri',
-    unitOrder: 1,
-    title: 'Müəyyən şəxsli, qeyri-müəyyən şəxsli, ümumi şəxsli, şəxssiz və adlıq cümlələr',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Sadə cümlənin şəxsə görə 5 əsas növü, mübtədanın varlığı və ya təsəvvür olunması, şəxssiz və adlıq cümlələrin xüsusiyyətləri.',
-    theoryMarkdown: `
-### 1. Sadə Cümlənin Şəxsə Görə Növləri
-Mübtədanın olub-olmamasına və xəbərin şəxs şəkilçisinə görə sadə cümlələr 5 növə bölünür:
-
-1. **Müəyyən şəxsli cümlə:** Mübtədası olan və ya xəbərin şəxs şəkilçisinə görə asanlıqla bərpa edilə bilən cümlələrdir (*Biz sabah imtahan verəcəyik / Sabah imtahan verəcəyik*).
-2. **Qeyri-müəyyən şəxsli cümlə:** Hərəkəti icra edən qeyri-müəyyən şəxs və ya qrupdur. Xəbəri **III şəxsin cəmində** olur (*Qapını döyürlər. Radioda təzə xəbər dedilər*).
-3. **Ümumi şəxsli cümlə:** Hərəkət hamıya, bütün cəmiyyətə aid olur. Əsasən atalar sözləri, məsəllər və aforizmlərdir. Xəbəri adətən **II şəxsin təkində** və ya **III şəxsin cəmində** olur:
-   *Yüz ölç, bir biç. Cücəni payızda sayarlar.*
-4. **Şəxssiz cümlə:** Mübtədası olmur və onu bərpa etmək qeyri-mümkündür. Xəbəri həmişə **III şəxsin təkində** olur:
-   *Gecədir. Hadisəyə baxıldı. Bu gün mənim növbəmdir.*
-5. **Adlıq cümlə:** Xəbəri olmur, varlığın mövcudluğunu yalnız adlandırmaqla bildirir. Əsasən bədii təsvirlərdə işlənir:
-   *Sakit gecə. Dəniz sahili. Xəzri mehi.*
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az9-u1-1",
-            "name": "Şəxsə Görə Cümlə Növləri Şifrəsi",
-            "latex": "\\text{Müəyyən} \\implies \\text{Mübtəda var}; \\quad \\text{Qeyri-müəyyən} \\implies \\text{III cəm}; \\quad \\text{Şəxssiz} \\implies \\text{Mübtəda yoxdur (III tək)}",
-            "description": "Xəbərin şəxs göstəricisi cümlə növünü təyin etməyə imkan verir."
-      }
-],
-    glossary: [
-      {
-            "term": "Qeyri-müəyyən şəxsli cümlə",
-            "definition": "İşi görənin dəqiq bilinmədiyi və xəbəri III şəxsin cəmində olan cümlə."
-      },
-      {
-            "term": "Şəxssiz cümlə",
-            "definition": "Mübtədası olmayan və bərpası qrammatik cəhətdən mümkün olmayan cümlə."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az9-u1-1",
-            "question": "\"Kənddə təzə məktəb tikirlər\" cümləsinin şəxsə görə növünü müəyyən edin.",
-            "solution": "Xəbər 'tikirlər' III şəxsin cəmindədir. Mübtəda yoxdur və işi görənlər qeyri-müəyyəndir. Bu, qeyri-müəyyən şəxsli cümlədir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az9-u1-1",
-            "question": "\"İgid basılmaz, vətən bölünməz\" atalar sözü sadə cümlənin hansı növünə aiddir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Qeyri-müəyyən şəxsli"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Müəyyən şəxsli"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Şəxssiz cümlə"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Adlıq cümlə"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Cümlənin mübtədası var: igid basılmaz (nə basılmaz? igid), vətən bölünməz (nə? vətən), yəni müəyyən şəxsli cümlələrdir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-9-u2-complete-incomplete',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 2: Bütöv və natamam cümlələr',
+    unit: 'Bölmə 2: Maddənin aqreqat hallarının dəyişməsi',
     unitOrder: 2,
-    title: 'Bütöv və natamam cümlələr, dialoqlarda buraxılmış üzvlər',
+    title: 'Ərimə, bərkimə, buxarlanma, qaynama və istilik balansı',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Aqreqat hallarının keçidləri, ərimə istiliyi $Q = \lambda m$, buxarlanma istiliyi $Q = L m$, doymuş buxar və istilik balansı tənliyi.',
+    theoryMarkdown: `
+### 1. Maddənin Aqreqat Halları
+Bərk, maye və qaz halları. Hal dəyişiklikləri zamanı temperatur sabit qalır!
+
+### 2. Ərimə və Bərkimə
+- Bərk cismin mayeyə çevrilməsi prosesinə **ərimə**, əks prosesə **bərkimə** (kristallaşma) deyilir.
+- Ərimə temperaturunda 1 kq kristallik maddəni əritmək üçün lazım olan istilik:
+$$Q = \lambda \cdot m$$
+$\lambda$ — xüsusi ərimə istiliyidir (C/kq).
+
+### 3. Buxarlanma və Qaynama
+- **Buxarlanma:** Mayenin sərbəst səthində ixtiyari temperaturda baş verən buxarəmələgəlmədir.
+- **Qaynama:** Mayenin bütün həcmində buxar qabarcıqlarının yaranması ilə gedən intensiv buxarlanmadır (qaynama temperaturunda baş verir).
+- Qaynama temperaturunda 1 kq mayeni buxara çevirmək üçün lazım olan istilik:
+$$Q = L \cdot m$$
+$L$ — xüsusi buxarlanma istiliyidir (C/kq).
+
+### 4. İstilik Balansı Tənliyi
+Təcrid olunmuş sistemdə isti cisimlərin verdiyi istilik miqdarı soyuq cisimlərin aldığı istilik miqdarına bərabərdir:
+$$Q_{\text{verilən}} = Q_{\text{alınan}}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p8-u2-1",
+            "name": "Ərimə İstiliyi",
+            "latex": "Q = \\lambda \\cdot m",
+            "description": "Ərimə temperaturunda maddənin əriməsi üçün tələb olunan istilikdir."
+      },
+      {
+            "id": "f-p8-u2-2",
+            "name": "Buxarlanma İstiliyi",
+            "latex": "Q = L \\cdot m",
+            "description": "Qaynama temperaturunda mayeni buxara çevirmək üçün lazım olan istilikdir."
+      }
+],
+    glossary: [
+      {
+            "term": "Xüsusi ərimə istiliyi (λ)",
+            "definition": "Ərimə temperaturunda 1 kq bərk maddəni mayeyə çevirmək üçün tələb olunan enerji."
+      },
+      {
+            "term": "Doymuş buxar",
+            "definition": "Öz mayesi ilə dinamik tarazlıqda olan buxar."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p8-u2-1",
+            "question": "$0^\\circ\\text{C}$ temperaturda olan 3 kq buzu əritmək üçün nə qədər istilik lazımdır? (Buz üçün $\\lambda = 3.3 \\cdot 10^5 \\text{ C/kq}$).",
+            "solution": "$Q = \\lambda \\cdot m = 3.3 \\cdot 10^5 \\cdot 3 = 9.9 \\cdot 10^5 \\text{ C} = 990 \\text{ kC}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p8-u2-1",
+            "question": "Kristallik maddənin əriməsi prosesi boyunca onun temperaturu necə dəyişir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Ardıcıl artır"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Azalır"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Sabit qalır"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Əvvəl artır, sonra azalır"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Bütün maddə əriyib qurtarana qədər verilən istilik kristallik qəfəsin dağılmasına sərf olunur, temperatur sabit qalır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-8-u3-heat-engines',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 3: İstilik mühərrikləri və onların F.İ.Ə.-sı',
+    unitOrder: 3,
+    title: 'İstilik mühərrikləri, daxiliyanma mühərriki və F.İ.Ə.',
     order: 1,
     readTimeMinutes: 9,
     difficulty: 2,
-    summary: 'Fikrin ifadəsi üçün bütün üzvləri olan bütöv cümlələr və təkrara yol verməmək üçün üzvləri buraxılan natamam cümlələr.',
+    summary: 'İstilik mühərriklərinin iş prinsipi (qızdırıcı, işçi cisim, soyuducu), dörd taktlı daxiliyanma mühərriki (DYM) və F.İ.Ə. düsturları.',
     theoryMarkdown: `
-### 1. Bütöv Cümlələr
-Cümlədə ifadə olunan fikir üçün zəruri olan bütün baş və ikinci dərəcəli üzvləri iştirak edən cümlələrə **bütöv cümlələr** deyilir:
-*Mən dünən maraqlı bir filmə baxdım.*
+### 1. İstilik Mühərriki Nədir?
+Yanacağın daxili enerjisini mexaniki enerjiyə çevirən qurğulara **istilik mühərrikləri** deyilir.
+- Üç əsas hissədən ibarətdir:
+  1. **Qızdırıcı:** $Q_1$ istilik miqdarını verir (yanacağın yanması).
+  2. **İşçi cisim:** Qaz və ya buxar genişlənərək $A$ işini görür.
+  3. **Soyuducu:** Artıq qalan $Q_2$ istiliyini qəbul edir (ətraf mühit).
 
-### 2. Natamam Cümlələr
-Nitqdə təkrara yol verməmək və ya fikri yığcam ifadə etmək üçün bu və ya digər cümlə üzvü buraxılan cümlələrə **natamam cümlələr** deyilir.
-- Buraxılmış üzv əvvəlki cümlədən və ya ümumi situasiyadan asanlıqla bərpa olunur.
-- Ən çox **dialoqlarda** və cavab replikalarında işlənir:
-  *— Haraya gedirsən?*
-  *— Məktəbə.* ("Gedirəm" xəbəri və "Mən" mübtədası buraxılmışdır).
+### 2. Dörd Taktlı Daxiliyanma Mühərriki (DYM)
+Porshenin bir gedişinə **takt** deyilir:
+1. Takt: **Sorulma** (yanacaq qarışığı silindrə daxil olur).
+2. Takt: **Sıxılma** (klapanlar bağlanır, qarışıq sıxılır).
+3. Takt: **İşçi gediş** (qığılcım alışır, qaz genişlənərək porşeni itələyir və faydalı iş görülür).
+4. Takt: **Xaricetmə** (yanmış qazlar xaricə atılır).
 
-### 3. Natamam Cümlələrdə Durğu İşarələri
-Əgər natamam cümlədə xəbər buraxılıbsa və yerində fasilə yaranırsa, xəbərin yerinə **tire (—)** qoyulur:
-*Biz kəndə yollandıq, onlar isə — şəhərə.*
+### 3. Faydalı İş Əmsalı (F.İ.Ə.)
+Görülən mexaniki işin ($A = Q_1 - Q_2$) qızdırıcıdan alınan istilik miqdarına olan nisbətidir:
+$$\eta = \frac{A}{Q_1} = \frac{Q_1 - Q_2}{Q_1} = 1 - \frac{Q_2}{Q_1}$$
+Faizlə: $\eta = \frac{Q_1 - Q_2}{Q_1} \cdot 100\%$.
     `,
     keyFormulas: [
       {
-            "id": "f-az9-u2-1",
-            "name": "Xəbəri Buraxılmış Natamam Cümlədə Tire",
-            "latex": "\\dots \\text{ isə } — \\dots \\implies \\text{Buraxılmış xəbərin yerinə tire qoyulur}",
-            "description": "Fasilə yarandıqda buraxılmış üzv tire ilə əvəzlənir."
+            "id": "f-p8-u3-1",
+            "name": "İstilik Mühərrikinin F.İ.Ə.",
+            "latex": "\\eta = \\frac{Q_1 - Q_2}{Q_1} \\cdot 100\\%",
+            "description": "Qızdırıcıdan alınan və soyuducuya verilən istilik fərqinin qızdırıcı istiliyinə nisbətidir."
       }
 ],
     glossary: [
       {
-            "term": "Natamam cümlə",
-            "definition": "Üzvlərindən biri və ya bir neçəsi buraxılmış, lakin kontekstdən asanlıqla anlaşılan cümlə."
+            "term": "Daxiliyanma mühərriki",
+            "definition": "Yanacağın birbaşa silindrin daxilində yandığı istilik mühərriki növü."
       },
       {
-            "term": "Bütöv cümlə",
-            "definition": "Məzmunun anlaşılması üçün bütün sintaktik üzvləri cümlədə mövcud olan cümlə."
+            "term": "İşçi gediş",
+            "definition": "Qazın genişlənərək faydalı mexaniki iş gördüyü takt."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az9-u2-1",
-            "question": "\"Aydan riyaziyyatı sevir, Leyla isə tarixisun\" cümləsində xəbəri buraxılmış natamam hissəni bərpa edin.",
-            "solution": "\"Leyla isə — tarixi (sevir)\". Burada 'sevir' xəbəri buraxılmış və yerinə tire qoyulmuşdur."
+            "id": "ex-p8-u3-1",
+            "question": "İstilik mühərriki qızdırıcıdan 500 C istilik almış, soyuducuya 300 C istilik vermişdir. Mühərrikin F.İ.Ə.-nı tapın.",
+            "solution": "$A = Q_1 - Q_2 = 500 - 300 = 200 \\text{ C}$. $\\eta = \\frac{A}{Q_1} = \\frac{200}{500} = 0.4 = 40\\%$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az9-u2-1",
-            "question": "Natamam cümlələr ən çox hansı nitq formasında istifadə olunur?",
+            "questionId": "mq-p8-u3-1",
+            "question": "Dördtaktlı daxiliyanma mühərrikində hansı takt zamanı faydalı iş görülür?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Elmi məqalələrdə"
+                        "text": "Sorulma"
                   },
                   {
                         "key": "B",
-                        "text": "Dialoqlarda və canlı danışıqda"
+                        "text": "Sıxılma"
                   },
                   {
                         "key": "C",
-                        "text": "Rəsmi sənədlərdə"
+                        "text": "İşçi gediş"
                   },
                   {
                         "key": "D",
-                        "text": "Lüğətlərdə"
+                        "text": "Xaricetmə"
                   }
             ],
-            "correctKey": "B",
-            "explanation": "Natamam cümlələr yığcamlıq təmin etdiyi üçün ən çox dialoqlarda işlənir."
+            "correctKey": "C",
+            "explanation": "Yalnız III taktda (işçi gediş) qaz genişlənərək mexaniki iş görür."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-9-u3-compound-coordinate',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 3: Tabesiz mürəkkəb cümlələr',
-    unitOrder: 3,
-    title: 'Tabesiz mürəkkəb cümlələrdə məna əlaqələri və durğu işarələri',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 2,
-    summary: 'Tabesiz mürəkkəb cümlələrdə 6 məna əlaqəsi (ardıcıllıq, eynizamanlılıq, qarşılaşdırma, aydınlaşdırma, bölüşdürmə, səbəb-nəticə), bağlayıcılar və intonasiya.',
-    theoryMarkdown: `
-### 1. Mürəkkəb Cümlə və Tabesizlik Əlaqəsi
-İki və ya daha artıq qrammatik əsası (sadə cümləsi) olan vahidə **mürəkkəb cümlə** deyilir.
-- Tərkib hissələri bərabərhüquqlu olan, biri digərindən asılı olmayan mürəkkəb cümlələrə **tabesiz mürəkkəb cümlələr** deyilir.
-- Birləşmə vasitələri: Tabesizlik bağlayıcıları və ya yalnız intonasiya.
-
-### 2. Tabesiz Mürəkkəb Cümlələrdə Məna Əlaqələri
-1. **Zaman (Eynizamanlılıq) əlaqəsi:** Hadisələr eyni zamanda baş verir (*Yağış yağır, külək uğuldayırdı*).
-2. **Ardıcıllıq əlaqəsi:** Hadisələr bir-birinin ardınca baş verir (*Qapı açıldı və qonaqlar içəri daxil oldular*).
-3. **Səbəb-nəticə əlaqəsi:** Birinci cümlədəki hadisə ikincinin səbəbi olur (*Zəng çalındı, uşaqlar sinfə tələsdilər*).
-4. **Qarşılaşdırma əlaqəsi:** Hadisələr bir-biri ilə qarşılaşdırılır (*amma, ancaq, lakin* bağlayıcıları ilə):
-   *Hava soyuq idi, lakin biz üşümürdük.*
-5. **Bölüşdürmə əlaqəsi:** Hadisələrdən yalnız birinin mümkünlüyü bildirilir (*ya... ya da, gah... gah da*):
-   *Gah yağış yağırdı, gah da gün çıxırdı.*
-6. **Aydınlaşdırma əlaqəsi:** İkinci cümlə birincini aydınlaşdırır, izah edir (*yəni* bağlayıcısı və ya iki nöqtə ilə):
-   *Mənzil çox rahat idi: hər otaqda kondisioner quraşdırılmışdı.*
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az9-u3-1",
-            "name": "Tabesiz Cümlələrdə Vergül Qaydası",
-            "latex": "[S_1], \\; [S_2]; \\qquad [S_1], \\; \\text{lakin} \\; [S_2]",
-            "description": "Tabesiz mürəkkəb cümlə komponentləri arasında həmişə vergül qoyulur."
-      }
-],
-    glossary: [
-      {
-            "term": "Tabesiz mürəkkəb cümlə",
-            "definition": "Tərkib hissələri qrammatik cəhətdən bərabərhüquqlu olan mürəkkəb cümlə."
-      },
-      {
-            "term": "Eynizamanlılıq",
-            "definition": "Bir neçə işin eyni vaxt kəsiyində cərəyan etdiyini bildirən sintaktik məna əlaqəsi."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az9-u3-1",
-            "question": "\"Elektrik kəsildi, kompüter söndü\" cümləsindəki məna əlaqəsini müəyyən edin.",
-            "solution": "Birinci hissə səbəbdir (elektrikin kəsilməsi), ikinci hissə isə nəticədir (kompüterin sönməsi). Səbəb-nəticə əlaqəli tabesiz mürəkkəb cümlədir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az9-u3-1",
-            "question": "\"Gah külək əsirdi, gah da leysan yağırdı\" cümləsində hansı məna əlaqəsi var?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Qarşılaşdırma"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Bölüşdürmə"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Səbəb-nəticə"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Aydınlaşdırma"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "'Gah... gah da' bölüşdürmə bağlayıcılarıdır və bölüşdürmə məna əlaqəsi yaradır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-9-u4-compound-subordinate',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 4: Tabeli mürəkkəb cümlələr',
+    id: 'lesson-phys-8-u4-electrostatics',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 4: Elektrik hadisələri və Elektrostatika',
     unitOrder: 4,
-    title: 'Tabeli mürəkkəb cümlələr: Baş və budaq cümlə, bağlama vasitələri',
+    title: 'Elektrik yükləri, elektriklənmə, Kulon qanunu və elektrik sahəsi',
     order: 1,
     readTimeMinutes: 10,
     difficulty: 2,
-    summary: 'Baş və budaq cümlə qarşılıqlı münasibəti, tabelilik bağlayıcıları (ki), bağlayıcı sözlər, intonasiya və cümlə sxemləri.',
+    summary: 'İki növ elektrik yükü (müsbət və mənfi), elementar yük $e$, elektrik yükünün saxlanması qanunu, Kulon qanunu və elektrik sahəsinin intensivliyi.',
     theoryMarkdown: `
-### 1. Tabeli Mürəkkəb Cümlə Nədir?
-Tərkib hissələrindən biri digərindən qrammatik və məna cəhətdən asılı olan mürəkkəb cümlədir.
-- **Baş cümlə:** Müstəqil olan, izah edilən tərəfdir (sxemi: $[\;]$).
-- **Budaq cümlə:** Baş cümlədən asılı olub onu izah edən tərəfdir (sxemi: $(\;)$).
+### 1. Elektrik Yükləri və Elektriklənmə
+Təbiətdə iki növ elektrik yükü var: **müsbət ($+$)** və **mənfi ($-$)**.
+- Eyni işarəli yüklər bir-birini **itələyir**, əks işarəli yüklər isə **cəzb edir**.
+- Ən kiçik bölünməz yük **elementar elektrik yüküdür** (elektron və protonun yükü):
+$$e = 1.6 \cdot 10^{-19} \text{ Kl}$$
+- **Elektrik yükünün saxlanması qanunu:** Qapalı sistemdə bütün zərrəciklərin yüklərinin cəbri cəmi sabit qalır:
+$$q_1 + q_2 + \dots + q_n = \text{const}$$
 
-### 2. Əsas Bağlayıcı Vasitələr və Sxemlər
-1. **"Ki" tabelilik bağlayıcısı ilə:** Adətən əvvəl baş cümlə, sonra budaq cümlə gəlir:
-   $$[\text{Baş}], \; \text{ki} \; (\text{Budaq})$$
-   *Mən bilirəm ki, sən qalib gələcəksən.*
-2. **Şərt şəkilçisi (-sa², -sə²) və ya bağlayıcı sözlərlə:** Adətən əvvəl budaq cümlə, sonra baş cümlə gəlir:
-   $$(\text{Budaq}), \; [\text{Baş}]$$
-   *Kim çox çalışsa, o uğur qazanar.*
-   *Yağış kəssə, yola düşərik.*
+### 2. Kulon Qanunu
+Vakuumda sükunətdə olan iki nöqtəvi elektrik yükü arasındakı qarşılıqlı təsir qüvvəsi yüklərin modulları hasili ilə düz, aralarındakı məsafənin kvadratı ilə tərs mütənasibdir:
+$$F = k \cdot \frac{|q_1| \cdot |q_2|}{r^2}$$
+$k = 9 \cdot 10^9 \text{ N} \cdot \text{m}^2 / \text{Kl}^2$.
 
-### 3. Əvəzlik-Qəlib (Baş cümlədə) və Bağlayıcı Söz (Budaq cümlədə)
-- **Bağlayıcı söz:** Budaq cümlədə işlənən sual əvəzlikləridir (*kim, nə, hara, necə*).
-- **Əvəzlik-qəlib:** Baş cümlədə işlənən işarə əvəzlikləridir (*o, bu, onu, onda*).
-  *(Kim tez gəlsə), [mükafatı o alacaq].*
+### 3. Elektrik Sahəsinin İntensivliyi
+Yüklü zərrəciklər ətrafında yaranan xüsusi materiya növü elektrik sahəsidir.
+- Sahənin qüvvə xarakteristikası **intensivlikdir** ($\vec{E}$):
+$$E = \frac{F}{q_0} = k \cdot \frac{|q|}{r^2}, \qquad [E] = 1 \text{ N/Kl} = 1 \text{ V/m}$$
     `,
     keyFormulas: [
       {
-            "id": "f-az9-u4-1",
-            "name": "Tabeli Cümlənin Əsas Sxemləri",
-            "latex": "[\\text{Baş}] \\to (\\text{Budaq}) \\quad (\\text{ki ilə}); \\qquad (\\text{Budaq}) \\to [\\text{Baş}] \\quad (-\\text{sa, bağlayıcı söz ilə})",
-            "description": "Tabeli mürəkkəb cümlələrdə komponentlərin yerləşmə qaydasıdır."
+            "id": "f-p8-u4-1",
+            "name": "Kulon Qanunu",
+            "latex": "F = k \\cdot \\frac{|q_1| \\cdot |q_2|}{r^2}",
+            "description": "Nöqtəvi yüklər arasındakı elektrostatik qüvvədir."
+      },
+      {
+            "id": "f-p8-u4-2",
+            "name": "Elektrik Sahəsinin İntensivliyi",
+            "latex": "E = \\frac{F}{q}",
+            "description": "Sahə tərəfindən sınaq yükünə təsir edən qüvvənin həmin yükə nisbətidir."
       }
 ],
     glossary: [
       {
-            "term": "Baş cümlə",
-            "definition": "Tabeli mürəkkəb cümlədə budaq cümlənin tabe olduğu əsas tərəf."
+            "term": "Kulon (Kl)",
+            "definition": "BS-də elektrik yükünün əsas vahidi."
       },
       {
-            "term": "Bağlayıcı söz",
-            "definition": "Budaq cümləni baş cümləyə bağlayan sual əvəzliyi."
+            "term": "Elektroskop",
+            "definition": "Cisimlərin elektriklənməsini və elektrik yükünü aşkar edən sadə cihaz."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az9-u4-1",
-            "question": "\"Hamı inanır ki, sülh bərqərar olacaq\" cümləsinin tərkib hissələrini və sxemini müəyyən edin.",
-            "solution": "Birinci tərəf baş cümlədir: \"Hamı inanır\" [ ], ikinci tərəf budaq cümlədir: \"sülh bərqərar olacaq\" ( ). Sxem: [Baş], ki (Budaq)."
+            "id": "ex-p8-u4-1",
+            "question": "İki nöqtəvi yük arasındakı məsafəni 2 dəfə artırdıqda onlar arasındakı Kulon cazibə qüvvəsi necə dəyişər?",
+            "solution": "Kulon qüvvəsi məsafənin kvadratı ilə tərs mütənasibdir ($F \\sim 1/r^2$). Məsafə 2 dəfə artarsa, qüvvə $2^2 = 4$ dəfə azalar."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az9-u4-1",
-            "question": "\"Kim yaxşı oxusa, yüksək bal toplayacaq\" cümləsində hansı hissə birinci gəlmişdir?",
+            "questionId": "mq-p8-u4-1",
+            "question": "Bir-birinə toxundurulan $q_1 = +6 \\text{ nKl}$ və $q_2 = -2 \\text{ nKl}$ eyni kürəcikləri araladıqdan sonra hər birinin yükü nə qədər olar?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Baş cümlə"
+                        "text": "+4 nKl"
                   },
                   {
                         "key": "B",
-                        "text": "Budaq cümlə"
+                        "text": "+2 nKl"
                   },
                   {
                         "key": "C",
-                        "text": "Tabesiz cümlə"
+                        "text": "-4 nKl"
                   },
                   {
                         "key": "D",
-                        "text": "Müstəqil cümlə"
+                        "text": "0 nKl"
                   }
             ],
             "correctKey": "B",
-            "explanation": "'Kim' bağlayıcı sözü və '-sa' şərt şəkilçisi budaq cümlənin göstəricisidir, yəni budaq cümlə birinci gəlmişdir (Budaq, Baş)."
+            "explanation": "Yükün saxlanması qanununa görə q = (q1 + q2) / 2 = (6 - 2) / 2 = +2 nKl."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-9-u5-clause-types',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 5: Budaq cümlənin növləri',
+    id: 'lesson-phys-8-u5-ohms-law',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 5: Daimi elektrik cərəyanı',
     unitOrder: 5,
-    title: 'Budaq cümlənin növləri: Mübtəda, xəbər, tamamlıq, təyin və zərflik budaq cümlələri',
+    title: 'Cərəyan şiddəti, gərginlik, dövrə hissəsi üçün Om qanunu və müqavimət',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Yüklü zərrəciklərin nizamlı hərəkəti (cərəyan), cərəyan şiddəti $I = q/t$, gərginlik $U = A/q$, Om qanunu $I = U/R$ və naqilin müqaviməti $R = \rho l/S$.',
+    theoryMarkdown: `
+### 1. Elektrik Cərəyanı Nədir?
+Yüklü zərrəciklərin istiqamətlənmiş (nizamlı) hərəkətinə **elektrik cərəyanı** deyilir.
+- Cərəyanın istiqaməti kimi müsbət yüklərin hərəkət istiqaməti qəbul edilmişdir ($+$ qütbdən $-$ qütbə).
+- **Cərəyan şiddəti ($I$):** Naqilin en kəsiyindən vahid zamanda keçən elektrik yükünə deyilir:
+$$I = \frac{q}{t}, \qquad [I] = 1 \text{ Amper} = 1 \text{ A}$$
+Ampermetrlə ölçülür və dövrəyə **ardıcıl** qoşulur.
+
+### 2. Elektrik Gərginliyi ($U$)
+Elektrik sahəsinin vahid yükün yerdəyişməsi zamanı gördüyü işə bərabərdir:
+$$U = \frac{A}{q}, \qquad [U] = 1 \text{ Volt} = 1 \text{ V}$$
+Voltmetrlə ölçülür və dövrəyə **paralel** qoşulur.
+
+### 3. Dövrə Hissəsi Üçün Om Qanunu
+Dövrə hissəsindəki cərəyan şiddəti həmin hissənin uclarındakı gərginliklə düz, müqaviməti ilə tərs mütənasibdir:
+$$I = \frac{U}{R} \implies U = I \cdot R, \quad R = \frac{U}{I}$$
+
+### 4. Naqilin Müqaviməti
+Naqilin cərəyana göstərdiyi əks-təsirdir:
+$$R = \rho_0 \cdot \frac{l}{S}$$
+$\rho_0$ — naqilin xüsusi müqavimətidir ($\Omega \cdot \text{m}$ və ya $\Omega \cdot \text{mm}^2/\text{m}$), $l$ — uzunluğu, $S$ — en kəsiyinin sahəsidir.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p8-u5-1",
+            "name": "Dövrə Hissəsi üçün Om Qanunu",
+            "latex": "I = \\frac{U}{R}",
+            "description": "Cərəyan şiddəti gərginliklə düz, müqavimətlə tərs mütənasibdir."
+      },
+      {
+            "id": "f-p8-u5-2",
+            "name": "Naqilin Müqaviməti",
+            "latex": "R = \\rho_0 \\cdot \\frac{l}{S}",
+            "description": "Müqavimət uzunluqla düz, en kəsiyi sahəsi ilə tərs mütənasibdir."
+      }
+],
+    glossary: [
+      {
+            "term": "Om (Ω)",
+            "definition": "BS-də elektrik müqavimətinin vahidi (1 V / 1 A)."
+      },
+      {
+            "term": "Xüsusi müqavimət",
+            "definition": "1 metr uzunluqlu və 1 m² en kəsikli naqilin müqavimətini xarakterizə edən parametr."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p8-u5-1",
+            "question": "Müqaviməti $20 \\; \\Omega$ olan qızdırıcının uclarındakı gərginlik 220 V-dur. Ondan keçən cərəyan şiddətini tapın.",
+            "solution": "$I = \\frac{U}{R} = \\frac{220}{20} = 11 \\text{ A}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p8-u5-1",
+            "question": "Ampermetr elektrik dövrəsinə necə qoşulur?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Yalnız paralel"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Ardıcıl"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Qarışıq"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Cərəyan mənbəyinə birbaşa"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Ampermetr çox kiçik müqavimətə malikdir və dövrəyə ardıcıl qoşulur."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-8-u6-electric-power-work',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 6: Elektrik cərəyanının işi və gücü. Coul-Lens qanunu',
+    unitOrder: 6,
+    title: 'Cərəyanın işi, gücü və Coul-Lens qanunu',
+    order: 1,
+    readTimeMinutes: 9,
+    difficulty: 2,
+    summary: 'Elektrik cərəyanının gördüyü iş $A = UIt$, elektrik gücü $P = UI$ və naqildən cərəyan keçərkən ayrılan istilik miqdarı (Coul-Lens qanunu: $Q = I^2Rt$).',
+    theoryMarkdown: `
+### 1. Elektrik Cərəyanının İşi
+Cərəyanın naqildə gördüyü iş yükün hərəkəti zamanı sahənin gördüyü işə bərabərdir:
+$$A = q \cdot U = I \cdot U \cdot t$$
+- Om qanununu nəzərə alsaq:
+$$A = I^2 \cdot R \cdot t = \frac{U^2}{R} \cdot t$$
+- BS-də vahidi **couldur** ($C$). Məişətdə sayğaclar enerjini **kilovat-saatla** ölçür:
+$$1 \text{ kVt} \cdot \text{saat} = 1000 \text{ Vt} \cdot 3600 \text{ san} = 3.6 \cdot 10^6 \text{ C} = 3.6 \text{ MC}$$
+
+### 2. Elektrik Cərəyanının Gücü
+Vahid zamandakı elektrik işinə bərabərdir:
+$$P = \frac{A}{t} = U \cdot I = I^2 \cdot R = \frac{U^2}{R}$$
+- BS-də vahidi **vatdır** ($Vt$).
+
+### 3. Coul-Lens Qanunu
+Tərpənməz naqildən cərəyan keçərkən ayrılan istilik miqdarı cərəyan şiddətinin kvadratı, naqilin müqaviməti və cərəyanın keçmə müddətinin hasilinə bərabərdir:
+$$Q = I^2 \cdot R \cdot t$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p8-u6-1",
+            "name": "Coul-Lens Qanunu",
+            "latex": "Q = I^2 \\cdot R \\cdot t",
+            "description": "Naqildən ayrılan istilik miqdarının fundamental qanunudur."
+      },
+      {
+            "id": "f-p8-u6-2",
+            "name": "Elektrik Gücü",
+            "latex": "P = U \\cdot I = \\frac{U^2}{R}",
+            "description": "Gərginliklə cərəyan şiddətinin hasilidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Kilovat-saat (kVt·saat)",
+            "definition": "Məişətdə işlədilən elektrik enerjisinin ölçü vahidi (3.6 MC)."
+      },
+      {
+            "term": "Coul-Lens qanunu",
+            "definition": "Cərəyan keçən naqildə ayrılan istilik miqdarını təyin edən qanun."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p8-u6-1",
+            "question": "220 V şəbəkəyə qoşulmuş və 2 A cərəyan keçən elektrik lampasının gücünü tapın.",
+            "solution": "$P = U \\cdot I = 220 \\cdot 2 = 440 \\text{ Vt}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p8-u6-1",
+            "question": "Naqildən keçən cərəyan şiddətini 2 dəfə artırdıqda ayrılan istilik miqdarı necə dəyişər?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "2 dəfə artar"
+                  },
+                  {
+                        "key": "B",
+                        "text": "4 dəfə artar"
+                  },
+                  {
+                        "key": "C",
+                        "text": "2 dəfə azalar"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Dəyişməz"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Coul-Lens qanununa görə Q ~ I^2 olduğundan, cərəyan 2 dəfə artanda istilik 2^2 = 4 dəfə artar."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-8-u7-electromagnetism',
+    subjectId: 'fizika',
+    grade: 8,
+    unit: 'Bölmə 7: Elektromaqnit hadisələri',
+    unitOrder: 7,
+    title: 'Daimi maqnitlər, Ersted təcrübəsi və elektromaqnitlər',
+    order: 1,
+    readTimeMinutes: 9,
+    difficulty: 2,
+    summary: 'Daimi maqnitlər və qütbləri (N və S), Ersted təcrübəsi (cərəyanın maqnit sahəsi), sağ əl qaydası və elektromaqnitin tətbiqləri.',
+    theoryMarkdown: `
+### 1. Daimi Maqnitlər
+Öz xassələrini uzun müddət saxlayan maqnitlənmiş cisimlərdir.
+- İki qütbü var: **şimal ($N$)** və **cənub ($S$)**.
+- Eyni adlı qütblər bir-birini **itələyir**, müxtəlif adlı qütblər **cəzb edir**.
+- Tək maqnit qütbü mövcud deyil: maqniti nə qədər bölsək də, hər parçanın yenə $N$ və $S$ qütbləri yaranır.
+
+### 2. Ersted Təcrübəsi və Cərəyanın Maqnit Sahəsi
+1820-ci ildə H.Ersted aşkar etdi ki, cərəyanlı naqilin yaxınlığında maqnit əqrəbi meyil edir. Bu sübut etdi ki, **hərəkət edən elektrik yükləri ətrafında maqnit sahəsi yaranır**.
+- **Sağ əl (vint) qaydası:** Əgər sağ əlin baş barmağı naqildəki cərəyan istiqamətinə yönələrsə, bükülmüş dörd barmaq maqnit qüvvə xətlərinin istiqamətini göstərər.
+
+### 3. Elektromaqnitlər
+Daxilinə dəmir içlik qoyulmuş sarğaca (solenoidə) **elektromaqnit** deyilir.
+- Cərəyan şiddətini və sarğıların sayını artırdıqda elektromaqnitin qüvvəsi artır.
+- Texnikada tətbiqləri: teleqraf, elektrik zəngi, qaldırıcı kranlar, relelər.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p8-u7-1",
+            "name": "Elektromaqnit Qüvvəsi Asılılığı",
+            "latex": "B \\sim I \\cdot n \\quad (\\text{içliklə kəskin artır})",
+            "description": "Maqnit sahəsi cərəyan şiddəti və vahid uzunluqdakı sarğı sayı ilə mütənasibdir."
+      }
+],
+    glossary: [
+      {
+            "term": "Maqnit sahəsi",
+            "definition": "Hərəkət edən elektrik yükləri və maqnitlər tərəfindən yaradılan xüsusi fiziki sahə."
+      },
+      {
+            "term": "Elektromaqnit",
+            "definition": "Cərəyan keçdikdə güclü maqnit sahəsi yaradan dəmir içlikli sarğac."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p8-u7-1",
+            "question": "Elektromaqnitin cəzbetmə qabiliyyətini artırmaq üçün nə etmək lazımdır?",
+            "solution": "1. Sarğacdan keçən cərəyan şiddətini artırmaq. 2. Sarğıların sayını artırmaq. 3. Daxilinə ferromaqnit (dəmir) içlik yerləşdirmək."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p8-u7-1",
+            "question": "Ersted təcrübəsi fizika tarixində nəyi kəşf etdi?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Elektronun yükünü"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Elektrik cərəyanının maqnit sahəsi yaratmasını"
+                  },
+                  {
+                        "key": "C",
+                        "text": "İşığın sürətini"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Atomun nüvəsini"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Ersted elektrik cərəyanının ətrafında maqnit sahəsinin mövcud olduğunu sübut etdi."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u1-kinematics-acceleration',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 1: Kinematika. Düzxətli bərabərtəcilli hərəkət',
+    unitOrder: 1,
+    title: 'Bərabərtəcilli hərəkət, təcil, son sürət və yerdəyişmə düsturları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Təcil anlayışı $\vec{a} = (\vec{v} - \vec{v}_0)/t$, bərabəryeyinləşən və bərabəryavaşıyan hərəkət, sürət və yerdəyişmə tənlikləri, sərbəstdüşmə.',
+    theoryMarkdown: `
+### 1. Təcil Nədir?
+Sürət dəyişməsinin bu dəyişmənin baş verdiyi zamana nisbətinə bərabər olan vektorial kəmiyyətə **təcil** deyilir:
+$$\vec{a} = \frac{\vec{v} - \vec{v}_0}{t}, \qquad [a] = 1 \text{ m/san}^2$$
+- Əgər $\vec{a}$ və $\vec{v}$ eyni istiqamətlidirsə ($a > 0$), hərəkət **bərabəryeyinləşəndir**.
+- Əgər $\vec{a}$ və $\vec{v}$ əks istiqamətlidirsə ($a < 0$), hərəkət **bərabəryavaşıyandır**.
+
+### 2. Sürət və Yerdəyişmə Tənlikləri
+- **Son sürət düsturu:**
+$$v = v_0 \pm a \cdot t$$
+- **Yerdəyişmə düsturları:**
+$$s = v_0 t \pm \frac{at^2}{2}, \qquad s = \frac{v^2 - v_0^2}{\pm 2a}, \qquad s = \frac{v_0 + v}{2} \cdot t$$
+
+### 3. Sərbəstdüşmə Hərəkəti
+Havasız mühitdə cismin yalnız ağırlıq qüvvəsinin təsiri altında təcillə düşməsidir ($v_0 = 0, a = g \approx 10 \text{ m/san}^2$):
+$$v = g \cdot t, \qquad h = \frac{gt^2}{2} = \frac{v^2}{2g}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u1-1",
+            "name": "Bərabərtəcilli Yerdəyişmə",
+            "latex": "s = v_0 t + \\frac{at^2}{2}",
+            "description": "Başlanğıc sürətli bərabəryeyinləşən hərəkətdə yerdəyişmə düsturudur."
+      },
+      {
+            "id": "f-p9-u1-2",
+            "name": "Zamansız Yerdəyişmə Düsturu",
+            "latex": "s = \\frac{v^2 - v_0^2}{2a}",
+            "description": "Zaman verilmədikdə sürətlər və təcil vasitəsilə yol tapılır."
+      }
+],
+    glossary: [
+      {
+            "term": "Təcil (a)",
+            "definition": "Sürətin dəyişmə yeyinliyini bildirən vektorial fiziki kəmiyyət."
+      },
+      {
+            "term": "Sərbəstdüşmə",
+            "definition": "Yalnız cazibə qüvvəsinin təsiri altında baş verən bərabərtəcilli hərəkət."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u1-1",
+            "question": "Sükunət vəziyyətindən ($v_0 = 0$) $a = 2 \\text{ m/san}^2$ təcillə hərəkətə başlayan cisim 4 saniyədə neçə metr yol gedər?",
+            "solution": "$s = \\frac{at^2}{2} = \\frac{2 \\cdot 4^2}{2} = 16 \\text{ metr}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u1-1",
+            "question": "Hündürlükdən sərbəst buraxılan cisim 3 saniyə sonra yerə çatır. Düşmə hündürlüyü nə qədərdir? ($g = 10 \\text{ m/san}^2$).",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "15 m"
+                  },
+                  {
+                        "key": "B",
+                        "text": "30 m"
+                  },
+                  {
+                        "key": "C",
+                        "text": "45 m"
+                  },
+                  {
+                        "key": "D",
+                        "text": "90 m"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "h = gt^2 / 2 = 10 * 3^2 / 2 = 10 * 9 / 2 = 45 m."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u2-newton-laws',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 2: Dinamika və Qravitasiya',
+    unitOrder: 2,
+    title: 'Nyuton qanunları və Ümumdünya cazibə qanunu',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'İnersial hesablama sistemləri, Nyutonun I, II və III qanunları, Ümumdünya cazibə qanunu $F = G(m_1 m_2)/r^2$ və kosmik sürətlər.',
+    theoryMarkdown: `
+### 1. Nyutonun Üç Qanunu
+- **I Qanun (Ətalət Qanunu):** Əgər cismə digər cisimlər təsir etmirsə və ya onların təsiri kompensasiya olunursa, cisim öz sükunət və ya düzxətli bərabərsürətli hərəkət vəziyyətini saxlayır.
+- **II Qanun:** Cismin aldığı təcil ona təsir edən əvəzləyici qüvvə ilə düz, kütləsi ilə tərs mütənasibdir:
+$$\vec{a} = \frac{\vec{F}}{m} \implies \vec{F} = m \cdot \vec{a}$$
+- **III Qanun (Təsir və Əks-Təsir):** İki cisim bir-birinə həmişə qiymətcə bərabər, istiqamətcə əks olan eyni təbiətli qüvvələrlə təsir göstərir:
+$$\vec{F}_1 = -\vec{F}_2$$
+
+### 2. Ümumdünya Cazibə Qanunu
+Kainatdakı bütün cisimlər bir-birini kütlələrinin hasili ilə düz, aralarındakı məsafənin kvadratı ilə tərs mütənasib qüvvə ilə cəzb edir:
+$$F = G \cdot \frac{m_1 \cdot m_2}{r^2}$$
+$G = 6.67 \cdot 10^{-11} \text{ N} \cdot \text{m}^2 / \text{kq}^2$ (qravitasiya sabiti).
+
+### 3. I Kosmik Sürət
+Yerin süni peykinə çevrilmək üçün tələb olunan minimum sürətdir:
+$$v_1 = \sqrt{g R_Y} \approx 7.9 \text{ km/san}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u2-1",
+            "name": "Nyutonun İkinci Qanunu",
+            "latex": "F = m \\cdot a",
+            "description": "Əvəzləyici qüvvə kütlə ilə təcilin hasilinə bərabərdir."
+      },
+      {
+            "id": "f-p9-u2-2",
+            "name": "Ümumdünya Cazibə Qanunu",
+            "latex": "F = G \\cdot \\frac{m_1 \\cdot m_2}{r^2}",
+            "description": "Kainatın bütün kütlələri arasındakı qravitasiya cazibə qanunudur."
+      }
+],
+    glossary: [
+      {
+            "term": "İnersial hesablama sistemi",
+            "definition": "Nyutonun I qanununun ödəndiyi hesablama sistemi."
+      },
+      {
+            "term": "Qravitasiya sabiti (G)",
+            "definition": "Aralarındakı məsafə 1 m olan 1 kq kütləli iki nöqtəvi kütlə arasındakı cazibə qüvvəsi."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u2-1",
+            "question": "Kütləsi 5 kq olan cismə 15 N qüvvə təsir edir. Cismin aldığı təcili tapın.",
+            "solution": "$a = \\frac{F}{m} = \\frac{15}{5} = 3 \\text{ m/san}^2$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u2-1",
+            "question": "İki cisim arasındakı məsafəni 3 dəfə azaltdıqda onlar arasındakı cazibə qüvvəsi necə dəyişər?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "3 dəfə azalar"
+                  },
+                  {
+                        "key": "B",
+                        "text": "3 dəfə artar"
+                  },
+                  {
+                        "key": "C",
+                        "text": "9 dəfə artar"
+                  },
+                  {
+                        "key": "D",
+                        "text": "9 dəfə azalar"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Cazibə qüvvəsi r^2 ilə tərs mütənasibdir. Məsafə 3 dəfə azaldıqda qüvvə 3^2 = 9 dəfə artar."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u3-conservation-laws',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 3: Saxlanma qanunları',
+    unitOrder: 3,
+    title: 'İmpuls və mexaniki enerjinin saxlanması qanunu, reaktiv hərəkət',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Cismin impulsu $\vec{p} = m\vec{v}$, qüvvə impulsu $\vec{F}\Delta t$, qapalı sistemdə impulsun saxlanması, kinetik və potensial enerji, enerjinin saxlanması qanunu.',
+    theoryMarkdown: `
+### 1. Cismin İmpulsu və Qüvvə İmpulsu
+- **Cismin impulsu:** Kütləsi ilə sürətinin hasilinə bərabər olan vektorial kəmiyyətdir:
+$$\vec{p} = m \cdot \vec{v}, \qquad [p] = 1 \text{ kq} \cdot \text{m/san}$$
+- **Qüvvə impulsu:** $\vec{F} \cdot \Delta t = \Delta \vec{p} = m\vec{v} - m\vec{v}_0$
+
+### 2. İmpulsun Saxlanması Qanunu
+Qapalı sistem təşkil edən cisimlərin impulslarının həndəsi (vektorial) cəmi qarşılıqlı təsirdən asılı olmayaraq sabit qalır:
+$$m_1 \vec{v}_1 + m_2 \vec{v}_2 = m_1 \vec{v}_1' + m_2 \vec{v}_2'$$
+- **Reaktiv hərəkət:** Cismin bir hissəsinin ondan müəyyən sürətlə ayrılması nəticəsində əks istiqamətdə qazandığı hərəkətdir (raketlər impulsun saxlanması əsasında uçur).
+
+### 3. Mexaniki Enerji və Saxlanma Qanunu
+- **Kinetik enerji:** Hərəkət enerjisidir: $E_k = \frac{mv^2}{2}$.
+- **Potensial enerji:** Qarşılıqlı təsir enerjisidir: $E_p = mgh$ (cazibə), $E_p = \frac{kx^2}{2}$ (deformasiya).
+- **Tam mexaniki enerjinin saxlanması:** Sürtünmə olmayan qapalı sistemdə tam mexaniki enerji sabit qalır:
+$$E = E_k + E_p = \text{const}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u3-1",
+            "name": "İmpulsun Saxlanması Qanunu",
+            "latex": "m_1 \\vec{v}_1 + m_2 \\vec{v}_2 = \\text{const}",
+            "description": "Qapalı sistemdə impulsun cəmi zaman keçdikcə dəyişmir."
+      },
+      {
+            "id": "f-p9-u3-2",
+            "name": "Tam Mexaniki Enerji",
+            "latex": "E_k + E_p = \\text{const}",
+            "description": "Kinetik və potensial enerjilərin cəmi sürtünməsiz mühitdə sabitdir."
+      }
+],
+    glossary: [
+      {
+            "term": "İmpuls",
+            "definition": "Cismin hərəkət miqdarını bildirən kütlə və sürət hasili."
+      },
+      {
+            "term": "Reaktiv hərəkət",
+            "definition": "Qaz axınının çıxması nəticəsində təkan alan hərəkət forması."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u3-1",
+            "question": "Kütləsi 2 kq olan cisim $10 \\text{ m/san}$ sürətlə hərəkət edir. Onun kinetik enerjisini tapın.",
+            "solution": "$E_k = \\frac{m v^2}{2} = \\frac{2 \\cdot 10^2}{2} = 100 \\text{ C}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u3-1",
+            "question": "Raketlərin və reaktiv təyyarələrin hərəkəti hansı fiziki qanuna əsaslanır?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Paskal qanununa"
+                  },
+                  {
+                        "key": "B",
+                        "text": "İmpulsun saxlanması qanununa"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Arximed qanununa"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Om qanununa"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Qazların arxaya atılması ilə raket irəli impuls qazanır (impulsun saxlanması qanunu)."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u4-oscillations-waves',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 4: Mexaniki rəqslər və dalğalar',
+    unitOrder: 4,
+    title: 'Rəqs periodu, tezlik, yaylı və riyazi rəqqas, səs dalğaları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Dövri təkrarlanan rəqsi hərəkət, period $T$, tezlik $\nu$, riyazi rəqqas $T = 2\pi\sqrt{l/g}$, yaylı rəqqas $T = 2\pi\sqrt{m/k}$, rezonans və səs dalğaları.',
+    theoryMarkdown: `
+### 1. Mexaniki Rəqslər
+Tarazlıq vəziyyəti ətrafında dəqiq və ya təxmini təkrarlanan hərəkətlərə **rəqsi hərəkət** deyilir.
+- **Amplitud ($x_m, A$):** Tarazlıq vəziyyətindən ən böyük meyil məsafəsidir.
+- **Period ($T$):** Bir tam rəqsə sərf olunan zamandır:
+$$T = \frac{t}{N}, \qquad [T] = 1 \text{ san}$$
+- **Tezlik ($\nu$):** Vahid zamandakı rəqslərin sayıdır:
+$$\nu = \frac{N}{t} = \frac{1}{T}, \qquad [\nu] = 1 \text{ Hs (Hers)}$$
+
+### 2. Rəqqaslar
+- **Riyazi rəqqas:** Çəkisiz və uzanmayan sapdan asılmış maddi nöqtədir:
+$$T = 2\pi \sqrt{\frac{l}{g}}$$
+- **Yaylı rəqqas:** Yaydan asılmış $m$ kütləli yükün rəqsləridir:
+$$T = 2\pi \sqrt{\frac{m}{k}}$$
+
+### 3. Mexaniki Dalğalar və Səs
+Rəqslərin elastik mühitdə yayılmasına **mexaniki dalğa** deyilir.
+- **Dalğa uzunluğu ($\lambda$):** Bir period ərzində dalğanın yayıldığı məsafədir:
+$$\lambda = v \cdot T = \frac{v}{\nu}$$
+- **Səs dalğaları:** İnsan qulağının eşidə bildiyi $16 \text{ Hs} - 20\,000 \text{ Hs}$ tezlikli uzununa mexaniki dalğalardır (vakuumda səs yayılmır).
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u4-1",
+            "name": "Riyazi Rəqqasın Periodu",
+            "latex": "T = 2\\pi \\sqrt{\\frac{l}{g}}",
+            "description": "Period sapın uzunluğundan və sərbəstdüşmə təcilindən asılıdır."
+      },
+      {
+            "id": "f-p9-u4-2",
+            "name": "Dalğa Uzunluğu",
+            "latex": "\\lambda = \\frac{v}{\\nu}",
+            "description": "Dalğanın yayılma sürətinin rəqs tezliyinə nisbətidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Hers (Hs)",
+            "definition": "1 saniyədə 1 tam rəqsə uyğun gələn tezlik vahidi."
+      },
+      {
+            "term": "Rezonans",
+            "definition": "Məcburedici qüvvənin tezliyi sistemin xüsusi tezliyinə bərabər olduqda rəqs amplitudunun kəskin artması."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u4-1",
+            "question": "Səs dalğasının havadakı sürəti $340 \\text{ m/san}$, tezliyi $170 \\text{ Hs}$-dir. Bu səsin dalğa uzunluğunu tapın.",
+            "solution": "$\\lambda = \\frac{v}{\\nu} = \\frac{340}{170} = 2 \\text{ metr}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u4-1",
+            "question": "Riyazi rəqqasın sapının uzunluğunu 4 dəfə artırdıqda onun rəqs periodu necə dəyişər?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "2 dəfə artar"
+                  },
+                  {
+                        "key": "B",
+                        "text": "4 dəfə artar"
+                  },
+                  {
+                        "key": "C",
+                        "text": "2 dəfə azalar"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Dəyişməz"
+                  }
+            ],
+            "correctKey": "A",
+            "explanation": "T ~ √l olduğundan, uzunluq 4 dəfə artarsa, period √4 = 2 dəfə artar."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u5-induction-waves',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 5: Elektromaqnit sahəsi və dalğaları',
+    unitOrder: 5,
+    title: 'Elektromaqnit induksiyası, Faradey qanunu və elektromaqnit dalğaları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Maqnit seli $\Phi = B S \cos\alpha$, induksiya EHQ-si, Faradey qanunu $\varepsilon_i = -\Delta\Phi/\Delta t$, Lens qaydası, Maksvell nəzəriyyəsi və işıq sürəti $c$.',
+    theoryMarkdown: `
+### 1. Maqnit Seli ($\Phi$)
+Konturla hüdudlanmış səthdən keçən maqnit induksiya xətlərinin sayını xarakterizə edən kəmiyyətdir:
+$$\Phi = B \cdot S \cdot \cos \alpha, \qquad [\Phi] = 1 \text{ Veber} = 1 \text{ Vb}$$
+
+### 2. Elektromaqnit İnduksiyası və Faradey Qanunu
+Qapalı keçirici konturdan keçən maqnit seli dəyişdikdə konturda elektrik cərəyanı yaranır.
+- **Faradey qanunu:** Qapalı konturda yaranan induksiya EHQ-si maqnit selinin dəyişmə yeyinliyi ilə mütənasibdir:
+$$\varepsilon_i = -\frac{\Delta \Phi}{\Delta t}$$
+- **Lens qaydası ("−" işarəsi):** İnduksiya cərəyanı həmişə elə istiqamətlənir ki, onun maqnit sahəsi onu doğuran maqnit selinin dəyişməsinə mane olsun.
+
+### 3. Elektromaqnit Dalğaları (Maksvell Nəzəriyyəsi)
+Dəyişən maqnit sahəsi fəzada dəyişən burulğanlı elektrik sahəsi yaradır, o da öz növbəsində dəyişən maqnit sahəsi doğurur. Beləliklə, elektromaqnit sahəsi fəzada dalğa şəklində yayılır:
+- Vakuumda yayılma sürəti **işıq sürətinə** bərabərdir:
+$$c = 3 \cdot 10^8 \text{ m/san}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u5-1",
+            "name": "Faradey Qanunu",
+            "latex": "\\varepsilon_i = -\\frac{\\Delta \\Phi}{\\Delta t}",
+            "description": "İnduksiya EHQ-si maqnit selinin zamana görə dəyişmə sürətidir."
+      },
+      {
+            "id": "f-p9-u5-2",
+            "name": "Elektromaqnit Dalğasının Sürəti",
+            "latex": "c = \\lambda \\cdot \\nu = 3 \\cdot 10^8 \\text{ m/san}",
+            "description": "Vakuumda bütün elektromaqnit dalğaları işıq sürəti ilə yayılır."
+      }
+],
+    glossary: [
+      {
+            "term": "Veber (Vb)",
+            "definition": "BS-də maqnit selinin vahidi (1 Tl · m²)."
+      },
+      {
+            "term": "Lens qaydası",
+            "definition": "İnduksiya cərəyanının istiqamətini təyin edən qanunauyğunluq."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u5-1",
+            "question": "Konturdan keçən maqnit seli 0.2 saniyədə 0.8 Vb-dən 0.2 Vb-yə qədər azalmışdır. İnduksiya EHQ-nin modulunu tapın.",
+            "solution": "$\\Delta \\Phi = 0.2 - 0.8 = -0.6 \\text{ Vb}$. $|\\varepsilon_i| = \\frac{|\\Delta \\Phi|}{\\Delta t} = \\frac{0.6}{0.2} = 3 \\text{ V}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u5-1",
+            "question": "Vakuumda elektromaqnit dalğalarının yayılma sürəti nəyə bərabərdir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "340 m/san"
+                  },
+                  {
+                        "key": "B",
+                        "text": "3000 m/san"
+                  },
+                  {
+                        "key": "C",
+                        "text": "3 · 10^8 m/san"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Sonsuzdur"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Elektromaqnit dalğaları vakuumda işıq sürəti ilə (c = 3 · 10^8 m/san) yayılır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u6-geometric-optics',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 6: Həndəsi optika və işıq hadisələri',
+    unitOrder: 6,
+    title: 'İşığın qayıtması və sınması, linzalar və linza düsturu',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'İşığın düzxətli yayılması, qayıtma qanunu, sınma qanunu (Snellius), nazik linzalar və optik qüvvə $D = 1/F = 1/d + 1/f$.',
+    theoryMarkdown: `
+### 1. İşığın Qayıtması Qanunu
+Düşən şüa, qayıdan şüa və düşmə nöqtəsindən səthə qaldırılmış perpendikulyar bir müstəvi üzərindədir.
+- **Qayıtma bucağı düşmə bucağına bərabərdir:**
+$$\alpha = \beta$$
+
+### 2. İşığın Sınması Qanunu (Snellius Qanunu)
+İşıq bir mühitdən digərinə keçdikdə yayılma sürəti dəyişir və sərhəddə sınır:
+$$\frac{\sin \alpha}{\sin \gamma} = \frac{n_2}{n_1} = n_{21}$$
+- $n = \frac{c}{v}$ — mühitin mütləq sındırma əmsalıdır ($n \ge 1$).
+
+### 3. Nazik Linzalar və Linza Düsturu
+- **Optik qüvvə ($D$):** Fokus məsafəsinin tərsi olan kəmiyyətdir:
+$$D = \frac{1}{F}, \qquad [D] = 1 \text{ dptr (dioptriya)}$$
+(Toplayıcı linza üçün $D > 0$, səpici linza üçün $D < 0$).
+- **Nazik linza düsturu:**
+$$\frac{1}{F} = \frac{1}{d} + \frac{1}{f}$$
+$d$ — cisimdən linzaya qədər məsafə, $f$ — linzadan xəyalə qədər məsafədir.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u6-1",
+            "name": "Nazik Linza Düsturu",
+            "latex": "\\frac{1}{F} = \\frac{1}{d} + \\frac{1}{f} = D",
+            "description": "Fokus məsafəsi ilə cisim və xəyal məsafələri arasındakı əlaqədir."
+      },
+      {
+            "id": "f-p9-u6-2",
+            "name": "Sınma Qanunu",
+            "latex": "\\frac{\\sin \\alpha}{\\sin \\gamma} = \\frac{n_2}{n_1}",
+            "description": "Düşmə bucağının sinusunun sınma bucağının sinusuna nisbətidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Dioptriya (dptr)",
+            "definition": "Fokus məsafəsi 1 metr olan linzanın optik qüvvəsi."
+      },
+      {
+            "term": "Fokus məsafəsi (F)",
+            "definition": "Linzaya paralel gələn şüaların sındıqdan sonra kəsişdiyi nöqtəyə qədər olan məsafə."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u6-1",
+            "question": "Fokus məsafəsi $F = 0.2 \\text{ m}$ olan toplayıcı linzanın optik qüvvəsini tapın.",
+            "solution": "$D = \\frac{1}{F} = \\frac{1}{0.2} = +5 \\text{ dptr}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u6-1",
+            "question": "İşığın qayıtması qanununa görə düşmə bucağı $40^\\circ$ olarsa, qayıtma bucağı neçə dərəcə olar?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "20°"
+                  },
+                  {
+                        "key": "B",
+                        "text": "40°"
+                  },
+                  {
+                        "key": "C",
+                        "text": "50°"
+                  },
+                  {
+                        "key": "D",
+                        "text": "90°"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Qayıtma bucağı həmişə düşmə bucağına bərabərdir: β = α = 40°."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-9-u7-atomic-nuclear',
+    subjectId: 'fizika',
+    grade: 9,
+    unit: 'Bölmə 7: Atom və nüvə fizikası',
+    unitOrder: 7,
+    title: 'Atomun planetar modeli, radioaktivlik və nüvə reaksiyaları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 2,
+    summary: 'Rezerford təcrübəsi, atomun nüvə-planetar modeli, proton-neytron modeli $^A_Z X$, radioaktiv şüalanma ($\alpha, \beta, \gamma$) və nüvə parçalanması.',
+    theoryMarkdown: `
+### 1. Rezerford Təcrübəsi və Atom Modeli
+1911-ci ildə E.Rezerford qızıl folqanın alfa-zərrəciklərlə bombardman edilməsi təcrübəsi ilə sübut etdi ki:
+- Atomun mərkəzində müsbət yüklü, kiçik ölçülü, lakin kütlənin $99.9\%$-ni təşkil edən **nüvə** yerləşir.
+- Mənfi yüklü elektronlar planetlər kimi nüvə ətrafında qapalı orbitlər üzrə fırlanır (**planetar model**).
+
+### 2. Nüvənin Tərkibi
+Atom nüvəsi **nuklonlardan** (proton və neytronlardan) ibarətdir:
+- Proton ($p$): yükü $+e$, kütləsi $1 \text{ a.k.v.}$
+- Neytron ($n$): yüksüzdür ($0$), kütləsi $1 \text{ a.k.v.}$
+- İşarəsi: $_Z^A X$. Burada $Z$ — protonların sayı (sıra nömrəsi), $A$ — kütlə ədədi (nuklonların ümumi sayı: $A = Z + N$).
+
+### 3. Təbii Radioaktivlik
+Qeyri-stabil nüvələrin öz-özünə şüalanaraq digər nüvələrə çevrilməsidir:
+- **$\alpha$ (alfa) şüaları:** Helium nüvələri axınıdır ($^4_2 \text{He}$).
+- **$\beta$ (beta) şüaları:** Sürətli elektronlar axınıdır ($^0_{-1} e$).
+- **$\gamma$ (qamma) şüaları:** Çox böyük nüfuzetmə qabiliyyətinə malik yüksək enerjili elektromaqnit dalğalarıdır.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p9-u7-1",
+            "name": "Kütlə Ədədi Düsturu",
+            "latex": "A = Z + N",
+            "description": "Nuklonların sayı protonların və neytronların sayının cəminə bərabərdir."
+      },
+      {
+            "id": "f-p9-u7-2",
+            "name": "Soddi Yerdəyişmə Qaydası (Alfa Çevrilmə)",
+            "latex": "_Z^A X \\to \\; _{Z-2}^{A-4} Y + \\; _2^4 \\text{He}",
+            "description": "Alfa çevrilmədə kütlə ədədi 4 vahid, sıra nömrəsi 2 vahid azalır."
+      }
+],
+    glossary: [
+      {
+            "term": "Nuklon",
+            "definition": "Atom nüvəsini təşkil edən zərrəciklərin (proton və neytronların) ümumi adı."
+      },
+      {
+            "term": "Radioaktivlik",
+            "definition": "Atom nüvələrinin öz-özünə şüalanaraq yeni nüvələrə parçalanması hadisəsi."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p9-u7-1",
+            "question": "$^{238}_{92} \\text{U}$ uran izotopunda neçə proton və neçə neytron vardır?",
+            "solution": "Proton sayı $Z = 92$. Neytron sayı: $N = A - Z = 238 - 92 = 146$ neytron."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p9-u7-1",
+            "question": "Nüvə alfa-çevrilməyə məruz qaldıqda onun kütlə ədədi (A) necə dəyişir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "2 vahid azalır"
+                  },
+                  {
+                        "key": "B",
+                        "text": "4 vahid azalır"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Dəyişməz qalır"
+                  },
+                  {
+                        "key": "D",
+                        "text": "1 vahid artır"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Alfa-hissəcik helium nüvəsidir (4/2 He), buna görə kütlə ədədi 4 vahid azalır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-10-u1-relativity',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 1: Klassik mexanika və nisbilik nəzəriyyəsi',
+    unitOrder: 1,
+    title: 'Eynşteynin xüsusi nisbilik nəzəriyyəsi və postulatları',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Qaliley nisbilik prinsipi, Eynşteynin iki postulatı, zamanın ləngiməsi, uzunluğun relyativistik qısalması və kütlə-enerji əlaqəsi $E = mc^2$.',
+    theoryMarkdown: `
+### 1. Eynşteynin Xüsusi Nisbilik Nəzəriyyəsinin Postulatları
+İşıq sürətinə yaxın sürətlərdə klassik Nyuton mexanikası qüvvədən düşür və Relyativistik mexanika tətbiq olunur.
+- **I Postulat (Nisbilik Prinsipi):** Bütün fiziki hadisələr (həm mexaniki, həm də elektromaqnit) bütün inersial hesablama sistemlərində eyni cür baş verir.
+- **II Postulat (İşıq Sürətinin Sabitliyi):** Vakuumda işığın yayılma sürəti mənbəyin və ya qəbuledicinin hərəkət sürətindən asılı olmayaraq bütün inersial sistemlərdə eynidir ($c = 3 \cdot 10^8 \text{ m/san}$).
+
+### 2. Relyativistik Nəticələr
+- **Zamanın ləngiməsi:** Hərəkət edən hesablama sistemində zaman hərəkətsiz sistemə nəzərən daha yavaş axır:
+$$\Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
+- **Uzunluğun qısalması (Lorens qısalması):** Hərəkət istiqamətində cismin xətti ölçüsü kiçilir:
+$$l = l_0 \sqrt{1 - \frac{v^2}{c^2}}$$
+
+### 3. Kütlə və Enerji Əlaqəsi
+Sükunət kütləsi $m_0$ olan cismin tam enerjisi:
+$$E = m c^2 = \frac{m_0 c^2}{\sqrt{1 - \frac{v^2}{c^2}}}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p10-u1-1",
+            "name": "Eynşteynin Kütlə-Enerji Əlaqəsi",
+            "latex": "E = m c^2",
+            "description": "Kütlə və enerjinin fundamental ekvivalentlik qanunudur."
+      },
+      {
+            "id": "f-p10-u1-2",
+            "name": "Zamanın Relyativistik Ləngiməsi",
+            "latex": "\\Delta t = \\frac{\\Delta t_0}{\\sqrt{1 - v^2/c^2}}",
+            "description": "Sürət artdıqca xarici müşahidəçiyə nəzərən zamanın gedişi zəifləyir."
+      }
+],
+    glossary: [
+      {
+            "term": "Xüsusi Nisbilik Nəzəriyyəsi (XNN)",
+            "definition": "A.Eynşteyn tərəfindən işıq sürətinə yaxın sürətlərdə məkan və zamanın xassələrini təsvir edən nəzəriyyə."
+      },
+      {
+            "term": "Sükunət enerjisi",
+            "definition": "Cismin hərəkətsiz vəziyyətdə malik olduğu daxili enerji ehtiyatı (E₀ = m₀c²)."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p10-u1-1",
+            "question": "1 qram maddənin tam parçalanması nəticəsində ayrıla biləcək maksimal enerjini hesablayın.",
+            "solution": "$m = 1 \\text{ q} = 10^{-3} \\text{ kq}$. $E = m c^2 = 10^{-3} \\cdot (3 \\cdot 10^8)^2 = 10^{-3} \\cdot 9 \\cdot 10^{16} = 9 \\cdot 10^{13} \\text{ C} = 90 \\text{ Teracoul}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p10-u1-1",
+            "question": "Eynşteynin II postulatına görə vakuumda işıq sürəti nədən asılıdır?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Yalnız mənbəyin hərəkət sürətindən"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Müşahidəçinin koordinat sistemindən"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Heç nədən asılı deyil, mütləq sabitdir"
+                  },
+                  {
+                        "key": "D",
+                        "text": "İşığın dalğa uzunluğundan"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Vakuumda işıq sürəti bütün inersial sistemlərdə invariant və mütləq sabitdir (c = 3 · 10^8 m/san)."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-10-u2-mkt-ideal-gas',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 2: Molekulyar-kinetik nəzəriyyə və İdeal qaz qanunları',
+    unitOrder: 2,
+    title: 'MKT-nin əsas tənliyi, mütləq temperatur və izoproseslər',
     order: 1,
     readTimeMinutes: 11,
     difficulty: 3,
-    summary: 'Baş cümlənin buraxılmış üzvünü və ya əvəzlik-qəlibini izah edən budaq cümlə növləri və onların sadə cümləyə çevrilməsi.',
+    summary: 'Molekulyar-kinetik nəzəriyyənin əsas müddəaları, MKT-nin əsas tənliyi $p = \frac{1}{3}nm_0 v^2 = nkT$, Klapeyron-Mendeleyev tənliyi və izoproseslər.',
     theoryMarkdown: `
-### 1. Budaq Cümlənin Növləri Nədir?
-Budaq cümlə baş cümlənin hansı üzvünü əvəz edirsə və ya izah edirsə, həmin üzvün adı ilə adlanır.
+### 1. İdeal Qaz Modeli
+Molekulları arasındakı qarşılıqlı təsir qüvvələri nəzərə alınmayan və molekulları maddi nöqtə hesab edilən qaz modelinə **ideal qaz** deyilir.
 
-### 2. Əsas Budaq Cümlə Növləri
-1. **Mübtəda budaq cümləsi:** Baş cümlənin mübtədasını izah edir. *Kim? Nə?* sualına cavab verir:
-   *[Məlumdur ki], (hava dəyişəcək).* $\to$ Havanın dəyişəcəyi məlumdur.
-2. **Xəbər budaq cümləsi:** Baş cümlənin ismi xəbərini izah edir:
-   *[Məqsədimiz odur ki], (imtahanı uğurla verək).* $\to$ Məqsədimiz imtahanı uğurla verməkdir.
-3. **Tamamlıq budaq cümləsi:** Baş cümlənin tamamlığını izah edir. *Kimi? Nəyi? Nəyə?*:
-   *[Gördüm ki], (qapı açıqdır).* $\to$ Qapının açıq olduğunu gördüm.
-4. **Təyin budaq cümləsi:** Baş cümlədəki isimlə ifadə olunmuş üzvü təyin edir. *Hansı?*:
-   *[Mən elə bir kitab axtarıram ki], (orada qədim xəritələr olsun).*
-5. **Zərflik budaq cümlələri:**
-   - **Zaman:** *(Qonaqlar gələndə), [biz çay içirdik].*
-   - **Məkan (Yer):** *(Harada birlik var), [orada dirilik olar].*
-   - **Səbəb:** *[Ona görə sevinirdi ki], (əla qiymət almışdı).*
-   - **Şərt:** *(Hava xoş olsa), [gəzməyə gedərik].*
+### 2. MKT-nin Əsas Tənliyi
+$$p = \frac{1}{3} n m_0 \overline{v^2} = \frac{2}{3} n \overline{E_k}$$
+- $n = \frac{N}{V}$ — molekulların konsentrasiyası, $\overline{E_k} = \frac{3}{2} k T$ — irəliləmə hərəkətinin orta kinetik enerjisidir ($k = 1.38 \cdot 10^{-23} \text{ C/K}$ Boltsman sabiti).
+- Buradan qaz təzyiqi:
+$$p = n \cdot k \cdot T$$
+
+### 3. Mendeleyev-Klapeyron Tənliyi
+$$p \cdot V = \frac{m}{M} \cdot R \cdot T = \nu \cdot R \cdot T$$
+$R = 8.31 \text{ C/(mol} \cdot \text{K)}$ — universal qaz sabitidir.
+
+### 4. Üç Əsas Qaz Qanunu (İzoproseslər)
+1. **İzotermik proses ($T = \text{const}$ — Boyl-Mariott qanunu):**
+$$p \cdot V = \text{const} \implies \frac{p_1}{p_2} = \frac{V_2}{V_1}$$
+2. **İzobar proses ($p = \text{const}$ — Gey-Lüssak qanunu):**
+$$\frac{V}{T} = \text{const} \implies \frac{V_1}{V_2} = \frac{T_1}{T_2}$$
+3. **İzoxor proses ($V = \text{const}$ — Şarl qanunu):**
+$$\frac{p}{T} = \text{const} \implies \frac{p_1}{p_2} = \frac{T_1}{T_2}$$
     `,
     keyFormulas: [
       {
-            "id": "f-az9-u5-1",
-            "name": "Budaq Cümlənin Sadə Cümləyə Çevrilməsi",
-            "latex": "\\text{Budaq cümlə xəbəri} + [-an^2, -dıq^4, -anda^2] \\implies \\text{Sadə cümlə tərkibi}",
-            "description": "Feli tərkiblərlə mürəkkəb cümlə asanlıqla sadə cümləyə transformasiya edilir."
+            "id": "f-p10-u2-1",
+            "name": "Mendeleyev-Klapeyron Tənliyi",
+            "latex": "p V = \\frac{m}{M} R T",
+            "description": "İdeal qazın hal tənliyidir."
+      },
+      {
+            "id": "f-p10-u2-2",
+            "name": "Boyl-Mariott Qanunu",
+            "latex": "p_1 V_1 = p_2 V_2 \\quad (T = \\text{const})",
+            "description": "Sabit temperaturda təzyiq həcmlə tərs mütənasibdir."
       }
 ],
     glossary: [
       {
-            "term": "Tamamlıq budaq cümləsi",
-            "definition": "Baş cümlənin feli və ya ismi xəbərinin tələb etdiyi tamamlığı əvəz edən budaq cümlə."
+            "term": "İzoproses",
+            "definition": "Qazın parametrlərindən birinin sabit qalması ilə gedən proses."
       },
       {
-            "term": "Əvəzlik-qəlib",
-            "definition": "Baş cümlədə budaq cümlənin yerini tutan işarə əvəzliyi (o, onu, ona, onda)."
+            "term": "Mütləq sıfır (0 K)",
+            "definition": "Molekulların istilik hərəkətinin dayandığı hipotetik minimal temperatur (-273.15 °C)."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az9-u5-1",
-            "question": "\"Müəllim bildirdi ki, sabah yarış keçiriləcək\" cümləsində budaq cümlənin növünü tapın.",
-            "solution": "\"Müəllim nəyi bildirdi?\" — sualına cavab verir. Baş cümlənin feli xəbərinin tamamlığını izah etdiyi üçün tamamlıq budaq cümləsidir."
+            "id": "ex-p10-u2-1",
+            "question": "İzotermik prosesdə qazın həcmini 3 dəfə azaltdıqda onun təzyiqi necə dəyişər?",
+            "solution": "Boyl-Mariott qanununa görə $T = \\text{const}$ olduqda $p \\cdot V = \\text{const}$. Həcm 3 dəfə azaldıqda təzyiq 3 dəfə artar."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az9-u5-1",
-            "question": "\"Biz çalışırıq ki, dərslərimizi əla oxuyaq\" cümləsində budaq cümlə hansı növdür?",
+            "questionId": "mq-p10-u2-1",
+            "question": "Sabit həcmdə (izoxor prosesdə) ideal qazın mütləq temperaturunu 2 dəfə artırdıqda təzyiqi necə dəyişər?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Mübtəda budaq cümləsi"
+                        "text": "2 dəfə azalar"
                   },
                   {
                         "key": "B",
-                        "text": "Tamamlıq budaq cümləsi"
+                        "text": "2 dəfə artar"
                   },
                   {
                         "key": "C",
-                        "text": "Təyin budaq cümləsi"
+                        "text": "4 dəfə artar"
                   },
                   {
                         "key": "D",
-                        "text": "Xəbər budaq cümləsi"
+                        "text": "Dəyişməz"
                   }
             ],
             "correctKey": "B",
-            "explanation": "Çalışırıq (nəyə? nəyə nail olmağa?) sualına cavab verdiyi üçün tamamlıq budaq cümləsidir."
+            "explanation": "Şarl qanununa görə V = const olduqda p ~ T. Temperatur 2 dəfə artarsa, təzyiq də 2 dəfə artar."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-9-u6-direct-indirect-speech',
-    subjectId: 'azerbaycan_dili',
-    grade: 9,
-    unit: 'Bölmə 6: Vasitəsiz və vasitəli nitq',
-    unitOrder: 6,
-    title: 'Vasitəsiz və vasitəli nitq: Sxemlər, sitatlar və durğu işarələri',
+    id: 'lesson-phys-10-u3-thermodynamics',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 3: Termodinamikanın əsasları',
+    unitOrder: 3,
+    title: 'İdeal qazın daxili enerjisi, Termodinamikanın I qanunu və Karno dövrəsi',
+    order: 1,
+    readTimeMinutes: 11,
+    difficulty: 3,
+    summary: 'Biratomlu qazın daxili enerjisi $U = \frac{3}{2}\nu RT$, qazın gördüyü iş $A = p\Delta V$, Termodinamikanın I qanunu $Q = \Delta U + A$ və ideal Karno maşını $\eta = (T_1 - T_2)/T_1$.',
+    theoryMarkdown: `
+### 1. Biratomlu İdeal Qazın Daxili Enerjisi
+Yalnız molekulların irəliləmə hərəkətinin kinetik enerjisindən ibarətdir:
+$$U = \frac{3}{2} \frac{m}{M} R T = \frac{3}{2} \nu R T = \frac{3}{2} p V$$
+
+### 2. Qazın Genişlənərkən Gördüyü İş
+İzobar prosesdə xarici qüvvələrə qarşı görülən iş:
+$$A = p \cdot \Delta V = p \cdot (V_2 - V_1)$$
+- Qaz genişləndikdə ($V_2 > V_1$): $A > 0$ (müsbət iş görür).
+- Qaz sıxıldıqda ($V_2 < V_1$): $A < 0$ (xarici qüvvələr qaz üzərində iş görür).
+
+### 3. Termodinamikanın I Qanunu
+Sistemə verilən istilik miqdarı onun daxili enerjisinin dəyişməsinə və xarici cisimlər üzərində iş görməsinə sərf olunur:
+$$Q = \Delta U + A$$
+- **İzoxor proses ($V = \text{const}$):** $\Delta V = 0 \implies A = 0 \implies Q = \Delta U$.
+- **İzotermik proses ($T = \text{const}$):** $\Delta T = 0 \implies \Delta U = 0 \implies Q = A$.
+- **Adiabatik proses ($Q = 0$):** Ətraf mühitlə istilik mübadiləsi olmayan prosesdir: $A = -\Delta U$ (qaz genişlənərkən daxili enerjisi hesabına iş görür və soyuyur).
+
+### 4. Karno Dövrəsi və Maksimal F.İ.Ə.
+İki izoterm və iki adiabatdan ibarət ideal istilik maşınının maksimal F.İ.Ə.-sı:
+$$\eta_{\max} = \frac{T_1 - T_2}{T_1} = 1 - \frac{T_2}{T_1}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p10-u3-1",
+            "name": "Termodinamikanın Birinci Qanunu",
+            "latex": "Q = \\Delta U + A",
+            "description": "Enerjinin saxlanması qanununun istilik hadisələrinə tətbiqidir."
+      },
+      {
+            "id": "f-p10-u3-2",
+            "name": "Karno Maşınının Maksimal F.İ.Ə.",
+            "latex": "\\eta_{\\max} = \\frac{T_1 - T_2}{T_1}",
+            "description": "Yalnız qızdırıcı və soyuducunun mütləq temperaturlarından asılıdır."
+      }
+],
+    glossary: [
+      {
+            "term": "Adiabatik proses",
+            "definition": "Sistemin ətraf mühitlə istilik mübadiləsi olmadan baş verən proses (Q = 0)."
+      },
+      {
+            "term": "Karno dövrəsi",
+            "definition": "Faydalı iş əmsalı ən yüksək olan ideal qapalı termodinamik tsikl."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p10-u3-1",
+            "question": "İdeal istilik maşınında qızdırıcının temperaturu $T_1 = 500 \\text{ K}$, soyuducunun temperaturu $T_2 = 300 \\text{ K}$-dir. Maksimal F.İ.Ə.-nı tapın.",
+            "solution": "$\\eta = \\frac{T_1 - T_2}{T_1} = \\frac{500 - 300}{500} = \\frac{200}{500} = 0.4 = 40\\%$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p10-u3-1",
+            "question": "Adiabatik genişlənmə zamanı ideal qazın temperaturu və daxili enerjisi necə dəyişir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Artır"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Azalır"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Sabit qalır"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Sıfır olur"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Q = 0 olduqda A = -ΔU olur. Qaz iş gördükcə daxili enerjisi və temperaturu azalır (soyuyur)."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-10-u4-vapors-surface-tension',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 4: Doymuş buxarlar, Səthi gərilmə və Kapillyarlıq',
+    unitOrder: 4,
+    title: 'Doymuş və doymamış buxar, mayelərin səthi gərilməsi və kapillyarlıq',
     order: 1,
     readTimeMinutes: 10,
     difficulty: 2,
-    summary: 'Başqasının nitqinin verilmə üsulları: dəyişdirilmədən verilən vasitəsiz nitq (dırnaqlar, tire), məzmunu saxlanmaqla verilən vasitəli nitq və sitat qaydaları.',
+    summary: 'Doymuş buxarın xassələri, havanın mütləq və nisbi rütubəti, səthi gərilmə əmsalı $\sigma = F/l$ və kapillyar borularda mayenin qalxma hündürlüyü.',
     theoryMarkdown: `
-### 1. Vasitəsiz Nitq
-Başqasının sözlərinin forma və məzmunca heç bir dəyişiklik edilmədən eynilə verilməsidir.
-- Müəllifin sözləri ($M, m$) və Vasitəsiz nitq ($V, v$).
-- **Əsas Durğu İşarələri Sxemləri:**
-  1. $M: "V"$ — *Müəllim dedi: "Dərslərinizə yaxşı hazırlaşın".*
-  2. $M: "V!" / "V?"$ — *Anası soruşdu: "Yeməyini yedinmi?"*
-  3. "$V$", — $m.$ — *"Sabah görüşərik", — deyə Əli bildirdi.*
-  4. "$V$", — $m,$ — "$v$." — *"Gəlin", — dedi o, — "birlikdə gedək".*
+### 1. Doymuş Buxar və Xassələri
+Öz mayesi ilə dinamik tarazlıqda olan buxara **doymuş buxar** deyilir.
+- Doymuş buxarın təzyiqi və sıxlığı **həcmdən asılı deyil** (Boyl-Mariott qanununa tabe olmur).
+- Doymuş buxarın təzyiqi yalnız **temperaturdan asılıdır** (temperatur artdıqca kəskin artır).
 
-### 2. Vasitəli Nitq
-Başqasının nitqinin yalnız məzmununun dəyişdirilərək söylənilməsidir. Vasitəli nitq həmişə **tabeli mürəkkəb cümlə** şəklində qurulur:
-*Müəllim bildirdi ki, sabah yarış olacaq.*
+### 2. Havanın Rütubəti
+- **Mütləq rütubət ($\rho$):** $1 \text{ m}^3$ havada olan su buxarının kütləsidir (q/m³).
+- **Nisbi rütubət ($\varphi$):** Havadakı su buxarının parsial təzyiqinin eyni temperaturdakı doymuş buxarın təzyiqinə olan nisbətinin faizlə ifadəsidir:
+$$\varphi = \frac{p}{p_0} \cdot 100\% = \frac{\rho}{\rho_0} \cdot 100\%$$
+Hiqrometr və psixrometrlə ölçülür.
 
-### 3. Sitatlar
-Fikri təsdiq etmək üçün mötəbər mənbədən, müəllifdən dəqiq götürülmüş cümlələrdir. Sitatlar dırnaq içində və ya müəllifin adı göstərilməklə verilir.
+### 3. Səthi Gərilmə və Kapillyarlıq
+Maye səthindəki molekullara daxilə doğru kompensasiya olunmamış qüvvə təsir edir.
+- **Səthi gərilmə əmsalı:** Səthi hüdudlayan xəttin vahid uzunluğuna düşən qüvvədir:
+$$\sigma = \frac{F_{\text{səth}}}{l}, \qquad [\sigma] = 1 \text{ N/m}$$
+- **Kapillyarlıq:** Nazik borularda mayenin islatma və ya islatmama nəticəsində qalxması və ya enməsidir:
+$$h = \frac{2\sigma}{\rho g r}$$
     `,
     keyFormulas: [
       {
-            "id": "f-az9-u6-1",
-            "name": "Vasitəsiz Nitq Dörd Əsas Sxemi",
-            "latex": "M: \"V.\" \\qquad \"V\", — m. \\qquad \"V!\" — m. \\qquad \"V\", — m, — \"v.\"",
-            "description": "Vasitəsiz nitqin müəllif sözü ilə qarşılıqlı vəziyyətləridir."
+            "id": "f-p10-u4-1",
+            "name": "Nisbi Rütubət",
+            "latex": "\\varphi = \\frac{p}{p_0} \\cdot 100\\%",
+            "description": "Havadakı buxar təzyiqinin doymuş buxar təzyiqinə nisbətidir."
+      },
+      {
+            "id": "f-p10-u4-2",
+            "name": "Kapillyarda Mayenin Qalxma Hündürlüyü",
+            "latex": "h = \\frac{2\\sigma}{\\rho g r}",
+            "description": "Kapillyarın radiusu nə qədər kiçik olarsa, maye bir o qədər hündürə qalxar."
       }
 ],
     glossary: [
       {
-            "term": "Vasitəsiz nitq",
-            "definition": "Özgə nitqinin eynilə, heç bir qrammatik dəyişiklik edilmədən verilməsi."
+            "term": "Şeh nöqtəsi",
+            "definition": "Havadakı su buxarının doymuş hala keçdiyi temperatur."
       },
       {
-            "term": "Sitat",
-            "definition": "Hər hansı əsərdən və ya şəxsin nitqindən eynilə gətirilən nümunə cümlə."
+            "term": "Səthi gərilmə",
+            "definition": "Mayenin öz səthinin sahəsini minimuma endirməyə çalışan xassəsi."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az9-u6-1",
-            "question": "\"O dedi: Mən mütləq qalib gələcəyəm\" cümləsində buraxılmış durğu işarələrini qoyun.",
-            "solution": "M: \"V.\" sxeminə uyğun olaraq: O dedi: \"Mən mütləq qalib gələcəyəm\"."
+            "id": "ex-p10-u4-1",
+            "question": "Havadakı su buxarının parsial təzyiqi 1.2 kPa, eyni temperaturda doymuş buxarın təzyiqi 2 kPa olarsa, nisbi rütubəti tapın.",
+            "solution": "$\\varphi = \\frac{p}{p_0} \\cdot 100\\% = \\frac{1.2}{2.0} \\cdot 100\\% = 60\\%$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az9-u6-1",
-            "question": "\"V\", — m. sxeminə uyğun gələn cümlə hansıdır?",
+            "questionId": "mq-p10-u4-1",
+            "question": "Sabit temperaturda qapalı qabda doymuş buxarın həcmini 2 dəfə azaltdıqda onun təzyiqi necə dəyişər?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Müəllim dedi: \"Kitabları açın\"."
+                        "text": "2 dəfə artar"
                   },
                   {
                         "key": "B",
-                        "text": "\"Mən sabah gələcəyəm\", — dedi Əli."
+                        "text": "2 dəfə azalar"
                   },
                   {
                         "key": "C",
-                        "text": "O söylədi ki, işlər qaydasındadır."
+                        "text": "Dəyişməz qalar"
                   },
                   {
                         "key": "D",
-                        "text": "\"Dayan\", — qışqırdı o, — \"tələsmə\"."
+                        "text": "Sıfır olar"
                   }
             ],
-            "correctKey": "B",
-            "explanation": "B bəndində vasitəsiz nitq əvvəl gəlmiş, sonra vergül, tire və müəllifin sözləri yazılmışdır."
+            "correctKey": "C",
+            "explanation": "Doymuş buxarın təzyiqi sabit temperaturda həcmdən asılı deyildir, buxarın bir hissəsi mayeyə çevrilir və təzyiq sabit qalır."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-10-u1-phonetics-orthoepy',
-    subjectId: 'azerbaycan_dili',
+    id: 'lesson-phys-10-u5-solids-elasticity',
+    subjectId: 'fizika',
     grade: 10,
-    unit: 'Bölmə 1: Azərbaycan dilinin fonetik sistemi və orfoepiya normaları',
+    unit: 'Bölmə 5: Bərk cisimlər və onların xassələri',
+    unitOrder: 5,
+    title: 'Kristallik və amorf cisimlər, mexaniki gərginlik və Huk qanunu',
+    order: 1,
+    readTimeMinutes: 9,
+    difficulty: 2,
+    summary: 'Monokristallar, polikristallar, anizotropiya və izotropiya, amorf maddələr, mexaniki gərginlik $\sigma = F/S$, nisbi uzanma $\varepsilon = \Delta l/l_0$ və Yunq modulu.',
+    theoryMarkdown: `
+### 1. Kristallik və Amorf Cisimlər
+- **Kristallik cisimlər:** Zərrəcikləri nizamlı fəza qəfəsi əmələ gətirir. Dəqiq ərimə temperaturuna malikdir.
+  - **Monokristallar:** Vahid bütöv kristaldır, **anizotropdur** (fiziki xassələri istiqamətdən asılıdır).
+  - **Polikristallar:** Çoxlu sayda xırda kristallardan ibarətdir, **izotropdur** (bütün istiqamətlərdə xassələri eynidir, məs: metallar).
+- **Amorf cisimlər:** Qəfəs quruluşu yoxdur (qısamənzilli nizamlılıq). Dəqiq ərimə temperaturu yoxdur, qızdırıldıqda tədricən yumşalır (şüşə, qatran, plastik).
+
+### 2. Deformasiya və Mexaniki Gərginlik
+Xarici qüvvənin təsiri ilə cismin forma və ölçülərinin dəyişməsinə **deformasiya** deyilir (elastiki və plastik).
+- **Mexaniki gərginlik ($\sigma$):** En kəsiyin vahid sahəsinə düşən elastiklik qüvvəsidir:
+$$\sigma = \frac{F_{\text{el}}}{S}, \qquad [\sigma] = 1 \text{ Pa}$$
+- **Nisbi uzanma ($\varepsilon$):**
+$$\varepsilon = \frac{\Delta l}{l_0}$$
+
+### 3. Bərk Cisimlər Üçün Huk Qanunu
+Kiçik elastiki deformasiyalarda mexaniki gərginlik nisbi uzanma ilə düz mütənasibdir:
+$$\sigma = E \cdot |\varepsilon|$$
+$E$ — maddənin elastiklik moduludur (**Yunq modulu**, vahidi Pa).
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p10-u5-1",
+            "name": "Mexaniki Gərginlik üçün Huk Qanunu",
+            "latex": "\\sigma = E \\cdot \\varepsilon = E \\cdot \\frac{\\Delta l}{l_0}",
+            "description": "Gərginlik nisbi uzanma və Yunq modulu ilə mütənasibdir."
+      },
+      {
+            "id": "f-p10-u5-2",
+            "name": "Yayın Sərtliyi",
+            "latex": "k = \\frac{E \\cdot S}{l_0}",
+            "description": "Sərtlik Yunq modulu və en kəsiyi ilə düz, uzunluqla tərs mütənasibdir."
+      }
+],
+    glossary: [
+      {
+            "term": "Yunq modulu (E)",
+            "definition": "Maddənin elastiklik xassəsini xarakterizə edən material sabiti."
+      },
+      {
+            "term": "Anizotropiya",
+            "definition": "Maddənin fiziki xassələrinin müxtəlif istiqamətlərdə fərqli olması."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p10-u5-1",
+            "question": "En kəsiyinin sahəsi $2 \\text{ mm}^2$ ($2 \\cdot 10^{-6} \\text{ m}^2$) olan polad məftilə 400 N elastiklik qüvvəsi təsir edir. Mexaniki gərginliyi hesablayın.",
+            "solution": "$\\sigma = \\frac{F}{S} = \\frac{400}{2 \\cdot 10^{-6}} = 200 \\cdot 10^6 \\text{ Pa} = 200 \\text{ MPa}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p10-u5-1",
+            "question": "Aşağıdakılardan hansı amorf maddədir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Dəmir"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Buz"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Şüşə"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Xörək duzu"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Şüşə dəqiq kristal qəfəsi və dəqiq ərimə temperaturu olmayan amorf maddədir."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-10-u6-electrostatic-potential',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 6: Elektrostatika. Potensial və Kondensatorlar',
+    unitOrder: 6,
+    title: 'Elektrik potensialı, potensiallar fərqi, kondensator və elektrik tutumu',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Elektrostatik sahənin enerjisi, potensial $\varphi = W_p/q$, gərginlik və intensivlik əlaqəsi $U = Ed$, kondensatorun tutumu $C = q/U$ və elektrik sahəsinin enerjisi $W = CU^2/2$.',
+    theoryMarkdown: `
+### 1. Elektrik Sahəsinin Potensialı
+Elektrik sahəsinin enerji xarakteristikasıdır:
+$$\varphi = \frac{W_p}{q} = k \cdot \frac{q}{r}, \qquad [\varphi] = 1 \text{ Volt}$$
+- **Potensiallar fərqi (Gərginlik):** $U = \varphi_1 - \varphi_2 = \frac{A}{q}$.
+- **İntensivlik və gərginlik əlaqəsi:**
+$$E = \frac{U}{d} \implies U = E \cdot d$$
+
+### 2. Elektrik Tutumu və Kondensator
+Elektrik yüklərini və enerjisini toplamaq üçün istifadə olunan qurğuya **kondensator** deyilir.
+- **Elektrik tutumu ($C$):**
+$$C = \frac{q}{U}, \qquad [C] = 1 \text{ Farad} = 1 \text{ F}$$
+- **Müstəvi kondensatorun tutumu:**
+$$C = \frac{\varepsilon \varepsilon_0 S}{d}$$
+$\varepsilon$ — dielektrik nüfuzluğudur, $S$ — lövhələrin sahəsi, $d$ — lövhələr arasındakı məsafədir.
+
+### 3. Yüklənmiş Kondensatorun Enerjisi
+$$W = \frac{q U}{2} = \frac{C U^2}{2} = \frac{q^2}{2C}$$
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p10-u6-1",
+            "name": "Müstəvi Kondensatorun Tutumu",
+            "latex": "C = \\frac{\\varepsilon \\varepsilon_0 S}{d}",
+            "description": "Tutum lövhələrin sahəsi ilə düz, məsafə ilə tərs mütənasibdir."
+      },
+      {
+            "id": "f-p10-u6-2",
+            "name": "Kondensatorun Enerjisi",
+            "latex": "W = \\frac{C U^2}{2}",
+            "description": "Kondensatorda toplanan elektrostatik sahənin enerjisidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Farad (F)",
+            "definition": "1 volt gərginlikdə 1 kulon yük toplayan kondensatorun tutum vahidi."
+      },
+      {
+            "term": "Ekvipotensial səth",
+            "definition": "Bütün nöqtələrində elektrik potensialı eyni olan səth."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p10-u6-1",
+            "question": "Tutumu $10 \\; \\mu\\text{F}$ ($10^{-5} \\text{ F}$) olan kondensator 200 V gərginliyə qədər yüklənmişdir. Onun enerjisini tapın.",
+            "solution": "$W = \\frac{C U^2}{2} = \\frac{10^{-5} \\cdot 200^2}{2} = \\frac{10^{-5} \\cdot 40\\,000}{2} = 0.2 \\text{ C}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p10-u6-1",
+            "question": "Müstəvi kondensatorun lövhələri arasındakı məsafəni 2 dəfə artırdıqda onun elektrik tutumu necə dəyişər?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "2 dəfə artar"
+                  },
+                  {
+                        "key": "B",
+                        "text": "2 dəfə azalar"
+                  },
+                  {
+                        "key": "C",
+                        "text": "4 dəfə azalar"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Dəyişməz"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "C ~ 1/d olduğundan məsafə 2 dəfə artdıqda tutum 2 dəfə azalar."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-10-u7-electric-current-media',
+    subjectId: 'fizika',
+    grade: 10,
+    unit: 'Bölmə 7: Müxtəlif mühitlərdə elektrik cərəyanı',
+    unitOrder: 7,
+    title: 'Müxtəlif mühitlərdə elektrik cərəyanı: Metallar, elektrolitlər, qazlar, yarımkeçiricilər',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Metallar (sərbəst elektronlar), elektrolit məhlulları (ionlar və Faradey qanunu $m = kIt$), qaz boşalması və yarımkeçiricilər (elektron-deşik keçidi, p-n keçid).',
+    theoryMarkdown: `
+### 1. Metallarda Elektrik Cərəyanı
+- **Yükdaşıyıcılar:** Sərbəst elektronlar.
+- Metalları qızdırdıqda kristallik qəfəsin rəqsləri artır, elektronların toqquşması çoxalır, ona görə **müqavimət artır**:
+$$R = R_0 (1 + \alpha t)$$
+$\alpha$ — müqavimətin temperatur əmsalıdır.
+- **İfratkeçiricilik:** Kritik aşağı temperaturda müqavimətin sıçrayışla sıfıra düşməsi hadisəsidir.
+
+### 2. Elektrolitlərdə Cərəyan (Elektroliz)
+- **Yükdaşıyıcılar:** Müsbət və mənfi ionlar. Elektrolitik dissosiasiya nəticəsində yaranır.
+- **Faradeyin I Qanunu:** Elektrod üzərində ayrılan maddənin kütləsi elektrolitdən keçən elektrik yükü ilə düz mütənasibdir:
+$$m = k \cdot q = k \cdot I \cdot t$$
+$k$ — maddənin elektrokimyəvi ekvivalentidir (kq/Kl).
+
+### 3. Yarımkeçiricilər və p-n Keçid
+- **Yükdaşıyıcılar:** Sərbəst elektronlar və **deşiklər**.
+- Temperatur artdıqda yarımkeçiricilərin müqaviməti metalların əksinə olaraq **kəskin azalır**.
+- Aşqar keçiriciliyi: donor (elektron — $n$-tip), akseptor (deşik — $p$-tip).
+- **p-n keçid:** Cərəyanı yalnız bir istiqamətdə (düz istiqamətdə) yaxşı buraxan birtərəfli keçiricilik zonasıdır (diod, tranzistor).
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p10-u7-1",
+            "name": "Faradeyin Elektroliz Qanunu",
+            "latex": "m = k \\cdot I \\cdot t",
+            "description": "Elektrod üzərində ayrılan maddənin kütləsidir."
+      },
+      {
+            "id": "f-p10-u7-2",
+            "name": "Metalda Müqavimətin Temperatur Asılılığı",
+            "latex": "R = R_0 (1 + \\alpha \\Delta t)",
+            "description": "Temperatur artdıqca metalın müqaviməti xətti artır."
+      }
+],
+    glossary: [
+      {
+            "term": "Elektroliz",
+            "definition": "Elektrolit məhlulundan cərəyan keçərkən elektrodlar üzərində maddə ayrılması prosesi."
+      },
+      {
+            "term": "Deşik",
+            "definition": "Yarımkeçiricidə elektronun yerini tərk etməsi nəticəsində yaranan şərti müsbət yük daşıyıcısı."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p10-u7-1",
+            "question": "Elektroliz zamanı $k = 0.3 \\text{ mq/Kl}$ olan maddədən 1000 Kl yük keçdikdə ayrılan kütləni tapın.",
+            "solution": "$m = k \\cdot q = 0.3 \\cdot 1000 = 300 \\text{ mq} = 0.3 \\text{ qram}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p10-u7-1",
+            "question": "Yarımkeçiriciləri qızdırdıqda onların elektrik müqaviməti necə dəyişir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Artır"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Kəskin azalır"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Sabit qalır"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Sıfıra bərabər olur"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Qızdırıldıqda sərbəst elektron və deşiklərin sayı sürətlə artdığı üçün yarımkeçiricinin müqaviməti kəskin azalır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-11-u1-lorentz-ampere',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 1: Maqnit sahəsi və Lorens qüvvəsi',
     unitOrder: 1,
-    title: 'Fonetik sistem, orfoepiya və orfoqrafiya normaları, vurğu',
+    title: 'Amper qüvvəsi, Lorens qüvvəsi və yüklü zərrəciklərin hərəkəti',
     order: 1,
     readTimeMinutes: 10,
     difficulty: 3,
-    summary: 'Səs və hərf fərqi, saitlərin və samitlərin tələffüz qanunauyğunluqları, orfoepiya lüğəti normaları və vurğunun növləri (heca, məntiqi, həyəcanlı).',
+    summary: 'Amper qüvvəsi $F_A = I B l \sin\alpha$, Lorens qüvvəsi $F_L = q v B \sin\alpha$, sol əl qaydası və yüklü zərrəciyin çevrə üzrə fırlanma radiusu $r = mv/(qB)$.',
     theoryMarkdown: `
-### 1. Səs və Hərf Fərqi
-- Səsləri tələffüz edirik və eşidirik (transkripsiyada göstərilir: $[a]$).
-- Hərfləri yazırıq və görürük.
-- Azərbaycan əlifbasında **32 hərf**, lakin **34 səs** var ($[k']$, $[x']$ səslərinin xüsusi hərfi yoxdur).
+### 1. Amper Qüvvəsi
+Maqnit sahəsinin cərəyanlı naqilə göstərdiyi təsir qüvvəsidir:
+$$F_A = I \cdot B \cdot l \cdot \sin \alpha$$
+- $B$ — maqnit sahəsinin induksiyasıdır (vahidi: **Tesla**, $1 \text{ Tl} = 1 \text{ N/(A} \cdot \text{m)}$).
+- İstiqaməti **sol əl qaydası** ilə tapılır: Dörd barmaq cərəyan istiqamətinə yönəlir, maqnit xətləri ovuca daxil olur, $90^\circ$ açılmış baş barmaq Amper qüvvəsini göstərir.
 
-### 2. Əsas Orfoepiya (Tələffüz) Normaları
-1. **Saitlərin tələffüzü:**
-   - İki yanaşı sait gəldikdə: *ailə \to [ayilə], təbiət \to [təbiyət], saat \to [sa:t]*.
-   - $o$ saiti alınma sözlərdə: *kompüter \to [kampüter], motor \to [mator]*.
-2. **Samitlərin tələffüzü:**
-   - Sonu $b, d, g, c$ ilə bitən sözlərdə təklikdə və samitdən əvvəl karlaşır: *kitab \to [kitap], kənd \to [kənt]*. Saitlə başlayan şəkilçi artırıldıqda cingiltili qalır: *kitaba \to [kitaba]*.
-   - Sonu $q$ ilə bitən çoxhecalı milli sözlərdə: *qonaq \to [qonax]*. Saitlə başladıqda $ğ$-ya keçir: *qonağa*.
-   - Sonu $k$ ilə bitən çoxhecalı sözlərdə: *çiçək \to [çiçəx']*. Saitlə başladıqda $y$-ə keçir: *çiçəyə*.
+### 2. Lorens Qüvvəsi
+Maqnit sahəsinin hərəkət edən yüklü zərrəciyə göstərdiyi qüvvədir:
+$$F_L = |q| \cdot v \cdot B \cdot \sin \alpha$$
+- Lorens qüvvəsi hərəkət sürətinə həmişə perpendikulyardır ($\vec{F}_L \perp \vec{v}$), buna görə də **iş görmür** ($A = 0$) və sürətin modulunu dəyişmir, yalnız istiqamətini dəyişir.
 
-### 3. Vurğu
-Sözdə hecalardan birinin digərlərinə nisbətən qüvvətli deyilməsinə **heca vurğusu** deyilir. Azərbaycan dilində vurğu əsasən **sonuncu hecaya** düşür.
-- Vurğu qəbul etməyən şəkilçilər: *-ma²* (inkarlıq), *-ca²* (zərf düzəldən), şəxs (xəbərlik) şəkilçiləri, *-gil, -raq*.
+### 3. Zərrəciyin Maqnit Sahəsində Çevrə Üzrə Hərəkəti
+Əgər zərrəcik sahəyə perpendikulyar daxil olarsa ($\alpha = 90^\circ$), Lorens qüvvəsi mərkəzəqaçma qüvvəsi rolunu oynayır ($F_L = F_{\text{mq}}$):
+$$|q| v B = \frac{m v^2}{r} \implies r = \frac{m v}{|q| B}$$
+- **Fırlanma periodu:**
+$$T = \frac{2\pi r}{v} = \frac{2\pi m}{|q| B} \quad (\text{sürətdən asılı deyil!})$$
     `,
     keyFormulas: [
       {
-            "id": "f-az10-u1-1",
-            "name": "Sonu Q və K ilə Bitən Sözlərin Tələffüz Qaydası",
-            "latex": "\\text{Qonaq} \\to [\\text{qonax}]; \\quad \\text{Qonağa} \\to [\\text{qonağa}]; \\qquad \\text{Çiçək} \\to [\\text{çiçəx'}]; \\quad \\text{Çiçəyə} \\to [\\text{çiçəyə}]",
-            "description": "Söz sonu q və k samitlərinin mövqedən asılı tələffüz qanunudur."
+            "id": "f-p11-u1-1",
+            "name": "Lorens Qüvvəsi",
+            "latex": "F_L = |q| v B \\sin \\alpha",
+            "description": "Maqnit sahəsində hərəkət edən yükə təsir edən qüvvədir."
+      },
+      {
+            "id": "f-p11-u1-2",
+            "name": "Cismin Trayektoriya Radiusu",
+            "latex": "r = \\frac{m v}{|q| B}",
+            "description": "Zərrəciyin cızdığı çevrənin radiusudur."
       }
 ],
     glossary: [
       {
-            "term": "Orfoepiya",
-            "definition": "Dildəki sözlərin ədəbi tələffüz qaydalarının məcmusu."
+            "term": "Tesla (Tl)",
+            "definition": "BS-də maqnit sahəsinin induksiya vahidi."
       },
       {
-            "term": "Orfoqrafiya",
-            "definition": "Sözlərin düzgün yazılış qaydaları sistemi."
+            "term": "Lorens qüvvəsi",
+            "definition": "Maqnit sahəsi tərəfindən hərəkətdə olan yükə təsir edən və iş görməyən qüvvə."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az10-u1-1",
-            "question": "\"Kəpənək\" sözünün tələffüz transkripsiyasını yazın.",
-            "solution": "Sözün sonundakı 'k' samiti kar tələffüz olunur: [kəpənəx']."
+            "id": "ex-p11-u1-1",
+            "question": "Uzunluğu 0.5 m olan naqildən 4 A cərəyan keçir. O, $B = 0.2 \\text{ Tl}$ olan bircins maqnit sahəsinə perpendikulyar yerləşdirilib. Amper qüvvəsini tapın.",
+            "solution": "$F_A = I \\cdot B \\cdot l \\cdot \\sin 90^\\circ = 4 \\cdot 0.2 \\cdot 0.5 \\cdot 1 = 0.4 \\text{ N}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az10-u1-1",
-            "question": "Aşağıdakı sözlərdən hansında vurğu birinci hecaya düşür?",
+            "questionId": "mq-p11-u1-1",
+            "question": "Lorens qüvvəsinin gördüyü mexaniki iş nəyə bərabərdir?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Qələm"
+                        "text": "q · v · B"
                   },
                   {
                         "key": "B",
-                        "text": "Dünən"
+                        "text": "mv^2 / 2"
                   },
                   {
                         "key": "C",
-                        "text": "Kitabça"
+                        "text": "0"
                   },
                   {
                         "key": "D",
-                        "text": "Dənizçi"
+                        "text": "I · B · l"
                   }
             ],
-            "correctKey": "B",
-            "explanation": "'Dünən' zaman zərfində vurğu birinci hecaya düşür ('dü-nən)."
+            "correctKey": "C",
+            "explanation": "Lorens qüvvəsi həmişə sürət vektoruna perpendikulyar olduğu üçün gördüyü iş sıfıra bərabərdir (A = 0)."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-10-u2-lexicology-idioms',
-    subjectId: 'azerbaycan_dili',
-    grade: 10,
-    unit: 'Bölmə 2: Leksikologiya və Frazeologiya',
+    id: 'lesson-phys-11-u2-self-induction-transformers',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 2: Elektromaqnit induksiyası və Öz-özünə induksiya',
     unitOrder: 2,
-    title: 'Leksik laylar: Terminlər, arxaizmlər, neologizmlər və frazeologizmlər',
+    title: 'Öz-özünə induksiya, induktivlik, maqnit enerjisi və transformator',
     order: 1,
     readTimeMinutes: 10,
     difficulty: 3,
-    summary: 'Milli və alınma sözlər, köhnəlmiş sözlər (arxaizmlər və tarixi sözlər), neologizmlər (yeni sözlər) və sabit söz birləşmələri (frazeoloji birləşmələr).',
+    summary: 'Öz-özünə induksiya hadisəsi, sarğacın induktivliyi $L$, maqnit sahəsinin enerjisi $W = L I^2 / 2$ və transformatorun iş prinsipi.',
     theoryMarkdown: `
-### 1. Dilin Lüğət Tərkibinin Zənginləşməsi
-Dilin lüğət tərkibi daxili imkanlar (yeni söz yaratma) və xarici mənbələr (alınma sözlər) hesabına zənginləşir.
+### 1. Öz-özünə İnduksiya və İnduktivlik
+Dövrədən keçən cərəyan şiddəti dəyişdikdə həmin naqildə yaranan dəyişən maqnit selinin naqilin özündə induksiya EHQ-si doğurması hadisəsinə **öz-özünə induksiya** deyilir.
+- **Xüsusi maqnit seli:** $\Phi = L \cdot I$.
+- $L$ — sarğacın **induktivliyidir**. BS-də vahidi **henridir** ($1 \text{ Hn} = 1 \text{ Vb/A}$).
+- **Öz-özünə induksiya EHQ-si:**
+$$\varepsilon_{si} = -L \cdot \frac{\Delta I}{\Delta t}$$
 
-### 2. Müasir Dildə İşlənmə Dərəcəsinə Görə Sözlər
-- **Fəal sözlər:** Gündəlik nitqdə müntəzəm istifadə olunan sözlər.
-- **Qeyri-fəal sözlər:**
-  - **Tarixi sözlər:** Keçmişdə mövcud olmuş, lakin həmin əşya və ya vəzifə aradan qalxdığı üçün köhnəlmiş sözlər (*darğa, yasavul, çarx, arşın*).
-  - **Arxaizmlər:** Əşya yaşayır, lakin onun adı başqa sözlə əvəzlənib (*ayaq — qədəh, əsən — sağ-salamat, tanıq — şahid*).
-  - **Neologizmlər:** Elmin, texnologiyanın inkişafı ilə dilə yeni daxil olmuş sözlər (*çat, dron, smartfon, ekosistem*).
+### 2. Maqnit Sahəsinin Enerjisi
+Cərəyanlı sarğacın daxilindəki maqnit sahəsinin enerjisi:
+$$W_m = \frac{L \cdot I^2}{2} = \frac{\Phi \cdot I}{2} = \frac{\Phi^2}{2L}$$
 
-### 3. Frazeoloji Birləşmələr (Sabit Söz Birləşmələri)
-Tərkib hissələrinə parçalanmayan, mənaca bütöv bir sözə bərabər olan sabit ifadələrdir:
-- Tərkibindəki sözlər öz həqiqi mənasını tam itirir (*gözdən düşmək, burnunun ucu göynəmək, qulaq asmaq*).
-- Cümlənin **tək bir mürəkkəb üzvü** olur.
-- Frazeoloji omonimlik, sinonimlik və antonimlik mövcuddur:
-  *Can vermək* (omonim: ölmək / dirilmək).
-  *Dil-dil ötmək = ağzına su almaq* (antonim).
+### 3. Transformator
+Dəyişən cərəyanın tezliyini dəyişmədən gərginliyini artıran və ya azaldan qurğudur.
+- **Transformasiya əmsalı:**
+$$k = \frac{U_1}{U_2} \approx \frac{N_1}{N_2} \approx \frac{I_2}{I_1}$$
+- $k > 1$ olduqda alçaldıcı, $k < 1$ olduqda yüksəldici transformatordur.
     `,
     keyFormulas: [
       {
-            "id": "f-az10-u2-1",
-            "name": "Frazeoloji Birləşmələrin Sintaktik Xassəsi",
-            "latex": "\\text{Frazeologizm} = \\text{Bölünməz vahid} \\implies \\text{Cümlədə tək bir üzv kimi götürülür}",
-            "description": "Cümlə təhlili zamanı frazeoloji birləşmə tərkib hissələrinə ayrılmır."
+            "id": "f-p11-u2-1",
+            "name": "Sarğacın Maqnit Enerjisi",
+            "latex": "W_m = \\frac{L \\cdot I^2}{2}",
+            "description": "Cərəyanlı induktiv sarğacın maqnit sahəsində toplanan enerjidir."
+      },
+      {
+            "id": "f-p11-u2-2",
+            "name": "Transformasiya Əmsalı",
+            "latex": "k = \\frac{U_1}{U_2} = \\frac{N_1}{N_2}",
+            "description": "Gərginliklərin nisbəti sarğılar sayının nisbətinə bərabərdir."
       }
 ],
     glossary: [
       {
-            "term": "Frazeologizm",
-            "definition": "Məcazi məna daşıyan və bütövlükdə bir anlayışı ifadə edən sabit söz birləşməsi."
+            "term": "Henri (Hn)",
+            "definition": "Cərəyan 1 saniyədə 1 A dəyişdikdə 1 V öz-özünə induksiya EHQ-si yaradan sarğacın induktivliyi."
       },
       {
-            "term": "Arxaizm",
-            "definition": "Müasir dildə başqa sözlə əvəz olunmuş köhnəlmiş söz."
+            "term": "Transformator",
+            "definition": "Elektromaqnit induksiyası əsasında dəyişən gərginliyi çevirən statik elektromaqnit qurğusu."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az10-u2-1",
-            "question": "\"Şagird müəllimin izahatına qulaq asırdı\" cümləsindəki frazeologizmi tapın və cümlə üzvünü təyin edin.",
-            "solution": "\"qulaq asırdı\" frazeoloji birləşmədir (dinləyirdi mənasında) və bütövlükdə cümlənin feli xəbəridir."
+            "id": "ex-p11-u2-1",
+            "question": "İnduktivliyi $0.4 \\text{ Hn}$ olan sarğacdan 5 A cərəyan keçir. Maqnit sahəsinin enerjisini tapın.",
+            "solution": "$W_m = \\frac{L \\cdot I^2}{2} = \\frac{0.4 \\cdot 5^2}{2} = \\frac{0.4 \\cdot 25}{2} = 5 \\text{ C}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az10-u2-1",
-            "question": "Aşağıdakı cütlüklərdən hansı frazeoloji sinonimdir?",
+            "questionId": "mq-p11-u2-1",
+            "question": "Transformatorun birinci dolağında 1000 sarğı, ikinci dolağında 200 sarğı var. Transformasiya əmsalı k neçədir?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Cin atına minmək — Zəhləsi getmək"
+                        "text": "0.2"
                   },
                   {
                         "key": "B",
-                        "text": "Gözünün odunu almaq — Qorxutmaq"
+                        "text": "5"
                   },
                   {
                         "key": "C",
-                        "text": "Burnunun ucu göynəmək — Əldən düşmək"
+                        "text": "200"
                   },
                   {
                         "key": "D",
-                        "text": "Ağzına su almaq — Dinib-danışmamaq"
+                        "text": "10"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "k = N1 / N2 = 1000 / 200 = 5 (alçaldıcı transformatordur)."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-11-u3-ac-circuits',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 3: Elektromaqnit rəqsləri və Dəyişən cərəyan',
+    unitOrder: 3,
+    title: 'Rəqs konturu, Tomson düsturu və dəyişən cərəyan müqavimətləri',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'İdeal rəqs konturu (kondensator və sarğac), Tomson düsturu $T = 2\pi\sqrt{LC}$, dəyişən cərəyanın təsiredici qiymətləri, induktiv ($X_L = \omega L$) və tutum ($X_C = 1/(\omega C)$) müqaviməti.',
+    theoryMarkdown: `
+### 1. İdeal Rəqs Konturu
+Kondensator ($C$) və induktiv sarğacdan ($L$) ibarət qapalı elektrik dövrəsinə **rəqs konturu** deyilir.
+- Dövrədə elektrik sahəsi enerjisi ilə maqnit sahəsi enerjisi bir-birinə çevrilir:
+$$W = \frac{q^2}{2C} + \frac{L i^2}{2} = \text{const}$$
+- **Tomson düsturu:** Sərbəst elektromaqnit rəqslərinin periodu:
+$$T = 2\pi \sqrt{L \cdot C}$$
+- Xüsusi dövri tezlik: $\omega_0 = \frac{2\pi}{T} = \frac{1}{\sqrt{LC}}$.
+
+### 2. Dəyişən Cərəyan və Təsiredici Qiymətlər
+Zaman keçdikcə həm qiyməti, həm də istiqaməti harmonik qanunla dəyişən cərəyandır:
+- **Təsiredici cərəyan və gərginlik:**
+$$I_{\text{təs}} = \frac{I_m}{\sqrt{2}} \approx 0.707 \cdot I_m, \qquad U_{\text{təs}} = \frac{U_m}{\sqrt{2}}$$
+
+### 3. Dəyişən Cərəyan Dövrəsində Müqavimətlər
+- **Aktiv müqavimət ($R$):** Naqilin elektrik müqavimətidir, fazaca gərginliklə eynidir.
+- **İnduktiv müqavimət ($X_L$):** Sarğacın göstərdiyi müqavimətdir: $X_L = \omega L$.
+- **Tutum müqaviməti ($X_C$):** Kondensatorun göstərdiyi müqavimətdir: $X_C = \frac{1}{\omega C}$.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p11-u3-1",
+            "name": "Tomson Düsturu",
+            "latex": "T = 2\\pi \\sqrt{L \\cdot C}",
+            "description": "Rəqs konturunda sərbəst elektromaqnit rəqslərinin periodudur."
+      },
+      {
+            "id": "f-p11-u3-2",
+            "name": "Təsiredici Gərginlik",
+            "latex": "U_{\\text{təs}} = \\frac{U_m}{\\sqrt{2}}",
+            "description": "Amplitud qiymətinin kök altında ikiyə nisbətidir (məişətdəki 220 V təsiredici qiymətdir)."
+      }
+],
+    glossary: [
+      {
+            "term": "Rəqs konturu",
+            "definition": "Kondensator və sarğacın birləşməsindən ibarət rəqsi sistem."
+      },
+      {
+            "term": "Təsiredici qiymət",
+            "definition": "Dəyişən cərəyanın eyni vaxtda ayrılan istiliyə görə sabit cərəyana ekvivalent qiyməti."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p11-u3-1",
+            "question": "Rəqs konturunda kondensatorun tutumu 4 dəfə artırılarsa, rəqs periodu necə dəyişər?",
+            "solution": "Tomson düsturuna görə $T = 2\\pi\\sqrt{LC}$. Tutum 4 dəfə artarsa, period $\\sqrt{4} = 2$ dəfə artar."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p11-u3-1",
+            "question": "Məişətdəki şəbəkə gərginliyinin təsiredici qiyməti $U_{\\text{təs}} = 220 \\text{ V}$ olarsa, amplitud qiyməti $U_m$ təxminən neçə voltdur?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "110 V"
+                  },
+                  {
+                        "key": "B",
+                        "text": "220 V"
+                  },
+                  {
+                        "key": "C",
+                        "text": "311 V"
+                  },
+                  {
+                        "key": "D",
+                        "text": "440 V"
+                  }
+            ],
+            "correctKey": "C",
+            "explanation": "Um = U_təs * √2 = 220 * 1.414 ≈ 311 V."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-11-u4-wave-optics',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 4: Dalğa optikası',
+    unitOrder: 4,
+    title: 'İşığın dispersiyası, interferensiyası, difraksiyası və difraksiya qəfəsi',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Nyuton təcrübəsi (ağ işığın rənglərə ayrılması), koherent mənbələr, dalğaların üst-üstə düşməsi (interferensiya), difraksiya qəfəsi düsturu $d \sin\varphi = k\lambda$.',
+    theoryMarkdown: `
+### 1. İşığın Dispersiyası
+Mühitin sındırma əmsalının işığın tezliyindən (rəngindən) asılılığı hadisəsinə **işığın dispersiyası** deyilir.
+- İ.Nyuton prizma vasitəsilə ağ işığı 7 əsas spektrə ayırmışdır: qırmızı, narıncı, sarı, yaşıl, mavi, göy, bənövşəyi.
+- Qırmızı işığın dalğa uzunluğu ən böyük, tezliyi və sındırma əmsalı ən kiçikdir ($n_q < n_b$). Ən çox sınan bənövşəyi şüadır.
+
+### 2. İşığın İnterferensiyası
+Eyni tezlikli və fazalar fərqi sabit olan iki və ya daha artıq **koherent dalğanın** fəzada görüşərək bir-birini gücləndirməsi və ya zəiflətməsi hadisəsidir.
+- **Maksimum şərti (güclənmə):** Yollar fərqi dalğa uzunluğunun tam mislinə bərabər olduqda:
+$$\Delta d = k \cdot \lambda \quad (k = 0, \pm 1, \pm 2, \dots)$$
+- **Minimum şərti (zəifləmə):** Yollar fərqi tək sayda yarım dalğa uzunluğuna bərabər olduqda:
+$$\Delta d = (2k + 1) \frac{\lambda}{2}$$
+
+### 3. İşığın Difraksiyası və Difraksiya Qəfəsi
+İşığın maneələrin kənarından əyilərək həndəsi kölgə sahəsinə keçməsi hadisəsinə **difraksiya** deyilir.
+- **Difraksiya qəfəsi:** Bir-birinə paralel çoxlu sayda xırda yarıqlardan ibarət spektral sistemdir.
+- **Difraksiya qəfəsi düsturu:**
+$$d \cdot \sin \varphi = k \cdot \lambda$$
+$d = a + b$ — qəfəs sabiti (periodu), $\varphi$ — difraksiya bucağı, $k$ — spektrin tərtibidir.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p11-u4-1",
+            "name": "Difraksiya Qəfəsi Düsturu",
+            "latex": "d \\cdot \\sin \\varphi = k \\cdot \\lambda",
+            "description": "Əsas maksimumların bucaq vəziyyətini müəyyən edən şərtdir."
+      },
+      {
+            "id": "f-p11-u4-2",
+            "name": "İnterferensiya Maksimum Şərti",
+            "latex": "\\Delta d = k \\cdot \\lambda",
+            "description": "Yollar fərqi tam sayda dalğa uzunluğuna bərabər olduqda aydın parlaq zolaq alınır."
+      }
+],
+    glossary: [
+      {
+            "term": "Dispersiya",
+            "definition": "İşığın dalğa uzunluğundan asılı olaraq mühitdə fərqli sürətlə yayılması və sınması."
+      },
+      {
+            "term": "Koherentlik",
+            "definition": "Tezlikləri eyni və fazalar fərqi zaman keçdikcə sabit qalan dalğalar."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p11-u4-1",
+            "question": "Periodu $d = 2 \\cdot 10^{-6} \\text{ m}$ olan difraksiya qəfəsi üzərinə $\\lambda = 500 \\text{ nm}$ ($5 \\cdot 10^{-7} \\text{ m}$) dalğalı işıq düşür. Birinci tərtib ($k = 1$) maksimum üçün $\\sin \\varphi$-ni tapın.",
+            "solution": "$\\sin \\varphi = \\frac{k \\lambda}{d} = \\frac{1 \\cdot 5 \\cdot 10^{-7}}{2 \\cdot 10^{-6}} = 0.25$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p11-u4-1",
+            "question": "Ağ işıq şüşə prizmadan keçərkən ən çox meyil edən (sınan) rəng hansıdır?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Qırmızı"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Sarı"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Yaşıl"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Bənövşəyi"
                   }
             ],
             "correctKey": "D",
-            "explanation": "'Ağzına su almaq' və 'dinib-danışmamaq' eyni mənanı (susmağı) ifadə edən frazeoloji qarşılıqdır."
+            "explanation": "Bənövşəyi şüanın tezliyi ən böyük və sındırma əmsalı ən yüksək olduğu üçün prizmada ən çox sınır."
       }
 ]
   },
 
   {
-    id: 'lesson-azeri-10-u3-orthography-rules',
-    subjectId: 'azerbaycan_dili',
-    grade: 10,
-    unit: 'Bölmə 3: Morfologiya və orfoqrafiya qaydaları',
-    unitOrder: 3,
-    title: 'Mürəkkəb sözlərin və hissəciklərin yazılış qaydaları (Bitişik, defis və ayrı)',
+    id: 'lesson-phys-11-u5-quantum-photoelectric',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 5: Kvant fizikası və İşıq kvantları',
+    unitOrder: 5,
+    title: 'Kvant hipotezi, fotoeffekt hadisəsi və Eynşteyn tənliyi',
     order: 1,
     readTimeMinutes: 10,
     difficulty: 3,
-    summary: 'Mürəkkəb isimlərin, sifətlərin, sayların və zərflərin yazılışı, -mı⁴, da/də, idi/imiş hissəciklərinin və qoşmaların orfoqrafiyası.',
+    summary: 'Plank hipotezi $E = h\nu$, fotonun enerjisi və impulsu $p = h/\lambda$, fotoeffekt qanunları, çıxış işi və Eynşteyn tənliyi $h\nu = A_{\text{çıx}} + E_k$.',
     theoryMarkdown: `
-### 1. Bitişik Yazılan Mürəkkəb Sözlər
-- Müxtəlif mənalı sözlərin birləşməsindən yarananlar: *dəvədabanı, tozsoran, suiti, günəbaxan*.
-- İki sadə sözün arasında bitişdirici -a² şəkilçisi olduqda: *qaçaqaç, basabas, vurhavur*.
-- Birinci tərəfi kontr-, vitse- kimi olmayan mürəkkəb adlar.
+### 1. Plank Hipotezi və Foton
+1900-cü ildə M.Plank irəli sürdü ki, atomlar elektromaqnit şüalarını kəsilməz deyil, ayrı-ayrı paylarla — **kvantlarla** (fotonlarla) şüalandırır və udur.
+- **Fotonun enerjisi:**
+$$E = h \cdot \nu = \frac{h c}{\lambda}$$
+$h = 6.63 \cdot 10^{-34} \text{ C} \cdot \text{san}$ — Plank sabitidir.
+- Fotonun sükunət kütləsi sıfırdır ($m_0 = 0$).
+- **Fotonun impulsu:**
+$$p = \frac{E}{c} = \frac{h}{\lambda}$$
 
-### 2. Defislə Yazılan Mürəkkəb Sözlər
-- Eyni sözün təkrarı ilə yarananlar: *tez-tez, asta-asta, səhər-səhər*.
-- Yaxın və ya əks mənalı sözlərin birləşməsi: *dərə-təpə, gecə-gündüz, qohum-əqrəba*.
-- Tərəflərindən biri və ya hər ikisi ayrılıqda işlənməyən sözlər: *kağız-kuğuz, əzik-üzük, kələ-kötür*.
-- İzafət tərkibləri: *tərzi-hərəkət, nöqteyi-nəzər*.
-- Əks-, qeyri-, vitse-, ober- ön şəkilçili sözlər: *qeyri-maddi, vitse-prezident, əks-inqilab*.
+### 2. Xarici Fotoeffekt və Qanunları
+İşığın təsiri altında maddədən (əsasən metallardan) elektronların qopması hadisəsinə **xarici fotoeffekt** deyilir.
+- **I Qanun (Stoletov qanunu):** Doyma fotocərəyanının şiddəti katodun vahid zamanda udduğu işıq enerjisi ilə düz mütənasibdir.
+- **II Qanun:** Qopan fotoelektronların maksimal kinetik enerjisi işığın tezliyi ilə xətti artır, lakin işığın intensivliyindən asılı deyil.
+- **III Qanun (Fotoeffektin qırmızı sərhədi):** Fotoeffekt yalnız işığın tezliyi metal üçün xarakterik olan müəyyən minimal $\nu_0$ tezliyindən böyük olduqda baş verir:
+$$\nu \ge \nu_0 = \frac{A_{\text{çıx}}}{h}, \qquad \lambda \le \lambda_0 = \frac{h c}{A_{\text{çıx}}}$$
 
-### 3. Köməkçi Sözlərin Yazılışı
-- **Da, də:** Bağlayıcı olduqda **ayrı** (*Əli də gəldi*), yerlik hal və ya ədat olduqda **bitişik** yazılır (*evdə, gəlsənə*).
-- **Mı, mi, mu, mü:** Sual ədatı həmişə sözdən **ayrı** yazılır: *Gəldin mi? Oxudun mu?*
-- **İdi, imiş, isə:** Qısaldılmış formaları *-dı⁴, -mış⁴, -sa²* bitişik, tam formaları isə ayrı yazılır (*oxuyurdu / oxuyur idi*).
+### 3. Fotoeffekt üçün Eynşteyn Tənliyi
+Enerjinin saxlanması qanununa əsasən, udulan fotonun enerjisi elektronun metaldan çıxış işinə və ona kinetik enerji verilməsinə sərf olunur:
+$$h \nu = A_{\text{çıx}} + \frac{m v_{\max}^2}{2} = A_{\text{çıx}} + e U_t$$
+$U_t$ — ləngidici gərginlikdir.
     `,
     keyFormulas: [
       {
-            "id": "f-az10-u3-1",
-            "name": "Qeyri və İzafət Birləşmələrinin Yazılışı",
-            "latex": "\\text{qeyri-} + \\text{Söz} \\implies \\text{Defis}; \\qquad \\text{tərzi-} + \\text{hərəkət} \\implies \\text{Defis}",
-            "description": "Qeyri- hissəciyi və tərzi-, nöqteyi- tipli ərəb tərkibləri defislə yazılır."
+            "id": "f-p11-u5-1",
+            "name": "Fotoeffekt üçün Eynşteyn Tənliyi",
+            "latex": "h \\nu = A_{\\text{çıx}} + \\frac{m v_{\\max}^2}{2}",
+            "description": "Foton enerjisinin çıxış işi və maksimal kinetik enerjiyə paylanması qanunudur."
+      },
+      {
+            "id": "f-p11-u5-2",
+            "name": "Fotoeffektin Qırmızı Sərhədi",
+            "latex": "\\lambda_0 = \\frac{h c}{A_{\\text{çıx}}}",
+            "description": "Fotoeffektin baş verə bildiyi maksimal dalğa uzunluğudur."
       }
 ],
     glossary: [
       {
-            "term": "Orfoqrafiya norması",
-            "definition": "Sözlərin qəbul edilmiş vahid və düzgün yazılış qanunauyğunluğu."
+            "term": "Foton",
+            "definition": "İşıq şüalanmasının ən kiçik elementar zərrəciyi, işıq kvantı."
       },
       {
-            "term": "İzafət",
-            "definition": "Klassik ərəb-fars mənşəli tərzi-hərəkət tipli defisli sintaktik birləşmə."
+            "term": "Çıxış işi",
+            "definition": "Elektronu metalın səthindən qoparmaq üçün tələb olunan minimum iş."
       }
 ],
     solvedExamples: [
       {
-            "id": "ex-az10-u3-1",
-            "question": "\"Qeyri adi\" və \"qaça qaç\" sözlərinin orfoqrafik düzəlişini verin.",
-            "solution": "\"Qeyri-adi\" defislə yazılmalıdır. \"Qaçaqaç\" isə bitişdirici -a saiti ilə düzəldiyi üçün bitişik yazılmalıdır."
+            "id": "ex-p11-u5-1",
+            "question": "Fotonun enerjisi $E = 5 \\text{ eV}$, metalın çıxış işi $A_{\\text{çıx}} = 3 \\text{ eV}$-dir. Qopan elektronların maksimal kinetik enerjisini tapın.",
+            "solution": "Eynşteyn tənliyinə görə: $E_k = h\\nu - A_{\\text{çıx}} = 5 - 3 = 2 \\text{ eV}$."
       }
 ],
     miniQuiz: [
       {
-            "questionId": "mq-az10-u3-1",
-            "question": "Aşağıdakı sözlərdən hansının yazılışı düzgündür?",
+            "questionId": "mq-p11-u5-1",
+            "question": "Fotoelektronların maksimal kinetik enerjisi hansı parametrdən asılıdır?",
             "options": [
                   {
                         "key": "A",
-                        "text": "Qeyri adi"
+                        "text": "İşığın intensivliyindən"
                   },
                   {
                         "key": "B",
-                        "text": "Dəvə dabanı"
+                        "text": "Düşən işığın tezliyindən"
                   },
                   {
                         "key": "C",
-                        "text": "Nöqteyi-nəzər"
+                        "text": "İşıqlanma müddətindən"
                   },
                   {
                         "key": "D",
-                        "text": "Gecə gündüz"
+                        "text": "Mənbəyə qədər olan məsafədən"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Eynşteyn tənliyinə görə maksimal kinetik enerji işığın intensivliyindən deyil, yalnız düşən işığın tezliyindən xətti asılıdır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-11-u6-bohr-postulates-lasers',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 6: Atom fizikası və Kvant postulatları',
+    unitOrder: 6,
+    title: 'Bor postulatları, hidrogen atomunun spektri və lazerlər',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Nils Borun iki kvant postulatı, stasionar hallar, şüalanma və udulma tezliyi $h\nu = E_k - E_n$, optik kvant generatorları (lazerlər).',
+    theoryMarkdown: `
+### 1. Bor Postulatları
+Klassik elektrodinamikaya görə təcillə hərəkət edən elektron fasiləsiz şüalanmalı və nüvəyə düşməli idi. N.Bor 1913-cü ildə iki dahi postulatla bunu izah etdi:
+- **I Postulat (Stasionar hallar):** Atom yalnız xüsusi stasionar (şüalanmayan) hallarda ola bilər. Bu hallarda hərəkət edən elektron şüalanmır. Elektronun impuls momenti kvantlanır:
+$$m_e v r = n \cdot \frac{h}{2\pi} \quad (n = 1, 2, 3, \dots)$$
+- **II Postulat (Şüalanma və udulma):** Atom bir stasionar haldan ($E_k$) digər stasionar hala ($E_n$) keçdikdə bir foton şüalandırır və ya udur:
+$$h \nu = |E_k - E_n|$$
+  - $E_k > E_n$ olduqda: **şüalanma** baş verir.
+  - $E_n > E_k$ olduqda: **udulma** baş verir.
+
+### 2. Hidrogen Atomunun Enerji Səviyyələri
+Əsas hal ($n=1$): $E_1 = -13.6 \text{ eV}$.
+İxtiyari səviyyə:
+$$E_n = -\frac{13.6}{n^2} \text{ eV}$$
+
+### 3. Məcburi Şüalanma və Lazerlər
+Fotonun təsiri altında həyəcanlanmış atomun ilkin fotonla eyni tezlikli, eyni fazalı və eyni istiqamətli ikinci bir foton şüalandırmasına **məcburi şüalanma** deyilir.
+- **Lazer (Optik Kvant Generatoru):** Məcburi şüalanma əsasında işləyən yüksək koherent, monoxromatik və dar istiqamətli güclü işıq mənbəyidir.
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p11-u6-1",
+            "name": "Borun İkinci Postulatı",
+            "latex": "h \\nu = E_k - E_n",
+            "description": "Şüalanan fotonun enerjisi iki stasionar halın enerji fərqinə bərabərdir."
+      },
+      {
+            "id": "f-p11-u6-2",
+            "name": "Hidrogen Atomunun Enerji Səviyyələri",
+            "latex": "E_n = -\\frac{13.6}{n^2} \\text{ eV}",
+            "description": "n-ci kvant səviyyəsində elektronun enerjisidir."
+      }
+],
+    glossary: [
+      {
+            "term": "Stasionar hal",
+            "definition": "Atomun enerji şüalandırmadığı dayanıqlı kvant vəziyyəti."
+      },
+      {
+            "term": "Lazer",
+            "definition": "Məcburi şüalanma prinsipi ilə işləyən güclü monoxromatik və koherent işıq şüalandırıcısı."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p11-u6-1",
+            "question": "Atom $E_3 = -1.5 \\text{ eV}$ səviyyəsindən $E_1 = -13.6 \\text{ eV}$ əsas səviyyəsinə keçdikdə şüalanan fotonun enerjisini tapın.",
+            "solution": "$E_{\\text{foton}} = E_3 - E_1 = -1.5 - (-13.6) = 13.6 - 1.5 = 12.1 \\text{ eV}$."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p11-u6-1",
+            "question": "Atom elektronun aşağı enerji səviyyəsindən yuxarı enerji səviyyəsinə keçməsi zamanı nə baş verir?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Foton şüalandırır"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Foton udur"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Elektron itirir"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Heç bir enerji dəyişmir"
+                  }
+            ],
+            "correctKey": "B",
+            "explanation": "Aşağı səviyyədən yuxarı səviyyəyə keçmək üçün atom mütləq foton udmalıdır."
+      }
+]
+  },
+
+  {
+    id: 'lesson-phys-11-u7-nuclear-binding-energy',
+    subjectId: 'fizika',
+    grade: 11,
+    unit: 'Bölmə 7: Nüvə və elementar zərrəciklər fizikası',
+    unitOrder: 7,
+    title: 'Nüvənin rabitə enerjisi, kütlə qüsuru və radioaktiv parçalanma qanunu',
+    order: 1,
+    readTimeMinutes: 10,
+    difficulty: 3,
+    summary: 'Güclü qarşılıqlı təsir (nüvə qüvvələri), kütlə qüsuru $\Delta m$, rabitə enerjisi $E_r = \Delta m c^2$, radioaktiv parçalanma qanunu $N = N_0 2^{-t/T}$ və 4 fundamental qarşılıqlı təsir.',
+    theoryMarkdown: `
+### 1. Nüvə Qüvvələri və Kütlə Qüsuru
+Protonları və neytronları nüvədə bir yerdə saxlayan qüvvələr **nüvə qüvvələridir** (güclü qarşılıqlı təsir). Təbiətin ən güclü, lakin qısamənzilli ($10^{-15} \text{ m}$) qüvvələridir.
+- **Kütlə qüsuru ($\Delta m$):** Nüvəni təşkil edən sərbəst proton və neytronların kütlələri cəmi ilə həmin nüvənin bütöv kütləsi arasındakı fərqdir:
+$$\Delta m = (Z \cdot m_p + N \cdot m_n) - M_{\text{nüvə}} > 0$$
+
+### 2. Nüvənin Rabitə Enerjisi
+Nüvəni ayrı-ayrı sərbəst nuklonlara parçalamaq üçün lazım olan minimum enerjiyə **rabitə enerjisi** deyilir:
+$$E_r = \Delta m \cdot c^2 = [(Z m_p + N m_n) - M_{\text{nüvə}}] \cdot c^2$$
+- Xüsusi rabitə enerjisi: $\varepsilon = \frac{E_r}{A}$ (bir nuklona düşən rabitə enerjisi). Maksimum qiyməti dəmir ($^{56}\text{Fe}$) nüvəsindədir ($\approx 8.8 \text{ MeV/nuklon}$).
+
+### 3. Radioaktiv Parçalanma Qanunu
+Radioaktiv atomların ilkin sayının yarısının parçalanmasına sərf olunan zamana **yarımparçalanma periodu** ($T$) deyilir:
+$$N(t) = N_0 \cdot 2^{-\frac{t}{T}}$$
+
+### 4. Dörd Fundamental Qarşılıqlı Təsir
+Kainatda bütün proseslər 4 fundamental qüvvə ilə idarə olunur:
+1. **Qravitasiya qarşılıqlı təsiri** (ən zəif, sonsuz mənzilli).
+2. **Elektromaqnit qarşılıqlı təsiri** (sonsuz mənzilli, yüklər arasında).
+3. **Güclü (nüvə) qarşılıqlı təsiri** (ən güclü, nüvədə nuklonlar arasında).
+4. **Zəif qarşılıqlı təsir** (beta-parçalanma və neytrino proseslərində).
+    `,
+    keyFormulas: [
+      {
+            "id": "f-p11-u7-1",
+            "name": "Nüvənin Rabitə Enerjisi",
+            "latex": "E_r = \\Delta m \\cdot c^2",
+            "description": "Kütlə qüsurunun işıq sürətinin kvadratı ilə hasilidir."
+      },
+      {
+            "id": "f-p11-u7-2",
+            "name": "Radioaktiv Parçalanma Qanunu",
+            "latex": "N = N_0 \\cdot 2^{-t/T}",
+            "description": "Parçalanmamış radioaktiv nüvələrin sayının zamandan asılılığıdır."
+      }
+],
+    glossary: [
+      {
+            "term": "Kütlə qüsuru (Δm)",
+            "definition": "Nuklonların fərdi kütlələri cəminin bütöv nüvənin kütləsindən böyük olması fərqi."
+      },
+      {
+            "term": "Yarımparçalanma periodu (T)",
+            "definition": "Radioaktiv nüvələrin tən yarısının parçalanması üçün keçən zaman fasiləsi."
+      }
+],
+    solvedExamples: [
+      {
+            "id": "ex-p11-u7-1",
+            "question": "Yarımparçalanma periodu $T = 5$ gün olan maddənin 15 gün sonra hansı hissəsi parçalanmamış qalar?",
+            "solution": "Zaman $t = 15$ gün. $t / T = 15 / 5 = 3$. Qalan hissə: $\\frac{N}{N_0} = 2^{-3} = \\frac{1}{2^3} = \\frac{1}{8}$ hissəsi qalar ($87.5\\%$-i parçalanar)."
+      }
+],
+    miniQuiz: [
+      {
+            "questionId": "mq-p11-u7-1",
+            "question": "Təbiətdəki dörd fundamental qarşılıqlı təsirdən ən güclüsü hansıdır?",
+            "options": [
+                  {
+                        "key": "A",
+                        "text": "Qravitasiya qarşılıqlı təsiri"
+                  },
+                  {
+                        "key": "B",
+                        "text": "Elektromaqnit qarşılıqlı təsiri"
+                  },
+                  {
+                        "key": "C",
+                        "text": "Güclü qarşılıqlı təsir"
+                  },
+                  {
+                        "key": "D",
+                        "text": "Zəif qarşılıqlı təsir"
                   }
             ],
             "correctKey": "C",
-            "explanation": "Nöqteyi-nəzər izafət tərkibidir və defislə düzgün yazılmışdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-10-u4-literary-norms',
-    subjectId: 'azerbaycan_dili',
-    grade: 10,
-    unit: 'Bölmə 4: Ədəbi dilin normaları',
-    unitOrder: 4,
-    title: 'Ədəbi dilin normaları: Fonetik, leksik və qrammatik normalar',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Müasir Azərbaycan ədəbi dilinin 3 əsas norması (fonetik, leksik, qrammatik), normanın pozulması halları və redaktə prinsipləri.',
-    theoryMarkdown: `
-### 1. Ədəbi Dilin Normaları Nədir?
-Ədəbi dil ümumxalq dilinin cilalanmış, hamı tərəfindən qəbul edilmiş qayda-qanunlara tabe olan ən yüksək formasıdır. 3 əsas norması var:
-
-### 2. Üç Əsas Norma
-1. **Fonetik norma:**
-   - Sözlərin mövcud orfoepiya və orfoqrafiya qaydalarına uyğun tələffüzü və yazılışıdır.
-   - Ahəng qanununa əməl olunması, səslərin düzgün yazılışı.
-   - *Pozulma halı:* "təxəllüs" əvəzinə "təxəllüz", "getmişik" əvəzinə "getmişux" yazmaq və ya demək.
-2. **Leksik norma:**
-   - Hər bir sözün öz dəqiq mənasında və yerində işlədilməsidir.
-   - Dialekt, jarqon və loru sözlərin ədəbi dildə işlədilməməsi.
-   - *Pozulma halı:* "Həkim xəstəni müalicə etdi" əvəzinə "Həkim xəstəni təmir etdi" işlətmək.
-3. **Qrammatik norma:**
-   - Sözlərin morfoloji quruluşunun və cümlədə sintaktik sırasının düzgün qurulmasıdır.
-   - Şəkilçilərin düzgün ardıcıllığı, mübtəda ilə xəbərin uzlaşması, söz sırası.
-   - *Pozulma halı:* "Uşaqlar gəldi" (yerinə gəldilər), "kitablar çoxdur" yerinə "çox kitablar oxudular" (çox sayından sonra isim təkdə olmalıdır).
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az10-u4-1",
-            "name": "Norma Təsnifatı",
-            "latex": "\\text{Fonetik} \\implies \\text{Səs/Yazı}; \\quad \\text{Leksik} \\implies \\text{Sözün mənası}; \\quad \\text{Qrammatik} \\implies \\text{Söz sırası/Şəkilçi}",
-            "description": "Xətanın xarakterinə görə normanın növü təyin olunur."
-      }
-],
-    glossary: [
-      {
-            "term": "Ədəbi norma",
-            "definition": "Ümumxalq tərəfindən qəbul olunmuş və dövlət dili səviyyəsində qorunan dil qanunauyğunluğu."
-      },
-      {
-            "term": "Qrammatik norma",
-            "definition": "Sözlərin və cümlələrin morfoloji-sintaktik quruluş qaydaları toplusu."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az10-u4-1",
-            "question": "\"Onlar xeyli kitablar aldılar\" cümləsində hansı ədəbi dil norması pozulmuşdur?",
-            "solution": "'Xeyli' qeyri-müəyyən miqdar sayından sonra gələn isim təkdə olmalıdır (kitab). Cəm şəkilçisi (-lar) artırıldığı üçün qrammatik norma pozulmuşdur."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az10-u4-1",
-            "question": "\"O, həyatın bütün çətinliklərinə dözdü\" əvəzinə \"uddu\" işlədilərsə, hansı norma pozular?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Fonetik norma"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Leksik norma"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Qrammatik norma"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Heç biri"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Söz öz həqiqi və ya düzgün məcazi mənasında işlədilmədiyi üçün leksik norma pozulmuşdur."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-10-u5-functional-styles',
-    subjectId: 'azerbaycan_dili',
-    grade: 10,
-    unit: 'Bölmə 5: Azərbaycan dilinin üslubları və funksional üslublar',
-    unitOrder: 5,
-    title: 'Funksional üslublar: Bədii, elmi, publisistik, məişət və rəsmi-işgüzar',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Azərbaycan dilinin 5 funksional üslubu, onların leksik-qrammatik xüsusiyyətləri, obrazlılıq və standartlıq göstəriciləri.',
-    theoryMarkdown: `
-### 1. Funksional Üslub Nədir?
-Milli ədəbi dilin ictimai həyatın müəyyən bir sahəsində işlənən və tarixi olaraq formalaşmış qollarına **funksional üslublar** deyilir.
-
-### 2. Beş Əsas Funksional Üslub
-1. **Bədii üslub:**
-   - Ən qədim və zəngin üslubdur.
-   - Əsas xüsusiyyəti: **obrazlılıq, emosionallıq, bədii təsvir və ifadə vasitələri** (təşbeh, istiarə, epitet, mübaliğə).
-   - Şeir dili və nəsr dilində təzahür edir.
-2. **Elmi üslub:**
-   - Elmi əsərlərin, dərsliklərin və monoqrafiyaların dilidir.
-   - Əsas xüsusiyyəti: **məntiqlilik, ardıcıllıq, dəqiqlik, terminlərin zənginliyi**.
-   - Məcaziliyə və emosionallığa yol verilmir.
-3. **Publisistik üslub:**
-   - Qəzet, televiziya, radio və internet mediasının dilidir.
-   - Əsas xüsusiyyəti: **kütləvilik, aydınlıq, ictimai-siyasi leksika və təsiredicilik**.
-4. **Məişət üslubu:**
-   - İnsanların gündəlik canlı ünsiyyət dilidir.
-   - Əsas xüsusiyyəti: **sərbəstlik, dialoq forması, jest və mimikalardan istifadə**.
-5. **Rəsmi-işgüzar üslub:**
-   - Dövlət sənədlərinin, qanunların və rəsmi yazışmaların dilidir.
-   - Əsas xüsusiyyəti: **standart formullar, şablonluq, arxaik sözlər və birmənalılıq**.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az10-u5-1",
-            "name": "Üslubların Əsas Ayırıcı Xassələri",
-            "latex": "\\text{Bədii} \\to \\text{Məcaz}; \\quad \\text{Elmi} \\to \\text{Termin}; \\quad \\text{Publisistik} \\to \\text{Kütləvi}; \\quad \\text{Rəsmi} \\to \\text{Şablon}",
-            "description": "Hər üslubun leksik dominant xüsusiyyətidir."
-      }
-],
-    glossary: [
-      {
-            "term": "Funksional üslub",
-            "definition": "Dilin ictimai fəaliyyət sferasına görə fərqlənən ədəbi qolu."
-      },
-      {
-            "term": "Publisistika",
-            "definition": "Cəmiyyət üçün aktual olan siyasi və ictimai məsələləri işıqlandıran mətbuat dili."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az10-u5-1",
-            "question": "\"Gülərüz səma ulduzlarla bəzənmişdi\" və \"Fotosintez zamanı qlükoza və oksigen sintez olunur\" cümlələrinin üslubunu təyin edin.",
-            "solution": "Birinci cümlə obrazlı məcazlar ehtiva etdiyi üçün bədii üslubdur. İkinci cümlə isə elmi terminlər və dəqiq fakt ehtiva etdiyi üçün elmi üslubdur."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az10-u5-1",
-            "question": "Aşağıdakılardan hansı rəsmi-işgüzar üslubun xüsusiyyətidir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Geniş məcazilik və bədii suallar"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Standart formalar və şablon ifadələr"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Jest və mimikaların üstünlüyü"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Təşbeh və epitetlərin çoxluğu"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Rəsmi-işgüzar üslub dövlət sənədlərinin dilidir və standart şablon formalarla xarakterizə olunur."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-11-u1-text-syntax',
-    subjectId: 'azerbaycan_dili',
-    grade: 11,
-    unit: 'Bölmə 1: Mürəkkəb sintaktik bütövlər və Mətn sintaksisi',
-    unitOrder: 1,
-    title: 'Mətnin abzas quruluşu, cümlələr arası əlaqələr: Zəncirvari və paralel',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Mətnin strukturu, abzaslar, mikromövzu, açar sözlər və mətndə cümlələrin zəncirvari və paralel əlaqə vasitələri.',
-    theoryMarkdown: `
-### 1. Mətn və Mürəkkəb Sintaktik Bütöv
-Mətn — müəyyən bir mövzu ətrafında birləşən, məna və qrammatik cəhətdən əlaqəli cümlələrin yaratdığı bitkin nitq parçasıdır.
-- **Abzas:** Mətndə bir mikromövzunu əhatə edən və yeni sətirdən başlayan hissədir.
-- **Açar sözlər:** Mətnin əsas ideyasını və məzmununu daşıyan ən vacib sözlərdir.
-
-### 2. Mətndə Cümlələrarası Əlaqə Növləri
-1. **Zəncirvari əlaqə:**
-   - Hər sonrakı cümlə özündən əvvəlki cümlə ilə birbaşa əlaqələnir.
-   - Birinci cümlədəki məlumat növbəti cümlənin başlanğıcı (istinad nöqtəsi) olur.
-   - Əlaqələndirici vasitələr: Əvəzliklər, sinonimlər, təkrar olunan sözlər:
-     *Şuşa qədim şəhərdir. Bu şəhər həm də musiqi beşiyimizdir. Orada dahi bəstəkarlar yetişmişdir.*
-2. **Paralel əlaqə:**
-   - Bütün cümlələr bilavasitə birinci cümləyə (əsas fikrə) bağlanır və onu müxtəlif cəhətdən izah edir.
-   - Cümlələrin sintaktik quruluşu adətən eyni tipli (paralel) olur:
-     *Gözəl bir yaz səhəri idi. Quşlar cəh-cəh vururdu. Çəmənliklər şehlə parıldayırdı. Meh zərifcə əsirdi.*
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az11-u1-1",
-            "name": "Zəncirvari və Paralel Əlaqə Sxemi",
-            "latex": "\\text{Zəncirvari: } C_1 \\to C_2 \\to C_3; \\qquad \\text{Paralel: } C_1 \\begin{cases} \\to C_2 \\\\ \\to C_3 \\\\ \\to C_4 \\end{cases}",
-            "description": "Zəncirvari ardıcıl həlqələrlə, paralel isə mərkəzi cümləyə eyni anda bağlanır."
-      }
-],
-    glossary: [
-      {
-            "term": "Mətn",
-            "definition": "Mövzu və ideya vəhdəti olan ən böyük sintaktik vahid."
-      },
-      {
-            "term": "Zəncirvari əlaqə",
-            "definition": "Cümlələrin bir-birinə əvəzlik və təkrar sözlərlə ardıcıl bağlanması."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az11-u1-1",
-            "question": "\"Dəniz dalğalanırdı. Sahildə balıqçılar tor çəkirdilər. Qağayılar havada dövrə vururdu\" parçasında əlaqə növünü təyin edin.",
-            "solution": "Cümlələrin hər biri ümumi mənzərəni (dəniz sahilini) paralel təsvir edir. Cümlələr bir-birindən yox, ümumi fikirdən asılıdır. Əlaqə növü: paralel əlaqə."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az11-u1-1",
-            "question": "Mətndə hər sonrakı cümlənin əvvəlki cümlədəki sözü əvəzliklə əvəz etməsi hansı əlaqə növünə aiddir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Paralel əlaqə"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Zəncirvari əlaqə"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Tabesizlik əlaqəsi"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Qarışıq əlaqə"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Əvvəlki cümlənin üzvünə istinad edərək irəliləyən əlaqə zəncirvari əlaqədir."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-11-u2-rhetoric-speech-culture',
-    subjectId: 'azerbaycan_dili',
-    grade: 11,
-    unit: 'Bölmə 2: Nitq mədəniyyəti və Ritorika',
-    unitOrder: 2,
-    title: 'Nitq mədəniyyətinin şərtləri: Düzgünlük, dəqiqlik, aydınlıq, yığcamlıq və zənginlik',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Mədəni nitqin 5 əsas keyfiyyəti, ritorika və natiqlik sənəti, dinləmə və replika mədəniyyəti.',
-    theoryMarkdown: `
-### 1. Nitq Mədəniyyəti Nədir?
-Fikrin ədəbi dilin normalarına tam uyğun, dinləyici üçün anlaşıqlı, məntiqli və estetik şəkildə çatdırılması mədəniyyətidir.
-
-### 2. Yaxşı Nitqin Əsas Məziyyətləri
-1. **Düzgünlük:** Ədəbi dilin fonetik, leksik və qrammatik normalarına ciddi əməl olunmasıdır. Nitq mədəniyyətinin ilkin təməl şərtidir.
-2. **Dəqiqlik:** Sözlərin ifadə olunan fikrə tam uyğun seçilməsi, çoxmənalılıq və dolaşıqlığa yol verilməməsidir.
-3. **Aydınlıq:** Dinləyicinin nitqi heç bir əlavə izahat olmadan asanlıqla başa düşməsidir. Həddindən artıq anlaşılmaz əcnəbi sözlərdən çəkinmək tələb olunur.
-4. **Yığcamlıq:** Fikrin minimum sözlə, lakonik və dolğun çatdırılmasıdır (artıq sözçülükdən — pleonazmdan qaçmaq).
-5. **Zənginlik:** Natiqin geniş söz ehtiyatına, zəngin sinonimik sıraya, atalar sözlərinə və frazeoloji ifadələrə malik olmasıdır.
-
-### 3. Ritorika (Natiqlik Sənəti)
-Kütlə qarşısında inandırıcı, təsirli və cəlbedici çıxış etmə nəzəriyyəsi və sənətidir.
-- Natiqin intonasiyası, səs tonu, fasilələri (pauza), jest və mimikaları, göz təması əsas amillərdir.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az11-u2-1",
-            "name": "Nitq Mədəniyyətinin 5 Qızıl Şərti",
-            "latex": "\\text{Nitq} = \\text{Düzgünlük} + \\text{Dəqiqlik} + \\text{Aydınlıq} + \\text{Yığcamlıq} + \\text{Zənginlik}",
-            "description": "Uğurlu ünsiyyətin təməl meyarlarıdır."
-      }
-],
-    glossary: [
-      {
-            "term": "Ritorika",
-            "definition": "Gözəl, məntiqli və inandırıcı danışma sənəti haqqında elm."
-      },
-      {
-            "term": "Pleonazm",
-            "definition": "Eyni mənanı verən sözlərin lüzumsuz yerə yanaşı işlədilməsi (məsələn: 'geriyə qayıtmaq')."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az11-u2-1",
-            "question": "\"O, geriyə qayıtdı və öz şəxsi fikrini bildirdi\" cümləsindəki nitq qüsurunu müəyyən edin.",
-            "solution": "\"Qayıtmaq\" zatən geriyə hərəkətdir, \"öz\" və \"şəxsi\" sözləri eyni mənanı təkrar edir. Düzgün yığcam variant: \"O qayıtdı və fikrini bildirdi\"."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az11-u2-1",
-            "question": "Fikrin artıq sözlər işlətmədən, lakonik ifadə olunması nitqin hansı məziyyətidir?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Zənginlik"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Yığcamlıq"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Təmizlik"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Münasiblik"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Artıq sözlərdən qaçaraq lakonik danışmaq nitqin yığcamlığıdır."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-11-u3-punctuation-system',
-    subjectId: 'azerbaycan_dili',
-    grade: 11,
-    unit: 'Bölmə 3: Durğu işarələri sistemi və orfoqrafiya lüğəti qaydaları',
-    unitOrder: 3,
-    title: 'Müasir Azərbaycan dilində durğu işarələri sistemi və orfoqrafik prinsiplər',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: '10 əsas durğu işarəsi (nöqtə, sual, nida, üç nöqtə, vergül, nöqtəli vergül, iki nöqtə, tire, dırnaq, mötərizə), onların məntiqi və sintaktik funksiyaları.',
-    theoryMarkdown: `
-### 1. Durğu İşarələrinin Funksiyaları
-Durğu işarələri yazılı nitqdə fikrin düzgün anlaşılmasına, intonasiyanın və sintaktik əlaqələrin ifadəsinə xidmət edir:
-1. **Ayırıcı işarələr:** Cümlələri və ya bitmiş fikirləri bir-birindən ayırır (nöqtə, sual işarəsi, nida işarəsi, üç nöqtə).
-2. **Birləşdirici və fərqləndirici işarələr:** Cümlə daxilində üzvləri, budaq cümlələri, xitab və ara sözləri təcrid edir (vergül, nöqtəli vergül, iki nöqtə, tire).
-3. **Məhdudlaşdırıcı işarələr:** Başqasının sözünü və ya əlavə məlumatı ayıran qoşa işarələrdir (dırnaqlar, mötərizələr).
-
-### 2. Çətin Məqamlar və Xüsusi Qaydalar
-- **Nöqtəli vergül (;):** Mürəkkəb cümlənin tərkib hissələri daxilində artıq vergül olduqda və ya tərəflər məzmunca bir qədər uzaq olduqda qoyulur.
-- **İki nöqtə (:):** İzah, aydınlaşdırma, səbəb bildirdikdə və ya vasitəsiz nitqdən əvvəl qoyulur.
-- **Tire (—):** Xitab sonda olduqda, vasitəsiz nitqdən sonra, buraxılmış xəbərin yerində və dialoqlarda istifadə olunur.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az11-u3-1",
-            "name": "Nöqtəli Vergül Tətbiqi",
-            "latex": "[\\dots, \\dots]; \\qquad [\\dots, \\dots].",
-            "description": "Daxilində vergül olan müstəqil bloklar nöqtəli vergüllə ayrılır."
-      }
-],
-    glossary: [
-      {
-            "term": "Punktuasiya",
-            "definition": "Durğu işarələrinin işlənmə qaydaları haqqında dilçilik bəhsi."
-      },
-      {
-            "term": "Təcrid",
-            "definition": "Müəyyən söz və ya cümlənin durğu işarələri ilə xüsusi ayrılması."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az11-u3-1",
-            "question": "\"Bağda meyvələr alma armud heyva yetişmişdi lakin onları yığan yox idi\" cümləsində durğu işarələrini təyin edin.",
-            "solution": "\"Bağda meyvələr: alma, armud, heyva yetişmişdi; lakin onları yığan yox idi.\" (Həmcins üzvlər üçün iki nöqtə və vergül, birinci hissə mürəkkəb olduğu üçün qarşılaşdırmadan əvvəl nöqtəli vergül)."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az11-u3-1",
-            "question": "Dialoqlarda hər bir şəxsin nitqinin əvvəlində hansı durğu işarəsi qoyulur?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Dırnaq"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Tire"
-                  },
-                  {
-                        "key": "C",
-                        "text": "İki nöqtə"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Vergül"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Dialoqlarda replikaların qarşısında tire (—) işarəsi qoyulur."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-11-u4-official-documents',
-    subjectId: 'azerbaycan_dili',
-    grade: 11,
-    unit: 'Bölmə 4: Rəsmi və işgüzar sənədlər',
-    unitOrder: 4,
-    title: 'İşgüzar sənədlər: Ərizə, arayış, tərcümeyi-hal, akt, protokol, elan',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Rəsmi-işgüzar sənədlərin standart rekvizitləri, hüquqi əhəmiyyəti, ərizə, tərcümeyi-hal, akt, protokol və elan yazılış qaydaları.',
-    theoryMarkdown: `
-### 1. İşgüzar Sənədlər və Rekvizitlər
-Vətəndaşların təşkilatlarla və ya təşkilatların bir-biri ilə hüquqi münasibətlərini tənzimləyən sənədlərdir. Hər bir sənədin dəqiq **rekvizitləri** (standart forması) olmalıdır.
-
-### 2. Əsas İşgüzar Sənəd Növləri
-1. **Ərizə:** Şəxsin hər hansı təşkilat rəhbərliyinə rəsmi müraciətidir (xahiş, şikayət, təklif).
-   - Başlıq (kimə), kimdən, sözün mərkəzində "Ərizə", mətn, tarix (sağda/solda) və imza.
-2. **Tərcümeyi-hal (CV / Avtobioqrafiya):** Şəxsin öz həyat yolunu xronoloji ardıcıllıqla qələmə aldığı sənəddir.
-   - Doğum tarixi, yeri, təhsili, əmək fəaliyyəti, ailə vəziyyəti ardıcıl qeyd olunur.
-3. **Arayış:** Şəxsin kimliyini, təhsil və ya iş yerini, yaşayış ünvanını təsdiq edən rəsmi sənəddir.
-4. **Akt:** Hər hansı baş vermiş faktı, hadisəni bir neçə nəfərin (komissiyanın) iştirakı ilə təsdiq edən sənəddir.
-5. **Protokol:** İclas, müşavirə və ya konfransın gedişatını, çıxışları və qəbul olunmuş qərarları dəqiq əks etdirən sənəddir.
-6. **Elan:** Qarşıda duran hər hansı tədbir, hadisə barədə ictimaiyyətə qabaqcadan verilən qısa xəbərdarlıq sənədidir.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az11-u4-1",
-            "name": "Ərizənin Standart Strukturu",
-            "latex": "\\text{[Ünvanlanan Rəhbər]} \\to \\text{[Ərizəçi]} \\to \\text{\"Ərizə\"} \\to \\text{[Məzmun]} \\to \\text{[Tarix və İmza]}",
-            "description": "Rəsmi ərizənin dəyişməz struktur ardıcıllığıdır."
-      }
-],
-    glossary: [
-      {
-            "term": "Rekvizit",
-            "definition": "Rəsmi sənədin hüquqi qüvvəyə malik olması üçün tələb olunan zəruri elementlər (tarix, imza, möhür və s.)."
-      },
-      {
-            "term": "Protokol",
-            "definition": "Toplantının gedişatını və qəbul olunmuş qərarları rəsmiləşdirən sənəd."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az11-u4-1",
-            "question": "Məktəb kitabxanasında kitabların sayını yoxlayan komissiya hansı sənədi tərtib etməlidir?",
-            "solution": "Bir neçə nəfərin iştirakı ilə faktı qeydə almaq və təsdiq etmək üçün 'Akt' tərtib olunmalıdır."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az11-u4-1",
-            "question": "İnsanın öz həyatını doğumundan bu günə qədər xronoloji ardıcıllıqla təsvir etdiyi sənəd hansıdır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Ərizə"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Arayış"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Tərcümeyi-hal"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Protokol"
-                  }
-            ],
-            "correctKey": "C",
-            "explanation": "Şəxsin öz həyat yolunu xronoloji ardıcıllıqla yazdığı sənəd tərcümeyi-haldır (autobioqrafiya)."
-      }
-]
-  },
-
-  {
-    id: 'lesson-azeri-11-u5-essay-writing',
-    subjectId: 'azerbaycan_dili',
-    grade: 11,
-    unit: 'Bölmə 5: Mətn üzərində iş və esse/məqalə yazma texnikası',
-    unitOrder: 5,
-    title: 'Esse və məqalə yazma texnikası: Giriş, əsas hissə və nəticə, arqumentasiya',
-    order: 1,
-    readTimeMinutes: 10,
-    difficulty: 3,
-    summary: 'Esse janrının xüsusiyyətləri, struktur bölmələri (tezis, arqument, fakt, nəticə), paraqraf keçidləri və yaradıcı yazı bacarıqları.',
-    theoryMarkdown: `
-### 1. Esse Nədir?
-Esse — müəllifin hər hansı mövzu, fəlsəfi, əxlaqi və ya ictimai problem haqqında sərbəst, fərdi düşüncələrini əks etdirən yaradıcı nəsr janrıdır.
-
-### 2. Essenin Kompozisiya Strukturu
-1. **Giriş hissə:**
-   - Mövzuya maraq oyadan cümlə (qarmaq / hook).
-   - Problemin aktuallığının qısa izahı.
-   - **Tezis cümləsi:** Müəllifin müdafiə edəcəyi əsas fikir (essenin onurğa sütunu).
-2. **Əsas hissə (2-3 abzas):**
-   - Hər abzasda bir alt-fikir irəli sürülür.
-   - **Arqumentasiya:** Fikri sübut edən faktlar, sitatlar, tarixi nümunələr və ya statistik məlumatlar.
-   - Əks arqumentlərin təkzib edilməsi.
-3. **Nəticə hissə:**
-   - Tezis başqa sözlərlə yenidən xatırladılır.
-   - Bütün arqumentlər ümumiləşdirilir və son təsirli tövsiyə və ya çağırışla tamamlanır.
-
-### 3. Yazı Prosesinin Mərhələləri
-1. **Planlaşdırma (Brainstorming):** Fikirlərin toplanması və xəritələnməsi.
-2. **Qaralama (Drafting):** Fikirlərin fasiləsiz yazılması.
-3. **Redaktə və korreksiya (Editing):** Qrammatik, orfoqrafik və durğu işarələri xətalarının düzəldilməsi.
-    `,
-    keyFormulas: [
-      {
-            "id": "f-az11-u5-1",
-            "name": "Essenin Klassik Triadası",
-            "latex": "\\text{Giriş (Tezis)} \\to \\text{Əsas Hissə (Arqument + Fakt)} \\to \\text{Nəticə (Ümumiləşdirmə)}",
-            "description": "Akademik və yaradıcı essenin standart kompozisiya modelidir."
-      }
-],
-    glossary: [
-      {
-            "term": "Tezis",
-            "definition": "Müəllifin doğruluğunu sübut etməyə çalışdığı əsas müddəa, ana fikir."
-      },
-      {
-            "term": "Arqument",
-            "definition": "Tezisi əsaslandırmaq üçün gətirilən məntiqi dəlil və ya sübut."
-      }
-],
-    solvedExamples: [
-      {
-            "id": "ex-az11-u5-1",
-            "question": "\"Kitab oxumaq insanın dünyagörüşünü genişləndirir\" tezisi üçün iki inandırıcı arqument gətirin.",
-            "solution": "1. Kitab mütaliəsi insanın lüğət ehtiyatını və nitq mədəniyyətini zənginləşdirir. 2. Tarixi və bədii əsərlər insanı müxtəlif dövrlərin təcrübəsi ilə tanış edərək tənqidi təfəkkürü inkişaf etdirir."
-      }
-],
-    miniQuiz: [
-      {
-            "questionId": "mq-az11-u5-1",
-            "question": "Essenin giriş hissəsində müəllifin sübut etmək istədiyi əsas müddəa necə adlanır?",
-            "options": [
-                  {
-                        "key": "A",
-                        "text": "Epiloq"
-                  },
-                  {
-                        "key": "B",
-                        "text": "Tezis"
-                  },
-                  {
-                        "key": "C",
-                        "text": "Məcaz"
-                  },
-                  {
-                        "key": "D",
-                        "text": "Pleonazm"
-                  }
-            ],
-            "correctKey": "B",
-            "explanation": "Müəllifin esse boyu müdafiə etdiyi əsas fikir tezis adlanır."
+            "explanation": "Nuklonları bir yerdə saxlayan güclü (nüvə) qarşılıqlı təsiri kainatın ən güclü qüvvəsidir."
       }
 ]
   }
 ,
 
   // =========================================================================
-  // 3. DİGƏR FƏNLƏR (Fizika, Kimya, Biologiya, Tarix, Coğrafiya, İngilis dili, İnformatika)
+  // 4. DİGƏR FƏNLƏR (Kimya, Biologiya, Tarix, Coğrafiya, İngilis dili, İnformatika)
   // =========================================================================
   {
-        id: 'lesson-phys-7-motion',
-        subjectId: 'fizika',
-        grade: 7,
-        unit: 'Mexaniki Hərəkət və Qarşılıqlı Təsir',
-        unitOrder: 1,
-        title: 'Düzxətli Bərabərsürətli Hərəkət və Sürət',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'Mexaniki hərəkət anlayışı, trayektoriya, yol və yerdəyişmə, sürət düsturu və vahidləri.',
-        theoryMarkdown: `
-    ### 1. Mexaniki Hərəkət Nədir?
-    Zaman keçdikcə cismin fəzada digər cisimlərə nəzərən vəziyyətinin dəyişməsinə **mexaniki hərəkət** deyilir.
-    Cismin hərəkəti zamanı cızdığı xəttə **trayektoriya**, bu xəttin uzunluğuna isə **gedilən yol** ($s$) deyilir.
+          id: 'lesson-chem-8-amount',
+          subjectId: 'kimya',
+          grade: 8,
+          unit: 'Kimyanın Əsas Stexiometrik Qanunları',
+          unitOrder: 1,
+          title: 'Maddə Miqdarı. Molyar Kütlə və Avoqadro Qanunu',
+          order: 1,
+          readTimeMinutes: 10,
+          difficulty: 2,
+          summary: 'Mol anlayışı, Avoqadro sabiti, molyar kütlə və normal şəraitdə qazların molyar həcmi düsturları.',
+          theoryMarkdown: `
+      ### 1. Maddə Miqdarı və Mol
+      Maddəni təşkil edən zərrəciklərin (atom, molekul) sayını xarakterizə edən kəmiyyətə **maddə miqdarı** deyilir və $n$ (və ya $\\nu$) ilə işarə olunur. Vahidi **moldur**.
+      1 mol maddədə $N_A = 6.02 \\cdot 10^{23}$ sayda zərrəcik var (Avoqadro sabiti).
 
-    ### 2. Düzxətli Bərabərsürətli Hərəkət
-    Cisim bərabər zaman fasilələrində bərabər yollar qət edirsə:
-    $$v = \\frac{s}{t}$$
-    Buradan: $s = v \\cdot t, \\quad t = \\frac{s}{v}$
-    BS-də vahidi: $[v] = 1 \\text{ m/s}$. Əlaqə: $1 \\text{ m/s} = 3.6 \\text{ km/saat}$.
-        `,
-        keyFormulas: [
-          { id: 'f-p7-1', name: 'Sürət Düsturu', latex: "v = \\frac{s}{t}", description: 'Gedilən yolun zamana nisbəti.' },
-          { id: 'f-p7-2', name: 'Gedilən Yol', latex: "s = v \\cdot t", description: 'Bərabərsürətli hərəkətdə sürətin zamana hasili.' }
-        ],
-        glossary: [
-          { term: 'Trayektoriya', definition: 'Hərəkət edən cismin fəzada cızdığı xəyali xətt.' },
-          { term: 'Yerdəyişmə', definition: 'Başlanğıc və son nöqtələri birləşdirən istiqamətlənmiş düz xətt parçası.' }
-        ],
-        solvedExamples: [
+      ### 2. Molyar Kütlə ($M$)
+      1 mol maddənin kütləsinə **molyar kütlə** deyilir:
+      $$M = \\frac{m}{n} \\quad [M] = \\text{q/mol}$$
+
+      ### 3. Avoqadro Qanunu və Qazların Molyar Həcmi
+      Eyni şəraitdə (eyni temperatur və təzyiqdə) müxtəlif qazların bərabər həcmlərində bərabər sayda molekul olur.
+      Normal şəraitdə (n.ş. $T=0^\\circ\\text{C}, P=101.3 \\text{ kPa}$) istənilən qazın 1 molu $V_m = 22.4 \\text{ litr}$ həcm tutur:
+      $$n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V}{V_m}$$
+          `,
+          keyFormulas: [
+            { id: 'f-c8-1', name: 'Maddə Miqdarı Düsturu', latex: "n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V}{V_m}", description: 'Mol, kütlə, zərrəcik sayı və həcm əlaqəsi.' },
+            { id: 'f-c8-2', name: 'Molyar Həcm', latex: "V_m = 22.4 \\text{ l/mol (n.ş.)}", description: 'Normal şəraitdə qazların 1 molunun həcmi.' }
+          ],
+          glossary: [
+            { term: 'Avoqadro sabiti (N_A)', definition: '1 mol maddədə olan struktur zərrəciklərin sayı ($6.02 \\cdot 10^{23}$).' },
+            { term: 'Normal şərait (n.ş.)', definition: 'Temperaturun 0°C və təzyiqin 1 atmosfer olduğu fiziki şərait.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-c8-1',
+              question: 'Normal şəraitdə $44.8 \\text{ litr}$ $CO_2$ qazı neçə moldur?',
+              solution: '$$n = \\frac{V}{V_m} = \\frac{44.8}{22.4} = 2 \\text{ mol}$$.'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-c8-1',
+              question: '0.5 mol oksigen qazı ($O_2$) neçə qramdır? ($M(O_2) = 32 \\text{ q/mol}$)',
+              options: [
+                { key: 'A', text: '16 qram' },
+                { key: 'B', text: '32 qram' },
+                { key: 'C', text: '64 qram' },
+                { key: 'D', text: '8 qram' }
+              ],
+              correctKey: 'A',
+              explanation: 'm = n * M = 0.5 mol * 32 q/mol = 16 qram.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-chem-9-bonds',
+          subjectId: 'kimya',
+          grade: 9,
+          unit: 'Kimyəvi Rabitə və Maddənin Quruluşu',
+          unitOrder: 1,
+          title: 'Kovalent və İon Rabitələri',
+          order: 1,
+          readTimeMinutes: 10,
+          difficulty: 2,
+          summary: 'Elektromənfilik, polyar və qeyri-polyar kovalent rabitə, ion rabitəsi və oktet qaydası.',
+          theoryMarkdown: `
+      ### 1. Kimyəvi Rabitənin Mahiyyəti
+      Atomlar dayanıqlı elektron konfiqurasiyasına (xarici energetik səviyyədə 8 elektron - oktet qaydası) nail olmaq üçün kimyəvi rabitə əmələ gətirirlər.
+
+      ### 2. Kovalent Rabitə
+      Ümumi elektron cütlərinin yaranması hesabına əmələ gələn rabitəyə **kovalent rabitə** deyilir:
+      - **Qeyri-polyar kovalent:** Eyni qeyri-metal atomları arasında yaranır (məs: $H_2, O_2, N_2, Cl_2$). Elektron cütü simmetrik paylaşılır.
+      - **Polyar kovalent:** Elektromənfiliyi müxtəlif olan qeyri-metallar arasında yaranır (məs: $HCl, H_2O, NH_3$).
+
+      ### 3. İon Rabitəsi
+      Tipik metal və tipik qeyri-metal atomları arasında elektronların tam keçidi nəticəsində yaranan əks yüklü ionların elektrostatik cazibəsi ilə əmələ gəlir (məs: $NaCl, KBr, CaCl_2$).
+          `,
+          keyFormulas: [
+            { id: 'cf1', name: 'Oktet Qaydası', latex: "s^2 p^6 \\quad (8e^-)", description: 'Xarici təbəqənin təsirsiz qaz konfiqurasiyasına tamamlanması.' }
+          ],
+          glossary: [
+            { term: 'Elektromənfilik', definition: 'Kimyəvi rabitədə atomun ümumi elektron cütünü özünə cəzb etmə qabiliyyəti.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'cex1',
+              question: '$N_2$ molekulunda azot atomları arasında rabitə qatılığı neçədir?',
+              solution: 'Azot atomunun xarici təbəqəsində 3 tək elektron var. Hər iki azot 3 elektron cütü paylaşır və aralarında üçqat rabitə yaranır ($N \\equiv N$).'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'cmq1',
+              question: 'Aşağıdakı maddələrdən hansında qeyri-polyar kovalent rabitə mövcuddur?',
+              options: [
+                { key: 'A', text: '$NaCl$' },
+                { key: 'B', text: '$H_2O$' },
+                { key: 'C', text: '$O_2$' },
+                { key: 'D', text: '$CH_4$' }
+              ],
+              correctKey: 'C',
+              explanation: '$O_2$ molekulu eyni elektromənfiliyə malik iki oksigen atomundan ibarətdir, buna görə qeyri-polyar kovalentdir.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-bio-8-circulatory',
+          subjectId: 'biologiya',
+          grade: 8,
+          unit: 'İnsan Orqanizminin Quruluşu və Funksiyaları',
+          unitOrder: 1,
+          title: 'Qan-Damar Sistemi və Ürəyin Quruluşu',
+          order: 1,
+          readTimeMinutes: 11,
+          difficulty: 2,
+          summary: 'Ürəyin 4 kameralı quruluşu, böyük və kiçik qan dövranı, damarların növləri və qan qrupları.',
+          theoryMarkdown: `
+      ### 1. Ürəyin Anatomik Quruluşu
+      İnsan ürəyi arakəsmə ilə sağ və sol yarımhissələrə, hər yarımhissə isə qulaqcıq və mədəciyə bölünür:
+      - **Sağ qulaqcıq və sağ mədəcik:** Venoz (karbon qazı ilə zəngin) qan saxlayır.
+      - **Sol qulaqcıq və sol mədəcik:** Arterial (oksigenlə zəngin) qan saxlayır.
+
+      ### 2. Qan Damarlarının Növləri
+      1. **Arteriyalar:** Qanı ürəkdən orqanlara daşıyan qalın, elastik divarlı damarlar (ən böyüyü aorta).
+      2. **Venalar:** Qanı orqanlardan ürəyə gətirən damarlar (daxilində geriyə axını önləyən qapaqlar var).
+      3. **Kapilyarlar:** Ən nazik damarlar (bir qat epitel hüceyrəsi), qaz və qida mübadiləsi burada baş verir.
+
+      ### 3. Böyük və Kiçik Qan Dövranı
+      - **Böyük qan dövranı:** Sol mədəcikdən başlayır (aorta ilə), bütün bədəni təmin edərək sağ qulaqcıqda bitir.
+      - **Kiçik (ağciyər) qan dövranı:** Sağ mədəcikdən başlayır (ağciyər arteriyası ilə), ağciyərlərdə oksigenlə zənginləşib sol qulaqcıqda bitir.
+          `,
+          keyFormulas: [
+            { id: 'f-b8-1', name: 'Ürək Dövrü', latex: "0.1\\text{s} + 0.3\\text{s} + 0.4\\text{s} = 0.8\\text{s}", description: 'Qulaqcıqların yığılması (0.1s) + mədəciklərin yığılması (0.3s) + ümumi pauza (0.4s).' }
+          ],
+          glossary: [
+            { term: 'Aorta', definition: 'İnsan bədənində ən böyük arteriya damarı, sol mədəcikdən başlayır.' },
+            { term: 'Mioqard', definition: 'Ürəyin əsas güclü eninəzolaqlı əzələ qatı.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-b8-1',
+              question: 'Sol mədəciyin yığılması zamanı qan hansı damara qovulur?',
+              solution: 'Sol mədəcik arterial qanı birbaşa ən böyük damar olan aortaya vurur və böyük qan dövranı başlayır.'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-b8-1',
+              question: 'Kiçik qan dövranı ürəyin hansı kamerasında başlayır?',
+              options: [
+                { key: 'A', text: 'Sol mədəcik' },
+                { key: 'B', text: 'Sağ mədəcik' },
+                { key: 'C', text: 'Sağ qulaqcıq' },
+                { key: 'D', text: 'Sol qulaqcıq' }
+              ],
+              correctKey: 'B',
+              explanation: 'Kiçik qan dövranı sağ mədəcikdən ağciyər arteriyası ilə başlayır.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-bio-9-genetics',
+          subjectId: 'biologiya',
+          grade: 9,
+          unit: 'Genetika və İrsiyyət Qanunauyğunluqları',
+          unitOrder: 1,
+          title: 'Mendel Qanunları: Monohibrid Çarpazlaşma',
+          order: 1,
+          readTimeMinutes: 11,
+          difficulty: 3,
+          summary: 'Genotip və fenotip, dominant və resessiv allellər, Mendelin birinci (eynicinslilik) və ikinci (parçalanma) qanunu.',
+          theoryMarkdown: `
+      ### 1. Əsas Genetik Anlayışlar
+      - **Gen:** İrsi əlamətin inkişafını təyin edən DNT sahəsi.
+      - **Allel genlər:** Homoloji xromosomların eyni sahələrində yerləşən və alternativ əlamətləri təyin edən genlər ($A$ və ya $a$).
+      - **Dominant əlamət ($A$):** Birinci nəsildə özünü biruzə verən üstün əlamət (məs: sarı noxud).
+      - **Resessiv əlamət ($a$):** Dominant tərəfindən gizlədilən əlamət (məs: yaşıl noxud).
+
+      ### 2. Mendelin I Qanunu (Hibridlərin Eynicinsliliyi)
+      Dominant və resessiv təmiz xətlərin çarpazlaşmasından alınan birinci nəsil ($F_1$) hibridləri genotip və fenotipcə eynicinsli olur:
+      $$P: AA \\times aa \\implies F_1: Aa \\quad (100\\% \\text{ sarı})$$
+
+      ### 3. Mendelin II Qanunu (Əlamətlərin Parçalanması)
+      $F_1$ nəsli öz aralarında çarpazlaşdıqda ($Aa \\times Aa$), $F_2$ nəslində parçalanma baş verir:
+      - **Fenotip üzrə nisbət:** $3 : 1$ (üç sarı, bir yaşıl)
+      - **Genotip üzrə nisbət:** $1AA : 2Aa : 1aa \\implies 1 : 2 : 1$
+          `,
+          keyFormulas: [
+            { id: 'f-bio9-1', name: 'Monohibrid Parçalanma', latex: "3:1 \\text{ (Fenotip)}, \\quad 1:2:1 \\text{ (Genotip)}", description: 'İkinci nəsil hibridlərində parçalanma nisbətləri.' }
+          ],
+          glossary: [
+            { term: 'Fenotip', definition: 'Orqanizmin bütün xarici və daxili əlamətlərinin cəmi.' },
+            { term: 'Genotip', definition: 'Orqanizmin valideynlərdən aldığı genlərin cəmi.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-bio9-1',
+              question: 'Heteroziqot sarı noxud ($Aa$) ilə yaşıl noxudun ($aa$) çarpazlaşmasından hansı fenotipik nəsil alınar?',
+              solution: '$Aa \\times aa \\implies 50\\% Aa$ (sarı) və $50\\% aa$ (yaşıl). Nisbət $1 : 1$-dir.'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-bio9-1',
+              question: 'İki heteroziqot orqanizmin ($Aa \\times Aa$) çarpazlaşmasından homoziqot resessiv fərdlərin ($aa$) yaranma ehtimalı neçə faizdir?',
+              options: [
+                { key: 'A', text: '25%' },
+                { key: 'B', text: '50%' },
+                { key: 'C', text: '75%' },
+                { key: 'D', text: '100%' }
+              ],
+              correctKey: 'A',
+              explanation: 'Genotip nisbəti 1AA : 2Aa : 1aa olduğundan, aa genotipinin payı 1/4, yəni 25%-dir.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-geog-7-scale',
+          subjectId: 'cografiya',
+          grade: 7,
+          unit: 'Kartoqrafik Təsvirlər və Xəritələr',
+          unitOrder: 1,
+          title: 'Xəritə, Miqyas və Coğrafi Koordinatlar',
+          order: 1,
+          readTimeMinutes: 10,
+          difficulty: 2,
+          summary: 'Miqyasın növləri (ədədi, izahlı, xətti), məsafənin hesablanması, meridian və paralellər, coğrafi enlik və uzunluq.',
+          theoryMarkdown: `
+      ### 1. Miqyas Nədir?
+      Yerdəki həqiqi məsafənin kağız (plan və ya xəritə) üzərində neçə dəfə kiçildildiyini göstərən kəsrin qiymətinə **miqyas** deyilir:
+      $$M = \\frac{L_{\\text{xəritə}}}{L_{\\text{həqiqi}}}$$
+
+      Miqyasın 3 əsas növü var:
+      1. **Ədədi miqyas:** Surəti 1 olan kəsr (məs: $1 : 100\\,000$).
+      2. **İzahlı miqyas:** Sözlə yazılış (məs: *1 sm-də 1 km*). Çevirmək üçün 5 sıfır silinir ($100\\,000 \\text{ sm} = 1000 \\text{ m} = 1 \\text{ km}$).
+      3. **Xətti miqyas:** Xətkeş şəklində bölgülənmiş qrafik xətt.
+
+      ### 2. Coğrafi Koordinat Şəbəkəsi
+      - **Paralellər:** Ekvatora paralel çəkilmiş xəyali çevrələr. Ekvator ($0^\\circ$) ən böyük paraleldir. Coğrafi **enliyi** təyin edir ($0^\\circ$-dən $90^\\circ$-yə qədər şimal və cənub enlikləri).
+      - **Meridianlar:** Qütbləri birləşdirən bərabər uzunluqlu xətlər. Başlanğıc Qrinviç meridianıdır ($0^\\circ$). Coğrafi **uzunluğu** təyin edir ($0^\\circ$-dən $180^\\circ$-yə qədər şərq və qərb uzunluqları).
+      - Meridian qövsü üzrə hər $1^\\circ \\approx 111.1 \\text{ km}$-dir.
+          `,
+          keyFormulas: [
+            { id: 'f-g7-1', name: 'Həqiqi Məsafə Düsturu', latex: "L_{\\text{həqiqi}} = L_{\\text{xəritə}} \\cdot M", description: 'Xəritədəki santimetri izahlı miqyasa vurmaqla həqiqi məsafə tapılır.' },
+            { id: 'f-g7-2', name: '1 Dərəcəlik Meridian Qövsü', latex: "1^\\circ \\approx 111.1 \\text{ km} \\approx 111 \\text{ km}", description: 'Bütün meridianlar üzrə 1 dərəcəlik qövsün orta uzunluğu.' }
+          ],
+          glossary: [
+            { term: 'Ekvator', definition: 'Yeri Şimal və Cənub yarımkürələrinə bölən 0 dərəcəlik ən uzun paralel.' },
+            { term: 'Qrinviç meridianı', definition: 'London yaxınlığındakı rəsədxanadan keçən 0 dərəcəlik başlanğıc meridianı.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-g7-1',
+              question: 'Miqyası $1 : 2\\,000\\,000$ olan xəritədə iki şəhər arasındakı məsafə 4 sm-dir. Həqiqi məsafə neçə km-dir?',
+              solution: 'Ədədi miqyasdan 5 sıfır silsək: 1 sm-də 20 km. Həqiqi məsafə: $L = 4 \\text{ sm} \\cdot 20 \\text{ km/sm} = 80 \\text{ km}$.'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-g7-1',
+              question: '$1 : 500\\,000$ ədədi miqyasının izahlı miqyası hansıdır?',
+              options: [
+                { key: 'A', text: '1 sm-də 500 km' },
+                { key: 'B', text: '1 sm-də 50 km' },
+                { key: 'C', text: '1 sm-də 5 km' },
+                { key: 'D', text: '1 sm-də 0.5 km' }
+              ],
+              correctKey: 'C',
+              explanation: '500,000 sm-dən 5 sıfır sildikdə 5 km qalır (1 sm-də 5 km).'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-hist-9-safavids',
+          subjectId: 'tarix',
+          grade: 9,
+          unit: 'Orta Əsrlər Azərbaycan Tarixi',
+          unitOrder: 1,
+          title: 'Səfəvilər Dövləti və I Şah İsmayıl',
+          order: 1,
+          readTimeMinutes: 11,
+          difficulty: 2,
+          summary: '1501-ci il Təbriz tacqoyması, Azərbaycan torpaqlarının vahid mərkəzdə birləşdirilməsi, Çaldıran döyüşü (1514) və dövlət quruluşu.',
+          theoryMarkdown: `
+      ### 1. Səfəvilər Dövlətinin Yaranması
+      XV əsrin sonunda Ərdəbil hakimi Şeyx Heydərin oğlu İsmayıl ətrafına sadiq Qızılbaş tayfalarını toplayaraq mübarizəyə başladı:
+      - **1500-cü il:** Cabanı döyüşündə Şirvanşah Fərrux Yasar məğlub edildi.
+      - **1501-ci il:** Şərur düzündə Ağqoyunlu Əlvənd Mirzə məğlub edildi. İsmayıl Təbrizə daxil olaraq özünü **Şah** elan etdi və paytaxtı Təbriz olan vahid Azərbaycan Səfəvilər dövlətinin əsasını qoydu.
+      - **1503-cü il:** Almaqulağı döyüşündə Murad Mirzənin qoşunları darmadağın edildi və Ağqoyunlu dövlətinə tamamilə son qoyuldu.
+
+      ### 2. Azərbaycan Torpaqlarının Vahid Mərkəzdə Birləşdirilməsi
+      I Şah İsmayıl bütün tarixi Azərbaycan torpaqlarını vahid mərkəzləşdirilmiş dövlət tərkibində birləşdirdi. Azərbaycan dili sarayda və orduda dövlət dili səviyyəsinə yüksəldi.
+
+      ### 3. Çaldıran Döyüşü (1514)
+      23 avqust 1514-cü ildə I Şah İsmayıl ilə Osmanlı sultanı I Səlim arasında Çaldıran döyüşü baş verdi. Osmanlı ordusunun say üstünlüyü və toplardan istifadə etməsi nəticəsində Səfəvilər məğlub oldu, lakin dövlət öz müstəqilliyini qoruyub saxladı.
+          `,
+          keyFormulas: [
+            { id: 'f-h9-1', name: 'Əsas Tarixi Xronologiya', latex: "1501 \\to \\text{Təbriz Tacqoyma}, \\quad 1514 \\to \\text{Çaldıran Döyüşü}", description: 'Səfəvilər dövlətinin qurulması və ən böyük hərbi sınağı.' }
+          ],
+          glossary: [
+            { term: 'Qızılbaşlar', definition: 'Başlarına 12 zolaqlı qırmızı çalma bağlayan və Səfəvilər dövlətinin hərbi əsasını təşkil edən türk tayfaları.' },
+            { term: 'Əmir əl-üməra', definition: 'Səfəvilər dövlətində ordunun baş komandanına verilən ali hərbi rütbə.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-h9-1',
+              question: 'Səfəvilər dövlətinin ilk paytaxtı hansı şəhər olmuşdur?',
+              solution: '1501-ci ildə I Şah İsmayılın tacqoyma mərasimi Təbrizdə keçirilmiş və Təbriz dövlətin ilk paytaxtı olmuşdur (sonralar Qəzvin və İsfahan olmuşdur).'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-h9-1',
+              question: 'Səfəvilər dövlətinin əsası neçənci ildə qoyulmuşdur?',
+              options: [
+                { key: 'A', text: '1499-cu ildə' },
+                { key: 'B', text: '1501-ci ildə' },
+                { key: 'C', text: '1514-cü ildə' },
+                { key: 'D', text: '1524-cü ildə' }
+              ],
+              correctKey: 'B',
+              explanation: '1501-ci ildə I Şah İsmayıl Təbrizdə taxta çıxaraq dövlətin əsasını qoymuşdur.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-eng-8-present-perfect',
+          subjectId: 'xarici_dil',
+          grade: 8,
+          unit: 'Grammar & Verb Tenses',
+          unitOrder: 1,
+          title: 'Present Perfect vs Past Simple Tense',
+          order: 1,
+          readTimeMinutes: 10,
+          difficulty: 2,
+          summary: 'Structure of Present Perfect, life experiences, connection to present, comparison with Past Simple and key time markers.',
+          theoryMarkdown: `
+      ### 1. Present Perfect Tense (İndiki Bitmiş Zaman)
+      Geçmişdə baş vermiş, lakin nəticəsi indiki zamanla bağlı olan və ya həyat təcrübəsini bildirən hərəkətlər üçün istifadə olunur:
+      - **Təsdiq:** $$S + \\text{have / has} + V_3 \\text{ (və ya } V_{ed})$$
+      - **İnkar:** $$S + \\text{have not (haven't) / has not (hasn't)} + V_3$$
+      - **Sual:** $$\\text{Have / Has} + S + V_3?$$
+      *He / She / It* üçün **has**, digər şəxslər üçün **have** işlənir.
+
+      ### 2. Zaman Zərfləri (Signal Words)
+      - **already:** artıq (təsdiq cümlələrdə)
+      - **yet:** hələ ki (inkar və sual cümlələrinin sonunda)
+      - **just:** indicə (köməkçi fel ilə əsas fel arasında)
+      - **ever / never:** heç vaxt / heç vaxt (həyat təcrübəsi)
+      - **since:** -dən bəri (dəqiq başlanğıc anı: *since 2020, since morning*)
+      - **for:** ərzində (müddət: *for 3 years, for 2 hours*)
+
+      ### 3. Present Perfect və Past Simple Fərqi
+      - **Past Simple ($V_2$):** Hərəkət keçmişdə dəqiq vaxtda olub bitib (*yesterday, in 2018, 2 days ago, last week*).
+      - **Present Perfect:** Dəqiq vaxt göstərilmir, nəticə önəmlidir.
+          `,
+          keyFormulas: [
+            { id: 'f-e8-1', name: 'Present Perfect Formula', latex: "S + \\text{have/has} + V_3", description: 'İndiki bitmiş zamanın standart formulu.' },
+            { id: 'f-e8-2', name: 'Past Simple Formula', latex: "S + V_2 / V_{ed} \\quad (\\text{exact past time})", description: 'Dəqiq keçmiş zaman bildirdikdə istifadə olunur.' }
+          ],
+          glossary: [
+            { term: 'V3 (Past Participle)', definition: 'Qaydasız fellərin 3-cü forması (məs: go - went - gone).' },
+            { term: 'Since vs For', definition: 'Since başlanğıc nöqtəsini (since Monday), For isə zaman müddətini (for 5 days) göstərir.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-e8-1',
+              question: '"I ____ (live) in Baku since 2015." Cümləsini düzgün zaman formasında tamamlayın.',
+              solution: '"since 2015" başlanğıc nöqtəsi göstərdiyi üçün Present Perfect tələb olunur: "I have lived in Baku since 2015".'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-e8-1',
+              question: 'Choose the correct option: "She has not finished her homework ____."',
+              options: [
+                { key: 'A', text: 'already' },
+                { key: 'B', text: 'yet' },
+                { key: 'C', text: 'yesterday' },
+                { key: 'D', text: 'ago' }
+              ],
+              correctKey: 'B',
+              explanation: 'Inkar cümlələrinin sonunda "hələ də" mənasında "yet" istifadə olunur.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-inf-8-encoding',
+          subjectId: 'informatika',
+          grade: 8,
+          unit: 'İnformasiyanın Ölçülməsi və Kodlaşdırılması',
+          unitOrder: 1,
+          title: 'İnformasiyanın Miqdarı və Xartli Düsturu',
+          order: 1,
+          readTimeMinutes: 10,
+          difficulty: 2,
+          summary: 'İkili kodlaşdırma, bit və bayt anlayışları, informasiya ölçü vahidləri və Xartli düsturu ilə yaddaş hesablama.',
+          theoryMarkdown: `
+      ### 1. Ən Kiçik İnformasiya Vahidi: Bit və Bayt
+      Kompüterdə bütün məlumatlar 0 və 1 rəqəmlərindən ibarət ikili kodlarla saxlanılır.
+      - **Bit (Binary Digit):** İnformasiyanın ən kiçik vahididir (yalnız 0 və ya 1 qiymətini ala bilər).
+      - **Bayt:** 8 bitdən ibarət əsas ölçü vahididir ($1 \\text{ Bayt} = 8 \\text{ bit}$). Klaviaturadakı bir simvol yaddaşda 1 Bayt yer tutur (ASCII standartında).
+
+      ### 2. Xartli Düsturu
+      Əgər sistemdə $N$ sayda bərabər ehtimallı mümkün hal və ya əlifbada $N$ sayda simvol varsa, bir simvolun informasiya tutumu ($i$ bit) Xartli düsturu ilə tapılır:
+      $$N = 2^i \\implies i = \\log_2 N$$
+
+      ### 3. İnformasiyanın Ölçü Vahidləri Cədvəli
+      - $1 \\text{ Bayt} = 8 \\text{ bit} = 2^3 \\text{ bit}$
+      - $1 \\text{ KB (Kilobayt)} = 1024 \\text{ Bayt} = 2^{10} \\text{ Bayt}$
+      - $1 \\text{ MB (Meqabayt)} = 1024 \\text{ KB} = 2^{20} \\text{ Bayt}$
+      - $1 \\text{ GB (Qiqabayt)} = 1024 \\text{ MB} = 2^{30} \\text{ Bayt}$
+      - $1 \\text{ TB (Terabayt)} = 1024 \\text{ GB} = 2^{40} \\text{ Bayt}$
+          `,
+          keyFormulas: [
+            { id: 'f-inf8-1', name: 'Xartli Düsturu', latex: "N = 2^i", description: 'Mümkün halların sayı ilə bit tutumu arasındakı əlaqə.' },
+            { id: 'f-inf8-2', name: 'Mətnin Həcmi Düsturu', latex: "I = K \\cdot i", description: 'Ümumi həcm = simvolların sayı * bir simvolun bit həcmi.' }
+          ],
+          glossary: [
+            { term: 'ASCII', definition: '1 simvolun 1 bayt (8 bit) ilə kodlaşdırıldığı 256 simvolluq beynəlxalq kod cədvəli.' },
+            { term: 'Unicode', definition: 'Bütün dünya dillərinin simvollarını əhatə edən və 1 simvolu 2 bayt (16 bit) yer tutan standart.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-inf8-1',
+              question: '64 simvollu əlifba ilə yazılmış 500 simvolluq mətnin həcmi neçə baytdır?',
+              solution: '$N = 64 = 2^6 \\implies i = 6 \\text{ bit}$. Ümumi bit: $I = 500 \\cdot 6 = 3000 \\text{ bit}$. Bayta çevirək: $3000 / 8 = 375 \\text{ Bayt}$.'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-inf8-1',
+              question: '2 Kilobayt neçə Bayta bərabərdir?',
+              options: [
+                { key: 'A', text: '2000 Bayt' },
+                { key: 'B', text: '2048 Bayt' },
+                { key: 'C', text: '1024 Bayt' },
+                { key: 'D', text: '16384 Bayt' }
+              ],
+              correctKey: 'B',
+              explanation: '1 KB = 1024 Bayt olduğundan, 2 KB = 2 * 1024 = 2048 Baytdır.'
+            }
+          ]
+        },
+
+  {
+          id: 'lesson-inf-10-python',
+          subjectId: 'informatika',
+          grade: 10,
+          unit: 'Alqoritmlər və Python Proqramlaşdırma',
+          unitOrder: 1,
+          title: 'Python-da Şərt Operatorları və Dövrlər',
+          order: 1,
+          readTimeMinutes: 12,
+          difficulty: 3,
+          summary: 'Struktur proqramlaşdırma, budaqlanma (if-elif-else), for və while dövrləri, range() funksiyası və alqoritm optimizasiyası.',
+          theoryMarkdown: `
+      ### 1. Budaqlanan Alqoritmlər: if - elif - else
+      Python dilində şərt yoxlanışı girintilər (indentation - adətən 4 boşluq) ilə təşkil olunur:
+      \`\`\`python
+      bal = int(input("Balı daxil edin: "))
+
+      if bal >= 90:
+          print("Qiymət: 5 (Əla)")
+      elif bal >= 70:
+          print("Qiymət: 4 (Yaxşı)")
+      elif bal >= 50:
+          print("Qiymət: 3 (Kafi)")
+      else:
+          print("Qiymət: 2 (Qeyri-kafi)")
+      \`\`\`
+
+      ### 2. Təkrarlanan Alqoritmlər: for Dövrü
+      Məlum sayda təkrarlanmalar üçün \`for\` və \`range()\` funksiyasından istifadə olunur:
+      - \`range(5)\` $\\implies 0, 1, 2, 3, 4$
+      - \`range(1, 10, 2)\` $\\implies 1, 3, 5, 7, 9$ (başlanğıc, son, addım)
+      \`\`\`python
+      cem = 0
+      for i in range(1, 11):
+          cem += i
+      print("1-dən 10-a qədər ədədlərin cəmi:", cem)  # Nəticə: 55
+      \`\`\`
+
+      ### 3. while Dövrü
+      Müəyyən şərt doğru (\`True\`) olduğu müddətcə təkrarlanır:
+      \`\`\`python
+      saygac = 5
+      while saygac > 0:
+          print(saygac)
+          saygac -= 1
+      \`\`\`
+          `,
+          keyFormulas: [
+            { id: 'f-inf10-1', name: 'range(start, stop, step)', latex: "\\text{range}(a, b, k) \\implies a, a+k, a+2k, \\dots < b", description: 'Python ardıcıllıq generatoru.' }
+          ],
+          glossary: [
+            { term: 'İndentation (Girinti)', definition: 'Python-da kod bloklarını (şərt, dövr, funksiya) müəyyən edən məcburi boşluqlar.' },
+            { term: 'İterasiya', definition: 'Dövr daxilindəki əmrlərin bir dəfə tam icra olunması addımı.' }
+          ],
+          solvedExamples: [
+            {
+              id: 'ex-inf10-1',
+              question: '`for x in range(2, 10, 3): print(x)` kodu ekrana hansı ədədləri çıxaracaq?',
+              solution: '2-dən başlayaraq 3 vahid addımla 10-dan kiçik ədədlər: 2, 5, 8 çap olunacaq (cəmi 3 ədəd).'
+            }
+          ],
+          miniQuiz: [
+            {
+              questionId: 'mq-inf10-1',
+              question: 'Python-da `len("Məktəb")` funksiyasının qaytardığı nəticə nədir?',
+              options: [
+                { key: 'A', text: '5' },
+                { key: 'B', text: '6' },
+                { key: 'C', text: '7' },
+                { key: 'D', text: 'Məktəb' }
+              ],
+              correctKey: 'B',
+              explanation: '"Məktəb" sözündə 6 hərf var, len() sətirdəki simvolların sayını qaytarır.'
+            }
+          ]
+        },
+
+  {
+        "id": "lesson-chem-7-mixtures",
+        "subjectId": "kimya",
+        "grade": 7,
+        "unit": "İlkin Kimyəvi Anlayışlar",
+        "unitOrder": 1,
+        "title": "Saf Maddələr və Qarışıqların Ayrılması Üsulları",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 1,
+        "summary": "Bircinsli və müxtəlifcinsli qarışıqlar, fiziki xassələr və durultma, süzmə, buxarlandırma, distillə üsulları.",
+        "theoryMarkdown": "\n### 1. Saf Maddələr və Qarışıqlar\n- **Saf maddə:** Sabit fiziki xassələrə (sabit qaynama, ərimə temperaturu, sıxlıq) malik olan maddədir (məs: distillə olunmuş su, qlükoza, dəmir).\n- **Qarışıq:** İki və ya daha çox maddənin ixtiyari nisbətdə mexaniki birləşməsidir. Qarışıqlar iki yerə bölünür:\n  - **Bircinsli (Homogen):** Hissəcikləri adi gözlə və mikroskopla görünmür (məs: duzlu su, hava).\n  - **Müxtəlifcinsli (Heterogen):** Hissəcikləri asanlıqla seçilir (məs: su + qum, su + duru yağ).\n\n### 2. Qarışıqların Ayrılma Üsulları\n1. **Süzmə:** Suda həll olmayan bərk maddə ilə mayeni ayırmaq üçün (qum və su).\n2. **Durultma:** Sıxlıqları fərqli olan qarışmayan mayeləri ayırmaq üçün bölücü qıfdan istifadə (su və yağ).\n3. **Buxarlandırma və Kristallaşdırma:** Mayedə həll olmuş bərk maddəni ayırmaq üçün (duzlu su).\n4. **Distillə:** Qaynama temperaturları fərqli olan bircinsli maye qarışıqlarını ayırmaq üçün (su və spirt).\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-p7-1',
-            question: 'Piyada $v = 1.5 \\text{ m/s}$ sürətlə 20 saniyəyə nə qədər yol qət edər?',
-            solution: '$$s = v \\cdot t = 1.5 \\cdot 20 = 30 \\text{ metr}$$.'
+            "id": "f-c7-1",
+            "name": "Kütlə Payı",
+            "latex": "\\\\omega = \\\\frac{m_{\\\\text{maddə}}}{m_{\\\\text{məhlul}}} \\\\cdot 100\\\\%",
+            "description": "Həll olan maddənin məhluldakı faiz nisbəti."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-p7-1',
-            question: '$72 \\text{ km/saat}$ sürət neçə $\\text{m/s}$-yə bərabərdir?',
-            options: [
-              { key: 'A', text: '$15 \\text{ m/s}$' },
-              { key: 'B', text: '$20 \\text{ m/s}$' },
-              { key: 'C', text: '$25 \\text{ m/s}$' },
-              { key: 'D', text: '$36 \\text{ m/s}$' }
+            "term": "Distillə",
+            "definition": "Mayenin buxarlandırılması və ardınca buxarın soyudularaq kondensasiya olunması prosesi."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c7-1",
+            "question": "Su ilə bitki yağı qarışığını hansı üsulla ən səliqəli şəkildə ayırmaq olar?",
+            "solution": "Su və yağ bir-birində həll olmayan müxtəlifcinsli qarışıq əmələ gətirir və sıxlıqları fərqlidir. Onları bölücü qıf vasitəsilə durultma üsulu ilə asanlıqla ayırmaq olar."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c7-1",
+            "question": "Aşağıdakılardan hansı saf maddədir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Dəniz suyu"
+              },
+              {
+                "key": "B",
+                "text": "Hava"
+              },
+              {
+                "key": "C",
+                "text": "Distillə olunmuş su ($H_2O$)"
+              },
+              {
+                "key": "D",
+                "text": "Süd"
+              }
             ],
-            correctKey: 'B',
-            explanation: '72 / 3.6 = 20 m/s.'
+            "correctKey": "C",
+            "explanation": "Distillə olunmuş su təmiz kimyəvi birləşmədir və heç bir kənar qarışığı yoxdur."
           }
         ]
       },
 
   {
-        id: 'lesson-phys-8-heat',
-        subjectId: 'fizika',
-        grade: 8,
-        unit: 'İstilik Hadisələri və Daxili Enerji',
-        unitOrder: 1,
-        title: 'İstilik Miqdarı və Xüsusi İstilik Tutumu',
-        order: 1,
-        readTimeMinutes: 11,
-        difficulty: 2,
-        summary: 'Daxili enerjinin dəyişmə üsulları, istilikvermə növləri və istilik miqdarının hesablanması düsturları.',
-        theoryMarkdown: `
-    ### 1. Daxili Enerji və İstilikvermə
-    Cismi təşkil edən zərrəciklərin hərəkət və qarşılıqlı təsir enerjilərinin cəminə **daxili enerji** deyilir.
-    İstilikvermənin 3 növü var:
-    1. **İstilikkeçirmə:** Zərrəciklərin bir-birinə toxunması ilə enerjinin ötürülməsi (metallarda ən yüksəkdir).
-    2. **Konveksiya:** Maye və qaz laylarının axınları ilə istiliyin daşınması.
-    3. **Şüalanma:** İstiliyin elektromaqnit dalğaları vasitəsilə (hətta vakuumda da) yayılması.
-
-    ### 2. İstilik Miqdarının Hesablanması
-    Cismi qızdırdıqda udulan və ya soyutduqda ayrılan istilik miqdarı:
-    $$Q = c \\cdot m \\cdot (t_2 - t_1) = c \\cdot m \\cdot \\Delta t$$
-    Burada $c$ maddənin **xüsusi istilik tutumudur** (vahidi: $\\frac{\\text{C}}{\\text{kq} \\cdot ^\\circ\\text{C}}$), $m$ kütlədir.
-        `,
-        keyFormulas: [
-          { id: 'f-p8-1', name: 'İstilik Miqdarı', latex: "Q = c \\cdot m \\cdot \\Delta t", description: 'Qızma/soyuma zamanı istilik miqdarı.' },
-          { id: 'f-p8-2', name: 'Yanacağın Yanma İstiliyi', latex: "Q = q \\cdot m", description: 'Yanacaq tam yandıqda ayrılan enerji.' }
-        ],
-        glossary: [
-          { term: 'Xüsusi istilik tutumu (c)', definition: '1 kq maddənin temperaturunu 1 dərəcə artırmaq üçün tələb olunan istilik miqdarı.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-chem-10-alkanes",
+        "subjectId": "kimya",
+        "grade": 10,
+        "unit": "Üzvi Kimya: Karbohidrogenlər",
+        "unitOrder": 1,
+        "title": "Doymuş Karbohidrogenlər (Alkanlar)",
+        "order": 1,
+        "readTimeMinutes": 11,
+        "difficulty": 3,
+        "summary": "Alkanların homoloji sırası ($C_n H_{2n+2}$), $sp^3$ hibridləşmə, izomerlik və əvəzetmə reaksiyaları.",
+        "theoryMarkdown": "\n### 1. Alkanların Ümumi Formulu\nMolekullarında karbon atomları bir-biri ilə yalnız təkqat $\\\\sigma$-rabitələrlə birləşmiş karbohidrogenlərə **alkanlar (parafinlər)** deyilir:\n$$C_n H_{2n+2} \\\\quad (n \\\\ge 1)$$\nİlk nümayəndələri: Metan ($CH_4$), Etan ($C_2H_6$), Propan ($C_3H_8$), Butan ($C_4H_{10}$).\n\n### 2. Molekulun Fəza Quruluşu\nAlkanlarda bütün karbon atomları **$sp^3$ hibridləşmə** vəziyyətindədir. Valent bucağı $109^\\\\circ 28'$ təşkil edir və tetraedrik quruluşa malikdir. $C-C$ rabitəsinin uzunluğu $0.154 \\\\text{ nm}$-dir.\n\n### 3. Kimyəvi Xassələri\nDoymuş olduqları üçün birləşmə reaksiyasına daxil olmurlar:\n- **Radikal əvəzetmə (Xlorlaşma):**\n  $$CH_4 + Cl_2 \\\\xrightarrow{h\\\\nu} CH_3Cl + HCl$$\n- **Tam yanma reaksiyası:**\n  $$C_n H_{2n+2} + \\\\frac{3n+1}{2} O_2 \\\\to n CO_2 + (n+1) H_2O$$\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-p8-1',
-            question: 'Kütləsi $2 \\text{ kq}$ olan suyun temperaturunu $20^\\circ\\text{C}$-dən $50^\\circ\\text{C}$-yə qədər artırmaq üçün nə qədər istilik lazımdır? ($c_{su} = 4200 \\text{ C/(kq}\\cdot^\\circ\\text{C)}$)',
-            solution: '$Q = 4200 \\cdot 2 \\cdot (50 - 20) = 4200 \\cdot 2 \\cdot 30 = 252\\,000 \\text{ C} = 252 \\text{ kC}$.'
+            "id": "f-c10-1",
+            "name": "Alkanların Ümumi Formulu",
+            "latex": "C_n H_{2n+2}",
+            "description": "Açıq zəncirli doymuş karbohidrogenlərin homoloji sırası."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-p8-1',
-            question: 'İstiliyin vakuumda yayılması hansı istilikvermə növü ilə mümkündür?',
-            options: [
-              { key: 'A', text: 'Yalnız konveksiya' },
-              { key: 'B', text: 'Yalnız istilikkeçirmə' },
-              { key: 'C', text: 'Şüalanma' },
-              { key: 'D', text: 'Vakuumda heç cür yayıla bilməz' }
+            "term": "Homoloji fərq",
+            "definition": "Qonşu homoloqların bir-birindən fərqləndiyi $-CH_2-$ (metilen) qrupu."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c10-1",
+            "question": "Tərkibində 5 karbon atomu olan alkanın ($C_5H_{12}$) nisbi molekul kütləsini tapın ($Ar(C)=12, Ar(H)=1$).",
+            "solution": "$$M_r(C_5H_{12}) = 5 \\\\cdot 12 + 12 \\\\cdot 1 = 60 + 12 = 72$$."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c10-1",
+            "question": "Metan molekulunda ($CH_4$) karbon atomunun hibridləşmə növü hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "$sp$"
+              },
+              {
+                "key": "B",
+                "text": "$sp^2$"
+              },
+              {
+                "key": "C",
+                "text": "$sp^3$"
+              },
+              {
+                "key": "D",
+                "text": "Hibridləşməyib"
+              }
             ],
-            correctKey: 'C',
-            explanation: 'Şüalanma elektromaqnit dalğaları vasitəsilə maddəsiz mühitdə (vakuumda) belə yayılır (məsələn, Günəş şüaları).'
+            "correctKey": "C",
+            "explanation": "Bütün alkanlarda karbon atomları dörd tək rabitə əmələ gətirdiyinə görə sp3 hibridləşmə vəziyyətindədir."
           }
         ]
       },
 
   {
-        id: 'lesson-phys-9-gravity',
-        subjectId: 'fizika',
-        grade: 9,
-        unit: 'Qravitasiya Sahəsi və Qanunları',
-        unitOrder: 1,
-        title: 'Nyutonun Ümumdünya Cazibə Qanunu',
-        order: 1,
-        readTimeMinutes: 12,
-        difficulty: 3,
-        summary: 'Qravitasiya qarşılıqlı təsiri, cazibə qüvvəsinin kütlələrdən və məsafədən asılılığı, sərbəstdüşmə təcili.',
-        theoryMarkdown: `
-    ### 1. Ümumdünya Cazibə Qanunu
-    Kainatdakı bütün cisimlər bir-birini kütlələrinin hasili ilə düz, aralarındakı məsafənin kvadratı ilə tərs mütənasib olan qüvvə ilə cəzb edir:
-    $$F = G \\frac{m_1 \\cdot m_2}{R^2}$$
-    Burada $G = 6.67 \\cdot 10^{-11} \\frac{\\text{N} \\cdot \\text{m}^2}{\\text{kq}^2}$ qravitasiya sabitidir.
-
-    ### 2. Sərbəstdüşmə Təcili ($g$)
-    Yerin səthində kütləsi $M$ olan planetin yaratdığı cazibə təcili:
-    $$g = \\frac{GM}{R^2} \\approx 9.8 \\text{ m/s}^2$$
-    Hündürlüyə qalxdıqca məsafə artdığı üçün təcil azalır:
-    $$g_h = \\frac{GM}{(R + h)^2}$$
-        `,
-        keyFormulas: [
-          { id: 'f-p9-1', name: 'Ümumdünya Cazibə Qanunu', latex: "F = G \\frac{m_1 m_2}{R^2}", description: 'Cisimlər arasındakı cazibə qüvvəsi.' },
-          { id: 'f-p9-2', name: 'Qravitasiya Təcili', latex: "g = \\frac{GM}{R^2}", description: 'Planet səthində sərbəstdüşmə təcili.' }
-        ],
-        glossary: [
-          { term: 'Qravitasiya sabiti (G)', definition: 'Kütlələri 1 kq olan iki maddi nöqtənin 1 metr məsafədən bir-birini cəzb etdiyi qüvvəyə bərabər fundamental sabit.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-bio-7-arthropods",
+        "subjectId": "biologiya",
+        "grade": 7,
+        "unit": "Heyvanlar Aləmi: Onurğasızlar",
+        "unitOrder": 1,
+        "title": "Buğumayaqlılar Tipi və Əsas Sinifləri",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "Xitin skelet, buğumlu ətraflar, açıq qan dövranı və xərçəngkimilər, hörümçəkkimilər, həşəratlar müqayisəsi.",
+        "theoryMarkdown": "\n### 1. Buğumayaqlıların Ümumi Əlamətləri\nYer kürəsində növ sayına görə ən zəngin heyvan tipidir (1 milyondan çox növ). Əsas xüsusiyyətləri:\n- Bədənləri və ətrafları **buğumludur**.\n- Bədən xaricdən möhkəm **xitin örtüklə** (xarici skeletlə) örtülmüşdür. Xitin elastik olmadığı üçün heyvanlar qabıq dəyişməklə böyüyürlər.\n- Qan-damar sistemi **açıqdır** (qan bədən boşluğuna tökülür).\n\n### 2. Əsas Siniflərin Müqayisəsi\n1. **Xərçəngkimilər:** Baş-döş və qarıncıq. 5 cüt (10 ədəd) yeriş ayağı. Qəlsəmələrlə tənəffüs edir.\n2. **Hörümçəkkimilər:** Baş-döş və buğumsuz qarıncıq. 4 cüt (8 ədəd) yeriş ayağı. Bığcıqları yoxdur. Tor vəziləri var.\n3. **Həşəratlar:** Baş, döş və qarıncıq. 3 cüt (6 ədəd) yeriş ayağı. 1 cüt bığcıq. Traxeyalarla tənəffüs edir, əksəriyyətində qanadlar var.\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-p9-1',
-            question: 'İki cisim arasındakı məsafə 3 dəfə artarsa, aralarındakı cazibə qüvvəsi necə dəyişər?',
-            solution: 'Cazibə qüvvəsi məsafənin kvadratı ilə tərs mütənasibdir ($F \\sim 1/R^2$). Məsafə 3 dəfə artarsa, qüvvə $3^2 = 9$ dəfə azalar.'
+            "id": "f-b7-1",
+            "name": "Yeriş Ayaqları Sayı",
+            "latex": "\\\\text{Həşərat (6)} < \\\\text{Hörümçək (8)} < \\\\text{Xərçəng (10)}",
+            "description": "Sinifləri fərqləndirən əsas morfoloji xüsusiyyət."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-p9-1',
-            question: 'Cismin kütlələrindən biri 2 dəfə artırılsa, cazibə qüvvəsi necə dəyişər?',
-            options: [
-              { key: 'A', text: '4 dəfə artar' },
-              { key: 'B', text: '2 dəfə artar' },
-              { key: 'C', text: 'Dəyişməz' },
-              { key: 'D', text: '2 dəfə azar' }
+            "term": "Xitin",
+            "definition": "Buğumayaqlıların xarici skeletini təşkil edən möhkəm polisaxarid qat."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-b7-1",
+            "question": "May böcəyinin döş hissəsində neçə ədəd yeriş ayağı birləşmişdir?",
+            "solution": "May böcəyi həşəratlar sinfinə aiddir, bütün yetkin həşəratlarda 3 cüt, yəni 6 ədəd yeriş ayağı olur."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-b7-1",
+            "question": "Hörümçəkkimilər sinfinə aid olan canlılarda neçə cüt yeriş ayağı olur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "2 cüt"
+              },
+              {
+                "key": "B",
+                "text": "3 cüt"
+              },
+              {
+                "key": "C",
+                "text": "4 cüt"
+              },
+              {
+                "key": "D",
+                "text": "5 cüt"
+              }
             ],
-            correctKey: 'B',
-            explanation: 'Qüvvə kütlələrin hasili ilə düz mütənasibdir. Kütlə 2 dəfə artdıqda qüvvə də 2 dəfə artır.'
+            "correctKey": "C",
+            "explanation": "Hörümçəkkimilərdə 4 cüt (8 ədəd) yeriş ayağı olur."
           }
         ]
       },
 
   {
-        id: 'lesson-phys-10-kinematics',
-        subjectId: 'fizika',
-        grade: 10,
-        unit: 'Klassik Mexanika və Kinematika',
-        unitOrder: 1,
-        title: 'Düzxətli Dəyişənsürətli Hərəkət və Təcil',
-        order: 1,
-        readTimeMinutes: 14,
-        difficulty: 3,
-        summary: 'Təcil anlayışı, sürət və yerdəyişmə tənlikləri, zamansız düstur və qrafik təhlil.',
-        theoryMarkdown: `
-    ### 1. Dəyişənsürətli Hərəkət və Təcil
-    Sürət dəyişməsinin bu dəyişmənin baş verdiyi zaman fasiləsinə nisbətinə bərabər olan kəmiyyətə **təcil** deyilir:
-    $$\\vec{a} = \\frac{\\vec{v} - \\vec{v}_0}{t}$$
-    BS-də vahidi: $[a] = \\frac{\\text{m}}{\\text{s}^2}$.
-
-    ### 2. Sürət və Yerdəyişmə Tənlikləri
-    - Bərabərtəcilli hərəkətdə anlıq sürət:
-    $$v = v_0 \\pm at$$
-    - Gedilən yol (yerdəyişmə):
-    $$s = v_0 t \\pm \\frac{at^2}{2}$$
-    - Zamansız sürət düsturu:
-    $$v^2 - v_0^2 = 2as \\implies s = \\frac{v^2 - v_0^2}{2a}$$
-        `,
-        keyFormulas: [
-          { id: 'pf1', name: 'Təcil Düsturu', latex: "a = \\frac{v - v_0}{t}", description: 'Vahid zamandakı sürət dəyişməsi.' },
-          { id: 'pf2', name: 'Sürət Tənliyi', latex: "v = v_0 + at", description: 'Anlıq sürət.' },
-          { id: 'pf3', name: 'Yerdəyişmə Tənliyi', latex: "s = v_0 t + \\frac{at^2}{2}", description: 'Bərabərtəcilli hərəkətdə yol.' }
-        ],
-        glossary: [
-          { term: 'Təcil (a)', definition: 'Sürətin dəyişmə yeyinliyini göstərən vektor kəmiyyət.' },
-          { term: 'Bərabəryeyinləşən Hərəkət', definition: 'Sürətin modulunun bərabər zamanlarda eyni qədər artdığı hərəkət.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-bio-10-cytology",
+        "subjectId": "biologiya",
+        "grade": 10,
+        "unit": "Sitologiya: Hüceyrə Biologiyası",
+        "unitOrder": 1,
+        "title": "Hüceyrənin Quruluşu və Orqanoidləri",
+        "order": 1,
+        "readTimeMinutes": 12,
+        "difficulty": 3,
+        "summary": "Prokariot və eukariot hüceyrələr, plazmatik membran, mitoxondri, ribosom, endoplazmatik şəbəkə və nüvənin funksiyaları.",
+        "theoryMarkdown": "\n### 1. Hüceyrə Nəzəriyyəsinin Əsasları\nHüceyrə - bütün canlıların ən kiçik quruluş, inkişaf və funksional vahididir (Şvan və Şleyden).\nBütün orqanizmlər iki böyük qrupa bölünür:\n- **Prokariotlar:** Formalaşmış nüvəsi olmayanlar (bakteriyalar və göy-yaşıl yosunlar).\n- **Eukariotlar:** Əsl formalaşmış nüvəyə malik olanlar (bitkilər, heyvanlar, göbələklər).\n\n### 2. Əsas Orqanoidlər və Onların Funksiyaları\n- **Mitoxondri:** Hüceyrənin \"enerji stansiyası\". Daxili membranı (kristlər) üzərində ATF (adenozintrifosfat) sintez olunur.\n- **Ribosom:** Zülal sintezini həyata keçirən membransız orqanoid.\n- **Endoplazmatik şəbəkə (EPŞ):** Maddələrin hüceyrədaxili daşınma sistemi (dənəvər EPŞ zülal, hamar EPŞ lipid/karbohidrat sintez edir).\n- **Holci kompleksi:** Sintez olunmuş maddələrin qablaşdırılması və lizosomların yaranması.\n- **Lizosom:** Hüceyrədaxili həzm fermentlərini saxlayır.\n    ",
+        "keyFormulas": [
           {
-            id: 'pex1',
-            question: 'Sükunət vəziyyətindən $a = 2 \\text{ m/s}^2$ təcillə hərəkətə başlayan cisim 4 saniyədə nə qədər yol gedər?',
-            solution: '$s = \\frac{at^2}{2} = \\frac{2 \\cdot 4^2}{2} = 16 \\text{ metr}$.'
+            "id": "f-b10-1",
+            "name": "ATF Enerji Parçalanması",
+            "latex": "\\\\text{ATF} + H_2O \\\\to \\\\text{ADF} + H_3PO_4 + 40 \\\\text{ kC/mol}",
+            "description": "Mitoxondridə yaranan makroerqik rabitənin enerji ayrılması."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'pmq1',
-            question: 'Sürət tənliyi $v = 10 + 3t$ olan cismin başlanğıc sürəti və təcili neçədir?',
-            options: [
-              { key: 'A', text: '$v_0 = 10, a = 3$' },
-              { key: 'B', text: '$v_0 = 3, a = 10$' },
-              { key: 'C', text: '$v_0 = 13, a = 1$' },
-              { key: 'D', text: '$v_0 = 10, a = 0$' }
+            "term": "Kristlər",
+            "definition": "Mitoxondrinin daxili membranının əmələ gətirdiyi qatlar."
+          },
+          {
+            "term": "Xromatin",
+            "definition": "Nüvədə DNT və zülallardan ibarət irsi material sapları."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-b10-1",
+            "question": "Hüceyrədə zülalların biosintezi hansı orqanoiddə baş verir?",
+            "solution": "Zülal molekullarının amin turşularından yığılması bilavasitə ribosomlarda baş verir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-b10-1",
+            "question": "Hüceyrənin energetik stansiyası adlanan və ATF sintez edən iki membranlı orqanoid hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Ribosom"
+              },
+              {
+                "key": "B",
+                "text": "Mitoxondri"
+              },
+              {
+                "key": "C",
+                "text": "Lizosom"
+              },
+              {
+                "key": "D",
+                "text": "Holci kompleksi"
+              }
             ],
-            correctKey: 'A',
-            explanation: 'v = v0 + at tənliyi ilə müqayisədən v0 = 10 m/s, a = 3 m/s^2.'
+            "correctKey": "B",
+            "explanation": "Bioloji oksidləşmə və ATF sintezi mitoxondrinin kristlərində baş verir."
           }
         ]
       },
 
   {
-        id: 'lesson-chem-8-amount',
-        subjectId: 'kimya',
-        grade: 8,
-        unit: 'Kimyanın Əsas Stexiometrik Qanunları',
-        unitOrder: 1,
-        title: 'Maddə Miqdarı. Molyar Kütlə və Avoqadro Qanunu',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'Mol anlayışı, Avoqadro sabiti, molyar kütlə və normal şəraitdə qazların molyar həcmi düsturları.',
-        theoryMarkdown: `
-    ### 1. Maddə Miqdarı və Mol
-    Maddəni təşkil edən zərrəciklərin (atom, molekul) sayını xarakterizə edən kəmiyyətə **maddə miqdarı** deyilir və $n$ (və ya $\\nu$) ilə işarə olunur. Vahidi **moldur**.
-    1 mol maddədə $N_A = 6.02 \\cdot 10^{23}$ sayda zərrəcik var (Avoqadro sabiti).
-
-    ### 2. Molyar Kütlə ($M$)
-    1 mol maddənin kütləsinə **molyar kütlə** deyilir:
-    $$M = \\frac{m}{n} \\quad [M] = \\text{q/mol}$$
-
-    ### 3. Avoqadro Qanunu və Qazların Molyar Həcmi
-    Eyni şəraitdə (eyni temperatur və təzyiqdə) müxtəlif qazların bərabər həcmlərində bərabər sayda molekul olur.
-    Normal şəraitdə (n.ş. $T=0^\\circ\\text{C}, P=101.3 \\text{ kPa}$) istənilən qazın 1 molu $V_m = 22.4 \\text{ litr}$ həcm tutur:
-    $$n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V}{V_m}$$
-        `,
-        keyFormulas: [
-          { id: 'f-c8-1', name: 'Maddə Miqdarı Düsturu', latex: "n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V}{V_m}", description: 'Mol, kütlə, zərrəcik sayı və həcm əlaqəsi.' },
-          { id: 'f-c8-2', name: 'Molyar Həcm', latex: "V_m = 22.4 \\text{ l/mol (n.ş.)}", description: 'Normal şəraitdə qazların 1 molunun həcmi.' }
-        ],
-        glossary: [
-          { term: 'Avoqadro sabiti (N_A)', definition: '1 mol maddədə olan struktur zərrəciklərin sayı ($6.02 \\cdot 10^{23}$).' },
-          { term: 'Normal şərait (n.ş.)', definition: 'Temperaturun 0°C və təzyiqin 1 atmosfer olduğu fiziki şərait.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-geog-8-lithosphere",
+        "subjectId": "cografiya",
+        "grade": 8,
+        "unit": "Litosfer və Yer Səthinin Relyefi",
+        "unitOrder": 1,
+        "title": "Litosfer Plitələri, Vulkanlar və Zəlzələlər",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "Yer qabığının hərəkəti, plitələrin toqquşması və aralanması, Sakit okean 'Alov halqası' və seysmik qurşaqlar.",
+        "theoryMarkdown": "\n### 1. Litosfer Plitələri Nəzəriyyəsi\nYer qabığı və yuxarı mantiyanın bərk hissəsi vahid deyil, nəhəng **litosfer plitələrinə** bölünmüşdür (Avrasiya, Şimali Amerika, Cənubi Amerika, Afrika, Hind-Avstraliya, Sakit okean, Antarktida).\nBu plitələr astenosfer qatı üzərində ildə bir neçə santimetr sürətlə hərəkət edirlər:\n- **Konvergent sərhəd (Toqquşma):** Qırışıq dağlar, dərin okean novları və vulkanik adalar qövsləri yaranır (məs: Himalay, Qafqaz dağları).\n- **Divergent sərhəd (Aralanma):** Orta okean sıra dağları və rift dərələri yaranır (məs: Orta Atlantika silsiləsi).\n\n### 2. Zəlzələlər və Seysmik Qurşaqlar\nZəlzələ ocağının yerin dərinliyindəki mərkəzinə **hipomərkəz**, onun bilavasitə yer səthindəki proyeksiyasına **epimərkəz** deyilir.\nDünyada iki nəhəng seysmik qurşaq var:\n1. **Sakit okean 'Alov halqası':** Dünyadakı zəlzələ və fəaliyyətdə olan vulkanların 80%-i buradadır.\n2. **Alp-Himalay seysmik qurşağı:** Azərbaycan ərazisi də bu aktiv zolaqda yerləşir.\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-c8-1',
-            question: 'Normal şəraitdə $44.8 \\text{ litr}$ $CO_2$ qazı neçə moldur?',
-            solution: '$$n = \\frac{V}{V_m} = \\frac{44.8}{22.4} = 2 \\text{ mol}$$.'
+            "id": "f-g8-1",
+            "name": "Rixter Şkalası",
+            "latex": "M = \\\\log_{10}(A) - \\\\log_{10}(A_0)",
+            "description": "Zəlzələnin maqnitudasının (enerjisinin) loqarifmik ölçüsü."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-c8-1',
-            question: '0.5 mol oksigen qazı ($O_2$) neçə qramdır? ($M(O_2) = 32 \\text{ q/mol}$)',
-            options: [
-              { key: 'A', text: '16 qram' },
-              { key: 'B', text: '32 qram' },
-              { key: 'C', text: '64 qram' },
-              { key: 'D', text: '8 qram' }
+            "term": "Epimərkəz",
+            "definition": "Zəlzələ ocağının yer səthində ən güclü dağıntı törədən mərkəzi nöqtəsi."
+          },
+          {
+            "term": "Qeyzer",
+            "definition": "Vulkanik zonalarda dövri olaraq fontan vuran qaynar su və buxar mənbəyi."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-g8-1",
+            "question": "Azərbaycan hansı nəhəng seysmik qurşağın tərkibinə daxildir?",
+            "solution": "Azərbaycan Avrasiya və Ərəbistan litosfer plitələrinin toqquşma zonasında - Alp-Himalay qırışıqlıq və seysmik qurşağında yerləşir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-g8-1",
+            "question": "Yer səthində fəaliyyətdə olan vulkanların və güclü zəlzələlərin ən çox cəmləşdiyi bölgə hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Qərbi Sibir düzənliyi"
+              },
+              {
+                "key": "B",
+                "text": "Sakit okean 'Alov halqası'"
+              },
+              {
+                "key": "C",
+                "text": "Şərqi Afrika yarığı"
+              },
+              {
+                "key": "D",
+                "text": "Skandinaviya qalxması"
+              }
             ],
-            correctKey: 'A',
-            explanation: 'm = n * M = 0.5 mol * 32 q/mol = 16 qram.'
+            "correctKey": "B",
+            "explanation": "Sakit okeanın kənarları boyunca plitələrin fəal toqquşması nəticəsində 'Alov halqası' yaranmışdır."
           }
         ]
       },
 
   {
-        id: 'lesson-chem-9-bonds',
-        subjectId: 'kimya',
-        grade: 9,
-        unit: 'Kimyəvi Rabitə və Maddənin Quruluşu',
-        unitOrder: 1,
-        title: 'Kovalent və İon Rabitələri',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'Elektromənfilik, polyar və qeyri-polyar kovalent rabitə, ion rabitəsi və oktet qaydası.',
-        theoryMarkdown: `
-    ### 1. Kimyəvi Rabitənin Mahiyyəti
-    Atomlar dayanıqlı elektron konfiqurasiyasına (xarici energetik səviyyədə 8 elektron - oktet qaydası) nail olmaq üçün kimyəvi rabitə əmələ gətirirlər.
-
-    ### 2. Kovalent Rabitə
-    Ümumi elektron cütlərinin yaranması hesabına əmələ gələn rabitəyə **kovalent rabitə** deyilir:
-    - **Qeyri-polyar kovalent:** Eyni qeyri-metal atomları arasında yaranır (məs: $H_2, O_2, N_2, Cl_2$). Elektron cütü simmetrik paylaşılır.
-    - **Polyar kovalent:** Elektromənfiliyi müxtəlif olan qeyri-metallar arasında yaranır (məs: $HCl, H_2O, NH_3$).
-
-    ### 3. İon Rabitəsi
-    Tipik metal və tipik qeyri-metal atomları arasında elektronların tam keçidi nəticəsində yaranan əks yüklü ionların elektrostatik cazibəsi ilə əmələ gəlir (məs: $NaCl, KBr, CaCl_2$).
-        `,
-        keyFormulas: [
-          { id: 'cf1', name: 'Oktet Qaydası', latex: "s^2 p^6 \\quad (8e^-)", description: 'Xarici təbəqənin təsirsiz qaz konfiqurasiyasına tamamlanması.' }
-        ],
-        glossary: [
-          { term: 'Elektromənfilik', definition: 'Kimyəvi rabitədə atomun ümumi elektron cütünü özünə cəzb etmə qabiliyyəti.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-geog-9-azerbaijan-climate",
+        "subjectId": "cografiya",
+        "grade": 9,
+        "unit": "Azərbaycanın Fiziki Coğrafiyası",
+        "unitOrder": 1,
+        "title": "Azərbaycanın İqlim Tipləri və Landşaftları",
+        "order": 1,
+        "readTimeMinutes": 11,
+        "difficulty": 2,
+        "summary": "Dünyadakı 11 iqlim tipindən 9-nun Azərbaycanda rast gəlinməsi səbəbləri, günəş radiasiyası və yağıntıların paylanması.",
+        "theoryMarkdown": "\n### 1. İqliməmələgətirən Amillər\nAzərbaycan subtropik və mülayim iqlim qurşaqlarının qovuşuğunda yerləşir. Ərazidə mütləq hündürlük $-28 \\\\text{ m}$-dən (Xəzər sahili) $+4466 \\\\text{ m}$-ə qədər (Bazardüzü zirvəsi) dəyişdiyi üçün şaquli qurşaqlıq güclü inkişaf etmişdir.\nƏrazidə illik günəş parıltısının müddəti $2200 - 2700$ saatdır.\n\n### 2. Əsas İqlim Tipləri\nDünyada mövcud olan 11 iqlim tipindən 9-u Azərbaycanda müşahidə edilir:\n1. **Quru çöl və yarımsəhra iqlimi:** Kür-Araz ovalığı, Abşeron və Qobustanda (yağıntı az, yay çox isti).\n2. **Qışı mülayim, yayı quraq keçən mülayim-isti:** Lənkəran ovalığı (yağıntı ən çox buradadır - 1400-1700 mm).\n3. **Qışı quraq keçən mülayim-isti:** Qanıx-Əyriçay, Kiçik Qafqazın ətəkləri.\n4. **Soyuq və dağ-tundra iqlimi:** Böyük və Kiçik Qafqazın yüksək dağlıq zirvələrində.\n    ",
+        "keyFormulas": [
           {
-            id: 'cex1',
-            question: '$N_2$ molekulunda azot atomları arasında rabitə qatılığı neçədir?',
-            solution: 'Azot atomunun xarici təbəqəsində 3 tək elektron var. Hər iki azot 3 elektron cütü paylaşır və aralarında üçqat rabitə yaranır ($N \\equiv N$).'
+            "id": "f-g9-1",
+            "name": "Rütubətlənmə Əmsalı",
+            "latex": "K = \\\\frac{Q}{E_0}",
+            "description": "İllik yağıntı miqdarının (Q) mümkün buxarlanmaya (E0) nisbəti."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'cmq1',
-            question: 'Aşağıdakı maddələrdən hansında qeyri-polyar kovalent rabitə mövcuddur?',
-            options: [
-              { key: 'A', text: '$NaCl$' },
-              { key: 'B', text: '$H_2O$' },
-              { key: 'C', text: '$O_2$' },
-              { key: 'D', text: '$CH_4$' }
+            "term": "Şaquli qurşaqlıq",
+            "definition": "Dağlarda hündürlüyə qalxdıqca temperaturun azalması ilə təbiət komplekslərinin qanunauyğun dəyişməsi."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-g9-1",
+            "question": "Azərbaycanda ən çox yağıntı alan təbii vilayət hansıdır?",
+            "solution": "Lənkəran təbii vilayətidir (Talış dağlarının ətəkləri), burada illik yağıntı 1400-1700 mm-ə çatır."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-g9-1",
+            "question": "Kür-Araz ovalığı və Abşeron yarımadasında hansı iqlim tipi üstünlük təşkil edir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Dağ-tundra"
+              },
+              {
+                "key": "B",
+                "text": "Quru çöl və yarımsəhra"
+              },
+              {
+                "key": "C",
+                "text": "Rütubətli subtropik"
+              },
+              {
+                "key": "D",
+                "text": "Soyuq meşə iqlimi"
+              }
             ],
-            correctKey: 'C',
-            explanation: '$O_2$ molekulu eyni elektromənfiliyə malik iki oksigen atomundan ibarətdir, buna görə qeyri-polyar kovalentdir.'
+            "correctKey": "B",
+            "explanation": "Kür-Araz ovalığı və Abşeronda yayı isti və quraq, qışı mülayim keçən yarımsəhra və quru çöl iqlimi hakimdir."
           }
         ]
       },
 
   {
-        id: 'lesson-bio-8-circulatory',
-        subjectId: 'biologiya',
-        grade: 8,
-        unit: 'İnsan Orqanizminin Quruluşu və Funksiyaları',
-        unitOrder: 1,
-        title: 'Qan-Damar Sistemi və Ürəyin Quruluşu',
-        order: 1,
-        readTimeMinutes: 11,
-        difficulty: 2,
-        summary: 'Ürəyin 4 kameralı quruluşu, böyük və kiçik qan dövranı, damarların növləri və qan qrupları.',
-        theoryMarkdown: `
-    ### 1. Ürəyin Anatomik Quruluşu
-    İnsan ürəyi arakəsmə ilə sağ və sol yarımhissələrə, hər yarımhissə isə qulaqcıq və mədəciyə bölünür:
-    - **Sağ qulaqcıq və sağ mədəcik:** Venoz (karbon qazı ilə zəngin) qan saxlayır.
-    - **Sol qulaqcıq və sol mədəcik:** Arterial (oksigenlə zəngin) qan saxlayır.
-
-    ### 2. Qan Damarlarının Növləri
-    1. **Arteriyalar:** Qanı ürəkdən orqanlara daşıyan qalın, elastik divarlı damarlar (ən böyüyü aorta).
-    2. **Venalar:** Qanı orqanlardan ürəyə gətirən damarlar (daxilində geriyə axını önləyən qapaqlar var).
-    3. **Kapilyarlar:** Ən nazik damarlar (bir qat epitel hüceyrəsi), qaz və qida mübadiləsi burada baş verir.
-
-    ### 3. Böyük və Kiçik Qan Dövranı
-    - **Böyük qan dövranı:** Sol mədəcikdən başlayır (aorta ilə), bütün bədəni təmin edərək sağ qulaqcıqda bitir.
-    - **Kiçik (ağciyər) qan dövranı:** Sağ mədəcikdən başlayır (ağciyər arteriyası ilə), ağciyərlərdə oksigenlə zənginləşib sol qulaqcıqda bitir.
-        `,
-        keyFormulas: [
-          { id: 'f-b8-1', name: 'Ürək Dövrü', latex: "0.1\\text{s} + 0.3\\text{s} + 0.4\\text{s} = 0.8\\text{s}", description: 'Qulaqcıqların yığılması (0.1s) + mədəciklərin yığılması (0.3s) + ümumi pauza (0.4s).' }
-        ],
-        glossary: [
-          { term: 'Aorta', definition: 'İnsan bədənində ən böyük arteriya damarı, sol mədəcikdən başlayır.' },
-          { term: 'Mioqard', definition: 'Ürəyin əsas güclü eninəzolaqlı əzələ qatı.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-hist-10-manna",
+        "subjectId": "tarix",
+        "grade": 10,
+        "unit": "Qədim Şərq və Azərbaycan Dövlətləri",
+        "unitOrder": 1,
+        "title": "Qədim Azərbaycan: Manna Dövləti",
+        "order": 1,
+        "readTimeMinutes": 11,
+        "difficulty": 2,
+        "summary": "Urmiya gölü hövzəsi, e.ə. IX əsr, paytaxt İzirtu, İranzu və Ullusunun islahatları, Həsənli və Ziyviyə tapıntıları.",
+        "theoryMarkdown": "\n### 1. Manna Dövlətinin Yaranması\nAzərbaycanın cənubunda (Urmiya gölü ətrafında) e.ə. IX əsrdə yaranmış ilk mərkəzləşdirilmiş dövlət **Mannadır**.\nİlk dəfə e.ə. 843-cü ildə III Salmanasarın mixi yazılı kitabəsində adı çəkilir.\nPaytaxtı **İzirtu** şəhəri olmuşdur.\n\n### 2. İranzunun Dövlətçilik İslahatları\nHökmdar **İranzunun** (e.ə. 740 - 719) dövründə Manna ən qüdrətli çağını yaşadı:\n- Ölkə canişinliklər sisteminə bölündü və mərkəzi hakimiyyət gücləndirildi.\n- Urartunun təcavüzlərinə qarşı Assuriya ilə hərbi-siyasi ittifaq yaradıldı.\n- Sənətkarlıq və metallurgiya yüksək inkişaf etdi (Həsənli qızıl camı və Ziyviyə gümüş qabı).\n\n### 3. Manna Mədəniyyəti və Süqutu\nMannalılar mixi və yerli heroqlif yazılardan istifadə etmişlər. Dövlət e.ə. 590-cı ildə güclənən Midiya imperiyası tərəfindən süquta uğradılmışdır.\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-b8-1',
-            question: 'Sol mədəciyin yığılması zamanı qan hansı damara qovulur?',
-            solution: 'Sol mədəcik arterial qanı birbaşa ən böyük damar olan aortaya vurur və böyük qan dövranı başlayır.'
+            "id": "f-h10-1",
+            "name": "Tarixi Mərhələ",
+            "latex": "\\\\text{e.ə. IX əsr (Yaranma)} \\\\to \\\\text{e.ə. 590 (Midiya tərəfindən süqut)}",
+            "description": "Manna dövlətinin mövcudluq dövrü."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-b8-1',
-            question: 'Kiçik qan dövranı ürəyin hansı kamerasında başlayır?',
-            options: [
-              { key: 'A', text: 'Sol mədəcik' },
-              { key: 'B', text: 'Sağ mədəcik' },
-              { key: 'C', text: 'Sağ qulaqcıq' },
-              { key: 'D', text: 'Sol qulaqcıq' }
+            "term": "İzirtu",
+            "definition": "Qədim Manna dövlətinin möhkəm qala divarları ilə əhatələnmiş paytaxt şəhəri."
+          },
+          {
+            "term": "Canişinlik",
+            "definition": "Ölkənin mərkəzə tabe olan əyalət hakimləri vasitəsilə idarə edilmə sistemi."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-h10-1",
+            "question": "Həsənli təpəsindən tapılmış məşhur qızıl cam hansı qədim Azərbaycan dövlətinin mədəniyyətinə aiddir?",
+            "solution": "Manna dövlətinin yüksək zərgərlik və metalişləmə sənətini əks etdirən Həsənli qızıl camı e.ə. I minilliyin əvvəllərinə aiddir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-h10-1",
+            "question": "Manna dövlətinin paytaxtı hansı şəhər olmuşdur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Qəbələ"
+              },
+              {
+                "key": "B",
+                "text": "İzirtu"
+              },
+              {
+                "key": "C",
+                "text": "Təbriz"
+              },
+              {
+                "key": "D",
+                "text": "Bərdə"
+              }
             ],
-            correctKey: 'B',
-            explanation: 'Kiçik qan dövranı sağ mədəcikdən ağciyər arteriyası ilə başlayır.'
+            "correctKey": "B",
+            "explanation": "Manna dövlətinin paytaxtı Urmiya gölünün cənub-şərqində yerləşən İzirtu şəhəri idi."
           }
         ]
       },
 
   {
-        id: 'lesson-bio-9-genetics',
-        subjectId: 'biologiya',
-        grade: 9,
-        unit: 'Genetika və İrsiyyət Qanunauyğunluqları',
-        unitOrder: 1,
-        title: 'Mendel Qanunları: Monohibrid Çarpazlaşma',
-        order: 1,
-        readTimeMinutes: 11,
-        difficulty: 3,
-        summary: 'Genotip və fenotip, dominant və resessiv allellər, Mendelin birinci (eynicinslilik) və ikinci (parçalanma) qanunu.',
-        theoryMarkdown: `
-    ### 1. Əsas Genetik Anlayışlar
-    - **Gen:** İrsi əlamətin inkişafını təyin edən DNT sahəsi.
-    - **Allel genlər:** Homoloji xromosomların eyni sahələrində yerləşən və alternativ əlamətləri təyin edən genlər ($A$ və ya $a$).
-    - **Dominant əlamət ($A$):** Birinci nəsildə özünü biruzə verən üstün əlamət (məs: sarı noxud).
-    - **Resessiv əlamət ($a$):** Dominant tərəfindən gizlədilən əlamət (məs: yaşıl noxud).
-
-    ### 2. Mendelin I Qanunu (Hibridlərin Eynicinsliliyi)
-    Dominant və resessiv təmiz xətlərin çarpazlaşmasından alınan birinci nəsil ($F_1$) hibridləri genotip və fenotipcə eynicinsli olur:
-    $$P: AA \\times aa \\implies F_1: Aa \\quad (100\\% \\text{ sarı})$$
-
-    ### 3. Mendelin II Qanunu (Əlamətlərin Parçalanması)
-    $F_1$ nəsli öz aralarında çarpazlaşdıqda ($Aa \\times Aa$), $F_2$ nəslində parçalanma baş verir:
-    - **Fenotip üzrə nisbət:** $3 : 1$ (üç sarı, bir yaşıl)
-    - **Genotip üzrə nisbət:** $1AA : 2Aa : 1aa \\implies 1 : 2 : 1$
-        `,
-        keyFormulas: [
-          { id: 'f-bio9-1', name: 'Monohibrid Parçalanma', latex: "3:1 \\text{ (Fenotip)}, \\quad 1:2:1 \\text{ (Genotip)}", description: 'İkinci nəsil hibridlərində parçalanma nisbətləri.' }
-        ],
-        glossary: [
-          { term: 'Fenotip', definition: 'Orqanizmin bütün xarici və daxili əlamətlərinin cəmi.' },
-          { term: 'Genotip', definition: 'Orqanizmin valideynlərdən aldığı genlərin cəmi.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-hist-11-axc",
+        "subjectId": "tarix",
+        "grade": 11,
+        "unit": "Yeni Dövr Azərbaycan Tarixi",
+        "unitOrder": 1,
+        "title": "Azərbaycan Xalq Cümhuriyyəti (1918–1920)",
+        "order": 1,
+        "readTimeMinutes": 13,
+        "difficulty": 3,
+        "summary": "28 may 1918 İstiqlal Bəyannaməsi, Şərqdə ilk parlamentli demokratik respublika, milli ordu, Bakı Dövlət Universiteti və diplomatik uğurlar.",
+        "theoryMarkdown": "\n### 1. İstiqlal Bəyannaməsi (28 May 1918)\n28 may 1918-ci ildə Tiflisdə Azərbaycan Milli Şurası Məhəmməd Əmin Rəsulzadənin sədrliyi ilə **İstiqlal Bəyannaməsini** qəbul etdi. Bununla müsəlman Şərqində ilk demokratik və parlamentli respublika yaradıldı.\nBəyannamədə milliyyətindən, dinindən və cinsindən asılı olmayaraq bütün vətəndaşlara bərabər hüquqlar (o cümlədən qadınlara səsvermə hüququ) təsbit edildi.\n\n### 2. Dövlət Quruculuğu və İslahatlar\n- **Paytaxt:** Əvvəlcə Gəncə, 15 sentyabr 1918-ci ildə Qafqaz İslam Ordusunun köməyi ilə Bakı azad edildikdən sonra paytaxt Bakıya köçürüldü.\n- **Dövlət atributları:** Üçrəngli bayraq (9 noyabr 1918), dövlət himni və gerbi qəbul edildi.\n- **Maarif:** 1919-cu ildə ilk milli ali məktəb - Bakı Dövlət Universiteti təsis edildi, yüzlərlə gənc Avropaya təhsil almağa göndərildi.\n\n### 3. Beynəlxalq Tanınma\n11 yanvar 1920-ci ildə Paris Sülh Konfransında Əlimərdan bəy Topçubaşovun rəhbərlik etdiyi nümayəndə heyətinin səyi nəticəsində AXC-nin müstəqilliyi Antanta Ali Şurası tərəfindən **de-fakto** tanındı.\nRespublika 23 aylıq fəaliyyətdən sonra 28 aprel 1920-ci ildə XI Qırmızı Ordunun hərbi təcavüzü nəticəsində süqut etdi.\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-bio9-1',
-            question: 'Heteroziqot sarı noxud ($Aa$) ilə yaşıl noxudun ($aa$) çarpazlaşmasından hansı fenotipik nəsil alınar?',
-            solution: '$Aa \\times aa \\implies 50\\% Aa$ (sarı) və $50\\% aa$ (yaşıl). Nisbət $1 : 1$-dir.'
+            "id": "f-h11-1",
+            "name": "AXC Xronologiyası",
+            "latex": "1918 \\\\text{ (28 May)} \\\\to 1920 \\\\text{ (28 Aprel - 23 ay)}",
+            "description": "Azərbaycan Xalq Cümhuriyyətinin fəaliyyət müddəti."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-bio9-1',
-            question: 'İki heteroziqot orqanizmin ($Aa \\times Aa$) çarpazlaşmasından homoziqot resessiv fərdlərin ($aa$) yaranma ehtimalı neçə faizdir?',
-            options: [
-              { key: 'A', text: '25%' },
-              { key: 'B', text: '50%' },
-              { key: 'C', text: '75%' },
-              { key: 'D', text: '100%' }
+            "term": "Milli Şura",
+            "definition": "1918-ci ildə Azərbaycan xalqı adından müstəqilliyi elan edən ilk qanunverici ali orqan."
+          },
+          {
+            "term": "De-fakto",
+            "definition": "Beynəlxalq hüquqda dövlətin faktiki olaraq rəsmən tanınması forması."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-h11-1",
+            "question": "Müsəlman Şərqində qadınlara seçki hüququ verən ilk dövlət hansı olmuşdur?",
+            "solution": "1918-ci ildə Azərbaycan Xalq Cümhuriyyəti bir çox Qərb dövlətlərindən belə əvvəl qadınlara seçmək və seçilmək hüququ vermişdir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-h11-1",
+            "question": "Azərbaycan Xalq Cümhuriyyətinin İstiqlal Bəyannaməsi neçənci ildə qəbul edilmişdir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "28 may 1918"
+              },
+              {
+                "key": "B",
+                "text": "15 sentyabr 1918"
+              },
+              {
+                "key": "C",
+                "text": "28 aprel 1920"
+              },
+              {
+                "key": "D",
+                "text": "9 noyabr 1919"
+              }
             ],
-            correctKey: 'A',
-            explanation: 'Genotip nisbəti 1AA : 2Aa : 1aa olduğundan, aa genotipinin payı 1/4, yəni 25%-dir.'
+            "correctKey": "A",
+            "explanation": "28 may 1918-ci ildə Tiflisdə İstiqlal Bəyannaməsi qəbul edilmiş və Respublika elan olunmuşdur."
           }
         ]
       },
 
   {
-        id: 'lesson-geog-7-scale',
-        subjectId: 'cografiya',
-        grade: 7,
-        unit: 'Kartoqrafik Təsvirlər və Xəritələr',
-        unitOrder: 1,
-        title: 'Xəritə, Miqyas və Coğrafi Koordinatlar',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'Miqyasın növləri (ədədi, izahlı, xətti), məsafənin hesablanması, meridian və paralellər, coğrafi enlik və uzunluq.',
-        theoryMarkdown: `
-    ### 1. Miqyas Nədir?
-    Yerdəki həqiqi məsafənin kağız (plan və ya xəritə) üzərində neçə dəfə kiçildildiyini göstərən kəsrin qiymətinə **miqyas** deyilir:
-    $$M = \\frac{L_{\\text{xəritə}}}{L_{\\text{həqiqi}}}$$
-
-    Miqyasın 3 əsas növü var:
-    1. **Ədədi miqyas:** Surəti 1 olan kəsr (məs: $1 : 100\\,000$).
-    2. **İzahlı miqyas:** Sözlə yazılış (məs: *1 sm-də 1 km*). Çevirmək üçün 5 sıfır silinir ($100\\,000 \\text{ sm} = 1000 \\text{ m} = 1 \\text{ km}$).
-    3. **Xətti miqyas:** Xətkeş şəklində bölgülənmiş qrafik xətt.
-
-    ### 2. Coğrafi Koordinat Şəbəkəsi
-    - **Paralellər:** Ekvatora paralel çəkilmiş xəyali çevrələr. Ekvator ($0^\\circ$) ən böyük paraleldir. Coğrafi **enliyi** təyin edir ($0^\\circ$-dən $90^\\circ$-yə qədər şimal və cənub enlikləri).
-    - **Meridianlar:** Qütbləri birləşdirən bərabər uzunluqlu xətlər. Başlanğıc Qrinviç meridianıdır ($0^\\circ$). Coğrafi **uzunluğu** təyin edir ($0^\\circ$-dən $180^\\circ$-yə qədər şərq və qərb uzunluqları).
-    - Meridian qövsü üzrə hər $1^\\circ \\approx 111.1 \\text{ km}$-dir.
-        `,
-        keyFormulas: [
-          { id: 'f-g7-1', name: 'Həqiqi Məsafə Düsturu', latex: "L_{\\text{həqiqi}} = L_{\\text{xəritə}} \\cdot M", description: 'Xəritədəki santimetri izahlı miqyasa vurmaqla həqiqi məsafə tapılır.' },
-          { id: 'f-g7-2', name: '1 Dərəcəlik Meridian Qövsü', latex: "1^\\circ \\approx 111.1 \\text{ km} \\approx 111 \\text{ km}", description: 'Bütün meridianlar üzrə 1 dərəcəlik qövsün orta uzunluğu.' }
-        ],
-        glossary: [
-          { term: 'Ekvator', definition: 'Yeri Şimal və Cənub yarımkürələrinə bölən 0 dərəcəlik ən uzun paralel.' },
-          { term: 'Qrinviç meridianı', definition: 'London yaxınlığındakı rəsədxanadan keçən 0 dərəcəlik başlanğıc meridianı.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-eng-9-conditionals",
+        "subjectId": "xarici_dil",
+        "grade": 9,
+        "unit": "Grammar: Complex Sentences",
+        "unitOrder": 1,
+        "title": "Conditionals: Zero, First & Second Conditional",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 3,
+        "summary": "Real and unreal conditions, scientific facts, future possibilities, hypothetical scenarios and 'If clauses'.",
+        "theoryMarkdown": "\n### 1. Zero Conditional (Faktlar və Təbii Qanunlar)\nHəmişə doğru olan ümumi həqiqətlər və elmi faktlar üçün:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Present Simple}$$\n- *\"If you heat water to 100°C, it boils.\"*\n\n### 2. First Conditional (Gələcəkdə Real Şərt)\nGələcəkdə baş verməsi tamamilə mümkün olan real şərtlər:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Future Simple (will + V1)}$$\n- *\"If it rains tomorrow, we will stay at home.\"*\n*(Qeyd: 'If' olan hissədə heç vaxt 'will' işlənməz!)*\n\n### 3. Second Conditional (Xəyali / Qeyri-real Şərt)\nİndiki və ya gələcək zamanda qeyri-real, xəyali vəziyyətlər üçün:\n$$\\\\text{If} + \\\\text{Past Simple}, \\\\quad \\\\text{would} + V_1$$\n- *\"If I had a million dollars, I would travel around the world.\"*\n*(Bütün şəxslərdə 'to be' feli üçün 'were' işlənir: If I were you...)*\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-g7-1',
-            question: 'Miqyası $1 : 2\\,000\\,000$ olan xəritədə iki şəhər arasındakı məsafə 4 sm-dir. Həqiqi məsafə neçə km-dir?',
-            solution: 'Ədədi miqyasdan 5 sıfır silsək: 1 sm-də 20 km. Həqiqi məsafə: $L = 4 \\text{ sm} \\cdot 20 \\text{ km/sm} = 80 \\text{ km}$.'
+            "id": "f-e9-1",
+            "name": "First Conditional Formula",
+            "latex": "\\\\text{If} + V_1 \\\\implies \\\\text{will} + V_1",
+            "description": "Real gələcək şərt formulu."
+          },
+          {
+            "id": "f-e9-2",
+            "name": "Second Conditional Formula",
+            "latex": "\\\\text{If} + V_2 \\\\implies \\\\text{would} + V_1",
+            "description": "İndiki zamana aid xəyali vəziyyət."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-g7-1',
-            question: '$1 : 500\\,000$ ədədi miqyasının izahlı miqyası hansıdır?',
-            options: [
-              { key: 'A', text: '1 sm-də 500 km' },
-              { key: 'B', text: '1 sm-də 50 km' },
-              { key: 'C', text: '1 sm-də 5 km' },
-              { key: 'D', text: '1 sm-də 0.5 km' }
+            "term": "Hypothetical",
+            "definition": "Hələ baş verməmiş, xəyalda canlandırılan qeyri-real vəziyyət."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-e9-1",
+            "question": "\"If she ____ (study) hard, she will pass the exam.\" Boşluğu düzgün zamanla doldurun.",
+            "solution": "Nəticə hissəsində 'will pass' (First Conditional) olduğu üçün If budaq cümləsində Present Simple tələb olunur: \"studies\"."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-e9-1",
+            "question": "Choose the correct sentence in Second Conditional:",
+            "options": [
+              {
+                "key": "A",
+                "text": "If I study, I will get high marks."
+              },
+              {
+                "key": "B",
+                "text": "If I had wings, I would fly."
+              },
+              {
+                "key": "C",
+                "text": "If you freeze water, it turns into ice."
+              },
+              {
+                "key": "D",
+                "text": "If it will rain, we cancel the match."
+              }
             ],
-            correctKey: 'C',
-            explanation: '500,000 sm-dən 5 sıfır sildikdə 5 km qalır (1 sm-də 5 km).'
+            "correctKey": "B",
+            "explanation": "'If I had wings, I would fly' indiki zamana aid qeyri-real xəyali arzudur (Second Conditional)."
           }
         ]
       },
 
   {
-        id: 'lesson-hist-9-safavids',
-        subjectId: 'tarix',
-        grade: 9,
-        unit: 'Orta Əsrlər Azərbaycan Tarixi',
-        unitOrder: 1,
-        title: 'Səfəvilər Dövləti və I Şah İsmayıl',
-        order: 1,
-        readTimeMinutes: 11,
-        difficulty: 2,
-        summary: '1501-ci il Təbriz tacqoyması, Azərbaycan torpaqlarının vahid mərkəzdə birləşdirilməsi, Çaldıran döyüşü (1514) və dövlət quruluşu.',
-        theoryMarkdown: `
-    ### 1. Səfəvilər Dövlətinin Yaranması
-    XV əsrin sonunda Ərdəbil hakimi Şeyx Heydərin oğlu İsmayıl ətrafına sadiq Qızılbaş tayfalarını toplayaraq mübarizəyə başladı:
-    - **1500-cü il:** Cabanı döyüşündə Şirvanşah Fərrux Yasar məğlub edildi.
-    - **1501-ci il:** Şərur düzündə Ağqoyunlu Əlvənd Mirzə məğlub edildi. İsmayıl Təbrizə daxil olaraq özünü **Şah** elan etdi və paytaxtı Təbriz olan vahid Azərbaycan Səfəvilər dövlətinin əsasını qoydu.
-    - **1503-cü il:** Almaqulağı döyüşündə Murad Mirzənin qoşunları darmadağın edildi və Ağqoyunlu dövlətinə tamamilə son qoyuldu.
-
-    ### 2. Azərbaycan Torpaqlarının Vahid Mərkəzdə Birləşdirilməsi
-    I Şah İsmayıl bütün tarixi Azərbaycan torpaqlarını vahid mərkəzləşdirilmiş dövlət tərkibində birləşdirdi. Azərbaycan dili sarayda və orduda dövlət dili səviyyəsinə yüksəldi.
-
-    ### 3. Çaldıran Döyüşü (1514)
-    23 avqust 1514-cü ildə I Şah İsmayıl ilə Osmanlı sultanı I Səlim arasında Çaldıran döyüşü baş verdi. Osmanlı ordusunun say üstünlüyü və toplardan istifadə etməsi nəticəsində Səfəvilər məğlub oldu, lakin dövlət öz müstəqilliyini qoruyub saxladı.
-        `,
-        keyFormulas: [
-          { id: 'f-h9-1', name: 'Əsas Tarixi Xronologiya', latex: "1501 \\to \\text{Təbriz Tacqoyma}, \\quad 1514 \\to \\text{Çaldıran Döyüşü}", description: 'Səfəvilər dövlətinin qurulması və ən böyük hərbi sınağı.' }
-        ],
-        glossary: [
-          { term: 'Qızılbaşlar', definition: 'Başlarına 12 zolaqlı qırmızı çalma bağlayan və Səfəvilər dövlətinin hərbi əsasını təşkil edən türk tayfaları.' },
-          { term: 'Əmir əl-üməra', definition: 'Səfəvilər dövlətində ordunun baş komandanına verilən ali hərbi rütbə.' }
-        ],
-        solvedExamples: [
+        "id": "lesson-eng-10-passive-voice",
+        "subjectId": "xarici_dil",
+        "grade": 10,
+        "unit": "Grammar: Advanced Voice",
+        "unitOrder": 1,
+        "title": "The Passive Voice (Məchul Növ)",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 3,
+        "summary": "Məchul növün mahiyyəti, 'to be + V3' ümumi formulu, müxtəlif zamanlarda dəyişməsi və 'by' sözönü ilə icraçı.",
+        "theoryMarkdown": "\n### 1. Passive Voice Nədir?\nCümlədə hərəkəti kimin etdiyi bilinmədikdə və ya hərəkətin obyekti icraçıdan daha vacib olduqda **məchul növ (Passive Voice)** işlədilir.\n- **Məlum (Active):** *\"Alexander Bell invented the telephone in 1876.\"*\n- **Məchul (Passive):** *\"The telephone was invented by Alexander Bell in 1876.\"*\n\n### 2. Ümumi Düzəlmə Qaydası\n$$\\\\text{Obyekt} + \\\\mathbf{to \\\\; be} + \\\\mathbf{V_3 / V_{ed}} + (\\\\text{by} + \\\\text{İcraçı})$$\n\n### 3. Zamanlara Görə Cədvəl\n- **Present Simple:** $$am / is / are + V_3$$ (*English is spoken here.*)\n- **Past Simple:** $$was / were + V_3$$ (*The bridge was built in 1995.*)\n- **Future Simple:** $$will \\\\; be + V_3$$ (*The results will be announced tomorrow.*)\n- **Present Perfect:** $$have / has \\\\; been + V_3$$ (*The room has been cleaned.*)\n- **Modallar:** $$can / must / should + be + V_3$$ (*Rules must be obeyed.*)\n    ",
+        "keyFormulas": [
           {
-            id: 'ex-h9-1',
-            question: 'Səfəvilər dövlətinin ilk paytaxtı hansı şəhər olmuşdur?',
-            solution: '1501-ci ildə I Şah İsmayılın tacqoyma mərasimi Təbrizdə keçirilmiş və Təbriz dövlətin ilk paytaxtı olmuşdur (sonralar Qəzvin və İsfahan olmuşdur).'
+            "id": "f-e10-p1",
+            "name": "Passive Voice Formula",
+            "latex": "S + \\\\text{to be} + V_3",
+            "description": "Bütün məchul cümlələrin əsas nüvə formulu."
           }
         ],
-        miniQuiz: [
+        "glossary": [
           {
-            questionId: 'mq-h9-1',
-            question: 'Səfəvilər dövlətinin əsası neçənci ildə qoyulmuşdur?',
-            options: [
-              { key: 'A', text: '1499-cu ildə' },
-              { key: 'B', text: '1501-ci ildə' },
-              { key: 'C', text: '1514-cü ildə' },
-              { key: 'D', text: '1524-cü ildə' }
+            "term": "Agent (by ...)",
+            "definition": "Məchul cümlədə işi görən şəxsi göstərmək üçün istifadə olunan ifadə."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-e10-p1",
+            "question": "\"They clean the rooms every day.\" cümləsini məchul növə çevirin.",
+            "solution": "\"The rooms are cleaned every day.\" (Present Simple cümləsi 'are + V3' ilə məchula keçir)."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-e10-p1",
+            "question": "Which sentence is correctly written in Passive Voice?",
+            "options": [
+              {
+                "key": "A",
+                "text": "The letter was written yesterday."
+              },
+              {
+                "key": "B",
+                "text": "He has wrote a letter."
+              },
+              {
+                "key": "C",
+                "text": "They were built a house."
+              },
+              {
+                "key": "D",
+                "text": "She was painted the wall."
+              }
             ],
-            correctKey: 'B',
-            explanation: '1501-ci ildə I Şah İsmayıl Təbrizdə taxta çıxaraq dövlətin əsasını qoymuşdur.'
+            "correctKey": "A",
+            "explanation": "'The letter was written yesterday' cümləsində was + V3 düzgün işlənmişdir."
           }
         ]
       },
 
   {
-        id: 'lesson-eng-8-present-perfect',
+        "id": "lesson-inf-9-networks-ip",
+        "subjectId": "informatika",
+        "grade": 9,
+        "unit": "Kompüter Şəbəkələri və İnternet",
+        "unitOrder": 1,
+        "title": "Kompüter Şəbəkələri, IP Ünvan və Domen Sistemi (DNS)",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "Lokal (LAN) və qlobal (WAN) şəbəkələr, IPv4 ünvan strukturu, 4 bayt/32 bitlik quruluş və URL tərkibi.",
+        "theoryMarkdown": "\n### 1. Kompüter Şəbəkələrinin Növləri\nİnformasiya mübadiləsi üçün rabitə xətləri ilə birləşdirilmiş kompüterlər sisteminə **şəbəkə** deyilir:\n- **LAN (Local Area Network):** Bir otaq, məktəb və ya bina daxilindəki lokal şəbəkə.\n- **WAN (Wide Area Network):** Şəhərləri, ölkələri və qitələri birləşdirən qlobal şəbəkə (ən böyüyü İnternetdir).\n\n### 2. IP Ünvan Strukturu (IPv4)\nŞəbəkəyə qoşulmuş hər bir qurğuya unikal 32 bitlik (4 baytlıq) rəqəmsal **IP ünvan** verilir.\nNöqtələrlə ayrılmış 4 onluq ədəddən ibarətdir:\n$$A . B . C . D \\\\quad (0 \\\\le A, B, C, D \\\\le 255)$$\nMəsələn: `192.168.1.1` və ya `8.8.8.8`. Heç bir ədəd 255-dən böyük və ya mənfi ola bilməz.\n\n### 3. Domen Adları Sistemi (DNS)\nİnsanların rəqəmlərdən ibarət IP ünvanları yadda saxlaması çətin olduğundan **DNS** sistemi yaradılmışdır. O, hərfli adları (`google.com`) IP ünvanına çevirir:\n- URL strukturu: `https://` (protokol) `www.mektebplus.az` (domen adı) `/dersler` (fayl yolu).\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-inf9-1",
+            "name": "IPv4 Həcmi",
+            "latex": "4 \\\\text{ Bayt} = 32 \\\\text{ bit} \\\\implies 2^{32} \\\\approx 4.3 \\\\text{ milyard ünvan}",
+            "description": "IPv4 standartında mümkün olan maksimum ünvan sayı."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "DNS (Domain Name System)",
+            "definition": "Domen adlarını avtomatik olaraq IP ünvanlarına çevirən paylanmış qovluq xidməti."
+          },
+          {
+            "term": "Protokol",
+            "definition": "Şəbəkədə məlumatların ötürülmə və qəbul edilmə qaydalarını müəyyən edən standart (məs: HTTP, TCP/IP)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-inf9-1",
+            "question": "`205.112.280.14` IP ünvanı düzgündürmü?",
+            "solution": "Xeyr, səhvdir. Çünki üçüncü hissədəki 280 ədədi icazə verilən maksimum 255 həddini aşır."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-inf9-1",
+            "question": "IPv4 ünvanı yaddaşda neçə bayt yer tutur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "2 bayt"
+              },
+              {
+                "key": "B",
+                "text": "4 bayt"
+              },
+              {
+                "key": "C",
+                "text": "8 bayt"
+              },
+              {
+                "key": "D",
+                "text": "16 bayt"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "IPv4 ünvanı 32 bit, yəni 4 baytdan ibarətdir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-inf-11-databases-sql",
+        "subjectId": "informatika",
+        "grade": 11,
+        "unit": "İnformasiya Sistemləri və Verilənlər Bazası",
+        "unitOrder": 1,
+        "title": "Relyasiyalı Verilənlər Bazası və SQL Əsasları",
+        "order": 1,
+        "readTimeMinutes": 12,
+        "difficulty": 3,
+        "summary": "Cədvəl modeli, sətir (yazı/record), sütun (sahə/field), ilkin açar (primary key) və əsas SQL sorğuları (SELECT, WHERE).",
+        "theoryMarkdown": "\n### 1. Relyasiyalı Verilənlər Bazası Modeli\nVerilənlərin bir-biri ilə əlaqəli ikiölçülü cədvəllər şəklində saxlandığı bazaya **relyasiyalı verilənlər bazası (RDBMS)** deyilir:\n- **Sahə (Field / Sütun):** Eyni növ məlumatın atributunu saxlayır (məs: *Ad*, *Soyad*, *Doğum_Tarixi*).\n- **Yazı (Record / Sətir):** Konkret bir obyektə aid bütün məlumatlar toplusu.\n- **İlkin Açar (Primary Key):** Cədvəldə hər bir sətri unikal şəkildə fərqləndirən təkrarlanmayan sahə (məs: *Şagirdin Şəxsiyyət Vəsiqəsi FİN kodu*).\n\n### 2. SQL (Structured Query Language) Əsasları\nVerilənlər bazasından məlumat axtarmaq və idarə etmək üçün standart dildir:\n- **Bütün cədvəli seçmək:**\n  ```sql\n  SELECT * FROM Sagirdler;\n  ```\n- **Filtrləmə (WHERE şərti):**\n  ```sql\n  SELECT Ad, Soyad, Bal FROM Sagirdler WHERE Bal >= 90 ORDER BY Bal DESC;\n  ```\n- **Yeni məlumat əlavə etmək:**\n  ```sql\n  INSERT INTO Sagirdler (Ad, Sinif) VALUES ('Leyla', 10);\n  ```\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-inf11-1",
+            "name": "SQL Standart Sintaksisi",
+            "latex": "\\\\text{SELECT } [\\\\text{sütunlar}] \\\\text{ FROM } [\\\\text{cədvəl}] \\\\text{ WHERE } [\\\\text{şərt}]",
+            "description": "Relyasiyalı bazalarda filtrasiya sorğusunun əsas strukturu."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Primary Key (İlkin Açar)",
+            "definition": "Cədvəldəki hər bir sətrin təkrarsızlığını təmin edən unikal identifikator."
+          },
+          {
+            "term": "RDBMS",
+            "definition": "Relyasiyalı verilənlər bazasının idarəetmə sistemi (məs: PostgreSQL, MySQL, SQLite)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-inf11-1",
+            "question": "`SELECT Ad FROM Kitablar WHERE Qiymet < 15;` sorğusu nəyi qaytaracaq?",
+            "solution": "Qiyməti 15 manatdan ucuz olan bütün kitabların yalnız adlarından ibarət siyahını qaytaracaq."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-inf11-1",
+            "question": "Verilənlər bazasında cədvəlin bir sətri nə adlanır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Sahə (Field)"
+              },
+              {
+                "key": "B",
+                "text": "Yazı (Record)"
+              },
+              {
+                "key": "C",
+                "text": "İndeks"
+              },
+              {
+                "key": "D",
+                "text": "Açar"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "Cədvəldə hər bir sətir bir obyektə aid məlumatları əks etdirən Yazı (Record) adlanır."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-chem-8-classes",
+        "subjectId": "kimya",
+        "grade": 8,
+        "unit": "Qeyri-üzvi Birləşmələrin Əsas Sinifləri",
+        "unitOrder": 2,
+        "title": "Oksidlər, Əsaslar, Turşular və Duzlar",
+        "order": 2,
+        "readTimeMinutes": 11,
+        "difficulty": 2,
+        "summary": "Birləşmələrin təsnifatı, adlandırılması, indikatorların təsiri və neytrallaşma reaksiyaları.",
+        "theoryMarkdown": "\n### 1. Qeyri-üzvi Birləşmələrin 4 Əsas Sinfi\n1. **Oksidlər:** Biri oksigen olan iki elementdən ibarət mürəkkəb maddələr ($CaO, CO_2, SO_3$). Əsasi, turşu və amfoter oksidlərə bölünür.\n2. **Əsaslar:** Metal atomundan və hidroksid ($OH^-$) qrupundan ibarətdir ($NaOH, Ca(OH)_2$). Suda həll olan əsaslara **qələvilər** deyilir (lakmusu göyərir).\n3. **Turşular:** Metal ilə əvəz oluna bilən hidrogen atomundan və turşu qalığından ibarətdir ($HCl, H_2SO_4, HNO_3$). Lakmusu qızardır.\n4. **Duzlar:** Metal atomu və turşu qalığından ibarət maddələr ($NaCl, CaCO_3, CuSO_4$).\n\n### 2. Neytrallaşma Reaksiyası\nTurşu ilə əsasın qarşılıqlı təsirindən duz və suyun yaranması reaksiyasıdır:\n$$\\\\text{Turşu} + \\\\text{Əsas} \\\\to \\\\text{Duz} + \\\\text{Su}$$\n$$HCl + NaOH \\\\to NaCl + H_2O$$\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-c8-class-1",
+            "name": "Neytrallaşma Reaksiyası",
+            "latex": "H^+ + OH^- \\\\to H_2O",
+            "description": "Turşu və əsasın ion tənliyi."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Qələvi",
+            "definition": "Suda yaxşı həll olan qüvvətli əsas (məs: NaOH, KOH, Ba(OH)2)."
+          },
+          {
+            "term": "İndikator",
+            "definition": "Mühitin turşu və ya qələvi olmasından asılı olaraq rəngini dəyişən maddə (lakmus, fenolftalein)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c8-class-1",
+            "question": "$H_2SO_4 + 2KOH \\\\to$ reaksiyasının məhsullarını tamamlayın.",
+            "solution": "Neytrallaşma nəticəsində kalium sulfat duzu və su alınır: $K_2SO_4 + 2H_2O$."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c8-class-1",
+            "question": "Aşağıdakı maddələrdən hansı duzdur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "$CaO$"
+              },
+              {
+                "key": "B",
+                "text": "$HNO_3$"
+              },
+              {
+                "key": "C",
+                "text": "$CaSO_4$"
+              },
+              {
+                "key": "D",
+                "text": "$KOH$"
+              }
+            ],
+            "correctKey": "C",
+            "explanation": "CaSO4 metal atomu (Ca) və turşu qalığından (SO4) ibarət olan duzdur."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-chem-11-alkenes",
+        "subjectId": "kimya",
+        "grade": 11,
+        "unit": "Doymamış Karbohidrogenlər",
+        "unitOrder": 1,
+        "title": "Alkenlər: Quruluşu, Xassələri və Polimerləşmə",
+        "order": 1,
+        "readTimeMinutes": 11,
+        "difficulty": 3,
+        "summary": "Etilen sırası ($C_n H_{2n}$), $sp^2$ hibridləşmə, $\\pi$-rabitə, bromlu suyun rəngsizləşməsi və polietilen istehsalı.",
+        "theoryMarkdown": "\n### 1. Alkenlərin Quruluşu\nMolekullarında karbon atomları arasında bir ikiqat rabitə ($-\\\\text{C}=\\\\text{C}-$) olan açıq zəncirli karbohidrogenlərə **alkenlər (olefinlər)** deyilir:\n$$C_n H_{2n} \\\\quad (n \\\\ge 2)$$\nİlk nümayəndəsi: Etilen (eten) - $C_2H_4$ ($CH_2 = CH_2$).\nİkiqat rabitəli karbonlar **$sp^2$ hibridləşmə** vəziyyətindədir. Rabitələrdən biri möhkəm $\\\\sigma$, digəri isə asan qırılan $\\\\pi$-rabitədir. Valent bucağı $120^\\\\circ$-dir.\n\n### 2. Xarakterik Kimyəvi Xassələri\n$\\\\pi$-rabitənin asanlıqla qırılması hesabına alkenlər birləşmə reaksiyalarına çox meyllidir:\n- **Bromlu suyun rəngsizləşməsi (Keyfiyyət reaksiyası):**\n  $$CH_2 = CH_2 + Br_2 \\\\to CH_2Br - CH_2Br \\\\text{ (1,2-dibrometan)}$$\n- **Polimerləşmə reaksiyası (Polietilen alınması):**\n  $$n (CH_2 = CH_2) \\\\xrightarrow{P, t, kat} (-CH_2 - CH_2-)_n$$\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-c11-alk-1",
+            "name": "Alkenlərin Formulu",
+            "latex": "C_n H_{2n} \\\\quad (n \\\\ge 2)",
+            "description": "Bir ikiqat rabitə saxlayan doymamış karbohidrogenlər."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Monomer",
+            "definition": "Polimerləşmə reaksiyasına daxil olan ilkin alçaqmolekullu maddə (məs: etilen)."
+          },
+          {
+            "term": "Polimer",
+            "definition": "Çoxlu sayda monomer manqalarının birləşməsindən yaranan nəhəng makromolekul (məs: polietilen)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c11-alk-1",
+            "question": "Etilenin hidrogenləşməsi ($+ H_2$) nəticəsində hansı maddə alınır?",
+            "solution": "$$CH_2 = CH_2 + H_2 \\\\xrightarrow{Ni, t} CH_3 - CH_3 \\\\text{ (etan)}$$. Doymamış alken doymuş alkana çevrilir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c11-alk-1",
+            "question": "Doymamış karbohidrogenləri təyin etmək üçün hansı məhlulun rəngsizləşməsindən istifadə olunur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Xörək duzu məhlulu"
+              },
+              {
+                "key": "B",
+                "text": "Bromlu su və ya kalium-permanqanat"
+              },
+              {
+                "key": "C",
+                "text": "Əhəng suyu"
+              },
+              {
+                "key": "D",
+                "text": "Distillə suyu"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "Bromlu suyun və ya KMnO4 məhlulunun rəngsizləşməsi ikiqat və üçqat rabitənin keyfiyyət reaksiyasıdır."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-bio-8-nervous-system",
+        "subjectId": "biologiya",
+        "grade": 8,
+        "unit": "Orqanizmin Tənzimi: Sinir Sistemi",
+        "unitOrder": 2,
+        "title": "Sinir Sistemi və Refleks Qövsü",
+        "order": 2,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "Neyronun quruluşu (akson, dendrit), mərkəzi və periferik sinir sistemi, refleks qövsünün 5 həlqəsi.",
+        "theoryMarkdown": "\n### 1. Sinir Toxuması və Neyron\nSinir sisteminin əsas struktur və funksional vahidi **neyrondur** (sinir hüceyrəsi).\nNeyron ibarətdir:\n- **Hüceyrə cismi:** Nüvə və sitoplazmadan ibarətdir.\n- **Dendritlər:** Qısa, ağacvari şaxələnmiş çıxıntılar (oyanmanı qəbul edir).\n- **Akson:** Tək və uzun çıxıntı (oyanmanı digər hüceyrələrə ötürür, üzəri mielin qişası ilə örtülüdür).\n\n### 2. Refleks və Refleks Qövsü\nOrqanizmin mərkəzi sinir sisteminin iştirakı ilə xarici və ya daxili qıcıqlara verdiyi cavab reaksiyasına **refleks** deyilir.\nRefleksin baş verdiyi yol **refleks qövsü** adlanır və 5 həlqədən ibarətdir:\n1. **Reseptor:** Qıcığı qəbul edib sinir impulsuna çevirir.\n2. **Hissiyyat (mərkəzəqaçan) sinir yolu:** İmpulsu MSS-ə daşıyır.\n3. **Mərkəzi sinir şöbəsi (arakəsmə neyron):** Məlumatı təhlil edir.\n4. **Hərəki (mərkəzdənqaçan) sinir yolu:** Əmri işçi orqana çatdırır.\n5. **İşçi orqan (effektor):** Əzələ və ya vəzi cavab reaksiyası verir.\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-b8-ref-1",
+            "name": "Refleks Qövsü Sxemi",
+            "latex": "\\\\text{Reseptor} \\\\to \\\\text{Hissi yol} \\\\to \\\\text{Sinir mərkəzi} \\\\to \\\\text{Hərəki yol} \\\\to \\\\text{İşçi orqan}",
+            "description": "Sinir impulsunun 5 ardıcıl həlqəsi."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Sinaps",
+            "definition": "İki neyron arasında və ya neyronla əzələ hüceyrəsi arasında sinir impulsunun ötürüldüyü kontakt sahəsi."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-b8-ref-1",
+            "question": "Qaynar çaydana əl toxunduqda dərhal əlin geri çəkilməsi hansı növ refleksə aiddir?",
+            "solution": "Anadangəlmə, qeyri-ixtiyari müdafiə refleksidir (şərtsiz refleks)."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-b8-ref-1",
+            "question": "Neyronda oyanmanı hüceyrə cisminə gətirən qısa çıxıntılar necə adlanır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Akson"
+              },
+              {
+                "key": "B",
+                "text": "Dendrit"
+              },
+              {
+                "key": "C",
+                "text": "Sinaps"
+              },
+              {
+                "key": "D",
+                "text": "Mielin"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "Dendritlər qısa şaxəli çıxıntılardır və impulsu hüceyrə cisminə doğru istiqamətləndirir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-geog-6-earth-motions",
+        "subjectId": "cografiya",
+        "grade": 6,
+        "unit": "Kainat və Planetimiz Yer",
+        "unitOrder": 1,
+        "title": "Yer Kürəsinin Hərəkətləri: Gün və Fəsillər",
+        "order": 1,
+        "readTimeMinutes": 8,
+        "difficulty": 1,
+        "summary": "Öz oxu ətrafında sutkalıq fırlanma (24 saat) və Günəş ətrafında illik hərəkət (365 gün 6 saat), fəsillərin yaranması.",
+        "theoryMarkdown": "\n### 1. Yerin Öz Oxu Ətrafında Fırlanması\nYer öz xəyali oxu ətrafında qərbdən şərqə doğru 24 saat (1 sutka) ərzində bir tam dövr edir:\n- Nəticədə **gecə və gündüz** bir-birini əvəz edir.\n- Günəşin səmada görünən hərəkəti (şərqdən çıxıb qərbdə batması) baş verir.\n- Qabarma və çəkilmə ritmləri yaranır.\n\n### 2. Yerin Günəş Ətrafında İllik Hərəkəti\nYer Günəş ətrafında ellips orbit üzrə 365 gün 6 saat ərzində dövr edir:\n- Yerin fırlanma oxu orbit müstəvisinə nəzərən **$66.5^\\\\circ$** meyllidir.\n- Oxun meylliyi səbəbindən il ərzində Günəş şüalarının düşmə bucağı dəyişir və **ilin 4 fəsli** (yaz, yay, payız, qış) yaranır.\n- Əsas tarixlər:\n  - **21 mart:** Yaz gecə-gündüz bərabərliyi\n  - **22 iyun:** Yay günəşduruşu (Şimalda ən uzun gün)\n  - **23 sentyabr:** Payız gecə-gündüz bərabərliyi\n  - **22 dekabr:** Qış günəşduruşu (Şimalda ən qısa gün)\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-g6-1",
+            "name": "Yerin Meyllik Bucağı",
+            "latex": "66.5^\\\\circ \\\\text{ (Orbitə)} \\\\iff 23.5^\\\\circ \\\\text{ (Perpendikulyara)}",
+            "description": "Fəsillərin yaranmasına səbəb olan daimi ox meylliyi."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Gecə-gündüz bərabərliyi",
+            "definition": "Günəş şüalarının ekvatora 90° bucaqla düşdüyü və bütün Yer kürəsində gecə ilə gündüzün bərabər olduğu günlər (21 mart və 23 sentyabr)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-g6-1",
+            "question": "Yerin fırlanma oxu orbit müstəvisinə perpendikulyar ($90^\\\\circ$) olsaydı, nə baş verərdi?",
+            "solution": "Fəsillər yaranmazdı, ilboyu hər bir enlikdə hava şəraiti və gecə-gündüz uzunluğu dəyişməz qalardı."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-g6-1",
+            "question": "Şimal yarımkürəsində ən uzun gün və ən qısa gecə hansı tarixdə müşahidə olunur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "21 mart"
+              },
+              {
+                "key": "B",
+                "text": "22 iyun"
+              },
+              {
+                "key": "C",
+                "text": "23 sentyabr"
+              },
+              {
+                "key": "D",
+                "text": "22 dekabr"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "22 iyun yay günəşduruşu günüdür və Şimal yarımkürəsində ən uzun gündüz qeydə alınır."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-hist-8-atabays",
+        "subjectId": "tarix",
+        "grade": 8,
+        "unit": "Azərbaycan İntibah Dövrü Mədəniyyəti",
+        "unitOrder": 1,
+        "title": "Azərbaycan Atabəylər (Eldəgizlər) Dövləti və İntibah",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "Şəmsəddin Eldəgiz, Naxçıvan, Təbriz və Həmədan paytaxtları, memar Əcəmi Naxçıvani və Nizami Gəncəvi irsi.",
+        "theoryMarkdown": "\n### 1. Eldəgizlər Dövlətinin Qurulması (1136–1225)\nXII əsrdə Böyük Səlcuq imperiyasının zəifləməsi nəticəsində Şəmsəddin Eldəgiz tərəfindən **Azərbaycan Atabəylər dövləti** yaradıldı:\n- İdarəetmə mərkəzləri: Naxçıvan, Təbriz və Həmədan şəhərləri.\n- Məhəmməd Cahan Pəhləvan və Qızıl Arslanın dövründə dövlət Yaxın Şərqin ən qüdrətli imperiyasına çevrildi (1191-ci ildə Qızıl Arslan ilk dəfə Sultan titulunu qəbul etdi).\n\n### 2. Azərbaycan İntibah Mədəniyyəti\nXII əsr Azərbaycan mədəniyyətinin \"Qızıl Dövrü\" (İntibah) hesab olunur:\n- **Memarlıq:** Naxçıvan memarlıq məktəbinin banisi **Əcəmi Əbubəkr oğlu Naxçıvani** Möminə Xatun türbəsini (1186) və Yusif ibn Küseyr türbəsini inşa etdi.\n- **Ədəbiyyat:** Dünya poeziyasının dühası **Nizami Gəncəvi** ölməz \"Xəmsə\"sini (\"Sirlər xəzinəsi\", \"Xosrov və Şirin\", \"Leyli və Məcnun\", \"Yeddi gözəl\", \"İsgəndərnamə\") bu dövrdə yaratdı.\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-h8-1",
+            "name": "Eldəgizlər Dövrü",
+            "latex": "1136 \\\\to \\\\text{Yaranma}, \\\\quad 1186 \\\\to \\\\text{Möminə Xatun Türbəsi}, \\\\quad 1225 \\\\to \\\\text{Süqut}",
+            "description": "Atabəylər dövlətinin və İntibah memarlığının əsas tarixləri."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Atabəy",
+            "definition": "Səlcuq şahzadələrinin tərbiyəçisi və dövlət canişininə verilən fəxri titul."
+          },
+          {
+            "term": "Xəmsə",
+            "definition": "Nizami Gəncəvinin yaratdığı 5 möhtəşəm poemadan ibarət toplu (beşlik)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-h8-1",
+            "question": "Naxçıvanda yerləşən Möminə Xatun türbəsinin memarı kimdir?",
+            "solution": "Orta əsr Azərbaycan memarlığının dahi sənətkarı Əcəmi Əbubəkr oğlu Naxçıvanidir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-h8-1",
+            "question": "Nizami Gəncəvinin poemalarından ibarət toplu necə adlanır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Divan"
+              },
+              {
+                "key": "B",
+                "text": "Xəmsə"
+              },
+              {
+                "key": "C",
+                "text": "Təzkirə"
+              },
+              {
+                "key": "D",
+                "text": "Siyasətnamə"
+              }
+            ],
+            "correctKey": "B",
+            "explanation": "Nizami Gəncəvinin 5 məşhur poeması birlikdə 'Xəmsə' (Beşlik) adlanır."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-eng-6-adjectives-comparison",
+        "subjectId": "xarici_dil",
+        "grade": 6,
+        "unit": "Grammar: Adjectives & Adverbs",
+        "unitOrder": 1,
+        "title": "Degrees of Comparison of Adjectives (Müqayisə Dərəcələri)",
+        "order": 1,
+        "readTimeMinutes": 8,
+        "difficulty": 1,
+        "summary": "Positive, Comparative (-er / more) and Superlative (-est / the most) degrees, irregular adjectives (good, bad, far).",
+        "theoryMarkdown": "\n### 1. Sifətin 3 Müqayisə Dərəcəsi\n1. **Adi Dərəcə (Positive Degree):** Sifətin ilkin forması (*tall, big, beautiful*).\n2. **Müqayisə Dərəcəsi (Comparative Degree):** İki əşyanı müqayisə edərkən işlənir (adətən *than* ilə):\n   - Qısa (təkhecalı) sifətlər: **-er** şəkilçisi qəbul edir (*taller, faster, bigger*).\n   - Çoxhecalı sifətlər: qarşısına **more** artırılır (*more beautiful, more interesting*).\n3. **Üstünlük Dərəcəsi (Superlative Degree):** Bir əşyanı qrupdakı hamısından üstün tutarkən (qarşısında həmişə *the* artikli olur):\n   - Qısa sifətlər: **the ... -est** (*the tallest, the fastest*).\n   - Çoxhecalı sifətlər: **the most ...** (*the most beautiful*).\n\n### 2. Qaydasız Sifətlər (Irregular Adjectives)\n- **good** $\\\\to$ **better** $\\\\to$ **the best** (yaxşı - daha yaxşı - ən yaxşı)\n- **bad** $\\\\to$ **worse** $\\\\to$ **the worst** (pis - daha pis - ən pis)\n- **little** $\\\\to$ **less** $\\\\to$ **the least** (az - daha az - ən az)\n- **many / much** $\\\\to$ **more** $\\\\to$ **the most** (çox)\n- **far** $\\\\to$ **farther / further** $\\\\to$ **the farthest / furthest** (uzaq)\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-e6-adj-1",
+            "name": "Comparative Formula",
+            "latex": "\\\\text{Adj} + \\\\text{er than} \\\\quad \\\\text{or} \\\\quad \\\\text{more } \\\\text{Adj than}",
+            "description": "İki obyekti müqayisə etmək üçün."
+          },
+          {
+            "id": "f-e6-adj-2",
+            "name": "Superlative Formula",
+            "latex": "\\\\text{the } \\\\text{Adj} + \\\\text{est} \\\\quad \\\\text{or} \\\\quad \\\\text{the most } \\\\text{Adj}",
+            "description": "Qrupda ən üstün əlaməti bildirmək üçün."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "Comparative",
+            "definition": "Müqayisə dərəcəsi (-er / more)."
+          },
+          {
+            "term": "Superlative",
+            "definition": "Üstünlük dərəcəsi (the -est / the most)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-e6-adj-1",
+            "question": "\"Baku is ____ (large) than Ganja.\" Boşluğu düzgün forma ilə doldurun.",
+            "solution": "\"than\" olduğu üçün müqayisə dərəcəsi tələb olunur: \"larger\"."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-e6-adj-1",
+            "question": "What is the superlative degree of 'good'?",
+            "options": [
+              {
+                "key": "A",
+                "text": "gooder"
+              },
+              {
+                "key": "B",
+                "text": "better"
+              },
+              {
+                "key": "C",
+                "text": "the best"
+              },
+              {
+                "key": "D",
+                "text": "the most good"
+              }
+            ],
+            "correctKey": "C",
+            "explanation": "'Good' qaydasız sifətdir, üstünlük dərəcəsi 'the best'-dir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-inf-7-algorithms-flowchart",
+        "subjectId": "informatika",
+        "grade": 7,
+        "unit": "Alqoritmləşdirmənin Əsasları",
+        "unitOrder": 1,
+        "title": "Alqoritmin Növləri və Blok-Sxem Təsviri",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 2,
+        "summary": "Məsələnin həlli ardıcıllığı, xassələri (diskretlik, müəyyənlik, kütləvilik, nəticəvilik) və blok fiqurları.",
+        "theoryMarkdown": "\n### 1. Alqoritm Nədir?\nQarşıya qoyulmuş məqsədə çatmaq üçün icraçıya verilən sonlu sayda dəqiq əmrlər ardıcıllığına **alqoritm** deyilir.\nAlqoritmin 4 əsas xassəsi var:\n1. **Müəyyənlik:** Hər bir əmr birmənalı və aydın başa düşülməlidir.\n2. **Diskretlik:** Mürəkkəb proses ayrı-ayrı sadə addımlara bölünməlidir.\n3. **Nəticəvilik:** Sonlu sayda addımdan sonra mütləq nəticə əldə olunmalıdır.\n4. **Kütləvilik:** Eyni tipli bütün məsələlərin həlli üçün yararlı olmalıdır.\n\n### 2. Blok-Sxem Quruluşu\nAlqoritmin qrafik fiqurlarla təsvirinə **blok-sxem** deyilir:\n- **Oval (Ellips):** Alqoritmin *Başlanğıcı* və *Sonu*.\n- **Paraleloqram:** İlkin verilənlərin *Daxil edilməsi* və nəticənin *Çıxarılması*.\n- **Düzbucaqlı:** Hesablama əməliyyatları və düsturlar (*İcra bloku*).\n- **Romb:** Şərtin yoxlanması (*Budaqlanma bloku*: \"Hə\" və ya \"Yox\").\n\n### 3. Alqoritmin 3 Əsas Növü\n- **Xətti:** Əmrlər heç bir şərt olmadan ardıcıl yerinə yetirilir.\n- **Budaqlanan:** Müəyyən şərtdən asılı olaraq yollardan biri seçilir.\n- **Dövri:** Eyni əmrlər bloku bir neçə dəfə təkrar icra olunur.\n    ",
+        "keyFormulas": [
+          {
+            "id": "f-inf7-1",
+            "name": "Alqoritm Növləri",
+            "latex": "\\\\text{Xətti} \\\\to \\\\text{Budaqlanan (Şərt)} \\\\to \\\\text{Dövri (Təkrarlanma)}",
+            "description": "Kompüter elmlərində alqoritmlərin 3 baza strukturu."
+          }
+        ],
+        "glossary": [
+          {
+            "term": "İcraçı",
+            "definition": "Alqoritmi yerinə yetirməyə qadir olan subyekt (insan, kompüter, robot)."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-inf7-1",
+            "question": "Blok-sxemdə şərtin yoxlanması hansı həndəsi fiqurla təsvir olunur?",
+            "solution": "Şərtin yoxlanması və budaqlanma prosesi romb fiquru vasitəsilə təsvir edilir."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-inf7-1",
+            "question": "Alqoritmin sonlu sayda addımdan sonra mütləq nəticə verməsi hansı xassədir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Diskretlik"
+              },
+              {
+                "key": "B",
+                "text": "Kütləvilik"
+              },
+              {
+                "key": "C",
+                "text": "Nəticəvilik"
+              },
+              {
+                "key": "D",
+                "text": "Müəyyənlik"
+              }
+            ],
+            "correctKey": "C",
+            "explanation": "Alqoritmin sona çataraq nəticə verməsi nəticəvilik xassəsidir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-chem-10-alkanes",
+        "subjectId": "kimya",
+        "grade": 10,
+        "unit": "Üzvi Kimya: Karbohidrogenlər",
+        "unitOrder": 2,
+        "title": "Doymuş Karbohidrogenlər: Alkanlar",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 2,
+        "summary": "Ümumi formula CnH2n+2, sp3 hibridləşməsi, IUPAC nomenklaturası və radikal əvəzetmə reaksiyaları.",
+        "theoryMarkdown": "\n### 1. Alkanların Quruluşu və Homoloji Sırası\nMolekulunda karbon atomları arasında yalnız tək (birqat $\\sigma$) rabitələr olan açıq zəncirli karbohidrogenlərə **alkanlar (parafinlər)** deyilir.\n- Ümumi formulu: **$C_nH_{2n+2}$** ($n \\ge 1$)\n- Karbon atomlarının hibridləşmə vəziyyəti: **$sp^3$**\n- Valent bucağı: **$109^\\circ 28'$**\n- Karbon-karbon rabitə uzunluğu: **$0.154 \\text{ nm}$**\n\nIlk 4 nümayəndə:\n- $CH_4$ — Metan\n- $C_2H_6$ — Etan\n- $C_3H_8$ — Propan\n- $C_4H_{10}$ — Butan\n\n### 2. Kimyəvi Xassələri\nAlkanlar kimyəvi cəhətdən passivdir (birləşmə reaksiyasına girmirlər):\n1. **Əvəzetmə (Xlorlaşma)** — sərbəst radikal mexanizmi ilə ($h\\nu$ işıq təsiri ilə):\n   $$CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$$\n2. **Yanma**:\n   $$C_nH_{2n+2} + \\frac{3n+1}{2}O_2 \\to nCO_2 + (n+1)H_2O + Q$$\n3. **Dehidrogenləşmə** (hidrogen ayrılması):\n   $$C_2H_6 \\xrightarrow{t, Ni} C_2H_4 + H_2$$\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-c10-alk-1",
+            "name": "Alkanların Ümumi Formulu",
+            "latex": "C_nH_{2n+2}",
+            "description": "Doymuş alifatik karbohidrogenlər üçün ümumi tərkib."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c10-alk-1",
+            "title": "Misal: 5 karbonlu alkanın molyar kütləsi",
+            "problem": "$n = 5$ olan alkanın (pentan) formulunu və molyar kütləsini tapın ($A_r(C)=12, A_r(H)=1$).",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Formulun müəyyən edilməsi",
+                "content": "$$C_5H_{2 \\cdot 5 + 2} = C_5H_{12}$$"
+              },
+              {
+                "stepNumber": 2,
+                "title": "Molyar kütlə",
+                "content": "$$M(C_5H_{12}) = 5 \\cdot 12 + 12 \\cdot 1 = 60 + 12 = 72 \\text{ q/mol}$$"
+              }
+            ],
+            "finalAnswer": "C5H12, M = 72 q/mol"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c10-alk-1",
+            "question": "Alkanlarda karbon atomları hansı hibrid vəziyyətindədir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "sp3"
+              },
+              {
+                "key": "B",
+                "text": "sp2"
+              },
+              {
+                "key": "C",
+                "text": "sp"
+              },
+              {
+                "key": "D",
+                "text": "sp3d"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Alkanların bütün karbon atomları sp3 hibridləşməsindədir və bucaq 109°28'-dir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-chem-9-solutions",
+        "subjectId": "kimya",
+        "grade": 9,
+        "unit": "Məhlullar və Həllolma",
+        "unitOrder": 2,
+        "title": "Məhlulların Qatılığı və Kütlə Payı",
+        "order": 1,
+        "readTimeMinutes": 8,
+        "difficulty": 2,
+        "summary": "Həllolma əmsalı, həll olan maddənin kütlə payı (faiz qatılığı) və məhlulların qarışdırılması.",
+        "theoryMarkdown": "\n### 1. Məhlul Anlayışı\nMəhlul — həlledici, həll olan maddə və onların qarşılıqlı təsir məhsullarından ibarət **bircinsli (homogen)** sistemdir.\n\nMəhlulun kütləsi:\n$$m_{meh} = m_{mad} + m_{su}$$\n\n### 2. Həll Olan Maddənin Kütlə Payı (Faiz Qatılığı)\nHəll olan maddə kütləsinin ümumi məhlul kütləsinə nisbətinin faizlə ifadəsinə **kütlə payı ($\\omega$)** deyilir:\n$$\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\% = \\frac{m_{mad}}{m_{mad} + m_{su}} \\cdot 100\\%$$\n\n### 3. Məhlulların Qarışdırılması Qaydası\nİki məhlul qarışdırıldıqda alınan yeni qatılıq:\n$$\\omega_{son} = \\frac{m_1\\omega_1 + m_2\\omega_2}{m_1 + m_2}$$\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-c9-sol-1",
+            "name": "Kütlə Payı Düsturu",
+            "latex": "\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\%",
+            "description": "Maddə kütləsinin məhlul kütləsinə nisbəti."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-c9-sol-1",
+            "title": "Misal: Duzlu suyun faiz qatılığı",
+            "problem": "30 qram xörək duzunu 120 qram suda həll etdikdə alınan məhlulun faiz qatılığını tapın.",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Ümumi məhlul kütləsi",
+                "content": "$$m_{meh} = 30 + 120 = 150 \\text{ q}$$"
+              },
+              {
+                "stepNumber": 2,
+                "title": "Kütlə payı",
+                "content": "$$\\omega = \\frac{30}{150} \\cdot 100\\% = \\frac{1}{5} \\cdot 100\\% = 20\\%$$"
+              }
+            ],
+            "finalAnswer": "20%"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-c9-sol-1",
+            "question": "100 q 10%-li məhlulda neçə qram həll olan maddə var?",
+            "options": [
+              {
+                "key": "A",
+                "text": "10 q"
+              },
+              {
+                "key": "B",
+                "text": "90 q"
+              },
+              {
+                "key": "C",
+                "text": "1 q"
+              },
+              {
+                "key": "D",
+                "text": "20 q"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "m = 100 * 0.10 = 10 qram."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-bio-10-protein-synthesis",
+        "subjectId": "biologiya",
+        "grade": 10,
+        "unit": "Hüceyrənin Molekulyar Biologiyası",
+        "unitOrder": 2,
+        "title": "Zülalların Biosintezi və Genetik Kod",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 3,
+        "summary": "Transkripsiya, m-RNT, t-RNT, kodon-antikodon qarşılıqlı təsiri və ribosomda translyasiya mərhələsi.",
+        "theoryMarkdown": "\n### 1. Genetik Kodun Xassələri\nGenetik informasiya DNT molekulunda nukleotid ardıcıllığı şəklində yazılmışdır:\n1. **Tripletlik**: Hər bir aminturşunu 3 nukleotid (1 kodon) kodlaşdırır. Məsələn: $AUG$ — Metionin və start kodondur.\n2. **Cırlaşmışlıq (artıqlıq)**: 20 aminturşunu 61 mənalı kodon kodlaşdırır (bəzi aminturşular bir neçə kodonla kodlanır).\n3. **Stop kodonlar**: $UAA, UAG, UGA$ zülal sintezini dayandırır.\n4. **Universallıq**: Genetik kod yerdəki bütün canlılar üçün eynidir.\n\n### 2. Transkripsiya (Nüvədə)\nRNT-polimeraza fermenti vasitəsilə DNT matrisindən məlumat RNT-sinin (m-RNT) sintez olunması prosesidir:\n$$A \\to U, \\quad T \\to A, \\quad G \\to C, \\quad C \\to G$$\n\n### 3. Translyasiya (Sitoplazmada və Ribosomda)\nm-RNT ribosomun kiçik və böyük hissəcikləri arasına daxil olur. Nəqliyyat RNT-ləri (t-RNT) aminturşuları ribosomun funksional mərkəzinə gətirir. Kodon və antikodon komplementar birləşdikdə aminturşular arasında **peptid rabitəsi** yaranır və polipeptid zənciri uzanır.\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-b10-prot-1",
+            "name": "Nukleotid və Aminturşu Əlaqəsi",
+            "latex": "N_{nukleotid} = 3 \\cdot N_{amintursu}",
+            "description": "1 aminturşuya 1 triplet (3 nukleotid) uyğundur."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-b10-prot-1",
+            "title": "Misal: 90 nukleotidlik m-RNT",
+            "problem": "90 nukleotiddən ibarət m-RNT zəncirinin kodlaşdırdığı zülal neçə aminturşudan ibarət olar (stop kodon nəzərə alınmır)?",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Triplet qaydası",
+                "content": "$$N_{amintursu} = \\frac{90}{3} = 30$$"
+              }
+            ],
+            "finalAnswer": "30 aminturşu"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-b10-prot-1",
+            "question": "Zülal biosintezinin bilavasitə getdiyi hüceyrə orqanoidi hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Ribosom"
+              },
+              {
+                "key": "B",
+                "text": "Lizosom"
+              },
+              {
+                "key": "C",
+                "text": "Qolci kompleksi"
+              },
+              {
+                "key": "D",
+                "text": "Vakuol"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Zülal translyasiyası sitoplazmada yerləşən ribosomlarda baş verir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-bio-11-evolution",
+        "subjectId": "biologiya",
+        "grade": 11,
+        "unit": "Ümumi Biologiya: Təkamül Təlimi",
+        "unitOrder": 2,
+        "title": "Çarlz Darvinin Təkamül Nəzəriyyəsi və Təbii Seçmə",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 2,
+        "summary": "İrsi dəyişkənlik, yaşamaq uğrunda mübarizə, təbii seçmə və adaptasiyaların yaranması.",
+        "theoryMarkdown": "\n### 1. Darvinizmin Hərəkətverici Qüvvələri\n1859-cu ildə Çarlz Darvin 'Növlərin Mənşəyi' əsərində üzvi aləmin təkamülünün əsas amillərini göstərdi:\n1. **İrsi dəyişkənlik (Mutasiyalar və kombinativ)**: Nəsildən-nəslə ötürülən fərdi fərqlər.\n2. **Yaşamaq uğrunda mübarizə**:\n   - *Növdaxili*: Ən kəskin mübarizə formasıdır (eyni qida və yaşayış sahəsi uğrunda).\n   - *Növlərarası*: Yırtıcı-şikar, rəqabət münasibətləri.\n   - *Əlverişsiz mühit şəraitinə qarşı*: Quraqlıq, şaxta və s.\n3. **Təbii seçmə**: Mühit şəraitinə daha yaxşı uyğunlaşan fərdlərin sağ qalaraq nəsil verməsi, uyğunlaşmayanların isə sıradan çıxması prosesidir.\n\n### 2. Uyğunlaşmaların Nisbi Xarakteri\nHər hansı bir adaptasiya yalnız müəyyən konkret mühit şəraitində faydalıdır. Mühit dəyişdikdə həmin əlamət zərərli və ya neytral ola bilər (məsələn, qarın əriməsi zamanı ağ kəkliyin ağ rəngi yırtıcılar üçün onu aşkar edir).\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-b11-evo-1",
+            "name": "Təkamülün Əsas Triadası",
+            "latex": "\\text{İrsi Dəyişkənlik} + \\text{Mübarizə} \\implies \\text{Təbii Seçmə}",
+            "description": "Darvinə görə növlərin təkamül dinamikası."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-b11-evo-1",
+            "title": "Misal: Növdaxili mübarizə",
+            "problem": "Niyə növdaxili mübarizə növlərarası mübarizədən daha kəskin xarakter daşıyır?",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Tələbatların eyniliyi",
+                "content": "Eyni növə aid fərdlərin qida mənbəyi, yaşayış ərazisi və çoxalma tərəfdaşı tam eynidir."
+              }
+            ],
+            "finalAnswer": "Fərdlərin eyni həyati ehtiyaclar uğrunda rəqabət aparması səbəbindən"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-b11-evo-1",
+            "question": "Təkamülün ən əsas yönəldici amili hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Təbii seçmə"
+              },
+              {
+                "key": "B",
+                "text": "Modifikasiya dəyişkənliyi"
+              },
+              {
+                "key": "C",
+                "text": "Süni seçmə"
+              },
+              {
+                "key": "D",
+                "text": "Populyasiya dalğaları"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Təkamülü müəyyən istiqamətə yönəldən yeganə amil təbii seçmədir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-inf-10-algorithms",
+        "subjectId": "informatika",
+        "grade": 10,
+        "unit": "Alqoritmləşdirmə və Proqramlaşdırma",
+        "unitOrder": 2,
+        "title": "Axtarış və Çeşidləmə Alqoritmləri (Python)",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 3,
+        "summary": "Xətti və ikilik (binary) axtarış, Bubble sort çeşidləməsi, asimptotik zaman mürəkkəbliyi O(n) və O(log n).",
+        "theoryMarkdown": "\n### 1. İkilik Axtarış (Binary Search)\nYalnız **çeşidlənmiş (sıralanmış)** massivlərdə işləyən ən sürətli axtarış alqoritmidir. Hər addımda axtarış sahəsini yarıya bölür:\n- Zaman mürəkkəbliyi: **$O(\\log_2 n)$**\n\n```python\ndef binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```\n\n### 2. Qabarcıqlı Çeşidləmə (Bubble Sort)\nQonşu elementləri ardıcıl müqayisə edərək böyüyü sağa doğru 'üzdürən' sadə çeşidləmə üsuludur:\n- Zaman mürəkkəbliyi: **$O(n^2)$**\n\n```python\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n```\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-i10-alg-1",
+            "name": "İkilik Axtarış Addım Sayı",
+            "latex": "k = \\lceil \\log_2 n \\rceil",
+            "description": "n elementli massivdə ən pis halda maksimum müqayisə sayı."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-i10-alg-1",
+            "title": "Misal: 1024 elementli massivdə ikilik axtarış",
+            "problem": "1024 elementdən ibarət sıralanmış siyahıda axtarılan ədədi tapmaq üçün ən çox neçə müqayisə tələb olunar?",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Loqarifmik hesablama",
+                "content": "$$\\log_2(1024) = 10$$"
+              }
+            ],
+            "finalAnswer": "Maksimum 10 müqayisə"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-i10-alg-1",
+            "question": "İkilik axtarışın (Binary Search) işləməsi üçün əsas şərt nədir?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Siyahının sıralanmış (çeşidlənmiş) olması"
+              },
+              {
+                "key": "B",
+                "text": "Bütün elementlərin cüt ədəd olması"
+              },
+              {
+                "key": "C",
+                "text": "Siyahının ölçüsünün 10-dan kiçik olması"
+              },
+              {
+                "key": "D",
+                "text": "Yalnız mənfi ədədlərdən ibarət olması"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Binary search yalnız əvvəlcədən nizamlanmış massivdə işləyə bilər."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-geo-10-economic-regions",
+        "subjectId": "cografiya",
+        "grade": 10,
+        "unit": "Azərbaycanın İqtisadi Coğrafiyası",
+        "unitOrder": 2,
+        "title": "Azərbaycanın Yeni İqtisadi Rayonları və Təbii Ehtiyatları",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 2,
+        "summary": "14 iqtisadi rayon bölgüsü, Qarabağ və Şərqi Zəngəzurun bərpası, faydalı qazıntılar və aqroiqlim potensialı.",
+        "theoryMarkdown": "\n### 1. Yeni İqtisadi Bölgü (7 İyul 2021 Fərmanı)\nAzərbaycan Respublikası Prezidentinin 2021-ci il 7 iyul tarixli fərmanı ilə ölkəmiz **14 iqtisadi rayona** bölünmüşdür:\n1. **Bakı** (neft-qaz sənayesi, xidmət sektoru)\n2. **Abşeron-Xızı** (kimya, maşınqayırma, quşçuluq)\n3. **Qarabağ** (tikinti materialları, turizm, kənd təsərrüfatı — taxılçılıq və üzümçülük)\n4. **Şərqi Zəngəzur** (qızıl, civə, polimetal ehtiyatları, hidroenergetika, yaylaq heyvandarlığı)\n5. **Gəncə-Daşkəsən** (dəmir filizi, alunit, əlvan metallurgiya)\n6. **Qazax-Tovuz** (üzümçülük, bağçılıq, şərabçılıq)\n7. **Şəki-Zaqatala** (fındıqçılıq, tütünçülük, ipəkçilik, meşə ehtiyatları)\n8. **Quba-Xaçmaz** (meyvəçilik, tərəvəzçilik, neft emalı)\n9. **Mərkəzi Aran** (pambıqçılıq, taxılçılıq, meliorasiya qovşağı)\n10. **Mil-Muğan**, 11. **Şirvan-Salyan**\n12. **Lənkəran-Astara** (sitrusçuluq, çayçılıq, çəltikçilik)\n13. **Dağlıq Şirvan** (şərabçılıq, arıçılıq)\n14. **Naxçıvan** (duz mədənləri, mineral sular, sement, günəş enerjisi)\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-g10-reg-1",
+            "name": "İqtisadi İxtisaslaşma Əmsalı",
+            "latex": "K_i = \\frac{E_r / E_o}{Ü_r / Ü_o}",
+            "description": "Rayonun milli iqtisadiyyatda ixtisaslaşma dərəcəsini müəyyən edən indeks."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-g10-reg-1",
+            "title": "Misal: Daşkəsən dəmir filizi",
+            "problem": "Azərbaycanın yeganə sənaye əhəmiyyətli dəmir filizi yatağı hansı iqtisadi rayonda yerləşir?",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Coğrafi yerləşmə",
+                "content": "Daşkəsən yatağı Gəncə-Daşkəsən iqtisadi rayonunun ərazisində yerləşir."
+              }
+            ],
+            "finalAnswer": "Gəncə-Daşkəsən iqtisadi rayonu"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-g10-reg-1",
+            "question": "Azərbaycanda çayçılıq və sitrusçuluq üzrə ixtisaslaşmış iqtisadi rayon hansıdır?",
+            "options": [
+              {
+                "key": "A",
+                "text": "Lənkəran-Astara"
+              },
+              {
+                "key": "B",
+                "text": "Quba-Xaçmaz"
+              },
+              {
+                "key": "C",
+                "text": "Mərkəzi Aran"
+              },
+              {
+                "key": "D",
+                "text": "Naxçıvan"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Rütubətli subtropik iqlimə malik Lənkəran-Astara rayonunda sitrus meyvələri və çay becərilir."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-hist-10-safavids",
+        "subjectId": "tarix",
+        "grade": 10,
+        "unit": "Azərbaycan Orta Əsrlərdə",
+        "unitOrder": 2,
+        "title": "Səfəvilər Dövlətinin Yaranması və Şah İsmayıl Xətai",
+        "order": 1,
+        "readTimeMinutes": 10,
+        "difficulty": 2,
+        "summary": "1501-ci il Təbriz tacqoyması, Azərbaycan torpaqlarının vahid dövlətdə birləşdirilməsi və Çaldıran döyüşü.",
+        "theoryMarkdown": "\n### 1. Dövlətin Yaranması (1501)\nXV əsrin sonunda Ərdəbil hakimi İsmayıl Səfəvi qızılbaş tayfalarının dəstəyi ilə hərbi yürüşlərə başladı:\n- **1500-cü il**: Cabanı döyüşündə Şirvanşah Fərrux Yasar məğlub edildi.\n- **1501-ci il**: Şərur döyüşündə Ağqoyunlu Əlvənd Mirzə məğlub edildi. İsmayıl Təbrizə daxil olaraq özünü Şah elan etdi. Beləliklə, paytaxtı Təbriz olan vahid **Azərbaycan Səfəvi Dövləti** yarandı.\n- **Dövlət dili**: Azərbaycan türk dili ilk dəfə sarayda, orduda və diplomatik yazışmalarda rəsmi dövlət dili səviyyəsinə yüksəldi.\n\n### 2. Azərbaycan Torpaqlarının Birləşdirilməsi\n- **1503-cü il**: Almaqulağı döyüşündə Ağqoyunlu Murad Mirzə məğlub edildi və ikinci Ağqoyunlu qolu süqut etdi.\n- **1510-cu il**: Mərv döyüşündə Şeybani xanın qoşunları darmadağın edildi, Xorasan Səfəvilərə qatıldı.\n\n### 3. Çaldıran Döyüşü (1514)\n23 avqust 1514-cü ildə Osmanlı sultanı I Səlim ilə Şah İsmayıl arasında Çaldıran düzündə qanlı döyüş baş verdi. Osmanlı ordusunun sayca üstünlüyü və 300 topdan ibarət odlu silah üstünlüyü nəticəsində Səfəvilər məğlub oldu.\n        ",
+        "keyFormulas": [
+          {
+            "id": "f-h10-saf-1",
+            "name": "Əsas Tarixi Xronologiya",
+            "latex": "1500 (\\text{Cabanı}) \\to 1501 (\\text{Təbriz}) \\to 1510 (\\text{Mərv}) \\to 1514 (\\text{Çaldıran})",
+            "description": "Şah İsmayılın əsas döyüşləri və dövlət quruculuğu mərhələləri."
+          }
+        ],
+        "solvedExamples": [
+          {
+            "id": "ex-h10-saf-1",
+            "title": "Misal: Səfəvilər dövlətinin ilk paytaxtı",
+            "problem": "Səfəvilər dövlətinin 1501-1555-ci illərdə paytaxtı hansı şəhər olmuşdur?",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Paytaxt xronologiyası",
+                "content": "İlk paytaxt Təbriz olmuş, 1555-ci ildə Şah Təhmasib paytaxtı Qəzvinə, 1598-ci ildə I Şah Abbas İsfahana köçürmüşdür."
+              }
+            ],
+            "finalAnswer": "Təbriz"
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-h10-saf-1",
+            "question": "Səfəvilər dövlətinin əsası neçənci ildə və harada qoyulmuşdur?",
+            "options": [
+              {
+                "key": "A",
+                "text": "1501-ci ildə Təbrizdə"
+              },
+              {
+                "key": "B",
+                "text": "1468-ci ildə Ərdəbildə"
+              },
+              {
+                "key": "C",
+                "text": "1514-cü ildə Çaldıranda"
+              },
+              {
+                "key": "D",
+                "text": "1555-ci ildə Amasiyada"
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "1501-ci ildə Şah İsmayıl Təbrizdə taxta çıxaraq dövlətin əsasını qoymuşdur."
+          }
+        ]
+      },
+
+  {
+        "id": "lesson-eng-10-conditionals",
         subjectId: 'xarici_dil',
-        grade: 8,
-        unit: 'Grammar & Verb Tenses',
-        unitOrder: 1,
-        title: 'Present Perfect vs Past Simple Tense',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'Structure of Present Perfect, life experiences, connection to present, comparison with Past Simple and key time markers.',
-        theoryMarkdown: `
-    ### 1. Present Perfect Tense (İndiki Bitmiş Zaman)
-    Geçmişdə baş vermiş, lakin nəticəsi indiki zamanla bağlı olan və ya həyat təcrübəsini bildirən hərəkətlər üçün istifadə olunur:
-    - **Təsdiq:** $$S + \\text{have / has} + V_3 \\text{ (və ya } V_{ed})$$
-    - **İnkar:** $$S + \\text{have not (haven't) / has not (hasn't)} + V_3$$
-    - **Sual:** $$\\text{Have / Has} + S + V_3?$$
-    *He / She / It* üçün **has**, digər şəxslər üçün **have** işlənir.
-
-    ### 2. Zaman Zərfləri (Signal Words)
-    - **already:** artıq (təsdiq cümlələrdə)
-    - **yet:** hələ ki (inkar və sual cümlələrinin sonunda)
-    - **just:** indicə (köməkçi fel ilə əsas fel arasında)
-    - **ever / never:** heç vaxt / heç vaxt (həyat təcrübəsi)
-    - **since:** -dən bəri (dəqiq başlanğıc anı: *since 2020, since morning*)
-    - **for:** ərzində (müddət: *for 3 years, for 2 hours*)
-
-    ### 3. Present Perfect və Past Simple Fərqi
-    - **Past Simple ($V_2$):** Hərəkət keçmişdə dəqiq vaxtda olub bitib (*yesterday, in 2018, 2 days ago, last week*).
-    - **Present Perfect:** Dəqiq vaxt göstərilmir, nəticə önəmlidir.
-        `,
-        keyFormulas: [
-          { id: 'f-e8-1', name: 'Present Perfect Formula', latex: "S + \\text{have/has} + V_3", description: 'İndiki bitmiş zamanın standart formulu.' },
-          { id: 'f-e8-2', name: 'Past Simple Formula', latex: "S + V_2 / V_{ed} \\quad (\\text{exact past time})", description: 'Dəqiq keçmiş zaman bildirdikdə istifadə olunur.' }
-        ],
-        glossary: [
-          { term: 'V3 (Past Participle)', definition: 'Qaydasız fellərin 3-cü forması (məs: go - went - gone).' },
-          { term: 'Since vs For', definition: 'Since başlanğıc nöqtəsini (since Monday), For isə zaman müddətini (for 5 days) göstərir.' }
-        ],
-        solvedExamples: [
+        "grade": 10,
+        "unit": "Advanced English Grammar",
+        "unitOrder": 2,
+        "title": "Conditionals (Type 0, 1, 2, 3) & Mixed Conditionals",
+        "order": 1,
+        "readTimeMinutes": 9,
+        "difficulty": 2,
+        "summary": "Real və qeyri-real şərt budaq cümlələrinin zaman formaları və cümlədə işlənmə qaydaları.",
+        "theoryMarkdown": "\n### 1. Types of Conditional Sentences\nConditionals consist of an **If-clause** (condition) and a **Main clause** (result):\n\n| Type | Meaning | If-clause | Main clause | Example |\n|---|---|---|---|---|\n| **Zero (0)** | Universal truth, scientific law | Present Simple | Present Simple | *If you heat ice, it melts.* |\n| **First (1)** | Real possibility in the future | Present Simple | will + V1 | *If it rains tomorrow, we will stay at home.* |\n| **Second (2)**| Unreal / hypothetical present | Past Simple (were) | would + V1 | *If I had a million dollars, I would travel the world.* |\n| **Third (3)** | Regret / impossible past | Past Perfect (had + V3) | would have + V3 | *If she had studied harder, she would have passed the exam.* |\n\n### 2. Important Rules\n- Second conditional-da bütün şəxslər üçün 'was' əvəzinə **'were'** işlədilməsi ədəbi dildə qəbul olunur:\n  *If I were you, I would consult a doctor.*\n- **Unless** = *If ... not* (inkarlıq daxilindədir):\n  *Unless you hurry, you will miss the train.*\n        ",
+        "keyFormulas": [
           {
-            id: 'ex-e8-1',
-            question: '"I ____ (live) in Baku since 2015." Cümləsini düzgün zaman formasında tamamlayın.',
-            solution: '"since 2015" başlanğıc nöqtəsi göstərdiyi üçün Present Perfect tələb olunur: "I have lived in Baku since 2015".'
+            "id": "f-e10-cond-1",
+            "name": "Second Conditional Formula",
+            "latex": "\\text{If} + \\text{Past Simple}, \\quad \\text{would} + V_1",
+            "description": "İndiki zamana aid qeyri-real xəyali vəziyyətlər."
+          },
+          {
+            "id": "f-e10-cond-2",
+            "name": "Third Conditional Formula",
+            "latex": "\\text{If} + \\text{Past Perfect}, \\quad \\text{would have} + V_3",
+            "description": "Keçmişdə baş verməmiş və dəyişdirilməsi qeyri-mümkün olan hallar."
           }
         ],
-        miniQuiz: [
+        "solvedExamples": [
           {
-            questionId: 'mq-e8-1',
-            question: 'Choose the correct option: "She has not finished her homework ____."',
-            options: [
-              { key: 'A', text: 'already' },
-              { key: 'B', text: 'yet' },
-              { key: 'C', text: 'yesterday' },
-              { key: 'D', text: 'ago' }
+            "id": "ex-e10-cond-1",
+            "title": "Example: Third Conditional formation",
+            "problem": "Put the verbs into the correct tense: 'If they (leave) earlier, they (not miss) the high-speed train.'",
+            "solutionSteps": [
+              {
+                "stepNumber": 1,
+                "title": "Identify time reference",
+                "content": "The sentence refers to a completed past regret -> Third Conditional."
+              },
+              {
+                "stepNumber": 2,
+                "title": "Apply formula",
+                "content": "'had left' in If-clause, 'would not have missed' in Main clause."
+              }
             ],
-            correctKey: 'B',
-            explanation: 'Inkar cümlələrinin sonunda "hələ də" mənasında "yet" istifadə olunur.'
+            "finalAnswer": "If they had left earlier, they would not have missed the high-speed train."
+          }
+        ],
+        "miniQuiz": [
+          {
+            "questionId": "mq-e10-cond-1",
+            "question": "Which sentence expresses an imaginary situation in the present (Type 2)?",
+            "options": [
+              {
+                "key": "A",
+                "text": "If I knew his phone number, I would call him right now."
+              },
+              {
+                "key": "B",
+                "text": "If it rains, we get wet."
+              },
+              {
+                "key": "C",
+                "text": "If he comes, I will tell him."
+              },
+              {
+                "key": "D",
+                "text": "If I had seen her, I would have said hello."
+              }
+            ],
+            "correctKey": "A",
+            "explanation": "Past simple (knew) + would + V1 (would call) represents Type 2 conditional."
           }
         ]
-      },
-
-  {
-        id: 'lesson-inf-8-encoding',
-        subjectId: 'informatika',
-        grade: 8,
-        unit: 'İnformasiyanın Ölçülməsi və Kodlaşdırılması',
-        unitOrder: 1,
-        title: 'İnformasiyanın Miqdarı və Xartli Düsturu',
-        order: 1,
-        readTimeMinutes: 10,
-        difficulty: 2,
-        summary: 'İkili kodlaşdırma, bit və bayt anlayışları, informasiya ölçü vahidləri və Xartli düsturu ilə yaddaş hesablama.',
-        theoryMarkdown: `
-    ### 1. Ən Kiçik İnformasiya Vahidi: Bit və Bayt
-    Kompüterdə bütün məlumatlar 0 və 1 rəqəmlərindən ibarət ikili kodlarla saxlanılır.
-    - **Bit (Binary Digit):** İnformasiyanın ən kiçik vahididir (yalnız 0 və ya 1 qiymətini ala bilər).
-    - **Bayt:** 8 bitdən ibarət əsas ölçü vahididir ($1 \\text{ Bayt} = 8 \\text{ bit}$). Klaviaturadakı bir simvol yaddaşda 1 Bayt yer tutur (ASCII standartında).
-
-    ### 2. Xartli Düsturu
-    Əgər sistemdə $N$ sayda bərabər ehtimallı mümkün hal və ya əlifbada $N$ sayda simvol varsa, bir simvolun informasiya tutumu ($i$ bit) Xartli düsturu ilə tapılır:
-    $$N = 2^i \\implies i = \\log_2 N$$
-
-    ### 3. İnformasiyanın Ölçü Vahidləri Cədvəli
-    - $1 \\text{ Bayt} = 8 \\text{ bit} = 2^3 \\text{ bit}$
-    - $1 \\text{ KB (Kilobayt)} = 1024 \\text{ Bayt} = 2^{10} \\text{ Bayt}$
-    - $1 \\text{ MB (Meqabayt)} = 1024 \\text{ KB} = 2^{20} \\text{ Bayt}$
-    - $1 \\text{ GB (Qiqabayt)} = 1024 \\text{ MB} = 2^{30} \\text{ Bayt}$
-    - $1 \\text{ TB (Terabayt)} = 1024 \\text{ GB} = 2^{40} \\text{ Bayt}$
-        `,
-        keyFormulas: [
-          { id: 'f-inf8-1', name: 'Xartli Düsturu', latex: "N = 2^i", description: 'Mümkün halların sayı ilə bit tutumu arasındakı əlaqə.' },
-          { id: 'f-inf8-2', name: 'Mətnin Həcmi Düsturu', latex: "I = K \\cdot i", description: 'Ümumi həcm = simvolların sayı * bir simvolun bit həcmi.' }
-        ],
-        glossary: [
-          { term: 'ASCII', definition: '1 simvolun 1 bayt (8 bit) ilə kodlaşdırıldığı 256 simvolluq beynəlxalq kod cədvəli.' },
-          { term: 'Unicode', definition: 'Bütün dünya dillərinin simvollarını əhatə edən və 1 simvolu 2 bayt (16 bit) yer tutan standart.' }
-        ],
-        solvedExamples: [
-          {
-            id: 'ex-inf8-1',
-            question: '64 simvollu əlifba ilə yazılmış 500 simvolluq mətnin həcmi neçə baytdır?',
-            solution: '$N = 64 = 2^6 \\implies i = 6 \\text{ bit}$. Ümumi bit: $I = 500 \\cdot 6 = 3000 \\text{ bit}$. Bayta çevirək: $3000 / 8 = 375 \\text{ Bayt}$.'
-          }
-        ],
-        miniQuiz: [
-          {
-            questionId: 'mq-inf8-1',
-            question: '2 Kilobayt neçə Bayta bərabərdir?',
-            options: [
-              { key: 'A', text: '2000 Bayt' },
-              { key: 'B', text: '2048 Bayt' },
-              { key: 'C', text: '1024 Bayt' },
-              { key: 'D', text: '16384 Bayt' }
-            ],
-            correctKey: 'B',
-            explanation: '1 KB = 1024 Bayt olduğundan, 2 KB = 2 * 1024 = 2048 Baytdır.'
-          }
-        ]
-      },
-
-  {
-        id: 'lesson-inf-10-python',
-        subjectId: 'informatika',
-        grade: 10,
-        unit: 'Alqoritmlər və Python Proqramlaşdırma',
-        unitOrder: 1,
-        title: 'Python-da Şərt Operatorları və Dövrlər',
-        order: 1,
-        readTimeMinutes: 12,
-        difficulty: 3,
-        summary: 'Struktur proqramlaşdırma, budaqlanma (if-elif-else), for və while dövrləri, range() funksiyası və alqoritm optimizasiyası.',
-        theoryMarkdown: `
-    ### 1. Budaqlanan Alqoritmlər: if - elif - else
-    Python dilində şərt yoxlanışı girintilər (indentation - adətən 4 boşluq) ilə təşkil olunur:
-    \`\`\`python
-    bal = int(input("Balı daxil edin: "))
-
-    if bal >= 90:
-        print("Qiymət: 5 (Əla)")
-    elif bal >= 70:
-        print("Qiymət: 4 (Yaxşı)")
-    elif bal >= 50:
-        print("Qiymət: 3 (Kafi)")
-    else:
-        print("Qiymət: 2 (Qeyri-kafi)")
-    \`\`\`
-
-    ### 2. Təkrarlanan Alqoritmlər: for Dövrü
-    Məlum sayda təkrarlanmalar üçün \`for\` və \`range()\` funksiyasından istifadə olunur:
-    - \`range(5)\` $\\implies 0, 1, 2, 3, 4$
-    - \`range(1, 10, 2)\` $\\implies 1, 3, 5, 7, 9$ (başlanğıc, son, addım)
-    \`\`\`python
-    cem = 0
-    for i in range(1, 11):
-        cem += i
-    print("1-dən 10-a qədər ədədlərin cəmi:", cem)  # Nəticə: 55
-    \`\`\`
-
-    ### 3. while Dövrü
-    Müəyyən şərt doğru (\`True\`) olduğu müddətcə təkrarlanır:
-    \`\`\`python
-    saygac = 5
-    while saygac > 0:
-        print(saygac)
-        saygac -= 1
-    \`\`\`
-        `,
-        keyFormulas: [
-          { id: 'f-inf10-1', name: 'range(start, stop, step)', latex: "\\text{range}(a, b, k) \\implies a, a+k, a+2k, \\dots < b", description: 'Python ardıcıllıq generatoru.' }
-        ],
-        glossary: [
-          { term: 'İndentation (Girinti)', definition: 'Python-da kod bloklarını (şərt, dövr, funksiya) müəyyən edən məcburi boşluqlar.' },
-          { term: 'İterasiya', definition: 'Dövr daxilindəki əmrlərin bir dəfə tam icra olunması addımı.' }
-        ],
-        solvedExamples: [
-          {
-            id: 'ex-inf10-1',
-            question: '`for x in range(2, 10, 3): print(x)` kodu ekrana hansı ədədləri çıxaracaq?',
-            solution: '2-dən başlayaraq 3 vahid addımla 10-dan kiçik ədədlər: 2, 5, 8 çap olunacaq (cəmi 3 ədəd).'
-          }
-        ],
-        miniQuiz: [
-          {
-            questionId: 'mq-inf10-1',
-            question: 'Python-da `len("Məktəb")` funksiyasının qaytardığı nəticə nədir?',
-            options: [
-              { key: 'A', text: '5' },
-              { key: 'B', text: '6' },
-              { key: 'C', text: '7' },
-              { key: 'D', text: 'Məktəb' }
-            ],
-            correctKey: 'B',
-            explanation: '"Məktəb" sözündə 6 hərf var, len() sətirdəki simvolların sayını qaytarır.'
-          }
-        ]
-      },
-
-  {
-      "id": "lesson-phys-7-levers",
-      "subjectId": "fizika",
-      "grade": 7,
-      "unit": "Sadə Mexanizmlər və İş",
-      "unitOrder": 2,
-      "title": "Sadə Mexanizmlər: Lingin Tarazlıq Şərti",
-      "order": 2,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "Tərpənməz dayaq ətrafında fırlana bilən bərk cisim (ling), qüvvə qolu və Arximedin tarazlıq qaydası.",
-      "theoryMarkdown": "\n### 1. Sadə Mexanizmlər Nədir?\nQüvvənin istiqamətini və ya modulunu dəyişmək üçün istifadə olunan qurğulara **sadə mexanizmlər** deyilir (ling, blok, mail müstəvi, bucurqad, paz).\n\n### 2. Lingin Tarazlıq Şərti\nTərpənməz dayaq nöqtəsi ətrafında fırlana bilən bərk cismə **ling** deyilir.\nDayaq nöqtəsindən qüvvənin təsir xəttinə qədər olan ən qısa məsafəyə **qüvvə qolu** ($l$) deyilir.\n\n**Lingin tarazlıq qaydası (Arximed qanunu):**\nLing o zaman tarazlıqda olar ki, ona təsir edən qüvvələrin modulları onların qolları ilə tərs mütənasib olsun:\n$$\\\\frac{F_1}{F_2} = \\\\frac{l_2}{l_1} \\\\implies F_1 \\\\cdot l_1 = F_2 \\\\cdot l_2$$\n\n### 3. Mexanikanın \"Qızıl Qaydası\"\nHeç bir sadə mexanizm işdə qazanc vermir: qüvvədə neçə dəfə qazansaq, məsafədə bir o qədər uduzuruq:\n$$A_1 = A_2 \\\\implies F_1 s_1 = F_2 s_2$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p7-l1",
-          "name": "Lingin Tarazlıq Şərti",
-          "latex": "F_1 l_1 = F_2 l_2",
-          "description": "Qüvvə momentlərinin bərabərliyi."
-        },
-        {
-          "id": "f-p7-l2",
-          "name": "Qüvvə Momenti",
-          "latex": "M = F \\\\cdot l",
-          "description": "Qüvvə ilə onun qolunun hasili."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Qüvvə qolu (l)",
-          "definition": "Fırlanma oxundan qüvvənin təsir xəttinə çəkilmiş perpendikulyarın uzunluğu."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p7-l1",
-          "question": "Lingin qolları $l_1 = 20 \\\\text{ sm}$ və $l_2 = 80 \\\\text{ sm}$-dir. Qısa qola $F_1 = 400 \\\\text{ N}$ yük qoyularsa, onu tarazlaşdırmaq üçün uzun qola hansı qüvvə tətbiq olunmalıdır?",
-          "solution": "$$F_2 = \\\\frac{F_1 \\\\cdot l_1}{l_2} = \\\\frac{400 \\\\cdot 20}{80} = 100 \\\\text{ N}$$. Qüvvədə 4 dəfə qazanc əldə edilir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p7-l1",
-          "question": "Sadə mexanizmlərdən istifadə edərək işdə neçə dəfə qazanc əldə etmək olar?",
-          "options": [
-            {
-              "key": "A",
-              "text": "2 dəfə"
-            },
-            {
-              "key": "B",
-              "text": "4 dəfə"
-            },
-            {
-              "key": "C",
-              "text": "Heç bir qazanc əldə etmək olmaz"
-            },
-            {
-              "key": "D",
-              "text": "Lingin qolundan asılıdır"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Mexanikanın qızıl qaydasına görə heç bir sadə mexanizm işdə qazanc vermir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-8-coulomb",
-      "subjectId": "fizika",
-      "grade": 8,
-      "unit": "Elektrik Hadisələri və Elektrostatika",
-      "unitOrder": 2,
-      "title": "Elektrik Yükləri və Kulon Qanunu",
-      "order": 2,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Müsbət və mənfi yüklər, yükün saxlanması qanunu və nöqtəvi yüklərin qarşılıqlı təsir qanunu.",
-      "theoryMarkdown": "\n### 1. Elektrik Yükü və Növləri\nTəbiətdə iki növ elektrik yükü mövcuddur: **müsbət ($+$)** və **mənfi ($-$)**.\nEyni işarəli yüklər bir-birini itələyir, əks işarəli yüklər isə cəzb edir.\nBütün yüklər elementar yükün ($e = 1.6 \\\\cdot 10^{-19} \\\\text{ Kl}$) tam misllərinə bərabərdir:\n$$q = \\\\pm N \\\\cdot e$$\n\n### 2. Kulon Qanunu\nVakuumda iki sükunətdə olan nöqtəvi yükün qarşılıqlı təsir qüvvəsi bu yüklərin modulları hasili ilə düz, aralarındakı məsafənin kvadratı ilə tərs mütənasibdir:\n$$F = k \\\\frac{|q_1 \\\\cdot q_2|}{r^2}$$\nBurada $k = 9 \\\\cdot 10^9 \\\\frac{\\\\text{N} \\\\cdot \\\\text{m}^2}{\\\\text{Kl}^2}$ mütənasiblik əmsalıdır.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p8-c1",
-          "name": "Kulon Qanunu",
-          "latex": "F = k \\\\frac{|q_1 q_2|}{r^2}",
-          "description": "Nöqtəvi elektrik yükləri arasındakı qarşılıqlı təsir qüvvəsi."
-        },
-        {
-          "id": "f-p8-c2",
-          "name": "Elementar Yük",
-          "latex": "e = 1.6 \\\\cdot 10^{-19} \\\\text{ Kl}",
-          "description": "Təbiətdə ən kiçik bölünməz elektrik yükü (elektron və proton)."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Nöqtəvi yük",
-          "definition": "Ölçüləri qarşılıqlı təsir məsafəsindən dəfələrlə kiçik olan yüklü cisim."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p8-c1",
-          "question": "İki nöqtəvi yük arasındakı məsafə 2 dəfə azaldılsa, onlar arasındakı Kulon qüvvəsi necə dəyişər?",
-          "solution": "$F \\\\sim 1/r^2$ olduğundan, məsafə 2 dəfə azaldıqda qüvvə $2^2 = 4$ dəfə artar."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p8-c1",
-          "question": "Elektrik yükünün Beynəlxalq Vahidlər Sistemində (BS) vahidi nədir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Amper"
-            },
-            {
-              "key": "B",
-              "text": "Volt"
-            },
-            {
-              "key": "C",
-              "text": "Kulon"
-            },
-            {
-              "key": "D",
-              "text": "Om"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Elektrik yükünün BS-də vahidi Kulondur (Kl)."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-11-induction",
-      "subjectId": "fizika",
-      "grade": 11,
-      "unit": "Elektromaqnit Sahəsi və Dalğalar",
-      "unitOrder": 1,
-      "title": "Elektromaqnit İnduksiyası və Faradey Qanunu",
-      "order": 1,
-      "readTimeMinutes": 12,
-      "difficulty": 4,
-      "summary": "Maqnit seli, qapalı konturda induksiya cərəyanının yaranması, Faradey qanunu və Lents qaydası.",
-      "theoryMarkdown": "\n### 1. Maqnit Seli ($\\\\Phi$)\nSahəsi $S$ olan müstəvi səthdən keçən bircins maqnit sahəsinin induksiya xətlərinin sıxlığını xarakterizə edən kəmiyyətə **maqnit seli** deyilir:\n$$\\\\Phi = B \\\\cdot S \\\\cdot \\\\cos \\\\alpha$$\nVahidi **Veberdir** ($1 \\\\text{ Vb} = 1 \\\\text{ Tl} \\\\cdot \\\\text{m}^2$).\n\n### 2. Faradeyin Elektromaqnit İnduksiyası Qanunu\nQapalı konturu əhatə edən maqnit selinin hər hansı dəyişməsi zamanı konturda elektrik cərəyanı (induksiya cərəyanı) yaranır.\nYaranan induksiya EHQ-si maqnit selinin dəyişmə yeyinliyi ilə düz mütənasibdir:\n$$\\\\mathcal{E}_i = -\\\\frac{\\\\Delta \\\\Phi}{\\\\Delta t} = -\\\\Phi'(t)$$\n\n### 3. Lents Qaydası\nDüsturdakı mənfi işarəsi **Lents qaydası** ilə izah olunur: İnduksiya cərəyanı həmişə elə istiqamətlənir ki, onun yaratdığı xüsusi maqnit sahəsi onu doğuran maqnit selinin dəyişməsinə mane olsun.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p11-i1",
-          "name": "Faradey Qanunu",
-          "latex": "\\\\mathcal{E}_i = -\\\\frac{\\\\Delta \\\\Phi}{\\\\Delta t}",
-          "description": "İnduksiya EHQ maqnit selinin zamana görə birinci törəməsinə bərabərdir."
-        },
-        {
-          "id": "f-p11-i2",
-          "name": "Maqnit Seli",
-          "latex": "\\\\Phi = B S \\\\cos \\\\alpha",
-          "description": "İnduksiya vektoru, sahə və bucaq əlaqəsi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Veber (Vb)",
-          "definition": "Maqnit selinin BS sistemindəki əsas vahidi."
-        },
-        {
-          "term": "Lents qaydası",
-          "definition": "İnduksiya cərəyanının maqnit sahəsinin əks təsir istiqamətini müəyyən edən fundamental prinsip."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p11-i1",
-          "question": "Konturu kəsən maqnit seli $0.2 \\\\text{ saniyə}$ ərzində $0.8 \\\\text{ Vb}$-dən $0.2 \\\\text{ Vb}$-yə qədər müntəzəm azalmışdır. Konturda yaranan induksiya EHQ-ni tapın.",
-          "solution": "$$|\\\\mathcal{E}_i| = \\\\frac{|0.2 - 0.8|}{0.2} = \\\\frac{0.6}{0.2} = 3 \\\\text{ Volt}$$$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p11-i1",
-          "question": "Maqnit selinin vahidi hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Tesla"
-            },
-            {
-              "key": "B",
-              "text": "Veber"
-            },
-            {
-              "key": "C",
-              "text": "Henri"
-            },
-            {
-              "key": "D",
-              "text": "Farad"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Maqnit selinin vahidi Veberdir (Vb). Tesla isə maqnit induksiyasının vahididir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-7-mixtures",
-      "subjectId": "kimya",
-      "grade": 7,
-      "unit": "İlkin Kimyəvi Anlayışlar",
-      "unitOrder": 1,
-      "title": "Saf Maddələr və Qarışıqların Ayrılması Üsulları",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 1,
-      "summary": "Bircinsli və müxtəlifcinsli qarışıqlar, fiziki xassələr və durultma, süzmə, buxarlandırma, distillə üsulları.",
-      "theoryMarkdown": "\n### 1. Saf Maddələr və Qarışıqlar\n- **Saf maddə:** Sabit fiziki xassələrə (sabit qaynama, ərimə temperaturu, sıxlıq) malik olan maddədir (məs: distillə olunmuş su, qlükoza, dəmir).\n- **Qarışıq:** İki və ya daha çox maddənin ixtiyari nisbətdə mexaniki birləşməsidir. Qarışıqlar iki yerə bölünür:\n  - **Bircinsli (Homogen):** Hissəcikləri adi gözlə və mikroskopla görünmür (məs: duzlu su, hava).\n  - **Müxtəlifcinsli (Heterogen):** Hissəcikləri asanlıqla seçilir (məs: su + qum, su + duru yağ).\n\n### 2. Qarışıqların Ayrılma Üsulları\n1. **Süzmə:** Suda həll olmayan bərk maddə ilə mayeni ayırmaq üçün (qum və su).\n2. **Durultma:** Sıxlıqları fərqli olan qarışmayan mayeləri ayırmaq üçün bölücü qıfdan istifadə (su və yağ).\n3. **Buxarlandırma və Kristallaşdırma:** Mayedə həll olmuş bərk maddəni ayırmaq üçün (duzlu su).\n4. **Distillə:** Qaynama temperaturları fərqli olan bircinsli maye qarışıqlarını ayırmaq üçün (su və spirt).\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-c7-1",
-          "name": "Kütlə Payı",
-          "latex": "\\\\omega = \\\\frac{m_{\\\\text{maddə}}}{m_{\\\\text{məhlul}}} \\\\cdot 100\\\\%",
-          "description": "Həll olan maddənin məhluldakı faiz nisbəti."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Distillə",
-          "definition": "Mayenin buxarlandırılması və ardınca buxarın soyudularaq kondensasiya olunması prosesi."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c7-1",
-          "question": "Su ilə bitki yağı qarışığını hansı üsulla ən səliqəli şəkildə ayırmaq olar?",
-          "solution": "Su və yağ bir-birində həll olmayan müxtəlifcinsli qarışıq əmələ gətirir və sıxlıqları fərqlidir. Onları bölücü qıf vasitəsilə durultma üsulu ilə asanlıqla ayırmaq olar."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c7-1",
-          "question": "Aşağıdakılardan hansı saf maddədir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Dəniz suyu"
-            },
-            {
-              "key": "B",
-              "text": "Hava"
-            },
-            {
-              "key": "C",
-              "text": "Distillə olunmuş su ($H_2O$)"
-            },
-            {
-              "key": "D",
-              "text": "Süd"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Distillə olunmuş su təmiz kimyəvi birləşmədir və heç bir kənar qarışığı yoxdur."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-10-alkanes",
-      "subjectId": "kimya",
-      "grade": 10,
-      "unit": "Üzvi Kimya: Karbohidrogenlər",
-      "unitOrder": 1,
-      "title": "Doymuş Karbohidrogenlər (Alkanlar)",
-      "order": 1,
-      "readTimeMinutes": 11,
-      "difficulty": 3,
-      "summary": "Alkanların homoloji sırası ($C_n H_{2n+2}$), $sp^3$ hibridləşmə, izomerlik və əvəzetmə reaksiyaları.",
-      "theoryMarkdown": "\n### 1. Alkanların Ümumi Formulu\nMolekullarında karbon atomları bir-biri ilə yalnız təkqat $\\\\sigma$-rabitələrlə birləşmiş karbohidrogenlərə **alkanlar (parafinlər)** deyilir:\n$$C_n H_{2n+2} \\\\quad (n \\\\ge 1)$$\nİlk nümayəndələri: Metan ($CH_4$), Etan ($C_2H_6$), Propan ($C_3H_8$), Butan ($C_4H_{10}$).\n\n### 2. Molekulun Fəza Quruluşu\nAlkanlarda bütün karbon atomları **$sp^3$ hibridləşmə** vəziyyətindədir. Valent bucağı $109^\\\\circ 28'$ təşkil edir və tetraedrik quruluşa malikdir. $C-C$ rabitəsinin uzunluğu $0.154 \\\\text{ nm}$-dir.\n\n### 3. Kimyəvi Xassələri\nDoymuş olduqları üçün birləşmə reaksiyasına daxil olmurlar:\n- **Radikal əvəzetmə (Xlorlaşma):**\n  $$CH_4 + Cl_2 \\\\xrightarrow{h\\\\nu} CH_3Cl + HCl$$\n- **Tam yanma reaksiyası:**\n  $$C_n H_{2n+2} + \\\\frac{3n+1}{2} O_2 \\\\to n CO_2 + (n+1) H_2O$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-c10-1",
-          "name": "Alkanların Ümumi Formulu",
-          "latex": "C_n H_{2n+2}",
-          "description": "Açıq zəncirli doymuş karbohidrogenlərin homoloji sırası."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Homoloji fərq",
-          "definition": "Qonşu homoloqların bir-birindən fərqləndiyi $-CH_2-$ (metilen) qrupu."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c10-1",
-          "question": "Tərkibində 5 karbon atomu olan alkanın ($C_5H_{12}$) nisbi molekul kütləsini tapın ($Ar(C)=12, Ar(H)=1$).",
-          "solution": "$$M_r(C_5H_{12}) = 5 \\\\cdot 12 + 12 \\\\cdot 1 = 60 + 12 = 72$$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c10-1",
-          "question": "Metan molekulunda ($CH_4$) karbon atomunun hibridləşmə növü hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "$sp$"
-            },
-            {
-              "key": "B",
-              "text": "$sp^2$"
-            },
-            {
-              "key": "C",
-              "text": "$sp^3$"
-            },
-            {
-              "key": "D",
-              "text": "Hibridləşməyib"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Bütün alkanlarda karbon atomları dörd tək rabitə əmələ gətirdiyinə görə sp3 hibridləşmə vəziyyətindədir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-bio-7-arthropods",
-      "subjectId": "biologiya",
-      "grade": 7,
-      "unit": "Heyvanlar Aləmi: Onurğasızlar",
-      "unitOrder": 1,
-      "title": "Buğumayaqlılar Tipi və Əsas Sinifləri",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Xitin skelet, buğumlu ətraflar, açıq qan dövranı və xərçəngkimilər, hörümçəkkimilər, həşəratlar müqayisəsi.",
-      "theoryMarkdown": "\n### 1. Buğumayaqlıların Ümumi Əlamətləri\nYer kürəsində növ sayına görə ən zəngin heyvan tipidir (1 milyondan çox növ). Əsas xüsusiyyətləri:\n- Bədənləri və ətrafları **buğumludur**.\n- Bədən xaricdən möhkəm **xitin örtüklə** (xarici skeletlə) örtülmüşdür. Xitin elastik olmadığı üçün heyvanlar qabıq dəyişməklə böyüyürlər.\n- Qan-damar sistemi **açıqdır** (qan bədən boşluğuna tökülür).\n\n### 2. Əsas Siniflərin Müqayisəsi\n1. **Xərçəngkimilər:** Baş-döş və qarıncıq. 5 cüt (10 ədəd) yeriş ayağı. Qəlsəmələrlə tənəffüs edir.\n2. **Hörümçəkkimilər:** Baş-döş və buğumsuz qarıncıq. 4 cüt (8 ədəd) yeriş ayağı. Bığcıqları yoxdur. Tor vəziləri var.\n3. **Həşəratlar:** Baş, döş və qarıncıq. 3 cüt (6 ədəd) yeriş ayağı. 1 cüt bığcıq. Traxeyalarla tənəffüs edir, əksəriyyətində qanadlar var.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-b7-1",
-          "name": "Yeriş Ayaqları Sayı",
-          "latex": "\\\\text{Həşərat (6)} < \\\\text{Hörümçək (8)} < \\\\text{Xərçəng (10)}",
-          "description": "Sinifləri fərqləndirən əsas morfoloji xüsusiyyət."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Xitin",
-          "definition": "Buğumayaqlıların xarici skeletini təşkil edən möhkəm polisaxarid qat."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-b7-1",
-          "question": "May böcəyinin döş hissəsində neçə ədəd yeriş ayağı birləşmişdir?",
-          "solution": "May böcəyi həşəratlar sinfinə aiddir, bütün yetkin həşəratlarda 3 cüt, yəni 6 ədəd yeriş ayağı olur."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-b7-1",
-          "question": "Hörümçəkkimilər sinfinə aid olan canlılarda neçə cüt yeriş ayağı olur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "2 cüt"
-            },
-            {
-              "key": "B",
-              "text": "3 cüt"
-            },
-            {
-              "key": "C",
-              "text": "4 cüt"
-            },
-            {
-              "key": "D",
-              "text": "5 cüt"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Hörümçəkkimilərdə 4 cüt (8 ədəd) yeriş ayağı olur."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-bio-10-cytology",
-      "subjectId": "biologiya",
-      "grade": 10,
-      "unit": "Sitologiya: Hüceyrə Biologiyası",
-      "unitOrder": 1,
-      "title": "Hüceyrənin Quruluşu və Orqanoidləri",
-      "order": 1,
-      "readTimeMinutes": 12,
-      "difficulty": 3,
-      "summary": "Prokariot və eukariot hüceyrələr, plazmatik membran, mitoxondri, ribosom, endoplazmatik şəbəkə və nüvənin funksiyaları.",
-      "theoryMarkdown": "\n### 1. Hüceyrə Nəzəriyyəsinin Əsasları\nHüceyrə - bütün canlıların ən kiçik quruluş, inkişaf və funksional vahididir (Şvan və Şleyden).\nBütün orqanizmlər iki böyük qrupa bölünür:\n- **Prokariotlar:** Formalaşmış nüvəsi olmayanlar (bakteriyalar və göy-yaşıl yosunlar).\n- **Eukariotlar:** Əsl formalaşmış nüvəyə malik olanlar (bitkilər, heyvanlar, göbələklər).\n\n### 2. Əsas Orqanoidlər və Onların Funksiyaları\n- **Mitoxondri:** Hüceyrənin \"enerji stansiyası\". Daxili membranı (kristlər) üzərində ATF (adenozintrifosfat) sintez olunur.\n- **Ribosom:** Zülal sintezini həyata keçirən membransız orqanoid.\n- **Endoplazmatik şəbəkə (EPŞ):** Maddələrin hüceyrədaxili daşınma sistemi (dənəvər EPŞ zülal, hamar EPŞ lipid/karbohidrat sintez edir).\n- **Holci kompleksi:** Sintez olunmuş maddələrin qablaşdırılması və lizosomların yaranması.\n- **Lizosom:** Hüceyrədaxili həzm fermentlərini saxlayır.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-b10-1",
-          "name": "ATF Enerji Parçalanması",
-          "latex": "\\\\text{ATF} + H_2O \\\\to \\\\text{ADF} + H_3PO_4 + 40 \\\\text{ kC/mol}",
-          "description": "Mitoxondridə yaranan makroerqik rabitənin enerji ayrılması."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Kristlər",
-          "definition": "Mitoxondrinin daxili membranının əmələ gətirdiyi qatlar."
-        },
-        {
-          "term": "Xromatin",
-          "definition": "Nüvədə DNT və zülallardan ibarət irsi material sapları."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-b10-1",
-          "question": "Hüceyrədə zülalların biosintezi hansı orqanoiddə baş verir?",
-          "solution": "Zülal molekullarının amin turşularından yığılması bilavasitə ribosomlarda baş verir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-b10-1",
-          "question": "Hüceyrənin energetik stansiyası adlanan və ATF sintez edən iki membranlı orqanoid hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Ribosom"
-            },
-            {
-              "key": "B",
-              "text": "Mitoxondri"
-            },
-            {
-              "key": "C",
-              "text": "Lizosom"
-            },
-            {
-              "key": "D",
-              "text": "Holci kompleksi"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Bioloji oksidləşmə və ATF sintezi mitoxondrinin kristlərində baş verir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-geog-8-lithosphere",
-      "subjectId": "cografiya",
-      "grade": 8,
-      "unit": "Litosfer və Yer Səthinin Relyefi",
-      "unitOrder": 1,
-      "title": "Litosfer Plitələri, Vulkanlar və Zəlzələlər",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Yer qabığının hərəkəti, plitələrin toqquşması və aralanması, Sakit okean 'Alov halqası' və seysmik qurşaqlar.",
-      "theoryMarkdown": "\n### 1. Litosfer Plitələri Nəzəriyyəsi\nYer qabığı və yuxarı mantiyanın bərk hissəsi vahid deyil, nəhəng **litosfer plitələrinə** bölünmüşdür (Avrasiya, Şimali Amerika, Cənubi Amerika, Afrika, Hind-Avstraliya, Sakit okean, Antarktida).\nBu plitələr astenosfer qatı üzərində ildə bir neçə santimetr sürətlə hərəkət edirlər:\n- **Konvergent sərhəd (Toqquşma):** Qırışıq dağlar, dərin okean novları və vulkanik adalar qövsləri yaranır (məs: Himalay, Qafqaz dağları).\n- **Divergent sərhəd (Aralanma):** Orta okean sıra dağları və rift dərələri yaranır (məs: Orta Atlantika silsiləsi).\n\n### 2. Zəlzələlər və Seysmik Qurşaqlar\nZəlzələ ocağının yerin dərinliyindəki mərkəzinə **hipomərkəz**, onun bilavasitə yer səthindəki proyeksiyasına **epimərkəz** deyilir.\nDünyada iki nəhəng seysmik qurşaq var:\n1. **Sakit okean 'Alov halqası':** Dünyadakı zəlzələ və fəaliyyətdə olan vulkanların 80%-i buradadır.\n2. **Alp-Himalay seysmik qurşağı:** Azərbaycan ərazisi də bu aktiv zolaqda yerləşir.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-g8-1",
-          "name": "Rixter Şkalası",
-          "latex": "M = \\\\log_{10}(A) - \\\\log_{10}(A_0)",
-          "description": "Zəlzələnin maqnitudasının (enerjisinin) loqarifmik ölçüsü."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Epimərkəz",
-          "definition": "Zəlzələ ocağının yer səthində ən güclü dağıntı törədən mərkəzi nöqtəsi."
-        },
-        {
-          "term": "Qeyzer",
-          "definition": "Vulkanik zonalarda dövri olaraq fontan vuran qaynar su və buxar mənbəyi."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-g8-1",
-          "question": "Azərbaycan hansı nəhəng seysmik qurşağın tərkibinə daxildir?",
-          "solution": "Azərbaycan Avrasiya və Ərəbistan litosfer plitələrinin toqquşma zonasında - Alp-Himalay qırışıqlıq və seysmik qurşağında yerləşir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-g8-1",
-          "question": "Yer səthində fəaliyyətdə olan vulkanların və güclü zəlzələlərin ən çox cəmləşdiyi bölgə hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Qərbi Sibir düzənliyi"
-            },
-            {
-              "key": "B",
-              "text": "Sakit okean 'Alov halqası'"
-            },
-            {
-              "key": "C",
-              "text": "Şərqi Afrika yarığı"
-            },
-            {
-              "key": "D",
-              "text": "Skandinaviya qalxması"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Sakit okeanın kənarları boyunca plitələrin fəal toqquşması nəticəsində 'Alov halqası' yaranmışdır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-geog-9-azerbaijan-climate",
-      "subjectId": "cografiya",
-      "grade": 9,
-      "unit": "Azərbaycanın Fiziki Coğrafiyası",
-      "unitOrder": 1,
-      "title": "Azərbaycanın İqlim Tipləri və Landşaftları",
-      "order": 1,
-      "readTimeMinutes": 11,
-      "difficulty": 2,
-      "summary": "Dünyadakı 11 iqlim tipindən 9-nun Azərbaycanda rast gəlinməsi səbəbləri, günəş radiasiyası və yağıntıların paylanması.",
-      "theoryMarkdown": "\n### 1. İqliməmələgətirən Amillər\nAzərbaycan subtropik və mülayim iqlim qurşaqlarının qovuşuğunda yerləşir. Ərazidə mütləq hündürlük $-28 \\\\text{ m}$-dən (Xəzər sahili) $+4466 \\\\text{ m}$-ə qədər (Bazardüzü zirvəsi) dəyişdiyi üçün şaquli qurşaqlıq güclü inkişaf etmişdir.\nƏrazidə illik günəş parıltısının müddəti $2200 - 2700$ saatdır.\n\n### 2. Əsas İqlim Tipləri\nDünyada mövcud olan 11 iqlim tipindən 9-u Azərbaycanda müşahidə edilir:\n1. **Quru çöl və yarımsəhra iqlimi:** Kür-Araz ovalığı, Abşeron və Qobustanda (yağıntı az, yay çox isti).\n2. **Qışı mülayim, yayı quraq keçən mülayim-isti:** Lənkəran ovalığı (yağıntı ən çox buradadır - 1400-1700 mm).\n3. **Qışı quraq keçən mülayim-isti:** Qanıx-Əyriçay, Kiçik Qafqazın ətəkləri.\n4. **Soyuq və dağ-tundra iqlimi:** Böyük və Kiçik Qafqazın yüksək dağlıq zirvələrində.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-g9-1",
-          "name": "Rütubətlənmə Əmsalı",
-          "latex": "K = \\\\frac{Q}{E_0}",
-          "description": "İllik yağıntı miqdarının (Q) mümkün buxarlanmaya (E0) nisbəti."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Şaquli qurşaqlıq",
-          "definition": "Dağlarda hündürlüyə qalxdıqca temperaturun azalması ilə təbiət komplekslərinin qanunauyğun dəyişməsi."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-g9-1",
-          "question": "Azərbaycanda ən çox yağıntı alan təbii vilayət hansıdır?",
-          "solution": "Lənkəran təbii vilayətidir (Talış dağlarının ətəkləri), burada illik yağıntı 1400-1700 mm-ə çatır."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-g9-1",
-          "question": "Kür-Araz ovalığı və Abşeron yarımadasında hansı iqlim tipi üstünlük təşkil edir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Dağ-tundra"
-            },
-            {
-              "key": "B",
-              "text": "Quru çöl və yarımsəhra"
-            },
-            {
-              "key": "C",
-              "text": "Rütubətli subtropik"
-            },
-            {
-              "key": "D",
-              "text": "Soyuq meşə iqlimi"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Kür-Araz ovalığı və Abşeronda yayı isti və quraq, qışı mülayim keçən yarımsəhra və quru çöl iqlimi hakimdir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-hist-10-manna",
-      "subjectId": "tarix",
-      "grade": 10,
-      "unit": "Qədim Şərq və Azərbaycan Dövlətləri",
-      "unitOrder": 1,
-      "title": "Qədim Azərbaycan: Manna Dövləti",
-      "order": 1,
-      "readTimeMinutes": 11,
-      "difficulty": 2,
-      "summary": "Urmiya gölü hövzəsi, e.ə. IX əsr, paytaxt İzirtu, İranzu və Ullusunun islahatları, Həsənli və Ziyviyə tapıntıları.",
-      "theoryMarkdown": "\n### 1. Manna Dövlətinin Yaranması\nAzərbaycanın cənubunda (Urmiya gölü ətrafında) e.ə. IX əsrdə yaranmış ilk mərkəzləşdirilmiş dövlət **Mannadır**.\nİlk dəfə e.ə. 843-cü ildə III Salmanasarın mixi yazılı kitabəsində adı çəkilir.\nPaytaxtı **İzirtu** şəhəri olmuşdur.\n\n### 2. İranzunun Dövlətçilik İslahatları\nHökmdar **İranzunun** (e.ə. 740 - 719) dövründə Manna ən qüdrətli çağını yaşadı:\n- Ölkə canişinliklər sisteminə bölündü və mərkəzi hakimiyyət gücləndirildi.\n- Urartunun təcavüzlərinə qarşı Assuriya ilə hərbi-siyasi ittifaq yaradıldı.\n- Sənətkarlıq və metallurgiya yüksək inkişaf etdi (Həsənli qızıl camı və Ziyviyə gümüş qabı).\n\n### 3. Manna Mədəniyyəti və Süqutu\nMannalılar mixi və yerli heroqlif yazılardan istifadə etmişlər. Dövlət e.ə. 590-cı ildə güclənən Midiya imperiyası tərəfindən süquta uğradılmışdır.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-h10-1",
-          "name": "Tarixi Mərhələ",
-          "latex": "\\\\text{e.ə. IX əsr (Yaranma)} \\\\to \\\\text{e.ə. 590 (Midiya tərəfindən süqut)}",
-          "description": "Manna dövlətinin mövcudluq dövrü."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "İzirtu",
-          "definition": "Qədim Manna dövlətinin möhkəm qala divarları ilə əhatələnmiş paytaxt şəhəri."
-        },
-        {
-          "term": "Canişinlik",
-          "definition": "Ölkənin mərkəzə tabe olan əyalət hakimləri vasitəsilə idarə edilmə sistemi."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-h10-1",
-          "question": "Həsənli təpəsindən tapılmış məşhur qızıl cam hansı qədim Azərbaycan dövlətinin mədəniyyətinə aiddir?",
-          "solution": "Manna dövlətinin yüksək zərgərlik və metalişləmə sənətini əks etdirən Həsənli qızıl camı e.ə. I minilliyin əvvəllərinə aiddir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-h10-1",
-          "question": "Manna dövlətinin paytaxtı hansı şəhər olmuşdur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Qəbələ"
-            },
-            {
-              "key": "B",
-              "text": "İzirtu"
-            },
-            {
-              "key": "C",
-              "text": "Təbriz"
-            },
-            {
-              "key": "D",
-              "text": "Bərdə"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Manna dövlətinin paytaxtı Urmiya gölünün cənub-şərqində yerləşən İzirtu şəhəri idi."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-hist-11-axc",
-      "subjectId": "tarix",
-      "grade": 11,
-      "unit": "Yeni Dövr Azərbaycan Tarixi",
-      "unitOrder": 1,
-      "title": "Azərbaycan Xalq Cümhuriyyəti (1918–1920)",
-      "order": 1,
-      "readTimeMinutes": 13,
-      "difficulty": 3,
-      "summary": "28 may 1918 İstiqlal Bəyannaməsi, Şərqdə ilk parlamentli demokratik respublika, milli ordu, Bakı Dövlət Universiteti və diplomatik uğurlar.",
-      "theoryMarkdown": "\n### 1. İstiqlal Bəyannaməsi (28 May 1918)\n28 may 1918-ci ildə Tiflisdə Azərbaycan Milli Şurası Məhəmməd Əmin Rəsulzadənin sədrliyi ilə **İstiqlal Bəyannaməsini** qəbul etdi. Bununla müsəlman Şərqində ilk demokratik və parlamentli respublika yaradıldı.\nBəyannamədə milliyyətindən, dinindən və cinsindən asılı olmayaraq bütün vətəndaşlara bərabər hüquqlar (o cümlədən qadınlara səsvermə hüququ) təsbit edildi.\n\n### 2. Dövlət Quruculuğu və İslahatlar\n- **Paytaxt:** Əvvəlcə Gəncə, 15 sentyabr 1918-ci ildə Qafqaz İslam Ordusunun köməyi ilə Bakı azad edildikdən sonra paytaxt Bakıya köçürüldü.\n- **Dövlət atributları:** Üçrəngli bayraq (9 noyabr 1918), dövlət himni və gerbi qəbul edildi.\n- **Maarif:** 1919-cu ildə ilk milli ali məktəb - Bakı Dövlət Universiteti təsis edildi, yüzlərlə gənc Avropaya təhsil almağa göndərildi.\n\n### 3. Beynəlxalq Tanınma\n11 yanvar 1920-ci ildə Paris Sülh Konfransında Əlimərdan bəy Topçubaşovun rəhbərlik etdiyi nümayəndə heyətinin səyi nəticəsində AXC-nin müstəqilliyi Antanta Ali Şurası tərəfindən **de-fakto** tanındı.\nRespublika 23 aylıq fəaliyyətdən sonra 28 aprel 1920-ci ildə XI Qırmızı Ordunun hərbi təcavüzü nəticəsində süqut etdi.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-h11-1",
-          "name": "AXC Xronologiyası",
-          "latex": "1918 \\\\text{ (28 May)} \\\\to 1920 \\\\text{ (28 Aprel - 23 ay)}",
-          "description": "Azərbaycan Xalq Cümhuriyyətinin fəaliyyət müddəti."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Milli Şura",
-          "definition": "1918-ci ildə Azərbaycan xalqı adından müstəqilliyi elan edən ilk qanunverici ali orqan."
-        },
-        {
-          "term": "De-fakto",
-          "definition": "Beynəlxalq hüquqda dövlətin faktiki olaraq rəsmən tanınması forması."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-h11-1",
-          "question": "Müsəlman Şərqində qadınlara seçki hüququ verən ilk dövlət hansı olmuşdur?",
-          "solution": "1918-ci ildə Azərbaycan Xalq Cümhuriyyəti bir çox Qərb dövlətlərindən belə əvvəl qadınlara seçmək və seçilmək hüququ vermişdir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-h11-1",
-          "question": "Azərbaycan Xalq Cümhuriyyətinin İstiqlal Bəyannaməsi neçənci ildə qəbul edilmişdir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "28 may 1918"
-            },
-            {
-              "key": "B",
-              "text": "15 sentyabr 1918"
-            },
-            {
-              "key": "C",
-              "text": "28 aprel 1920"
-            },
-            {
-              "key": "D",
-              "text": "9 noyabr 1919"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "28 may 1918-ci ildə Tiflisdə İstiqlal Bəyannaməsi qəbul edilmiş və Respublika elan olunmuşdur."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-eng-9-conditionals",
-      "subjectId": "xarici_dil",
-      "grade": 9,
-      "unit": "Grammar: Complex Sentences",
-      "unitOrder": 1,
-      "title": "Conditionals: Zero, First & Second Conditional",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Real and unreal conditions, scientific facts, future possibilities, hypothetical scenarios and 'If clauses'.",
-      "theoryMarkdown": "\n### 1. Zero Conditional (Faktlar və Təbii Qanunlar)\nHəmişə doğru olan ümumi həqiqətlər və elmi faktlar üçün:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Present Simple}$$\n- *\"If you heat water to 100°C, it boils.\"*\n\n### 2. First Conditional (Gələcəkdə Real Şərt)\nGələcəkdə baş verməsi tamamilə mümkün olan real şərtlər:\n$$\\\\text{If} + \\\\text{Present Simple}, \\\\quad \\\\text{Future Simple (will + V1)}$$\n- *\"If it rains tomorrow, we will stay at home.\"*\n*(Qeyd: 'If' olan hissədə heç vaxt 'will' işlənməz!)*\n\n### 3. Second Conditional (Xəyali / Qeyri-real Şərt)\nİndiki və ya gələcək zamanda qeyri-real, xəyali vəziyyətlər üçün:\n$$\\\\text{If} + \\\\text{Past Simple}, \\\\quad \\\\text{would} + V_1$$\n- *\"If I had a million dollars, I would travel around the world.\"*\n*(Bütün şəxslərdə 'to be' feli üçün 'were' işlənir: If I were you...)*\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-e9-1",
-          "name": "First Conditional Formula",
-          "latex": "\\\\text{If} + V_1 \\\\implies \\\\text{will} + V_1",
-          "description": "Real gələcək şərt formulu."
-        },
-        {
-          "id": "f-e9-2",
-          "name": "Second Conditional Formula",
-          "latex": "\\\\text{If} + V_2 \\\\implies \\\\text{would} + V_1",
-          "description": "İndiki zamana aid xəyali vəziyyət."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Hypothetical",
-          "definition": "Hələ baş verməmiş, xəyalda canlandırılan qeyri-real vəziyyət."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-e9-1",
-          "question": "\"If she ____ (study) hard, she will pass the exam.\" Boşluğu düzgün zamanla doldurun.",
-          "solution": "Nəticə hissəsində 'will pass' (First Conditional) olduğu üçün If budaq cümləsində Present Simple tələb olunur: \"studies\"."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-e9-1",
-          "question": "Choose the correct sentence in Second Conditional:",
-          "options": [
-            {
-              "key": "A",
-              "text": "If I study, I will get high marks."
-            },
-            {
-              "key": "B",
-              "text": "If I had wings, I would fly."
-            },
-            {
-              "key": "C",
-              "text": "If you freeze water, it turns into ice."
-            },
-            {
-              "key": "D",
-              "text": "If it will rain, we cancel the match."
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "'If I had wings, I would fly' indiki zamana aid qeyri-real xəyali arzudur (Second Conditional)."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-eng-10-passive-voice",
-      "subjectId": "xarici_dil",
-      "grade": 10,
-      "unit": "Grammar: Advanced Voice",
-      "unitOrder": 1,
-      "title": "The Passive Voice (Məchul Növ)",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Məchul növün mahiyyəti, 'to be + V3' ümumi formulu, müxtəlif zamanlarda dəyişməsi və 'by' sözönü ilə icraçı.",
-      "theoryMarkdown": "\n### 1. Passive Voice Nədir?\nCümlədə hərəkəti kimin etdiyi bilinmədikdə və ya hərəkətin obyekti icraçıdan daha vacib olduqda **məchul növ (Passive Voice)** işlədilir.\n- **Məlum (Active):** *\"Alexander Bell invented the telephone in 1876.\"*\n- **Məchul (Passive):** *\"The telephone was invented by Alexander Bell in 1876.\"*\n\n### 2. Ümumi Düzəlmə Qaydası\n$$\\\\text{Obyekt} + \\\\mathbf{to \\\\; be} + \\\\mathbf{V_3 / V_{ed}} + (\\\\text{by} + \\\\text{İcraçı})$$\n\n### 3. Zamanlara Görə Cədvəl\n- **Present Simple:** $$am / is / are + V_3$$ (*English is spoken here.*)\n- **Past Simple:** $$was / were + V_3$$ (*The bridge was built in 1995.*)\n- **Future Simple:** $$will \\\\; be + V_3$$ (*The results will be announced tomorrow.*)\n- **Present Perfect:** $$have / has \\\\; been + V_3$$ (*The room has been cleaned.*)\n- **Modallar:** $$can / must / should + be + V_3$$ (*Rules must be obeyed.*)\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-e10-p1",
-          "name": "Passive Voice Formula",
-          "latex": "S + \\\\text{to be} + V_3",
-          "description": "Bütün məchul cümlələrin əsas nüvə formulu."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Agent (by ...)",
-          "definition": "Məchul cümlədə işi görən şəxsi göstərmək üçün istifadə olunan ifadə."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-e10-p1",
-          "question": "\"They clean the rooms every day.\" cümləsini məchul növə çevirin.",
-          "solution": "\"The rooms are cleaned every day.\" (Present Simple cümləsi 'are + V3' ilə məchula keçir)."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-e10-p1",
-          "question": "Which sentence is correctly written in Passive Voice?",
-          "options": [
-            {
-              "key": "A",
-              "text": "The letter was written yesterday."
-            },
-            {
-              "key": "B",
-              "text": "He has wrote a letter."
-            },
-            {
-              "key": "C",
-              "text": "They were built a house."
-            },
-            {
-              "key": "D",
-              "text": "She was painted the wall."
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "'The letter was written yesterday' cümləsində was + V3 düzgün işlənmişdir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-inf-9-networks-ip",
-      "subjectId": "informatika",
-      "grade": 9,
-      "unit": "Kompüter Şəbəkələri və İnternet",
-      "unitOrder": 1,
-      "title": "Kompüter Şəbəkələri, IP Ünvan və Domen Sistemi (DNS)",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Lokal (LAN) və qlobal (WAN) şəbəkələr, IPv4 ünvan strukturu, 4 bayt/32 bitlik quruluş və URL tərkibi.",
-      "theoryMarkdown": "\n### 1. Kompüter Şəbəkələrinin Növləri\nİnformasiya mübadiləsi üçün rabitə xətləri ilə birləşdirilmiş kompüterlər sisteminə **şəbəkə** deyilir:\n- **LAN (Local Area Network):** Bir otaq, məktəb və ya bina daxilindəki lokal şəbəkə.\n- **WAN (Wide Area Network):** Şəhərləri, ölkələri və qitələri birləşdirən qlobal şəbəkə (ən böyüyü İnternetdir).\n\n### 2. IP Ünvan Strukturu (IPv4)\nŞəbəkəyə qoşulmuş hər bir qurğuya unikal 32 bitlik (4 baytlıq) rəqəmsal **IP ünvan** verilir.\nNöqtələrlə ayrılmış 4 onluq ədəddən ibarətdir:\n$$A . B . C . D \\\\quad (0 \\\\le A, B, C, D \\\\le 255)$$\nMəsələn: `192.168.1.1` və ya `8.8.8.8`. Heç bir ədəd 255-dən böyük və ya mənfi ola bilməz.\n\n### 3. Domen Adları Sistemi (DNS)\nİnsanların rəqəmlərdən ibarət IP ünvanları yadda saxlaması çətin olduğundan **DNS** sistemi yaradılmışdır. O, hərfli adları (`google.com`) IP ünvanına çevirir:\n- URL strukturu: `https://` (protokol) `www.mektebplus.az` (domen adı) `/dersler` (fayl yolu).\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-inf9-1",
-          "name": "IPv4 Həcmi",
-          "latex": "4 \\\\text{ Bayt} = 32 \\\\text{ bit} \\\\implies 2^{32} \\\\approx 4.3 \\\\text{ milyard ünvan}",
-          "description": "IPv4 standartında mümkün olan maksimum ünvan sayı."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "DNS (Domain Name System)",
-          "definition": "Domen adlarını avtomatik olaraq IP ünvanlarına çevirən paylanmış qovluq xidməti."
-        },
-        {
-          "term": "Protokol",
-          "definition": "Şəbəkədə məlumatların ötürülmə və qəbul edilmə qaydalarını müəyyən edən standart (məs: HTTP, TCP/IP)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-inf9-1",
-          "question": "`205.112.280.14` IP ünvanı düzgündürmü?",
-          "solution": "Xeyr, səhvdir. Çünki üçüncü hissədəki 280 ədədi icazə verilən maksimum 255 həddini aşır."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-inf9-1",
-          "question": "IPv4 ünvanı yaddaşda neçə bayt yer tutur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "2 bayt"
-            },
-            {
-              "key": "B",
-              "text": "4 bayt"
-            },
-            {
-              "key": "C",
-              "text": "8 bayt"
-            },
-            {
-              "key": "D",
-              "text": "16 bayt"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "IPv4 ünvanı 32 bit, yəni 4 baytdan ibarətdir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-inf-11-databases-sql",
-      "subjectId": "informatika",
-      "grade": 11,
-      "unit": "İnformasiya Sistemləri və Verilənlər Bazası",
-      "unitOrder": 1,
-      "title": "Relyasiyalı Verilənlər Bazası və SQL Əsasları",
-      "order": 1,
-      "readTimeMinutes": 12,
-      "difficulty": 3,
-      "summary": "Cədvəl modeli, sətir (yazı/record), sütun (sahə/field), ilkin açar (primary key) və əsas SQL sorğuları (SELECT, WHERE).",
-      "theoryMarkdown": "\n### 1. Relyasiyalı Verilənlər Bazası Modeli\nVerilənlərin bir-biri ilə əlaqəli ikiölçülü cədvəllər şəklində saxlandığı bazaya **relyasiyalı verilənlər bazası (RDBMS)** deyilir:\n- **Sahə (Field / Sütun):** Eyni növ məlumatın atributunu saxlayır (məs: *Ad*, *Soyad*, *Doğum_Tarixi*).\n- **Yazı (Record / Sətir):** Konkret bir obyektə aid bütün məlumatlar toplusu.\n- **İlkin Açar (Primary Key):** Cədvəldə hər bir sətri unikal şəkildə fərqləndirən təkrarlanmayan sahə (məs: *Şagirdin Şəxsiyyət Vəsiqəsi FİN kodu*).\n\n### 2. SQL (Structured Query Language) Əsasları\nVerilənlər bazasından məlumat axtarmaq və idarə etmək üçün standart dildir:\n- **Bütün cədvəli seçmək:**\n  ```sql\n  SELECT * FROM Sagirdler;\n  ```\n- **Filtrləmə (WHERE şərti):**\n  ```sql\n  SELECT Ad, Soyad, Bal FROM Sagirdler WHERE Bal >= 90 ORDER BY Bal DESC;\n  ```\n- **Yeni məlumat əlavə etmək:**\n  ```sql\n  INSERT INTO Sagirdler (Ad, Sinif) VALUES ('Leyla', 10);\n  ```\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-inf11-1",
-          "name": "SQL Standart Sintaksisi",
-          "latex": "\\\\text{SELECT } [\\\\text{sütunlar}] \\\\text{ FROM } [\\\\text{cədvəl}] \\\\text{ WHERE } [\\\\text{şərt}]",
-          "description": "Relyasiyalı bazalarda filtrasiya sorğusunun əsas strukturu."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Primary Key (İlkin Açar)",
-          "definition": "Cədvəldəki hər bir sətrin təkrarsızlığını təmin edən unikal identifikator."
-        },
-        {
-          "term": "RDBMS",
-          "definition": "Relyasiyalı verilənlər bazasının idarəetmə sistemi (məs: PostgreSQL, MySQL, SQLite)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-inf11-1",
-          "question": "`SELECT Ad FROM Kitablar WHERE Qiymet < 15;` sorğusu nəyi qaytaracaq?",
-          "solution": "Qiyməti 15 manatdan ucuz olan bütün kitabların yalnız adlarından ibarət siyahını qaytaracaq."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-inf11-1",
-          "question": "Verilənlər bazasında cədvəlin bir sətri nə adlanır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Sahə (Field)"
-            },
-            {
-              "key": "B",
-              "text": "Yazı (Record)"
-            },
-            {
-              "key": "C",
-              "text": "İndeks"
-            },
-            {
-              "key": "D",
-              "text": "Açar"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Cədvəldə hər bir sətir bir obyektə aid məlumatları əks etdirən Yazı (Record) adlanır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-7-density",
-      "subjectId": "fizika",
-      "grade": 7,
-      "unit": "Maddənin Quruluşu və Xassələri",
-      "unitOrder": 3,
-      "title": "Maddənin Sıxlığı və Kütlə",
-      "order": 3,
-      "readTimeMinutes": 8,
-      "difficulty": 1,
-      "summary": "Vahid həcmdəki kütlə, sıxlıq düsturu ($\\rho = m/V$), sıxlıq vahidləri və maddələrin müqayisəsi.",
-      "theoryMarkdown": "\n### 1. Sıxlıq Nədir?\nCismin kütləsinin onun həcminə olan nisbətinə bərabər olan fiziki kəmiyyətə **maddənin sıxlığı** deyilir və $\\\\rho$ (ro) ilə işarə olunur:\n$$\\\\rho = \\\\frac{m}{V}$$\nBuradan kütlə və həcm:\n$$m = \\\\rho \\\\cdot V, \\\\quad V = \\\\frac{m}{\\\\rho}$$\n\n### 2. Sıxlıq Vahidləri\nBS-də vahidi: $[\\\\rho] = 1 \\\\text{ kq/m}^3$. Praktikada $\\\\text{q/sm}^3$ də istifadə olunur:\n$$1 \\\\text{ q/sm}^3 = 1000 \\\\text{ kq/m}^3$$\nMəsələn: Təmiz suyun sıxlığı $\\\\rho_{\\\\text{su}} = 1000 \\\\text{ kq/m}^3 = 1 \\\\text{ q/sm}^3$.\nDəmirin sıxlığı $\\\\rho = 7800 \\\\text{ kq/m}^3$.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p7-d1",
-          "name": "Sıxlıq Düsturu",
-          "latex": "\\\\rho = \\\\frac{m}{V}",
-          "description": "Kütlənin həcmə nisbəti."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Sıxlıq (ρ)",
-          "definition": "Maddənin 1 kub metr həcmindəki kütləsini göstərən skalyar fiziki kəmiyyət."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p7-d1",
-          "question": "Həcmi $V = 2 \\\\text{ m}^3$ olan ağac kötüyünün kütləsi $m = 1200 \\\\text{ kq}$-dır. Ağacın sıxlığını tapın.",
-          "solution": "$$\\\\rho = \\\\frac{m}{V} = \\\\frac{1200}{2} = 600 \\\\text{ kq/m}^3$$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p7-d1",
-          "question": "Həcmi $0.5 \\\\text{ m}^3$ olan suyun kütləsi neçə kiloqramdır? ($\\rho = 1000 \\\\text{ kq/m}^3$)",
-          "options": [
-            {
-              "key": "A",
-              "text": "200 kq"
-            },
-            {
-              "key": "B",
-              "text": "500 kq"
-            },
-            {
-              "key": "C",
-              "text": "1000 kq"
-            },
-            {
-              "key": "D",
-              "text": "2000 kq"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "m = rho * V = 1000 kq/m³ * 0.5 m³ = 500 kq."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-8-ohms-law",
-      "subjectId": "fizika",
-      "grade": 8,
-      "unit": "Daimi Elektrik Cərəyanı",
-      "unitOrder": 3,
-      "title": "Dövrə Hissəsi üçün Om Qanunu və Müqavimət",
-      "order": 3,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Cərəyan şiddəti, gərginlik, naqilin müqaviməti ($R=\\rho l/S$) və Om qanunu ($I=U/R$).",
-      "theoryMarkdown": "\n### 1. Dövrə Hissəsi üçün Om Qanunu\nDövrə hissəsindəki cərəyan şiddəti ($I$) bu hissənin uclarındakı gərginliklə ($U$) düz, onun elektrik müqaviməti ($R$) ilə tərs mütənasibdir:\n$$I = \\\\frac{U}{R}$$\nBuradan: $U = I \\\\cdot R, \\\\quad R = \\\\frac{U}{I}$\nVahidləri: $[I] = 1 \\\\text{ Amper (A)}, \\\\quad [U] = 1 \\\\text{ Volt (V)}, \\\\quad [R] = 1 \\\\text{ Om } (\\\\Omega)$.\n\n### 2. Naqilin Müqavimətinin Həndəsi Parametrlərdən Asılılığı\nNaqilin müqaviməti onun uzunluğu ($l$) ilə düz, en kəsiyinin sahəsi ($S$) ilə tərs mütənasibdir və hazırlandığı materialın xüsusi müqavimətindən ($\\\\rho$) asılıdır:\n$$R = \\\\rho \\\\frac{l}{S}$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p8-ohm-1",
-          "name": "Om Qanunu",
-          "latex": "I = \\\\frac{U}{R}",
-          "description": "Cərəyan şiddəti, gərginlik və müqavimət əlaqəsi."
-        },
-        {
-          "id": "f-p8-ohm-2",
-          "name": "Naqilin Müqaviməti",
-          "latex": "R = \\\\rho \\\\frac{l}{S}",
-          "description": "Uzunluq, sahə və xüsusi müqavimət asılılığı."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Xüsusi müqavimət (ρ)",
-          "definition": "Uzunluğu 1 m və en kəsiyinin sahəsi 1 m² olan naqilin elektrik müqaviməti."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p8-ohm-1",
-          "question": "Müqaviməti $R = 20 \\\\text{ Om}$ olan naqilin uclarına $U = 220 \\\\text{ V}$ gərginlik verilmişdir. Naqildən keçən cərəyan şiddətini tapın.",
-          "solution": "$$I = \\\\frac{U}{R} = \\\\frac{220}{20} = 11 \\\\text{ Amper}$$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p8-ohm-1",
-          "question": "Naqilin uzunluğunu 3 dəfə artırsaq, onun elektrik müqaviməti necə dəyişər?",
-          "options": [
-            {
-              "key": "A",
-              "text": "3 dəfə azalar"
-            },
-            {
-              "key": "B",
-              "text": "3 dəfə artar"
-            },
-            {
-              "key": "C",
-              "text": "9 dəfə artar"
-            },
-            {
-              "key": "D",
-              "text": "Dəyişməz"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "R = rho * l / S düsturuna görə müqavimət uzunluqla düz mütənasibdir. Uzunluq 3 dəfə artarsa, müqavimət də 3 dəfə artar."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-9-momentum",
-      "subjectId": "fizika",
-      "grade": 9,
-      "unit": "Dinamikanın Əsas Qanunları",
-      "unitOrder": 2,
-      "title": "Cismin İmpulsu və İmpulsun Saxlanması Qanunu",
-      "order": 2,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Hərəkət miqdarı (vektor kəmiyyət $p=mv$), qüvvə impulsu və qapalı sistemdə impulsun saxlanması qanunu.",
-      "theoryMarkdown": "\n### 1. Cismin İmpulsu (Hərəkət Miqdarı)\nCismin kütləsinin onun sürətinə hasilinə bərabər olan və sürət istiqamətində yönələn vektorial kəmiyyətə **cismin impulsu** deyilir:\n$$\\\\vec{p} = m \\\\vec{v}$$\nBS-də vahidi: $[p] = 1 \\\\text{ kq} \\\\cdot \\\\text{m/s}$.\n\nQüvvə impulsu ilə əlaqə (Nyutonun II qanununun impuls forması):\n$$\\\\vec{F} \\\\cdot \\\\Delta t = \\\\Delta \\\\vec{p} = m\\\\vec{v} - m\\\\vec{v}_0$$\n\n### 2. İmpulsun Saxlanması Qanunu\nXarici qüvvələrin təsir etmədiyi (və ya əvəzləyicisi sıfra bərabər olan) cisimlər sisteminə **qapalı sistem** deyilir.\nQapalı sistemə daxil olan cisimlərin impulslarının həndəsi (vektorial) cəmi dəyişməz qalır:\n$$m_1 \\\\vec{v}_1 + m_2 \\\\vec{v}_2 = m_1 \\\\vec{v}_1' + m_2 \\\\vec{v}_2'$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p9-m1",
-          "name": "İmpuls Düsturu",
-          "latex": "p = mv",
-          "description": "Kütlə vurulsun sürət vektoru."
-        },
-        {
-          "id": "f-p9-m2",
-          "name": "İmpulsun Saxlanması",
-          "latex": "m_1 v_1 + m_2 v_2 = (m_1 + m_2)u",
-          "description": "Qeyri-elastiki toqquşma üçün saxlanma tənliyi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Qapalı sistem",
-          "definition": "Yalnız öz daxilində qarşılıqlı təsirdə olan və xarici qüvvə təsir etməyən sistem."
-        },
-        {
-          "term": "Reaktiv hərəkət",
-          "definition": "Cismin özündən bir hissənin müəyyən sürətlə ayrılması nəticəsində əks istiqamətdə aldığı hərəkət (raketlər)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p9-m1",
-          "question": "Kütləsi $m = 800 \\\\text{ kq}$ olan avtomobil $v = 20 \\\\text{ m/s}$ sürətlə hərəkət edir. Onun impulsunu hesablayın.",
-          "solution": "$$p = m \\\\cdot v = 800 \\\\cdot 20 = 16\\\\,000 \\\\text{ kq}\\\\cdot\\\\text{m/s}$$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p9-m1",
-          "question": "Cismin kütləsi 2 dəfə artırılsa və sürəti 2 dəfə azaldılsa, onun impulsu necə dəyişər?",
-          "options": [
-            {
-              "key": "A",
-              "text": "4 dəfə artar"
-            },
-            {
-              "key": "B",
-              "text": "2 dəfə azalar"
-            },
-            {
-              "key": "C",
-              "text": "Dəyişməz"
-            },
-            {
-              "key": "D",
-              "text": "2 dəfə artar"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "p = m * v. Kütlə 2 dəfə artıb, sürət 2 dəfə azaldıqda hasil sabit qalır (dəyişməz)."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-10-thermodynamics",
-      "subjectId": "fizika",
-      "grade": 10,
-      "unit": "Molekulyar Fizika və Termodinamika",
-      "unitOrder": 2,
-      "title": "İdeal Qazın Daxili Enerjisi və Termodinamikanın I Qanunu",
-      "order": 2,
-      "readTimeMinutes": 12,
-      "difficulty": 3,
-      "summary": "Biratomlu ideal qazın daxili enerjisi, qazın gördüyü iş ($A=P\\Delta V$) və enerjinin saxlanma qanunu.",
-      "theoryMarkdown": "\n### 1. Biratomlu İdeal Qazın Daxili Enerjisi\nMolekulları ancaq irəliləmə hərəkəti edən qazın daxili enerjisi yalnız onun mütləq temperaturundan ($T$) asılıdır:\n$$U = \\\\frac{3}{2} \\\\frac{m}{M} R T = \\\\frac{3}{2} \\\\nu R T$$\n\n### 2. Qazın Genişlənmə Zamanı Gördüyü İş\nİzobar prosesdə ($P = \\\\text{const}$):\n$$A = P \\\\cdot \\\\Delta V = P (V_2 - V_1)$$\n\n### 3. Termodinamikanın I Qanunu\nSistemə verilən istilik miqdarı ($Q$) onun daxili enerjisinin dəyişməsinə ($\\\\Delta U$) və xarici cisimlər üzərində iş görməsinə ($A$) sərf olunur:\n$$Q = \\\\Delta U + A$$\n- **İzotermik proses ($T=\\\\text{const}$):** $\\\\Delta U = 0 \\\\implies Q = A$\n- **İzoxor proses ($V=\\\\text{const}$):** $A = 0 \\\\implies Q = \\\\Delta U$\n- **Adiabatik proses ($Q=0$):** $A = -\\\\Delta U$ (istilik mübadiləsi olmadan baş verən proses)\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-p10-t1",
-          "name": "Termodinamikanın I Qanunu",
-          "latex": "Q = \\\\Delta U + A",
-          "description": "Sistemə verilən istiliyin daxili enerjiyə və işə paylanması."
-        },
-        {
-          "id": "f-p10-t2",
-          "name": "Daxili Enerji",
-          "latex": "U = \\\\frac{3}{2} \\\\nu R T",
-          "description": "Biratomlu ideal qazın daxili enerjisi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Adiabatik proses",
-          "definition": "Ətraf mühitlə istilik mübadiləsi olmadan (Q = 0) baş verən termodinamik proses."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p10-t1",
-          "question": "İzoxor qızma zamanı qaza $Q = 500 \\\\text{ C}$ istilik miqdarı verilmişdir. Qazın daxili enerjisi nə qədər dəyişmişdir?",
-          "solution": "İzoxor prosesdə həcm dəyişmədiyi üçün iş görülmür ($A = 0$). Termodinamikanın I qanununa görə: $\\\\Delta U = Q = 500 \\\\text{ C}$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p10-t1",
-          "question": "Ətraf mühitlə heç bir istilik mübadiləsi olmadan ($Q = 0$) baş verən proses necə adlanır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "İzotermik"
-            },
-            {
-              "key": "B",
-              "text": "İzoxor"
-            },
-            {
-              "key": "C",
-              "text": "İzobar"
-            },
-            {
-              "key": "D",
-              "text": "Adiabatik"
-            }
-          ],
-          "correctKey": "D",
-          "explanation": "Q = 0 olan proses adiabatik proses adlanır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-8-classes",
-      "subjectId": "kimya",
-      "grade": 8,
-      "unit": "Qeyri-üzvi Birləşmələrin Əsas Sinifləri",
-      "unitOrder": 2,
-      "title": "Oksidlər, Əsaslar, Turşular və Duzlar",
-      "order": 2,
-      "readTimeMinutes": 11,
-      "difficulty": 2,
-      "summary": "Birləşmələrin təsnifatı, adlandırılması, indikatorların təsiri və neytrallaşma reaksiyaları.",
-      "theoryMarkdown": "\n### 1. Qeyri-üzvi Birləşmələrin 4 Əsas Sinfi\n1. **Oksidlər:** Biri oksigen olan iki elementdən ibarət mürəkkəb maddələr ($CaO, CO_2, SO_3$). Əsasi, turşu və amfoter oksidlərə bölünür.\n2. **Əsaslar:** Metal atomundan və hidroksid ($OH^-$) qrupundan ibarətdir ($NaOH, Ca(OH)_2$). Suda həll olan əsaslara **qələvilər** deyilir (lakmusu göyərir).\n3. **Turşular:** Metal ilə əvəz oluna bilən hidrogen atomundan və turşu qalığından ibarətdir ($HCl, H_2SO_4, HNO_3$). Lakmusu qızardır.\n4. **Duzlar:** Metal atomu və turşu qalığından ibarət maddələr ($NaCl, CaCO_3, CuSO_4$).\n\n### 2. Neytrallaşma Reaksiyası\nTurşu ilə əsasın qarşılıqlı təsirindən duz və suyun yaranması reaksiyasıdır:\n$$\\\\text{Turşu} + \\\\text{Əsas} \\\\to \\\\text{Duz} + \\\\text{Su}$$\n$$HCl + NaOH \\\\to NaCl + H_2O$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-c8-class-1",
-          "name": "Neytrallaşma Reaksiyası",
-          "latex": "H^+ + OH^- \\\\to H_2O",
-          "description": "Turşu və əsasın ion tənliyi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Qələvi",
-          "definition": "Suda yaxşı həll olan qüvvətli əsas (məs: NaOH, KOH, Ba(OH)2)."
-        },
-        {
-          "term": "İndikator",
-          "definition": "Mühitin turşu və ya qələvi olmasından asılı olaraq rəngini dəyişən maddə (lakmus, fenolftalein)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c8-class-1",
-          "question": "$H_2SO_4 + 2KOH \\\\to$ reaksiyasının məhsullarını tamamlayın.",
-          "solution": "Neytrallaşma nəticəsində kalium sulfat duzu və su alınır: $K_2SO_4 + 2H_2O$."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c8-class-1",
-          "question": "Aşağıdakı maddələrdən hansı duzdur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "$CaO$"
-            },
-            {
-              "key": "B",
-              "text": "$HNO_3$"
-            },
-            {
-              "key": "C",
-              "text": "$CaSO_4$"
-            },
-            {
-              "key": "D",
-              "text": "$KOH$"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "CaSO4 metal atomu (Ca) və turşu qalığından (SO4) ibarət olan duzdur."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-11-alkenes",
-      "subjectId": "kimya",
-      "grade": 11,
-      "unit": "Doymamış Karbohidrogenlər",
-      "unitOrder": 1,
-      "title": "Alkenlər: Quruluşu, Xassələri və Polimerləşmə",
-      "order": 1,
-      "readTimeMinutes": 11,
-      "difficulty": 3,
-      "summary": "Etilen sırası ($C_n H_{2n}$), $sp^2$ hibridləşmə, $\\pi$-rabitə, bromlu suyun rəngsizləşməsi və polietilen istehsalı.",
-      "theoryMarkdown": "\n### 1. Alkenlərin Quruluşu\nMolekullarında karbon atomları arasında bir ikiqat rabitə ($-\\\\text{C}=\\\\text{C}-$) olan açıq zəncirli karbohidrogenlərə **alkenlər (olefinlər)** deyilir:\n$$C_n H_{2n} \\\\quad (n \\\\ge 2)$$\nİlk nümayəndəsi: Etilen (eten) - $C_2H_4$ ($CH_2 = CH_2$).\nİkiqat rabitəli karbonlar **$sp^2$ hibridləşmə** vəziyyətindədir. Rabitələrdən biri möhkəm $\\\\sigma$, digəri isə asan qırılan $\\\\pi$-rabitədir. Valent bucağı $120^\\\\circ$-dir.\n\n### 2. Xarakterik Kimyəvi Xassələri\n$\\\\pi$-rabitənin asanlıqla qırılması hesabına alkenlər birləşmə reaksiyalarına çox meyllidir:\n- **Bromlu suyun rəngsizləşməsi (Keyfiyyət reaksiyası):**\n  $$CH_2 = CH_2 + Br_2 \\\\to CH_2Br - CH_2Br \\\\text{ (1,2-dibrometan)}$$\n- **Polimerləşmə reaksiyası (Polietilen alınması):**\n  $$n (CH_2 = CH_2) \\\\xrightarrow{P, t, kat} (-CH_2 - CH_2-)_n$$\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-c11-alk-1",
-          "name": "Alkenlərin Formulu",
-          "latex": "C_n H_{2n} \\\\quad (n \\\\ge 2)",
-          "description": "Bir ikiqat rabitə saxlayan doymamış karbohidrogenlər."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Monomer",
-          "definition": "Polimerləşmə reaksiyasına daxil olan ilkin alçaqmolekullu maddə (məs: etilen)."
-        },
-        {
-          "term": "Polimer",
-          "definition": "Çoxlu sayda monomer manqalarının birləşməsindən yaranan nəhəng makromolekul (məs: polietilen)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c11-alk-1",
-          "question": "Etilenin hidrogenləşməsi ($+ H_2$) nəticəsində hansı maddə alınır?",
-          "solution": "$$CH_2 = CH_2 + H_2 \\\\xrightarrow{Ni, t} CH_3 - CH_3 \\\\text{ (etan)}$$. Doymamış alken doymuş alkana çevrilir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c11-alk-1",
-          "question": "Doymamış karbohidrogenləri təyin etmək üçün hansı məhlulun rəngsizləşməsindən istifadə olunur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Xörək duzu məhlulu"
-            },
-            {
-              "key": "B",
-              "text": "Bromlu su və ya kalium-permanqanat"
-            },
-            {
-              "key": "C",
-              "text": "Əhəng suyu"
-            },
-            {
-              "key": "D",
-              "text": "Distillə suyu"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Bromlu suyun və ya KMnO4 məhlulunun rəngsizləşməsi ikiqat və üçqat rabitənin keyfiyyət reaksiyasıdır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-bio-8-nervous-system",
-      "subjectId": "biologiya",
-      "grade": 8,
-      "unit": "Orqanizmin Tənzimi: Sinir Sistemi",
-      "unitOrder": 2,
-      "title": "Sinir Sistemi və Refleks Qövsü",
-      "order": 2,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Neyronun quruluşu (akson, dendrit), mərkəzi və periferik sinir sistemi, refleks qövsünün 5 həlqəsi.",
-      "theoryMarkdown": "\n### 1. Sinir Toxuması və Neyron\nSinir sisteminin əsas struktur və funksional vahidi **neyrondur** (sinir hüceyrəsi).\nNeyron ibarətdir:\n- **Hüceyrə cismi:** Nüvə və sitoplazmadan ibarətdir.\n- **Dendritlər:** Qısa, ağacvari şaxələnmiş çıxıntılar (oyanmanı qəbul edir).\n- **Akson:** Tək və uzun çıxıntı (oyanmanı digər hüceyrələrə ötürür, üzəri mielin qişası ilə örtülüdür).\n\n### 2. Refleks və Refleks Qövsü\nOrqanizmin mərkəzi sinir sisteminin iştirakı ilə xarici və ya daxili qıcıqlara verdiyi cavab reaksiyasına **refleks** deyilir.\nRefleksin baş verdiyi yol **refleks qövsü** adlanır və 5 həlqədən ibarətdir:\n1. **Reseptor:** Qıcığı qəbul edib sinir impulsuna çevirir.\n2. **Hissiyyat (mərkəzəqaçan) sinir yolu:** İmpulsu MSS-ə daşıyır.\n3. **Mərkəzi sinir şöbəsi (arakəsmə neyron):** Məlumatı təhlil edir.\n4. **Hərəki (mərkəzdənqaçan) sinir yolu:** Əmri işçi orqana çatdırır.\n5. **İşçi orqan (effektor):** Əzələ və ya vəzi cavab reaksiyası verir.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-b8-ref-1",
-          "name": "Refleks Qövsü Sxemi",
-          "latex": "\\\\text{Reseptor} \\\\to \\\\text{Hissi yol} \\\\to \\\\text{Sinir mərkəzi} \\\\to \\\\text{Hərəki yol} \\\\to \\\\text{İşçi orqan}",
-          "description": "Sinir impulsunun 5 ardıcıl həlqəsi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Sinaps",
-          "definition": "İki neyron arasında və ya neyronla əzələ hüceyrəsi arasında sinir impulsunun ötürüldüyü kontakt sahəsi."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-b8-ref-1",
-          "question": "Qaynar çaydana əl toxunduqda dərhal əlin geri çəkilməsi hansı növ refleksə aiddir?",
-          "solution": "Anadangəlmə, qeyri-ixtiyari müdafiə refleksidir (şərtsiz refleks)."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-b8-ref-1",
-          "question": "Neyronda oyanmanı hüceyrə cisminə gətirən qısa çıxıntılar necə adlanır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Akson"
-            },
-            {
-              "key": "B",
-              "text": "Dendrit"
-            },
-            {
-              "key": "C",
-              "text": "Sinaps"
-            },
-            {
-              "key": "D",
-              "text": "Mielin"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Dendritlər qısa şaxəli çıxıntılardır və impulsu hüceyrə cisminə doğru istiqamətləndirir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-geog-6-earth-motions",
-      "subjectId": "cografiya",
-      "grade": 6,
-      "unit": "Kainat və Planetimiz Yer",
-      "unitOrder": 1,
-      "title": "Yer Kürəsinin Hərəkətləri: Gün və Fəsillər",
-      "order": 1,
-      "readTimeMinutes": 8,
-      "difficulty": 1,
-      "summary": "Öz oxu ətrafında sutkalıq fırlanma (24 saat) və Günəş ətrafında illik hərəkət (365 gün 6 saat), fəsillərin yaranması.",
-      "theoryMarkdown": "\n### 1. Yerin Öz Oxu Ətrafında Fırlanması\nYer öz xəyali oxu ətrafında qərbdən şərqə doğru 24 saat (1 sutka) ərzində bir tam dövr edir:\n- Nəticədə **gecə və gündüz** bir-birini əvəz edir.\n- Günəşin səmada görünən hərəkəti (şərqdən çıxıb qərbdə batması) baş verir.\n- Qabarma və çəkilmə ritmləri yaranır.\n\n### 2. Yerin Günəş Ətrafında İllik Hərəkəti\nYer Günəş ətrafında ellips orbit üzrə 365 gün 6 saat ərzində dövr edir:\n- Yerin fırlanma oxu orbit müstəvisinə nəzərən **$66.5^\\\\circ$** meyllidir.\n- Oxun meylliyi səbəbindən il ərzində Günəş şüalarının düşmə bucağı dəyişir və **ilin 4 fəsli** (yaz, yay, payız, qış) yaranır.\n- Əsas tarixlər:\n  - **21 mart:** Yaz gecə-gündüz bərabərliyi\n  - **22 iyun:** Yay günəşduruşu (Şimalda ən uzun gün)\n  - **23 sentyabr:** Payız gecə-gündüz bərabərliyi\n  - **22 dekabr:** Qış günəşduruşu (Şimalda ən qısa gün)\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-g6-1",
-          "name": "Yerin Meyllik Bucağı",
-          "latex": "66.5^\\\\circ \\\\text{ (Orbitə)} \\\\iff 23.5^\\\\circ \\\\text{ (Perpendikulyara)}",
-          "description": "Fəsillərin yaranmasına səbəb olan daimi ox meylliyi."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Gecə-gündüz bərabərliyi",
-          "definition": "Günəş şüalarının ekvatora 90° bucaqla düşdüyü və bütün Yer kürəsində gecə ilə gündüzün bərabər olduğu günlər (21 mart və 23 sentyabr)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-g6-1",
-          "question": "Yerin fırlanma oxu orbit müstəvisinə perpendikulyar ($90^\\\\circ$) olsaydı, nə baş verərdi?",
-          "solution": "Fəsillər yaranmazdı, ilboyu hər bir enlikdə hava şəraiti və gecə-gündüz uzunluğu dəyişməz qalardı."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-g6-1",
-          "question": "Şimal yarımkürəsində ən uzun gün və ən qısa gecə hansı tarixdə müşahidə olunur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "21 mart"
-            },
-            {
-              "key": "B",
-              "text": "22 iyun"
-            },
-            {
-              "key": "C",
-              "text": "23 sentyabr"
-            },
-            {
-              "key": "D",
-              "text": "22 dekabr"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "22 iyun yay günəşduruşu günüdür və Şimal yarımkürəsində ən uzun gündüz qeydə alınır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-hist-8-atabays",
-      "subjectId": "tarix",
-      "grade": 8,
-      "unit": "Azərbaycan İntibah Dövrü Mədəniyyəti",
-      "unitOrder": 1,
-      "title": "Azərbaycan Atabəylər (Eldəgizlər) Dövləti və İntibah",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "Şəmsəddin Eldəgiz, Naxçıvan, Təbriz və Həmədan paytaxtları, memar Əcəmi Naxçıvani və Nizami Gəncəvi irsi.",
-      "theoryMarkdown": "\n### 1. Eldəgizlər Dövlətinin Qurulması (1136–1225)\nXII əsrdə Böyük Səlcuq imperiyasının zəifləməsi nəticəsində Şəmsəddin Eldəgiz tərəfindən **Azərbaycan Atabəylər dövləti** yaradıldı:\n- İdarəetmə mərkəzləri: Naxçıvan, Təbriz və Həmədan şəhərləri.\n- Məhəmməd Cahan Pəhləvan və Qızıl Arslanın dövründə dövlət Yaxın Şərqin ən qüdrətli imperiyasına çevrildi (1191-ci ildə Qızıl Arslan ilk dəfə Sultan titulunu qəbul etdi).\n\n### 2. Azərbaycan İntibah Mədəniyyəti\nXII əsr Azərbaycan mədəniyyətinin \"Qızıl Dövrü\" (İntibah) hesab olunur:\n- **Memarlıq:** Naxçıvan memarlıq məktəbinin banisi **Əcəmi Əbubəkr oğlu Naxçıvani** Möminə Xatun türbəsini (1186) və Yusif ibn Küseyr türbəsini inşa etdi.\n- **Ədəbiyyat:** Dünya poeziyasının dühası **Nizami Gəncəvi** ölməz \"Xəmsə\"sini (\"Sirlər xəzinəsi\", \"Xosrov və Şirin\", \"Leyli və Məcnun\", \"Yeddi gözəl\", \"İsgəndərnamə\") bu dövrdə yaratdı.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-h8-1",
-          "name": "Eldəgizlər Dövrü",
-          "latex": "1136 \\\\to \\\\text{Yaranma}, \\\\quad 1186 \\\\to \\\\text{Möminə Xatun Türbəsi}, \\\\quad 1225 \\\\to \\\\text{Süqut}",
-          "description": "Atabəylər dövlətinin və İntibah memarlığının əsas tarixləri."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Atabəy",
-          "definition": "Səlcuq şahzadələrinin tərbiyəçisi və dövlət canişininə verilən fəxri titul."
-        },
-        {
-          "term": "Xəmsə",
-          "definition": "Nizami Gəncəvinin yaratdığı 5 möhtəşəm poemadan ibarət toplu (beşlik)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-h8-1",
-          "question": "Naxçıvanda yerləşən Möminə Xatun türbəsinin memarı kimdir?",
-          "solution": "Orta əsr Azərbaycan memarlığının dahi sənətkarı Əcəmi Əbubəkr oğlu Naxçıvanidir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-h8-1",
-          "question": "Nizami Gəncəvinin poemalarından ibarət toplu necə adlanır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Divan"
-            },
-            {
-              "key": "B",
-              "text": "Xəmsə"
-            },
-            {
-              "key": "C",
-              "text": "Təzkirə"
-            },
-            {
-              "key": "D",
-              "text": "Siyasətnamə"
-            }
-          ],
-          "correctKey": "B",
-          "explanation": "Nizami Gəncəvinin 5 məşhur poeması birlikdə 'Xəmsə' (Beşlik) adlanır."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-eng-6-adjectives-comparison",
-      "subjectId": "xarici_dil",
-      "grade": 6,
-      "unit": "Grammar: Adjectives & Adverbs",
-      "unitOrder": 1,
-      "title": "Degrees of Comparison of Adjectives (Müqayisə Dərəcələri)",
-      "order": 1,
-      "readTimeMinutes": 8,
-      "difficulty": 1,
-      "summary": "Positive, Comparative (-er / more) and Superlative (-est / the most) degrees, irregular adjectives (good, bad, far).",
-      "theoryMarkdown": "\n### 1. Sifətin 3 Müqayisə Dərəcəsi\n1. **Adi Dərəcə (Positive Degree):** Sifətin ilkin forması (*tall, big, beautiful*).\n2. **Müqayisə Dərəcəsi (Comparative Degree):** İki əşyanı müqayisə edərkən işlənir (adətən *than* ilə):\n   - Qısa (təkhecalı) sifətlər: **-er** şəkilçisi qəbul edir (*taller, faster, bigger*).\n   - Çoxhecalı sifətlər: qarşısına **more** artırılır (*more beautiful, more interesting*).\n3. **Üstünlük Dərəcəsi (Superlative Degree):** Bir əşyanı qrupdakı hamısından üstün tutarkən (qarşısında həmişə *the* artikli olur):\n   - Qısa sifətlər: **the ... -est** (*the tallest, the fastest*).\n   - Çoxhecalı sifətlər: **the most ...** (*the most beautiful*).\n\n### 2. Qaydasız Sifətlər (Irregular Adjectives)\n- **good** $\\\\to$ **better** $\\\\to$ **the best** (yaxşı - daha yaxşı - ən yaxşı)\n- **bad** $\\\\to$ **worse** $\\\\to$ **the worst** (pis - daha pis - ən pis)\n- **little** $\\\\to$ **less** $\\\\to$ **the least** (az - daha az - ən az)\n- **many / much** $\\\\to$ **more** $\\\\to$ **the most** (çox)\n- **far** $\\\\to$ **farther / further** $\\\\to$ **the farthest / furthest** (uzaq)\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-e6-adj-1",
-          "name": "Comparative Formula",
-          "latex": "\\\\text{Adj} + \\\\text{er than} \\\\quad \\\\text{or} \\\\quad \\\\text{more } \\\\text{Adj than}",
-          "description": "İki obyekti müqayisə etmək üçün."
-        },
-        {
-          "id": "f-e6-adj-2",
-          "name": "Superlative Formula",
-          "latex": "\\\\text{the } \\\\text{Adj} + \\\\text{est} \\\\quad \\\\text{or} \\\\quad \\\\text{the most } \\\\text{Adj}",
-          "description": "Qrupda ən üstün əlaməti bildirmək üçün."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "Comparative",
-          "definition": "Müqayisə dərəcəsi (-er / more)."
-        },
-        {
-          "term": "Superlative",
-          "definition": "Üstünlük dərəcəsi (the -est / the most)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-e6-adj-1",
-          "question": "\"Baku is ____ (large) than Ganja.\" Boşluğu düzgün forma ilə doldurun.",
-          "solution": "\"than\" olduğu üçün müqayisə dərəcəsi tələb olunur: \"larger\"."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-e6-adj-1",
-          "question": "What is the superlative degree of 'good'?",
-          "options": [
-            {
-              "key": "A",
-              "text": "gooder"
-            },
-            {
-              "key": "B",
-              "text": "better"
-            },
-            {
-              "key": "C",
-              "text": "the best"
-            },
-            {
-              "key": "D",
-              "text": "the most good"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "'Good' qaydasız sifətdir, üstünlük dərəcəsi 'the best'-dir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-inf-7-algorithms-flowchart",
-      "subjectId": "informatika",
-      "grade": 7,
-      "unit": "Alqoritmləşdirmənin Əsasları",
-      "unitOrder": 1,
-      "title": "Alqoritmin Növləri və Blok-Sxem Təsviri",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "Məsələnin həlli ardıcıllığı, xassələri (diskretlik, müəyyənlik, kütləvilik, nəticəvilik) və blok fiqurları.",
-      "theoryMarkdown": "\n### 1. Alqoritm Nədir?\nQarşıya qoyulmuş məqsədə çatmaq üçün icraçıya verilən sonlu sayda dəqiq əmrlər ardıcıllığına **alqoritm** deyilir.\nAlqoritmin 4 əsas xassəsi var:\n1. **Müəyyənlik:** Hər bir əmr birmənalı və aydın başa düşülməlidir.\n2. **Diskretlik:** Mürəkkəb proses ayrı-ayrı sadə addımlara bölünməlidir.\n3. **Nəticəvilik:** Sonlu sayda addımdan sonra mütləq nəticə əldə olunmalıdır.\n4. **Kütləvilik:** Eyni tipli bütün məsələlərin həlli üçün yararlı olmalıdır.\n\n### 2. Blok-Sxem Quruluşu\nAlqoritmin qrafik fiqurlarla təsvirinə **blok-sxem** deyilir:\n- **Oval (Ellips):** Alqoritmin *Başlanğıcı* və *Sonu*.\n- **Paraleloqram:** İlkin verilənlərin *Daxil edilməsi* və nəticənin *Çıxarılması*.\n- **Düzbucaqlı:** Hesablama əməliyyatları və düsturlar (*İcra bloku*).\n- **Romb:** Şərtin yoxlanması (*Budaqlanma bloku*: \"Hə\" və ya \"Yox\").\n\n### 3. Alqoritmin 3 Əsas Növü\n- **Xətti:** Əmrlər heç bir şərt olmadan ardıcıl yerinə yetirilir.\n- **Budaqlanan:** Müəyyən şərtdən asılı olaraq yollardan biri seçilir.\n- **Dövri:** Eyni əmrlər bloku bir neçə dəfə təkrar icra olunur.\n    ",
-      "keyFormulas": [
-        {
-          "id": "f-inf7-1",
-          "name": "Alqoritm Növləri",
-          "latex": "\\\\text{Xətti} \\\\to \\\\text{Budaqlanan (Şərt)} \\\\to \\\\text{Dövri (Təkrarlanma)}",
-          "description": "Kompüter elmlərində alqoritmlərin 3 baza strukturu."
-        }
-      ],
-      "glossary": [
-        {
-          "term": "İcraçı",
-          "definition": "Alqoritmi yerinə yetirməyə qadir olan subyekt (insan, kompüter, robot)."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-inf7-1",
-          "question": "Blok-sxemdə şərtin yoxlanması hansı həndəsi fiqurla təsvir olunur?",
-          "solution": "Şərtin yoxlanması və budaqlanma prosesi romb fiquru vasitəsilə təsvir edilir."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-inf7-1",
-          "question": "Alqoritmin sonlu sayda addımdan sonra mütləq nəticə verməsi hansı xassədir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Diskretlik"
-            },
-            {
-              "key": "B",
-              "text": "Kütləvilik"
-            },
-            {
-              "key": "C",
-              "text": "Nəticəvilik"
-            },
-            {
-              "key": "D",
-              "text": "Müəyyənlik"
-            }
-          ],
-          "correctKey": "C",
-          "explanation": "Alqoritmin sona çataraq nəticə verməsi nəticəvilik xassəsidir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-11-photoelectric",
-      "subjectId": "fizika",
-      "grade": 11,
-      "unit": "Kvant Fizikası və Optika",
-      "unitOrder": 3,
-      "title": "İşıq Kvantları və Fotoeffekt Hadisəsi",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Plank hipotezi, fotonun enerjisi və impulsu, Eynşteynin fotoeffekt tənliyi, qırmızı sərhəd.",
-      "theoryMarkdown": "\n### 1. Kvant Hipotezi və Foton\n1900-cü ildə Maks Plank göstərdi ki, işıq fasiləsiz dalğa kimi deyil, diskret porsiyalarla — **kvantlarla (fotonlarla)** şüalanır və udulur:\n$$E = h\\nu = \\frac{hc}{\\lambda}$$\nBurada $h \\approx 6.63 \\cdot 10^{-34} \\text{ C}\\cdot\\text{san}$ — Plank sabitidir.\n\nFoton sükunət kütləsinə malik deyil ($m_0 = 0$), lakin enerji və impulsa malikdir:\n$$p = \\frac{h}{\\lambda} = \\frac{E}{c}$$\n\n### 2. Xarici Fotoeffekt və Eynşteyn Tənliyi\nİşığın təsiri ilə maddədən elektronların qopması hadisəsinə **xarici fotoeffekt** deyilir. \nEnerjinin saxlanması qanununa əsaslanan **Eynşteyn tənliyi**:\n$$h\\nu = A_{cix} + \\frac{mv_{max}^2}{2}$$\n\n- $h\\nu$ — düşən fotonun enerjisi\n- $A_{cix}$ — elektrona maddəni tərk etməsi üçün tələb olunan **çıxış işi**\n- $\\frac{mv_{max}^2}{2} = eU_l$ — qopan fotoelektronların maksimal kinetik enerjisi ($U_l$ — ləngidici gərginlik).\n\n### 3. Fotoeffektin Qırmızı Sərhədi\nFotoeffektin baş verməsi üçün minimal tezlik (və maksimal dalğa uzunluğu):\n$$\\nu_{min} = \\frac{A_{cix}}{h}, \\quad \\lambda_{max} = \\frac{hc}{A_{cix}}$$\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-p11-pe-1",
-          "name": "Eynşteynin Fotoeffekt Tənliyi",
-          "latex": "h\\nu = A_{cix} + E_k",
-          "description": "Foton enerjisi çıxış işi və kinetik enerjiyə sərf olunur."
-        },
-        {
-          "id": "f-p11-pe-2",
-          "name": "Fotonun İmpulsu",
-          "latex": "p = \\frac{h}{\\lambda}",
-          "description": "İmpuls və dalğa uzunluğu arasındakı de Broyl asılılığı."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p11-pe-1",
-          "title": "Misal: Fotoelektronların maksimal kinetik enerjisi",
-          "problem": "Metal üçün çıxış işi $A_{cix} = 2.5 \\text{ eV}$-dir. Enerjisi $4.0 \\text{ eV}$ olan foton düşdükdə qopan elektronların maksimal kinetik enerjisini tapın.",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Eynşteyn düsturunun tətbiqi",
-              "content": "$$E_k = h\\nu - A_{cix}$$"
-            },
-            {
-              "stepNumber": 2,
-              "title": "Hesablama",
-              "content": "$$E_k = 4.0 \\text{ eV} - 2.5 \\text{ eV} = 1.5 \\text{ eV}$$"
-            }
-          ],
-          "finalAnswer": "$1.5 \\text{ eV}$"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p11-pe-1",
-          "question": "Fotonun enerjisi hansı kəmiyyətdən xətti asılıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Rəqs tezliyindən (nu)"
-            },
-            {
-              "key": "B",
-              "text": "Dalğa uzunluğundan"
-            },
-            {
-              "key": "C",
-              "text": "İşığın intensivliyindən"
-            },
-            {
-              "key": "D",
-              "text": "Sürətin kvadratından"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "E = h * nu düsturuna əsasən foton enerjisi birbaşa tezliklə mütənasibdir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-phys-10-ideal-gas-laws",
-      "subjectId": "fizika",
-      "grade": 10,
-      "unit": "Molekulyar Fizika və Termodinamika",
-      "unitOrder": 2,
-      "title": "İdeal Qaz Qanunları və İzoproseslər",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "Mendeleyev-Klapeyron tənliyi, Boyl-Mariott, Şarl və Gey-Lüssak qanunları və qrafikləri.",
-      "theoryMarkdown": "\n### 1. İdeal Qaz Hal Tənliyi (Mendeleyev-Klapeyron)\nMolekulları arasındakı qarşılıqlı təsir qüvvələri nəzərə alınmayan və zərbələri mütləq elastik olan qaz **ideal qaz** adlanır:\n$$PV = \\nu RT = \\frac{m}{M} RT$$\nBurada $R \\approx 8.31 \\frac{\\text{C}}{\\text{mol}\\cdot\\text{K}}$ — universal qaz sabitidir, $T$ — Kelvin şkalasında mütləq temperaturdur ($T = t^\\circ \\text{C} + 273$).\n\n### 2. İzoproseslər\nQazın kütləsi sabit qaldıqda ($m = \\text{const}$):\n1. **İzotermik proses** ($T = \\text{const}$, Boyl-Mariott qanunu):\n   $$P \\cdot V = \\text{const} \\implies P_1V_1 = P_2V_2$$\n   Qrafiki $P(V)$ koordinatında **hiperboladır**.\n2. **İzobarik proses** ($P = \\text{const}$, Gey-Lüssak qanunu):\n   $$\\frac{V}{T} = \\text{const} \\implies \\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$\n3. **İzooxorik proses** ($V = \\text{const}$, Şarl qanunu):\n   $$\\frac{P}{T} = \\text{const} \\implies \\frac{P_1}{T_1} = \\frac{P_2}{T_2}$$\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-p10-gas-1",
-          "name": "Mendeleyev-Klapeyron Tənliyi",
-          "latex": "PV = \\frac{m}{M}RT",
-          "description": "İdeal qazın təzyiqi, həcmi və temperaturu arasındakı əsas əlaqə."
-        },
-        {
-          "id": "f-p10-gas-2",
-          "name": "Boyl-Mariott Qanunu",
-          "latex": "P_1V_1 = P_2V_2 \\quad (T = \\text{const})",
-          "description": "Sabit temperaturda təzyiq həcmlə tərs mütənasibdir."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-p10-gas-1",
-          "title": "Misal: İzotermik sıxılma",
-          "problem": "Sabit temperaturda qazın həcmini 4 litrdən 2 litrə qədər azaltdıqda təzyiq necə dəyişər?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Boyl-Mariott qanununun tətbiqi",
-              "content": "$$P_1 \\cdot V_1 = P_2 \\cdot V_2 \\implies P_2 = P_1 \\cdot \\frac{V_1}{V_2}$$"
-            },
-            {
-              "stepNumber": 2,
-              "title": "Nəticə",
-              "content": "$$P_2 = P_1 \\cdot \\frac{4}{2} = 2P_1$$ Təzyiq 2 dəfə artar."
-            }
-          ],
-          "finalAnswer": "Təzyiq 2 dəfə artar"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-p10-gas-1",
-          "question": "Həcmin sabit qaldığı proses necə adlanır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "İzooxorik"
-            },
-            {
-              "key": "B",
-              "text": "İzobarik"
-            },
-            {
-              "key": "C",
-              "text": "İzotermik"
-            },
-            {
-              "key": "D",
-              "text": "Adiabatik"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "V = const prosesinə izooxorik proses deyilir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-10-alkanes",
-      "subjectId": "kimya",
-      "grade": 10,
-      "unit": "Üzvi Kimya: Karbohidrogenlər",
-      "unitOrder": 2,
-      "title": "Doymuş Karbohidrogenlər: Alkanlar",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "Ümumi formula CnH2n+2, sp3 hibridləşməsi, IUPAC nomenklaturası və radikal əvəzetmə reaksiyaları.",
-      "theoryMarkdown": "\n### 1. Alkanların Quruluşu və Homoloji Sırası\nMolekulunda karbon atomları arasında yalnız tək (birqat $\\sigma$) rabitələr olan açıq zəncirli karbohidrogenlərə **alkanlar (parafinlər)** deyilir.\n- Ümumi formulu: **$C_nH_{2n+2}$** ($n \\ge 1$)\n- Karbon atomlarının hibridləşmə vəziyyəti: **$sp^3$**\n- Valent bucağı: **$109^\\circ 28'$**\n- Karbon-karbon rabitə uzunluğu: **$0.154 \\text{ nm}$**\n\nIlk 4 nümayəndə:\n- $CH_4$ — Metan\n- $C_2H_6$ — Etan\n- $C_3H_8$ — Propan\n- $C_4H_{10}$ — Butan\n\n### 2. Kimyəvi Xassələri\nAlkanlar kimyəvi cəhətdən passivdir (birləşmə reaksiyasına girmirlər):\n1. **Əvəzetmə (Xlorlaşma)** — sərbəst radikal mexanizmi ilə ($h\\nu$ işıq təsiri ilə):\n   $$CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$$\n2. **Yanma**:\n   $$C_nH_{2n+2} + \\frac{3n+1}{2}O_2 \\to nCO_2 + (n+1)H_2O + Q$$\n3. **Dehidrogenləşmə** (hidrogen ayrılması):\n   $$C_2H_6 \\xrightarrow{t, Ni} C_2H_4 + H_2$$\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-c10-alk-1",
-          "name": "Alkanların Ümumi Formulu",
-          "latex": "C_nH_{2n+2}",
-          "description": "Doymuş alifatik karbohidrogenlər üçün ümumi tərkib."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c10-alk-1",
-          "title": "Misal: 5 karbonlu alkanın molyar kütləsi",
-          "problem": "$n = 5$ olan alkanın (pentan) formulunu və molyar kütləsini tapın ($A_r(C)=12, A_r(H)=1$).",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Formulun müəyyən edilməsi",
-              "content": "$$C_5H_{2 \\cdot 5 + 2} = C_5H_{12}$$"
-            },
-            {
-              "stepNumber": 2,
-              "title": "Molyar kütlə",
-              "content": "$$M(C_5H_{12}) = 5 \\cdot 12 + 12 \\cdot 1 = 60 + 12 = 72 \\text{ q/mol}$$"
-            }
-          ],
-          "finalAnswer": "C5H12, M = 72 q/mol"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c10-alk-1",
-          "question": "Alkanlarda karbon atomları hansı hibrid vəziyyətindədir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "sp3"
-            },
-            {
-              "key": "B",
-              "text": "sp2"
-            },
-            {
-              "key": "C",
-              "text": "sp"
-            },
-            {
-              "key": "D",
-              "text": "sp3d"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Alkanların bütün karbon atomları sp3 hibridləşməsindədir və bucaq 109°28'-dir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-chem-9-solutions",
-      "subjectId": "kimya",
-      "grade": 9,
-      "unit": "Məhlullar və Həllolma",
-      "unitOrder": 2,
-      "title": "Məhlulların Qatılığı və Kütlə Payı",
-      "order": 1,
-      "readTimeMinutes": 8,
-      "difficulty": 2,
-      "summary": "Həllolma əmsalı, həll olan maddənin kütlə payı (faiz qatılığı) və məhlulların qarışdırılması.",
-      "theoryMarkdown": "\n### 1. Məhlul Anlayışı\nMəhlul — həlledici, həll olan maddə və onların qarşılıqlı təsir məhsullarından ibarət **bircinsli (homogen)** sistemdir.\n\nMəhlulun kütləsi:\n$$m_{meh} = m_{mad} + m_{su}$$\n\n### 2. Həll Olan Maddənin Kütlə Payı (Faiz Qatılığı)\nHəll olan maddə kütləsinin ümumi məhlul kütləsinə nisbətinin faizlə ifadəsinə **kütlə payı ($\\omega$)** deyilir:\n$$\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\% = \\frac{m_{mad}}{m_{mad} + m_{su}} \\cdot 100\\%$$\n\n### 3. Məhlulların Qarışdırılması Qaydası\nİki məhlul qarışdırıldıqda alınan yeni qatılıq:\n$$\\omega_{son} = \\frac{m_1\\omega_1 + m_2\\omega_2}{m_1 + m_2}$$\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-c9-sol-1",
-          "name": "Kütlə Payı Düsturu",
-          "latex": "\\omega = \\frac{m_{mad}}{m_{meh}} \\cdot 100\\%",
-          "description": "Maddə kütləsinin məhlul kütləsinə nisbəti."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-c9-sol-1",
-          "title": "Misal: Duzlu suyun faiz qatılığı",
-          "problem": "30 qram xörək duzunu 120 qram suda həll etdikdə alınan məhlulun faiz qatılığını tapın.",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Ümumi məhlul kütləsi",
-              "content": "$$m_{meh} = 30 + 120 = 150 \\text{ q}$$"
-            },
-            {
-              "stepNumber": 2,
-              "title": "Kütlə payı",
-              "content": "$$\\omega = \\frac{30}{150} \\cdot 100\\% = \\frac{1}{5} \\cdot 100\\% = 20\\%$$"
-            }
-          ],
-          "finalAnswer": "20%"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-c9-sol-1",
-          "question": "100 q 10%-li məhlulda neçə qram həll olan maddə var?",
-          "options": [
-            {
-              "key": "A",
-              "text": "10 q"
-            },
-            {
-              "key": "B",
-              "text": "90 q"
-            },
-            {
-              "key": "C",
-              "text": "1 q"
-            },
-            {
-              "key": "D",
-              "text": "20 q"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "m = 100 * 0.10 = 10 qram."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-bio-10-protein-synthesis",
-      "subjectId": "biologiya",
-      "grade": 10,
-      "unit": "Hüceyrənin Molekulyar Biologiyası",
-      "unitOrder": 2,
-      "title": "Zülalların Biosintezi və Genetik Kod",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Transkripsiya, m-RNT, t-RNT, kodon-antikodon qarşılıqlı təsiri və ribosomda translyasiya mərhələsi.",
-      "theoryMarkdown": "\n### 1. Genetik Kodun Xassələri\nGenetik informasiya DNT molekulunda nukleotid ardıcıllığı şəklində yazılmışdır:\n1. **Tripletlik**: Hər bir aminturşunu 3 nukleotid (1 kodon) kodlaşdırır. Məsələn: $AUG$ — Metionin və start kodondur.\n2. **Cırlaşmışlıq (artıqlıq)**: 20 aminturşunu 61 mənalı kodon kodlaşdırır (bəzi aminturşular bir neçə kodonla kodlanır).\n3. **Stop kodonlar**: $UAA, UAG, UGA$ zülal sintezini dayandırır.\n4. **Universallıq**: Genetik kod yerdəki bütün canlılar üçün eynidir.\n\n### 2. Transkripsiya (Nüvədə)\nRNT-polimeraza fermenti vasitəsilə DNT matrisindən məlumat RNT-sinin (m-RNT) sintez olunması prosesidir:\n$$A \\to U, \\quad T \\to A, \\quad G \\to C, \\quad C \\to G$$\n\n### 3. Translyasiya (Sitoplazmada və Ribosomda)\nm-RNT ribosomun kiçik və böyük hissəcikləri arasına daxil olur. Nəqliyyat RNT-ləri (t-RNT) aminturşuları ribosomun funksional mərkəzinə gətirir. Kodon və antikodon komplementar birləşdikdə aminturşular arasında **peptid rabitəsi** yaranır və polipeptid zənciri uzanır.\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-b10-prot-1",
-          "name": "Nukleotid və Aminturşu Əlaqəsi",
-          "latex": "N_{nukleotid} = 3 \\cdot N_{amintursu}",
-          "description": "1 aminturşuya 1 triplet (3 nukleotid) uyğundur."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-b10-prot-1",
-          "title": "Misal: 90 nukleotidlik m-RNT",
-          "problem": "90 nukleotiddən ibarət m-RNT zəncirinin kodlaşdırdığı zülal neçə aminturşudan ibarət olar (stop kodon nəzərə alınmır)?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Triplet qaydası",
-              "content": "$$N_{amintursu} = \\frac{90}{3} = 30$$"
-            }
-          ],
-          "finalAnswer": "30 aminturşu"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-b10-prot-1",
-          "question": "Zülal biosintezinin bilavasitə getdiyi hüceyrə orqanoidi hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Ribosom"
-            },
-            {
-              "key": "B",
-              "text": "Lizosom"
-            },
-            {
-              "key": "C",
-              "text": "Qolci kompleksi"
-            },
-            {
-              "key": "D",
-              "text": "Vakuol"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Zülal translyasiyası sitoplazmada yerləşən ribosomlarda baş verir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-bio-11-evolution",
-      "subjectId": "biologiya",
-      "grade": 11,
-      "unit": "Ümumi Biologiya: Təkamül Təlimi",
-      "unitOrder": 2,
-      "title": "Çarlz Darvinin Təkamül Nəzəriyyəsi və Təbii Seçmə",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "İrsi dəyişkənlik, yaşamaq uğrunda mübarizə, təbii seçmə və adaptasiyaların yaranması.",
-      "theoryMarkdown": "\n### 1. Darvinizmin Hərəkətverici Qüvvələri\n1859-cu ildə Çarlz Darvin 'Növlərin Mənşəyi' əsərində üzvi aləmin təkamülünün əsas amillərini göstərdi:\n1. **İrsi dəyişkənlik (Mutasiyalar və kombinativ)**: Nəsildən-nəslə ötürülən fərdi fərqlər.\n2. **Yaşamaq uğrunda mübarizə**:\n   - *Növdaxili*: Ən kəskin mübarizə formasıdır (eyni qida və yaşayış sahəsi uğrunda).\n   - *Növlərarası*: Yırtıcı-şikar, rəqabət münasibətləri.\n   - *Əlverişsiz mühit şəraitinə qarşı*: Quraqlıq, şaxta və s.\n3. **Təbii seçmə**: Mühit şəraitinə daha yaxşı uyğunlaşan fərdlərin sağ qalaraq nəsil verməsi, uyğunlaşmayanların isə sıradan çıxması prosesidir.\n\n### 2. Uyğunlaşmaların Nisbi Xarakteri\nHər hansı bir adaptasiya yalnız müəyyən konkret mühit şəraitində faydalıdır. Mühit dəyişdikdə həmin əlamət zərərli və ya neytral ola bilər (məsələn, qarın əriməsi zamanı ağ kəkliyin ağ rəngi yırtıcılar üçün onu aşkar edir).\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-b11-evo-1",
-          "name": "Təkamülün Əsas Triadası",
-          "latex": "\\text{İrsi Dəyişkənlik} + \\text{Mübarizə} \\implies \\text{Təbii Seçmə}",
-          "description": "Darvinə görə növlərin təkamül dinamikası."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-b11-evo-1",
-          "title": "Misal: Növdaxili mübarizə",
-          "problem": "Niyə növdaxili mübarizə növlərarası mübarizədən daha kəskin xarakter daşıyır?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Tələbatların eyniliyi",
-              "content": "Eyni növə aid fərdlərin qida mənbəyi, yaşayış ərazisi və çoxalma tərəfdaşı tam eynidir."
-            }
-          ],
-          "finalAnswer": "Fərdlərin eyni həyati ehtiyaclar uğrunda rəqabət aparması səbəbindən"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-b11-evo-1",
-          "question": "Təkamülün ən əsas yönəldici amili hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Təbii seçmə"
-            },
-            {
-              "key": "B",
-              "text": "Modifikasiya dəyişkənliyi"
-            },
-            {
-              "key": "C",
-              "text": "Süni seçmə"
-            },
-            {
-              "key": "D",
-              "text": "Populyasiya dalğaları"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Təkamülü müəyyən istiqamətə yönəldən yeganə amil təbii seçmədir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-inf-10-algorithms",
-      "subjectId": "informatika",
-      "grade": 10,
-      "unit": "Alqoritmləşdirmə və Proqramlaşdırma",
-      "unitOrder": 2,
-      "title": "Axtarış və Çeşidləmə Alqoritmləri (Python)",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 3,
-      "summary": "Xətti və ikilik (binary) axtarış, Bubble sort çeşidləməsi, asimptotik zaman mürəkkəbliyi O(n) və O(log n).",
-      "theoryMarkdown": "\n### 1. İkilik Axtarış (Binary Search)\nYalnız **çeşidlənmiş (sıralanmış)** massivlərdə işləyən ən sürətli axtarış alqoritmidir. Hər addımda axtarış sahəsini yarıya bölür:\n- Zaman mürəkkəbliyi: **$O(\\log_2 n)$**\n\n```python\ndef binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```\n\n### 2. Qabarcıqlı Çeşidləmə (Bubble Sort)\nQonşu elementləri ardıcıl müqayisə edərək böyüyü sağa doğru 'üzdürən' sadə çeşidləmə üsuludur:\n- Zaman mürəkkəbliyi: **$O(n^2)$**\n\n```python\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n```\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-i10-alg-1",
-          "name": "İkilik Axtarış Addım Sayı",
-          "latex": "k = \\lceil \\log_2 n \\rceil",
-          "description": "n elementli massivdə ən pis halda maksimum müqayisə sayı."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-i10-alg-1",
-          "title": "Misal: 1024 elementli massivdə ikilik axtarış",
-          "problem": "1024 elementdən ibarət sıralanmış siyahıda axtarılan ədədi tapmaq üçün ən çox neçə müqayisə tələb olunar?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Loqarifmik hesablama",
-              "content": "$$\\log_2(1024) = 10$$"
-            }
-          ],
-          "finalAnswer": "Maksimum 10 müqayisə"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-i10-alg-1",
-          "question": "İkilik axtarışın (Binary Search) işləməsi üçün əsas şərt nədir?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Siyahının sıralanmış (çeşidlənmiş) olması"
-            },
-            {
-              "key": "B",
-              "text": "Bütün elementlərin cüt ədəd olması"
-            },
-            {
-              "key": "C",
-              "text": "Siyahının ölçüsünün 10-dan kiçik olması"
-            },
-            {
-              "key": "D",
-              "text": "Yalnız mənfi ədədlərdən ibarət olması"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Binary search yalnız əvvəlcədən nizamlanmış massivdə işləyə bilər."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-geo-10-economic-regions",
-      "subjectId": "cografiya",
-      "grade": 10,
-      "unit": "Azərbaycanın İqtisadi Coğrafiyası",
-      "unitOrder": 2,
-      "title": "Azərbaycanın Yeni İqtisadi Rayonları və Təbii Ehtiyatları",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "14 iqtisadi rayon bölgüsü, Qarabağ və Şərqi Zəngəzurun bərpası, faydalı qazıntılar və aqroiqlim potensialı.",
-      "theoryMarkdown": "\n### 1. Yeni İqtisadi Bölgü (7 İyul 2021 Fərmanı)\nAzərbaycan Respublikası Prezidentinin 2021-ci il 7 iyul tarixli fərmanı ilə ölkəmiz **14 iqtisadi rayona** bölünmüşdür:\n1. **Bakı** (neft-qaz sənayesi, xidmət sektoru)\n2. **Abşeron-Xızı** (kimya, maşınqayırma, quşçuluq)\n3. **Qarabağ** (tikinti materialları, turizm, kənd təsərrüfatı — taxılçılıq və üzümçülük)\n4. **Şərqi Zəngəzur** (qızıl, civə, polimetal ehtiyatları, hidroenergetika, yaylaq heyvandarlığı)\n5. **Gəncə-Daşkəsən** (dəmir filizi, alunit, əlvan metallurgiya)\n6. **Qazax-Tovuz** (üzümçülük, bağçılıq, şərabçılıq)\n7. **Şəki-Zaqatala** (fındıqçılıq, tütünçülük, ipəkçilik, meşə ehtiyatları)\n8. **Quba-Xaçmaz** (meyvəçilik, tərəvəzçilik, neft emalı)\n9. **Mərkəzi Aran** (pambıqçılıq, taxılçılıq, meliorasiya qovşağı)\n10. **Mil-Muğan**, 11. **Şirvan-Salyan**\n12. **Lənkəran-Astara** (sitrusçuluq, çayçılıq, çəltikçilik)\n13. **Dağlıq Şirvan** (şərabçılıq, arıçılıq)\n14. **Naxçıvan** (duz mədənləri, mineral sular, sement, günəş enerjisi)\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-g10-reg-1",
-          "name": "İqtisadi İxtisaslaşma Əmsalı",
-          "latex": "K_i = \\frac{E_r / E_o}{Ü_r / Ü_o}",
-          "description": "Rayonun milli iqtisadiyyatda ixtisaslaşma dərəcəsini müəyyən edən indeks."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-g10-reg-1",
-          "title": "Misal: Daşkəsən dəmir filizi",
-          "problem": "Azərbaycanın yeganə sənaye əhəmiyyətli dəmir filizi yatağı hansı iqtisadi rayonda yerləşir?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Coğrafi yerləşmə",
-              "content": "Daşkəsən yatağı Gəncə-Daşkəsən iqtisadi rayonunun ərazisində yerləşir."
-            }
-          ],
-          "finalAnswer": "Gəncə-Daşkəsən iqtisadi rayonu"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-g10-reg-1",
-          "question": "Azərbaycanda çayçılıq və sitrusçuluq üzrə ixtisaslaşmış iqtisadi rayon hansıdır?",
-          "options": [
-            {
-              "key": "A",
-              "text": "Lənkəran-Astara"
-            },
-            {
-              "key": "B",
-              "text": "Quba-Xaçmaz"
-            },
-            {
-              "key": "C",
-              "text": "Mərkəzi Aran"
-            },
-            {
-              "key": "D",
-              "text": "Naxçıvan"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Rütubətli subtropik iqlimə malik Lənkəran-Astara rayonunda sitrus meyvələri və çay becərilir."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-hist-10-safavids",
-      "subjectId": "tarix",
-      "grade": 10,
-      "unit": "Azərbaycan Orta Əsrlərdə",
-      "unitOrder": 2,
-      "title": "Səfəvilər Dövlətinin Yaranması və Şah İsmayıl Xətai",
-      "order": 1,
-      "readTimeMinutes": 10,
-      "difficulty": 2,
-      "summary": "1501-ci il Təbriz tacqoyması, Azərbaycan torpaqlarının vahid dövlətdə birləşdirilməsi və Çaldıran döyüşü.",
-      "theoryMarkdown": "\n### 1. Dövlətin Yaranması (1501)\nXV əsrin sonunda Ərdəbil hakimi İsmayıl Səfəvi qızılbaş tayfalarının dəstəyi ilə hərbi yürüşlərə başladı:\n- **1500-cü il**: Cabanı döyüşündə Şirvanşah Fərrux Yasar məğlub edildi.\n- **1501-ci il**: Şərur döyüşündə Ağqoyunlu Əlvənd Mirzə məğlub edildi. İsmayıl Təbrizə daxil olaraq özünü Şah elan etdi. Beləliklə, paytaxtı Təbriz olan vahid **Azərbaycan Səfəvi Dövləti** yarandı.\n- **Dövlət dili**: Azərbaycan türk dili ilk dəfə sarayda, orduda və diplomatik yazışmalarda rəsmi dövlət dili səviyyəsinə yüksəldi.\n\n### 2. Azərbaycan Torpaqlarının Birləşdirilməsi\n- **1503-cü il**: Almaqulağı döyüşündə Ağqoyunlu Murad Mirzə məğlub edildi və ikinci Ağqoyunlu qolu süqut etdi.\n- **1510-cu il**: Mərv döyüşündə Şeybani xanın qoşunları darmadağın edildi, Xorasan Səfəvilərə qatıldı.\n\n### 3. Çaldıran Döyüşü (1514)\n23 avqust 1514-cü ildə Osmanlı sultanı I Səlim ilə Şah İsmayıl arasında Çaldıran düzündə qanlı döyüş baş verdi. Osmanlı ordusunun sayca üstünlüyü və 300 topdan ibarət odlu silah üstünlüyü nəticəsində Səfəvilər məğlub oldu.\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-h10-saf-1",
-          "name": "Əsas Tarixi Xronologiya",
-          "latex": "1500 (\\text{Cabanı}) \\to 1501 (\\text{Təbriz}) \\to 1510 (\\text{Mərv}) \\to 1514 (\\text{Çaldıran})",
-          "description": "Şah İsmayılın əsas döyüşləri və dövlət quruculuğu mərhələləri."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-h10-saf-1",
-          "title": "Misal: Səfəvilər dövlətinin ilk paytaxtı",
-          "problem": "Səfəvilər dövlətinin 1501-1555-ci illərdə paytaxtı hansı şəhər olmuşdur?",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Paytaxt xronologiyası",
-              "content": "İlk paytaxt Təbriz olmuş, 1555-ci ildə Şah Təhmasib paytaxtı Qəzvinə, 1598-ci ildə I Şah Abbas İsfahana köçürmüşdür."
-            }
-          ],
-          "finalAnswer": "Təbriz"
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-h10-saf-1",
-          "question": "Səfəvilər dövlətinin əsası neçənci ildə və harada qoyulmuşdur?",
-          "options": [
-            {
-              "key": "A",
-              "text": "1501-ci ildə Təbrizdə"
-            },
-            {
-              "key": "B",
-              "text": "1468-ci ildə Ərdəbildə"
-            },
-            {
-              "key": "C",
-              "text": "1514-cü ildə Çaldıranda"
-            },
-            {
-              "key": "D",
-              "text": "1555-ci ildə Amasiyada"
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "1501-ci ildə Şah İsmayıl Təbrizdə taxta çıxaraq dövlətin əsasını qoymuşdur."
-        }
-      ]
-    },
-
-  {
-      "id": "lesson-eng-10-conditionals",
-      subjectId: 'xarici_dil',
-      "grade": 10,
-      "unit": "Advanced English Grammar",
-      "unitOrder": 2,
-      "title": "Conditionals (Type 0, 1, 2, 3) & Mixed Conditionals",
-      "order": 1,
-      "readTimeMinutes": 9,
-      "difficulty": 2,
-      "summary": "Real və qeyri-real şərt budaq cümlələrinin zaman formaları və cümlədə işlənmə qaydaları.",
-      "theoryMarkdown": "\n### 1. Types of Conditional Sentences\nConditionals consist of an **If-clause** (condition) and a **Main clause** (result):\n\n| Type | Meaning | If-clause | Main clause | Example |\n|---|---|---|---|---|\n| **Zero (0)** | Universal truth, scientific law | Present Simple | Present Simple | *If you heat ice, it melts.* |\n| **First (1)** | Real possibility in the future | Present Simple | will + V1 | *If it rains tomorrow, we will stay at home.* |\n| **Second (2)**| Unreal / hypothetical present | Past Simple (were) | would + V1 | *If I had a million dollars, I would travel the world.* |\n| **Third (3)** | Regret / impossible past | Past Perfect (had + V3) | would have + V3 | *If she had studied harder, she would have passed the exam.* |\n\n### 2. Important Rules\n- Second conditional-da bütün şəxslər üçün 'was' əvəzinə **'were'** işlədilməsi ədəbi dildə qəbul olunur:\n  *If I were you, I would consult a doctor.*\n- **Unless** = *If ... not* (inkarlıq daxilindədir):\n  *Unless you hurry, you will miss the train.*\n        ",
-      "keyFormulas": [
-        {
-          "id": "f-e10-cond-1",
-          "name": "Second Conditional Formula",
-          "latex": "\\text{If} + \\text{Past Simple}, \\quad \\text{would} + V_1",
-          "description": "İndiki zamana aid qeyri-real xəyali vəziyyətlər."
-        },
-        {
-          "id": "f-e10-cond-2",
-          "name": "Third Conditional Formula",
-          "latex": "\\text{If} + \\text{Past Perfect}, \\quad \\text{would have} + V_3",
-          "description": "Keçmişdə baş verməmiş və dəyişdirilməsi qeyri-mümkün olan hallar."
-        }
-      ],
-      "solvedExamples": [
-        {
-          "id": "ex-e10-cond-1",
-          "title": "Example: Third Conditional formation",
-          "problem": "Put the verbs into the correct tense: 'If they (leave) earlier, they (not miss) the high-speed train.'",
-          "solutionSteps": [
-            {
-              "stepNumber": 1,
-              "title": "Identify time reference",
-              "content": "The sentence refers to a completed past regret -> Third Conditional."
-            },
-            {
-              "stepNumber": 2,
-              "title": "Apply formula",
-              "content": "'had left' in If-clause, 'would not have missed' in Main clause."
-            }
-          ],
-          "finalAnswer": "If they had left earlier, they would not have missed the high-speed train."
-        }
-      ],
-      "miniQuiz": [
-        {
-          "questionId": "mq-e10-cond-1",
-          "question": "Which sentence expresses an imaginary situation in the present (Type 2)?",
-          "options": [
-            {
-              "key": "A",
-              "text": "If I knew his phone number, I would call him right now."
-            },
-            {
-              "key": "B",
-              "text": "If it rains, we get wet."
-            },
-            {
-              "key": "C",
-              "text": "If he comes, I will tell him."
-            },
-            {
-              "key": "D",
-              "text": "If I had seen her, I would have said hello."
-            }
-          ],
-          "correctKey": "A",
-          "explanation": "Past simple (knew) + would + V1 (would call) represents Type 2 conditional."
-        }
-      ]
-    }
+      }
 
 ];
