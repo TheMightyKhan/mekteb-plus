@@ -73,7 +73,7 @@ export const SUBJECTS = [
     borderCol: 'border-sky-200 dark:border-sky-800',
     gradient: 'from-sky-600 to-blue-700',
     description: 'Fiziki və iqtisadi coğrafiya, Azərbaycan coğrafiyası, xəritələr və iqlim.',
-    totalLessons: 20,
+    totalLessons: 34,
     totalExams: 9,
   },
   {
