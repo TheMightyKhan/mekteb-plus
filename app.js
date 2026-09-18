@@ -8,7 +8,7 @@ import { LessonsView } from './components/LessonsView.js';
 import { ExamArchiveView } from './components/ExamArchiveView.js';
 import { PvpArenaView } from './components/PvpArenaView.js';
 import { ContentManagerView } from './components/ContentManagerView.js';
-import { ToolsView } from './components/ToolsView.js';
+import { ToolsDrawer } from './components/ToolsDrawer.js';
 import { StorageService } from './services/storageService.js';
 
 export default function App() {
@@ -16,6 +16,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('mekteb_plus_dark') === 'true';
   });
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubjectId, setSelectedSubjectId] = useState(null);
   const [activeLessonId, setActiveLessonId] = useState(null);
