@@ -138,4 +138,4 @@ export const SUBJECTS = [
   }
 ];
 
-export const GRADES = [5, 6, 7, 8, 9, 10, 11];
+export const GRADES = [6, 7, 8, 9, 10, 11];
