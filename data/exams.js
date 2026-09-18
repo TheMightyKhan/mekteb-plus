@@ -1666,5 +1666,788 @@ export const MOCK_EXAMS = [
       }
     }
   ]
+},
+{
+  "id": "exam-chem-9-ksq-1-a",
+  "title": "9-cu Sinif Kimya - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "kimya",
+  "grade": 9,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Məktəb-Lisey Kompleksi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-chem9-1",
+      "text": "Nisbi molekul kütləsi $M_r(H_2SO_4) = 98$ olan sulfat turşusunda kükürdün ($S$) kütlə payını (faizlə) hesablayın. ($A_r(H)=1, A_r(S)=32, A_r(O)=16$)",
+      "subjectId": "kimya",
+      "grade": 9,
+      "topicTags": [
+        "Maddə tərkibi",
+        "Kütlə payı",
+        "Sulfat turşusu"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "32.65%"
+        },
+        {
+          "key": "B",
+          "text": "64.20%"
+        },
+        {
+          "key": "C",
+          "text": "2.04%"
+        },
+        {
+          "key": "D",
+          "text": "48.10%"
+        },
+        {
+          "key": "E",
+          "text": "16.32%"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "$M_r(H_2SO_4) = 2 \\cdot 1 + 32 + 4 \\cdot 16 = 98$. $A_r(S) = 32$.",
+        "formula": "$$\\omega(E) = \\frac{n \\cdot A_r(E)}{M_r} \\cdot 100\\%$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Kükürdün kütləsini ümumi molekul kütləsinə nisbət edək",
+            "content": "$$\\omega(S) = \\frac{32}{98} \\cdot 100\\% \\approx 32.65\\%$$"
+          }
+        ],
+        "conclusion": "Sulfat turşusunda kükürdün kütlə payı 32.65%-dir. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-chem9-2",
+      "text": "Dövri sistemdə 3-cü dövr, VIA yarımqrupunda yerləşən elementin sıra nömrəsi və xarici energetik təbəqəsindəki elektronların sayı neçədir?",
+      "subjectId": "kimya",
+      "grade": 9,
+      "topicTags": [
+        "Dövri Qanun",
+        "Atom quruluşu"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Sıra nömrəsi 16, xarici elektron 6"
+        },
+        {
+          "key": "B",
+          "text": "Sıra nömrəsi 8, xarici elektron 6"
+        },
+        {
+          "key": "C",
+          "text": "Sıra nömrəsi 14, xarici elektron 4"
+        },
+        {
+          "key": "D",
+          "text": "Sıra nömrəsi 15, xarici elektron 5"
+        },
+        {
+          "key": "E",
+          "text": "Sıra nömrəsi 17, xarici elektron 7"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Dövr nömrəsi = təbəqə sayı (3). Əsas yarımqrup nömrəsi = xarici elektron sayı (6).",
+        "formula": "Elektron konfiqurasiyası: $1s^2 2s^2 2p^6 3s^2 3p^4$.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Elektronların ümumi cəmini hesablayaq",
+            "content": "$$2 + 2 + 6 + 2 + 4 = 16$$ Bu Kükürd ($S$) elementidir."
+          }
+        ],
+        "conclusion": "Sıra nömrəsi 16, xarici valent elektronlarının sayı isə 6-dır. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-chem9-3",
+      "text": "Normal şəraitdə (n.ş.) 44.8 litr həcm tutan metan ($CH_4$) qazı neçə moldur və neçə molekula malikdir?",
+      "subjectId": "kimya",
+      "grade": 9,
+      "topicTags": [
+        "Avoqadro Qanunu",
+        "Qazların molyar həcmi"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$2 \\text{ mol}, 1.204 \\cdot 10^{24} \\text{ molekul}$"
+        },
+        {
+          "key": "B",
+          "text": "$1 \\text{ mol}, 6.02 \\cdot 10^{23} \\text{ molekul}$"
+        },
+        {
+          "key": "C",
+          "text": "$0.5 \\text{ mol}, 3.01 \\cdot 10^{23} \\text{ molekul}$"
+        },
+        {
+          "key": "D",
+          "text": "$4 \\text{ mol}, 2.408 \\cdot 10^{24} \\text{ molekul}$"
+        },
+        {
+          "key": "E",
+          "text": "$22.4 \\text{ mol}, 6.02 \\cdot 10^{24} \\text{ molekul}$"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Qazın həcmi $V = 44.8 \\text{ l}$, Molyar həcm $V_m = 22.4 \\text{ l/mol}$, Avoqadro sabiti $N_A = 6.02 \\cdot 10^{23}$.",
+        "formula": "$$\\nu = \\frac{V}{V_m}, \\quad N = \\nu \\cdot N_A$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Molların sayını tapaq",
+            "content": "$$\\nu = \\frac{44.8}{22.4} = 2 \\text{ mol}$$"
+          },
+          {
+            "stepNumber": 2,
+            "title": "Molekulların sayını tapaq",
+            "content": "$$N = 2 \\cdot 6.02 \\cdot 10^{23} = 1.204 \\cdot 10^{24}$$"
+          }
+        ],
+        "conclusion": "Metan qazı 2 mol və $1.204 \\cdot 10^{24}$ molekuldur. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-chem9-4",
+      "text": "Aşağıdakı rabitələrdən hansı qeyri-polyar kovalent rabitəyə aiddir?",
+      "subjectId": "kimya",
+      "grade": 9,
+      "topicTags": [
+        "Kimyəvi rabitə",
+        "Kovalent rabitə"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "$N_2$ molekulu ($N \\equiv N$)"
+        },
+        {
+          "key": "B",
+          "text": "$HCl$ molekulu"
+        },
+        {
+          "key": "C",
+          "text": "$NaCl$ kristalı"
+        },
+        {
+          "key": "D",
+          "text": "$H_2O$ molekulu"
+        },
+        {
+          "key": "E",
+          "text": "$NH_3$ molekulu"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Eyni növ qeyri-metal atomları arasında elektromənfilik fərqi sıfırdır.",
+        "formula": "Elektromənfilik fərqi $\\Delta \\chi = 0$ olduqda kovalent rabitə qeyri-polyar olur.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Variantları təhlil edək",
+            "content": "$N_2$-də iki eyni azot atomu arasında ümumi elektron cütləri mərkəzdə bərabər bölünür, buna görə qeyri-polyar kovalentdir."
+          }
+        ],
+        "conclusion": "$N_2$ qeyri-polyar kovalent rabitəlidir. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-chem9-5",
+      "text": "$200 \\text{ q}$ 20%-li duz məhluluna $50 \\text{ q}$ su əlavə etdikdə alınan yeni məhlulun kütlə payını hesablayın.",
+      "subjectId": "kimya",
+      "grade": 9,
+      "topicTags": [
+        "Məhlullar",
+        "Qatılığın dəyişməsi"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "16%"
+        },
+        {
+          "key": "B",
+          "text": "18%"
+        },
+        {
+          "key": "C",
+          "text": "12%"
+        },
+        {
+          "key": "D",
+          "text": "15%"
+        },
+        {
+          "key": "E",
+          "text": "10%"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "$m_1 = 200 \\text{ q}$, $\\omega_1 = 20\\% = 0.20$. Əlavə edilən su: $m_{su} = 50 \\text{ q}$.",
+        "formula": "$$m_{duz} = m_1 \\cdot \\omega_1, \\quad \\omega_2 = \\frac{m_{duz}}{m_1 + m_{su}} \\cdot 100\\%$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Həll olan duzun kütləsini tapaq",
+            "content": "$$m_{duz} = 200 \\cdot 0.20 = 40 \\text{ q}$$"
+          },
+          {
+            "stepNumber": 2,
+            "title": "Yeni ümumi məhlul kütləsini və faizi tapaq",
+            "content": "$$m_{yeni} = 200 + 50 = 250 \\text{ q}$$ $$\\omega_2 = \\frac{40}{250} \\cdot 100\\% = 16\\%$$"
+          }
+        ],
+        "conclusion": "Yeni məhlulun qatılığı 16%-dir. Düzgün variant: A."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-bio-10-bsq-1-a",
+  "title": "10-cu Sinif Biologiya - I Yarımil Böyük Summativ Qiymətləndirmə (BSQ-1)",
+  "subjectId": "biologiya",
+  "grade": 10,
+  "examType": "BSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Məktəb-Lisey Kompleksi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-bio10-1",
+      "text": "DNT molekulunda 600 adenin ($A$) nukleotidi olarsa və adenin bütün nukleotidlərin 20%-ni təşkil edərsə, bu DNT-dəki quanin ($G$) nukleotidlərinin sayını tapın.",
+      "subjectId": "biologiya",
+      "grade": 10,
+      "topicTags": [
+        "DNT quruluşu",
+        "Şarqaff qaydası",
+        "Nukleotidlər"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "900"
+        },
+        {
+          "key": "B",
+          "text": "600"
+        },
+        {
+          "key": "C",
+          "text": "1200"
+        },
+        {
+          "key": "D",
+          "text": "1500"
+        },
+        {
+          "key": "E",
+          "text": "3000"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "$A = 600$ və $A = 20\\%$. Şarqaff qaydasına görə: $A = T = 20\\%$.",
+        "formula": "$$A + T + G + C = 100\\%, \\quad G = C$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Ümumi nukleotidlərin sayını hesablayaq",
+            "content": "$$N_{umumi} = \\frac{600}{0.20} = 3000 \\text{ nukleotid}$$"
+          },
+          {
+            "stepNumber": 2,
+            "title": "Quanin və sitozin faizini və sayını hesablayaq",
+            "content": "$$G + C = 100\\% - (20\\% + 20\\%) = 60\\% \\implies G = 30\\%$$ $$G = 3000 \\cdot 0.30 = 900$$"
+          }
+        ],
+        "conclusion": "DNT molekulunda 900 quanin nukleotidi vardır. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-bio10-2",
+      "text": "Mitoz bölünmənin hansı fazasında xromosomlar hüceyrənin ekvator müstəvisində düzülərək metafaza lövhəsini əmələ gətirir?",
+      "subjectId": "biologiya",
+      "grade": 10,
+      "topicTags": [
+        "Hüceyrə bölünməsi",
+        "Mitoz fazaları"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Metafaza"
+        },
+        {
+          "key": "B",
+          "text": "Profaza"
+        },
+        {
+          "key": "C",
+          "text": "Anafaza"
+        },
+        {
+          "key": "D",
+          "text": "Telofaza"
+        },
+        {
+          "key": "E",
+          "text": "İnterfaza"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Mitoz mərhələləri: Profaza -> Metafaza -> Anafaza -> Telofaza.",
+        "formula": "Metafaza mərhələsində bölünmə vətərləri kinetoxorlara birləşir və xromosomlar ekvatorda düzülür.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Metafazanın xarakterik xüsusiyyəti",
+            "content": "Xromosomların mikroskop altında ən aydın göründüyü və ekvatora toplaşdığı faza metafazadır."
+          }
+        ],
+        "conclusion": "Düzgün variant: A (Metafaza)."
+      }
+    },
+    {
+      "id": "q-bio10-3",
+      "text": "Fotosintezin işıq mərhələsində baş verən fotoliz prosesi nəticəsində ətraf mühitə hansı sərbəst qaz xaric olunur?",
+      "subjectId": "biologiya",
+      "grade": 10,
+      "topicTags": [
+        "Fotosintez",
+        "Suyun fotolizi"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "Oksigen ($O_2$)"
+        },
+        {
+          "key": "B",
+          "text": "Karbon qazı ($CO_2$)"
+        },
+        {
+          "key": "C",
+          "text": "Azot ($N_2$)"
+        },
+        {
+          "key": "D",
+          "text": "Metan ($CH_4$)"
+        },
+        {
+          "key": "E",
+          "text": "Hidrogen sulfid ($H_2S$)"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "İşıq mərhələsində tilakoid membranında su molekulu günəş işığı təsirilə parçalanır: $2H_2O \\to 4H^+ + 4e^- + O_2$.",
+        "formula": "Fotoliz reaksiyası sərbəst molekulyar oksigen əmələ gətirir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Prosesin təhlili",
+            "content": "Fotosintezdə xaric olunan oksigenin mənbəyi karbon qazı deyil, məhz suyun fotolizidir."
+          }
+        ],
+        "conclusion": "Ətraf mühitə sərbəst oksigen qazı ayrılır. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-bio10-4",
+      "text": "İnsanın somatik (bədən) hüceyrəsində 46 xromosom varsa, qametlərində (cinsiyyət hüceyrələrində) neçə xromosom olar?",
+      "subjectId": "biologiya",
+      "grade": 10,
+      "topicTags": [
+        "Xromosom dəsti",
+        "Meyoz"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "23 xromosom"
+        },
+        {
+          "key": "B",
+          "text": "46 xromosom"
+        },
+        {
+          "key": "C",
+          "text": "92 xromosom"
+        },
+        {
+          "key": "D",
+          "text": "44 xromosom"
+        },
+        {
+          "key": "E",
+          "text": "2 xromosom"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Somatik hüceyrələr diploid ($2n = 46$), cinsi hüceyrələr haploid ($n$) dəstə malikdir.",
+        "formula": "$$n = \\frac{2n}{2} = \\frac{46}{2} = 23$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Meyoz bölünmənin nəticəsi",
+            "content": "Qametogenez zamanı meyoz nəticəsində xromosom sayı 2 dəfə reduksiya olunur."
+          }
+        ],
+        "conclusion": "Qametlərdə 23 xromosom olur. Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-bio10-5",
+      "text": "Zülal molekulunun tərkibində 150 aminturşu qalığı varsa, bu zülalı kodlaşdıran məlumat RNT-sində (m-RNT) neçə nukleotid olar?",
+      "subjectId": "biologiya",
+      "grade": 10,
+      "topicTags": [
+        "Genetik kod",
+        "Translyasiya",
+        "Zülal biosintezi"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "450 nukleotid"
+        },
+        {
+          "key": "B",
+          "text": "150 nukleotid"
+        },
+        {
+          "key": "C",
+          "text": "300 nukleotid"
+        },
+        {
+          "key": "D",
+          "text": "600 nukleotid"
+        },
+        {
+          "key": "E",
+          "text": "50 nukleotid"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "1 aminturşunu 1 triplet (yəni 3 nukleotid) kodlaşdırır.",
+        "formula": "$$N_{nukleotid} = N_{amintursu} \\cdot 3$$",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Nukleotid sayını hesablayaq",
+            "content": "$$N = 150 \\cdot 3 = 450 \\text{ nukleotid}$$"
+          }
+        ],
+        "conclusion": "m-RNT zəncirində 450 nukleotid olar. Düzgün variant: A."
+      }
+    }
+  ]
+},
+{
+  "id": "exam-eng-9-ksq-1-a",
+  "title": "9-cu Sinif İngilis Dili - I Yarımil Kiçik Summativ Qiymətləndirmə (KSQ-1)",
+  "subjectId": "ingilis_dili",
+  "grade": 9,
+  "examType": "KSQ",
+  "semester": 1,
+  "variant": "A",
+  "durationMinutes": 45,
+  "totalQuestions": 5,
+  "maxScore": 100,
+  "schoolMetadata": {
+    "ministry": "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
+    "schoolName": "Məktəb-Lisey Kompleksi",
+    "academicYear": "2025-2026-cı tədris ili",
+    "teacherSignatureLabel": "Fənn müəlliminin imzası"
+  },
+  "questions": [
+    {
+      "id": "q-eng9-1",
+      "text": "Choose the correct Passive Voice form: 'The engineer designed a state-of-the-art laboratory yesterday.'",
+      "subjectId": "ingilis_dili",
+      "grade": 9,
+      "topicTags": [
+        "Passive Voice",
+        "Past Simple Passive"
+      ],
+      "difficulty": 2,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "A state-of-the-art laboratory was designed by the engineer yesterday."
+        },
+        {
+          "key": "B",
+          "text": "A state-of-the-art laboratory is designed by the engineer yesterday."
+        },
+        {
+          "key": "C",
+          "text": "A state-of-the-art laboratory had been designed by the engineer yesterday."
+        },
+        {
+          "key": "D",
+          "text": "The engineer was designed a state-of-the-art laboratory yesterday."
+        },
+        {
+          "key": "E",
+          "text": "A state-of-the-art laboratory will be designed by the engineer."
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Active cümlə Past Simple zamandadır: Subject + $V_2$ + Object.",
+        "formula": "Past Simple Passive: Object + was/were + $V_3$ (Past Participle) + by Subject.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Obyektin və felin müəyyənləşdirilməsi",
+            "content": "'A state-of-the-art laboratory' təkdədir, ona görə 'was designed' forması işlənir."
+          }
+        ],
+        "conclusion": "Düzgün variant: A."
+      }
+    },
+    {
+      "id": "q-eng9-2",
+      "text": "Complete the Conditional sentence: 'If they ______ the flight on time, they will arrive in Baku before sunset.'",
+      "subjectId": "ingilis_dili",
+      "grade": 9,
+      "topicTags": [
+        "First Conditional",
+        "Grammar"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "catch"
+        },
+        {
+          "key": "B",
+          "text": "caught"
+        },
+        {
+          "key": "C",
+          "text": "will catch"
+        },
+        {
+          "key": "D",
+          "text": "had caught"
+        },
+        {
+          "key": "E",
+          "text": "catches"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Baş cümlədə 'will arrive' (Future Simple) işlənib. Bu First Conditional (real şərt) cümləsidir.",
+        "formula": "If + Present Simple, will + base verb ($V_1$).",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Mübtəda 'they' olduğu üçün felin forması",
+            "content": "'They' şəxsi ilə Present Simple forma 'catch' olur."
+          }
+        ],
+        "conclusion": "Düzgün cavab: A (catch)."
+      }
+    },
+    {
+      "id": "q-eng9-3",
+      "text": "Choose the correct Relative Pronoun: 'The student ______ won the national Olympiad in Informatics received a scholarship.'",
+      "subjectId": "ingilis_dili",
+      "grade": 9,
+      "topicTags": [
+        "Relative Clauses",
+        "Pronouns"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "who"
+        },
+        {
+          "key": "B",
+          "text": "which"
+        },
+        {
+          "key": "C",
+          "text": "whose"
+        },
+        {
+          "key": "D",
+          "text": "where"
+        },
+        {
+          "key": "E",
+          "text": "when"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Məlum şəxs bildirən isim: 'The student' (şagird - insan).",
+        "formula": "İnsanlar üçün mübtəda rolunda 'who' nisbi əvəzliyi işlənir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Əvəzliyin seçilməsi",
+            "content": "İnsan üçün 'who', cansızlar üçün 'which', yer üçün 'where' istifadə olunur."
+          }
+        ],
+        "conclusion": "Düzgün variant: A (who)."
+      }
+    },
+    {
+      "id": "q-eng9-4",
+      "text": "Choose the correct modal verb for obligation: 'Students ______ wear their safety goggles while conducting chemical experiments in the laboratory.'",
+      "subjectId": "ingilis_dili",
+      "grade": 9,
+      "topicTags": [
+        "Modal Verbs",
+        "Rules and Obligation"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "must"
+        },
+        {
+          "key": "B",
+          "text": "might"
+        },
+        {
+          "key": "C",
+          "text": "could"
+        },
+        {
+          "key": "D",
+          "text": "may"
+        },
+        {
+          "key": "E",
+          "text": "would"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "Laboratoriyada qoruyucu eynək taxmaq qəti təhlükəsizlik qaydası və məcburiyyətdir.",
+        "formula": "Qəti tələb və qaydalar üçün 'must' modal feli işlənir.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Məna təhlili",
+            "content": "'Must' feli mütləq riayət olunmalı vacib qaydanı bildirir."
+          }
+        ],
+        "conclusion": "Düzgün variant: A (must)."
+      }
+    },
+    {
+      "id": "q-eng9-5",
+      "text": "Choose the synonym of the underlined word: 'The scientist made a **remarkable** discovery that changed modern medicine.'",
+      "subjectId": "ingilis_dili",
+      "grade": 9,
+      "topicTags": [
+        "Vocabulary",
+        "Synonyms"
+      ],
+      "difficulty": 1,
+      "points": 20,
+      "options": [
+        {
+          "key": "A",
+          "text": "extraordinary"
+        },
+        {
+          "key": "B",
+          "text": "ordinary"
+        },
+        {
+          "key": "C",
+          "text": "dangerous"
+        },
+        {
+          "key": "D",
+          "text": "useless"
+        },
+        {
+          "key": "E",
+          "text": "boring"
+        }
+      ],
+      "correctKey": "A",
+      "explanationCoT": {
+        "given": "'Remarkable' sözü 'qeyri-adi, diqqətəlayiq, möhtəşəm' mənasını verir.",
+        "formula": "Remarkable = Extraordinary = Outstanding.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "title": "Sinonim cütü",
+            "content": "'Extraordinary' (qeyri-adi, heyrətamiz) 'remarkable' sözünün ən yaxın sinonimidir."
+          }
+        ],
+        "conclusion": "Düzgün variant: A (extraordinary)."
+      }
+    }
+  ]
 }
 ];
