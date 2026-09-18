@@ -12,8 +12,8 @@ export const LessonsView = ({
   activeLessonId,
   setActiveLessonId
 }) => {
-  const [selectedGrade, setSelectedGrade] = useState(10);
-  const [expandedUnits, setExpandedUnits] = useState({ 'Riyazi Analizin Başlanğıcı': true, 'Klassik Mexanika və Kinematika': true });
+  const [selectedGrade, setSelectedGrade] = useState(null); // null = Hamısı (Bütün siniflər)
+  const [expandedUnits, setExpandedUnits] = useState({});
   const [revealedSolutions, setRevealedSolutions] = useState({});
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState({});
@@ -22,7 +22,7 @@ export const LessonsView = ({
   const filteredLessons = useMemo(() => {
     return lessons.filter(l => {
       const matchSubject = selectedSubjectId ? l.subjectId === selectedSubjectId : true;
-      const matchGrade = selectedGrade ? l.grade === selectedGrade : true;
+      const matchGrade = selectedGrade !== null ? l.grade === selectedGrade : true;
       return matchSubject && matchGrade;
     });
   }, [lessons, selectedSubjectId, selectedGrade]);
