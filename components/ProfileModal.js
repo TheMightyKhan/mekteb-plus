@@ -1,7 +1,7 @@
 // MəktəbPlus - Şagirdin Şəxsi Kabineti, İnkişaf Analitikası və Nailiyyətlər Paneli (Profile & Analytics Modal)
 
 import React, { useState } from 'react';
-import { SUBJECTS } from '../data/subjects.js';
+import { SUBJECTS, GRADES } from '../data/subjects.js';
 
 export const ProfileModal = ({
   isOpen,
@@ -151,7 +151,7 @@ export const ProfileModal = ({
             onChange: (e) => setGrade(e.target.value),
             className: 'w-full p-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 font-bold'
           },
-            [5, 6, 7, 8, 9, 10, 11].map(g => React.createElement('option', { key: g, value: g }, `${g}-ci sinif`))
+            GRADES.map(g => React.createElement('option', { key: g, value: g }, `${g}-ci sinif`))
           )
         ),
         React.createElement(
