@@ -8,7 +8,8 @@ export const Sidebar = ({
   activeTab,
   setActiveTab,
   userStats,
-  onOpenTools
+  onOpenTools,
+  onOpenProfile
 }) => {
   if (!isOpen) return null;
 
@@ -114,20 +115,27 @@ export const Sidebar = ({
         )
       ),
 
-      // Footer User stats
+      // Footer User stats (Profilə keçid)
       React.createElement(
         'div',
         { className: 'pt-6 border-t border-slate-200 dark:border-slate-800' },
         React.createElement(
           'div',
-          { className: 'p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 flex items-center space-x-3' },
-          React.createElement('div', { className: 'w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-xl' }, '🧑‍🎓'),
+          {
+            onClick: () => {
+              onClose();
+              if (onOpenProfile) onOpenProfile();
+            },
+            className: 'p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 flex items-center space-x-3 cursor-pointer hover:bg-indigo-50 dark:hover:bg-slate-700/80 transition group'
+          },
+          React.createElement('div', { className: 'w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-xl shadow-inner' }, userStats?.avatar || '🧑‍🎓'),
           React.createElement(
             'div',
             { className: 'flex-1 min-w-0' },
-            React.createElement('p', { className: 'text-xs font-bold text-slate-800 dark:text-slate-200 truncate' }, userStats?.name || 'Məktəbli'),
-            React.createElement('p', { className: 'text-[10px] text-amber-600 dark:text-amber-400 font-semibold' }, `${userStats?.pvpScore || 1420} XP • 10-cu sinif`)
-          )
+            React.createElement('p', { className: 'text-xs font-bold text-slate-800 dark:text-slate-200 truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition' }, userStats?.name || 'Məktəbli'),
+            React.createElement('p', { className: 'text-[10px] text-amber-600 dark:text-amber-400 font-semibold' }, `${userStats?.pvpScore || 1420} XP • ${userStats?.grade || 10}-cu sinif`)
+          ),
+          React.createElement('i', { className: 'fas fa-chevron-right text-xs text-slate-400 group-hover:text-indigo-500 transition' })
         )
       )
     )

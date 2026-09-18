@@ -145,7 +145,8 @@ export const Navbar = ({
           React.createElement(
             'div',
             {
-              onClick: () => setActiveTab('pvp'),
+              onClick: onOpenProfile || (() => setActiveTab('pvp')),
+              title: 'Şəxsi Kabinet və İnkişaf Analitikası',
               className: 'hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-200 dark:border-amber-800/60 cursor-pointer hover:scale-105 transition transform'
             },
             React.createElement('span', { className: 'text-base' }, '⚡'),
@@ -155,6 +156,18 @@ export const Navbar = ({
               React.createElement('div', { className: 'text-[11px] font-black text-amber-600 dark:text-amber-400 leading-none' }, `${userStats?.pvpScore || 1420} XP`),
               React.createElement('div', { className: 'text-[9px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold' }, 'Qızıl Liqa')
             )
+          ),
+
+          // Profil Düyməsi (Şagirdin Şəxsi Kabineti)
+          React.createElement(
+            'button',
+            {
+              onClick: onOpenProfile,
+              title: 'Şəxsi Kabinet və İnkişaf Analitikası',
+              className: 'flex items-center space-x-2 p-1.5 pr-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-slate-700 transition border border-slate-200/60 dark:border-slate-700/60'
+            },
+            React.createElement('span', { className: 'text-base leading-none' }, userStats?.avatar || '🧑‍🎓'),
+            React.createElement('span', { className: 'hidden md:inline text-xs font-bold text-slate-700 dark:text-slate-200' }, userStats?.name || 'Məktəbli')
           ),
 
           // Mobil menyu düyməsi
