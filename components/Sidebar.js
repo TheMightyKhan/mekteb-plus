@@ -7,18 +7,29 @@ export const Sidebar = ({
   onClose,
   activeTab,
   setActiveTab,
-  userStats
+  userStats,
+  onOpenTools
 }) => {
   if (!isOpen) return null;
 
   const menuItems = [
     { id: 'dashboard', label: 'Ana Səhifə', icon: 'fa-house', desc: 'Fənlər və son xülasələr' },
     { id: 'lessons', label: 'Dərslər və Nəzəriyyə', icon: 'fa-book-open-reader', desc: 'KaTeX & PhET interaktiv dərsləri' },
-    { id: 'tools', label: 'Alətlər & Laboratoriya', icon: 'fa-toolbox', desc: 'Calculus, Törəmə və PhET simulyatorları', badge: 'Yeni' },
+    { id: 'tools', label: 'Alətlər & Laboratoriya', icon: 'fa-toolbox', desc: 'Calculus, Törəmə və PhET simulyatorları', badge: 'Sağ Panel' },
     { id: 'exams', label: 'BSQ / KSQ Arxiv', icon: 'fa-file-lines', desc: 'İnteraktiv test və rəsmi çap vərəqi' },
     { id: 'pvp', label: '1v1 Viktorina Arenası', icon: 'fa-gamepad', desc: 'Dostla oyna & sürətli matç', badge: 'Canlı' },
     { id: 'admin', label: 'İdarəetmə & Skan Paneli', icon: 'fa-database', desc: 'Yeni sual və JSON idarəetməsi' }
   ];
+
+  const handleItemClick = (id) => {
+    if (id === 'tools') {
+      onClose();
+      if (onOpenTools) onOpenTools();
+    } else {
+      setActiveTab(id);
+      onClose();
+    }
+  };
 
   return React.createElement(
     'div',
