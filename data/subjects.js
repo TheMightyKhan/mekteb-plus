@@ -43,7 +43,7 @@ export const SUBJECTS = [
     borderCol: 'border-emerald-200 dark:border-emerald-800',
     gradient: 'from-emerald-600 to-green-600',
     description: 'Qeyri-üzvi və üzvi kimya, dövri qanun, kimyəvi reaksiyalar və qanunlar.',
-    totalLessons: 24,
+    totalLessons: 29,
     totalExams: 12,
   },
   {
