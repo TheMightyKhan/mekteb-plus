@@ -201,7 +201,7 @@ export const ExamArchiveView = ({
                 onChange: e => setFilterGrade(e.target.value),
                 className: 'w-full p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 focus:outline-none focus:border-indigo-500'
               },
-              React.createElement('option', { value: 'all' }, 'Bütün Siniflər (5-11)'),
+              React.createElement('option', { value: 'all' }, 'Bütün Siniflər (6-11)'),
               GRADES.map(g => React.createElement('option', { key: g, value: g }, `${g}-ci sinif`))
             )
           ),
